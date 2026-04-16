@@ -1,0 +1,56 @@
+﻿l_english:
+
+ # Caliphal Preferance
+ me_succession_caliphal:0 "[me_caliphal_succession_laws_concept|E]"
+ me_succession_caliphal_singular:0 "[me_caliphal_succession_law_concept|E]"
+ me_qurashi_preference_succession_law:0 "Qurashi Preference"
+ me_qurashi_preference_succession_law_effects:0 "Characters with the [GetTrait('quraysh').GetName( GetNullCharacter )] or [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E] will gain additional candidacy score.\n\nIf the [state_faith|E] has the [GetFaithDoctrine('special_doctrine_ubaydi_trait_acceptance').GetBaseName] [doctrine|E], then the [GetTrait('ubaydi').GetName( GetNullCharacter )] trait will also grant additional candidacy score."
+ me_qurashi_only_succession_law:0 "Qurashi Only"
+ me_qurashi_only_succession_law_effects:0 "Characters that don't have the [GetTrait('quraysh').GetName( GetNullCharacter )] or [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E] will gain a strong malus to their candidacy score, which will prevent them from overtaking any characters that have these traits.\n\nIf the [state_faith|E] has the [GetFaithDoctrine('special_doctrine_ubaydi_trait_acceptance').GetBaseName] [doctrine|E], then characters with the [GetTrait('ubaydi').GetName( GetNullCharacter )] trait will avoid this malus."
+ me_sayyid_only_succession_law:0 "Sayyid Only"
+ me_sayyid_only_succession_law_effects:0 "Characters that don't have the [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E] will gain a strong malus to their candidacy score, which will prevent them from overtaking any characters that have these traits.\n\nIf the [state_faith|E] has the [GetFaithDoctrine('special_doctrine_ubaydi_trait_acceptance').GetBaseName] [doctrine|E], then characters with the [GetTrait('ubaydi').GetName( GetNullCharacter )] trait will avoid this malus."
+ me_ubaydi_only_succession_law:0 "Ubaydi Only"
+ me_ubaydi_only_succession_law_effects:0 "Characters that don't have the [GetTrait('ubaydi').GetName( GetNullCharacter )] [trait|E] will gain a strong malus to their candidacy score, which will prevent them from overtaking any characters that have these traits."
+
+ trait_no_qurashi_desc:0 "Does not have [GetTrait('quraysh').GetName( GetNullCharacter )] or [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E]"
+ trait_no_sayyid_desc:0 "Does not have [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E]"
+ trait_no_ubaydi_desc:0 "Does not have [GetTrait('ubaydi').GetName( GetNullCharacter )] [trait|E]"
+ has_hof_temporal_title_desc:0 "[head_of_faith|E]"
+
+ game_concept_me_caliphal_succession_law:0 "Caliphal Succession Law"
+ game_concept_me_caliphal_succession_law_concept:0 "Caliphal Succession Law"
+ game_concept_me_caliphal_succession_laws_concept:0 "Caliphal Succession Laws"
+ game_concept_me_caliphal_succession_law_desc:0 "Islamic [rulers|E] with the Acclamation [succession_law|E] who are also [heads_of_faith|E] have an additional realm [succession|E] law, which can grant additional maluses to the title's candidacy score, therefore restricting it to a select group of characters and dynasties.\n\nAccess to certain laws depends on the title's [state_faith|E], as [GetFaithDoctrine('muhammad_succession_shia_doctrine').GetBaseName], [GetFaithDoctrine('islam_secondary_group_zandaqa_ghulat_doctrine').GetBaseName], [GetFaithDoctrine('islam_secondary_group_zandaqa_qarmatian_doctrine').GetBaseName] [faiths|E] can only access the 'Sayyid Only' [law|E], while [GetFaithDoctrine('muhammad_succession_muhakkima_doctrine').GetBaseName] faiths are incapable of picking any laws."
+
+ # Shura Elective 
+ me_shura_elective_succession_law:0 "Shura Elective"
+ me_shura_elective_succession_law_effects:1 "The [ruler|E], [council|E] members, and all direct [vassals|E] of one or two [ranks|E] below the [title|E] can nominate a righteous [title_heir|E] from among themselves and the ruler's [dynasty|E]."
+ me_shura_elective_candidates:0 "Dynasty Members, Claimants, and Electors"
+ me_shura_elective_candidates_tooltip:1 "In order to be a valid Candidate under Feudal Elective, a character must fulfill all the following conditions:\n$EFFECT_LIST_BULLET$Have a [faith|E] that is the same as the current ruler's faith or one that considers and is considered to be [faith_righteous|E] by it\n$EFFECT_LIST_BULLET$Have neither a [shunned|E] nor a [criminal|E] [trait|E]\n$EFFECT_LIST_BULLET$Neither [GetTrait('incapable').GetName( GetNullCharacter )] nor a [child|E]\n\nAnd fulfill one the following conditions:\n$EFFECT_LIST_BULLET$Be a legitimate member of the current ruler's [dynasty|E], who is not in line to inherit a Theocracy or Republic. Children of a candidate cannot be nominated\n$EFFECT_LIST_BULLET$Be a [claimant|E] to the title, who is not in line to inherit a Theocracy or Republic\n$EFFECT_LIST_BULLET$Be a valid Shura [elector|E] to the title"
+ me_shura_elective_electors:0 "Ruler, Council Members, and Vassals"
+ me_shura_elective_electors_tooltip:0 "In order to be a valid [elector|E] under Feudal Elective, a character must fulfill all the following conditions:\n$EFFECT_LIST_BULLET$Have a [faith|E] that is the same as the current ruler's faith or one that considers and is considered to be [faith_righteous|E] by it\n$EFFECT_LIST_BULLET$Have neither a [shunned|E] nor a [criminal|E] [trait|E]\n$EFFECT_LIST_BULLET$Neither [GetTrait('incapable').GetName( GetNullCharacter )] nor a [child|E]\n\nAnd fulfill one the following conditions:\n$EFFECT_LIST_BULLET$Be a direct vassal of the title that is only one or two [ranks|E] below the title\n$EFFECT_LIST_BULLET$Be landed and Hold any seat on the [council|E]"
+ 
+ tooltip_me_shura_vote_strength_learning:0 "[learning|E] Skill: $VALUE|=+0$"
+ tooltip_me_shura_vote_strength_hafidh:0 "Max level [GetTrait('hafidh').GetName( GetNullCharacter )]: $VALUE|=+0$"
+ tooltip_me_shura_vote_scholarly_education:0 "Scholarly Education: $VALUE|=+0$"
+ tooltip_me_shura_vote_sinful:0 "Number of [sins|E]: $VALUE|=+0$"
+ tooltip_me_shura_vote_virtuous:0 "Number of [virtues|E]: $VALUE|=+0$"
+ tooltip_me_shura_vote_piety_negative:0 "Low [piety_level|E]: $VALUE|=+0$"
+ tooltip_me_shura_vote_piety_positive:0 "High [piety_level|E]: $VALUE|=+0$"
+ tooltip_me_shura_vote_strength_martial:0 "[martial|E] Skill: $VALUE|=+0$"
+ 
+ # Shura Preferance
+ me_shura_preferance:0 "[me_shura_preferance_laws_concept|E]"
+ me_shura_preferance_singular:0 "[me_shura_preferance_law_concept|E]"
+ me_shura_general_preferance_law:0 "General Shura"
+ me_shura_general_preferance_law_effects:0 "[electors|E] will not prioritize any [skill|E] or aspect of a candidate, and will elect based on personal preferance."
+ me_shura_judicial_preferance_law:0 "Judicial Shura"
+ me_shura_judicial_preferance_law_effects:0 "[electors|E] will prioritize the [learning|E] [skill|E] and will be more likely to elect a candidate with scholarly [traits|E] and high [learning|E]."
+ me_shura_militaristic_preferance_law:0 "Militaristic Shura"
+ me_shura_militaristic_preferance_law_effects:0 "[electors|E] will prioritize the [martial|E] [skill|E] and will be more likely to elect a candidate with militaristic or warrior-like [traits|E] and high [martial|E]."
+
+ game_concept_me_shura_preferance_law:0 "Shura Preferance Law"
+ game_concept_me_shura_preferance_law_concept:0 "Shura Preferance Law"
+ game_concept_me_shura_preferance_laws_concept:0 "Shura Preferance Laws"
+ game_concept_me_shura_preferance_law_desc:0 "[rulers|E] with the Shura Elective [title_law|E] have an additional [law|E] which can influence the [electors|E]' choice of candidate based on their [skills|E] and [traits|E]."
+ 

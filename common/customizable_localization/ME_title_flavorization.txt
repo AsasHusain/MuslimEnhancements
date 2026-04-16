@@ -1,0 +1,253 @@
+﻿###
+ME_CountySiqilli = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_county
+		}
+		localization_key = county_siqilli_taifa
+	}
+	text = {
+		fallback = yes
+		localization_key = county_siqilli_default
+	}
+}
+
+ME_DuchyAndalusian = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duchy_andalusian_taifa
+	}
+	text = {
+		fallback = yes
+		localization_key = duchy_andalusian_default
+	}
+}
+
+ME_ArabicCaliphateEmpire = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_empire
+			faith = {
+				religious_head = root
+				has_doctrine = doctrine_temporal_head
+				religion_tag = islam_religion
+				OR = {
+					has_doctrine = muhammad_succession_sunni_doctrine
+					root = { has_title = title:d_sunni }
+					root = { has_title = title:d_shiite }
+				}
+			}
+		}
+		localization_key = empire_arabic_caliphate
+	}
+	text = {
+		fallback = yes
+		localization_key = empire_arabic_default
+	}
+}
+
+ME_DukeMaleSharif = {
+	type = character
+	text = {
+		trigger = {
+			OR = { # All Hashimids were considered Sharifs, even those who were not decended from the Prophet (ex. the Abbasids)
+				dynasty = dynasty:7296 # Qurashi (Hashimid) dynasty
+				has_trait = sayyid
+				has_trait = ubaydi
+			}
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duke_male_arabic_sharif
+	}
+	text = {
+		fallback = yes
+		localization_key = duke_male_arabic_default
+	}
+}
+
+ME_DukeFemaleSharif = {
+	type = character
+	text = {
+		trigger = {
+			OR = { # All Hashimids were considered Sharifs, even those who were not decended from the Prophet (ex. the Abbasids)
+				dynasty = dynasty:7296 # Qurashi (Hashimid) dynasty
+				has_trait = sayyid
+				has_trait = ubaydi
+			}
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duke_female_arabic_sharif
+	}
+	text = {
+		fallback = yes
+		localization_key = duke_female_arabic_default
+	}
+}
+
+ME_DuchySharif = {
+	type = character
+	text = {
+		trigger = {
+			OR = { # All Hashimids were considered Sharifs, even those who were not decended from the Prophet (ex. the Abbasids)
+				dynasty = dynasty:7296 # Qurashi (Hashimid) dynasty
+				has_trait = sayyid
+				has_trait = ubaydi
+			}
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duchy_arabic_sharif
+	}
+	text = {
+		fallback = yes
+		localization_key = duchy_arabic_default
+	}
+}
+
+ME_LandlessMaleSharif = {
+	type = character
+	text = {
+		trigger = {
+			NOR = { # All Hashimids were considered Sharifs, but this will be reserved for Sayyids
+				has_trait = sayyid
+				has_trait = ubaydi
+			}
+			has_trait = me_hidden_imam
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duke_male_arabic_hidden_imam
+	}
+	text = {
+		trigger = {
+			OR = { # All Hashimids were considered Sharifs, but this will be reserved for Sayyids
+				has_trait = sayyid
+				has_trait = ubaydi
+			}
+			NOT = { has_trait = me_hidden_imam }
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duke_male_arabic_sharif_landless
+	}
+	# Mercenary
+	text = {
+		trigger = { has_realm_law = camp_purpose_mercenaries }
+		localization_key = duke_male_arabic_mercenary
+	}
+
+	# Wanderer
+	text = {
+		trigger = { has_realm_law = camp_purpose_wanderers }
+		fallback = yes
+		localization_key = duke_male_arabic_wanderer
+	}
+
+	# Scholar
+	text = {
+		trigger = { has_realm_law = camp_purpose_scholars }
+		localization_key = duke_male_arabic_scholar
+	}
+
+	# Explorer
+	text = {
+		trigger = { has_realm_law = camp_purpose_explorers }
+		localization_key = duke_male_arabic_explorer
+	}
+
+	# Freebooter
+	text = {
+		trigger = { has_realm_law = camp_purpose_brigands }
+		localization_key = duke_male_arabic_freebooter
+	}
+
+	# Legitimist
+	text = {
+		trigger = { has_realm_law = camp_purpose_legitimists }
+		localization_key = duke_male_arabic_legitimists
+	}
+	text = {
+		fallback = yes
+		localization_key = duke_male_arabic_default_landless
+	}
+}
+
+ME_LandlessFemaleSharif = {
+	type = character
+	text = {
+		trigger = {
+			OR = { # All Hashimids were considered Sharifs, but this will be reserved for Sayyids
+				has_trait = sayyid
+				has_trait = ubaydi
+			}
+			highest_held_title_tier = tier_duchy
+		}
+		localization_key = duke_female_arabic_sharif_landless
+	}
+	# Mercenary
+	text = {
+		trigger = { has_realm_law = camp_purpose_mercenaries }
+		localization_key = duke_female_arabic_mercenary
+	}
+
+	# Wanderer
+	text = {
+		trigger = { has_realm_law = camp_purpose_wanderers }
+		fallback = yes
+		localization_key = duke_female_arabic_wanderer
+	}
+
+	# Scholar
+	text = {
+		trigger = { has_realm_law = camp_purpose_scholars }
+		localization_key = duke_female_arabic_scholar
+	}
+
+	# Explorer
+	text = {
+		trigger = { has_realm_law = camp_purpose_explorers }
+		localization_key = duke_female_arabic_explorer
+	}
+
+	# Freebooter
+	text = {
+		trigger = { has_realm_law = camp_purpose_brigands }
+		localization_key = duke_female_arabic_freebooter
+	}
+
+	# Legitimist
+	text = {
+		trigger = { has_realm_law = camp_purpose_legitimists }
+		localization_key = duke_female_arabic_legitimists
+	}
+	text = {
+		fallback = yes
+		localization_key = duke_female_arabic_default_landless
+	}
+}
+
+ME_KaduistHoF = {
+	type = character
+	text = {
+		trigger = { has_trait = kaduist_prophet }
+		localization_key = d_kaduist_mahdi_prophet
+	}
+	text = {
+		fallback = yes
+		localization_key = d_kaduist_caliph
+	}
+}
+
+ME_KaduistHoFTitle = {
+	type = character
+	text = {
+		trigger = { has_trait = kaduist_prophet }
+		localization_key = d_kaduist_prophethood
+	}
+	text = {
+		fallback = yes
+		localization_key = d_kaduist_caliphate
+	}
+}

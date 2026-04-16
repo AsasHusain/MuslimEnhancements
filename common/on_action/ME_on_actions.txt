@@ -1,0 +1,431 @@
+﻿
+yearly_global_pulse = {
+	on_actions = { ME_yearly_global_pulse }
+}
+
+three_year_playable_pulse = {
+	on_actions = { ME_three_year_playable_pulse }
+}
+
+me_on_monthly = {
+	on_actions = {
+		delay = { months = 1 }
+		me_on_monthly
+	}
+
+	effect = {
+		ME_proselytize_decay_effect = yes
+	}
+}
+
+ME_three_year_playable_pulse = {
+	random_events = {
+		800 = 0
+		200 = siqilli_spread.0001
+		600 = siqilli_spread.0002
+	}
+}
+
+ME_yearly_global_pulse = {
+	effect = {
+		# Historical character spawner
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = no_historical_characters
+				}
+			}
+			me_spawn_historical_characters_effect = yes
+		}
+
+		# Nukkari Revolt
+		if = {
+			limit = {
+				NOT = { exists = global_var:nukkari_revolt_ended }
+			}
+			nukkari_event_launcher_effect = yes
+		}
+
+		# Ha-Mimist Invasion
+		if = {
+			limit = {
+				NOT = { exists = global_var:hamimist_invasion_ended }
+			}
+			hamimist_event_launcher_effect = yes
+		}
+
+		# Kaduist Invasion
+		if = {
+			limit = {
+				NOT = { exists = global_var:kaduist_invasion_ended }
+			}
+			kaduist_event_launcher_effect = yes
+		}
+
+		# Alid Egyptian Revolts
+		## Ibn as-Sufi
+		if = {
+			limit = {
+				NOT = { exists = global_var:ibn_as_sufi_revolt_ended }
+				current_date >= 867.1.1
+				current_date < 868.1.1
+			}
+			title:k_egypt.holder = {
+				trigger_event = {
+					id = me_alid_egypt_revolt.0001 
+					days = { 6 7 }
+				}
+			}
+		}
+		## Bugha al-Akbar
+		if = {
+			limit = {
+				NOT = { exists = global_var:bugha_al_akbar_revolt_ended }
+				current_date >= 868.1.1
+				current_date < 869.1.1
+			}
+			title:k_egypt.holder = {
+				trigger_event = {
+					id = me_alid_egypt_revolt.0002
+					days = { 90 260 }
+				}
+			}
+		}
+		## Bugha al-Asghar
+		if = {
+			limit = {
+				NOT = { exists = global_var:bugha_al_asghar_revolt_ended }
+				current_date >= 869.1.1
+				current_date < 870.1.1
+			}
+			title:k_egypt.holder = {
+				trigger_event = {
+					id = me_alid_egypt_revolt.0003
+					days = { 100 140 }
+				}
+			}
+		}
+		
+		# al-Ghazali death event
+		if = {
+			limit = {
+				current_date >= 1112.1.1
+				current_date < 1113.1.1
+			}
+			every_living_character = {
+				limit = {
+					faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+					OR = {
+						is_ai = no
+						highest_held_title_tier >= tier_kingdom 
+						has_title = title:d_sunni
+					}
+				}
+				trigger_event = {
+					id = me_misc_religion_event.0001 
+					days = { 30 100 }
+				}
+			}
+		}
+
+		# Turkmen culture emergence.
+		if = {
+			limit = {
+				current_date < 1115.1.1
+				NOT = { has_global_variable = turkmen_culture_emergence }
+				current_date >= 1075.1.1
+				culture:turkish = {
+					any_culture_county = {
+						any_county_province = {
+							count >= 5
+							OR = {
+								geographical_region = ghw_region_anatolia
+								geographical_region = ghw_region_mainland_greece
+								geographical_region = custom_k_thessalonika
+							}
+						}
+					}
+				}
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 20 # 30% chance
+					current_date >= 1085.1.1
+				}
+				modifier = {
+					add = 30 # 60% chance
+					current_date >= 1095.1.1
+				}
+				modifier = {
+					add = 40 # 100% chance
+					current_date >= 1105.1.1
+				}
+				set_global_variable = {
+					name = turkmen_culture_emergence
+					value = yes
+				}
+				trigger_event = {
+					id = me_culture_emergence.0001
+					days = { 60 300 }
+				}
+			}
+		}
+	}
+}
+
+###
+
+ME_public_preaching_events_success_critical = {
+	random_events = {
+		100 = me_missionary_event.1001 # Challenger - Public
+	}
+}
+
+ME_public_preaching_events_success = {
+	random_events = { 
+		100 = me_missionary_event.2001 # Gain a few followers
+		100 = me_missionary_event.2002 # Possible Recruit
+	}
+}
+
+ME_public_preaching_events_failure_critical = {
+	random_events = {
+		100 = me_missionary_event.3001 # Pelted with Rocks
+		100 = me_missionary_event.3002 # Stabbed while preaching (High Intrigue)
+		100 = me_missionary_event.3003 # Stabbed while preaching (Low Intrigue)
+		100 = me_missionary_event.3004 # Guards come to arrest you
+		100 = me_missionary_event.3005 # Infidel fight
+	}
+}
+
+ME_public_preaching_events_failure = {
+	random_events = {
+		100 = me_missionary_event.4001 # Nobody cares
+		100 = me_missionary_event.4002 # Chased Away by Mob
+		100 = me_missionary_event.4003 # Chased Away by Guards
+	}
+}
+
+
+ME_buy_conversions_events_success_critical = {
+	random_events = {
+		100 = me_missionary_event.1002 # Successfully bought conversions and kept half the gold
+		100 = me_missionary_event.1003 # Successfully bought conversions and got double the conversions
+		100 = me_missionary_event.1004 # Choose to keep half the gold or double the conversions
+	}
+}
+
+ME_buy_conversions_events_success = {
+	random_events = {
+		100 = me_missionary_event.2003 # Successfully bought conversions
+	}
+}
+
+ME_buy_conversions_events_failure_critical = {
+	random_events = {
+		10 = me_missionary_event.3001 # Pelted with Rocks - Don't lose any gold
+		10 = me_missionary_event.3002 # Stabbed while preaching (High Intrigue) - Don't lose any gold
+		10 = me_missionary_event.3003 # Stabbed while preaching (Low Intrigue) - Don't lose any gold
+		10 = me_missionary_event.3004 # Guards come to arrest you - Don't lose any gold
+		10 = me_missionary_event.3005 # Infidel fight - Don't lose any gold
+		50 = me_missionary_event.3006 # They take the gold and continue to practice their old faith
+	}
+}
+
+ME_buy_conversions_events_failure = {
+	random_events = {
+		15 = me_missionary_event.4001 # Nobody cares - Don't lose any gold
+		15 = me_missionary_event.4002 # Chased Away by Mob - Don't lose any gold
+		15 = me_missionary_event.4003 # Chased Away by Guards - Don't lose any gold
+		55 = me_missionary_event.4004 # Lose a portion of gold
+	}
+}
+
+
+ME_secret_preaching_events_success_critical = {
+	random_events = {
+		100 = me_missionary_event.1005 # Challenger - Secret
+	}
+}
+
+ME_secret_preaching_events_success = {
+	random_events = {
+		100 = me_missionary_event.2001 # Gain a few followers
+		100 = me_missionary_event.2002 # Possible Recruit
+	}
+}
+
+ME_secret_preaching_events_failure_critical = {
+	random_events = {
+		100 = me_missionary_event.3007 # Tailed in Public
+		100 = me_missionary_event.3008 # Ambush
+	}
+}
+
+ME_secret_preaching_events_failure = {
+	random_events = {
+		100 = me_missionary_event.4001 # Nobody cares
+	}
+}
+
+
+###
+
+on_county_occupied = {
+	on_actions = {
+		me_on_county_occupied
+	}
+}
+
+on_raid_action_completion = {
+	on_actions = {
+		me_on_raid_action_completion
+	}
+}
+
+on_title_gain = {
+	on_actions = {
+		ME_on_title_gain
+	}
+}
+
+on_title_gain_inheritance = {	
+	on_actions = {
+		ME_on_title_gain_inheritance
+	}
+}
+
+on_faith_conversion = {
+	on_actions = { ME_on_faith_conversion }
+}
+
+on_character_faith_change = {
+	on_actions = { ME_on_character_faith_change }
+}
+
+ME_on_faith_conversion = {	
+	events = {
+		me_misc_religion_event.0002
+	}
+}
+
+ME_on_character_faith_change = {	
+	events = {
+		me_misc_religion_event.0002
+	}
+}
+
+ME_on_title_gain = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { any_held_title = { is_head_of_faith = yes } }
+				faith.religion = religion:islam_religion
+				has_any_nickname = no
+				is_ai = yes
+			}
+			ME_islamic_honorific_ai_ruler_effect = yes
+		}
+		if = {
+			limit = {
+				any_held_title = { is_head_of_faith = yes }
+				faith.religion = religion:islam_religion
+				has_any_nickname = no
+				is_ai = yes
+			}
+			ME_caliphal_honorific_ai_ruler_effect = yes
+		}
+	}
+	events = {
+		me_hidden_imam_event.0002 # Become the Isma'ili Caliph
+	}
+}
+
+ME_on_title_gain_inheritance = {
+	events = {
+		me_missionary_event.0001 # Continue your predecessor's work
+		me_hidden_imam_event.0001 # Become the next Hidden Imam
+	}
+}
+
+me_on_raid_action_completion = {	
+	events = {
+		me_misc_event.0002
+	}
+}
+
+hire_hafidh_events = {
+	random_events = {
+		chance_of_no_event = 0
+		delay = { days = { 10 14 } }
+		
+		### Event chains
+		60 = me_religious_decisions.0003 # Normal collection of Huffadh
+		20 = me_religious_decisions.0004 # True Hafidh - Madrasa Teacher
+		20 = me_religious_decisions.0005 # True Hafidh - Wandering Scholar
+		300 = me_religious_decisions.0006 # True Hafidh - Zealous Traveller
+	}
+}
+
+me_on_county_occupied = {
+	effect = {
+		# Nukkari Lootings
+		if = {
+			limit = {
+				# Check that it's relevant so we don't fire it *all* the time
+				scope:war = { using_cb = me_nukkari_revolt_war }
+				NOT = { exists = scope:county.var:looted_by_nukkaris }
+			}
+			# Each County should only be looted once
+			scope:county = {
+				set_variable = {
+					name = looted_by_nukkaris
+					value = yes
+				}
+			}
+			# Send a message (and gold!) to the Nukkari leader
+			send_interface_message = {
+				type = event_war_good
+				title = nukkaris_sieged_county.t
+				left_icon = scope:previous_controller
+				right_icon = scope:county
+				add_gold = {
+					add = scope:county.development_level
+					multiply = 2
+				}
+				show_as_tooltip = {
+					scope:county = {
+						nukkaris_loot_county_effect = yes
+					}
+				}
+			}
+			# Send a message to the County's owner and his leige
+			scope:previous_controller = {
+				send_interface_message = {
+					type = event_war_bad
+					title = nukkaris_sieged_county.t
+					left_icon = root
+					right_icon = scope:county
+					scope:county = {
+						nukkaris_loot_county_effect = yes
+					}
+				}
+				every_liege_or_above = { 
+					send_interface_message = {
+						type = event_war_bad
+						title = nukkaris_sieged_county.t
+						left_icon = root
+						right_icon = scope:county
+						show_as_tooltip = {
+							scope:county = {
+								nukkaris_loot_county_effect = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,162 @@
+﻿l_english:
+
+ #Sunni Sect Divisions
+ rule_me_sunni_unity:0 "@me_icon! Sunni Sect Divisions"
+ setting_me_sunni_normal:0 "Normal"
+ setting_me_sunni_normal_desc:0 "Sunnism, Muwalladism, and Maturidism will be kept as they are on game start."
+ setting_me_sunni_united:0 "Fully United"
+ setting_me_sunni_united_desc:0 "Muwalladi and Maturidi counties and characters will be converted to Sunni on game start."
+ setting_me_sunni_muwalladi_only:0 "Muwalladi Only"
+ setting_me_sunni_muwalladi_only_desc:0 "Muwalladi counties and characters will be converted to Sunni on game start."
+ setting_me_sunni_maturidi_only:0 "Maturidi Only"
+ setting_me_sunni_maturidi_only_desc:0 "Maturidi counties and characters will be converted to Sunni on game start."
+ 
+ #Nukkari Revolt
+ rule_me_nukkari_revolt_game_rule:0 "@me_icon! Nukkari Revolt"
+ setting_me_nukkari_revolt_yes:0 "Default"
+ setting_me_nukkari_revolt_yes_desc:0 "The Nukkari Revolt will start around the year 944, in the duchies of Tunis and Kairawan."
+ setting_me_nukkari_revolt_no:1 "#high Never#!"
+ setting_me_nukkari_revolt_no_desc:1 "The Nukkari Revolt will not happen."
+ 
+ #Berberist Invasions
+ rule_me_berberist_invasion_game_rule:0 "@me_icon! Berberist Invasions"
+ setting_me_berberist_invasion_both:0 "Both"
+ setting_me_berberist_invasion_both_desc:0 "The Ha-Mimist Invasion will start around the year 925 on Cueta and the Kaduist Invasion will start around the year 912 on Satif."
+ setting_me_berberist_invasion_H_only:0 "Ha-Mimist Only"
+ setting_me_berberist_invasion_H_only_desc:0 "The Ha-Mimist Invasion will start around the year 925 on Cueta. The Kaduist Invasion will never start."
+ setting_me_berberist_invasion_K_only:0 "Kaduist Only"
+ setting_me_berberist_invasion_K_only_desc:0 "The Kaduist Invasion will start around the year 912 on Satif. The Ha-Mimist Invasion will never start."
+ setting_me_berberist_invasion_K_ismaili:0 "Kaduist: Ismaili Presence"
+ setting_me_berberist_invasion_K_ismaili_desc:0 "The Kaduist Invasion will start if there is an Ismaili ruler or county in the region. The Ha-Mimist Invasion will never start."
+ setting_me_berberist_invasion_H_K_ismaili:0 "Both: Ismaili Presence"
+ setting_me_berberist_invasion_H_K_ismaili_desc:0 "The Kaduist Invasion will start if there is an Ismaili ruler or county in the region. The Ha-Mimist Invasion will start around the year 925."
+ setting_me_berberist_invasion_none:1 "#high None#!"
+ setting_me_berberist_invasion_none_desc:1 "No Berberist invasion will take place."
+ 
+ #Alid Egypt Revolts
+ rule_me_alid_egypt_revolt:0 "@me_icon! Alid Egyptian Revolts"
+ setting_me_alid_egypt_revolt_ME:0 "ME Setup"
+ setting_me_alid_egypt_revolt_ME_desc:0 "Three seperate unlanded Alid revolts will take place against Egypt from 867-869. #EMP This is the setup for Muslim Enhancements#!"
+ setting_me_alid_egypt_revolt_RICE:0 "RICE Setup"
+ setting_me_alid_egypt_revolt_RICE_desc:0 "Two landed Alid attacks will take place against Egypt from the start of 867. #EMP This is the setup for RICE#!"
+ setting_me_alid_egypt_revolt_disabled:0 "#high Disabled#!"
+ setting_me_alid_egypt_revolt_disabled_desc:0 "No Alid revolts against Egypt will take place."
+ 
+ #867 Egypt Holder
+ rule_me_egypt_holder_867:0 "@me_icon! Egyptian Ruler in 867"
+ setting_me_egypt_holder_tulunid_tributary:0 "Ibn Tulun #EMP (Tributary)#!"
+ setting_me_egypt_holder_tulunid_tributary_desc:0 "Egypt will be held by the founder of the Tulunid dynasty, who historically took power in late 868 (Tributary of the Abbasids)."
+ setting_me_egypt_holder_tulunid_vassal:0 "Ibn Tulun #EMP (Vassal)#!"
+ setting_me_egypt_holder_tulunid_vassal_desc:0 "Egypt will be held by the founder of the Tulunid dynasty, who historically took power in late 868 (Vassal of the Abbasids)."
+ setting_me_egypt_holder_hulwanid:0 "Yazid al-Hulwani"
+ setting_me_egypt_holder_hulwanid_desc:0 "Egypt will be held by Yazid ibn Abdullah al-Hulwani, who historically governed Egypt at the begining of 867 as a vassal of the Abbasids."
+ setting_me_egypt_holder_urtujid:0 "Muzahim ibn Khaqan"
+ setting_me_egypt_holder_urtujid_desc:0 "Egypt will be held by Muzahim ibn Khaqan, who historically governed Egypt in mid-867 as a vassal of the Abbasids."
+ setting_me_egypt_holder_azjur:0 "Azjur at-Turki"
+ setting_me_egypt_holder_azjur_desc:0 "Egypt will be held by Azjur at-Turki, who historically governed Egypt in mid-868 as a vassal of the Abbasids."
+ 
+ #Bari Partition
+ rule_me_bari_partition:0 "@me_icon! Bari Partition"
+ setting_me_bari_partition_true:0 "Partition on Loss"
+ setting_me_bari_partition_true_desc:0 "The Emirate of Bari will be divided between the neighboring states should it lose the Italian reconqest war. (#R Semi-Historical#!)"
+ setting_me_bari_partition_false:0 "No Partition"
+ setting_me_bari_partition_false_desc:0 "The Emirate of Bari will only lose the county of Bari should it lose the Italian reconqest war."
+ 
+ #867 Calabria Holder
+ rule_me_calabria_holder_867:0 "@me_icon! Calabrian Ruler in 867"
+ setting_me_calabria_byzantine:0 "#R Historical#!"
+ setting_me_calabria_byzantine_desc:0 "Counties within the Duchy of Calabria will be held by a Byzantine vassal in 867."
+ setting_me_calabria_bari:0 "Vanilla"
+ setting_me_calabria_bari_desc:0 "Counties within the Duchy of Calabria will be held by the Emirate of Bari in 867."
+ 
+ #Shared RICE Cultures Name
+ rule_me_rice_culture_name:0 "@me_icon! Shared RICE Cultures"
+ setting_me_rice_culture_name_ME:0 "Siqilli and Mahri"
+ setting_me_rice_culture_name_ME_desc:0 "The Arab-Sicilian culture will use the name 'Siqilli' and the South Arabian culture will use the name 'Mahri'."
+ setting_me_rice_culture_name_RICE:0 "Siculo-Arabic and South Arabian"
+ setting_me_rice_culture_name_RICE_desc:0 "The Arab-Sicilian culture will use the name 'Siculo-Arabic' and The South Arabian culture will use the name 'Mahri' (Used by #Y RICE#!)."
+ setting_me_rice_culture_name_S_SA:0 "Siqilli and South Arabian"
+ setting_me_rice_culture_name_S_SA_desc:0 "The Arab-Sicilian culture will use the name 'Siqilli' and the South Arabian culture will use the name 'South Arabian'."
+ setting_me_rice_culture_name_M_SA:0 "Siculo-Arabic and Mahri"
+ setting_me_rice_culture_name_M_SA_desc:0 "The Arab-Sicilian culture will use the name 'Siculo-Arabic' and the South Arabian culture will use the name 'Mahri' ."
+ 
+ #Siqilli Name List
+ rule_me_siqilli_name_list:0 "@me_icon! Arab-Sicilian Name List"
+ setting_me_siqilli_name_list_ME:0 "Muslim Enhancements"
+ setting_me_siqilli_name_list_ME_desc:0 "The Arab-Sicilian culture will use a purely Arabic name list created by Muslim Enhancements."
+ setting_me_siqilli_name_list_RICE:0 "#Y RICE#!"
+ setting_me_siqilli_name_list_RICE_desc:0 "The Arab-Sicilian culture will use RICE's name list, which is a mixture of Greek and Arabic names (#R Choosing this option RICE will cause the culture to have no name list.#!)."
+ 
+ # Fictional and Easter Egg Adventerer
+ rule_me_adventerers_extra:0 "@me_icon! Fictional Adventerers"
+ setting_me_adventerers_fic_egg:0 "All"
+ setting_me_adventerers_fic_egg_desc:0 "Fictional adventerers that exist as easter eggs or as extensions for dead dynasties as will continue to exist even if they are not controlled by a player."
+ setting_me_adventerers_fic_only:0 "Extentions Only"
+ setting_me_adventerers_fic_only_desc:0 "Fictional adventerers that are meant as extensions for dead dynasties as will continue to exist even if they are not controlled by a player."
+ setting_me_adventerers_egg_only:0 "Easter Eggs Only"
+ setting_me_adventerers_egg_only_desc:0 "Fictional adventerers that exist as easter eggs will continue to exist even if they are not controlled by a player."
+ setting_me_adventerers_extra_none:0 "Removed"
+ setting_me_adventerers_extra_none_desc:0 "All fictional adventerers will be removed if not controlled by a player."
+ 
+ #1066 Caliphs Extra Titles
+ rule_me_caliph_rank:0 "@me_icon! 1066 Extra Caliph Titles"
+ setting_me_caliph_rank_none:0 "None"
+ setting_me_caliph_rank_none_desc:0 "Neither the Fatimids nor Abbasids will get any extra titles."
+ setting_me_caliph_rank_both:0 "Both"
+ setting_me_caliph_rank_both_desc:0 "The Fatimids will gain the Empire of Arabia and the Abbasids will gain the Kingdom of Mesopotamia."
+ setting_me_caliph_rank_fatimid:0 "Fatimid Empire"
+ setting_me_caliph_rank_fatimid_desc:0 "The Fatimids will gain the Empire of Arabia."
+ setting_me_caliph_rank_abbasid:0 "Abbasid Kingdom"
+ setting_me_caliph_rank_abbasid_desc:0 "The Abbasids will gain the Kingdom of Mesopotamia."
+ 
+ #Ayyubid Culture
+ rule_me_ayyubid_culture:0 "@me_icon! Ayyubid Culture"
+ setting_me_ayyubid_mashriqi:0 "Mashriqi"
+ setting_me_ayyubid_mashriqi_desc:0 "All Ayyubid characters will remain Mashriqi."
+ setting_me_ayyubid_kurdish:0 "#Y Kurdish#!"
+ setting_me_ayyubid_kurdish_desc:0 "All Ayyubid characters will convert to the Kurdish culture."
+ 
+ #Fatimid Trait
+ rule_me_fatimid_trait:0 "@me_icon! Fatimid Trait"
+ setting_me_fatimid_trait_ubaydi:0 "Ubaydi"
+ setting_me_fatimid_trait_ubaydi_desc:0 "Members of the Fatimid dynasty will use the Ubaydi trait instead of the Sayyid trait."
+ setting_me_fatimid_trait_sayyid:0 "Sayyid"
+ setting_me_fatimid_trait_sayyid_desc:0 "Members of the Fatimid dynasty will use the normal Sayyid trait."
+ 
+ #Islamic Honorifics
+ rule_me_islamic_honorific_active:0 "@me_icon! Islamic Honorifics"
+ setting_me_islamic_honorific_active_yes:0 "Activated"
+ setting_me_islamic_honorific_active_yes_desc:0 "Regular AI Muslim rulers will take honorifics upon inheriting titles."
+ setting_me_islamic_honorific_active_no:0 "#R Deactivated#!"
+ setting_me_islamic_honorific_active_no_desc:0 "Regular AI Muslim rulers will not take honorifics."
+ 
+ #Islamic Honorifics
+ rule_me_caliphal_honorific_active:0 "@me_icon! Caliphal Honorifics"
+ setting_me_caliphal_honorific_active_random_short:0 "Random - Short"
+ setting_me_caliphal_honorific_active_random_short_desc:0 "Upon inheriting the title, Muslim HoFs will take random short honorifics such as #high $nick_me_al_mutawakil$#!."
+ setting_me_caliphal_honorific_active_random_long:0 "Random - Long"
+ setting_me_caliphal_honorific_active_random_long_desc:0 "Upon inheriting the title, Muslim HoFs will take random long honorifics such as #high $nick_me_al_mutawakil_ala_llah$#!."
+ setting_me_caliphal_honorific_active_historic_short:0 "Short"
+ setting_me_caliphal_honorific_active_historic_short_desc:0 "Upon inheriting the title, Muslim HoFs will take short honorifics such as #high $nick_me_al_mutawakil$#!."
+ setting_me_caliphal_honorific_active_historic_long:0 "Long"
+ setting_me_caliphal_honorific_active_historic_long_desc:0 "Upon inheriting the title, Muslim HoFs will take long honorifics such as #high $nick_me_al_mutawakil_ala_llah$#!."
+ setting_me_caliphal_honorific_active_no:0 "#R Deactivated#!"
+ setting_me_caliphal_honorific_active_no_desc:0 "AI Muslim HoFs (Caliphs and Imams) will not take honorifics."
+ 
+ #Islamic Honorific Prefix
+ rule_me_islamic_honorific_prefixed:0 "@me_icon! Islamic Honorific Prefix"
+ setting_me_islamic_honorific_prefixed_both:0 "Both"
+ setting_me_islamic_honorific_prefixed_both_desc:0 "Both regular Muslim rulers and HoFs have #EMP prefixed#! honorifics which will appear as such: #high Sultan 'Salah ud-Din' Yusuf#!."
+ setting_me_islamic_honorific_prefixed_regular:0 "Regular Only"
+ setting_me_islamic_honorific_prefixed_regular_desc:0 "Only regular Muslim rulers have #EMP prefixed#! honorifics which will appear as such: #high Sultan 'Salah ud-Din' Yusuf#!."
+ setting_me_islamic_honorific_prefixed_caliphal:0 "HoFs Only"
+ setting_me_islamic_honorific_prefixed_caliphal_desc:0 "Both HoFs (Caliphs and Imams) have #EMP prefixed#! honorifics which will appear as such: #high Sultan 'Salah ud-Din' Yusuf#!."
+ setting_me_islamic_honorific_prefixed_no:0 "#R Non-Prefixed#!"
+ setting_me_islamic_honorific_prefixed_no_desc:0 "Islamic Honorifics are #EMP not prefixed#! and will appear as such: #high Sultan Yusuf 'Salah ud-Din'#!"
+ 
+ #Dubious Historicity Acehnese Muslims
+ rule_me_malay_islamic_ruler:0 "@me_icon! Acehnese Dynasties"
+ setting_me_malay_islamic_ruler_yes:0 "#high Activated#!"
+ setting_me_malay_islamic_ruler_yes_desc:0 "Muslim Acehnese dynasties of dubious historicity will be appear in the 867, 1066, and 1178 start dates."
+ setting_me_malay_islamic_ruler_no:0 "Deactivated"
+ setting_me_malay_islamic_ruler_no_desc:0 "Muslim Acehnese dynasties of dubious historicity will be not appear and the vanilla placeholder characters will be used instead."

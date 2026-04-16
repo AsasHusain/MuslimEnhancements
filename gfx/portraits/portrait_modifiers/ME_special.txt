@@ -1,0 +1,3243 @@
+﻿special_me_shields = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 50
+
+	# Rashidun Caliphs
+	## Abu Bakr 'as-Siddiq'
+	163014_abu_bakr_as_siddiq = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abu_bakr_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163014
+				this = character:163014
+			}
+		}
+	}
+	## Umar 'al-Faruq' ibn al-Khattab
+	163015_umar_ibn_al_khattab = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = umar_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163015
+				this = character:163015
+			}
+		}
+	}
+	## Uthman 'Dhu an-Nurayn' ibn Affan
+	163021_uthman_ibn_affan = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = uthman_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163021
+				this = character:163021
+			}
+		}
+	}
+	## Ali ibn Abi Talib
+	33911_ali_ibn_abi_talib = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = ali_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33911
+				this = character:33911
+			}
+		}
+	}
+
+	# Umayyads
+	## Mu'awiyah ibn Abi Sufyan
+	163029_muawiyah_ibn_abi_sufyan = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = muawiyah_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163029
+				this = character:163029
+			}
+		}
+	}
+	## Abu Sufyan ibn Harb
+	163028_abu_sufyan_ibn_harb = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abu_sufyan_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163028
+				this = character:163028
+			}
+		}
+	}
+	## Abdullah ibn Uthman ibn Affan
+	me_umayyads_001_abdullah_ibn_uthman = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abdullah_ibn_uthman_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_umayyads_001
+				this = character:me_umayyads_001
+			}
+		}
+	}
+
+	# Wives of the Prophet
+	## Ramlah 'Umm Habibah" bint Abu Sufyan
+	sufyani001_umm_habiba_ramlah = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = umm_habiba_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:sufyani001
+				this = character:sufyani001
+			}
+		}
+	}
+	## Zaynab bint Jahsh al-Asadi
+	asadid020_zaynab_bint_jahsh = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = zaynab_bint_jahsh_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:asadid020
+				this = character:asadid020
+			}
+		}
+	}
+
+	# Daughters of the Prophet
+	## Fatima 'az-Zahra' bint Muhammad
+	33921_fatima_az_zahra = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = fatima_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33921
+				this = character:33921
+			}
+		}
+	}
+	## Zaynab bint Muhammad
+	me_hashimid_021_zaynab_bint_muhammad = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = zaynab_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_hashimid_021
+				this = character:me_hashimid_021
+			}
+		}
+	}
+	## Umm Kulthum bint Muhammad
+	me_hashimid_020_umm_kulthum_bint_muhammad = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = umm_kulthum_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_hashimid_020
+				this = character:me_hashimid_020
+			}
+		}
+	}
+	## Ruqayya bint Muhammad
+	me_hashimid_019_ruqayya_bint_muhammad = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = ruqayya_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_hashimid_019
+				this = character:me_hashimid_019
+			}
+		}
+	}
+
+	# Children of Ali
+	## al-Hasan ibn Ali
+	33926_al_hasan_ibn_ali = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = hasan_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33926
+				this = character:33926
+			}
+		}
+	}
+	## al-Husayn ibn Ali
+	33912_al_husayn_ibn_ali = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = husayn_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33912
+				this = character:33912
+			}
+		}
+	}
+	## Zaynab bint Ali
+	me_hashimid_011_zaynab_bint_ali = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = zaynab_bint_ali_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_hashimid_011
+				this = character:me_hashimid_011
+			}
+		}
+	}
+	## Umm Kulthum bint Ali
+	me_hashimid_012_kulthum_bint_ali = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = kulthum_bint_ali_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_hashimid_012
+				this = character:me_hashimid_012
+			}
+		}
+	}
+
+	# Hashimids
+	## Abdullah ibn Abd al-Mutalib
+	33923_abdullah_ibn_abdulmutalib = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abdullah_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33923
+				this = character:33923
+			}
+		}
+	}
+	## Abd al-Mutalib ibn Hashim
+	33924_abdulmutalib_ibn_hashim = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abdulmutalib_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33924
+				this = character:33924
+			}
+		}
+	}
+	## Abbas ibn Abd al-Mutalib
+	33900_abbas_ibn_abdulmutalib = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abbas_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33900
+				this = character:33900
+			}
+		}
+	}
+	## Abu Talib ibn Abd al-Mutalib
+	33910_abu_talib_ibn_abdulmutalib = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abu_talib_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33910
+				this = character:33910
+			}
+		}
+	}
+	## Hamza ibn Abd al-Mutalib
+	3390011_hamza_ibn_abdulmutalib = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = hamza_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:3390011
+				this = character:3390011
+			}
+		}
+	}
+	## Ja'far 'at-Tayar' ibn Abu Talib
+	me_hashimid_009_jafar_al_tayar = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = jafar_al_tayar_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_hashimid_009
+				this = character:me_hashimid_009
+			}
+		}
+	}
+
+	# Shi'ite Imams
+	## Ali 'Zayn ul-Abidin' ibn Husayn
+	33913_zayn_ul_abidin = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = ZAB_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33913
+				this = character:33913
+			}
+		}
+	}
+	## Muhammad al-Baqir
+	33914_muhammad_al_baqir = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = baqir_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33914
+				this = character:33914
+			}
+		}
+	}
+	## Ja'far as-Sadiq
+	33915_jafar_al_sadiq = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = sadiq_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:33915
+				this = character:33915
+			}
+		}
+	}
+	## Musa al-Kadhim
+	163022_musa_al_kadhim = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = kadhim_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163022
+				this = character:163022
+			}
+		}
+	}
+	## Ali al-Rida
+	163023_ali_al_rida = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = rida_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163023
+				this = character:163023
+			}
+		}
+	}
+	## Muhammad al-Jawwad
+	163024_muhammad_al_jawwad = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = jawad_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163024
+				this = character:163024
+			}
+		}
+	}
+	## Ali al-Hadi
+	163025_ali_al_hadi = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = hadi_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163025
+				this = character:163025
+			}
+		}
+	}
+	## Hasan al-Askari
+	163026_hasan_al_askari = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = askari_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163026
+				this = character:163026
+			}
+		}
+	}
+	## Muhammad al-Mahdi (Twelver)
+	163027_mahdi_twelver = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = mahdi_twelver_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:163027
+				this = character:163027
+			}
+		}
+	}
+	## Narjis (Mother of al-Mahdi)
+	00004447_narjis = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = narjis_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:00004447
+				this = character:00004447
+			}
+		}
+	}
+
+	## Khalid ibn al-Walid 'Say Allah al-Maslul'
+	me_makhzumi_007_khalid_ibn_al_walid = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = khalid_ibn_al_walid_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_makhzumi_007
+				this = character:me_makhzumi_007
+			}
+		}
+	}
+
+	## Abdullah ibn Umar ibn al-Khattab
+	me_adawi_006_abdullah_ibn_umar = { # Has no portrait 
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_body_type
+				template = no_portrait
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_no_face
+				value = 1.0
+			}
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_shape
+				template = no_eyebrows
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_eyebrows_fullness
+				template = no_eyebrows
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = eye_accessory
+				template = no_eyes
+				value = 0.5
+			}
+			accessory = {
+				mode = modify
+				gene = teeth_accessory
+				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abdullah_ibn_umar_shield
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				value = 0.5
+			}
+			accessory = {
+				 mode = add
+				 gene = hairstyles
+				 template = no_hairstyles
+				 value = 0
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 0
+			}  
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:me_adawi_006
+				this = character:me_adawi_006
+			}
+		}
+	}
+
+}

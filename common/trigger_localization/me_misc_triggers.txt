@@ -1,0 +1,74 @@
+﻿### SCHEME TRIGGERS ###
+
+no_target_hafidh = {
+	global_not = no_target_hafidh
+}
+
+### DOCTRINE TRIGGERS ###
+
+must_select_sunni = {
+	global_not = REQUIRES_SUNNI
+}
+
+must_select_shia = {
+	global_not = REQUIRES_SHIA
+}
+
+must_select_muhakkima = {
+	global_not = REQUIRES_MUHAKKIMA
+}
+
+must_select_zandaqa = {
+	global_not = REQUIRES_ZANDAQA
+}
+
+must_select_berberist = {
+	global_not = REQUIRES_BERBERIST
+}
+
+must_not_select_hedonistic = {
+	global_not = NO_HEDONISTIC
+}
+
+must_select_hedonistic = {
+	global_not = REQUIRES_HEDONISTIC
+}
+
+must_select_puritanical_sect = {
+	global_not = REQUIRES_PURITANICAL_SECT
+}
+
+incompatible_tenet_warmonger_trigger = {
+	first_not = INCOMPATIBLE_TENET_WARMONGER_TRIGGER
+	third_not = INCOMPATIBLE_TENET_WARMONGER_TRIGGER
+}
+
+### BUILDING TRIGGERS ###
+
+muslim_me_building_trigger = {
+	global_not = NOT_muslim_me_building_trigger
+}
+
+shia_and_others_me_building_trigger = {
+	global_not = NOT_shia_and_others_me_building_trigger
+}
+
+christian_me_building_trigger = {
+	global_not = NOT_christian_me_building_trigger
+}
+
+imami_me_building_trigger = {
+	global_not = NOT_imami_me_building_trigger
+}
+
+ismaili_me_building_trigger = {
+	global_not = NOT_ismaili_me_building_trigger
+}
+
+zoroastrian_me_building_trigger = {
+	global_not = NOT_zoroastrian_me_building_trigger
+}
+
+yazidi_me_building_trigger = {
+	global_not = NOT_yazidi_me_building_trigger
+}

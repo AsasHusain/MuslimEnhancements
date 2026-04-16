@@ -1,0 +1,1435 @@
+﻿## Proclaim yourself the Isma'ili Mahdi
+ME_become_ismaili_mahdi_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_muslim_leader.dds"
+	}
+	desc = ME_become_ismaili_mahdi_decision_desc
+	selection_tooltip = ME_become_ismaili_mahdi_decision_tooltip
+	decision_group_type = adventurer
+
+	ai_check_interval = 60
+
+	is_shown = {
+		is_landless_adventurer = yes
+		faith = faith:ismaili
+		has_trait = me_hidden_imam
+	}
+
+	is_valid = {
+		is_landless_adventurer = yes
+		faith = faith:ismaili
+		has_trait_xp = {
+			trait = me_hidden_imam
+			value >= 100
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes
+	}
+
+	cost = {
+		piety = 2500
+	}
+	
+	effect = {
+		show_as_tooltip = {
+			ME_become_ismaili_mahdi_decision_effect = yes
+		}
+		trigger_event = {
+			id = me_hidden_imam_event.1001
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = { #Do it always.
+		base = 100
+	}
+}
+
+
+## Missionary decisions
+ME_laamp_proselytize = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_preacher.dds"
+	}
+	decision_group_type = major
+	sort_order = 100
+
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		government_has_flag = government_is_landless_adventurer
+		OR = {
+			has_trait = ME_missionary
+			has_character_flag = zealous_missionary_prep
+			has_character_flag = zealous_missionary_start
+			has_character_flag = zealous_missionary_timer
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		NOT = {
+			has_trait = incapable
+		}
+		NOR = {
+			custom_tooltip = {
+				text = ME_county_has_faith
+				AND = {
+					NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+					location.county.faith = root.faith
+				}
+			}
+			custom_tooltip = {
+				text = ME_county_has_faith_secret
+				AND = {
+					any_secret = { secret_type = secret_crypto_religionist }
+					location.county.faith = root.secret_faith
+				}
+			}
+		}
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "ME_CHOOSE_PROSELYTIZE_TARGET_OPTION"
+		show_from_start = yes
+
+		# Convert the entire county
+		item = {
+			value = ME_laamp_proselytize_convert_county_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_laamp_proselytize_convert_county_option_desc
+			localization = ME_laamp_proselytize_convert_county_option
+			icon = "gfx/interface/icons/widgets/religious.dds"
+
+			ai_chance = {
+				value = 0 
+			}
+		}
+
+		# Preach to the higher classes
+		item = {
+			value = ME_laamp_proselytize_preach_nobility_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_laamp_proselytize_preach_nobility_option_desc
+			localization = ME_laamp_proselytize_preach_nobility_option
+			icon = "gfx/interface/icons/widgets/nobility.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+
+		# Preach to the workers and soldiers
+		item = {
+			value = ME_laamp_proselytize_preach_workers_option
+			is_valid = {
+				is_ai = no 
+			}
+			current_description = ME_laamp_proselytize_preach_workers_option_desc
+			localization = ME_laamp_proselytize_preach_workers_option
+			icon = "gfx/interface/icons/widgets/workers.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+
+		# Preach to the farmers and villagers
+		item = {
+			value = ME_laamp_proselytize_preach_villagers_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_laamp_proselytize_preach_villagers_option_desc
+			localization = ME_laamp_proselytize_preach_villagers_option
+			icon = "gfx/interface/icons/widgets/villagers.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+	}
+
+	effect = {
+		custom_tooltip = ME_laamp_proselytize_effect_tt
+		remove_variable = temp_public_teir
+		remove_variable = temp_gold_teir
+		remove_variable = temp_secret_teir
+
+		if = { # Convert county
+			limit = { scope:ME_laamp_proselytize_convert_county_option = yes }
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize_convert_county
+				player = root
+			}
+		}
+		
+		else_if = { # Preach to the higher classes
+			limit = { scope:ME_laamp_proselytize_preach_nobility_option = yes }
+			
+			set_variable = {
+				name = social_type
+				value = flag:preach_nobility
+			}
+			
+			if = { # Public Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_nobility_public_faith }
+						root.location.county.var:converts_nobility_public_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_public_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_public_teir
+					value = root.location.county.var:converts_nobility_public_tier
+				}
+			}
+			
+			if = { # Gold Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_nobility_gold_faith }
+						root.location.county.var:converts_nobility_gold_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_gold_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_gold_teir
+					value = root.location.county.var:converts_nobility_gold_tier
+				}
+			}
+			
+			if = { # Secret Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_nobility_secret_faith }
+						root.location.county.var:converts_nobility_secret_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_secret_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_secret_teir
+					value = root.location.county.var:converts_nobility_secret_tier
+				}
+			}
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize_type
+				player = root
+			}
+		}
+
+		else_if = { # Preach to the workers and soldiers
+			limit = { scope:ME_laamp_proselytize_preach_workers_option = yes }
+			
+			set_variable = {
+				name = social_type
+				value = flag:preach_workers
+			}
+			
+			if = { # Public Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_workers_public_faith }
+						root.location.county.var:converts_workers_public_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_public_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_public_teir
+					value = root.location.county.var:converts_workers_public_tier
+				}
+			}
+			if = { # Gold Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_workers_gold_faith }
+						root.location.county.var:converts_workers_gold_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_gold_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_gold_teir
+					value = root.location.county.var:converts_workers_gold_tier
+				}
+			}
+			
+			if = { # Secret Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_workers_secret_faith }
+						root.location.county.var:converts_workers_secret_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_secret_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_secret_teir
+					value = root.location.county.var:converts_workers_secret_tier
+				}
+			}
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize_type
+				player = root
+			}
+		}
+
+		else_if = { # Preach to the farmers and villagers
+			limit = { scope:ME_laamp_proselytize_preach_villagers_option = yes }
+			
+			set_variable = {
+				name = social_type
+				value = flag:preach_villagers
+			}
+			
+			if = { # Public Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_villagers_public_faith }
+						root.location.county.var:converts_villagers_public_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_public_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_public_teir
+					value = root.location.county.var:converts_villagers_public_tier
+				}
+			}
+			if = { # Gold Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_villagers_gold_faith }
+						root.location.county.var:converts_villagers_gold_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_gold_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_gold_teir
+					value = root.location.county.var:converts_villagers_gold_tier
+				}
+			}
+			
+			if = { # Secret Tier
+				limit = {
+					NOR = {
+						root.location.county = { has_variable = converts_villagers_secret_faith }
+						root.location.county.var:converts_villagers_secret_faith = root.faith
+					}
+				}
+				set_variable = {
+					name = temp_secret_teir
+					value = 0
+				}
+			}
+			else = {
+				set_variable = {
+					name = temp_secret_teir
+					value = root.location.county.var:converts_villagers_secret_tier
+				}
+			}
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize_type
+				player = root
+			}
+		}
+		
+		root.location.county = { save_scope_as = location }
+	}
+	
+	ai_check_interval = 0
+	ai_potential = {
+		is_at_war = no
+	}
+	ai_will_do = {
+		base = 0 
+	}
+}
+
+ME_laamp_proselytize_type = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_preacher.dds"
+	}
+#	ai_goal = yes
+	is_invisible = yes
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		government_has_flag = government_is_landless_adventurer
+		OR = {
+			has_trait = ME_missionary
+			has_character_flag = zealous_missionary_prep
+			has_character_flag = zealous_missionary_start
+			has_character_flag = zealous_missionary_timer
+		}
+	}
+	is_valid = {
+		has_variable = social_type
+	}
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		NOT = {
+			has_trait = incapable
+		}
+		NOR = {
+			custom_tooltip = {
+				text = ME_county_has_faith
+				AND = {
+					NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+					location.county.faith = root.faith
+				}
+			}
+			custom_tooltip = {
+				text = ME_county_has_faith_secret
+				AND = {
+					any_secret = { secret_type = secret_crypto_religionist }
+					location.county.faith = root.secret_faith
+				}
+			}
+		}
+	}
+	
+	desc = {
+#		desc = ME_laamp_proselytize_type_desc_start
+		## Decay
+		first_valid = {
+			triggered_desc = {
+				trigger = { location.county.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } } }
+				desc = ME_laamp_proselytize_decay_righteous
+			}
+			triggered_desc = {
+				trigger = { location.county.faith = { faith_hostility_level = { target = root.faith value = faith_astray_level } } }
+				desc = ME_laamp_proselytize_decay_astray
+			}
+			desc = ME_laamp_proselytize_decay_norm
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = { root.var:social_type = flag:preach_nobility }
+				desc = ME_laamp_proselytize_type_desc_communities_nobility
+			}
+			triggered_desc = {
+				trigger = { root.var:social_type = flag:preach_workers }
+				desc = ME_laamp_proselytize_type_desc_communities_workers
+			}
+			triggered_desc = {
+				trigger = { root.var:social_type = flag:preach_villagers }
+				desc = ME_laamp_proselytize_type_desc_communities_villagers
+			}
+		}
+		## Public
+		desc = ME_laamp_proselytize_type_desc_public
+		first_valid = {
+			triggered_desc = {
+				trigger = { root.var:temp_public_teir <= 0 }
+				desc = ME_proselytize_public_0
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_public_teir = 1 }
+				desc = ME_proselytize_public_1
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_public_teir = 2 }
+				desc = ME_proselytize_public_2
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_public_teir = 3 }
+				desc = ME_proselytize_public_3
+			}
+			triggered_desc = {
+				trigger = {
+					root.var:temp_public_teir = 4
+					NOT = { root.var:social_type = flag:preach_villagers }
+				}
+				desc = ME_proselytize_public_4_urban
+			}
+			triggered_desc = {
+				trigger = {
+					root.var:temp_public_teir = 4
+					root.var:social_type = flag:preach_villagers
+				}
+				desc = ME_proselytize_public_4_village
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_public_teir = 5 }
+				desc = ME_proselytize_public_5
+			}
+		}
+		
+		## Gold
+		desc = ME_laamp_proselytize_type_desc_gold
+		first_valid = {
+			triggered_desc = {
+				trigger = { root.var:temp_gold_teir <= 0 }
+				desc = ME_proselytize_gold_0
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_gold_teir = 1 }
+				desc = ME_proselytize_gold_1
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_gold_teir = 2 }
+				desc = ME_proselytize_gold_2
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_gold_teir = 3 }
+				desc = ME_proselytize_gold_3
+			}
+			triggered_desc = {
+				trigger = {
+					root.var:temp_gold_teir = 4
+					NOT = { root.var:social_type = flag:preach_villagers }
+				}
+				desc = ME_proselytize_gold_4_urban
+			}
+			triggered_desc = {
+				trigger = {
+					root.var:temp_gold_teir = 4
+					root.var:social_type = flag:preach_villagers
+				}
+				desc = ME_proselytize_gold_4_village
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_gold_teir = 5 }
+				desc = ME_proselytize_gold_5
+			}
+		}
+		
+		## Secret
+		desc = ME_laamp_proselytize_type_desc_secret
+		first_valid = {
+			triggered_desc = {
+				trigger = { root.var:temp_secret_teir <= 0 }
+				desc = ME_proselytize_secret_0
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_secret_teir = 1 }
+				desc = ME_proselytize_secret_1
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_secret_teir = 2 }
+				desc = ME_proselytize_secret_2
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_secret_teir = 3 }
+				desc = ME_proselytize_secret_3
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_secret_teir = 4 }
+				desc = ME_proselytize_secret_4
+			}
+			triggered_desc = {
+				trigger = { root.var:temp_secret_teir = 5 }
+				desc = ME_proselytize_secret_5
+			}
+		}
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "ME_CHOOSE_PROSELYTIZE_METHOD_OPTION"
+		show_from_start = yes
+
+		# Preach openly to the public
+		item = {
+			value = ME_laamp_proselytize_public_preaching_option
+			is_valid = {
+				is_ai = no
+				#custom_tooltip = {
+				#	text = ME_attempted_cooldown_tt
+				#	NOT = { exists = root.location.county.var:ME_proselytize_cooldown }
+				#}
+				custom_tooltip = {
+					text = ME_not_secret_faith_tt
+					NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+				}
+				custom_tooltip = {
+					text = ME_laamp_proselytize_max_teirs_tt
+					NOR = { # To stop proselytization attempts after reaching full level
+						AND = {
+							var:social_type = flag:preach_nobility
+							AND = {
+								root.location.county.var:converts_nobility_public_faith = root.faith
+								root.location.county.var:converts_nobility_public_tier = 5
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_workers
+							AND = {
+								root.location.county.var:converts_workers_public_faith = root.faith
+								root.location.county.var:converts_workers_public_tier = 5
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_villagers
+							AND = {
+								root.location.county.var:converts_villagers_public_faith = root.faith
+								root.location.county.var:converts_villagers_public_tier = 5
+							}
+						}
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_public_preaching_option_desc
+			localization = ME_laamp_proselytize_public_preaching_option
+			icon = "gfx/interface/icons/widgets/public_conversions.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+
+		# Buy conversions using gold
+		item = {
+			value = ME_laamp_proselytize_buy_conversions_option
+			is_valid = {
+				is_ai = no
+				custom_tooltip = {
+					text = ME_attempted_cooldown_tt
+					NOT = { exists = root.location.county.var:ME_proselytize_cooldown }
+				}
+				custom_tooltip = {
+					text = ME_not_secret_faith_tt
+					NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+				}
+				short_term_gold >= me_proselytize_buy_conversion_gold
+				custom_tooltip = {
+					text = ME_laamp_proselytize_max_teirs_tt
+					NOR = { # To stop proselytization attempts after reaching full level
+						AND = {
+							var:social_type = flag:preach_nobility
+							AND = {
+								root.location.county.var:converts_nobility_gold_faith = root.faith
+								root.location.county.var:converts_nobility_gold_tier = 5
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_workers
+							AND = {
+								root.location.county.var:converts_workers_gold_faith = root.faith
+								root.location.county.var:converts_workers_gold_tier = 5
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_villagers
+							AND = {
+								root.location.county.var:converts_villagers_gold_faith = root.faith
+								root.location.county.var:converts_villagers_gold_tier = 5
+							}
+						}
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_buy_conversions_option_desc
+			localization = ME_laamp_proselytize_buy_conversions_option
+			icon = "gfx/interface/icons/widgets/buy_conversions.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+
+		# Preach in secret (Sanctioned false conversions)
+		item = {
+			value = ME_laamp_proselytize_secret_preaching_option
+			is_valid = {
+				is_ai = no
+				custom_tooltip = {
+					text = ME_attempted_cooldown_tt
+					NOT = { exists = root.location.county.var:ME_proselytize_cooldown }
+				}
+				custom_tooltip = {
+					text = ME_must_be_secret_faith_or_false_conv_tt
+					OR = {
+						faith = { has_doctrine_parameter = sanctioned_false_conversion }
+						any_secret = { secret_type = secret_crypto_religionist }
+					}
+				}
+				custom_tooltip = {
+					text = ME_laamp_proselytize_max_teirs_tt
+					NOR = {
+						AND = {
+							var:social_type = flag:preach_nobility
+							AND = {
+								root.location.county.var:converts_nobility_secret_tier = 5
+								OR = {
+									AND = {
+										NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+										root.location.county.var:converts_nobility_secret_faith = root.faith
+									}
+									AND = {
+										any_secret = { secret_type = secret_crypto_religionist }
+										root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+									}
+								}
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_workers
+							AND = {
+								root.location.county.var:converts_workers_secret_tier = 5
+								OR = {
+									AND = {
+										NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+										root.location.county.var:converts_workers_secret_faith = root.faith
+									}
+									AND = {
+										any_secret = { secret_type = secret_crypto_religionist }
+										root.location.county.var:converts_workers_secret_faith = root.secret_faith
+									}
+								}
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_villagers
+							AND = {
+								root.location.county.var:converts_villagers_secret_tier = 5
+								OR = {
+									AND = {
+										NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+										root.location.county.var:converts_villagers_secret_faith = root.faith
+									}
+									AND = {
+										any_secret = { secret_type = secret_crypto_religionist }
+										root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_secret_preaching_option_desc
+			localization = ME_laamp_proselytize_secret_preaching_option
+			icon = "gfx/interface/icons/widgets/secret_conversions.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+		# Contact the communities (Stave off decay or collect donations)
+		item = {
+			value = ME_laamp_proselytize_contact_communities_option
+			is_valid = {
+				is_ai = no
+				custom_tooltip = {
+					text = ME_contact_communities_no_tiers_tt
+					OR = {
+						AND = {
+							var:social_type = flag:preach_nobility
+							OR = {
+								AND = {
+									root.location.county.var:converts_nobility_public_faith = root.faith
+									root.location.county.var:converts_nobility_public_tier > 0
+								}
+								AND = {
+									root.location.county.var:converts_nobility_gold_faith = root.faith
+									root.location.county.var:converts_nobility_gold_tier > 0
+								}
+								AND = {
+									root.location.county.var:converts_nobility_secret_tier > 0
+									OR = {
+										AND = {
+											NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+											root.location.county.var:converts_nobility_secret_faith = root.faith
+										}
+										AND = {
+											any_secret = { secret_type = secret_crypto_religionist }
+											root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+										}
+									}
+								}
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_workers
+							OR = {
+								AND = {
+									root.location.county.var:converts_workers_public_faith = root.faith
+									root.location.county.var:converts_workers_public_tier > 0
+								}
+								AND = {
+									root.location.county.var:converts_workers_gold_faith = root.faith
+									root.location.county.var:converts_workers_gold_tier > 0
+								}
+								AND = {
+									root.location.county.var:converts_workers_secret_tier > 0
+									OR = {
+										AND = {
+											NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+											root.location.county.var:converts_workers_secret_faith = root.faith
+										}
+										AND = {
+											any_secret = { secret_type = secret_crypto_religionist }
+											root.location.county.var:converts_workers_secret_faith = root.secret_faith
+										}
+									}
+								}
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_villagers
+							OR = {
+								AND = {
+									root.location.county.var:converts_villagers_public_faith = root.faith
+									root.location.county.var:converts_villagers_public_tier > 0
+								}
+								AND = {
+									root.location.county.var:converts_villagers_gold_faith = root.faith
+									root.location.county.var:converts_villagers_gold_tier > 0
+								}
+								AND = {
+									root.location.county.var:converts_villagers_secret_tier > 0
+									OR = {
+										AND = {
+											NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+											root.location.county.var:converts_villagers_secret_faith = root.faith
+										}
+										AND = {
+											any_secret = { secret_type = secret_crypto_religionist }
+											root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = ME_contact_communities_cooldown_tt
+					NOT = { exists = root.location.county.var:ME_visited_community }
+				}
+			}
+			current_description = ME_laamp_proselytize_contact_communities_option_desc
+			localization = ME_laamp_proselytize_contact_communities_option
+			icon = "gfx/interface/icons/widgets/contact.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+		# Return to main decision
+		item = {
+			value = ME_laamp_proselytize_return_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_laamp_proselytize_return_option_desc
+			localization = ME_laamp_proselytize_return_option
+			icon = "gfx/interface/icons/widgets/ME_return.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		
+		if = { # Preach openly to the public
+			limit = { scope:ME_laamp_proselytize_public_preaching_option = yes }
+			set_variable = {
+				name = preach_type
+				value = flag:public
+			}
+			root.location.county = { set_variable = { name = ME_proselytize_cooldown days = 60 } }
+			custom_tooltip = ME_laamp_proselytize_increase_odds_tt
+			ME_proselytize_public_preaching_events = yes
+		}
+
+		if = { # Buy conversions using gold
+			limit = { scope:ME_laamp_proselytize_buy_conversions_option = yes }
+			set_variable = {
+				name = preach_type
+				value = flag:gold
+			}
+			root.location.county = { set_variable = { name = ME_proselytize_cooldown days = 60 } }
+			custom_tooltip = ME_laamp_proselytize_increase_odds_tt
+			ME_proselytize_buy_conversions_events = yes
+		}
+
+		if = { # Preach in secret (Sanctioned false conversions)
+			limit = { scope:ME_laamp_proselytize_secret_preaching_option = yes }
+			set_variable = {
+				name = preach_type
+				value = flag:secret
+			}
+			root.location.county = { set_variable = { name = ME_proselytize_cooldown days = 60 } }
+			custom_tooltip = ME_laamp_proselytize_increase_odds_tt
+			ME_proselytize_secret_conversions_events = yes
+		}
+		
+		if = { # Contact the communities (Stave off decay)
+			limit = { scope:ME_laamp_proselytize_contact_communities_option = yes }
+			
+			custom_tooltip = ME_laamp_proselytize_contact_communities_tooltip
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize_contact_communities
+				player = root
+			}
+		}
+		
+		if = { # Return to main decision
+			limit = { scope:ME_laamp_proselytize_return_option = yes }
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize
+				player = root
+			}
+		}
+	}
+    
+    ai_check_interval = 0
+    ai_potential = {
+        is_playable_character = yes
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+ME_laamp_proselytize_convert_county = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_preacher.dds"
+	}
+#	ai_goal = yes
+	is_invisible = yes
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		government_has_flag = government_is_landless_adventurer
+		OR = {
+			has_trait = ME_missionary
+			has_character_flag = zealous_missionary_prep
+			has_character_flag = zealous_missionary_start
+			has_character_flag = zealous_missionary_timer
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		NOT = {
+			has_trait = incapable
+		}
+		NOR = {
+			custom_tooltip = {
+				text = ME_county_has_faith
+				AND = {
+					NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+					location.county.faith = root.faith
+				}
+			}
+			custom_tooltip = {
+				text = ME_county_has_faith_secret
+				AND = {
+					any_secret = { secret_type = secret_crypto_religionist }
+					location.county.faith = root.secret_faith
+				}
+			}
+		}
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "ME_CHOOSE_PROSELYTIZE_COUNTY_OPTION"
+		show_from_start = yes
+
+		# Preach normally
+		item = {
+			value = ME_laamp_proselytize_normal_conversion_option
+			is_valid = {
+				is_ai = no
+				custom_tooltip = {
+					text = ME_attempted_convert_cooldown_tt
+					NOT = { exists = root.location.county.var:ME_attempted_convert_county }
+				}
+			}
+			current_description = ME_laamp_proselytize_normal_conversion_option_desc
+			localization = ME_laamp_proselytize_normal_conversion_option
+			icon = "gfx/interface/icons/widgets/normal_conversion.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+
+		# Force conversions
+		item = {
+			value = ME_laamp_proselytize_force_conversion_option
+			is_valid = {
+				is_ai = no
+				custom_tooltip = {
+					text = ME_attempted_convert_cooldown_tt
+					NOT = { exists = root.location.county.var:ME_attempted_convert_county }
+				}
+				NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+				root.faith = {
+					NOR = {
+						has_doctrine = tenet_dharmic_pacifism
+						has_doctrine = tenet_pacifism
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_force_conversion_option_desc
+			localization = ME_laamp_proselytize_force_conversion_option
+			icon = "gfx/interface/icons/widgets/force_conversion.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+		# Return to main decision
+		item = {
+			value = ME_laamp_proselytize_return_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_laamp_proselytize_return_option_desc
+			localization = ME_laamp_proselytize_return_option
+			icon = "gfx/interface/icons/widgets/ME_return.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		
+		if = { # Preach normally
+			limit = { scope:ME_laamp_proselytize_normal_conversion_option = yes }
+			
+			custom_tooltip = ME_laamp_proselytize_increase_odds_normal_conversion_tt
+			ME_proselytize_county_conversion_normal_effect = yes
+			root.location.county = { set_variable = { name = ME_attempted_convert_county days = 183 } }
+		}
+
+		else_if = { # Force conversions
+			limit = { scope:ME_laamp_proselytize_force_conversion_option = yes }
+			
+			custom_tooltip = ME_laamp_proselytize_increase_odds_force_conversion_tt
+			ME_proselytize_county_conversion_force_effect = yes
+			root.location.county = { set_variable = { name = ME_attempted_convert_county days = 183 } }
+		}
+		
+		else_if = { # Return to main decision
+			limit = { scope:ME_laamp_proselytize_return_option = yes }
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize
+				player = root
+			}
+		}
+	}
+    
+    ai_check_interval = 0
+    ai_potential = {
+        is_playable_character = yes
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+ME_laamp_proselytize_contact_communities = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_preacher.dds"
+	}
+#	ai_goal = yes
+	is_invisible = yes
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		government_has_flag = government_is_landless_adventurer
+		OR = {
+			has_trait = ME_missionary
+			has_character_flag = zealous_missionary_prep
+			has_character_flag = zealous_missionary_start
+			has_character_flag = zealous_missionary_timer
+		}
+		NOT = { exists = root.location.county.var:ME_visited_community }
+	}
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		NOT = {
+			has_trait = incapable
+		}
+		NOR = {
+			custom_tooltip = {
+				text = ME_county_has_faith
+				AND = {
+					NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+					location.county.faith = root.faith
+				}
+			}
+			custom_tooltip = {
+				text = ME_county_has_faith_secret
+				AND = {
+					any_secret = { secret_type = secret_crypto_religionist }
+					location.county.faith = root.secret_faith
+				}
+			}
+		}
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "ME_CHOOSE_CONTACT_COMMUNITIES_OPTION"
+		show_from_start = yes
+
+		# Contact Public Communities
+		item = {
+			value = ME_laamp_proselytize_contact_public_option
+			is_valid = {
+				is_ai = no
+				OR = {
+					AND = {
+						var:social_type = flag:preach_nobility
+						root.location.county.var:converts_nobility_public_faith = root.faith
+						root.location.county.var:converts_nobility_public_tier > 0
+					}
+					AND = {
+						var:social_type = flag:preach_workers
+						root.location.county.var:converts_workers_public_faith = root.faith
+						root.location.county.var:converts_workers_public_tier > 0
+					}
+					AND = {
+						var:social_type = flag:preach_villagers
+						root.location.county.var:converts_villagers_public_faith = root.faith
+						root.location.county.var:converts_villagers_public_tier > 0
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_contact_public_option_desc
+			localization = ME_laamp_proselytize_contact_public_option
+			icon = "gfx/interface/icons/widgets/contact_public.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+
+		# Contact Bought Communities
+		item = {
+			value = ME_laamp_proselytize_contact_gold_option
+			is_valid = {
+				is_ai = no
+				OR = {
+					AND = {
+						var:social_type = flag:preach_nobility
+						root.location.county.var:converts_nobility_gold_faith = root.faith
+						root.location.county.var:converts_nobility_gold_tier > 0
+					}
+					AND = {
+						var:social_type = flag:preach_workers
+						root.location.county.var:converts_workers_gold_faith = root.faith
+						root.location.county.var:converts_workers_gold_tier > 0
+					}
+					AND = {
+						var:social_type = flag:preach_villagers
+						root.location.county.var:converts_villagers_gold_faith = root.faith
+						root.location.county.var:converts_villagers_gold_tier > 0
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_contact_gold_option_desc
+			localization = ME_laamp_proselytize_contact_gold_option
+			icon = "gfx/interface/icons/widgets/contact_gold.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+		# Contact Secret Communities
+		item = {
+			value = ME_laamp_proselytize_contact_secret_option
+			is_valid = {
+				is_ai = no
+				OR = {
+					AND = {
+						var:social_type = flag:preach_nobility
+						root.location.county.var:converts_nobility_secret_tier > 0
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+							}
+						}
+					}
+					AND = {
+						var:social_type = flag:preach_workers
+						root.location.county.var:converts_workers_secret_tier > 0
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+							}
+						}
+					}
+					AND = {
+						var:social_type = flag:preach_villagers
+						root.location.county.var:converts_villagers_secret_tier > 0
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+							}
+						}
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_contact_secret_option_desc
+			localization = ME_laamp_proselytize_contact_secret_option
+			icon = "gfx/interface/icons/widgets/contact_secret.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+		# Contact Secret Communities
+		item = {
+			value = ME_laamp_proselytize_collect_alms_option
+			is_valid = {
+				is_ai = no
+				custom_tooltip = {
+					text = ME_laamp_proselytize_collect_alms_cooldown_tt
+					NOT = { exists = root.location.county.var:ME_collected_donations }
+				}
+				custom_tooltip = {
+					text = ME_laamp_proselytize_collect_alms_no_teirs_tt
+					OR = {
+						AND = {
+							var:social_type = flag:preach_nobility
+							root.location.county.var:converts_nobility_public_faith = root.faith
+							root.location.county.var:converts_nobility_public_tier > 0
+						}
+						AND = {
+							var:social_type = flag:preach_workers
+							root.location.county.var:converts_workers_public_faith = root.faith
+							root.location.county.var:converts_workers_public_tier > 0
+						}
+						AND = {
+							var:social_type = flag:preach_villagers
+							root.location.county.var:converts_villagers_public_faith = root.faith
+							root.location.county.var:converts_villagers_public_tier > 0
+						}
+						AND = {
+							var:social_type = flag:preach_nobility
+							root.location.county.var:converts_nobility_secret_tier > 0
+							OR = {
+								AND = {
+									NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+									root.location.county.var:converts_nobility_secret_faith = root.faith
+								}
+								AND = {
+									any_secret = { secret_type = secret_crypto_religionist }
+									root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+								}
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_workers
+							root.location.county.var:converts_workers_secret_tier > 0
+							OR = {
+								AND = {
+									NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+									root.location.county.var:converts_workers_secret_faith = root.faith
+								}
+								AND = {
+									any_secret = { secret_type = secret_crypto_religionist }
+									root.location.county.var:converts_workers_secret_faith = root.secret_faith
+								}
+							}
+						}
+						AND = {
+							var:social_type = flag:preach_villagers
+							root.location.county.var:converts_villagers_secret_tier > 0
+							OR = {
+								AND = {
+									NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+									root.location.county.var:converts_villagers_secret_faith = root.faith
+								}
+								AND = {
+									any_secret = { secret_type = secret_crypto_religionist }
+									root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+								}
+							}
+						}
+					}
+				}
+			}
+			current_description = ME_laamp_proselytize_collect_alms_option_desc
+			localization = ME_laamp_proselytize_collect_alms_option
+			icon = "gfx/interface/icons/widgets/collect_alms.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+		
+		# Return to main decision
+		item = {
+			value = ME_laamp_proselytize_return_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_laamp_proselytize_return_option_desc
+			localization = ME_laamp_proselytize_return_option
+			icon = "gfx/interface/icons/widgets/ME_return.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		
+		if = { # Contact Public Communities
+			limit = { scope:ME_laamp_proselytize_contact_public_option = yes }
+			
+			set_variable = {
+				name = preach_type
+				value = flag:public
+			}
+			custom_tooltip = ME_laamp_proselytize_reset_decay_tt
+			
+			ME_proselytize_refresh_decay_effect = yes
+			ME_proselytize_remove_var_main_effect = yes
+			root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+		}
+
+		else_if = { # Contact Bought Communities
+			limit = { scope:ME_laamp_proselytize_contact_gold_option = yes }
+			
+			set_variable = {
+				name = preach_type
+				value = flag:gold
+			}
+			custom_tooltip = ME_laamp_proselytize_reset_decay_tt
+			
+			ME_proselytize_refresh_decay_effect = yes
+			ME_proselytize_remove_var_main_effect = yes
+			root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+		}
+		
+		else_if = { # Contact Secret Communities
+			limit = { scope:ME_laamp_proselytize_contact_secret_option = yes }
+			
+			set_variable = {
+				name = preach_type
+				value = flag:secret
+			}
+			custom_tooltip = ME_laamp_proselytize_reset_decay_tt
+			
+			ME_proselytize_refresh_decay_effect = yes
+			ME_proselytize_remove_var_main_effect = yes
+			root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+		}
+		
+		else_if = { # Collect Alms
+			limit = { scope:ME_laamp_proselytize_collect_alms_option = yes }
+			custom_tooltip = ME_laamp_proselytize_collect_alms_tt
+			
+			ME_proselytize_collect_donations_effect = yes
+			root.location.county = { set_variable = { name = ME_collected_donations days = 365 } }
+			root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+		}
+		
+		else_if = { # Return to main decision
+			limit = { scope:ME_laamp_proselytize_return_option = yes }
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_laamp_proselytize_type
+				player = root
+			}
+		}
+	}
+    
+    ai_check_interval = 0
+    ai_potential = {
+        is_playable_character = yes
+    }
+    ai_will_do = {
+        base = 0
+    }
+}

@@ -1,0 +1,19 @@
+﻿l_english:
+war_867_egyptian_rebellion:0 "Egyptian Rebellion Against the Caliphate"
+egyptian_rebellion_CB_NAME:1 "Rebellion Against the Caliphate"
+egyptian_rebellion_CB_SPECIFIC_NAME:1 "Rebellion Against the Caliphate"
+egyptian_rebellion_WAR_NAME:1 "Egyptian Rebellion Against the Caliphate"
+egyptian_rebellion_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+egyptian_rebellion_victory_desc_attacker:0 "You take all titles [defender.GetShortUIName] holds in Egypt."
+egyptian_rebellion_victory_desc:0 "[attacker.GetShortUIName|U] takes all titles [defender.GetShortUIName] holds in Egypt."
+egyptian_rebellion_white_peace_desc_defender:0 "You keep all contested titles."
+egyptian_rebellion_white_peace_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."
+egyptian_rebellion_defeat_desc_defender:0 "You keep all contested titles."
+egyptian_rebellion_defeat_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."
+
+war_1066_Almoravid_Conquest_of_Fes:0 "Almoravid Conquest of Fes"
+war_1066_Almoravid_Conquest_of_Gharb:0 "Almoravid Conquest of Gharb"
+
+war_867_Hadhramaut_Tribal_Revolt:0 "Hadhramaut Tribal Revolt"
+
+

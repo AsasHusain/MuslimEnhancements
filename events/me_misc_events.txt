@@ -1,0 +1,257 @@
+﻿
+namespace = me_misc_event
+
+#####
+
+## Egypt 867 ruler event
+me_misc_event.0001 = {
+	type = character_event
+	title = me_misc_event.0001.t
+	desc = me_misc_event.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:hulwani
+		animation = stress
+	}
+	right_portrait = {
+		character = scope:tulunid
+		animation = marshal
+	}
+	lower_right_portrait = scope:muzahim
+	lower_left_portrait = scope:azjur
+
+	trigger = {
+		OR = {
+			root = character:me_egypt_turk_001
+			root = character:163115
+		}
+	}
+
+	immediate = {
+		character:me_egypt_turk_001 = { save_scope_as = hulwani }
+		character:extra_karluks_4 = { save_scope_as = muzahim }
+		character:163115 = { save_scope_as = tulunid }
+		
+		if = {
+			limit = { character:me_egypt_turk_004 = { is_alive = yes } }
+			character:me_egypt_turk_004 = { save_scope_as = azjur }
+		}
+		else_if = {
+			limit = { character:RICE_upper_egypt_misc_001 = { is_alive = yes } }
+			character:RICE_upper_egypt_misc_001 = { save_scope_as = azjur }
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			random_player = {
+				limit = { this = character:163115 }
+				if = {
+					limit = {
+						OR = {
+							NOT = { character:me_egypt_turk_001 = { has_title = title:k_egypt } }
+							AND = {
+								character:me_hashimid_046 = { is_alive  = yes }
+								character:me_egypt_turk_001 = { has_title = title:k_egypt }
+							}
+						}
+					}
+					trigger_event = me_misc_event.9001
+				}
+				if = {
+					limit = {
+						character:me_hashimid_046 = { is_alive  = no }
+						character:me_egypt_turk_001 = { has_title = title:k_egypt }
+					}
+					trigger_event = {
+						id = me_misc_event.9001
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	option = { # Yazid al-Hulwani
+		name = me_misc_event.0001.a
+		custom_tooltip = me_misc_event.0001.a.tt
+		
+		set_variable = { name = var_egypt_holder_hulwanid value = yes }
+		hidden_effect = { me_egypt_holder_effect = yes }
+		show_as_tooltip = { set_player_character = scope:hulwani }
+	}
+	option = { # Muzahim ibn Khaqan
+		name = me_misc_event.0001.b
+		custom_tooltip = me_misc_event.0001.b.tt
+		
+		set_variable = { name = var_egypt_holder_urtujid value = yes }
+		hidden_effect = { me_egypt_holder_effect = yes }
+		show_as_tooltip = { set_player_character = scope:muzahim }
+		#custom_tooltip = me_misc_event.0001.note.tt
+	}
+	option = { # Azjur at-Turki
+		name = me_misc_event.0001.c
+		custom_tooltip = me_misc_event.0001.c.tt
+		
+		set_variable = { name = var_egypt_holder_azjur value = yes }
+		hidden_effect = { me_egypt_holder_effect = yes }
+		show_as_tooltip = { set_player_character = scope:azjur }
+		#custom_tooltip = me_misc_event.0001.note.tt
+	}
+	option = { # Ibn Tulun (Vassal)
+		name = me_misc_event.0001.d
+		custom_tooltip = me_misc_event.0001.d.tt
+		
+		set_variable = { name = var_egypt_holder_tulunid_vassal value = yes }
+		hidden_effect = { me_egypt_holder_effect = yes }
+		show_as_tooltip = { set_player_character = scope:tulunid }
+		#custom_tooltip = me_misc_event.0001.note.tt
+	}
+	option = { # Ibn Tulun (Tributary)
+		name = me_misc_event.0001.e
+		custom_tooltip = me_misc_event.0001.e.tt
+		
+		set_variable = { name = var_egypt_holder_tulunid_tributary value = yes }
+		hidden_effect = { me_egypt_holder_effect = yes }
+		show_as_tooltip = { set_player_character = scope:tulunid }
+		#custom_tooltip = me_misc_event.0001.note.tt
+	}
+}
+
+# Raiding intent effects
+me_misc_event.0002 = {
+	hidden = yes
+	scope = army
+
+	immediate = {
+		if = {
+			limit = {
+				raid_intent = ME_saifa_intent
+				scope:raider.faith = {
+					faith_hostility_level = {
+						target = scope:sacked_county.holder.top_liege.faith
+						value >= faith_hostile_level
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { scope:raider = { has_variable = me_saifa_counties_raided } } }
+				scope:raider = { set_variable = { name = me_saifa_counties_raided value = 1 } }
+			}
+			if = {
+				limit = { NOT = { scope:raider.var:me_saifa_counties_raided > 12 } }
+				scope:raider = { change_variable = { name = me_saifa_counties_raided add = 1 } }
+			}
+		}
+	}
+}
+
+## Makhzumids of Shewa startup
+me_misc_event.0003 = {
+	type = character_event
+	title = me_misc_event.0003.t
+	desc = me_misc_event.0003.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = marshal
+	}
+	lower_right_portrait = scope:wudd
+
+	trigger = {
+	}
+
+	immediate = {
+		character:me_makhzumi_031 = { save_scope_as = wudd }
+	}
+
+	option = {
+		name = me_misc_event.0003.a
+		custom_tooltip = me_misc_event.0003.a.tt
+
+	}
+	option = {
+		name = me_misc_event.0003.b
+		custom_tooltip = me_misc_event.0003.b.tt
+
+		hidden_effect = {
+			if = {
+				limit = { current_date >= 1078.1.1 }
+				character:145634 = { add_to_temporary_list = makhzum_dyn }
+				character:145635 = { add_to_temporary_list = makhzum_dyn }
+				character:145636 = { add_to_temporary_list = makhzum_dyn }
+			}
+			every_living_character = {
+				limit = { dynasty = { this = dynasty:1022241 } }
+				set_house = character:me_makhzumi_031.house
+				add_trait = quraysh
+			}
+			every_in_list = {
+				list = makhzum_dyn
+				set_house = character:me_makhzumi_031.house
+				add_trait = quraysh
+			}
+		}
+	}
+}
+
+
+
+
+
+
+# To fix things that may need an external event for whatever reason
+#
+me_misc_event.9001 = {
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			set_player_character = title:k_egypt.holder
+		}
+		if = {
+			limit = { character:163115 = { has_title = title:c_qus } }
+			title:k_egypt.holder = {
+				trigger_event = me_misc_event.9002
+			}
+		}
+		else = {
+			limit = { NOT = { character:163115 = { has_title = title:c_qus } } }
+			#title:c_aswan.holder = {
+			#	trigger_event = me_misc_event.9003
+			#}
+		}
+	}
+}
+
+#me_misc_event.9003 = {
+#	hidden = yes
+#
+#	immediate = {
+#		get_title = title:c_qus
+#	}
+#}
+
+#
+me_misc_event.9002 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		#title:c_qus = {
+		#	change_title_holder = {
+		#		holder = title:c_aswan.holder
+		#		change = scope:change
+		#		take_baronies = yes
+		#	}
+		#}
+		resolve_title_and_vassal_change = scope:change
+	}
+}

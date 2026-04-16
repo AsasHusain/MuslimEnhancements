@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "jawad_shield_mesh"
+	file = "jawad_shield.mesh"
+
+	meshsettings = {
+		name = "jawad_shieldShape"
+		index = 0
+		texture_diffuse = "jawad_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "jawad_shield_entity"
+	pdxmesh = "jawad_shield_mesh"
+}

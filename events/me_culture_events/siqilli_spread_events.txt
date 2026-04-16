@@ -1,0 +1,230 @@
+﻿namespace = siqilli_spread
+
+### Override the Original Sicilian Spread ### 
+
+## Sicilian Spreads in Southern Italy
+scripted_trigger global_culture_3011_valid_for_sicilian_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	NOT = { exists = var:had_sicilian_county_conversion }
+	title_province = {
+		geographical_region = special_sicilian_culture_region
+	}
+	NOT = { culture = holder.culture }
+	NOT = { faith.religion = religion:islam_religion } # Muslim counties convert to Siqilli
+	culture = {
+		NOR = {
+			this = culture:sicilian
+			any_parent_culture_or_above = {
+				this = culture:sicilian
+			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_arabic
+		}
+	}
+}
+
+## Organic Spread of Sicilian for Sicilian Rulers
+scripted_trigger global_culture_3012_valid_for_sicilian_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	title_province = {
+		geographical_region = special_sicilian_culture_region
+	}
+	NOT = { exists = var:had_sicilian_county_conversion }
+	NOT = { culture = holder.culture } # No conversion for counties who match their holder's culture
+	NOT = { faith.religion = religion:islam_religion } # Muslim counties convert to Siqilli
+	culture = {
+		NOR = {
+			this = culture:sicilian
+			any_parent_culture_or_above = {
+				this = culture:sicilian
+			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_arabic
+		}
+	}
+	any_neighboring_county = {
+		culture = culture:sicilian
+	}
+}
+
+
+################################
+# Siqilli Spreads in Southern Italy
+################################
+scripted_trigger global_culture_0001_valid_for_siqilli_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	NOT = { exists = var:had_siqilli_county_conversion }
+	title_province = {
+		geographical_region = special_sicilian_culture_region
+	}
+	NOT = { culture = holder.culture }
+	faith.religion = religion:islam_religion # Only Muslim counties convert to Siqilli
+	culture = {
+		NOR = {
+			this = culture:siqilli
+			any_parent_culture_or_above = {
+				this = culture:siqilli
+			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_arabic
+		}
+	}
+}
+
+siqilli_spread.0001 = {
+	type = character_event
+	title = global_culture.3011.t
+	desc = global_culture.3011.desc
+	theme = culture_change
+	left_portrait = root
+	
+	trigger = {
+		culture = {
+			NOT = { this = culture:siqilli }
+			OR = {
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_berber
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_frankish
+				has_cultural_pillar = heritage_arabic
+			}
+		}
+		any_held_title = {
+			global_culture_0001_valid_for_siqilli_culture_trigger = yes
+		}		
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 2
+			culture = culture:baranis
+		}
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = {
+				global_culture_0001_valid_for_siqilli_culture_trigger = yes
+			}
+			weight = { # Try to approximate organic spread
+				base = 1
+				modifier = {
+					add = 4
+					any_neighboring_county = {
+						culture = culture:siqilli
+					}
+				}
+			}
+			save_scope_as = county_to_change
+			culture = {
+				save_scope_as = old_culture
+			}
+			set_variable = {
+				name = had_siqilli_county_conversion
+				value = yes
+			}
+		}
+		culture:siqilli = {
+			save_scope_as = sicilian # For loc
+		}
+		debug_log = "Converted a province to Siqilli from siqilli_spread.0001"
+	}
+
+	option = {
+		name = global_culture.3011.a
+		scope:county_to_change = {
+			set_county_culture = culture:siqilli
+		}
+	}
+}
+
+
+################################
+# Organic Spread of Siqilli for Siqilli Rulers
+################################
+scripted_trigger global_culture_0002_valid_for_siqilli_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	title_province = {
+		geographical_region = special_sicilian_culture_region
+	}
+	NOT = { exists = var:had_siqilli_county_conversion }
+	NOT = { culture = holder.culture } # No conversion for counties who match their holder's culture
+	culture = {
+		NOR = {
+			this = culture:siqilli
+			any_parent_culture_or_above = {
+				this = culture:siqilli
+			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_arabic
+		}
+	}
+	any_neighboring_county = {
+		culture = culture:siqilli
+	}
+}
+
+siqilli_spread.0002 = {
+	type = character_event
+	title = global_culture.3011.t
+	desc = global_culture.3011.desc
+	theme = culture_change
+	left_portrait = root
+	
+	trigger = {
+		culture = culture:siqilli
+		any_held_title = {
+			global_culture_0002_valid_for_siqilli_culture_trigger = yes
+		}
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = { global_culture_0002_valid_for_siqilli_culture_trigger = yes }
+			save_scope_as = county_to_change
+			culture = {
+				save_scope_as = old_culture
+			}
+			set_variable = {
+				name = had_siqilli_county_conversion
+				value = yes
+			}
+		}
+		culture:siqilli = {
+			save_scope_as = sicilian # For loc
+		}
+		debug_log = "Converted a province to Siqilli from siqilli_spread.0002"
+	}
+
+	option = {
+		name = global_culture.3012.a
+		scope:county_to_change = {
+			set_county_culture = culture:siqilli
+		}
+	}
+}

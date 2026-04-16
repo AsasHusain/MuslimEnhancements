@@ -1,0 +1,105 @@
+﻿siqilli = {
+	color = { 35 232 20 }
+	created = 856.1.1
+	parents = { maghrebi greek }
+	history_loc_override = siqilli_history_loc
+	
+	ethos = ethos_spiritual
+	heritage = heritage_arabic
+	language = language_arabic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_legalistic
+		tradition_mubarizuns
+		tradition_poetry
+		tradition_xenophilic
+	}
+	
+	name_list = name_list_siqilli
+
+	coa_gfx = { arabic_group_coa_gfx } 
+	building_gfx = { arabic_group_building_gfx mena_building_gfx } 
+	clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx } 
+	unit_gfx = { mena_unit_gfx } 
+	house_coa_frame = house_frame_10
+	house_coa_mask_offset = { 0.0 -0.06 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		60 = arab
+		30 = mediterranean
+		10 = african
+	}
+}
+
+maltese = {
+	color = { 223 60 42 }
+	created = 1127.1.1
+	parents = { siqilli sicilian }
+	history_loc_override = maltese_history_loc
+	
+	ethos = ethos_courtly
+	heritage = heritage_latin
+	language = language_arabic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_zealous_people
+		tradition_swords_for_hire
+		tradition_maritime_mercantilism
+		tradition_poetry
+		tradition_republican_legacy
+	}
+	
+	name_list = name_list_maltese
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	house_coa_frame = house_frame_22
+	house_coa_mask_offset = { 0.0 0.11 }
+	house_coa_mask_scale = { 0.85 0.85 }
+	
+	ethnicities = {
+		50 = mediterranean
+		50 = arab
+	}	
+}
+
+##
+himyarite = {
+	color = { 0.53 0.66 0.56 }
+	#color = { 0.12 0.60 0.44 }
+	
+	ethos = ethos_spiritual
+	heritage = heritage_arabic
+	language = language_sayhadic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_mountaineers
+		tradition_mountain_herding 
+		tradition_religion_blending
+		tradition_maritime_mercantilism
+		tradition_ancient_miners
+		#tradition_seafaring
+		#tradition_dryland_dwellers
+	}
+	
+	name_list = name_list_himyarite
+
+	coa_gfx = { arabic_group_coa_gfx } 
+	building_gfx = { arabic_group_building_gfx mena_building_gfx } 
+	clothing_gfx = { mena_clothing_gfx } 
+	unit_gfx = { mena_unit_gfx } 
+	house_coa_frame = house_frame_13
+	house_coa_mask_offset = { 0.0 -0.03 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		83 = arab
+		17 = east_african
+	}
+}

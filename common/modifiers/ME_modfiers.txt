@@ -1,0 +1,140 @@
+﻿### Mahdi Modifiers ###
+#mahdi_faith_cost_modifier = {
+#	icon = piety_positive
+#	faith_creation_piety_cost_mult = -0.5
+#}
+#
+#mahdi_opinion_modifier = {
+#	icon = piety_negative
+#	vassal_opinion = -30
+#	general_opinion = -30
+#}
+
+
+### War Modifiers ###
+#anarchy_at_samarra = {
+#	icon = piety_negative
+#	monthly_county_control_growth_add = -12.0
+#	general_opinion = -20
+#}
+
+won_bari_war_modifier = {
+	icon = piety_positive
+	same_faith_opinion = 10
+	monthly_piety = 0.5
+	monthly_prestige = 0.5
+}
+
+## Legend Modifiers
+himyarite_heritage_dynasty_modifier = {
+	icon = legend_positive
+	monthly_prestige_gain_mult = 0.05
+	legitimacy_gain_mult = 0.05
+}
+
+## Event Modifiers ##
+hungarian_resettlement_modifier_islamic = {
+	icon = horse_positive
+	county_opinion_add = -10
+	build_speed = -0.1
+	development_growth_factor = small_development_growth_gain
+}
+
+me_nukkari_discontent = {
+	icon = county_modifier_opinion_negative
+	county_opinion_add = -5
+	monthly_county_control_decline_add = -0.5
+}
+
+me_nukkari_rebellious = {
+	icon = county_modifier_opinion_negative
+	county_opinion_add = -5
+	monthly_county_control_decline_add = -1
+}
+
+me_nukkari_agitation_ended = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 5
+	monthly_county_control_growth_add = 0.5
+}
+
+me_supported_nukkari_revolt_modifier = {
+	icon = social_positive
+	same_faith_opinion = 15
+}
+
+me_funded_madrasas_modifier = {
+	icon = learning_positive
+	development_growth_factor = 0.05
+	county_opinion_add = 10
+}
+
+me_lost_debate_modifier = {
+	icon = social_negative
+	prestige_level_impact_mult = -0.1
+}
+
+me_suspicious_activity_modifier = {
+	icon = social_negative
+	prestige_level_impact_mult = -0.1
+}
+
+me_preach_hiding_modifier = {
+	icon = social_negative
+	piety_level_impact_mult = -0.1
+}
+
+me_dangerous_zealot_modifier = {
+	icon = martial_negative
+	different_faith_opinion = -25
+	different_faith_county_opinion_mult = -0.25
+}
+
+me_bloodthirsty_zealot_modifier = {
+	icon = martial_negative
+	different_faith_opinion = -50
+	different_faith_county_opinion_mult = -0.5
+}
+
+me_killed_alid_modifier = {
+	icon = county_modifier_opinion_negative
+	county_opinion_add = -10
+	monthly_county_control_growth_add = -0.20
+}
+
+### Hafidh Scheme Modifiers ###
+become_hafidh_child_speaks_arabic_modifier = {
+	icon = love_positive
+	scheme_phase_duration = medium_scheme_phase_duration_bonus_value
+	scheme_success_chance = 25
+}
+
+become_hafidh_tutor_speaks_arabic_modifier = {
+	icon = love_positive
+	scheme_phase_duration = minor_scheme_phase_duration_bonus_value
+	scheme_success_chance = 15
+}
+
+hafidh_tutor_child_rank_3_modifier = {
+	icon = love_positive
+	scheme_phase_duration = minor_scheme_phase_duration_bonus_value
+	scheme_success_chance = 10
+}
+
+hafidh_tutor_child_rank_2_modifier = {
+	icon = love_positive
+	scheme_phase_duration = miniscule_scheme_phase_duration_bonus_value
+	scheme_success_chance = 5
+}
+
+hafidh_tutor_child_rank_1_modifier = {
+	icon = love_negative
+	scheme_phase_duration = miniscule_scheme_phase_duration_malus_value
+	scheme_success_chance = -5
+}
+
+hafidh_tutor_child_rank_0_modifier = {
+	icon = love_negative
+	scheme_phase_duration = minor_scheme_phase_duration_malus_value
+	scheme_success_chance = -10
+}

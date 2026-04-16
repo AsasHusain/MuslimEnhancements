@@ -1,0 +1,427 @@
+﻿# Hungarian settlement decision variant for Muslims
+promote_islamic_hungarian_settlement_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = promote_islamic_hungarian_settlement_decision_desc
+	selection_tooltip = promote_islamic_hungarian_settlement_decision_tooltip
+	decision_group_type = major
+	ai_goal = yes
+
+	is_shown = {
+		is_ruler = yes
+		is_playable_character = yes
+		game_start_date < 1066.1.1
+		culture = { has_cultural_pillar = heritage_magyar }
+		NOT = {  #Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_promoted_islamic_hungarian_settlement
+			}
+		}
+		NOT = {  #Can only do either or.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_revived_magyar_paganism
+			}
+		}
+		OR = {
+			has_title = title:k_hungary
+			has_title = title:e_carpathia
+		}
+		any_neighboring_top_liege_realm_owner = { #There are same reli neighboring Realms/Empires to take people from.
+			religion = religion:islam_religion
+			count >= 1
+		}
+	}
+	
+	is_valid = {
+		# Must be Islamic
+		custom_description = {
+  			text = promote_hungarian_settlement_decision_muslim
+			faith = { #Denomination of Faith must not be a heresy and must have some degree of control over its core regions.
+				religion = religion:islam_religion
+			}
+		}
+		
+		#Must completely control the Carpathian Basin (Hungary De Jure)
+		completely_controls = title:k_hungary
+
+		# Capital is Hungarian culture group
+
+		capital_province = { culture = { has_cultural_pillar = heritage_magyar } }
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 2000
+		piety = 500
+	}
+
+	effect = {
+		show_as_tooltip = {
+			promote_islamic_hungarian_settlement_decision_scripted_effect = yes
+		}
+		trigger_event = {
+			id = me_unique_decisions.0005
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_promoted_islamic_hungarian_settlement
+			}
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+		ai_value_modifier = {
+			ai_zeal = 1.0
+			ai_greed = 1.0
+		}
+	}
+}
+
+# Unite Spanish thrones for Arabic, Berber, and Iberian Muslims
+unite_the_andalusian_thrones_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_muslim_leader.dds"
+	}
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+	desc = unite_the_andalusian_thrones_decision_desc
+
+	is_shown = {
+#		culture = {
+#			OR = {
+#				has_cultural_pillar = heritage_iberian
+#				has_cultural_pillar = heritage_arabic
+#				has_cultural_pillar = heritage_berber
+#			}
+#		}
+		faith = { religion_tag = islam_religion }
+		game_start_date >= 1000.1.1
+		OR = {
+			calc_true_if = { #At least 2 of the titles has de jure land
+				amount >= 2
+				title:k_andalusia = { any_in_de_jure_hierarchy = { tier = tier_county } }
+				title:k_badajoz = { any_in_de_jure_hierarchy = { tier = tier_county } }
+				title:k_valencia = { any_in_de_jure_hierarchy = { tier = tier_county } }
+			}
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:unite_the_andalusian_thrones_decision
+			}
+		}
+		highest_held_title_tier < tier_empire
+		
+		OR = { # Will only show up for Non-Iberians if they have their capital in Iberia or their primary title is an Iberian Kingdom.
+			culture = { has_cultural_pillar = heritage_iberian }
+			capital_province = { geographical_region = world_europe_west_iberia }
+			has_primary_title = title:k_andalusia
+			has_primary_title = title:k_badajoz
+			has_primary_title = title:k_valencia
+			has_primary_title = title:k_castille
+			has_primary_title = title:k_leon
+			has_primary_title = title:k_spanish_galicia
+			has_primary_title = title:k_portugal
+			has_primary_title = title:k_aragon
+			has_primary_title = title:k_navarra
+			has_primary_title = title:k_toledo
+		}
+	}
+
+	is_valid = {
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_iberian
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = heritage_berber
+			}
+		}
+		trigger_if = {
+			limit = { title:k_andalusia = { any_in_de_jure_hierarchy = { tier = tier_county } } } #Has de jure land
+			completely_controls = title:k_andalusia
+			has_title = title:k_andalusia
+		}
+		trigger_if = {
+			limit = { title:k_badajoz = { any_in_de_jure_hierarchy = { tier = tier_county } } } #Has de jure land
+			completely_controls = title:k_badajoz
+			has_title = title:k_badajoz
+		}
+		trigger_if = {
+			limit = { title:k_valencia = { any_in_de_jure_hierarchy = { tier = tier_county } } } #Has de jure land
+			completely_controls = title:k_valencia
+			has_title = title:k_valencia
+		}
+		custom_description = {
+   			text = unite_the_spanish_thrones_decision_primary
+			OR = {
+				has_primary_title = title:k_andalusia
+				has_primary_title = title:k_badajoz
+				has_primary_title = title:k_valencia
+				has_primary_title = title:k_castille
+				has_primary_title = title:k_leon
+				has_primary_title = title:k_spanish_galicia
+				has_primary_title = title:k_portugal
+				has_primary_title = title:k_aragon
+				has_primary_title = title:k_navarra
+				has_primary_title = title:k_toledo
+			}
+		}
+		#Must not be too early
+#		culture = { has_cultural_era_or_later = culture_era_high_medieval }
+		OR = {
+			has_realm_law = crown_authority_2
+			has_realm_law = crown_authority_3
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+	}
+
+	effect = {
+		gain_heroic_legend_seed_tooltip_effect = yes
+		save_scope_as = al_andalus_uniter
+
+		show_as_tooltip = { unite_the_andalusian_thrones_decision_effects = yes } #Actually applied in iberia_north_africa.0005 - prestige, laws, title changes
+
+		#Events
+		trigger_event = me_unique_decisions.0001
+		every_player = {
+			limit = {
+				this != scope:al_andalus_uniter
+				is_within_diplo_range = { CHARACTER = scope:al_andalus_uniter }
+			}
+			trigger_event = me_unique_decisions.0002
+		}
+
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:unite_the_andalusian_thrones_decision
+		}
+		set_global_variable = {
+			name = unite_the_andalusian_thrones_decision
+			value = scope:al_andalus_uniter
+		}
+		set_global_variable = {
+			name = unite_the_andalusian_thrones_decision_title
+			value = scope:al_andalus_uniter.primary_title
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+#Subsidize Latin Culture in Malta - Create Maltese culture
+subsidize_latin_culture_in_malta_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = major
+	desc = subsidize_latin_culture_in_malta_decision_desc
+
+	is_shown = {
+		completely_controls = title:c_malta
+		title:c_malta.culture = {
+			OR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = heritage_berber
+			}
+		}
+		OR = {
+			faith.religious_head_title = title:k_papal_state
+			faith = faith:catholic
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_maltese_decision
+			}
+		}
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = form_maltese_control_tt
+			completely_controls = title:c_malta
+		} 
+		custom_tooltip = {
+			text = form_maltese_papal_character_tt
+			faith.religious_head_title = title:k_papal_state
+		}
+		custom_tooltip = {
+			text = form_maltese_papal_county_tt
+			title:c_malta.faith.religious_head_title = title:k_papal_state
+		}
+		title:c_malta.culture = {
+			AND = {
+				custom_tooltip = {
+					text = form_maltese_heritage_arabic_tt
+					has_cultural_pillar = heritage_arabic
+				}
+				custom_tooltip = {
+					text = form_maltese_language_arabic_tt
+					has_cultural_pillar = language_arabic
+				}
+			}
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_landed = yes
+	}
+
+	effect = {
+		title:c_malta.culture = { save_scope_as = malta_old_culture }
+		
+		custom_tooltip = { text = form_maltese_formation_tt }
+		custom_tooltip = { text = form_maltese_conversion_tt }
+		
+		trigger_event = form_maltese.0001
+		
+		#Can only happen once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:form_maltese_decision
+		}
+		set_global_variable = {
+			name = form_maltese_decision
+			value = scope:malta_old_culture
+		}
+		title:c_malta = { # So that it doesn't convert counties after decision is taken.
+			set_variable = {
+				name = had_sicilian_county_conversion
+				value = yes
+			}
+			set_variable = {
+				name = had_siqilli_county_conversion
+				value = yes
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = 250
+		}
+		piety = {
+			value = 500
+		}
+	}
+
+	ai_check_interval = 60
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+#Uniting Italy
+conquer_italian_mainland_decision = { # Decision for non-latins to unify italy
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	}
+	desc = conquer_italian_mainland_decision_desc
+	selection_tooltip = conquer_italian_mainland_decision_tooltip
+	decision_group_type = major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		culture = { NOT = { has_cultural_pillar = heritage_latin } }
+		is_ruler = yes
+		is_landed = yes
+		highest_held_title_tier > 2 #Dukes and above
+		NOT = {
+			AND = {
+				highest_held_title_tier = tier_empire
+				NOT = { primary_title = title:e_italy }
+			}
+		}
+		OR = { 
+			NOT = { title:e_italy = title:k_sicily.de_jure_liege }
+			NOT = { title:e_italy = title:k_venice.de_jure_liege }
+		}
+		capital_province = { geographical_region = world_europe_south_italy }
+		NOT = {  #Too late.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_unified_italian_empire
+			}
+		}
+		NOT = {  #Too late.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_roman_empire
+			}
+		}
+		NOT = {  #Too late.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_reformed_carolingian_empire
+			}
+		}
+	}
+
+	is_valid = {
+		has_title = title:e_italy
+		#All the Peninsula
+		completely_controls_region = world_europe_south_italy
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes
+		is_at_war = no
+	}
+
+	effect = {
+		gain_heroic_legend_seed_tooltip_effect = yes
+		custom_tooltip = conquer_italian_mainland_decision_effect_tooltip
+		trigger_event = {
+			id = me_unique_decisions.0003
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

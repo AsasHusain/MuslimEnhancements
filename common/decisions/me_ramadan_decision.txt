@@ -1,0 +1,125 @@
+### Approach to Ramadan ###
+me_approach_to_ramadan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/me_decision_ramadan.dds"
+	}
+	desc = me_approach_to_ramadan_decision_desc
+	selection_tooltip = me_approach_to_ramadan_decision_tooltip
+
+	cooldown = { years = 1 }
+
+	ai_check_interval = 120
+
+	is_shown = {
+		me_is_muslim_trigger = yes
+		has_game_rule = me_hijri_enabled
+	}
+
+	is_valid = {
+		is_capable_adult = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "me_ramadan_choose_approach"
+		show_from_start = yes
+
+		# Devout Fasting
+		item = {
+			value = me_ramadan_devout_option
+			is_valid = {
+				always = yes
+			}
+			current_description = me_ramadan_devout_option_desc
+			localization = me_ramadan_devout_option
+			icon = "gfx/interface/icons/traits/temperate.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_devout_weight
+			}
+		}
+
+		# Casual Fasting
+		item = {
+			value = me_ramadan_casual_option
+			is_valid = {
+				always = yes
+			}
+			current_description = me_ramadan_casual_option_desc
+			localization = me_ramadan_casual_option
+			icon = "gfx/interface/icons/traits/diligent.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_casual_weight
+			}
+		}
+
+		# Skip Ramadan
+		item = {
+			value = me_ramadan_skip_option
+			is_valid = {
+				always = yes
+			}
+			current_description = me_ramadan_skip_option_desc
+			localization = me_ramadan_skip_option
+			icon = "gfx/interface/icons/traits/gluttonous.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_skip_weight
+			}
+		}
+	}
+
+	effect = {
+		# Record the chosen approach as a persistent character variable.
+		# The actual fasting modifier is applied when Ramadan arrives (see me_hijri_on_actions).
+		# Devout Fasting
+		if = {
+			limit = { scope:me_ramadan_devout_option = yes }
+			set_variable = { name = me_ramadan_approach value = flag:devout }
+		}
+		# Casual Fasting
+		else_if = {
+			limit = { scope:me_ramadan_casual_option = yes }
+			set_variable = { name = me_ramadan_approach value = flag:casual }
+		}
+		# Skip Ramadan
+		else_if = {
+			limit = { scope:me_ramadan_skip_option = yes }
+			set_variable = { name = me_ramadan_approach value = flag:skip }
+		}
+
+		# If Ramadan is currently active, apply the chosen modifier immediately so the choice takes effect this year.
+		if = {
+			limit = { me_is_ramadan_trigger = yes }
+			me_apply_ramadan_modifier_effect = yes
+		}
+
+		# Second window: realm patronage choice for top lieges — always offered, effect activates only when Ramadan arrives.
+		if = {
+			limit = {
+				me_is_top_liege_trigger = yes
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = me_ramadan_muharram.0001
+					days = 1
+				}
+			}
+			custom_tooltip = me_ramadan_patronage_window_tt
+		}
+	}
+
+	ai_potential = {
+		me_is_muslim_trigger = yes
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}

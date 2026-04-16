@@ -1,0 +1,152 @@
+### Approach to Muharram ###
+me_approach_to_muharram_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/me_decision_muharram.dds"
+	}
+	desc = me_approach_to_muharram_decision_desc
+	selection_tooltip = me_approach_to_muharram_decision_tooltip
+
+	cooldown = { years = 1 }
+
+	ai_check_interval = 120
+
+	is_shown = {
+		me_is_muslim_trigger = yes
+		me_is_shia_trigger = yes
+		has_game_rule = me_hijri_enabled
+	}
+
+	is_valid = {
+		is_capable_adult = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "me_muharram_choose_approach"
+		show_from_start = yes
+
+		# Deep Mourning
+		item = {
+			value = me_muharram_deep_option
+			is_valid = {
+				always = yes
+			}
+			current_description = me_muharram_deep_option_desc
+			localization = me_muharram_deep_option
+			icon = "gfx/interface/icons/traits/compassionate.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_devout_weight
+			}
+		}
+
+		# Moderate Mourning
+		item = {
+			value = me_muharram_moderate_option
+			is_valid = {
+				always = yes
+			}
+			current_description = me_muharram_moderate_option_desc
+			localization = me_muharram_moderate_option
+			icon = "gfx/interface/icons/traits/humble.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_casual_weight
+			}
+		}
+
+		# Tatbir (flagellant option)
+		item = {
+			value = me_muharram_tatbir_option
+			is_valid = {
+				has_trait = flagellant
+			}
+			current_description = me_muharram_tatbir_option_desc
+			localization = me_muharram_tatbir_option
+			icon = "gfx/interface/icons/traits/flagellant.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_tatbir_weight
+			}
+		}
+
+		# Skip Muharram
+		item = {
+			value = me_muharram_skip_option
+			is_valid = {
+				always = yes
+			}
+			current_description = me_muharram_skip_option_desc
+			localization = me_muharram_skip_option
+			icon = "gfx/interface/icons/traits/callous.dds"
+			flat = yes
+			ai_chance = {
+				value = me_ai_skip_weight
+			}
+		}
+	}
+
+	effect = {
+		# Record the chosen approach as a persistent character variable.
+		# The actual mourning modifier is applied when Muharram arrives (see me_hijri_on_actions).
+		# Deep Mourning
+		if = {
+			limit = { scope:me_muharram_deep_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:deep }
+		}
+		# Moderate Mourning
+		else_if = {
+			limit = { scope:me_muharram_moderate_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:moderate }
+		}
+		# Tatbir
+		else_if = {
+			limit = { scope:me_muharram_tatbir_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:tatbir }
+			# Tatbir's immediate cathartic stress loss fires whenever the approach is chosen.
+			add_stress = medium_stress_loss
+		}
+		# Skip Muharram
+		else_if = {
+			limit = { scope:me_muharram_skip_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:skip }
+		}
+
+		# If Muharram mourning is currently active (first 12 days), apply the chosen modifier immediately.
+		if = {
+			limit = {
+				me_is_muharram_trigger = yes
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_modifier_effect = yes
+		}
+
+		# Second window: realm patronage choice for top lieges — always offered, effect activates only when Muharram arrives.
+		if = {
+			limit = {
+				me_is_top_liege_trigger = yes
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = me_ramadan_muharram.0010
+					days = 1
+				}
+			}
+			custom_tooltip = me_muharram_patronage_window_tt
+		}
+	}
+
+	ai_potential = {
+		me_is_muslim_trigger = yes
+		me_is_shia_trigger = yes
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}

@@ -1,0 +1,1368 @@
+﻿on_game_start = {
+	on_actions = {
+		me_game_start
+		me_on_monthly
+	}
+}
+
+on_game_start_after_lobby = {
+	on_actions = {
+		me_after_game_start
+	}
+}
+
+me_game_start = {
+	effect = {
+		## Block conversion for Non-sectarian Islam
+		faith:ns_islam = {
+			set_variable = { name = block_conversion_ALB }
+		}
+		faith:ns_islam_shia = {
+			set_variable = { name = block_conversion_ALB }
+		}
+ 
+		if = {
+			limit = { game_start_date = 867.1.1 }
+			shia_imamates_startup_effect = yes
+			title:e_arabia = { set_capital_county = title:c_baghdad }
+			title:c_arawan = { set_county_faith = faith:wahbiya }
+			title:c_kalat = { set_county_faith = faith:imami }
+			title:c_rukhaj = { set_county_faith = faith:imami }
+			title:c_sibi = { set_county_faith = faith:imami }
+			
+			character:sogdian0008 = { remove_trait = fp3_struggle_detractor add_trait = fp3_struggle_supporter }
+			character:sogdian0009 = { remove_trait = fp3_struggle_detractor add_trait = fp3_struggle_supporter }
+			
+			## Setup the Acehnese Muslim rulers for the game rule
+			character:malay_perlak_02 = {
+				change_first_name = Sumitra
+				set_father = character:me_malay_fic_001
+				set_house = character:malay_perlak_01_fic.house
+				set_character_faith = faith:vajrayana
+				change_government = mandala_government
+			}
+			character:malay_perlak_03 = {
+				change_first_name = Darma
+				set_house = character:malay_perlak_01_fic.house
+				set_character_faith = faith:vajrayana
+			}
+			
+			## Setup Ibn Tulun to not confuse people
+			character:163115 = {
+				get_title = title:k_egypt
+				get_title = title:d_delta
+				get_title = title:c_cairo
+				get_title = title:c_damietta
+				get_title = title:c_al-buhaira
+				get_title = title:c_al-gharbiya
+				get_title = title:c_sharkiya
+				add_courtier = character:me_egyptian_001 # Ma'mar al-Jawhari
+				add_courtier = character:me_egypt_turk_011 # Tayfur at-Turki
+				add_courtier = character:me_egypt_turk_012 # Lu'Lu'
+				add_courtier = character:me_persian_009 # Ahmad ibn Jayghawayh
+				add_courtier = character:me_al_madharai_001 # Ahmad al-Madhara'i
+				add_courtier = character:me_al_madharai_003 # Ali ibn Ahmad al-Madhara'i
+				add_courtier = character:me_al_madharai_004 # al-Husayn ibn Ahmad al-Madhara'i
+			}
+		}
+		if = {
+			limit = { game_start_date = 1066.9.15 }
+			title:c_kouga = { set_county_faith = faith:wahbiya }
+			title:c_kalat = { set_county_faith = faith:ashari }
+			title:c_rukhaj = { set_county_faith = faith:ashari }
+			title:c_sibi = { set_county_faith = faith:ashari }
+			title:c_showa = { set_county_faith = faith:ashari }
+			title:c_waj = { set_county_faith = faith:ashari }
+
+			## Title name changes
+			title:c_dausar = { set_title_name = c_qalat_ja_bar }
+			title:b_dausar = { set_title_name = c_qalat_ja_bar }
+			
+			## Seljuk War
+			me_seljuk_war_qawurd_start = yes
+			
+			## Setup the Wazir of Uwal
+			character:me_abdulqays_001 = {
+				designate_diarch = character:me_abdulqays_003
+				try_start_diarchy = vizierate
+				set_variable = {
+					name = my_vizier
+					value = character:me_abdulqays_003
+				}
+			}
+			remove_generated_diarch_consequences_effect = {
+				NEW_DIARCH = character:me_abdulqays_003
+				LIEGE = character:me_abdulqays_001
+			}
+			
+			## Setup the Acehnese Muslim rulers for the game rule
+			character:malay_perlak_12 = {
+				change_first_name = Sudirman
+				set_father = character:me_malay_fic_001
+				set_house = character:malay_perlak_10_fic.house
+				set_character_faith = faith:vajrayana
+				change_government = mandala_government
+			}
+			character:malay_perlak_13 = {
+				change_first_name = Thang
+				set_house = character:malay_perlak_10_fic.house
+				set_character_faith = faith:vajrayana
+			}
+		}
+		if = {
+			limit = { game_start_date = 1178.10.1 }
+			title:c_satfura = { set_county_faith = faith:ashari }
+			title:c_constantine = { set_county_faith = faith:ashari }
+			title:c_annaba = { set_county_faith = faith:ashari }
+			title:c_bilizma = { set_county_faith = faith:ashari }
+			title:c_tamentit = { set_county_faith = faith:ashari }
+			title:c_touat = { set_county_faith = faith:ashari }
+			title:c_saoura = { set_county_faith = faith:ashari }
+			title:c_taghaza = { set_county_faith = faith:ashari }
+			title:c_showa = { set_county_faith = faith:ashari }
+			title:c_waj = { set_county_faith = faith:ashari }
+
+			character:malay_kedah_20_fic = { # First Muslim ruler of Kedah
+				change_first_name = Muzaffar
+				set_character_faith = faith:ashari
+				set_age = 58
+			}
+			character:me_kedah_002 = { set_father = character:malay_kedah_20_fic }
+			character:me_kedah_003 = { set_father = character:malay_kedah_20_fic }
+			character:me_kedah_004 = { set_father = character:malay_kedah_20_fic }
+			title:c_MAL_kedah = { set_county_faith = faith:ashari } # 'The rakyat (masses) followed suit decades later', not sure if three decades can be considered enough
+			character:malay_perlak_20_fic = { change_government = clan_government }
+			character:malay_lambri_20_fic = { change_government = clan_government }
+			
+			character:32913 = { set_mother = character:me_takshid_001 } # Make Salah ud-Din's mother also Nur ud-Din's mother, done like this to avoid editing Kurdish.txt
+			
+			if = {
+				limit = { exists = struggle:iberian_struggle }
+				struggle:iberian_struggle = { set_faith_as_involved = faith:masmudi }
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = me_sunni_united
+						has_game_rule = me_sunni_maturidi_only
+					}
+				}
+				title:c_kalat = { set_county_faith = faith:ashari }
+				title:c_rukhaj = { set_county_faith = faith:ashari }
+				title:c_sibi = { set_county_faith = faith:ashari }
+			}
+			else = {
+				title:c_kalat = { set_county_faith = faith:maturidi }
+				title:c_rukhaj = { set_county_faith = faith:maturidi }
+				title:c_sibi = { set_county_faith = faith:maturidi }
+			}
+			
+			## Title name changes
+			title:c_dausar = { set_title_name = c_qalat_ja_bar }
+			title:b_dausar = { set_title_name = c_qalat_ja_bar }
+
+			## Setup for the Musta'li schism
+			faith:ismaili = { add_doctrine = special_doctrine_mustali_main }
+			faith:hafizi = { add_doctrine = special_doctrine_mustali_schismed_sect }
+			faith:tayyibi = { add_doctrine = special_doctrine_mustali_schismed_sect }
+		}
+		
+		# Hamamshen setup
+		if = {
+			limit = {
+				title:c_acampse.culture = culture:georgian
+				title:c_acampse.faith = faith:orthodox
+			}
+			title:c_acampse = {
+				set_county_culture = culture:armenian
+				set_county_faith = faith:armenian_apostolic
+			}
+		}
+		
+		if = {
+			limit = {
+				exists = struggle:persian_struggle
+			}
+			if = {
+				limit = {
+					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:karrami } }
+				}
+				struggle:persian_struggle = { set_faith_as_involved = faith:karrami }
+			}
+		}
+
+		if = { # If PiGu's Medieval Monuments pack isn't active, we add the old ME buildings
+			limit = { 
+				has_cp3_dlc_trigger = no
+			}
+			title:b_damascus.title_province = { add_special_building = ME_umayyad_mosque_01 } #5924
+			title:b_fes.title_province = { add_special_building = ME_al_qarawiyyin_university_01 } #4694
+			title:b_kairouan.title_province = { add_special_building = uqba_mosque_01 } #4594
+		}
+		else_if = { # If PiGu's Medieval Monuments pack IS active, we add the old ME buildings as duchy buildings
+			limit = { 
+				has_cp3_dlc_trigger = yes
+			}
+			title:b_kairouan.title_province = { add_building = uqba_mosque_01_duchy } #4594
+		}
+
+		me_RICE_effect = yes
+		me_setup_tributaries_effect = yes
+		me_buildings_setup_effect = yes
+		me_add_doctrine_startup_effect = yes
+		me_add_innovations_startup_effect = yes
+		me_byzantine_dejure_effect = yes
+		me_shewa_setup_effect = yes # To avoid overwriting k_adal
+	}
+}
+
+me_after_game_start = {
+	effect = {	
+		hfc_bedouin_traditions = yes
+		#hfc_bedouin_counties = yes
+		me_muslim_sicily_wars_startup_effect = yes
+
+		culture:afghan = { set_culture_pillar = ethos_bellicose }
+		#culture:rajput = { set_culture_pillar = martial_custom_male_only }
+	
+		## Convert Muwalladi/Maturidi counties to Sunni
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = me_sunni_united
+					has_game_rule = me_sunni_muwalladi_only
+				}
+			}
+			every_county = {
+				limit = { faith = faith:muwalladi }
+				set_county_faith = faith:ashari
+			}
+			every_living_character = {
+				limit = { faith = faith:muwalladi }
+				set_character_faith = faith:ashari
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = me_sunni_united
+					has_game_rule = me_sunni_maturidi_only
+				}
+			}
+			every_county = {
+				limit = { faith = faith:maturidi }
+				set_county_faith = faith:ashari
+			}
+			every_living_character = {
+				limit = { faith = faith:maturidi }
+				set_character_faith = faith:ashari
+			}
+
+			every_player = {
+				trigger_event = {
+					id = me_misc_religion_event.0003 # Clean up any maturidi characters that are left for some reason
+					days = 1
+				}
+			}
+		}
+
+		# Which name Siqilli and Mahri cultures use
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = me_rice_culture_name_ME
+					has_game_rule = me_rice_culture_name_S_SA
+				}
+			}
+			culture:siqilli = {
+				set_culture_name = {
+					noun = "me_siqilli"
+					collective_noun = "me_siqilli_collective_noun"
+					prefix = "me_siqilli_prefix"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_game_rule = me_rice_culture_name_RICE
+					has_game_rule = me_rice_culture_name_M_SA
+				}
+			}
+			culture:siqilli = {
+				set_culture_name = {
+					noun = "me_siculo_arabic"
+					collective_noun = "me_siculo_arabic_collective_noun"
+					prefix = "me_siculo_arabic_prefix"
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = me_rice_culture_name_ME
+					has_game_rule = me_rice_culture_name_M_SA
+				}
+			}
+			culture:south_arabian = {
+				set_culture_name = {
+					noun = "me_mahri"
+					collective_noun = "me_mahri_collective_noun"
+					prefix = "me_mahri_prefix"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_game_rule = me_rice_culture_name_RICE
+					has_game_rule = me_rice_culture_name_S_SA
+				}
+			}
+			culture:south_arabian = {
+				set_culture_name = {
+					noun = "me_south_arabian"
+					collective_noun = "me_south_arabian_collective_noun"
+					prefix = "me_south_arabian_prefix"
+				}
+			}
+		}
+
+		# Which name list Siqilli culture uses
+		if = {
+			limit = {
+				has_game_rule = me_siqilli_name_list_ME
+			}
+			culture:siqilli = {
+				set_name_list = name_list_siqilli
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = me_siqilli_name_list_RICE
+			}
+			culture:siqilli = {
+				set_name_list = name_list_siculo_arabic
+			}
+		}
+		if = {
+			limit = {
+				culture:siqilli = {
+					NOR = {
+						has_name_list = name_list_siqilli
+						has_name_list = name_list_siculo_arabic
+					}
+				}
+			}
+			culture:siqilli = {
+				set_name_list = name_list_siqilli
+			}
+		}
+
+		# Fictional Adventerers
+		if = {
+			limit = {
+				NOR = {
+					has_game_rule = me_adventerers_fic_only
+					has_game_rule = me_adventerers_fic_egg
+				}
+			}
+			ME_remove_adventerers_fic_effect = yes
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_game_rule = me_adventerers_egg_only
+					has_game_rule = me_adventerers_fic_egg
+				}
+			}
+			ME_remove_adventerers_egg_effect = yes
+		}
+
+		# Whether the Ayyubids are Mashriqi or Kurdish
+		if = {
+			limit = {
+				has_game_rule = me_ayyubid_mashriqi
+				current_date = 1178.10.1
+			}
+			every_living_character = {
+				limit = {
+					dynasty = dynasty:24000 # Ayyubids
+				}
+				if = {
+					limit = { NOT = { knows_language = language_iranian } }
+					learn_language = language_iranian # Kurdish language
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_game_rule = me_ayyubid_kurdish
+				current_date = 1178.10.1
+			}
+			every_living_character = {
+				limit = {
+					dynasty = dynasty:24000 # Ayyubids
+				}
+				set_culture = culture:kurdish
+				if = {
+					limit = { NOT = { knows_language = language_arabic } }
+					learn_language = language_arabic
+				}
+			}
+		}
+
+		# Whether the Fatimids have the Ubaydi or Sayyid trait
+		if = {
+			limit = {
+				has_game_rule = me_fatimid_trait_sayyid
+			}
+			every_living_character = {
+				limit = {
+					has_trait = ubaydi
+				}
+				remove_trait = ubaydi
+				add_trait = sayyid
+			}
+		}
+
+		## Nukkari Revolt
+		if = {
+			limit = { has_game_rule = me_nukkari_revolt_no }
+			set_global_variable = {
+				name = nukkari_revolt_ended
+				value = yes
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = me_nukkari_revolt_yes
+				game_start_date = 867.1.1
+			}
+			character:me_ifrinid_002 = { # Kaydad - Abu Yazid's Father
+				death = { death_reason = death_disappearance }
+			}
+			character:me_ifrinid_003 = { # Sabika - Abu Yazid's Mother
+				death = { death_reason = death_disappearance }
+			}
+		}
+
+		## Berberist Invasions
+		if = {
+			limit = {
+				NOR = {
+					has_game_rule = me_berberist_invasion_both
+					has_game_rule = me_berberist_invasion_H_only
+					has_game_rule = me_berberist_invasion_H_K_ismaili
+				}
+			}
+			set_global_variable = {
+				name = hamimist_invasion_ended
+				value = yes
+			}
+		}
+		else_if = {
+			limit = {
+				game_start_date = 867.1.1
+				OR = {
+					has_game_rule = me_berberist_invasion_both
+					has_game_rule = me_berberist_invasion_H_only
+					has_game_rule = me_berberist_invasion_H_K_ismaili
+				}
+			}
+			character:me_majkasa_008 = { # Mann-Allah, Father of Ha-Mim
+				death = { death_reason = death_disappearance }
+			}
+			character:me_majkasa_009 = { # Harir, Grandfather of Ha-Mim
+				death = { death_reason = death_disappearance }
+			}
+			character:me_majkasa_015 = { # Taqit, Aunt of Ha-Mim
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone #Placeholder
+				death = { death_reason = death_disappearance }
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_game_rule = me_berberist_invasion_both
+					has_game_rule = me_berberist_invasion_K_only
+					has_game_rule = me_berberist_invasion_H_K_ismaili
+				}
+			}
+			set_global_variable = {
+				name = kaduist_invasion_ended
+				value = yes
+			}
+		}
+
+		## Alid Egypt revolts
+		if = {
+			limit = {
+				game_start_date = 867.1.1
+				has_game_rule = me_alid_egypt_revolt_RICE
+			}
+			me_alid_revolt_RICE_effect = yes
+		}
+		else_if = {
+			limit = {
+				game_start_date = 867.1.1
+				has_game_rule = me_alid_egypt_revolt_disabled
+			}
+			me_alid_revolt_disabled_effect = yes
+		}
+		else_if = {
+			limit = {
+				game_start_date = 867.1.1
+				has_game_rule = me_alid_egypt_revolt_ME
+			}
+			me_alid_revolt_ME_effect = yes
+		}
+		
+		## 867 Egypt holder
+		if = {
+			limit = {
+				game_start_date = 867.1.1
+				title:k_egypt.holder = { is_ai = yes }
+			}
+			me_egypt_holder_effect = yes
+		}
+		else_if = {
+			limit = {
+				game_start_date = 867.1.1
+				title:k_egypt.holder = { is_ai = no }
+			}
+			title:k_egypt.holder = { trigger_event = me_misc_event.0001 }
+		}
+
+		## Partition of Bari
+		if = {
+			limit = { has_game_rule = me_bari_partition_true }
+			set_global_variable = {
+				name = me_bari_partition_true_variable
+				value = yes
+			}
+		}
+
+		## 867 Camarda holder
+		if = {
+			limit = {
+				has_game_rule = me_calabria_bari
+				game_start_date = 867.1.1
+			}
+			me_calabria_bari_effect = yes
+		}
+
+		## 1066 Extra Caliph Titles
+		if = {
+			limit = {
+				game_start_date = 1066.9.15
+				OR = {
+					has_game_rule = me_caliph_rank_both
+					has_game_rule = me_caliph_rank_fatimid
+				}
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = title_change
+				add_claim_on_loss = no
+			}
+			title:e_arabia = {
+				change_title_holder = {
+					holder = title:d_shiite.holder
+					change = scope:title_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:title_change
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = me_caliph_rank_both
+					has_game_rule = me_caliph_rank_abbasid
+				}
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = title_change
+				add_claim_on_loss = no
+			}
+			title:k_mesopotamia = {
+				change_title_holder = {
+					holder = title:d_sunni.holder
+					change = scope:title_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:title_change
+		}
+
+		## HoF Administrative laws
+		if = {
+			limit = {
+				has_game_rule = historicity_extra_admin_arabia_historic_867
+				game_start_date = 867.1.1
+			}
+			title:d_sunni = { clear_title_laws = yes }
+		}
+		if = {
+			limit = {
+				has_game_rule = historicity_extra_admin_egypt_historic_always
+				game_start_date = 1066.9.15
+			}
+			title:d_shiite = { clear_title_laws = yes }
+		}
+
+		# Caliphal Honorifics setup
+		every_player = { ME_caliphal_honorific_startup = yes }
+		
+		# Acehnese Muslim setup
+		every_player = { me_malay_islamic_ruler_setup = yes }
+
+		## Extra Events 
+		every_player = { 
+			trigger_event = alb_cm.0100 ##  ALB faiths event (Checks and prevents players from converting) 
+			if = {
+				limit = { dynasty = { this = dynasty:1022241 } }
+				trigger_event = me_misc_event.0003 ## Makhzumids of Shewa startup
+			}
+		}
+		if = {
+			limit = { game_start_date = 867.1.1 }
+			# Italian-Bari War startup events
+			title:k_italy.holder = { trigger_event = { id = ss_wars.0200 days = 1 } }
+			title:c_bari.holder = { trigger_event = { id = ss_wars.0200 days = 1 } }
+		}
+		if = {
+			limit = { game_start_date = 1066.9.15 }
+			# Zirid Intervention startup events
+			character:20825 = { trigger_event = { id = ss_wars.0003 days = 1 } }
+			character:baranis0027 = { trigger_event = { id = ss_wars.0003 days = 1 } }
+			character:1128 = { trigger_event = { id = ss_wars.0003 days = 1 } }
+		}
+		
+		if = {
+			limit = { has_ep3_dlc_trigger = yes }
+			### ME ADVENTURER SETUP ###
+			## Fatimid Hidden Imam
+			title:d_laamp_sevener_caliph = { set_title_name = d_hidden_imamate }
+			character:33920 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+#						is_landless_adventurer = yes
+					}
+					change_government = landless_adventurer_government
+					if = {
+						limit = {
+							character:me_fatimid_002 = {
+								NOT = { is_courtier_of = character:33920 }
+							}
+						}
+						add_courtier = character:me_fatimid_002
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Danishmend and Sulayman ibn Qutalmish
+			character:3046 ?= {
+				# Introduction event
+				trigger_event = {
+					id = seljuk_invasion_events.0007
+					days = { 1 2 }
+				}
+			}
+			character:danishmendid_1 ?= {
+				# Introduction event
+				trigger_event = {
+					id = seljuk_invasion_events.0007
+					days = { 1 2 }
+				}
+			}
+
+			## Ibn Karram 
+			character:me_karrami_01 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_karrami_03 = {
+								NOT = { is_courtier_of = character:me_karrami_01 }
+							}
+						}
+						add_courtier = character:me_karrami_03
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Maghrawa Khazrunids
+			character:1236307 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_maghrawa_008 = {
+								NOT = { is_courtier_of = character:1236307 }
+							}
+						}
+						add_courtier = character:me_maghrawa_008
+					}
+					if = {
+						limit = {
+							character:me_maghrawa_011 = {
+								NOT = { is_courtier_of = character:1236307 }
+							}
+						}
+						add_courtier = character:me_maghrawa_011
+					}
+					if = {
+						limit = {
+							character:1236379 = {
+								NOT = { is_courtier_of = character:1236307 }
+							}
+						}
+						add_courtier = character:1236379
+					}
+					if = {
+						limit = {
+							character:155117 = {
+								NOT = { is_courtier_of = character:1236307 }
+							}
+						}
+						add_courtier = character:155117
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ziri ibn Manad's grandfather
+			character:me_zirid_pre_1 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:20930 = {
+								NOT = { is_courtier_of = character:me_zirid_pre_1 }
+							}
+						}
+						add_courtier = character:20930
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## al-Kindi
+			character:alkindi1 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_kinda_000 = {
+								NOT = { is_courtier_of = character:alkindi1 }
+							}
+						}
+						add_courtier = character:me_kinda_000
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Tujibids of Egypt
+			character:me_tujibid_036 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_tujibid_037 = {
+								NOT = { is_courtier_of = character:me_tujibid_036 }
+							}
+						}
+						add_courtier = character:me_kinda_023
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ibn Durayd
+			character:me_azdid_055 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_azdid_056 = {
+								NOT = { is_courtier_of = character:me_azdid_055 }
+							}
+						}
+						add_courtier = character:me_azdid_056
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Father of Khashkhash ibn Sa'id
+			character:me_andalusian_010 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_explorers # 
+					if = {
+						limit = {
+							character:me_andalusian_011 = {
+								NOT = { is_courtier_of = character:me_andalusian_010 }
+							}
+						}
+						add_courtier = character:me_andalusian_011
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Uthmanids of Berkri (placeholder)
+			character:me_uthmanid_berkri_001 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_legitimists
+					if = {
+						limit = {
+							character:me_uthmanid_berkri_002 = {
+								NOT = { is_courtier_of = character:me_uthmanid_berkri_001 }
+							}
+						}
+						add_courtier = character:me_uthmanid_berkri_001
+					}
+					if = {
+						limit = {
+							character:me_uthmanid_berkri_005 = {
+								NOT = { is_courtier_of = character:me_uthmanid_berkri_001 }
+							}
+						}
+						add_courtier = character:me_uthmanid_berkri_001
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Jahhaf ibn Sawada al-Jahhafi
+			character:me_jahhafid_004 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_mercenaries
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ibn Wahb al-Basri
+			character:me_quraysh_016 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_explorers
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ibrahim ibn as-Sufi
+			character:me_hashimid_046 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = { # Abu Ruh Sukun
+							character:me_egyptian_004 = {
+								NOT = { is_courtier_of = character:me_hashimid_046 }
+							}
+						}
+						add_courtier = character:me_egyptian_004
+					}
+					if = {
+						limit = {
+							character:me_hashimid_047 = {
+								NOT = { is_courtier_of = character:me_hashimid_046 }
+							}
+						}
+						add_courtier = character:me_hashimid_047
+					}
+					if = {
+						limit = {
+							character:me_hashimid_048 = {
+								NOT = { is_courtier_of = character:me_hashimid_046 }
+							}
+						}
+						add_courtier = character:me_hashimid_048
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## al-Balnubi
+			character:me_balnubi_01 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_balnubi_02 = {
+								NOT = { is_courtier_of = character:me_balnubi_01 }
+							}
+						}
+						add_courtier = character:me_balnubi_02
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ibn al-Qatta'
+			character:me_aghlabid_017 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_aghlabid_016 = {
+								NOT = { is_courtier_of = character:me_aghlabid_017 }
+							}
+						}
+						add_courtier = character:me_aghlabid_016
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## al-Hujwiri
+			character:me_hashimid_027 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Maghila Berbers of 1066
+			character:me_butr_003 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ba'Alawi Clan - 1066
+			character:me_ba_awali_003 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_ba_awali_004 = {
+								NOT = { is_courtier_of = character:me_ba_awali_003 }
+							}
+						}
+						add_courtier = character:me_ba_awali_004
+					}
+					if = {
+						limit = {
+							character:me_fatimid_010 = {
+								NOT = { is_courtier_of = character:me_ba_awali_003 }
+							}
+						}
+						add_courtier = character:me_fatimid_010
+					}
+					if = {
+						limit = {
+							character:me_fatimid_011 = {
+								NOT = { is_courtier_of = character:me_ba_awali_003 }
+							}
+						}
+						add_courtier = character:me_fatimid_011
+					}
+					if = {
+						limit = {
+							character:me_fatimid_012 = {
+								NOT = { is_courtier_of = character:me_ba_awali_003 }
+							}
+						}
+						add_courtier = character:me_fatimid_012
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ba'Alawi Clan - 1178
+			character:me_ba_awali_006 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_ba_awali_007 = {
+								NOT = { is_courtier_of = character:me_ba_awali_006 }
+							}
+						}
+						add_courtier = character:me_ba_awali_007
+					}
+					if = {
+						limit = {
+							character:me_ba_awali_008 = {
+								NOT = { is_courtier_of = character:me_ba_awali_006 }
+							}
+						}
+						add_courtier = character:me_ba_awali_008
+					}
+					if = {
+						limit = {
+							character:me_ba_awali_009 = {
+								NOT = { is_courtier_of = character:me_ba_awali_006 }
+							}
+						}
+						add_courtier = character:me_ba_awali_009
+					}
+					if = {
+						limit = {
+							character:me_ba_awali_010 = {
+								NOT = { is_courtier_of = character:me_ba_awali_006 }
+							}
+						}
+						add_courtier = character:me_ba_awali_010
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Najm ud-Din ibn as-Sufi
+			character:me_hashimid_053 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_hashimid_054 = {
+								NOT = { is_courtier_of = character:me_hashimid_053 }
+							}
+						}
+						add_courtier = character:me_hashimid_054
+					}
+					if = {
+						limit = {
+							character:me_hashimid_055 = {
+								NOT = { is_courtier_of = character:me_hashimid_053 }
+							}
+						}
+						add_courtier = character:me_hashimid_055
+					}
+					if = {
+						limit = {
+							character:me_hashimid_056 = {
+								NOT = { is_courtier_of = character:me_hashimid_053 }
+							}
+						}
+						add_courtier = character:me_hashimid_056
+					}
+					if = {
+						limit = {
+							character:me_hashimid_057 = {
+								NOT = { is_courtier_of = character:me_hashimid_053 }
+							}
+						}
+						add_courtier = character:me_hashimid_057
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Fictional Umayyads 1066
+			character:me_umayyad_fic_001 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_umayyad_fic_002 = {
+								NOT = { is_courtier_of = character:me_umayyad_fic_001 }
+							}
+						}
+						add_courtier = character:me_umayyad_fic_002
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Fictional Umayyads 1178
+			character:me_umayyad_fic_005 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_umayyad_fic_006 = {
+								NOT = { is_courtier_of = character:me_umayyad_fic_005 }
+							}
+						}
+						add_courtier = character:me_umayyad_fic_006
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Muhammad al-Idrisi's son
+			character:me_idrisid_008 ?= {
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Nizami Ganjavi
+			character:me_ganjavid_001 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_ganjavid_007 = {
+								NOT = { is_courtier_of = character:me_ganjavid_001 }
+							}
+						}
+						add_courtier = character:me_ganjavid_007
+					}
+					if = {
+						limit = {
+							character:me_ganjavid_008 = {
+								NOT = { is_courtier_of = character:me_ganjavid_001 }
+							}
+						}
+						add_courtier = character:me_ganjavid_008
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## 'Shihab ad-Din' Yahya Suhrawardi
+			character:me_persian_004 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_scholars
+					if = {
+						limit = {
+							character:me_persian_005 = {
+								NOT = { is_courtier_of = character:me_persian_004 }
+							}
+						}
+						add_courtier = character:me_persian_005
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## 1178 Buhturids (Arslanids)
+			character:me_lakhmid_065 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_lakhmid_066 = {
+								NOT = { is_courtier_of = character:me_lakhmid_065 }
+							}
+						}
+						add_courtier = character:me_lakhmid_066
+					}
+				}
+				# Introduction event
+				trigger_event = {
+					id = me_laamp_intro.0002
+					days = { 1 2 }
+				}
+			}
+			## بسبس مياو (Cat Easteregg)
+			character:me_ea_cat_001 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_ea_cat_002 = {
+								NOT = { is_courtier_of = character:me_ea_cat_001 }
+							}
+						}
+						add_courtier = character:me_ea_cat_002
+					}
+					if = {
+						limit = {
+							character:me_ea_cat_003 = {
+								NOT = { is_courtier_of = character:me_ea_cat_001 }
+							}
+						}
+						add_courtier = character:me_ea_cat_003
+					}
+					if = {
+						limit = {
+							character:me_ea_cat_004 = {
+								NOT = { is_courtier_of = character:me_ea_cat_001 }
+							}
+						}
+						add_courtier = character:me_ea_cat_004
+					}
+					if = {
+						limit = {
+							character:me_ea_cat_005 = {
+								NOT = { is_courtier_of = character:me_ea_cat_001 }
+							}
+						}
+						add_courtier = character:me_ea_cat_005
+					}
+					if = {
+						limit = {
+							character:me_ea_cat_006 = {
+								NOT = { is_courtier_of = character:me_ea_cat_001 }
+							}
+						}
+						add_courtier = character:me_ea_cat_006
+					}
+				}
+				# Introduction event
+				trigger_event = {
+					id = me_laamp_intro.0001
+					days = { 1 2 }
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,72 @@
+﻿ME_saifa_intent = {
+	on_return_raid_loot = {
+		scope:raider = {
+			send_interface_message = {
+				type = event_raid_good
+				title = raiding.0011.t
+
+				right_icon = root.army_commander
+				add_gold = {
+					value = scope:raid_loot
+					multiply = 0.5
+				}
+			
+				if = {
+					limit = { scope:raid_loot >= 300 }
+					add_legitimacy = {
+						value = 150
+					}
+				}
+				if = {
+					limit = { scope:raid_loot < 300 }
+					add_legitimacy = {
+						value = scope:raid_loot
+						multiply = 0.5
+					}
+				}
+				
+#				add_prestige = {
+#					value = scope:raid_loot
+#					multiply = 0.5
+#				}
+#				add_legitimacy = {
+#					value = 10
+#					multiply = scope:raider.var:me_saifa_counties_raided
+#				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+
+	is_shown = {
+		NOR = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_tribal
+		}
+		OR = {
+			culture = { has_innovation = innovation_me_summer_raids }
+			AND = {
+				faith.religion = religion:islam_religion
+				any_held_title = { is_head_of_faith = yes }
+			}
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = ME_saifa_intent_months
+			OR = {
+				AND = { # Summer months (June, July, and August)
+					current_month >= 6
+					current_month <= 8
+				}
+				any_army = {
+					is_raid_army = yes
+					raid_intent = ME_saifa_intent
+				}
+			}
+		}
+	}
+}

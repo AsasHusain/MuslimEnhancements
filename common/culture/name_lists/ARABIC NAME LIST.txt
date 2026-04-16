@@ -1,0 +1,31 @@
+﻿#	male_names = {
+#		Abul-Fadl Abdal-Uzza Aadam Abdus-Salam Adim Abd-Manaf 
+#		Abdel-Fattah Abdul-Nur Adib Abdul-Raza Abdullah Abdul-Ahad Abdul-Ali
+#		Abdul-Alim Adir Ahsan Akif Amin Amjad Ammar Amr Anas Anwar Aqeel Arif
+#		Asghar Ali-Asghar Asadullah Assad Ashraf Wahhab Asif Atif Azim Azimullah Azizullah
+#		Abul-Qasim Abidin Ayyub Asas Aziz Badr Bakir Bashir Barkat Barkat-Ali Bashar Billah Bilal
+#		Chadli Danyal Dawud Ehsanullah Ekram Fadl Fahad Fathi Fahim Fazl Fazlurahman Fakhruddin
+#		Farid Fariduddin Fouzan Farooq Gaffar Gamil Ghulam Ghassan Habib Hadi Hashim Hasib Hafizullah
+#		Haitham Hisham Hishamuddin Hamdan Hamidullah Hani Inam Hamza Ismail Idris Ihab Ikhtiyaruddin
+#		Ishak Issam Iqbal Inayatullah Inamulhaq Imtiaz Inam Imad Jawad Jarrah Jawad Jubayr Junayd
+#		Jamaladdin Jalaladdin Jabr Jabal Jafar Kazim Kamaladdin Khalid Khairaddin Kamal Kashif Karim
+#		Khalil Khalfan Kadri Kadir Labib Latif Lutfullah Mujtaba Mahir Mahmud Majid Mansur Manzar 
+#		Mawran Muharram Mubarak Muammar Mua'dh Murrah Mahdi Midhat Munir Murad Murtaza Mustafa Muslim
+#		Nabih Nabeel Nasri Nasser Nassif Nawaz Nazim Nazimuddin Najib Nihad Nimatullah Nasiraldin
+#		Nasrallah Osama Omar Qaid Quddus Qutbaddin Qutb Qudratullah Qusay Rashidaldin Raza Rayan
+#		Rajab Ramzan Rasul Riyaz Saadaldin Rashad Saifaldin Saddam Sadiq Sanaullah Saqib Suhail 
+#		Suleyman Samir Saleh Salahuddin Shaukat Shafqat Sharifullah Shaqeel Sahir Saif Salman
+#		Wajid Walid Waliullah Wasim Wazir Wahid Wajdi Wadud Yusuf Yusuf-Ali Yunus Yasser Yadullah
+#		Yahya Yaqub Yahir Zakariya Zainulabidin Zaid Ziad Ziaduddin Zubayr Zahiraldin Zaki Zafar
+#	}
+#	female_names = {
+#		Arwa Azra Alia Aisha Afreen Adela Abiha Bushra Dana Dina Dareen Esma Farah Farida Firouz
+#		Habiba Hafsa Hawa Hayat Huda Hamida Halima Hana Hanifa Hajra Inaam Ireen Jamila Jouri Jana
+#		Kareema Khadija Khairunnisa Katya Khawlah Lamia Lana Lulwa Leila Madiha Maha Maysun Mirna 
+#		Munira Maria Marwa Maryam Malika Nadia Nawal Nayla Nafisa Najma Nasreen Nehal Nermin
+#		Qistina Rabia Riffat Rita Rana Rania Rashida Sadiya Sania Sara Sabiha Safaa Shumayla
+#		Sonia Salma Taslima Tasneem Tanisha Wafa Waliya Wajahat Yamina Yasmina Yasmin Zara
+#		Zuraida Ismat Inayah Kamala Kulsum Mahe Nusrat Razia Ruhi Rushdi Shakira Sakina Safiya Shumayra 
+#		Shukri Suhaila Samira Shamsura Sajida Sadiqa Tahira Talat Taqia Ubayda Wajida Wazira Zakia
+#		Zeeshan Zeenat Zuhaira Zayna Zaib 
+#	}

@@ -1,0 +1,349 @@
+﻿@never_primary_score = -1000
+
+d_laamp_me_karrami = { # Ibn Karram
+	color = { 100 100 100 }
+	capital = c_jerusalem
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_maghrawa = { # The Maghrawa Berber clan
+	color = { 100 100 100 }
+	capital = c_tlemcen
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_zirid_pre = { # Ziri ibn Manad's Grandfather
+	color = { 100 100 100 }
+	capital = c_bejaia
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_kindi = { # al-Kindi
+	color = { 100 100 100 }
+	capital = c_baghdad
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_tujibid = { # Grandfather of the scholar Abu Umar al-Kindi
+	color = { 100 100 100 }
+	capital = c_cairo
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ibn_durayd = { # Muhammad 'Ibn Durayd', Famous Basri philoger, grammarian, and lexicographer
+	color = { 100 100 100 }
+	capital = c_basra
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_khashkhash = { # Father of Khashkhash ibn Sa'id, who claimed to have crossed the atlantic and discovered unknown land
+	color = { 100 100 100 }
+	capital = c_almeria # Pechina/Bajjanah
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_uthmanid_berkri = { # Uthmanids of Berkri (placeholder), made into legitimist adventurers as the House of Artsuni takes precedence for Vaspurakan
+	color = { 100 100 100 }
+	capital = c_vaspurakan
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_jahhafid = { # Jahhafid dynasty of adventurers who terrorized armenia and attempted to establish themselves there, became mercenaries in 865 Melitene
+	color = { 100 100 100 }
+	capital = c_melitene
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ibn_wahb = {
+	color = { 100 100 100 }
+	capital = c_basra
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ibn_as_sufi_867 = { # Ibrahim ibn as-Sufi, Alid revolutionary in Egypt
+	color = { 100 100 100 }
+	capital = c_bahriya
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ibn_as_sufi_1066 = { # Najm ud-Din ibn as-Sufi, Alid geneologist
+	color = { 100 100 100 }
+	capital = c_mosul
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_balnubi = { # al-Balnubi
+	color = { 100 100 100 }
+	capital = c_alexandria
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ibn_al_qatta = {
+	color = { 100 100 100 }
+	capital = c_palermo
+
+	definite_form = yes
+	landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_hujwiri = { # Ali al-Hujwiri, Sufi Saint that mage significant contributions on converting SA to Islam
+	color = { 100 100 100 }
+	capital = c_lahur
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_maghila = { # Musa ibn Jalid, Leader of the Maghila berber
+	color = { 100 100 100 }
+	capital = c_meknes
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ba_alawi_1066 = { # The Ba'Alawi clan that helped spread the Shafi'i school in Arabia, India, and SEA
+	color = { 100 100 100 }
+	capital = c_hadramawt
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ba_alawi_1178 = { # The Ba'Alawi clan that helped spread the Shafi'i school in Arabia, India, and SEA
+	color = { 100 100 100 }
+	capital = c_dhofar
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_umayyad_fic_1 = { # Fictional Umayyads 1066
+	color = { 100 100 100 }
+	capital = c_granada
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_umayyad_fic_2 = { # Fictional Umayyads 1178
+	color = { 100 100 100 }
+	capital = c_algier
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_idrisid = { # Muhammad al-Idrisi's son
+	color = { 100 100 100 }
+	capital = c_palermo
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ganjavid = { # Nizami Gangavi
+	color = { 100 100 100 }
+	capital = c_aran
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_suhrawardid = { # Shihab ad-Din Yahya Suhrawardi
+	color = { 100 100 100 }
+	capital = c_maragha
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_buhturid = { # 1178 Buhturids (Arslanids)
+	color = { 100 100 100 }
+	capital = c_baalbek
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_me_ea_cats = { # بسبس مياو
+	color = { 100 100 100 }
+	capital = c_medina
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}

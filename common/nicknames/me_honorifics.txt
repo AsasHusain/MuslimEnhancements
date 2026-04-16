@@ -1,0 +1,1359 @@
+﻿#############################################
+# HONORIFICS GAINED FROM CERTAIN DECISIONS
+#############################################
+
+## Caliphal Honorifics
+# Prefixed - Long
+nick_me_al_aali_billah = { is_prefix = yes }
+nick_me_al_adid_li_din_allah = { is_prefix = yes }
+nick_me_al_amir_bi_ahkam_allah = { is_prefix = yes }
+nick_me_al_aziz_billah = { is_prefix = yes }
+nick_me_al_dai_li_din_allah = { is_prefix = yes }
+nick_me_al_dhafir_bi_ada_allah = { is_prefix = yes }
+nick_me_al_dhafir_bi_amr_allah = { is_prefix = yes }
+nick_me_al_dhahir_bi_amr_allah = { is_prefix = yes }
+nick_me_al_dhahir_li_izaz_din_allah = { is_prefix = yes }
+nick_me_al_faiz_bi_nasr_allah = { is_prefix = yes }
+nick_me_al_hadi_billah = { is_prefix = yes }
+nick_me_al_hadi_lillah = { is_prefix = yes }
+nick_me_al_hadi_li_din_allah = { is_prefix = yes }
+nick_me_al_hafidh_li_din_allah = { is_prefix = yes }
+nick_me_al_hafiz_li_din_allah = { is_prefix = yes }
+nick_me_al_hakim_bi_amr_allah = { is_prefix = yes }
+nick_me_al_hamid_lillah = { is_prefix = yes }
+nick_me_al_mahdi_billah = { is_prefix = yes }
+nick_me_al_mansur_billah = { is_prefix = yes }
+nick_me_al_mansur_bi_nasr_allah = { is_prefix = yes }
+nick_me_al_muayyad_billah = { is_prefix = yes }
+nick_me_al_mufawwid_ila_llah = { is_prefix = yes }
+nick_me_al_muhtadi_billah = { is_prefix = yes }
+nick_me_al_muid_li_din_allah = { is_prefix = yes }
+nick_me_al_muizz_li_din_allah = { is_prefix = yes }
+nick_me_al_muktafi_billah = { is_prefix = yes }
+nick_me_al_muntasir_billah = { is_prefix = yes }
+nick_me_al_muqtadi_bi_amr_allah = { is_prefix = yes }
+nick_me_al_muqtadi_billah = { is_prefix = yes }
+nick_me_al_muqtadir_billah = { is_prefix = yes }
+nick_me_al_muqtafi_li_amr_allah = { is_prefix = yes }
+nick_me_al_murtadi_billah = { is_prefix = yes }
+nick_me_al_mustadi_bi_amr_allah = { is_prefix = yes }
+nick_me_al_mustafa_li_din_allah = { is_prefix = yes }
+nick_me_al_mustain_billah = { is_prefix = yes }
+nick_me_al_mustali_billah = { is_prefix = yes }
+nick_me_al_mustasim_billah = { is_prefix = yes }
+nick_me_al_mustadhhir_billah = { is_prefix = yes }
+nick_me_al_mustazhir_billah = { is_prefix = yes }
+nick_me_al_mustakfi_billah = { is_prefix = yes }
+nick_me_al_mustamsik_billah = { is_prefix = yes }
+nick_me_al_mustanjid_billah = { is_prefix = yes }
+nick_me_al_mustansir_billah = { is_prefix = yes }
+nick_me_al_mustarshid_billah = { is_prefix = yes }
+nick_me_al_mustaqwi_billah = { is_prefix = yes }
+nick_me_al_mutaali_billah = { is_prefix = yes }
+nick_me_al_mutaayyid_billah = { is_prefix = yes }
+nick_me_al_mutadid_billah = { is_prefix = yes }
+nick_me_al_mutad_billah = { is_prefix = yes }
+nick_me_al_mutali_billah = { is_prefix = yes }
+nick_me_al_mutamid_ala_llah = { is_prefix = yes }
+nick_me_al_mutasim_billah = { is_prefix = yes }
+nick_me_al_mutawakil_ala_llah = { is_prefix = yes }
+nick_me_al_mutazz_billah = { is_prefix = yes }
+nick_me_al_muttaqi_lillah = { is_prefix = yes }
+nick_me_al_muti_lillah = { is_prefix = yes }
+nick_me_al_muwaffaq_billah = { is_prefix = yes }
+nick_me_al_nasir_li_din_allah = { is_prefix = yes }
+nick_me_al_qadir_billah = { is_prefix = yes }
+nick_me_al_qahir_billah = { is_prefix = yes }
+nick_me_al_qahir_biquwa_allah = { is_prefix = yes }
+nick_me_al_qaim_bi_amr_allah = { is_prefix = yes }
+nick_me_al_radi_billah = { is_prefix = yes }
+nick_me_al_rashid_billah = { is_prefix = yes }
+nick_me_al_sami_billah = { is_prefix = yes }
+nick_me_al_shakir_lillah = { is_prefix = yes }
+nick_me_al_tai_lillah = { is_prefix = yes }
+nick_me_al_tai_li_amr_allah = { is_prefix = yes }
+nick_me_al_wathiq_billah = { is_prefix = yes }
+nick_me_al_zahir_bi_amr_allah = { is_prefix = yes }
+nick_me_al_zahir_li_izaz_din_allah = { is_prefix = yes }
+nick_me_al_zafir_bi_ada_allah = { is_prefix = yes }
+nick_me_al_zafir_bi_amr_allah = { is_prefix = yes }
+
+# Non-Prefixed - Long
+nick_me_al_aali_billah_nonprefix = {}
+nick_me_al_adid_li_din_allah_nonprefix = {}
+nick_me_al_amir_bi_ahkam_allah_nonprefix = {}
+nick_me_al_aziz_billah_nonprefix = {}
+nick_me_al_dai_li_din_allah_nonprefix = {}
+nick_me_al_dhafir_bi_ada_allah_nonprefix = {}
+nick_me_al_dhafir_bi_amr_allah_nonprefix = {}
+nick_me_al_dhahir_bi_amr_allah_nonprefix = {}
+nick_me_al_dhahir_li_izaz_din_allah_nonprefix = {}
+nick_me_al_faiz_bi_nasr_allah_nonprefix = {}
+nick_me_al_hadi_billah_nonprefix = {}
+nick_me_al_hadi_lillah_nonprefix = {}
+nick_me_al_hadi_li_din_allah_nonprefix = {}
+nick_me_al_hafidh_li_din_allah_nonprefix = {}
+nick_me_al_hafiz_li_din_allah_nonprefix = {}
+nick_me_al_hakim_bi_amr_allah_nonprefix = {}
+nick_me_al_hamid_lillah_nonprefix = {}
+nick_me_al_mahdi_billah_nonprefix = {}
+nick_me_al_mansur_billah_nonprefix = {}
+nick_me_al_mansur_bi_nasr_allah_nonprefix = {}
+nick_me_al_muayyad_billah_nonprefix = {}
+nick_me_al_mufawwid_ila_llah_nonprefix = {}
+nick_me_al_muhtadi_billah_nonprefix = {}
+nick_me_al_muid_li_din_allah_nonprefix = {}
+nick_me_al_muizz_li_din_allah_nonprefix = {}
+nick_me_al_muktafi_billah_nonprefix = {}
+nick_me_al_muntasir_billah_nonprefix = {}
+nick_me_al_muqtadi_bi_amr_allah_nonprefix = {}
+nick_me_al_muqtadi_billah_nonprefix = {}
+nick_me_al_muqtadir_billah_nonprefix = {}
+nick_me_al_muqtafi_li_amr_allah_nonprefix = {}
+nick_me_al_murtadi_billah_nonprefix = {}
+nick_me_al_mustadi_bi_amr_allah_nonprefix = {}
+nick_me_al_mustafa_li_din_allah_nonprefix = {}
+nick_me_al_mustain_billah_nonprefix = {}
+nick_me_al_mustali_billah_nonprefix = {}
+nick_me_al_mustasim_billah_nonprefix = {}
+nick_me_al_mustadhhir_billah_nonprefix = {}
+nick_me_al_mustazhir_billah_nonprefix = {}
+nick_me_al_mustakfi_billah_nonprefix = {}
+nick_me_al_mustamsik_billah_nonprefix = {}
+nick_me_al_mustanjid_billah_nonprefix = {}
+nick_me_al_mustansir_billah_nonprefix = {}
+nick_me_al_mustarshid_billah_nonprefix = {}
+nick_me_al_mustaqwi_billah_nonprefix = {}
+nick_me_al_mutaali_billah_nonprefix = {}
+nick_me_al_mutaayyid_billah_nonprefix = {}
+nick_me_al_mutadid_billah_nonprefix = {}
+nick_me_al_mutad_billah_nonprefix = {}
+nick_me_al_mutali_billah_nonprefix = {}
+nick_me_al_mutamid_ala_llah_nonprefix = {}
+nick_me_al_mutasim_billah_nonprefix = {}
+nick_me_al_mutawakil_ala_llah_nonprefix = {}
+nick_me_al_mutazz_billah_nonprefix = {}
+nick_me_al_muttaqi_lillah_nonprefix = {}
+nick_me_al_muti_lillah_nonprefix = {}
+nick_me_al_muwaffaq_billah_nonprefix = {}
+nick_me_al_nasir_li_din_allah_nonprefix = {}
+nick_me_al_qadir_billah_nonprefix = {}
+nick_me_al_qahir_billah_nonprefix = {}
+nick_me_al_qahir_biquwa_allah_nonprefix = {}
+nick_me_al_qaim_bi_amr_allah_nonprefix = {}
+nick_me_al_radi_billah_nonprefix = {}
+nick_me_al_rashid_billah_nonprefix = {}
+nick_me_al_sami_billah_nonprefix = {}
+nick_me_al_shakir_lillah_nonprefix = {}
+nick_me_al_tai_lillah_nonprefix = {}
+nick_me_al_tai_li_amr_allah_nonprefix = {}
+nick_me_al_wathiq_billah_nonprefix = {}
+nick_me_al_zahir_bi_amr_allah_nonprefix = {}
+nick_me_al_zahir_li_izaz_din_allah_nonprefix = {}
+nick_me_al_zafir_bi_ada_allah_nonprefix = {}
+nick_me_al_zafir_bi_amr_allah_nonprefix = {}
+
+# Prefixed - Short
+nick_me_al_aali = { is_prefix = yes }
+nick_me_al_adid = { is_prefix = yes }
+nick_me_al_adil = { is_prefix = yes }
+nick_me_al_amin = { is_prefix = yes }
+nick_me_al_amir = { is_prefix = yes }
+nick_me_al_aziz = { is_prefix = yes }
+nick_me_al_dai = { is_prefix = yes }
+nick_me_al_dhafir = { is_prefix = yes }
+nick_me_al_dhahir = { is_prefix = yes }
+nick_me_al_faiz = { is_prefix = yes }
+nick_me_al_hadi = { is_prefix = yes }
+nick_me_al_hafidh = { is_prefix = yes }
+nick_me_al_hafiz = { is_prefix = yes }
+nick_me_al_hakim = { is_prefix = yes }
+nick_me_al_hamid = { is_prefix = yes }
+nick_me_al_mahdi = { is_prefix = yes }
+nick_me_al_mamun = { is_prefix = yes }
+nick_me_al_mansur = { is_prefix = yes }
+nick_me_al_muayyad = { is_prefix = yes }
+nick_me_al_mufawwid = { is_prefix = yes }
+nick_me_al_mukhtar = { is_prefix = yes }
+nick_me_al_mutaali = { is_prefix = yes }
+nick_me_al_mutaayyid = { is_prefix = yes }
+nick_me_al_mutadid = { is_prefix = yes }
+nick_me_al_mutad = { is_prefix = yes }
+nick_me_al_mutali = { is_prefix = yes }
+nick_me_al_mutamid = { is_prefix = yes }
+nick_me_al_mutasim = { is_prefix = yes }
+nick_me_al_mutawakil = { is_prefix = yes }
+nick_me_al_mutazz = { is_prefix = yes }
+nick_me_al_muti = { is_prefix = yes }
+nick_me_al_muttaqi = { is_prefix = yes }
+nick_me_al_muhtadi = { is_prefix = yes }
+nick_me_al_muid = { is_prefix = yes }
+nick_me_al_muizz = { is_prefix = yes }
+nick_me_al_muktafi = { is_prefix = yes }
+nick_me_al_muntakhab = { is_prefix = yes }
+nick_me_al_muntasir = { is_prefix = yes }
+nick_me_al_muqtadi = { is_prefix = yes }
+nick_me_al_muqtadir = { is_prefix = yes }
+nick_me_al_muqtafi = { is_prefix = yes }
+nick_me_al_murtada = { is_prefix = yes }
+nick_me_al_murtadi = { is_prefix = yes }
+nick_me_al_mustadi = { is_prefix = yes }
+nick_me_al_mustafa = { is_prefix = yes }
+nick_me_al_mustain = { is_prefix = yes }
+nick_me_al_mustali = { is_prefix = yes }
+nick_me_al_mustasim = { is_prefix = yes }
+nick_me_al_mustadhhir = { is_prefix = yes }
+nick_me_al_mustazhir = { is_prefix = yes }
+nick_me_al_mustakfi = { is_prefix = yes }
+nick_me_al_mustamsik = { is_prefix = yes }
+nick_me_al_mustanjid = { is_prefix = yes }
+nick_me_al_mustansir = { is_prefix = yes }
+nick_me_al_mustarshid = { is_prefix = yes }
+nick_me_al_mustaqwi = { is_prefix = yes }
+nick_me_al_muwaffaq = { is_prefix = yes }
+nick_me_al_nasir = { is_prefix = yes }
+nick_me_al_qadir = { is_prefix = yes }
+nick_me_al_qahir = { is_prefix = yes }
+nick_me_al_qaim = { is_prefix = yes }
+nick_me_al_radi = { is_prefix = yes }
+nick_me_al_rashid = { is_prefix = yes }
+nick_me_al_rashI_d = { is_prefix = yes }
+nick_me_al_sami = { is_prefix = yes }
+nick_me_al_shakir = { is_prefix = yes }
+nick_me_al_tai = { is_prefix = yes }
+nick_me_al_wathiq = { is_prefix = yes }
+nick_me_al_zafir = { is_prefix = yes }
+nick_me_al_zahir = { is_prefix = yes }
+
+# Non-Prefixed - Short
+nick_me_al_aali_nonprefix = {}
+nick_me_al_adid_nonprefix = {}
+nick_me_al_adil_nonprefix = {}
+nick_me_al_amin_nonprefix = {}
+nick_me_al_amir_nonprefix = {}
+nick_me_al_aziz_nonprefix = {}
+nick_me_al_dai_nonprefix = {}
+nick_me_al_dhafir_nonprefix = {}
+nick_me_al_dhahir_nonprefix = {}
+nick_me_al_faiz_nonprefix = {}
+nick_me_al_hadi_nonprefix = {}
+nick_me_al_hafidh_nonprefix = {}
+nick_me_al_hafiz_nonprefix = {}
+nick_me_al_hakim_nonprefix = {}
+nick_me_al_hamid_nonprefix = {}
+nick_me_al_mahdi_nonprefix = {}
+nick_me_al_mamun_nonprefix = {}
+nick_me_al_mansur_nonprefix = {}
+nick_me_al_muayyad_nonprefix = {}
+nick_me_al_mufawwid_nonprefix = {}
+nick_me_al_mukhtar_nonprefix = {}
+nick_me_al_mutaali_nonprefix = {}
+nick_me_al_mutaayyid_nonprefix = {}
+nick_me_al_mutadid_nonprefix = {}
+nick_me_al_mutad_nonprefix = {}
+nick_me_al_mutali_nonprefix = {}
+nick_me_al_mutamid_nonprefix = {}
+nick_me_al_mutasim_nonprefix = {}
+nick_me_al_mutawakil_nonprefix = {}
+nick_me_al_mutazz_nonprefix = {}
+nick_me_al_muti_nonprefix = {}
+nick_me_al_muttaqi_nonprefix = {}
+nick_me_al_muhtadi_nonprefix = {}
+nick_me_al_muid_nonprefix = {}
+nick_me_al_muizz_nonprefix = {}
+nick_me_al_muktafi_nonprefix = {}
+nick_me_al_muntakhab_nonprefix = {}
+nick_me_al_muntasir_nonprefix = {}
+nick_me_al_muqtadi_nonprefix = {}
+nick_me_al_muqtadir_nonprefix = {}
+nick_me_al_muqtafi_nonprefix = {}
+nick_me_al_murtada_nonprefix = {}
+nick_me_al_murtadi_nonprefix = {}
+nick_me_al_mustadi_nonprefix = {}
+nick_me_al_mustafa_nonprefix = {}
+nick_me_al_mustain_nonprefix = {}
+nick_me_al_mustali_nonprefix = {}
+nick_me_al_mustasim_nonprefix = {}
+nick_me_al_mustadhhir_nonprefix = {}
+nick_me_al_mustazhir_nonprefix = {}
+nick_me_al_mustakfi_nonprefix = {}
+nick_me_al_mustamsik_nonprefix = {}
+nick_me_al_mustanjid_nonprefix = {}
+nick_me_al_mustansir_nonprefix = {}
+nick_me_al_mustarshid_nonprefix = {}
+nick_me_al_mustaqwi_nonprefix = {}
+nick_me_al_muwaffaq_nonprefix = {}
+nick_me_al_nasir_nonprefix = {}
+nick_me_al_qadir_nonprefix = {}
+nick_me_al_qahir_nonprefix = {}
+nick_me_al_qaim_nonprefix = {}
+nick_me_al_radi_nonprefix = {}
+nick_me_al_rashid_nonprefix = {}
+nick_me_al_rashI_d_nonprefix = {}
+nick_me_al_sami_nonprefix = {}
+nick_me_al_shakir_nonprefix = {}
+nick_me_al_tai_nonprefix = {}
+nick_me_al_wathiq_nonprefix = {}
+nick_me_al_zafir_nonprefix = {}
+nick_me_al_zahir_nonprefix = {}
+
+## Islamic Honorifics
+# Prefixed
+nick_adhhar_ud_din = { is_prefix = yes }
+nick_adud_ud_din = { is_prefix = yes }
+nick_ala_ud_din = { is_prefix = yes }
+nick_alam_ud_din = { is_prefix = yes }
+nick_alim_ud_din = { is_prefix = yes }
+nick_amid_ud_din = { is_prefix = yes }
+nick_amin_ud_din = { is_prefix = yes }
+nick_anwar_ud_din = { is_prefix = yes }
+nick_asad_ud_din = { is_prefix = yes }
+nick_awn_ud_din = { is_prefix = yes }
+nick_azhar_ud_din = { is_prefix = yes }
+nick_badr_ud_din = { is_prefix = yes }
+nick_baha_ud_din = { is_prefix = yes }
+nick_burhan_ud_din = { is_prefix = yes }
+nick_dhahir_ud_din = { is_prefix = yes }
+nick_dhakhirat_ud_din = { is_prefix = yes }
+nick_dir_ud_din = { is_prefix = yes }
+nick_fakhr_ud_din = { is_prefix = yes }
+nick_faris_ud_din = { is_prefix = yes }
+nick_ghiyath_ud_din = { is_prefix = yes }
+nick_hami_ud_din = { is_prefix = yes }
+nick_hamid_ud_din = { is_prefix = yes }
+nick_haqq_ud_din = { is_prefix = yes }
+nick_hisn_ud_din = { is_prefix = yes }
+nick_husam_ud_din = { is_prefix = yes }
+nick_iftikhar_ud_din = { is_prefix = yes }
+nick_ikhtiyar_ud_din = { is_prefix = yes }
+nick_imad_ud_din = { is_prefix = yes }
+nick_ismat_ud_din = { is_prefix = yes }
+nick_izz_ud_din = { is_prefix = yes }
+nick_jalal_ud_din = { is_prefix = yes }
+nick_jamal_ud_din = { is_prefix = yes }
+nick_janah_ud_din = { is_prefix = yes }
+nick_kamal_ud_din = { is_prefix = yes }
+nick_kanz_ud_din = { is_prefix = yes }
+nick_khair_ud_din = { is_prefix = yes }
+nick_majd_ud_din = { is_prefix = yes }
+nick_muayyid_ud_din = { is_prefix = yes }
+nick_mubariz_ud_din = { is_prefix = yes }
+nick_muhib_ud_din = { is_prefix = yes }
+nick_muhyi_ad_din = { is_prefix = yes }
+nick_mujir_ud_din = { is_prefix = yes }
+nick_muin_ud_din = { is_prefix = yes }
+nick_muiz_ud_din = { is_prefix = yes }
+nick_murtada_ad_din = { is_prefix = yes }
+nick_mumahhid_ud_din = { is_prefix = yes }
+nick_muslih_ud_din = { is_prefix = yes }
+nick_mutamid_ud_din = { is_prefix = yes }
+nick_mudhaffar_ud_din = { is_prefix = yes }
+nick_muzaffar_ud_din = { is_prefix = yes }
+nick_nadhim_ud_din = { is_prefix = yes }
+nick_nahid_ud_din = { is_prefix = yes }
+nick_najib_ud_din = { is_prefix = yes }
+nick_najm_ud_din = { is_prefix = yes }
+nick_nasir_ud_din = { is_prefix = yes }
+nick_nazim_ud_din = { is_prefix = yes }
+nick_nidham_ud_din = { is_prefix = yes }
+nick_nizam_ud_din = { is_prefix = yes }
+nick_nur_ud_din = { is_prefix = yes }
+nick_qamar_ud_din = { is_prefix = yes }
+nick_qawwam_ud_din = { is_prefix = yes }
+nick_qiwam_ud_din = { is_prefix = yes }
+nick_qutb_ud_din = { is_prefix = yes }
+nick_rafi_ud_din = { is_prefix = yes }
+nick_rashid_ud_din = { is_prefix = yes }
+nick_riyadh_ud_din = { is_prefix = yes }
+nick_riyaz_ud_din = { is_prefix = yes }
+nick_rukn_ud_din = { is_prefix = yes }
+nick_rumh_ud_din = { is_prefix = yes }
+nick_sabr_ud_din = { is_prefix = yes }
+nick_sadr_ud_din = { is_prefix = yes }
+nick_salah_ud_din = { is_prefix = yes }
+nick_sad_ud_din = { is_prefix = yes }
+nick_said_ud_din = { is_prefix = yes }
+nick_sadid_ud_din = { is_prefix = yes }
+nick_safi_ud_din = { is_prefix = yes }
+nick_sahm_ud_din = { is_prefix = yes }
+nick_samsam_ud_din = { is_prefix = yes }
+nick_sayf_ud_din = { is_prefix = yes }
+nick_sharaf_ud_din = { is_prefix = yes }
+nick_shams_ud_din = { is_prefix = yes }
+nick_shibl_ud_din = { is_prefix = yes }
+nick_shihab_ud_din = { is_prefix = yes }
+nick_siraj_ud_din = { is_prefix = yes }
+nick_taj_ud_din = { is_prefix = yes }
+nick_taqi_ud_din = { is_prefix = yes }
+nick_uddat_ud_din = { is_prefix = yes }
+nick_zahir_ud_din = { is_prefix = yes }
+nick_zahr_ud_din = { is_prefix = yes }
+nick_zayn_ud_din = { is_prefix = yes }
+nick_ziya_ud_din = { is_prefix = yes }
+nick_diya_ud_din = { is_prefix = yes }
+nick_alimat_ud_din = { is_prefix = yes }
+nick_amidat_ud_din = { is_prefix = yes }
+nick_aminat_ud_din = { is_prefix = yes }
+nick_dhahirat_ud_din = { is_prefix = yes }
+nick_farisat_ud_din = { is_prefix = yes }
+nick_hamiyat_ud_din = { is_prefix = yes }
+nick_hamidat_ud_din = { is_prefix = yes }
+nick_labuat_ud_din = { is_prefix = yes }
+nick_muayyidat_ud_din = { is_prefix = yes }
+nick_mubarizat_ud_din = { is_prefix = yes }
+nick_muhibat_ud_din = { is_prefix = yes }
+nick_mujirat_ud_din = { is_prefix = yes }
+nick_muinat_ud_din = { is_prefix = yes }
+nick_muizat_ud_din = { is_prefix = yes }
+nick_mumahhidat_ud_din = { is_prefix = yes }
+nick_muslihat_ud_din = { is_prefix = yes }
+nick_mutamidat_ud_din = { is_prefix = yes }
+nick_mudhaffarat_ud_din = { is_prefix = yes }
+nick_muzaffarat_ud_din = { is_prefix = yes }
+nick_nadhimat_ud_din = { is_prefix = yes }
+nick_nahidat_ud_din = { is_prefix = yes }
+nick_najibat_ud_din = { is_prefix = yes }
+nick_najmat_ud_din = { is_prefix = yes }
+nick_nasirat_ud_din = { is_prefix = yes }
+nick_nazimat_ud_din = { is_prefix = yes }
+nick_qawwamat_ud_din = { is_prefix = yes }
+nick_rafiat_ud_din = { is_prefix = yes }
+nick_rashidat_ud_din = { is_prefix = yes }
+nick_saidat_ud_din = { is_prefix = yes }
+nick_sadidat_ud_din = { is_prefix = yes }
+nick_safiyat_ud_din = { is_prefix = yes }
+nick_shiblat_ud_din = { is_prefix = yes }
+nick_taqiyat_ud_din = { is_prefix = yes }
+nick_zahirat_ud_din = { is_prefix = yes }
+nick_zahrat_ud_din = { is_prefix = yes }
+nick_adhhar_ul_islam = { is_prefix = yes }
+nick_adud_ul_islam = { is_prefix = yes }
+nick_ala_ul_islam = { is_prefix = yes }
+nick_alam_ul_islam = { is_prefix = yes }
+nick_alim_ul_islam = { is_prefix = yes }
+nick_amid_ul_islam = { is_prefix = yes }
+nick_amin_ul_islam = { is_prefix = yes }
+nick_anwar_ul_islam = { is_prefix = yes }
+nick_asad_ul_islam = { is_prefix = yes }
+nick_awn_ul_islam = { is_prefix = yes }
+nick_azhar_ul_islam = { is_prefix = yes }
+nick_badr_ul_islam = { is_prefix = yes }
+nick_baha_ul_islam = { is_prefix = yes }
+nick_burhan_ul_islam = { is_prefix = yes }
+nick_dhahir_ul_islam = { is_prefix = yes }
+nick_dhakhirat_ul_islam = { is_prefix = yes }
+nick_dir_ul_islam = { is_prefix = yes }
+nick_fakhr_ul_islam = { is_prefix = yes }
+nick_faris_ul_islam = { is_prefix = yes }
+nick_ghiyath_ul_islam = { is_prefix = yes }
+nick_hami_ul_islam = { is_prefix = yes }
+nick_hamid_ul_islam = { is_prefix = yes }
+nick_haqq_ul_islam = { is_prefix = yes }
+nick_hisn_ul_islam = { is_prefix = yes }
+nick_husam_ul_islam = { is_prefix = yes }
+nick_iftikhar_ul_islam = { is_prefix = yes }
+nick_ikhtiyar_ul_islam = { is_prefix = yes }
+nick_imad_ul_islam = { is_prefix = yes }
+nick_ismat_ul_islam = { is_prefix = yes }
+nick_izz_ul_islam = { is_prefix = yes }
+nick_jalal_ul_islam = { is_prefix = yes }
+nick_jamal_ul_islam = { is_prefix = yes }
+nick_janah_ul_islam = { is_prefix = yes }
+nick_kamal_ul_islam = { is_prefix = yes }
+nick_kanz_ul_islam = { is_prefix = yes }
+nick_khair_ul_islam = { is_prefix = yes }
+nick_majd_ul_islam = { is_prefix = yes }
+nick_muayyid_ul_islam = { is_prefix = yes }
+nick_mubariz_ul_islam = { is_prefix = yes }
+nick_muhib_ul_islam = { is_prefix = yes }
+nick_muhyi_al_islam = { is_prefix = yes }
+nick_mujir_ul_islam = { is_prefix = yes }
+nick_muin_ul_islam = { is_prefix = yes }
+nick_muiz_ul_islam = { is_prefix = yes }
+nick_murtada_al_islam = { is_prefix = yes }
+nick_mumahhid_ul_islam = { is_prefix = yes }
+nick_muslih_ul_islam = { is_prefix = yes }
+nick_mutamid_ul_islam = { is_prefix = yes }
+nick_mudhaffar_ul_islam = { is_prefix = yes }
+nick_muzaffar_ul_islam = { is_prefix = yes }
+nick_nadhim_ul_islam = { is_prefix = yes }
+nick_nahid_ul_islam = { is_prefix = yes }
+nick_najib_ul_islam = { is_prefix = yes }
+nick_najm_ul_islam = { is_prefix = yes }
+nick_nasir_ul_islam = { is_prefix = yes }
+nick_nazim_ul_islam = { is_prefix = yes }
+nick_nidham_ul_islam = { is_prefix = yes }
+nick_nizam_ul_islam = { is_prefix = yes }
+nick_nur_ul_islam = { is_prefix = yes }
+nick_qamar_ul_islam = { is_prefix = yes }
+nick_qawwam_ul_islam = { is_prefix = yes }
+nick_qiwam_ul_islam = { is_prefix = yes }
+nick_qutb_ul_islam = { is_prefix = yes }
+nick_rafi_ul_islam = { is_prefix = yes }
+nick_rashid_ul_islam = { is_prefix = yes }
+nick_riyadh_ul_islam = { is_prefix = yes }
+nick_riyaz_ul_islam = { is_prefix = yes }
+nick_rukn_ul_islam = { is_prefix = yes }
+nick_rumh_ul_islam = { is_prefix = yes }
+nick_sabr_ul_islam = { is_prefix = yes }
+nick_sadr_ul_islam = { is_prefix = yes }
+nick_salah_ul_islam = { is_prefix = yes }
+nick_sad_ul_islam = { is_prefix = yes }
+nick_said_ul_islam = { is_prefix = yes }
+nick_sadid_ul_islam = { is_prefix = yes }
+nick_sahm_ul_islam = { is_prefix = yes }
+nick_samsam_ul_islam = { is_prefix = yes }
+nick_sayf_ul_islam = { is_prefix = yes }
+nick_sharaf_ul_islam = { is_prefix = yes }
+nick_shams_ul_islam = { is_prefix = yes }
+nick_shibl_ul_islam = { is_prefix = yes }
+nick_shihab_ul_islam = { is_prefix = yes }
+nick_siraj_ul_islam = { is_prefix = yes }
+nick_taj_ul_islam = { is_prefix = yes }
+nick_taqi_ul_islam = { is_prefix = yes }
+nick_uddat_ul_islam = { is_prefix = yes }
+nick_zahir_ul_islam = { is_prefix = yes }
+nick_zahr_ul_islam = { is_prefix = yes }
+nick_zayn_ul_islam = { is_prefix = yes }
+nick_ziya_ul_islam = { is_prefix = yes }
+nick_diya_ul_islam = { is_prefix = yes }
+nick_alimat_ul_islam = { is_prefix = yes }
+nick_amidat_ul_islam = { is_prefix = yes }
+nick_aminat_ul_islam = { is_prefix = yes }
+nick_dhahirat_ul_islam = { is_prefix = yes }
+nick_farisat_ul_islam = { is_prefix = yes }
+nick_hamiyat_ul_islam = { is_prefix = yes }
+nick_hamidat_ul_islam = { is_prefix = yes }
+nick_labuat_ul_islam = { is_prefix = yes }
+nick_muayyidat_ul_islam = { is_prefix = yes }
+nick_mubarizat_ul_islam = { is_prefix = yes }
+nick_muhibat_ul_islam = { is_prefix = yes }
+nick_mujirat_ul_islam = { is_prefix = yes }
+nick_muinat_ul_islam = { is_prefix = yes }
+nick_muizat_ul_islam = { is_prefix = yes }
+nick_mumahhidat_ul_islam = { is_prefix = yes }
+nick_muslihat_ul_islam = { is_prefix = yes }
+nick_mutamidat_ul_islam = { is_prefix = yes }
+nick_mudhaffarat_ul_islam = { is_prefix = yes }
+nick_muzaffarat_ul_islam = { is_prefix = yes }
+nick_nadhimat_ul_islam = { is_prefix = yes }
+nick_nahidat_ul_islam = { is_prefix = yes }
+nick_najibat_ul_islam = { is_prefix = yes }
+nick_najmat_ul_islam = { is_prefix = yes }
+nick_nasirat_ul_islam = { is_prefix = yes }
+nick_nazimat_ul_islam = { is_prefix = yes }
+nick_qawwamat_ul_islam = { is_prefix = yes }
+nick_rafiat_ul_islam = { is_prefix = yes }
+nick_rashidat_ul_islam = { is_prefix = yes }
+nick_saidat_ul_islam = { is_prefix = yes }
+nick_sadidat_ul_islam = { is_prefix = yes }
+nick_shiblat_ul_islam = { is_prefix = yes }
+nick_taqiyat_ul_islam = { is_prefix = yes }
+nick_zahirat_ul_islam = { is_prefix = yes }
+nick_zahrat_ul_islam = { is_prefix = yes }
+nick_adud_ud_dawlah = { is_prefix = yes }
+nick_ala_ud_dawlah = { is_prefix = yes }
+nick_alam_ud_dawlah = { is_prefix = yes }
+nick_alim_ud_dawlah = { is_prefix = yes }
+nick_amid_ud_dawlah = { is_prefix = yes }
+nick_amin_ud_dawlah = { is_prefix = yes }
+nick_anwar_ud_dawlah = { is_prefix = yes }
+nick_asad_ud_dawlah = { is_prefix = yes }
+nick_awn_ud_dawlah = { is_prefix = yes }
+nick_badr_ud_dawlah = { is_prefix = yes }
+nick_baha_ud_dawlah = { is_prefix = yes }
+nick_burhan_ud_dawlah = { is_prefix = yes }
+nick_dhahir_ud_dawlah = { is_prefix = yes }
+nick_dhakhirat_ud_dawlah = { is_prefix = yes }
+nick_dir_ud_dawlah = { is_prefix = yes }
+nick_fakhr_ud_dawlah = { is_prefix = yes }
+nick_faris_ud_dawlah = { is_prefix = yes }
+nick_ghiyath_ud_dawlah = { is_prefix = yes }
+nick_hami_ud_dawlah = { is_prefix = yes }
+nick_hamid_ud_dawlah = { is_prefix = yes }
+nick_haqq_ud_dawlah = { is_prefix = yes }
+nick_hisn_ud_dawlah = { is_prefix = yes }
+nick_husam_ud_dawlah = { is_prefix = yes }
+nick_iftikhar_ud_dawlah = { is_prefix = yes }
+nick_ikhtiyar_ud_dawlah = { is_prefix = yes }
+nick_imad_ud_dawlah = { is_prefix = yes }
+nick_ismat_ud_dawlah = { is_prefix = yes }
+nick_itimad_ud_dawlah = { is_prefix = yes }
+nick_izz_ud_dawlah = { is_prefix = yes }
+nick_jalal_ud_dawlah = { is_prefix = yes }
+nick_jamal_ud_dawlah = { is_prefix = yes }
+nick_janah_ud_dawlah = { is_prefix = yes }
+nick_kamal_ud_dawlah = { is_prefix = yes }
+nick_kanz_ud_dawlah = { is_prefix = yes }
+nick_khair_ud_dawlah = { is_prefix = yes }
+nick_majd_ud_dawlah = { is_prefix = yes }
+nick_muayyid_ud_dawlah = { is_prefix = yes }
+nick_mubariz_ud_dawlah = { is_prefix = yes }
+nick_muhib_ud_dawlah = { is_prefix = yes }
+nick_muhyi_ad_dawlah = { is_prefix = yes }
+nick_mujir_ud_dawlah = { is_prefix = yes }
+nick_muin_ud_dawlah = { is_prefix = yes }
+nick_muiz_ud_dawlah = { is_prefix = yes }
+nick_murtada_ad_dawlah = { is_prefix = yes }
+nick_musharif_ud_dawlah = { is_prefix = yes }
+nick_mumahhid_ud_dawlah = { is_prefix = yes }
+nick_muslih_ud_dawlah = { is_prefix = yes }
+nick_mutamid_ud_dawlah = { is_prefix = yes }
+nick_mudhaffar_ud_dawlah = { is_prefix = yes }
+nick_muzaffar_ud_dawlah = { is_prefix = yes }
+nick_nadhim_ud_dawlah = { is_prefix = yes }
+nick_nahid_ud_dawlah = { is_prefix = yes }
+nick_najib_ud_dawlah = { is_prefix = yes }
+nick_najm_ud_dawlah = { is_prefix = yes }
+nick_nasir_ud_dawlah = { is_prefix = yes }
+nick_nazim_ud_dawlah = { is_prefix = yes }
+nick_nidham_ud_dawlah = { is_prefix = yes }
+nick_nizam_ud_dawlah = { is_prefix = yes }
+nick_nur_ud_dawlah = { is_prefix = yes }
+nick_qamar_ud_dawlah = { is_prefix = yes }
+nick_qawwam_ud_dawlah = { is_prefix = yes }
+nick_qiwam_ud_dawlah = { is_prefix = yes }
+nick_qutb_ud_dawlah = { is_prefix = yes }
+nick_rafi_ud_dawlah = { is_prefix = yes }
+nick_rashid_ud_dawlah = { is_prefix = yes }
+nick_riyadh_ud_dawlah = { is_prefix = yes }
+nick_riyaz_ud_dawlah = { is_prefix = yes }
+nick_rukn_ud_dawlah = { is_prefix = yes }
+nick_rumh_ud_dawlah = { is_prefix = yes }
+nick_sabr_ud_dawlah = { is_prefix = yes }
+nick_sadr_ud_dawlah = { is_prefix = yes }
+nick_salah_ud_dawlah = { is_prefix = yes }
+nick_sad_ud_dawlah = { is_prefix = yes }
+nick_said_ud_dawlah = { is_prefix = yes }
+nick_sadid_ud_dawlah = { is_prefix = yes }
+nick_sahm_ud_dawlah = { is_prefix = yes }
+nick_sanad_ud_dawlah = { is_prefix = yes }
+nick_sama_ud_dawlah = { is_prefix = yes }
+nick_samsam_ud_dawlah = { is_prefix = yes }
+nick_sayf_ud_dawlah = { is_prefix = yes }
+nick_sayyid_ud_dawlah = { is_prefix = yes }
+nick_sharaf_ud_dawlah = { is_prefix = yes }
+nick_shams_ud_dawlah = { is_prefix = yes }
+nick_shibl_ud_dawlah = { is_prefix = yes }
+nick_shihab_ud_dawlah = { is_prefix = yes }
+nick_siraj_ud_dawlah = { is_prefix = yes }
+nick_sultan_ud_dawlah = { is_prefix = yes }
+nick_taj_ud_dawlah = { is_prefix = yes }
+nick_thiqat_ud_dawlah = { is_prefix = yes }
+nick_taqi_ud_dawlah = { is_prefix = yes }
+nick_uddat_ud_dawlah = { is_prefix = yes }
+nick_wali_ud_dawlah = { is_prefix = yes }
+nick_yamin_ud_dawlah = { is_prefix = yes }
+nick_yumn_ud_dawlah = { is_prefix = yes }
+nick_zaim_ud_dawlah = { is_prefix = yes }
+nick_zahir_ud_dawlah = { is_prefix = yes }
+nick_zahr_ud_dawlah = { is_prefix = yes }
+nick_zayn_ud_dawlah = { is_prefix = yes }
+nick_ziya_ud_dawlah = { is_prefix = yes }
+nick_diya_ud_dawlah = { is_prefix = yes }
+nick_alimat_ud_dawlah = { is_prefix = yes }
+nick_amidat_ud_dawlah = { is_prefix = yes }
+nick_aminat_ud_dawlah = { is_prefix = yes }
+nick_dhahirat_ud_dawlah = { is_prefix = yes }
+nick_farisat_ud_dawlah = { is_prefix = yes }
+nick_hamiyat_ud_dawlah = { is_prefix = yes }
+nick_hamidat_ud_dawlah = { is_prefix = yes }
+nick_labuat_ud_dawlah = { is_prefix = yes }
+nick_muayyidat_ud_dawlah = { is_prefix = yes }
+nick_mubarizat_ud_dawlah = { is_prefix = yes }
+nick_muhibat_ud_dawlah = { is_prefix = yes }
+nick_mujirat_ud_dawlah = { is_prefix = yes }
+nick_muinat_ud_dawlah = { is_prefix = yes }
+nick_muizat_ud_dawlah = { is_prefix = yes }
+nick_mumahhidat_ud_dawlah = { is_prefix = yes }
+nick_musharrifat_ud_dawlah = { is_prefix = yes }
+nick_muslihat_ud_dawlah = { is_prefix = yes }
+nick_mutamidat_ud_dawlah = { is_prefix = yes }
+nick_mudhaffarat_ud_dawlah = { is_prefix = yes }
+nick_muzaffarat_ud_dawlah = { is_prefix = yes }
+nick_nadhimat_ud_dawlah = { is_prefix = yes }
+nick_nahidat_ud_dawlah = { is_prefix = yes }
+nick_najibat_ud_dawlah = { is_prefix = yes }
+nick_najmat_ud_dawlah = { is_prefix = yes }
+nick_nasirat_ud_dawlah = { is_prefix = yes }
+nick_nazimat_ud_dawlah = { is_prefix = yes }
+nick_qawwamat_ud_dawlah = { is_prefix = yes }
+nick_rafiat_ud_dawlah = { is_prefix = yes }
+nick_rashidat_ud_dawlah = { is_prefix = yes }
+nick_saidat_ud_dawlah = { is_prefix = yes }
+nick_sadidat_ud_dawlah = { is_prefix = yes }
+nick_sayyidat_ud_dawlah = { is_prefix = yes }
+nick_shiblat_ud_dawlah = { is_prefix = yes }
+nick_sultanat_ud_dawlah = { is_prefix = yes }
+nick_waliyat_ud_dawlah = { is_prefix = yes }
+nick_zahirat_ud_dawlah = { is_prefix = yes }
+nick_zahrat_ud_dawlah = { is_prefix = yes }
+nick_zaimat_ud_dawlah = { is_prefix = yes }
+nick_adud_ul_mulk = { is_prefix = yes }
+nick_ala_ul_mulk = { is_prefix = yes }
+nick_alam_ul_mulk = { is_prefix = yes }
+nick_alim_ul_mulk = { is_prefix = yes }
+nick_amid_ul_mulk = { is_prefix = yes }
+nick_amin_ul_mulk = { is_prefix = yes }
+nick_anwar_ul_mulk = { is_prefix = yes }
+nick_asad_ul_mulk = { is_prefix = yes }
+nick_awn_ul_mulk = { is_prefix = yes }
+nick_badr_ul_mulk = { is_prefix = yes }
+nick_baha_ul_mulk = { is_prefix = yes }
+nick_burhan_ul_mulk = { is_prefix = yes }
+nick_dhahir_ul_mulk = { is_prefix = yes }
+nick_dhakhirat_ul_mulk = { is_prefix = yes }
+nick_dir_ul_mulk = { is_prefix = yes }
+nick_fakhr_ul_mulk = { is_prefix = yes }
+nick_faris_ul_mulk = { is_prefix = yes }
+nick_ghiyath_ul_mulk = { is_prefix = yes }
+nick_hami_ul_mulk = { is_prefix = yes }
+nick_hamid_ul_mulk = { is_prefix = yes }
+nick_haqq_ul_mulk = { is_prefix = yes }
+nick_hisn_ul_mulk = { is_prefix = yes }
+nick_husam_ul_mulk = { is_prefix = yes }
+nick_iftikhar_ul_mulk = { is_prefix = yes }
+nick_ikhtiyar_ul_mulk = { is_prefix = yes }
+nick_imad_ul_mulk = { is_prefix = yes }
+nick_ismat_ul_mulk = { is_prefix = yes }
+nick_itimad_ul_mulk = { is_prefix = yes }
+nick_izz_ul_mulk = { is_prefix = yes }
+nick_jalal_ul_mulk = { is_prefix = yes }
+nick_jamal_ul_mulk = { is_prefix = yes }
+nick_janah_ul_mulk = { is_prefix = yes }
+nick_kamal_ul_mulk = { is_prefix = yes }
+nick_kanz_ul_mulk = { is_prefix = yes }
+nick_khair_ul_mulk = { is_prefix = yes }
+nick_majd_ul_mulk = { is_prefix = yes }
+nick_muayyid_ul_mulk = { is_prefix = yes }
+nick_mubariz_ul_mulk = { is_prefix = yes }
+nick_muhib_ul_mulk = { is_prefix = yes }
+nick_muhyi_al_mulk = { is_prefix = yes }
+nick_mujir_ul_mulk = { is_prefix = yes }
+nick_muin_ul_mulk = { is_prefix = yes }
+nick_muiz_ul_mulk = { is_prefix = yes }
+nick_murtada_al_mulk = { is_prefix = yes }
+nick_musharif_ul_mulk = { is_prefix = yes }
+nick_mumahhid_ul_mulk = { is_prefix = yes }
+nick_muslih_ul_mulk = { is_prefix = yes }
+nick_mutamid_ul_mulk = { is_prefix = yes }
+nick_mudhaffar_ul_mulk = { is_prefix = yes }
+nick_muzaffar_ul_mulk = { is_prefix = yes }
+nick_nadhim_ul_mulk = { is_prefix = yes }
+nick_nahid_ul_mulk = { is_prefix = yes }
+nick_najib_ul_mulk = { is_prefix = yes }
+nick_najm_ul_mulk = { is_prefix = yes }
+nick_nasir_ul_mulk = { is_prefix = yes }
+nick_nazim_ul_mulk = { is_prefix = yes }
+nick_nidham_ul_mulk = { is_prefix = yes }
+nick_nizam_ul_mulk = { is_prefix = yes }
+nick_nur_ul_mulk = { is_prefix = yes }
+nick_qamar_ul_mulk = { is_prefix = yes }
+nick_qawwam_ul_mulk = { is_prefix = yes }
+nick_qiwam_ul_mulk = { is_prefix = yes }
+nick_qutb_ul_mulk = { is_prefix = yes }
+nick_rafi_ul_mulk = { is_prefix = yes }
+nick_rashid_ul_mulk = { is_prefix = yes }
+nick_riyadh_ul_mulk = { is_prefix = yes }
+nick_riyaz_ul_mulk = { is_prefix = yes }
+nick_rukn_ul_mulk = { is_prefix = yes }
+nick_rumh_ul_mulk = { is_prefix = yes }
+nick_sabr_ul_mulk = { is_prefix = yes }
+nick_sadr_ul_mulk = { is_prefix = yes }
+nick_salah_ul_mulk = { is_prefix = yes }
+nick_sad_ul_mulk = { is_prefix = yes }
+nick_said_ul_mulk = { is_prefix = yes }
+nick_sadid_ul_mulk = { is_prefix = yes }
+nick_sahm_ul_mulk = { is_prefix = yes }
+nick_sanad_ul_mulk = { is_prefix = yes }
+nick_sama_ul_mulk = { is_prefix = yes }
+nick_samsam_ul_mulk = { is_prefix = yes }
+nick_sayf_ul_mulk = { is_prefix = yes }
+nick_sayyid_ul_mulk = { is_prefix = yes }
+nick_sharaf_ul_mulk = { is_prefix = yes }
+nick_shams_ul_mulk = { is_prefix = yes }
+nick_shibl_ul_mulk = { is_prefix = yes }
+nick_shihab_ul_mulk = { is_prefix = yes }
+nick_siraj_ul_mulk = { is_prefix = yes }
+nick_sultan_ul_mulk = { is_prefix = yes }
+nick_taj_ul_mulk = { is_prefix = yes }
+nick_thiqat_ul_mulk = { is_prefix = yes }
+nick_taqi_ul_mulk = { is_prefix = yes }
+nick_uddat_ul_mulk = { is_prefix = yes }
+nick_wali_ul_mulk = { is_prefix = yes }
+nick_yamin_ul_mulk = { is_prefix = yes }
+nick_yumn_ul_mulk = { is_prefix = yes }
+nick_zaim_ul_mulk = { is_prefix = yes }
+nick_zahir_ul_mulk = { is_prefix = yes }
+nick_zahr_ul_mulk = { is_prefix = yes }
+nick_zayn_ul_mulk = { is_prefix = yes }
+nick_ziya_ul_mulk = { is_prefix = yes }
+nick_diya_ul_mulk = { is_prefix = yes }
+nick_alimat_ul_mulk = { is_prefix = yes }
+nick_amidat_ul_mulk = { is_prefix = yes }
+nick_aminat_ul_mulk = { is_prefix = yes }
+nick_dhahirat_ul_mulk = { is_prefix = yes }
+nick_farisat_ul_mulk = { is_prefix = yes }
+nick_hamiyat_ul_mulk = { is_prefix = yes }
+nick_hamidat_ul_mulk = { is_prefix = yes }
+nick_labuat_ul_mulk = { is_prefix = yes }
+nick_muayyidat_ul_mulk = { is_prefix = yes }
+nick_mubarizat_ul_mulk = { is_prefix = yes }
+nick_muhibat_ul_mulk = { is_prefix = yes }
+nick_mujirat_ul_mulk = { is_prefix = yes }
+nick_muinat_ul_mulk = { is_prefix = yes }
+nick_muizat_ul_mulk = { is_prefix = yes }
+nick_mumahhidat_ul_mulk = { is_prefix = yes }
+nick_musharrifat_ul_mulk = { is_prefix = yes }
+nick_muslihat_ul_mulk = { is_prefix = yes }
+nick_mutamidat_ul_mulk = { is_prefix = yes }
+nick_mudhaffarat_ul_mulk = { is_prefix = yes }
+nick_muzaffarat_ul_mulk = { is_prefix = yes }
+nick_nadhimat_ul_mulk = { is_prefix = yes }
+nick_nahidat_ul_mulk = { is_prefix = yes }
+nick_najibat_ul_mulk = { is_prefix = yes }
+nick_najmat_ul_mulk = { is_prefix = yes }
+nick_nasirat_ul_mulk = { is_prefix = yes }
+nick_nazimat_ul_mulk = { is_prefix = yes }
+nick_qawwamat_ul_mulk = { is_prefix = yes }
+nick_rafiat_ul_mulk = { is_prefix = yes }
+nick_rashidat_ul_mulk = { is_prefix = yes }
+nick_saidat_ul_mulk = { is_prefix = yes }
+nick_sadidat_ul_mulk = { is_prefix = yes }
+nick_sayyidat_ul_mulk = { is_prefix = yes }
+nick_shiblat_ul_mulk = { is_prefix = yes }
+nick_sultanat_ul_mulk = { is_prefix = yes }
+nick_waliyat_ul_mulk = { is_prefix = yes }
+nick_zahirat_ul_mulk = { is_prefix = yes }
+nick_zahrat_ul_mulk = { is_prefix = yes }
+nick_zaimat_ul_mulk = { is_prefix = yes }
+
+# Non-Prefixed
+nick_adhhar_ud_din_nonprefix = {}
+nick_adud_ud_din_nonprefix = {}
+nick_ala_ud_din_nonprefix = {}
+nick_alam_ud_din_nonprefix = {}
+nick_alim_ud_din_nonprefix = {}
+nick_amid_ud_din_nonprefix = {}
+nick_amin_ud_din_nonprefix = {}
+nick_anwar_ud_din_nonprefix = {}
+nick_asad_ud_din_nonprefix = {}
+nick_awn_ud_din_nonprefix = {}
+nick_azhar_ud_din_nonprefix = {}
+nick_badr_ud_din_nonprefix = {}
+nick_baha_ud_din_nonprefix = {}
+nick_burhan_ud_din_nonprefix = {}
+nick_dhahir_ud_din_nonprefix = {}
+nick_dhakhirat_ud_din_nonprefix = {}
+nick_dir_ud_din_nonprefix = {}
+nick_fakhr_ud_din_nonprefix = {}
+nick_faris_ud_din_nonprefix = {}
+nick_ghiyath_ud_din_nonprefix = {}
+nick_hami_ud_din_nonprefix = {}
+nick_hamid_ud_din_nonprefix = {}
+nick_haqq_ud_din_nonprefix = {}
+nick_hisn_ud_din_nonprefix = {}
+nick_husam_ud_din_nonprefix = {}
+nick_iftikhar_ud_din_nonprefix = {}
+nick_ikhtiyar_ud_din_nonprefix = {}
+nick_imad_ud_din_nonprefix = {}
+nick_ismat_ud_din_nonprefix = {}
+nick_izz_ud_din_nonprefix = {}
+nick_jalal_ud_din_nonprefix = {}
+nick_jamal_ud_din_nonprefix = {}
+nick_janah_ud_din_nonprefix = {}
+nick_kamal_ud_din_nonprefix = {}
+nick_kanz_ud_din_nonprefix = {}
+nick_khair_ud_din_nonprefix = {}
+nick_majd_ud_din_nonprefix = {}
+nick_muayyid_ud_din_nonprefix = {}
+nick_mubariz_ud_din_nonprefix = {}
+nick_muhib_ud_din_nonprefix = {}
+nick_muhyi_ad_din_nonprefix = {}
+nick_mujir_ud_din_nonprefix = {}
+nick_mu_in_ud_din_nonprefix = {} # Set to mu_in instead of muin to avoid hash collision
+nick_muiz_ud_din_nonprefix = {}
+nick_murtada_ad_din_nonprefix = {}
+nick_mumahhid_ud_din_nonprefix = {}
+nick_muslih_ud_din_nonprefix = {}
+nick_mutamid_ud_din_nonprefix = {}
+nick_mudhaffar_ud_din_nonprefix = {}
+nick_muzaffar_ud_din_nonprefix = {}
+nick_nadhim_ud_din_nonprefix = {}
+nick_nahid_ud_din_nonprefix = {}
+nick_najib_ud_din_nonprefix = {}
+nick_najm_ud_din_nonprefix = {}
+nick_nasir_ud_din_nonprefix = {}
+nick_nazim_ud_din_nonprefix = {}
+nick_nidham_ud_din_nonprefix = {}
+nick_nizam_ud_din_nonprefix = {}
+nick_nur_ud_din_nonprefix = {}
+nick_qamar_ud_din_nonprefix = {}
+nick_qawwam_ud_din_nonprefix = {}
+nick_qiwam_ud_din_nonprefix = {}
+nick_qutb_ud_din_nonprefix = {}
+nick_rafi_ud_din_nonprefix = {}
+nick_rashid_ud_din_nonprefix = {}
+nick_riyadh_ud_din_nonprefix = {}
+nick_riyaz_ud_din_nonprefix = {}
+nick_rukn_ud_din_nonprefix = {}
+nick_rumh_ud_din_nonprefix = {}
+nick_sabr_ud_din_nonprefix = {}
+nick_sadr_ud_din_nonprefix = {}
+nick_salah_ud_din_nonprefix = {}
+nick_sad_ud_din_nonprefix = {}
+nick_said_ud_din_nonprefix = {}
+nick_sadid_ud_din_nonprefix = {}
+nick_safi_ud_din_nonprefix = {}
+nick_sahm_ud_din_nonprefix = {}
+nick_samsam_ud_din_nonprefix = {}
+nick_sayf_ud_din_nonprefix = {}
+nick_sharaf_ud_din_nonprefix = {}
+nick_shams_ud_din_nonprefix = {}
+nick_shibl_ud_din_nonprefix = {}
+nick_shihab_ud_din_nonprefix = {}
+nick_siraj_ud_din_nonprefix = {}
+nick_taj_ud_din_nonprefix = {}
+nick_taqi_ud_din_nonprefix = {}
+nick_uddat_ud_din_nonprefix = {}
+nick_zahir_ud_din_nonprefix = {}
+nick_zahr_ud_din_nonprefix = {}
+nick_zayn_ud_din_nonprefix = {}
+nick_ziya_ud_din_nonprefix = {}
+nick_diya_ud_din_nonprefix = {}
+nick_alimat_ud_din_nonprefix = {}
+nick_amidat_ud_din_nonprefix = {}
+nick_aminat_ud_din_nonprefix = {}
+nick_dhahirat_ud_din_nonprefix = {}
+nick_farisat_ud_din_nonprefix = {}
+nick_hamiyat_ud_din_nonprefix = {}
+nick_hamidat_ud_din_nonprefix = {}
+nick_labuat_ud_din_nonprefix = {}
+nick_muayyidat_ud_din_nonprefix = {}
+nick_mubarizat_ud_din_nonprefix = {}
+nick_muhibat_ud_din_nonprefix = {}
+nick_mujirat_ud_din_nonprefix = {}
+nick_muinat_ud_din_nonprefix = {}
+nick_muizat_ud_din_nonprefix = {}
+nick_mumahhidat_ud_din_nonprefix = {}
+nick_muslihat_ud_din_nonprefix = {}
+nick_mutamidat_ud_din_nonprefix = {}
+nick_mudhaffarat_ud_din_nonprefix = {}
+nick_muzaffarat_ud_din_nonprefix = {}
+nick_nadhimat_ud_din_nonprefix = {}
+nick_nahidat_ud_din_nonprefix = {}
+nick_najibat_ud_din_nonprefix = {}
+nick_najmat_ud_din_nonprefix = {}
+nick_nasirat_ud_din_nonprefix = {}
+nick_nazimat_ud_din_nonprefix = {}
+nick_qawwamat_ud_din_nonprefix = {}
+nick_rafiat_ud_din_nonprefix = {}
+nick_rashidat_ud_din_nonprefix = {}
+nick_saidat_ud_din_nonprefix = {}
+nick_sadidat_ud_din_nonprefix = {}
+nick_safiyat_ud_din_nonprefix = {}
+nick_shiblat_ud_din_nonprefix = {}
+nick_taqiyat_ud_din_nonprefix = {}
+nick_zahirat_ud_din_nonprefix = {}
+nick_zahrat_ud_din_nonprefix = {}
+nick_adhhar_ul_islam_nonprefix = {}
+nick_adud_ul_islam_nonprefix = {}
+nick_ala_ul_islam_nonprefix = {}
+nick_alam_ul_islam_nonprefix = {}
+nick_alim_ul_islam_nonprefix = {}
+nick_amid_ul_islam_nonprefix = {}
+nick_amin_ul_islam_nonprefix = {}
+nick_anwar_ul_islam_nonprefix = {}
+nick_asad_ul_islam_nonprefix = {}
+nick_awn_ul_islam_nonprefix = {}
+nick_azhar_ul_islam_nonprefix = {}
+nick_badr_ul_islam_nonprefix = {}
+nick_baha_ul_islam_nonprefix = {}
+nick_burhan_ul_islam_nonprefix = {}
+nick_dhahir_ul_islam_nonprefix = {}
+nick_dhakhirat_ul_islam_nonprefix = {}
+nick_dir_ul_islam_nonprefix = {}
+nick_fakhr_ul_islam_nonprefix = {}
+nick_faris_ul_islam_nonprefix = {}
+nick_ghiyath_ul_islam_nonprefix = {}
+nick_hami_ul_islam_nonprefix = {}
+nick_hamid_ul_islam_nonprefix = {}
+nick_haqq_ul_islam_nonprefix = {}
+nick_hisn_ul_islam_nonprefix = {}
+nick_husam_ul_islam_nonprefix = {}
+nick_iftikhar_ul_islam_nonprefix = {}
+nick_ikhtiyar_ul_islam_nonprefix = {}
+nick_imad_ul_islam_nonprefix = {}
+nick_ismat_ul_islam_nonprefix = {}
+nick_izz_ul_islam_nonprefix = {}
+nick_jalal_ul_islam_nonprefix = {}
+nick_jamal_ul_islam_nonprefix = {}
+nick_janah_ul_islam_nonprefix = {}
+nick_kamal_ul_islam_nonprefix = {}
+nick_kanz_ul_islam_nonprefix = {}
+nick_khair_ul_islam_nonprefix = {}
+nick_majd_ul_islam_nonprefix = {}
+nick_muayyid_ul_islam_nonprefix = {}
+nick_mubariz_ul_islam_nonprefix = {}
+nick_muhib_ul_islam_nonprefix = {}
+nick_muhyi_al_islam_nonprefix = {}
+nick_mujir_ul_islam_nonprefix = {}
+nick_muin_ul_islam_nonprefix = {}
+nick_muiz_ul_islam_nonprefix = {}
+nick_murtada_al_islam_nonprefix = {}
+nick_mumahhid_ul_islam_nonprefix = {}
+nick_muslih_ul_islam_nonprefix = {}
+nick_mutamid_ul_islam_nonprefix = {}
+nick_mudhaffar_ul_islam_nonprefix = {}
+nick_muzaffar_ul_islam_nonprefix = {}
+nick_nadhim_ul_islam_nonprefix = {}
+nick_nahid_ul_islam_nonprefix = {}
+nick_najib_ul_islam_nonprefix = {}
+nick_najm_ul_islam_nonprefix = {}
+nick_nasir_ul_islam_nonprefix = {}
+nick_nazim_ul_islam_nonprefix = {}
+nick_nidham_ul_islam_nonprefix = {}
+nick_nizam_ul_islam_nonprefix = {}
+nick_nur_ul_islam_nonprefix = {}
+nick_qamar_ul_islam_nonprefix = {}
+nick_qawwam_ul_islam_nonprefix = {}
+nick_qiwam_ul_islam_nonprefix = {}
+nick_qutb_ul_islam_nonprefix = {}
+nick_rafi_ul_islam_nonprefix = {}
+nick_rashid_ul_islam_nonprefix = {}
+nick_riyadh_ul_islam_nonprefix = {}
+nick_riyaz_ul_islam_nonprefix = {}
+nick_rukn_ul_islam_nonprefix = {}
+nick_rumh_ul_islam_nonprefix = {}
+nick_sabr_ul_islam_nonprefix = {}
+nick_sadr_ul_islam_nonprefix = {}
+nick_salah_ul_islam_nonprefix = {}
+nick_sad_ul_islam_nonprefix = {}
+nick_said_ul_islam_nonprefix = {}
+nick_sadid_ul_islam_nonprefix = {}
+nick_sahm_ul_islam_nonprefix = {}
+nick_samsam_ul_islam_nonprefix = {}
+nick_sayf_ul_islam_nonprefix = {}
+nick_sharaf_ul_islam_nonprefix = {}
+nick_shams_ul_islam_nonprefix = {}
+nick_shibl_ul_islam_nonprefix = {}
+nick_shihab_ul_islam_nonprefix = {}
+nick_siraj_ul_islam_nonprefix = {}
+nick_taj_ul_islam_nonprefix = {}
+nick_taqi_ul_islam_nonprefix = {}
+nick_uddat_ul_islam_nonprefix = {}
+nick_zahir_ul_islam_nonprefix = {}
+nick_zahr_ul_islam_nonprefix = {}
+nick_zayn_ul_islam_nonprefix = {}
+nick_ziya_ul_islam_nonprefix = {}
+nick_diya_ul_islam_nonprefix = {}
+nick_alimat_ul_islam_nonprefix = {}
+nick_amidat_ul_islam_nonprefix = {}
+nick_aminat_ul_islam_nonprefix = {}
+nick_dhahirat_ul_islam_nonprefix = {}
+nick_farisat_ul_islam_nonprefix = {}
+nick_hamiyat_ul_islam_nonprefix = {}
+nick_hamidat_ul_islam_nonprefix = {}
+nick_labuat_ul_islam_nonprefix = {}
+nick_muayyidat_ul_islam_nonprefix = {}
+nick_mubarizat_ul_islam_nonprefix = {}
+nick_muhibat_ul_islam_nonprefix = {}
+nick_mujirat_ul_islam_nonprefix = {}
+nick_muinat_ul_islam_nonprefix = {}
+nick_muizat_ul_islam_nonprefix = {}
+nick_mumahhidat_ul_islam_nonprefix = {}
+nick_muslihat_ul_islam_nonprefix = {}
+nick_mutamidat_ul_islam_nonprefix = {}
+nick_mudhaffarat_ul_islam_nonprefix = {}
+nick_muzaffarat_ul_islam_nonprefix = {}
+nick_nadhimat_ul_islam_nonprefix = {}
+nick_nahidat_ul_islam_nonprefix = {}
+nick_najibat_ul_islam_nonprefix = {}
+nick_najmat_ul_islam_nonprefix = {}
+nick_nasirat_ul_islam_nonprefix = {}
+nick_nazimat_ul_islam_nonprefix = {}
+nick_qawwamat_ul_islam_nonprefix = {}
+nick_rafiat_ul_islam_nonprefix = {}
+nick_rashidat_ul_islam_nonprefix = {}
+nick_saidat_ul_islam_nonprefix = {}
+nick_sadidat_ul_islam_nonprefix = {}
+nick_shiblat_ul_islam_nonprefix = {}
+nick_taqiyat_ul_islam_nonprefix = {}
+nick_zahirat_ul_islam_nonprefix = {}
+nick_zahrat_ul_islam_nonprefix = {}
+nick_adud_ud_dawlah_nonprefix = {}
+nick_ala_ud_dawlah_nonprefix = {}
+nick_alam_ud_dawlah_nonprefix = {}
+nick_alim_ud_dawlah_nonprefix = {}
+nick_amid_ud_dawlah_nonprefix = {}
+nick_amin_ud_dawlah_nonprefix = {}
+nick_anwar_ud_dawlah_nonprefix = {}
+nick_asad_ud_dawlah_nonprefix = {}
+nick_awn_ud_dawlah_nonprefix = {}
+nick_badr_ud_dawlah_nonprefix = {}
+nick_baha_ud_dawlah_nonprefix = {}
+nick_burhan_ud_dawlah_nonprefix = {}
+nick_dhahir_ud_dawlah_nonprefix = {}
+nick_dhakhirat_ud_dawlah_nonprefix = {}
+nick_dir_ud_dawlah_nonprefix = {}
+nick_fakhr_ud_dawlah_nonprefix = {}
+nick_faris_ud_dawlah_nonprefix = {}
+nick_ghiyath_ud_dawlah_nonprefix = {}
+nick_hami_ud_dawlah_nonprefix = {}
+nick_hamid_ud_dawlah_nonprefix = {}
+nick_haqq_ud_dawlah_nonprefix = {}
+nick_hisn_ud_dawlah_nonprefix = {}
+nick_husam_ud_dawlah_nonprefix = {}
+nick_iftikhar_ud_dawlah_nonprefix = {}
+nick_ikhtiyar_ud_dawlah_nonprefix = {}
+nick_imad_ud_dawlah_nonprefix = {}
+nick_ismat_ud_dawlah_nonprefix = {}
+nick_itimad_ud_dawlah_nonprefix = {}
+nick_izz_ud_dawlah_nonprefix = {}
+nick_jalal_ud_dawlah_nonprefix = {}
+nick_jamal_ud_dawlah_nonprefix = {}
+nick_janah_ud_dawlah_nonprefix = {}
+nick_kamal_ud_dawlah_nonprefix = {}
+nick_kanz_ud_dawlah_nonprefix = {}
+nick_khair_ud_dawlah_nonprefix = {}
+nick_majd_ud_dawlah_nonprefix = {}
+nick_muayyid_ud_dawlah_nonprefix = {}
+nick_mubariz_ud_dawlah_nonprefix = {}
+nick_muhib_ud_dawlah_nonprefix = {}
+nick_muhyi_ad_dawlah_nonprefix = {}
+nick_mujir_ud_dawlah_nonprefix = {}
+nick_muin_ud_dawlah_nonprefix = {}
+nick_muiz_ud_dawlah_nonprefix = {}
+nick_murtada_ad_dawlah_nonprefix = {}
+nick_musharif_ud_dawlah_nonprefix = {}
+nick_mumahhid_ud_dawlah_nonprefix = {}
+nick_muslih_ud_dawlah_nonprefix = {}
+nick_mutamid_ud_dawlah_nonprefix = {}
+nick_mudhaffar_ud_dawlah_nonprefix = {}
+nick_muzaffar_ud_dawlah_nonprefix = {}
+nick_nadhim_ud_dawlah_nonprefix = {}
+nick_nahid_ud_dawlah_nonprefix = {}
+nick_najib_ud_dawlah_nonprefix = {}
+nick_najm_ud_dawlah_nonprefix = {}
+nick_nasir_ud_dawlah_nonprefix = {}
+nick_nazim_ud_dawlah_nonprefix = {}
+nick_nidham_ud_dawlah_nonprefix = {}
+nick_nizam_ud_dawlah_nonprefix = {}
+nick_nur_ud_dawlah_nonprefix = {}
+nick_qamar_ud_dawlah_nonprefix = {}
+nick_qawwam_ud_dawlah_nonprefix = {}
+nick_qiwam_ud_dawlah_nonprefix = {}
+nick_qutb_ud_dawlah_nonprefix = {}
+nick_rafi_ud_dawlah_nonprefix = {}
+nick_rashid_ud_dawlah_nonprefix = {}
+nick_riyadh_ud_dawlah_nonprefix = {}
+nick_riyaz_ud_dawlah_nonprefix = {}
+nick_rukn_ud_dawlah_nonprefix = {}
+nick_rumh_ud_dawlah_nonprefix = {}
+nick_sabr_ud_dawlah_nonprefix = {}
+nick_sadr_ud_dawlah_nonprefix = {}
+nick_salah_ud_dawlah_nonprefix = {}
+nick_sad_ud_dawlah_nonprefix = {}
+nick_sadid_ud_dawlah_nonprefix = {}
+nick_said_ud_dawlah_nonprefix = {}
+nick_sahm_ud_dawlah_nonprefix = {}
+nick_sanad_ud_dawlah_nonprefix = {}
+nick_sama_ud_dawlah_nonprefix = {}
+nick_samsam_ud_dawlah_nonprefix = {}
+nick_sayf_ud_dawlah_nonprefix = {}
+nick_sayyid_ud_dawlah_nonprefix = {}
+nick_sharaf_ud_dawlah_nonprefix = {}
+nick_shams_ud_dawlah_nonprefix = {}
+nick_shibl_ud_dawlah_nonprefix = {}
+nick_shihab_ud_dawlah_nonprefix = {}
+nick_siraj_ud_dawlah_nonprefix = {}
+nick_sultan_ud_dawlah_nonprefix = {}
+nick_taj_ud_dawlah_nonprefix = {}
+nick_thiqat_ud_dawlah_nonprefix = {}
+nick_taqi_ud_dawlah_nonprefix = {}
+nick_uddat_ud_dawlah_nonprefix = {}
+nick_wali_ud_dawlah_nonprefix = {}
+nick_yamin_ud_dawlah_nonprefix = {}
+nick_yumn_ud_dawlah_nonprefix = {}
+nick_zaim_ud_dawlah_nonprefix = {}
+nick_zahir_ud_dawlah_nonprefix = {}
+nick_zahr_ud_dawlah_nonprefix = {}
+nick_zayn_ud_dawlah_nonprefix = {}
+nick_ziya_ud_dawlah_nonprefix = {}
+nick_diya_ud_dawlah_nonprefix = {}
+nick_alimat_ud_dawlah_nonprefix = {}
+nick_amidat_ud_dawlah_nonprefix = {}
+nick_aminat_ud_dawlah_nonprefix = {}
+nick_dhahirat_ud_dawlah_nonprefix = {}
+nick_farisat_ud_dawlah_nonprefix = {}
+nick_hamiyat_ud_dawlah_nonprefix = {}
+nick_hamidat_ud_dawlah_nonprefix = {}
+nick_labuat_ud_dawlah_nonprefix = {}
+nick_muayyidat_ud_dawlah_nonprefix = {}
+nick_mubarizat_ud_dawlah_nonprefix = {}
+nick_muhibat_ud_dawlah_nonprefix = {}
+nick_mujirat_ud_dawlah_nonprefix = {}
+nick_muinat_ud_dawlah_nonprefix = {}
+nick_muizat_ud_dawlah_nonprefix = {}
+nick_mumahhidat_ud_dawlah_nonprefix = {}
+nick_musharrifat_ud_dawlah_nonprefix = {}
+nick_muslihat_ud_dawlah_nonprefix = {}
+nick_mutamidat_ud_dawlah_nonprefix = {}
+nick_mudhaffarat_ud_dawlah_nonprefix = {}
+nick_muzaffarat_ud_dawlah_nonprefix = {}
+nick_nadhimat_ud_dawlah_nonprefix = {}
+nick_nahidat_ud_dawlah_nonprefix = {}
+nick_najibat_ud_dawlah_nonprefix = {}
+nick_najmat_ud_dawlah_nonprefix = {}
+nick_nasirat_ud_dawlah_nonprefix = {}
+nick_nazimat_ud_dawlah_nonprefix = {}
+nick_qawwamat_ud_dawlah_nonprefix = {}
+nick_rafiat_ud_dawlah_nonprefix = {}
+nick_rashidat_ud_dawlah_nonprefix = {}
+nick_saidat_ud_dawlah_nonprefix = {}
+nick_sadidat_ud_dawlah_nonprefix = {}
+nick_sayyidat_ud_dawlah_nonprefix = {}
+nick_shiblat_ud_dawlah_nonprefix = {}
+nick_sultanat_ud_dawlah_nonprefix = {}
+nick_waliyat_ud_dawlah_nonprefix = {}
+nick_zahirat_ud_dawlah_nonprefix = {}
+nick_zahrat_ud_dawlah_nonprefix = {}
+nick_zaimat_ud_dawlah_nonprefix = {}
+nick_adud_ul_mulk_nonprefix = {}
+nick_ala_ul_mulk_nonprefix = {}
+nick_alam_ul_mulk_nonprefix = {}
+nick_alim_ul_mulk_nonprefix = {}
+nick_amid_ul_mulk_nonprefix = {}
+nick_amin_ul_mulk_nonprefix = {}
+nick_anwar_ul_mulk_nonprefix = {}
+nick_asad_ul_mulk_nonprefix = {}
+nick_awn_ul_mulk_nonprefix = {}
+nick_badr_ul_mulk_nonprefix = {}
+nick_baha_ul_mulk_nonprefix = {}
+nick_burhan_ul_mulk_nonprefix = {}
+nick_dhahir_ul_mulk_nonprefix = {}
+nick_dhakhirat_ul_mulk_nonprefix = {}
+nick_dir_ul_mulk_nonprefix = {}
+nick_fakhr_ul_mulk_nonprefix = {}
+nick_faris_ul_mulk_nonprefix = {}
+nick_ghiyath_ul_mulk_nonprefix = {}
+nick_hami_ul_mulk_nonprefix = {}
+nick_hamid_ul_mulk_nonprefix = {}
+nick_haqq_ul_mulk_nonprefix = {}
+nick_hisn_ul_mulk_nonprefix = {}
+nick_husam_ul_mulk_nonprefix = {}
+nick_iftikhar_ul_mulk_nonprefix = {}
+nick_ikhtiyar_ul_mulk_nonprefix = {}
+nick_imad_ul_mulk_nonprefix = {}
+nick_ismat_ul_mulk_nonprefix = {}
+nick_itimad_ul_mulk_nonprefix = {}
+nick_izz_ul_mulk_nonprefix = {}
+nick_jalal_ul_mulk_nonprefix = {}
+nick_jamal_ul_mulk_nonprefix = {}
+nick_janah_ul_mulk_nonprefix = {}
+nick_kamal_ul_mulk_nonprefix = {}
+nick_kanz_ul_mulk_nonprefix = {}
+nick_khair_ul_mulk_nonprefix = {}
+nick_majd_ul_mulk_nonprefix = {}
+nick_muayyid_ul_mulk_nonprefix = {}
+nick_mubariz_ul_mulk_nonprefix = {}
+nick_muhib_ul_mulk_nonprefix = {}
+nick_muhyi_al_mulk_nonprefix = {}
+nick_mujir_ul_mulk_nonprefix = {}
+nick_muin_ul_mulk_nonprefix = {}
+nick_muiz_ul_mulk_nonprefix = {}
+nick_murtada_al_mulk_nonprefix = {}
+nick_musharif_ul_mulk_nonprefix = {}
+nick_mumahhid_ul_mulk_nonprefix = {}
+nick_muslih_ul_mulk_nonprefix = {}
+nick_mutamid_ul_mulk_nonprefix = {}
+nick_mudhaffar_ul_mulk_nonprefix = {}
+nick_muzaffar_ul_mulk_nonprefix = {}
+nick_nadhim_ul_mulk_nonprefix = {}
+nick_nahid_ul_mulk_nonprefix = {}
+nick_najib_ul_mulk_nonprefix = {}
+nick_najm_ul_mulk_nonprefix = {}
+nick_nasir_ul_mulk_nonprefix = {}
+nick_nazim_ul_mulk_nonprefix = {}
+nick_nidham_ul_mulk_nonprefix = {}
+nick_nizam_ul_mulk_nonprefix = {}
+nick_nur_ul_mulk_nonprefix = {}
+nick_qamar_ul_mulk_nonprefix = {}
+nick_qawwam_ul_mulk_nonprefix = {}
+nick_qiwam_ul_mulk_nonprefix = {}
+nick_qutb_ul_mulk_nonprefix = {}
+nick_rafi_ul_mulk_nonprefix = {}
+nick_rashid_ul_mulk_nonprefix = {}
+nick_riyadh_ul_mulk_nonprefix = {}
+nick_riyaz_ul_mulk_nonprefix = {}
+nick_rukn_ul_mulk_nonprefix = {}
+nick_rumh_ul_mulk_nonprefix = {}
+nick_sabr_ul_mulk_nonprefix = {}
+nick_sadr_ul_mulk_nonprefix = {}
+nick_salah_ul_mulk_nonprefix = {}
+nick_sad_ul_mulk_nonprefix = {}
+nick_said_ul_mulk_nonprefix = {}
+nick_sadid_ul_mulk_nonprefix = {}
+nick_sahm_ul_mulk_nonprefix = {}
+nick_sanad_ul_mulk_nonprefix = {}
+nick_sama_ul_mulk_nonprefix = {}
+nick_samsam_ul_mulk_nonprefix = {}
+nick_sayf_ul_mulk_nonprefix = {}
+nick_sayyid_ul_mulk_nonprefix = {}
+nick_sharaf_ul_mulk_nonprefix = {}
+nick_shams_ul_mulk_nonprefix = {}
+nick_shibl_ul_mulk_nonprefix = {}
+nick_shihab_ul_mulk_nonprefix = {}
+nick_siraj_ul_mulk_nonprefix = {}
+nick_sultan_ul_mulk_nonprefix = {}
+nick_taj_ul_mulk_nonprefix = {}
+nick_thiqat_ul_mulk_nonprefix = {}
+nick_taqi_ul_mulk_nonprefix = {}
+nick_uddat_ul_mulk_nonprefix = {}
+nick_wali_ul_mulk_nonprefix = {}
+nick_yamin_ul_mulk_nonprefix = {}
+nick_yumn_ul_mulk_nonprefix = {}
+nick_zaim_ul_mulk_nonprefix = {}
+nick_zahir_ul_mulk_nonprefix = {}
+nick_zahr_ul_mulk_nonprefix = {}
+nick_zayn_ul_mulk_nonprefix = {}
+nick_ziya_ul_mulk_nonprefix = {}
+nick_diya_ul_mulk_nonprefix = {}
+nick_alimat_ul_mulk_nonprefix = {}
+nick_amidat_ul_mulk_nonprefix = {}
+nick_aminat_ul_mulk_nonprefix = {}
+nick_dhahirat_ul_mulk_nonprefix = {}
+nick_farisat_ul_mulk_nonprefix = {}
+nick_hamiyat_ul_mulk_nonprefix = {}
+nick_hamidat_ul_mulk_nonprefix = {}
+nick_labuat_ul_mulk_nonprefix = {}
+nick_muayyidat_ul_mulk_nonprefix = {}
+nick_mubarizat_ul_mulk_nonprefix = {}
+nick_muhibat_ul_mulk_nonprefix = {}
+nick_mujirat_ul_mulk_nonprefix = {}
+nick_muinat_ul_mulk_nonprefix = {}
+nick_muizat_ul_mulk_nonprefix = {}
+nick_mumahhidat_ul_mulk_nonprefix = {}
+nick_musharrifat_ul_mulk_nonprefix = {}
+nick_muslihat_ul_mulk_nonprefix = {}
+nick_mutamidat_ul_mulk_nonprefix = {}
+nick_mudhaffarat_ul_mulk_nonprefix = {}
+nick_muzaffarat_ul_mulk_nonprefix = {}
+nick_nadhimat_ul_mulk_nonprefix = {}
+nick_nahidat_ul_mulk_nonprefix = {}
+nick_najibat_ul_mulk_nonprefix = {}
+nick_najmat_ul_mulk_nonprefix = {}
+nick_nasirat_ul_mulk_nonprefix = {}
+nick_nazimat_ul_mulk_nonprefix = {}
+nick_qawwamat_ul_mulk_nonprefix = {}
+nick_rafiat_ul_mulk_nonprefix = {}
+nick_rashidat_ul_mulk_nonprefix = {}
+nick_saidat_ul_mulk_nonprefix = {}
+nick_sadidat_ul_mulk_nonprefix = {}
+nick_sayyidat_ul_mulk_nonprefix = {}
+nick_shiblat_ul_mulk_nonprefix = {}
+nick_sultanat_ul_mulk_nonprefix = {}
+nick_waliyat_ul_mulk_nonprefix = {}
+nick_zahirat_ul_mulk_nonprefix = {}
+nick_zahrat_ul_mulk_nonprefix = {}
+nick_zaimat_ul_mulk_nonprefix = {}

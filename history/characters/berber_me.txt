@@ -1,0 +1,1830 @@
+﻿## Misc Baranis Berbers
+me_baranis_001 = {
+	name = "Ammar" # Forefather of Banu Ammar, a dynasty ruled an independent emirate in Tripoli 1066
+	dynasty = 793 # Banu Ammar (Lebanese Tripoli)
+	religion = "ismaili"
+	culture = baranis
+	trait = kutama
+	
+	990.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
+
+me_baranis_002 = {
+	name = "Qasim" # Sheikh Qasim, aided his 7 year old grandson ascend to the throne of the Taifa of al-Bunt (Alpunte) but the rule was short lived
+	religion = "muwalladi"
+	culture = baranis
+	
+	990.1.1 = {
+		birth = yes
+	}
+	1045.1.1 = {
+		death = yes
+	}
+}
+
+me_baranis_003 = {
+	name = "Abdullah" # Abdullah ibn Yakhlaf al-Kutami, Governed Tripoli after Fatimid departure to Cairo
+	religion = "ismaili"
+	culture = baranis
+	trait = kutama
+	
+	father = me_baranis_004
+	950.1.1 = {
+		birth = yes
+	}
+	1010.1.1 = {
+		death = yes
+	}
+}
+
+me_baranis_004 = {
+	name = "Yakhlaf"
+	religion = "ismaili"
+	culture = baranis
+	trait = kutama
+	
+	920.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+
+me_baranis_005 = {
+	name = "Tamsulah" # Tamsulah/Awsulah ibn Bakkar, Governed Tripoli for the Zirids under Fatimid command but asked to return to Egypt
+	religion = "ismaili"
+	culture = baranis
+	
+	father = me_baranis_006
+	955.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		death = yes
+	}
+}
+
+me_baranis_006 = {
+	name = "Bakkar"
+	religion = "ismaili"
+	culture = baranis
+	
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+## Emirs of Bari (Sawdan exists in berber.txt)
+me_bari_001 = {
+	name = "Khalfun" # Khalfūn al-Barbari, First emir of Bari
+	dynasty = me_al_barbari # al-Barbari
+	religion = "ashari"
+	culture = baranis
+	820.1.1 = {
+		birth = yes
+	}
+	852.1.1 = {
+		death = yes
+	}
+}
+
+me_bari_002 = {
+	name = "al-Mufarraj" # al-Mufarraj ibn Sallām, Second emir of Bari
+	dynasty = me_sallamid # Sallāmid
+	religion = "ashari"
+	culture = baranis
+
+	father = me_bari_003 # Sallām
+	822.1.1 = {
+		birth = yes
+	}
+	856.1.1 = {
+		death = yes
+	}
+}
+
+me_bari_003 = {
+	name = "Sallam" # Father of al-Mufarraj
+	dynasty = me_sallamid
+	religion = "ashari"
+	culture = baranis
+	800.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+##Tripolitania Imamate
+me_abuhatim_001 = {
+	name = "Habib" # Habib, also known as Labid, al-Malzūzī
+	dynasty = 1048003 # al-Malzūzī
+	religion = ibadi
+	culture = butr 
+	trait = zenata
+
+	father = me_abuhatim_003
+	690.1.1 = {
+		birth = yes
+	}
+	750.1.1 = {
+		death = yes
+	}
+}
+
+me_abuhatim_002 = {
+	name = "Hatim" # Ḥātim ibn Yaqub al-Malzūzī
+	dynasty = 1048003 # al-Malzūzī, But a Kindi by alligance
+	religion = ibadi
+	culture = butr 
+	trait = zenata
+
+	father = 210031 # Abū Ḥātim Yaqub ibn Labid al-Malzūzī (exists in berber.txt)
+	740.1.1 = {
+		birth = yes
+	}
+	780.1.1 = {
+		death = yes
+	}
+}
+
+me_abuhatim_003 = {
+	name = "Madin"
+	dynasty = 1048003 # al-Malzūzī
+	religion = ashari
+	culture = butr 
+	trait = zenata
+
+	father = me_abuhatim_004
+	660.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+
+me_abuhatim_004 = {
+	name = "Yatuft"
+	dynasty = 1048003 # al-Malzūzī
+	religion = pagan
+	culture = butr 
+	trait = zenata
+
+	630.1.1 = {
+		birth = yes
+	}
+	690.1.1 = {
+		death = yes
+	}
+}
+
+##Ifrinid Rulers (more exist in berber.txt)
+me_ifrinid_001 = {
+	name = "Makhlad" # Abu Yazid Makhlad 'Sahib al-Himar' ibn Kaydad al-Yifrani
+	dynasty = 1048004 # Ifrinid
+	give_nickname = nick_al_habashi_al_aswad # 'al-Habashi al-Aswad' which means (The Black Ethiopian)
+	dna = me_sahib_al_himar_dna
+	religion = nukkari
+	culture = baranis
+	trait = zenata
+	trait = deceitful
+	trait = ambitious
+	trait = shrewd
+
+	father = me_ifrinid_002
+	mother = me_ifrinid_003
+	883.1.1 = {
+		birth = yes
+		add_character_flag = has_scripted_appearance
+	}
+	934.1.1 = {
+		trait = hajjaj
+	}
+	944.1.1 = {
+		give_nickname = nick_sahib_al_himar # 'Sahib al-Himar' which means (The Man on the Donkey)
+	}
+	947.8.19 = {
+		death = {
+			death_reason = death_sahib_alhimar 
+			killer = 32902 # Third Fatimid Caliph al-Mansur
+		} 
+	}
+}
+
+me_ifrinid_001_dna_clone = {
+	name = "Ahmad" # exists to that Abu Yazid will get his DNA when spawning during the Nukkari revolt
+	dna = me_sahib_al_himar_dna
+	religion = ibadi
+	culture = baranis
+
+	750.1.1 = {
+		birth = yes
+		add_character_flag = has_scripted_appearance
+	}
+	815.1.1 = {
+		death = yes 
+	}
+}
+
+me_ifrinid_002 = {
+	name = "Kaydad" # Abu Yazid's Father
+	dynasty = 1048004 # Ifrinid
+	religion = wahbiya
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_016
+	850.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+me_ifrinid_003 = {
+	name = "Sabika" # Abu Yazid's Mother, She was a Black African slave
+	religion = wahbiya
+	culture = zaghawa
+	female = yes
+
+	860.1.1 = {
+		birth = yes
+		add_spouse = me_ifrinid_002
+	}
+	910.1.1 = {
+		death = yes 
+	}
+}
+me_ifrinid_004 = {
+	name = "Yazid" # Yazid ibn Abu Yazid
+	dynasty = 1048004 # Ifrinid
+	religion = nukkari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_001
+	903.1.1 = {
+		birth = yes
+	}
+	949.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+me_ifrinid_005 = {
+	name = "Yunus" # Yunus ibn Abu Yazid
+	dynasty = 1048004 # Ifrinid
+	religion = nukkari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_001
+	908.1.1 = {
+		birth = yes
+	}
+	947.3.6 = {
+		death = {
+			death_reason = death_battle
+			killer = 32902 # Third Fatimid Caliph al-Mansur
+		}
+	}
+}
+me_ifrinid_006 = {
+	name = "al-Fadl" # al-Fadl ibn Abu Yazid
+	dynasty = 1048004 # Ifrinid
+	religion = nukkari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_001
+	913.1.1 = {
+		birth = yes
+	}
+	948.5.1 = {
+		death = {
+			death_reason = death_battle
+			killer = 32902 # Third Fatimid Caliph al-Mansur
+		}
+	}
+}
+me_ifrinid_007 = {
+	name = "Ayyub" # Ayyub ibn Abu Yazid
+	dynasty = 1048004 # Ifrinid
+	religion = nukkari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_001
+	918.1.1 = {
+		birth = yes
+	}
+	949.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+me_ifrinid_008 = {
+	name = "Abdul-Hamid" # Abu Ammar Abdul-Hamid al-A'ma, Abu Yazid's comrade (Not Ifrinid)
+	give_nickname = nick_al_ama # 'al-A'ma' ie 'The Blind'
+	religion = nukkari
+	culture = baranis
+	trait = blind
+
+	880.1.1 = {
+		birth = "880.1.1"
+	}
+	947.8.19 = {
+		death = {
+			death_reason = death_battle
+			killer = 32902 # Third Fatimid Caliph al-Mansur
+		}
+	}
+}
+me_ifrinid_009 = {
+	name = "Yazid" # Abu Qudama ibn Fandin, Founder of the Nukkari sect
+	dynasty = 1048004 # Ifrinid
+	religion = nukkari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_010 # Fandin
+	740.1.1 = {
+		birth = "740.1.1"
+	}
+	800.1.1 = {
+		death = "800.1.1"
+	}
+}
+me_ifrinid_010 = {
+	name = "Fandin" # Fandin, father of Abu Qudama
+	dynasty = 1048004 # Ifrinid
+	religion = ibadi
+	culture = baranis
+	trait = zenata
+
+	720.1.1 = {
+		birth = "720.1.1"
+	}
+	780.1.1 = {
+		death = "780.1.1"
+	}
+}
+
+me_ifrinid_011 = {
+	name = "Hilal" # Abu Noor Hilal ibn Abu Qurra ibn Dunas, founder of the Taifa of Ronda
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_012 # Abu Qurra ibn Dunas
+	1000.1.1 = {
+		birth = yes
+	}
+	1057.4.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_012 = {
+	name = "Abu_Qurrah"
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_013 # Dunas Ifrinid
+	960.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_013 = {
+	name = "Dunas"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = baranis
+	trait = zenata
+
+	930.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_014 = { 
+	name = "Badis" # Badis ibn Abu Noor, Second ruler of the Taifa of Ronda
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_011 # Abu Noor Hilal
+	1030.1.1 = {
+		birth = yes
+	}
+	1057.1.1 = {
+		death = {
+			death_reason = death_execution
+			killer = me_ifrinid_011 # Abu Noor Hilal
+		}
+	}
+}
+
+me_ifrinid_015 = { 
+	name = "Fatouh" # Abu Nasir Fatouh ibn Abu Noor, Third ruler of the Taifa of Ronda
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_011 # Abu Noor Hilal
+	1035.1.1 = {
+		birth = yes
+	}
+	1065.1.1 = {
+		death = {
+			death_reason = death_me_balcony
+			killer = me_andalusian_001 # Ibn Yaqub, a Faris employed by Emir al-Mu'tadid of Sevilla
+		}
+	}
+}
+
+me_ifrinid_016 = {
+	name = "Sa_dullah" # From Abu Yazid's genology according to Ibn Hazm
+	dynasty = 1048004 # Ifrinid
+	religion = wahbiya
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_017
+	810.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_017 = {
+	name = "Mughith"
+	dynasty = 1048004 # Ifrinid
+	religion = wahbiya
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_018
+	780.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_018 = {
+	name = "KarmA_n"
+	dynasty = 1048004 # Ifrinid
+	religion = wahbiya
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_019
+	750.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_019 = {
+	name = "Makhlad"
+	dynasty = 1048004 # Ifrinid
+	religion = ibadi
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_020
+	720.1.1 = {
+		birth = yes
+	}
+	780.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_020 = {
+	name = "Uthman"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_021
+	690.1.1 = {
+		birth = yes
+	}
+	750.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_021 = {
+	name = "Warnamt"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_022
+	650.1.1 = {
+		birth = yes
+	}
+	710.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_022 = {
+	name = "Huwayfir"
+	dynasty = 1048004 # Ifrinid
+	religion = pagan
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_023
+	610.1.1 = {
+		birth = yes
+	}
+	670.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_023 = {
+	name = "Sumayran"
+	dynasty = 1048004 # Ifrinid
+	religion = pagan
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_024
+	570.1.1 = {
+		birth = yes
+	}
+	630.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_024 = {
+	name = "Yifrin" # Also known as Yafran/Ifran/Ifrin, Forefather of Banu Ifrin
+	dynasty = 1048004 # Ifrinid
+	religion = pagan
+	culture = butr
+	trait = zenata
+
+	father = me_zenata_001 # Yaṣlatayn ibn Masrā, sources differ
+	530.1.1 = {
+		birth = yes
+	}
+	590.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_025 = {
+	name = "Idris" # Idris ibn Abu Noor, Accused by his father of having an affair with his aunt and executed
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+	trait = fornicator
+	trait = incestuous
+
+	father = me_ifrinid_011 # Abu Noor Hilal
+	1025.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = {
+			death_reason = death_execution
+			killer = me_ifrinid_011 # Abu Noor Hilal
+		}
+	}
+}
+
+me_ifrinid_026 = {
+	name = "Maymuna" # First name unknown, mother of Hashim and Uqayl Hammudid and sister of Abu Noor, Accused by her brother of having an affair with her nephew and executed
+	female = yes
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+	trait = adulterer
+	trait = incestuous
+
+	father = me_ifrinid_012
+	1005.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = {
+			death_reason = death_execution
+			killer = me_ifrinid_011 # Abu Noor Hilal
+		}
+	}
+}
+
+me_ifrinid_027 = {
+	name = "Ya_la" # Ya'la ibn Muhammad, Umayyad general who held large swarths of the Maghreb in their name, then allied with the Fatimids who had him killed
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+	trait = education_martial_3
+	trait = disloyal
+
+	father = me_ifrinid_028
+	910.1.1 = {
+		birth = yes
+	}
+	958.6.1 = {
+		death = {
+			death_reason = death_murder_known
+			#killer = ### # Jawhar as-Siqilli
+		}
+	}
+}
+
+me_ifrinid_028 = {
+	name = "Muhammad" # Muhammad ibn Salih, Ifrinid leader who was killed
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_034
+	880.1.1 = {
+		birth = yes
+	}
+	945.1.1 = { # Died during Abu Yazid's time
+		death = {
+			death_reason = death_murder_known
+			killer = me_ifrinid_039 # Muhammad ibn Bakkar
+		}
+	}
+}
+
+me_ifrinid_029 = {
+	name = "Ahmad" # Ahmad ibn Abi Bakr, Ya'la ibn Muhammad's kinsman who governed Fes for him and laid the foundations of the minaret of al-Qarawiyyin Mosque
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_030
+	920.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_030 = {
+	name = "Abu_Bakr"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_031
+	890.1.1 = {
+		birth = yes
+	}
+	950.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_031 = {
+	name = "Ahmad"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_032
+	850.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_032 = {
+	name = "Uthman"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_033
+	820.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_033 = {
+	name = "Sa_id"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	790.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_034 = {
+	name = "Salih"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	840.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_035 = {
+	name = "Muhammad" # Muhammad ibn al-Khayr ibn Muhammad ibn Ashirah, Governed Fes for Ya'la ibn Muhammad al-Ifrani
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	
+	father = me_ifrinid_036
+	925.1.1 = {
+		birth = yes
+	}
+	953.1.1 = {
+		trait = faith_warrior # Left his position to do Jihad in al-Andalus
+	}
+	985.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_036 = {
+	name = "al-Khayr"
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	
+	father = me_ifrinid_037
+	895.1.1 = {
+		birth = yes
+	}
+	955.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_037 = {
+	name = "Muhammad"
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	
+	father = me_ifrinid_038
+	865.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_038 = {
+	name = "_Ashirah"
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	
+	830.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_039 = {
+	name = "Abdullah" # Abdullah ibn Bakkar, the man who betrayed and killed Muhammad ibn Salih al-Ifrini
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	trait = disloyal
+	
+	father = me_ifrinid_040
+	900.1.1 = {
+		birth = yes
+	}
+	955.1.1 = {
+		death = {
+			death_reason = death_execution # Executed by members of Banu Ifrin
+		}
+	}
+}
+
+me_ifrinid_040 = {
+	name = "Bakkar"
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	
+	870.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_041 = {
+	name = "Nawbakht" # Nawbakht ibn Abdullah ibn Bakkar, joined his kinsman Badawi ibn Ya'la in fighting for the Umayyads
+	dynasty = 1048004 # Ifrinid
+	religion = "ashari"
+	culture = butr
+	
+	father = me_ifrinid_039
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_042 = {
+	name = "Badawi" # Badawi ibn Ya'la ibn Muhammad, Ifrinid tribal leader and Umayyad general who consistantly rebelled and feigned obedience to them
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+	trait = education_martial_3
+	trait = disloyal
+
+	father = me_ifrinid_027
+	940.1.1 = {
+		birth = yes
+	}
+	995.1.1 = { # 383 Hijri
+		death = yes # There are two accounts of his death, first is that he fled and died in the desert and the second is that Ziri ibn Atiyya killed him and sent his head to Qurtubah
+	}
+}
+
+me_ifrinid_043 = {
+	name = "Ziri"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_027
+	942.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_044 = {
+	name = "Habbus" # Habbus ibn Ziri ibn Ya'la, Took charge of the Ifrinids after his uncle's death, but was killed by his kinsman Abu Yadas ibn Dunas for control
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_043
+	965.1.1 = {
+		birth = yes
+	}
+	996.1.1 = {
+		death = {
+			death_reason = death_murder_known
+			killer = me_ifrinid_052 # Abu Yadas ibn Dunas
+		}
+	}
+}
+
+me_ifrinid_045 = {
+	name = "Hamamah" # Took charge of the Ifrinids after his brother Habbus' death
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_043
+	970.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = { # Unknown, atleast after 406 Hijri (1016 AD)
+		death = yes
+	}
+}
+
+me_ifrinid_046 = {
+	name = "Zawi" 
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_043
+	975.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_047 = {
+	name = "Tamim" # Abu'l Kamal Tamim ibn Ziri ibn Ya'la
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+	trait = education_martial_3
+	trait = zealous
+	trait = wrathful
+
+	father = me_ifrinid_043
+	980.1.1 = {
+		birth = yes
+	}
+	1054.6.1 = { # 446 Hijri
+		death = yes
+	}
+}
+
+me_ifrinid_048 = {
+	name = "Hammad"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_047
+	1010.1.1 = {
+		birth = yes
+	}
+	1057.6.1 = { # 449 Hijri
+		death = yes
+	}
+}
+
+me_ifrinid_049 = {
+	name = "Yusuf"
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_048
+	1030.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = { # 458 Hijri
+		death = yes
+	}
+}
+
+me_ifrinid_050 = {
+	name = "Muhammad" # Muhammad ibn Tamim ibn Ya'la, last Ifrinid ruler of Shala (Sala/Chellah)
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_047
+	1025.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = {
+			death_reason = death_battle # Died fighting the Almoravids
+		}
+	}
+}
+
+me_ifrinid_051 = {
+	name = "Abu_Zayd"
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_013 # Dunas Ifrinid
+	962.1.1 = {
+		birth = yes
+	}
+	1025.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_052 = {
+	name = "Abu_Yadas" # Abu Yadas ibn Dunas, Habbus ibn Ziri ibn Ya'la's killer, fled to al-Andalus and was honoured by the Umayyads
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+	trait = paranoid
+
+	father = me_ifrinid_013 # Dunas Ifrinid
+	965.1.1 = {
+		birth = yes
+	}
+	1009.1.1 = { # Unknown but during al-Mahdi and al-Musta'in's war
+		death = {
+			death_reason = death_wounds # Died from his wounds after a battle between al-Musta'in and al-Mahdi
+		}
+	}
+}
+
+me_ifrinid_053 = {
+	name = "Attaf"
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_013 # Dunas Ifrinid
+	958.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_054 = {
+	name = "Khaluf" # Khaluf ibn Abu Yadas, Served in al-Andalus
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_052
+	1010.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 20852 # Qurtubah
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_055 = {
+	name = "Tamim" # Tamim ibn Khaluf ibn Abu Yadas, Served in al-Andalus
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_054
+	1040.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 20852 # Qurtubah
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_056 = {
+	name = "Abd_ar-Rahman" # Served in al-Andalus
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_053
+	980.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_057 = {
+	name = "Yahya" # Served in al-Andalus for the Hammudids, and was appointed over Qurtubah during al-Qasim's Caliphate
+	dynasty = 1048004 # Ifrinid
+	religion = muwalladi
+	culture = baranis
+	trait = zenata
+
+	father = me_ifrinid_056
+	1000.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+me_ifrinid_058 = {
+	name = "Abu_Sa_id" # Abu Sa'id ibn Khalifa, Vizir and commander for the Maghrawa of Tlemcen [Known as Abu Suda in IBL]
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	father = me_ifrinid_059
+	1010.1.1 = {
+		birth = yes
+	}
+	1058.1.1 = { # Dies in battle against the Bedouins of Athbaj and Zughbah in the 450s Hijri
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+me_ifrinid_059 = {
+	name = "Khalifa" 
+	dynasty = 1048004 # Ifrinid
+	religion = ashari
+	culture = butr
+	trait = zenata
+
+	980.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
+## Banu Isam - Majkasa ruling dynasty of Sabtah
+me_majkasa_001 = {
+	name = "Majakas"
+	dynasty = me_majkasa_dynasty
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	810.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_002 = {
+	name = "Isam"
+	dynasty_house = house_me_isamids
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_001
+	835.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_003 = {
+	name = "Majir"
+	dynasty_house = house_me_isamids
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_002
+	855.1.1 = {
+		birth = yes
+	}
+	915.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_004 = {
+	name = "ar-Radi"
+	dynasty_house = house_me_isamids
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_002
+	865.1.1 = {
+		birth = yes
+	}
+	935.1.1 = {
+		death = yes
+	}
+}
+
+### Other Majkasas
+
+me_majkasa_005 = { # Self-Proclaimed Berber prophet who arose near Sabtah, founder of Ha-Mimism
+	name = "Ha-Mim"
+	dynasty_house = house_me_haririds
+	religion = "hamimist"
+	culture = baranis
+	trait = masmudi
+	trait = hamimist_prophet
+	trait = blood_of_hamim
+
+	father = me_majkasa_008
+	885.1.1 = {
+		birth = yes
+	}
+	927.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+me_majkasa_006 = { # Son of Ha-Mim, succeeded him after his death
+	name = "Isa"
+	dynasty_house = house_me_haririds
+	religion = "hamimist"
+	culture = baranis
+	trait = masmudi
+	trait = blood_of_hamim
+
+	father = me_majkasa_005
+	905.1.1 = {
+		birth = yes
+	}
+	935.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_007 = { # Possible older brother of Ha-Mim, fate unknown
+	name = "Khalaf"
+	dynasty_house = house_me_haririds
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_008
+	880.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_008 = { # Father of Ha-Mim, possibly also claimed prophethood
+	name = "Mann-Allah"
+	dynasty_house = house_me_haririds
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_009
+	850.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_009 = {
+	name = "Harir"
+	dynasty_house = house_me_haririds
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_010
+	820.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_010 = {
+	name = "Umar"
+	dynasty = me_majkasa_dynasty
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_011
+	790.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_011 = {
+	name = "Rahfu"
+	dynasty = me_majkasa_dynasty
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_012
+	760.1.1 = {
+		birth = yes
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_012 = {
+	name = "Azerwal"
+	dynasty = me_majkasa_dynasty
+	religion = "pagan"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_013
+	730.1.1 = {
+		birth = yes
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_013 = {
+	name = "Majkasa"
+	dynasty = me_majkasa_dynasty
+	religion = "pagan"
+	culture = baranis
+	trait = masmudi
+
+	700.1.1 = {
+		birth = yes
+	}
+	760.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_014 = { # Daggu, sister of Ha-Mim
+	name = "Daggu"
+	female = yes
+	dynasty_house = house_me_haririds
+	religion = "hamimist"
+	culture = baranis
+	trait = masmudi
+	trait = witch
+	trait = beauty_good_3
+
+	father = me_majkasa_008
+	895.1.1 = {
+		birth = yes
+	}
+	955.1.1 = {
+		death = yes
+	}
+}
+
+me_majkasa_015 = { # Taqit, Aunt of Ha-Mim
+	name = "Taqit"
+	female = yes
+	dynasty_house = house_me_haririds
+	religion = "ashari"
+	culture = baranis
+	trait = masmudi
+
+	father = me_majkasa_009
+	860.1.1 = {
+		birth = yes
+	}
+	925.1.1 = {
+		religion = "hamimist"
+		trait = witch
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+
+## Kadu ibn Mu'arik al-Mawati, Prophet of the Kaduist faith
+me_kaduist_001 = {
+	name = "Kadu"
+	dynasty = me_mawatid_dynasty
+	religion = "kaduist"
+	culture = baranis
+	trait = kutama
+	trait = kaduist_prophet
+	trait = blood_of_kadu
+
+	father = me_kaduist_002
+	900.1.1 = {
+		birth = yes
+	}
+	912.7.1 = { # Defeated on 21 june and executed shortly afterwards
+		death = {
+			death_reason = death_execution
+			killer = 32901 # al-Qa'im Billah
+		}
+	}
+}
+
+me_kaduist_002 = {
+	name = "Mu_arik"
+	dynasty = me_mawatid_dynasty
+	religion = "kaduist"
+	culture = baranis
+	trait = kutama
+
+	870.1.1 = {
+		birth = yes
+	}
+	912.7.1 = { # Defeated on 21 june and executed shortly afterwards
+		death = {
+			death_reason = death_execution
+			killer = 32901 # al-Qa'im Billah
+		}
+	}
+}
+
+me_kaduist_003 = { # To give the Kaduist the correct dynasty
+	name = "Mu_arik"
+	dynasty = me_mawatid_dynasty
+	religion = "pagan"
+	culture = baranis
+	trait = kutama
+
+	100.1.1 = {
+		birth = yes
+	}
+	160.1.1 = {
+		death = yes
+	}
+}
+
+## Zirids
+me_zirids_001 = {
+	name = "Ali" # Ali ibn Tamim ibn al-Mui'zz
+	dynasty = 595 # Zirid
+	religion = "ashari"
+	culture = baranis
+	trait = education_martial_3
+	trait = sanhaja
+	
+	father = 20825 # Tamim ibn al-Mu'izz, the Zirid Emir (exists in berber.txt)
+	1046.1.1 = {
+		birth = yes
+	}
+	1062.1.1 = {
+		employer = baranis0027 
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_002 = {
+	name = "Tabadalt" # First name unknown, Daughter of al-Mansur ibn Buluggin and wife of Fulful ibn Sa'id ibn Khazrun
+	female = yes
+	dynasty = 595
+	religion = "ismaili"
+	culture = baranis
+	trait = sanhaja
+	
+	father = 20933
+	970.1.1 = {
+		birth = yes
+	}
+	992.1.1 = {
+		add_spouse = 155123
+	}
+	1020.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_003 = {
+	name = "Makush" # Mankush ibn Sanhaj al-Asghar, Grandfather of Ziri ibn Manad (As told by Ibn Khaldun)
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_004 #Sanhaj al-Asghar
+	835.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_004 = {
+	name = "Sanhaj"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_005
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_005 = {
+	name = "Awsfak"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_006
+	780.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_006 = {
+	name = "Jibril"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_007
+	760.1.1 = {
+		birth = yes
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_007 = {
+	name = "Yazid"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_008
+	740.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_008 = {
+	name = "Awsili"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_009
+	710.1.1 = {
+		birth = yes
+	}
+	770.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_009 = {
+	name = "Samlil"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+	father = me_zirids_010
+	690.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+
+me_zirids_010 = {
+	name = "Ja_far"
+	dynasty = me_zirid_pre_dynasty
+	trait = sanhaja
+	religion = "ashari"
+	culture = baranis
+
+#	father = ### #Ilyas ibn Uthman ibn sakad ibn Milkan ibn Kirt ibn Sanhaj al-Akbar
+	670.1.1 = {
+		birth = yes
+	}
+	700.1.1 = {
+		death = yes
+	}
+}
+
+## Awaraba tribe of Walili (Volubilis)
+me_awraba_001 = {
+	name = "Kenza" # Kenza al-Awrabiyyah, Wife of Idris I and Mother of Idris II of the Idrisid dynasty
+	female = yes
+	dynasty = me_awraba_dynasty
+	religion = "zayidi"
+	culture = baranis
+
+	father = me_awraba_002
+	770.1.1 = {
+		birth = yes
+	}
+	790.1.1 = {
+		add_spouse = 159501 # Idris I
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+
+me_awraba_002 = {
+	name = "Ishaq"
+	dynasty = me_awraba_dynasty
+	religion = "zayidi"
+	culture = baranis
+
+	father = me_awraba_003
+	750.1.1 = {
+		birth = yes
+	}
+	809.1.1 = {
+		death = yes
+	}
+}
+
+me_awraba_003 = {
+	name = "Muhammad"
+	dynasty = me_awraba_dynasty
+	religion = "ashari"
+	culture = baranis
+
+	father = me_awraba_004
+	720.1.1 = {
+		birth = yes
+	}
+	780.1.1 = {
+		death = yes
+	}
+}
+
+me_awraba_004 = {
+	name = "Hammid"
+	dynasty = me_awraba_dynasty
+	religion = "ashari"
+	culture = baranis
+
+	690.1.1 = {
+		birth = yes
+	}
+	750.1.1 = {
+		death = yes
+	}
+}
+
+## Banu Masala - Revolted against the Rustamids around 871 
+me_masala_001 = {
+	name = "Muhammad"
+	dynasty = me_masala_dynasty
+	religion = "wahbiya"
+	culture = baranis
+	trait = hawwara
+
+	father = me_masala_002
+	835.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+me_masala_002 = {
+	name = "Masala"
+	dynasty = me_masala_dynasty
+	religion = "wahbiya"
+	culture = baranis
+	trait = hawwara
+
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+## Tariq ibn Ziyad and his ancestors
+me_ibn_ziyad_001 = {
+	name = "Tariq" # Tariq ibn Ziyad, Legendary commander who led the conquest of al-Andalus
+	dynasty = me_ibn_ziyad_dynasty
+	religion = "ashari"
+	culture = baranis # Sources are conflicted on this matter, but the most widely accepted position is that he's a Berber
+	trait = education_martial_4
+	trait = brave
+	trait = zealous
+
+	father = me_ibn_ziyad_002
+	670.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_ziyad_002 = {
+	name = "Ziyad"
+	dynasty = me_ibn_ziyad_dynasty
+	religion = "ashari"
+	culture = baranis
+
+	father = me_ibn_ziyad_003
+	640.1.1 = {
+		birth = yes
+	}
+	700.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_ziyad_003 = {
+	name = "Abdullah"
+#	dynasty = me_ibn_ziyad_dynasty
+	religion = "ashari"
+	culture = baranis
+
+#	father = ### # Sources confict on his full geneology
+	620.1.1 = {
+		birth = yes
+	}
+	700.1.1 = {
+		death = yes
+	}
+}

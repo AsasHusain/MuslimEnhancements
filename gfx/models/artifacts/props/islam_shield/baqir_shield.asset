@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "baqir_shield_mesh"
+	file = "baqir_shield.mesh"
+
+	meshsettings = {
+		name = "baqir_shieldShape"
+		index = 0
+		texture_diffuse = "baqir_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "baqir_shield_entity"
+	pdxmesh = "baqir_shield_mesh"
+}

@@ -1,0 +1,21 @@
+﻿l_english:
+  #Court Imam approaches player character to ask if he wishes to try to become a hafiz
+  learning_theology_special.5000.t:0 "The Straight Path"
+  learning_theology_special.5000.desc:0 "#write the desc here"
+  learning_theology_special.5000.accept:0 "#player character agrees with the court imam"
+  learning_theology_special.5000.decline:0 "#player character refuses"
+  
+  #Player character has difficulties with memorization
+  learning_theology_special.5001.title:0 "Those who remain steadfast"
+  learning_theology_special.5001.desc:0 "#desc"
+  learning_theology_special.5001.a:0 "#player gains some stress but manages to memorize the verses, note add any verse if you want"
+  learning_theology_special.5001.b:0 "#Because of players big brain, he easily memorizes it, this includes either having the scholar trait or high learning"
+  learning_theology_special.5001.c:0 "#Player is too smoothbrain to memorize the verse or doesn't have enough guts"
+  
+  #The court imam tests the player character
+  learning_theology_special.5002.t:0 ""
+  learning_theology_special.5002.desc:0 ""
+  learning_theology_special.5002.a:0 "#Struggles throught the test but succeeds"
+  learning_theology_special.5002.b:0 "#Very big brain again, player character passes easily"
+  learning_theology_special.5002.c:0 "#Player character fails miserably or gives up"
+  

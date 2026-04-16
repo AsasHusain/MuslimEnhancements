@@ -1,0 +1,1750 @@
+﻿### Nukkari Revolt of 'Sahib al-Himar' ###
+me_nukkari_revolt_war = {
+	icon = peasant_war
+	group = event
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+
+	allowed_for_character = {
+		is_ai = yes
+	}
+
+	allowed_against_character = {
+		always = yes
+	}
+	target_titles = all
+	target_title_tier = duchy
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	valid_to_start = {
+		always = no
+	}
+
+	should_invalidate = {
+		NOT = {
+			any_in_list = {
+				list = target_titles
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder = {
+						target_is_same_character_or_above = scope:defender
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_religious_war_invalidation_region_message
+	
+	on_invalidated = {
+		scope:attacker = {
+			every_held_title = {
+				limit = { has_variable = temporary_title }
+				save_scope_as = destroyable_title
+				scope:attacker = { destroy_title = scope:destroyable_title }
+			}
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = me_nukkari_revolt_victory_desc
+			}
+			desc = me_nukkari_revolt_victory_desc
+		}
+	}
+
+	on_victory = {
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+		
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		title:d_tunis = { add_to_temporary_list = target_titles }
+		title:d_kairouan = { add_to_temporary_list = target_titles }
+
+		# go through the dejure hierarchy under target titles, transfer titles with same or worse tolerance holders (their religion equally or less tolerated than the defender's),
+		# take the holder as vassal otherwise and don't go deeper
+		every_in_list = {
+			list = target_titles
+			custom_tooltip = CONQUEST_CB_TITLE
+			every_in_de_jure_hierarchy = {
+				continue = {
+					OR = {
+						NOT = {
+							exists = holder
+						}
+						NOT = {
+							holder = {
+								target_is_liege_or_above = scope:defender
+							}
+						}
+						AND = {
+							scope:attacker.faith = {
+								faith_hostility_level_comparison = {
+									prev.holder.faith <= scope:defender.faith
+								}
+							}
+							holder = {
+								OR = {
+									this = scope:defender
+									target_is_liege_or_above = scope:defender
+								}
+							}
+						}
+					}
+					tier > tier_county
+				}
+				limit = {
+					tier = tier_county
+					exists = holder
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						OR = {
+							scope:attacker.faith = {
+								faith_hostility_level_comparison = {
+									prev.holder.faith >= scope:defender.faith
+								}
+							}
+							holder.primary_title.tier >= scope:attacker.primary_title.tier
+						}
+					}
+					add_to_temporary_list = titles_taken
+				}
+				else = {
+					holder = {
+						add_to_temporary_list = vassals_taken
+					}
+				}
+			}
+		}
+
+		every_in_list = {
+			list = titles_taken
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+
+		every_in_list = {
+			list = vassals_taken
+			change_liege = {
+				liege = scope:attacker
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# We give him the Nukkari Imam title, if no Imam exists
+		if = {
+			limit = { NOT = { exists = title:d_nukkari.holder } }
+
+			create_title_and_vassal_change = {
+				type = returned
+				save_scope_as = imam_change
+				add_claim_on_loss = no
+			}
+			title:d_nukkari = {
+				change_title_holder = {
+					holder = scope:attacker
+					change = scope:imam_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:imam_change
+			faith:nukkari = {
+				change_fervor = {
+					value = 20
+					desc = fervor_gain_nukkari_imamate_established
+				}
+			}
+		}
+		else_if = {
+			limit = { exists = title:d_nukkari.holder }
+			scope:attacker = { add_pressed_claim = title:d_nukkari }
+		}
+
+
+		# 50% chance for all North African Ibadi/Wahbi counties to become Nukkari
+		every_county_in_region = {
+			region = ghw_region_north_africa
+			custom = me_nukkari_convert_counties_custom
+			limit = {
+				faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				NOT = { exists = global_var:nukkari_revolt_end_counties_converted }
+			}
+			random = {
+				chance = 50
+				set_county_faith = faith:nukkari
+			}
+			set_global_variable = {
+				name = nukkari_revolt_end_counties_converted
+				value = yes
+			}
+		}
+
+		# Prestige Progress for the Attacker
+		every_in_list = {
+			list = target_titles
+			scope:attacker = {
+				add_prestige_experience = medium_prestige_value
+			}
+		}
+		
+		if = {
+			limit = { scope:attacker = { has_trait = peasant_leader } }
+			scope:attacker = { remove_trait = peasant_leader }
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor # Set by 'setup_invasion_cb'
+			IS_RELIGIOUS_WAR = yes
+			WINNER_FAME_SCALE = 10
+			LOSER_FAME_SCALE = -10
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+		
+		scope:attacker = { add_piety = { value = major_piety_gain } }
+		
+		# Trigger events for players that may want to play as them.
+		if = {
+			limit = { NOT = { exists = global_var:me_flag_nukkari_playable } }
+			every_player = { trigger_event = me_nukkari_revolt.0202 }
+			set_global_variable = { # Add global variable to prevent this from happening more than once
+				name = me_flag_nukkari_playable
+				value = yes
+			}
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		#Clean-up Nukkari leader
+		hidden_effect = {
+			scope:attacker = {
+				every_held_title = {
+					limit = { has_variable = temporary_title }
+					save_scope_as = destroyable_title
+					scope:attacker = { destroy_title = scope:destroyable_title }
+				}
+			}
+		}
+		#Move the Nukkari supporters to the Nukkari leader's court
+		hidden_effect = {
+			scope:attacker = {
+				every_in_list = {
+					list = NR_102_courtiers
+					add_courtier = prev 
+				}
+			}
+		}
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	white_peace_possible = no
+	on_white_peace_desc = { desc = county_conquest_cb_white_peace_desc }
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = county_conquest_cb_defeat_desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = {
+						is_local_player = yes
+						has_targeting_faction = yes
+					}
+				}
+				desc = county_conquest_cb_defeat_desc_attacker
+			}
+			desc = county_conquest_cb_defeat_desc
+		}
+	}
+
+	on_defeat = {
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+		
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
+		# 50% chance for all North African Nukkari counties to become Wahbi
+#		every_county_in_region = {
+#			region = ghw_region_north_africa
+#			custom = me_nukkari_deconvert_counties_custom
+#			limit = {
+#				faith = faith:nukkari
+#			}
+#			random = {
+#				chance = 50
+#				set_county_faith = faith:wahbiya
+#			}
+#		}
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = major_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for Defender
+		scope:defender = {
+			add_prestige_war_defender_effect = {
+				PRESTIGE_VALUE = major_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+
+		on_lost_aggression_war_discontent_loss = yes
+
+		#Clean-up Nukkari leader
+		hidden_effect = {
+			scope:attacker = {
+				every_held_title = {
+					limit = { has_variable = temporary_title }
+					save_scope_as = destroyable_title
+					scope:attacker = { destroy_title = scope:destroyable_title }
+				}
+			}
+		}
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	transfer_behavior = transfer
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = me_nukkari_revolt_name
+	war_name_base = me_nukkari_revolt_name
+	cb_name = me_nukkari_revolt_name
+
+	interface_priority = 79
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+	
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+}
+
+### Berberist Invasions
+berberist_invasion_cb = {
+	icon = peasant_war
+	group = civil_war
+	ai_only_against_liege = yes
+	target_titles = claim
+	
+	allowed_for_character = {
+		is_ai = yes
+	}
+
+	allowed_against_character = {
+		always = yes
+	}
+	target_titles = all
+	target_title_tier = duchy
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	valid_to_start = {
+		always = no
+	}
+
+	should_invalidate = {
+		NOT = {
+			scope:attacker = {
+				has_variable = rebel_leader_peasants
+				exists = joined_faction
+				joined_faction = var:rebel_leader_peasants
+			}
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = de_jure_cb_victory_desc_attacker
+			}
+			desc = de_jure_cb_victory_desc
+		}
+	}
+
+	on_victory = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		# EP3 Laamp possibility warning
+		scope:defender = { ep3_war_loss_adventurer_tt_effect = yes }
+
+		# go through the dejure hierarchy under target titles, transfer eligible vassals and sieze counties from ineligible ones
+		every_in_list = {
+			list = target_titles
+			custom_tooltip = CONQUEST_CB_TITLE
+
+			conquest_cb_title_transfer = {
+				RELIGIOUS_WAR = no
+			}
+		}
+
+		every_in_list = {
+			list = vassals_taken
+			change_liege = {
+				liege = scope:attacker
+				change = scope:change
+			}
+		}
+
+		every_in_list = {
+			list = titles_taken
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		
+		# Give HoF title
+		scope:attacker = {
+			if = {
+				limit = { faith = faith:hamimist }
+				title:d_hamimist = {
+					change_title_holder = {
+						holder = scope:attacker
+						change = scope:change
+					}
+					add_title_law = temporal_head_of_faith_succession_law
+				}
+			}
+			else_if = {
+				limit = { faith = faith:kaduist }
+				title:d_kaduist = {
+					change_title_holder = {
+						holder = scope:attacker
+						change = scope:change
+					}
+					add_title_law = temporal_head_of_faith_succession_law
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_realm_law = same_faith_succession_law }
+					}
+					add_realm_law_skip_effects = same_faith_succession_law
+				}
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Prestige Progress for the Attacker
+		every_in_list = {
+			list = target_titles
+			scope:attacker = {
+				add_prestige_experience = medium_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+		
+		if = { # Warning that only counties are changing hands
+			limit = {
+				any_in_list = {
+					list = target_titles
+					tier = tier_duchy
+				}
+			}
+			random_in_list = {
+				list = target_titles
+				limit = { tier = tier_duchy }
+				save_scope_as = de_jure_target
+			}
+		}
+		if = {
+			limit = {
+				any_in_list = {
+					list = target_titles
+					tier = tier_duchy
+					holder = scope:defender
+				}
+			}
+			if = {
+				limit = {
+					scope:defender = {
+						any_held_title = {
+							tier = tier_county
+							NOT = { target_is_de_jure_liege_or_above = scope:de_jure_target }
+						}
+					}
+				}
+				custom_tooltip = conquest_title_not_transferred_tt
+			}
+			else = { custom_tooltip = conquest_title_destroyed_tt }
+		}
+		else = {
+			if = {
+				limit = {
+					any_in_list = {
+						list = target_titles
+						tier = tier_duchy
+						is_title_created = yes
+					}
+				}
+				custom_tooltip = conquest_title_usurp_tt
+			}
+			else = { custom_tooltip = conquest_title_create_tt }
+		}
+		
+		# For those who may wish to play as the Berberist leader
+		if = {
+			limit = { scope:attacker = { has_trait = hamimist_prophet } }
+			every_player = { trigger_event = me_berberist_events.0005 }
+		}
+		else_if = {
+			limit = { scope:attacker = { has_trait = kaduist_prophet } }
+			every_player = { trigger_event = me_berberist_events.0105 }
+		}
+	}
+
+	white_peace_possible = no
+	on_white_peace_desc = { desc = county_conquest_cb_white_peace_desc }
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = de_jure_cb_white_peace_desc_defender
+			}
+			desc = de_jure_cb_white_peace_desc
+		}
+	}
+
+	on_defeat = {
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+		
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = major_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for Defender
+		scope:defender = {
+			add_prestige_war_defender_effect = {
+				PRESTIGE_VALUE = major_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+
+		on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+		
+		scope:defender = {
+			if = {
+				limit = {
+					scope:attacker = { is_imprisoned = no }
+				}
+				imprison = {
+					target = scope:attacker
+					type = dungeon
+				}
+			}
+			# Aftermath event
+			if = {
+				limit =  { scope:attacker = { has_trait = hamimist_prophet } }
+				trigger_event = me_berberist_events.0004 
+			}
+			else_if = {
+				limit = { scope:attacker = { has_trait = kaduist_prophet } } 
+				trigger_event = me_berberist_events.0104 
+			}
+		}
+		scope:attacker = {
+			every_courtier = { add_to_list = BI_list }
+			every_held_title = {
+				save_scope_as = destroyable_title
+				scope:attacker = { destroy_title = scope:destroyable_title }
+			}
+		}
+		hidden_effect = {
+			every_in_list = {
+				list = BI_list
+				if = {
+					limit = {
+						is_imprisoned = no
+					}
+					scope:defender = {
+					imprison = {
+							target = PREV
+							type = dungeon
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_invalidate_war_title
+
+	on_primary_attacker_death = invalidate
+	on_primary_defender_death = inherit
+
+	transfer_behavior = transfer
+
+	attacker_allies_inherit = no
+	defender_allies_inherit = yes
+
+	war_name = "BERBERIST_INVASION_CB_WAR_NAME"
+	war_name_base = "BERBERIST_INVASION_CB_WAR_NAME_BASE"
+	cb_name = BERBERIST_INVASION_CB_NAME
+
+	interface_priority = 80
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+
+	max_attacker_score_from_battles = 100
+	max_defender_score_from_battles = 50
+
+	max_ai_diplo_distance_to_title = 500
+}
+
+### Alid Egyptian Revolts
+me_alid_egypt_revolt_cb = {
+	icon = peasant_war
+	group = event
+	ai_only_against_liege = yes
+	target_titles = claim
+	
+	allowed_for_character = {
+		is_ai = yes
+	}
+
+	allowed_against_character = {
+		always = yes
+	}
+	target_titles = all
+	target_title_tier = duchy
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	valid_to_start = {
+		always = no
+	}
+
+	should_invalidate = {
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = de_jure_cb_victory_desc_attacker
+			}
+			desc = de_jure_cb_victory_desc
+		}
+	}
+
+	on_victory = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		# EP3 Laamp possibility warning
+		scope:defender = { ep3_war_loss_adventurer_tt_effect = yes }
+
+		# go through the dejure hierarchy under target titles, transfer eligible vassals and sieze counties from ineligible ones
+		every_in_list = {
+			list = target_titles
+			custom_tooltip = CONQUEST_CB_TITLE
+
+			conquest_cb_title_transfer = {
+				RELIGIOUS_WAR = no
+			}
+		}
+
+		every_in_list = {
+			list = vassals_taken
+			change_liege = {
+				liege = scope:attacker
+				change = scope:change
+			}
+		}
+
+		every_in_list = {
+			list = titles_taken
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Prestige Progress for the Attacker
+		every_in_list = {
+			list = target_titles
+			scope:attacker = {
+				add_prestige_experience = medium_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+		
+		if = { # Warning that only counties are changing hands
+			limit = {
+				any_in_list = {
+					list = target_titles
+					tier = tier_duchy
+				}
+			}
+			random_in_list = {
+				list = target_titles
+				limit = { tier = tier_duchy }
+				save_scope_as = de_jure_target
+			}
+		}
+		if = {
+			limit = {
+				any_in_list = {
+					list = target_titles
+					tier = tier_duchy
+					holder = scope:defender
+				}
+			}
+			if = {
+				limit = {
+					scope:defender = {
+						any_held_title = {
+							tier = tier_county
+							NOT = { target_is_de_jure_liege_or_above = scope:de_jure_target }
+						}
+					}
+				}
+				custom_tooltip = conquest_title_not_transferred_tt
+			}
+			else = { custom_tooltip = conquest_title_destroyed_tt }
+		}
+		else = {
+			if = {
+				limit = {
+					any_in_list = {
+						list = target_titles
+						tier = tier_duchy
+						is_title_created = yes
+					}
+				}
+				custom_tooltip = conquest_title_usurp_tt
+			}
+			else = { custom_tooltip = conquest_title_create_tt }
+		}
+	}
+
+	white_peace_possible = no
+	on_white_peace_desc = { desc = county_conquest_cb_white_peace_desc }
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = de_jure_cb_white_peace_desc_defender
+			}
+			desc = de_jure_cb_white_peace_desc
+		}
+	}
+
+	on_defeat = {
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+		
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = major_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for Defender
+		scope:defender = {
+			add_prestige_war_defender_effect = {
+				PRESTIGE_VALUE = major_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = medium_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+
+		on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+		
+		scope:defender = {
+			if = {
+				limit = {
+					scope:attacker = { is_imprisoned = no }
+				}
+				imprison = {
+					target = scope:attacker
+					type = dungeon
+				}
+			}
+			every_living_character = {
+				limit = { is_courtier_of = scope:attacker }
+				save_scope_as = courtier_alid
+				scope:defender = {
+					imprison = {
+						target = scope:courtier_alid
+						type = dungeon
+					}
+				}
+			}
+		}
+		scope:attacker = {
+			if = {
+				limit = { government_has_flag = government_is_landless_adventurer }
+				every_held_title = {
+					save_scope_as = destroyable_title
+					scope:attacker = { destroy_title = scope:destroyable_title }
+				}
+			}
+		}
+		
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+		scope:attacker = {
+			every_realm_county = {
+				change_title_holder = {
+					holder = scope:defender
+					change = scope:change
+				}
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+
+	on_invalidated_desc = msg_invalidate_war_title
+
+	on_primary_attacker_death = invalidate
+	on_primary_defender_death = inherit
+
+	transfer_behavior = transfer
+
+	attacker_allies_inherit = no
+	defender_allies_inherit = yes
+
+	war_name = "ALID_REVOLT_CB_WAR_NAME"
+	war_name_base = "ALID_REVOLT_CB_WAR_NAME_BASE"
+	cb_name = ALID_REVOLT_CB_NAME
+
+	interface_priority = 80
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+
+	max_attacker_score_from_battles = 100
+	max_defender_score_from_battles = 50
+
+	max_ai_diplo_distance_to_title = 500
+}
+
+### 867 Italian reconquest of Bari ###
+me_italian_bari_reconquest_cb = {
+	icon = county_conquest_cb
+	group = event
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+
+	allowed_for_character = {
+		always = no
+	}
+
+	allowed_against_character = {
+		#scope:attacker = {
+		#	ALL_FALSE = {
+		#		top_liege = scope:defender.top_liege
+		#		liege = scope:defender
+		#	}
+		#}
+	}
+	target_titles = neighbor_land
+	target_title_tier = all
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	valid_to_start = {
+		scope:target = {
+			tier = tier_county
+		}
+		scope:attacker = { # The attacker has a County in an uncreated Duchy
+			any_sub_realm_title = {
+				tier = tier_county
+				duchy = {
+					is_title_created = no
+					any_in_de_jure_hierarchy = {
+						this = scope:target
+					}
+				}
+			}
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		# Struggle constraint
+		custom_tooltip = {
+			text = struggle_involvement_cb_check_failure
+			struggle_blocks_invasion_conquest_cb_trigger = yes
+		}
+	}
+
+	should_invalidate = {
+		NOT = {
+			any_in_list = {
+				list = target_titles
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_county_conquest_war_invalidated_message
+
+	on_invalidated = {
+	}
+
+	cost = {
+		piety = {
+			value = 0
+			add = common_cb_impious_piety_cost
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					scope:attacker.primary_title.tier <= tier_county
+				}
+				add = {
+					value = major_prestige_value
+					desc = CB_BASE_COST
+				}
+			}
+			else = {
+				add = {
+					value = massive_prestige_value
+					desc = CB_BASE_COST
+				}
+			}
+
+			multiply = common_cb_prestige_cost_multiplier
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = ducal_conquest_cb_victory_desc_attacker
+			}
+			desc = ducal_conquest_cb_victory_desc
+		}
+	}
+
+	on_victory = {
+		##Give the Attacker a modifier
+		scope:attacker = { add_character_modifier = won_bari_war_modifier }
+
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+	
+		hidden_effect = {
+			title:c_rossano.holder = { save_scope_as = me_rossano_holder }
+			if = {
+				limit = { scope:me_rossano_holder = title:e_byzantium.holder }
+				scope:me_rossano_holder = { trigger_event = ss_wars.0100 }
+			}
+			else = {
+				title:e_byzantium.holder = { trigger_event = ss_wars.0100 }
+				scope:me_rossano_holder = { trigger_event = ss_wars.0101 }
+			}
+			if = {
+				limit = { NOT = { scope:defender = title:c_salerno.holder } }
+				title:c_salerno.holder = { trigger_event = ss_wars.0102 }
+			}
+		}
+		
+		##The Partition of Bari
+		bari_partition_effect = yes
+		
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		# go through the dejure hierarchy under target titles, transfer titles with same or worse tolerance holders (their religion equaly or less tolerated than the defender's),
+		# take the holder as vassal otherwise and don't go deeper
+		every_in_list = {
+			list = target_titles
+			custom_tooltip = CONQUEST_CB_TITLE
+			every_in_de_jure_hierarchy = {
+				continue = {
+					OR = {
+						NOT = {
+							exists = holder
+						}
+						NOT = {
+							holder = {
+								target_is_liege_or_above = scope:defender
+							}
+						}
+						AND = {
+							scope:attacker.faith = {
+								faith_hostility_level_comparison = {
+									prev.holder.faith <= scope:defender.faith
+								}
+							}
+							holder = {
+								OR = {
+									this = scope:defender
+									target_is_liege_or_above = scope:defender
+								}
+							}
+						}
+					}
+					tier > tier_county
+				}
+				limit = {
+					tier = tier_county
+					exists = holder
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						OR = {
+							scope:attacker.faith = {
+								faith_hostility_level_comparison = {
+									prev.holder.faith >= scope:defender.faith
+								}
+							}
+							holder.primary_title.tier >= scope:attacker.primary_title.tier
+						}
+					}
+					add_to_temporary_list = titles_taken
+				}
+				else = {
+					holder = {
+						add_to_temporary_list = vassals_taken
+					}
+				}
+			}
+		}
+
+		every_in_list = {
+			list = titles_taken
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+
+		every_in_list = {
+			list = vassals_taken
+			change_liege = {
+				liege = scope:attacker
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Prestige Progress for the Attacker
+		every_in_list = {
+			list = target_titles
+			scope:attacker = {
+				add_prestige_experience = minor_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = ducal_conquest_cb_white_peace_desc_defender
+			}
+			desc = ducal_conquest_cb_white_peace_desc
+		}
+	}
+
+	on_white_peace = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = minor_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker # not important as scale values are identical
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_white_peace_effect = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = ducal_conquest_cb_defeat_desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = {
+						is_local_player = yes
+						has_targeting_faction = yes
+					}
+				}
+				desc = ducal_conquest_cb_defeat_desc_attacker
+			}
+			desc = ducal_conquest_cb_defeat_desc
+		}
+	}
+
+	on_defeat = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_low_effect = yes }
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = {
+				GOLD_VALUE = 2
+			}
+			add_prestige = {
+				value = medium_prestige_value
+				multiply = -2.0
+			}
+		}
+
+		# Prestige for Defender
+		scope:defender = {
+			add_prestige_war_defender_effect = {
+				PRESTIGE_VALUE = medium_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+		on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	transfer_behavior = transfer
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = "DUCAL_CONQUEST_WAR_NAME"
+	war_name_base = "DUCAL_CONQUEST_WAR_NAME_BASE"
+	cb_name = "DUCAL_CONQUEST_CB_NAME"
+
+	interface_priority = 79
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+	
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+
+	max_ai_diplo_distance_to_title = 1500
+}
+
+### 1066 Zirid Intervention Sicily ###
+me_zirid_sicily_intervention_cb = {
+	icon = county_conquest_cb
+	group = event
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+
+	allowed_for_character = {
+		always = no
+	}
+
+	allowed_against_character = {
+		#scope:attacker = {
+		#	ALL_FALSE = {
+		#		top_liege = scope:defender.top_liege
+		#		liege = scope:defender
+		#	}
+		#}
+	}
+	target_titles = neighbor_land
+	target_title_tier = all
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+
+	valid_to_start = {
+		scope:target = {
+			tier = tier_county
+		}
+		scope:attacker = { # The attacker has a County in an uncreated Duchy
+			any_sub_realm_title = {
+				tier = tier_county
+				duchy = {
+					is_title_created = no
+					any_in_de_jure_hierarchy = {
+						this = scope:target
+					}
+				}
+			}
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		# Struggle constraint
+		custom_tooltip = {
+			text = struggle_involvement_cb_check_failure
+			struggle_blocks_invasion_conquest_cb_trigger = yes
+		}
+	}
+
+	should_invalidate = {
+		NOT = {
+			any_in_list = {
+				list = target_titles
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_county_conquest_war_invalidated_message
+
+	on_invalidated = {
+	}
+
+	cost = {
+		piety = {
+			value = 0
+			add = common_cb_impious_piety_cost
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = ducal_conquest_cb_victory_desc_attacker
+			}
+			desc = ducal_conquest_cb_victory_desc
+		}
+	}
+
+	on_victory = {
+		scope:attacker = { add_unpressed_claim = title:d_calabria }
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		# EP3 Laamp possibility warning
+		scope:defender = { ep3_war_loss_adventurer_tt_effect = yes }
+
+		# go through the dejure hierarchy under target titles, transfer titles with same or worse tolerance holders (their religion equaly or less tolerated than the defender's),
+		# take the holder as vassal otherwise and don't go deeper
+		every_in_list = {
+			list = target_titles
+			custom_tooltip = CONQUEST_CB_TITLE
+			every_in_de_jure_hierarchy = {
+				continue = {
+					OR = {
+						NOT = {
+							exists = holder
+						}
+						NOT = {
+							holder = {
+								target_is_liege_or_above = scope:defender
+							}
+						}
+						AND = {
+							scope:attacker.faith = {
+								faith_hostility_level_comparison = {
+									prev.holder.faith <= scope:defender.faith
+								}
+							}
+							holder = {
+								OR = {
+									this = scope:defender
+									target_is_liege_or_above = scope:defender
+								}
+							}
+						}
+					}
+					tier > tier_county
+				}
+				limit = {
+					tier = tier_county
+					exists = holder
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						OR = {
+							scope:attacker.faith = {
+								faith_hostility_level_comparison = {
+									prev.holder.faith >= scope:defender.faith
+								}
+							}
+							holder.primary_title.tier >= scope:attacker.primary_title.tier
+						}
+					}
+					add_to_temporary_list = titles_taken
+				}
+				else = {
+					holder = {
+						add_to_temporary_list = vassals_taken
+					}
+				}
+			}
+		}
+
+		every_in_list = {
+			list = titles_taken
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+
+		every_in_list = {
+			list = vassals_taken
+			change_liege = {
+				liege = scope:attacker
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Prestige Progress for the Attacker
+		every_in_list = {
+			list = target_titles
+			scope:attacker = {
+				add_prestige_experience = minor_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = ducal_conquest_cb_white_peace_desc_defender
+			}
+			desc = ducal_conquest_cb_white_peace_desc
+		}
+	}
+
+	on_white_peace = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = minor_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:attacker # not important as scale values are identical
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_white_peace_effect = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = zirid_intervention_cb_defeat_desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = {
+						is_local_player = yes
+						has_targeting_faction = yes
+					}
+				}
+				desc = zirid_intervention_cb_defeat_desc_attacker
+			}
+			desc = zirid_intervention_cb_defeat_desc
+		}
+	}
+
+	on_defeat = {
+		me_zirid_intervention_defeat_effect = yes
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+			
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_low_effect = yes }
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			pay_short_term_gold_reparations_effect = {
+				GOLD_VALUE = 2
+			}
+			add_prestige = {
+				value = medium_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for Defender
+		scope:defender = {
+			add_prestige_war_defender_effect = {
+				PRESTIGE_VALUE = medium_prestige_value
+			}
+		}
+
+		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
+		modify_allies_of_participants_fame_values = {
+			WINNER = scope:defender
+			FAME_BASE = minor_prestige_value
+			IS_RELIGIOUS_WAR = no
+			WINNER_ALLY_FAME_SCALE = 1
+			LOSER_ALLY_FAME_SCALE = 1
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+		on_lost_aggression_war_discontent_loss = yes
+		hidden_effect = { ME_RICE_second_taifa_inspiration_effect = yes } # For RICE
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	transfer_behavior = transfer
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = "DUCAL_CONQUEST_WAR_NAME"
+	war_name_base = "DUCAL_CONQUEST_WAR_NAME_BASE"
+	cb_name = "DUCAL_CONQUEST_CB_NAME"
+
+	interface_priority = 79
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+	
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+
+	max_ai_diplo_distance_to_title = 1500
+}

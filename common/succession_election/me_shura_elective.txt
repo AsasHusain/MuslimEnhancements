@@ -1,0 +1,238 @@
+﻿me_shura_elective = {
+	elector_vote_strength = {
+		base = 1
+		modifier = {
+			desc = tooltip_me_shura_vote_strength_learning
+			add = 1
+			learning >= 15
+			learning < 20
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_strength_learning
+			add = 2
+			learning >= 20
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_strength_hafidh
+			add = 1
+			NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+			NOT = { faith = faith:druze }
+			has_trait_xp = {
+				trait = hafidh
+				value >= 100
+			}
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_scholarly_education
+			add = 2
+			learning >= 10
+			OR = {
+				has_trait = education_learning
+				has_lifestyle = learning_lifestyle
+				has_learning_lifestyle_trait_trigger = yes
+				has_trait = lifestyle_mystic
+				has_trait = lifestyle_physician
+			}
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_sinful
+			add = -1
+			num_sinful_traits = 2
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_sinful
+			add = -2
+			num_sinful_traits >= 3
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_virtuous
+			add = 2
+			num_virtuous_traits >= 2
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_virtuous
+			add = 3
+			num_virtuous_traits >= 3
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_piety_negative
+			add = -1
+			piety_level <= -1
+		}
+		modifier = {
+			desc = tooltip_me_shura_vote_piety_positive
+			add = 1
+			piety_level >= 3
+		}
+#		modifier = {
+#			desc = tooltip_me_shura_vote_strength_piety_level_4
+#			add = 2
+#			piety_level = 4
+#		}
+#		modifier = {
+#			desc = tooltip_me_shura_vote_strength_piety_level_5
+#			add = 3
+#			piety_level = 5
+#		}
+	}
+	
+	electors = {
+		add = holder
+		add = {
+			type = holder_direct_vassals
+			limit = {
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				OR = { #1 or 2 tiers of difference for Electors.
+					scope:title = { tier = tier_county }
+					AND = {
+						scope:title = { tier = tier_duchy }
+						highest_held_title_tier >= 1
+					}
+					AND = {
+						scope:title = { tier = tier_kingdom }
+						highest_held_title_tier >= 2
+					}
+					AND = {
+						scope:title = { tier = tier_empire }
+						highest_held_title_tier >= 3
+					}
+				}
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+		add = {
+			type = holder_council_members
+			limit = {
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+	}
+
+	candidate_score = {
+		base = 0
+		######################	Elector self-voting pattern	##########################
+		elector_self_voting_pattern_feudal_elective_modifier = yes
+
+		##########################	Holder voting pattern	##########################
+		holder_voting_pattern_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (circumstances)	##########################
+		elector_voting_pattern_circumstances_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (prestige/piety)	##########################
+		elector_voting_pattern_prestige_piety_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (traits)	##########################
+		elector_voting_pattern_traits_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (opinion)	##########################
+		elector_voting_pattern_opinion_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (misc)	##########################
+		elector_voting_pattern_circumstances_misc_elective_modifier = yes
+		
+		me_shura_elector_voting_pattern_modifier = yes
+	}
+	
+	#scope:candidate = Candidate, scope:title = Title, scope:holder_candidate = Candidate currently selected by ruler.
+	candidates = {
+		add = {
+			type = holder_direct_vassals
+			limit = {
+				feudal_elective_potential_landed_candidate_trigger = yes
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+		add = {
+			type = title_dejure_vassals
+			limit = {
+				is_independent_ruler = yes #De jure vassals of the title who are not de facto vassals of the current ruler.
+				feudal_elective_potential_landed_candidate_trigger = yes
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+		add = {
+			type = title_claimants
+			limit = {
+				feudal_elective_potential_landless_claimant_candidate_trigger = yes
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+		add = {
+			type = holder_council_members
+			limit = {
+				feudal_elective_potential_landless_claimant_candidate_trigger = yes
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+		add = {
+			type = holder_dynasty
+			limit = {
+				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+				is_adult = yes
+				NOT = { is_incapable = yes }
+				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
+				OR = {
+					faith = scope:holder.faith
+					AND = { # Both faiths must view each other as Righteous
+						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+					}
+				}
+			}
+		}
+	}
+}

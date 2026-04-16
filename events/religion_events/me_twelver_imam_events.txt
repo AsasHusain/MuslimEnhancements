@@ -1,0 +1,60 @@
+﻿namespace = twelver_imam_event
+
+twelver_imam_event.0001 = {
+	hidden = yes
+	
+	immediate = {
+		twelver_mahdi_appears_effect = yes
+	}
+}
+
+twelver_imam_event.0002 = {
+	title = twelver_imam_event.0002.t
+	desc = twelver_imam_event.0002.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = scope:twelver_mahdi
+		animation = personality_zealous
+	}
+
+	immediate = {
+		character:163025 = { # Ali 'al-Hadi'
+			save_scope_as = al_hadi
+		}
+		character:163026 = { # Hassan 'al-Askari'
+			save_scope_as = al_askari
+		}
+	}
+
+	option = {
+		name = twelver_imam_event.0002.a
+		custom_tooltip = twelver_imam_event.0002.tt
+	}
+}
+
+twelver_imam_event.0003 = {
+	hidden = yes
+	
+	immediate = {
+		twelver_mahdi_appears_again_effect = yes
+	}
+}
+
+twelver_imam_event.0004 = {
+	title = twelver_imam_event.0004.t
+	desc = twelver_imam_event.0004.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = scope:twelver_mahdi
+		animation = personality_zealous
+	}
+
+	option = {
+		name = twelver_imam_event.0004.a
+		custom_tooltip = twelver_imam_event.0004.tt
+	}
+}

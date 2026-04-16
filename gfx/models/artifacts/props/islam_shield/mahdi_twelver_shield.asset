@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "mahdi_twelver_shield_mesh"
+	file = "mahdi_twelver_shield.mesh"
+
+	meshsettings = {
+		name = "mahdi_twelver_shieldShape"
+		index = 0
+		texture_diffuse = "mahdi_twelver_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "mahdi_twelver_shield_entity"
+	pdxmesh = "mahdi_twelver_shield_mesh"
+}

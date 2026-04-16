@@ -1,0 +1,106 @@
+### Hijri Calendar Scripted Effects ###
+
+# Initialize the Hijri date based on the game's start date
+# Reference dates computed using the tabular Islamic calendar (epoch JDN 1948438):
+#   867.1.1   = 17 Dhu al-Hijjah 252 AH
+#   1066.9.15 = 16 Shawwal 458 AH
+#   1178.1.1  = 3 Rajab 573 AH
+#   1337.1.1  = 20 Jumada al-Ula 737 AH
+me_initialize_hijri_date_effect = {
+	# Only initialize once
+	if = {
+		limit = {
+			NOT = { exists = global_var:me_hijri_year }
+		}
+
+		# 867 start date: 17 Dhu al-Hijjah 252 AH
+		if = {
+			limit = { game_start_date = 867.1.1 }
+			set_global_variable = { name = me_hijri_year value = 252 }
+			set_global_variable = { name = me_hijri_month value = 12 }
+			set_global_variable = { name = me_hijri_day value = 17 }
+		}
+		# 1066 start date: 16 Shawwal 458 AH
+		else_if = {
+			limit = { game_start_date = 1066.9.15 }
+			set_global_variable = { name = me_hijri_year value = 458 }
+			set_global_variable = { name = me_hijri_month value = 10 }
+			set_global_variable = { name = me_hijri_day value = 16 }
+		}
+		# 1178 start date: 3 Rajab 573 AH
+		else_if = {
+			limit = { game_start_date = 1178.1.1 }
+			set_global_variable = { name = me_hijri_year value = 573 }
+			set_global_variable = { name = me_hijri_month value = 7 }
+			set_global_variable = { name = me_hijri_day value = 3 }
+		}
+		# 1337 start date: 20 Jumada al-Ula 737 AH
+		else_if = {
+			limit = { game_start_date = 1337.1.1 }
+			set_global_variable = { name = me_hijri_year value = 737 }
+			set_global_variable = { name = me_hijri_month value = 5 }
+			set_global_variable = { name = me_hijri_day value = 20 }
+		}
+		# Fallback for any other start date: approximate from formula
+		else = {
+			set_global_variable = {
+				name = me_hijri_year
+				value = me_hijri_year_from_formula
+			}
+			set_global_variable = { name = me_hijri_month value = 1 }
+			set_global_variable = { name = me_hijri_day value = 1 }
+		}
+	}
+}
+
+# Advance the Hijri calendar by exactly 1 day (called daily via on_action)
+# Hijri month lengths:
+#   Odd months (1,3,5,7,9,11): 30 days
+#   Even months (2,4,6,8,10): 29 days
+#   Month 12: 29 days normally, 30 days in leap years
+#   Leap years in 30-year cycle: 2, 5, 7, 10, 13, 16, 18, 21, 24, 26, 29
+me_advance_hijri_day_effect = {
+	if = {
+		limit = { exists = global_var:me_hijri_year }
+
+		# Increment day by 1
+		change_global_variable = { name = me_hijri_day add = 1 }
+
+		# Check overflow: odd month (30 days), day hit 31
+		if = {
+			limit = {
+				me_hijri_month_is_odd >= 1
+				me_hijri_day_display >= 31
+			}
+			set_global_variable = { name = me_hijri_day value = 1 }
+			change_global_variable = { name = me_hijri_month add = 1 }
+		}
+		# Check overflow: month 12 in leap year (30 days), day hit 31
+		else_if = {
+			limit = {
+				me_hijri_month_value >= 12
+				me_hijri_month_value < 13
+				me_hijri_leap_check < 11
+				me_hijri_day_display >= 31
+			}
+			set_global_variable = { name = me_hijri_day value = 1 }
+			change_global_variable = { name = me_hijri_month add = 1 }
+		}
+		# Check overflow: even month (29 days), day hit 30
+		else_if = {
+			limit = {
+				me_hijri_month_is_odd < 1
+				me_hijri_day_display >= 30
+			}
+			set_global_variable = { name = me_hijri_day value = 1 }
+			change_global_variable = { name = me_hijri_month add = 1 }
+		}
+
+		# Year rollover: month exceeded 12
+		if = {
+			limit = { me_hijri_month_value >= 13 }
+			set_global_variable = { name = me_hijri_month value = 1 }
+			change_global_variable = { name = me_hijri_year add = 1 }
+		}
+	}
+}

@@ -1,0 +1,2060 @@
+﻿### Startup effects
+me_add_doctrine_startup_effect = {
+	if = {
+		limit = { # Double-check to make certain this has not already happened
+			NOT = { exists = global_var:me_flag_add_doctrine }	
+		}
+		set_global_variable = { # Add global variable to prevent this from happening more than once
+			name = me_flag_add_doctrine
+			value = yes
+		}
+		every_religion_global = {
+			every_faith = {
+				## Add intoxication crime doctrine to faiths
+				if = {
+					limit = { 
+						NOR = { 
+							religion_tag = islam_religion
+							religion_tag = jainism_religion
+							trait_is_sin = drunkard ## Just incase any modded faith has drunkard as a sin
+							this = faith:zurvanism # Behafardism
+							this = faith:sabianism
+							this = faith:mandeaism 
+							this = faith:priscillianism
+							this = faith:bogomilist
+							has_doctrine = doctrine_me_intoxication_accepted
+							has_doctrine = doctrine_me_intoxication_shunned
+							has_doctrine = doctrine_me_intoxication_crime
+							has_doctrine = doctrine_me_intoxication_virtuous
+						} 
+					}
+					add_doctrine = doctrine_me_intoxication_accepted
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							trait_is_sin = drunkard ## Just incase any modded faith has drunkard as a sin
+							this = faith:sabianism
+							this = faith:mandeaism 
+							this = faith:priscillianism
+							this = faith:bogomilist
+							religion_tag = jainism_religion
+							
+						}
+						NOR = {
+							has_doctrine = doctrine_me_intoxication_accepted
+							has_doctrine = doctrine_me_intoxication_shunned
+							has_doctrine = doctrine_me_intoxication_crime
+							has_doctrine = doctrine_me_intoxication_virtuous
+						}
+					}
+					add_doctrine = doctrine_me_intoxication_shunned
+				}
+#				else_if = { #Placeholder incase it is needed to give a faith the crime doctine
+#					limit = { 
+#						OR = { 
+#						} 
+#					}
+#					add_doctrine = doctrine_me_intoxication_crime
+#				}
+#				else_if = { #Placeholder incase it is needed to give a faith the virtuous doctine
+#					limit = { 
+#						OR = { 
+#						} 
+#					}
+#					add_doctrine = doctrine_me_intoxication_virtuous
+#				}
+
+				## Add Ablution doctrine to faiths
+				if = {
+					limit = { 
+						NOR = { 
+							religion_tag = islam_religion
+							religion_tag = judaism_religion
+							this = faith:mandeaism
+							has_doctrine = doctrine_me_ablution_handwashing
+							has_doctrine = doctrine_me_ablution_full
+						}
+					}
+					add_doctrine = doctrine_me_ablution_none
+				}
+				else_if = { # Jewish Handwashing
+					limit = { religion_tag = judaism_religion }
+					add_doctrine = doctrine_me_ablution_handwashing
+				}
+				else_if = { # Mandaean Rishama
+					limit = { this = faith:mandeaism }
+					add_doctrine = doctrine_me_ablution_full
+				}
+			}
+		}
+	}
+}
+
+me_setup_tributaries_effect = {
+	if = {
+		limit = { game_start_date = 867.1.1 }
+		me_867_tributary_setup_effect = yes
+	}
+	else_if = {
+		limit = { game_start_date = 1066.9.15 }
+		me_1066_tributary_setup_effect = yes
+	}
+	else_if = {
+		limit = { game_start_date = 1178.10.1 }
+		me_1178_tributary_setup_effect = yes
+	}
+}
+
+me_buildings_setup_effect = {
+	if = {
+		limit = { game_start_date >= 867.1.1 }
+		title:b_bagaran.title_province = { add_special_building = etchmiadzin_cathedral_01 }
+		title:b_berkri.title_province = { add_special_building = chapel_dzordzor_01 }
+		title:b_maku.title_province = { add_special_building = monastery_saint_thaddeus_01 set_holding_type = church_holding }
+		title:b_naxcivan.title_province = { add_special_building = monastery_saint_stepanos_01 }
+		title:b_almeria.title_province = { add_special_building_slot = alcazaba_almeria_01 }
+		title:b_sevilla.title_province = { add_special_building_slot = alcazar_seville_01 }
+		title:b_badajoz.title_province = { add_special_building_slot = alcazaba_badajoz_01 }
+		title:b_faro.title_province = { add_special_building = faro_walls_01 }
+	}
+	if = {
+		limit = { game_start_date >= 1066.1.1 }
+		title:b_bagaran.title_province = { add_special_building = etchmiadzin_cathedral_01 }
+		title:b_almeria.title_province = { add_special_building = alcazaba_almeria_01 }
+		title:b_sevilla.title_province = { add_special_building = alcazar_seville_01 }
+		title:b_badajoz.title_province = { add_special_building = alcazaba_badajoz_01 }
+	}
+}
+
+me_add_innovations_startup_effect = {
+	every_culture_global = {
+		limit = { has_cultural_pillar = heritage_arabic }
+		add_innovation = innovation_me_summer_raids
+	}
+	culture:andalusian = {
+		add_innovation = innovation_me_summer_raids
+	}
+	culture:butr = {
+		add_innovation = innovation_me_summer_raids
+	}
+	culture:baranis = {
+		add_innovation = innovation_me_summer_raids
+	}
+}
+
+me_shewa_setup_effect = {
+	if = {
+		limit = { game_start_date = 1066.9.15 }
+		character:me_ethiopian_fic_001 = {
+			get_title = title:c_awssa
+			get_title = title:c_sitti
+		}
+		character:me_ethiopian_fic_002 = {
+			get_title = title:c_dawaro
+			get_title = title:c_gabal
+			get_title = title:c_arusi
+		}
+	}
+	if = {
+		limit = { game_start_date = 1178.10.1 }
+		character:me_ethiopian_fic_003 = {
+			get_title = title:c_awssa
+			get_title = title:c_sitti
+		}
+		character:me_ethiopian_fic_004 = {
+			get_title = title:c_dawaro
+			get_title = title:c_gabal
+			get_title = title:c_arusi
+		}
+	}
+	create_title_and_vassal_change = {
+		type = conquest
+		save_scope_as = change
+	}
+	title:c_awssa.holder = {
+		change_liege = {
+			liege = title:d_showa.holder
+			change = scope:change
+		}
+	}
+	title:c_dawaro.holder = {
+			change_liege = {
+			liege = title:d_showa.holder
+			change = scope:change
+		}
+	}
+	title:c_sharka.holder = {
+		becomes_independent = {
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+}
+
+shia_imamates_startup_effect = { #Made to keep the history files of these titles gapless
+	title:d_shiite.holder = { destroy_title = title:d_shiite }
+	title:d_imami.holder = { destroy_title = title:d_imami }
+	title:d_laamp_twelver_caliph.holder = { destroy_title = title:d_laamp_twelver_caliph }
+	character:33920 = { # Hussayn 'Abdullah ar-Radi'
+		title:d_laamp_sevener_caliph = { set_title_name = d_hidden_imamate }
+		change_government = landless_adventurer_government
+	}
+
+	character:163025 = { # Ali 'al-Hadi'
+		death = { death_reason = imam_hide}
+	}
+
+	character:163026 = { # Hassan 'al-Askari'
+		death = { death_reason = imam_hide}
+	}
+	character:00004447 = { # Narjis
+		death = { death_reason = imam_hide}
+	}
+
+	trigger_event = {
+		id = twelver_imam_event.0001
+		days = 2555 # 7 years (1 Jan 874)
+	}
+}
+
+twelver_mahdi_appears_effect = {
+
+	create_character = {
+		age = 6
+		name = "Muhammad"
+		gender = male
+		faith = faith:imami
+		culture = culture:bedouin
+		father = character:163026 # Hassan 'al-Askari'
+		mother = character:00004447 # Narjis
+		dynasty_house = character:163026.house # Fatimid
+		location = title:c_samarra.title_province
+
+		trait = sayyid
+		trait = patient
+		trait = intellect_good_3
+		trait = calm
+		trait = zealous
+		trait = diligent
+		trait = generous
+
+		random_traits = no
+		save_scope_as = twelver_mahdi
+	}
+
+	scope:twelver_mahdi = { give_nickname = nick_me_al_mahdi_twelver }
+
+	create_title_and_vassal_change = {
+		type = returned
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	title:d_imami = {
+		change_title_holder = {
+			holder = scope:twelver_mahdi
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+
+	scope:twelver_mahdi = {
+		destroy_title = title:d_imami
+	}
+	scope:twelver_mahdi = {
+		death = { death_reason = death_mahdi}
+	}
+
+	every_player = {
+		limit = { always = yes }
+		trigger_event = { # Beginning of the Major Occulation
+			id = twelver_imam_event.0003
+			days = 24455 # 67 years (941)
+		}
+	}
+	every_player = { # Inform Twelver players 
+		limit = { faith.religious_head_title = title:d_imami }
+		trigger_event = twelver_imam_event.0002
+	}
+}
+
+twelver_mahdi_appears_again_effect = {
+	scope:twelver_mahdi = { set_age = 73 }
+	every_player = { # Inform Twelver players 
+		limit = { faith.religious_head_title = title:d_imami }
+		trigger_event = twelver_imam_event.0004
+	}
+}
+
+me_muslim_sicily_wars_startup_effect = {
+	## Empower Muslim wars
+	if = {
+		limit = { game_start_date = 867.1.1 }
+		title:k_africa.holder = { save_scope_as = aghlabid_leader }
+		title:c_bari.holder = { save_scope_as = bari_leader }
+#		scope:aghlabid_leader = { # Aghlabids were given troops in 1.13
+#			spawn_army = {
+#				uses_supply = yes
+#				inheritable = yes
+#				name = siqilli_invasion_troops
+#				levies = {
+#					value = 2500
+#				}
+#				location = province:2638
+#			}
+#		}
+		scope:bari_leader = {
+			spawn_army = {
+				uses_supply = yes
+				inheritable = yes
+				name = bariot_troops
+				levies = {
+					value = 1500
+				}
+				location = province:2623
+			}
+		}
+	}
+}
+
+me_byzantine_dejure_effect = {
+
+	if = {
+		limit = { title:d_shirvan = { target_is_de_jure_liege_or_above = title:k_daylam } } # Ensure CE is not active
+		title:k_armenia = { set_de_jure_liege_title = title:e_byzantium }
+		title:k_georgia = { set_de_jure_liege_title = title:e_byzantium }
+	}
+
+	title:k_sicily = { set_de_jure_liege_title = title:e_byzantium }
+	title:k_venice = { set_de_jure_liege_title = title:e_byzantium }
+	title:k_krete = { set_de_jure_liege_title = title:e_byzantium }
+	title:k_cyprus = { set_de_jure_liege_title = title:e_byzantium }
+
+	title:d_khuzestan = { set_de_jure_liege_title = title:k_persia } # I know it's not byzantine but im too lazy to change the name
+	title:k_daylam = { set_de_jure_liege_title = title:e_persia }
+	title:k_canarias = { set_de_jure_liege_title = title:e_maghreb }
+	title:d_canarias = { set_de_jure_liege_title = title:k_maghreb }
+	title:d_rif = { set_de_jure_liege_title = title:k_maghreb }
+}
+
+me_calabria_bari_effect = {
+	create_title_and_vassal_change = {
+	type = conquest
+	save_scope_as = bariot_change
+	add_claim_on_loss = yes
+	}
+	title:c_reggio_calabria = {
+		change_title_holder = {
+			holder = title:c_bari.holder
+			change = scope:bariot_change
+			take_baronies = yes
+		}
+	}
+	title:c_rossano = {
+		change_title_holder = {
+			holder = title:c_bari.holder
+			change = scope:bariot_change
+			take_baronies = yes
+		}
+	}
+	resolve_title_and_vassal_change = scope:bariot_change
+}
+
+ME_remove_adventerers_fic_effect = {
+	if = {
+		limit = { title:d_laamp_me_umayyad_fic_1.holder ?= { is_ai = yes } }
+		title:d_laamp_me_umayyad_fic_1.holder  = { destroy_title = title:d_laamp_me_umayyad_fic_1 }
+		character:me_umayyad_fic_001 = {
+			set_house = house:me_removed_house
+			set_father = character:me_ifrinid_001_dna_clone #Placeholder
+			death = { death_reason = death_disappearance }
+		}
+		character:me_umayyad_fic_002 = {
+			set_house = house:me_removed_house
+			death = { death_reason = death_disappearance }
+		}
+	}
+	
+	if = {
+		limit = { title:d_laamp_me_umayyad_fic_2.holder ?= { is_ai = yes } }
+		title:d_laamp_me_umayyad_fic_2.holder  = { destroy_title = title:d_laamp_me_umayyad_fic_2 }
+		character:me_umayyad_fic_001 = {
+			set_house = house:me_removed_house
+			set_father = character:me_ifrinid_001_dna_clone #Placeholder
+		}
+		character:me_umayyad_fic_002 = {
+			set_house = house:me_removed_house
+		}
+		character:me_umayyad_fic_003 = {
+			set_house = house:me_removed_house
+		}
+		character:me_umayyad_fic_004 = {
+			set_house = house:me_removed_house
+		}
+		character:me_umayyad_fic_005 = {
+			set_house = house:me_removed_house
+			death = { death_reason = death_disappearance }
+		}
+		character:me_umayyad_fic_006 = {
+			set_house = house:me_removed_house
+			death = { death_reason = death_disappearance }
+		}
+		character:3208.house = { set_house_head = character:3208 }
+	}
+}
+
+ME_remove_adventerers_egg_effect = {
+	if = {
+		limit = { title:d_laamp_me_ea_cats.holder ?= { is_ai = yes } }
+		title:d_laamp_me_ea_cats.holder = { destroy_title = title:d_laamp_me_ea_cats }
+		character:me_ea_cat_001 = {
+			death = { death_reason = death_disappearance }
+		}
+		character:me_ea_cat_002 = {
+			death = { death_reason = death_disappearance }
+		}
+		character:me_ea_cat_003 = {
+			death = { death_reason = death_disappearance }
+		}
+		character:me_ea_cat_004 = {
+			death = { death_reason = death_disappearance }
+		}
+		character:me_ea_cat_005 = {
+			death = { death_reason = death_disappearance }
+		}
+		character:me_ea_cat_006 = {
+			death = { death_reason = death_disappearance }
+		}
+	}
+}
+
+me_RICE_effect = {
+	# Replace ME's version of Ibn as-Sufi with RICE's
+	character:RICE_upper_egypt_013 ?= {
+		if = {
+			limit = { is_alive = yes }
+			set_house = character:me_hashimid_046.house
+			set_father = character:me_hashimid_045
+			set_character_faith = faith:zayidi
+			add_trait = quraysh
+			add_courtier = character:me_hashimid_047
+			add_courtier = character:me_hashimid_048
+			character:me_hashimid_046 = {
+				destroy_title = title:d_laamp_me_ibn_as_sufi_867
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone #Placeholder
+				death = { death_reason = death_disappearance }
+			}
+			character:RICE_upper_egypt_014 ?= { set_character_faith = faith:zayidi }
+			character:me_egyptian_004 = { death = { death_reason = death_disappearance } }
+			
+			### Banu al-Mudabbir ###
+			character:me_mudabbirid_004 = { set_house = character:RICE_upper_egypt_010.house }
+			character:me_mudabbirid_005 = { set_house = character:RICE_upper_egypt_010.house }
+			character:me_mudabbirid_003 = { set_father = character:me_ifrinid_001_dna_clone }
+			character:me_mudabbirid_002 = { death = { death_reason = death_disappearance } }
+			character:me_mudabbirid_001 = { death = { death_reason = death_disappearance } }
+			character:RICE_upper_egypt_009 = {
+				house = { set_house_name = "dynn_me_mudabbirid" }
+				dynasty = { set_dynasty_name = "dynn_me_mudabbirid" }
+				set_father = character:me_mudabbirid_004
+			}
+			character:RICE_upper_egypt_010 = { change_first_name = Ahmad }
+			character:RICE_upper_egypt_011 = { change_first_name = Ibrahim }
+			
+			### Ibn al-Dayah ###
+			character:RICE_upper_egypt_030 = {
+				house = { set_house_name = "dynn_Ibrahimid" }
+				dynasty = { set_dynasty_name = "dynn_Ibrahimid" }
+				set_culture = culture:levantine
+				give_nickname = nick_me_ibn_al_dayah
+				remove_trait = deceitful
+				add_trait = scholar
+			}
+			character:RICE_upper_egypt_033 = {
+				set_house = character:me_ifrinid_001_dna_clone.house
+				set_father = character:me_ifrinid_001_dna_clone
+				death = { death_reason = death_disappearance }
+			}
+			character:RICE_upper_egypt_035 = {
+				change_first_name = Ya_qub
+				set_age = 27
+			}
+			character:RICE_upper_egypt_036 = { set_age = 22 }
+			character:me_mashriqi_001 = { death = { death_reason = death_disappearance } }
+			character:me_mashriqi_004 = { death = { death_reason = death_disappearance } }
+			character:me_mashriqi_005 = { death = { death_reason = death_disappearance } }
+			
+			### Madhara'ids ###
+			character:RICE_upper_egypt_017 = {
+				give_nickname = nick_me_al_atrash
+				set_culture = culture:levantine
+				dynasty = { set_coa = character:me_al_madharai_001.house }
+				house = { set_coa = character:me_al_madharai_001.house }
+			}
+			character:RICE_upper_egypt_023 = { set_culture = culture:levantine }
+			character:RICE_upper_egypt_024 = { set_culture = culture:levantine }
+			character:me_al_madharai_001 = { death = { death_reason = death_disappearance } }
+			character:me_al_madharai_003 = { death = { death_reason = death_disappearance } }
+			character:me_al_madharai_004 = { death = { death_reason = death_disappearance } }
+			
+			### Ibn Abd Kan ###
+			character:me_persian_011 = {
+				set_house = character:me_ifrinid_001_dna_clone.house
+				set_father = character:me_ifrinid_001_dna_clone
+			}
+			character:RICE_upper_egypt_016 = {
+				set_house = character:me_persian_012.house
+				set_father = character:me_persian_012
+				set_culture = culture:persian
+				give_nickname = nick_me_ibn_abd_kan
+				change_first_name = Muhammad
+				add_trait = lifestyle_poet
+			}
+			
+			### 
+			character:RICE_upper_egypt_misc_001 = {
+				house = { set_house_name = "dynn_me_azjurid" }
+				dynasty = { set_dynasty_name = "dynn_me_azjurid" }
+				set_father = character:me_egypt_turk_005
+				give_nickname = nick_me_al_turki
+			}
+			character:me_egypt_turk_004 = { death = { death_reason = death_disappearance } }
+			character:RICE_upper_egypt_012 = {
+				set_house = character:me_hashimid_061.house
+				set_father = character:me_hashimid_061
+				give_nickname = nick_me_bugha_al_asghar
+				change_first_name = Ahmad
+				add_trait = sayyid
+			}
+			character:me_hashimid_062 = {
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone #Placeholder
+				death = { death_reason = death_disappearance }
+			}
+			character:RICE_khuzestan_misc_001 = { # Use ME's version of Ibn Wahb
+				destroy_title = title:d_laamp_RICE_ibn_wahab
+				death = { death_reason = death_disappearance }
+			}
+		}
+	}
+
+	# Kill off RICE's version of Ibn al-Qatta'
+	character:RICE_sicily_arabic_006 ?= {
+		if = {
+			limit = { is_alive = yes }
+			destroy_title = title:d_laamp_RICE_ibn_al_qatta_al_siqilli
+			death = { death_reason = death_disappearance }
+			character:RICE_fatimid_african_003 = { give_nickname = nick_nahid_ud_dawlah }
+		}
+	}
+	
+	# Change dynasty of the Kanzids
+	if = {
+		limit = { exists = character:RICE_lami_al_kanzi_001 }
+		every_living_character = {
+			limit = { house = house:RICE_house_al_kanzi }
+			set_house = character:bedouin0027.house
+		}
+	}
+}
+
+me_alid_revolt_RICE_effect = {
+	set_global_variable = { name = ibn_as_sufi_revolt_ended value = yes }
+	set_global_variable = { name = bugha_al_akbar_revolt_ended value = yes }
+	set_global_variable = { name = bugha_al_asghar_revolt_ended value = yes }
+	if = { 
+		limit = { character:me_hashimid_046 = { is_alive  = yes } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+		character:me_hashimid_062 = { # Bugha al-Asghar
+			get_title = title:c_sullum
+			get_title = title:c_tobruk
+			save_scope_as = bugha_al_asghar
+			spawn_army = {
+				levies = 700
+				men_at_arms = {
+					type = mubarizun
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = pikemen_unit
+					stacks = 1
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_footmen
+					stacks = 2
+				}
+				location = capital_province
+				inheritable = yes
+				name = me_alid_egyptian_rebel_troops
+			}
+			
+		}
+		character:me_hashimid_046 = { # Ibn as_Sufi
+			get_title = title:c_asyut
+			get_title = title:d_al-said
+			destroy_title = title:d_laamp_me_ibn_as_sufi_867
+			save_scope_as = ibn_al_sufi
+			spawn_army = {
+				levies = 700
+				men_at_arms = {
+					type = mubarizun
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = pikemen_unit
+					stacks = 1
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_footmen
+					stacks = 2
+				}
+				location = capital_province
+				inheritable = yes
+				name = me_alid_egyptian_rebel_troops
+			}
+		}
+		character:me_egyptian_004 = { # Abu Ruh Sukun
+			get_title = title:c_kharga
+			save_scope_as = abu_ruh_sukun
+			spawn_army = {
+				levies = 300
+				men_at_arms = {
+					type = mubarizun
+					stacks = 1
+				}
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = pikemen_unit
+					stacks = 1
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = light_footmen
+					stacks = 1
+				}
+				location = capital_province
+				inheritable = yes
+				name = me_alid_egyptian_rebel_troops
+			}
+		}
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
+		}
+		scope:abu_ruh_sukun = {
+			change_liege = {
+				liege = scope:ibn_al_sufi
+				change = scope:change
+			}
+		}
+		scope:bugha_al_asghar = {
+			becomes_independent = {
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+me_alid_revolt_ME_effect = {
+	character:me_hashimid_060 = {
+		set_house = house:me_removed_house
+		set_father = character:me_ifrinid_001_dna_clone #Placeholder
+		death = { death_reason = death_disappearance }
+	}
+	if = { 
+		limit = { character:me_hashimid_046 = { is_alive  = yes } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+		character:me_hashimid_062 = {
+			set_house = house:me_removed_house
+			set_father = character:me_ifrinid_001_dna_clone #Placeholder
+			death = { death_reason = death_disappearance }
+		}
+	}
+	else_if = { 
+		limit = { character:me_hashimid_046 = { is_alive  = no } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+		if = {
+			limit = { character:RICE_upper_egypt_012 = { is_ai = yes } }
+			title:c_alexandria.holder = {
+				get_title = title:c_sullum
+				get_title = title:c_tobruk
+			}
+			character:RICE_upper_egypt_012 = {
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone #Placeholder
+				death = { death_reason = death_disappearance }
+			}
+		}
+		if = {
+			limit = { character:RICE_upper_egypt_013 = { is_ai = yes } }
+			character:RICE_upper_egypt_010 = {
+				get_title = title:c_asyut
+				get_title = title:d_al-said
+			}
+			character:me_egypt_turk_006 = { get_title = title:c_kharga }
+		}
+	}
+}
+
+me_alid_revolt_disabled_effect = {
+	set_global_variable = { name = ibn_as_sufi_revolt_ended value = yes }
+	set_global_variable = { name = bugha_al_akbar_revolt_ended value = yes }
+	set_global_variable = { name = bugha_al_asghar_revolt_ended value = yes }
+	if = { 
+		limit = { character:me_hashimid_046 = { is_alive  = no } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+		if = {
+			limit = { character:RICE_upper_egypt_012 = { is_ai = yes } }
+			title:c_alexandria.holder = {
+				get_title = title:c_sullum
+				get_title = title:c_tobruk
+			}
+		}
+		if = {
+			limit = { character:RICE_upper_egypt_013 = { is_ai = yes } }
+			character:RICE_upper_egypt_010 = {
+				get_title = title:c_asyut
+				get_title = title:d_al-said
+			}
+			character:me_egypt_turk_006 = { get_title = title:c_kharga }
+		}
+	}
+}
+
+me_egypt_holder_effect = {
+	
+	title:k_egypt.holder = { every_held_title = { add_to_temporary_list = egypt_titles } }
+	title:d_sinai.holder = { every_held_title = { add_to_temporary_list = sinai_titles } }
+	
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					OR = {
+						has_game_rule = me_egypt_holder_tulunid_tributary
+						has_game_rule = me_egypt_holder_tulunid_vassal
+					}
+					title:k_egypt.holder = { is_ai = yes }
+				}
+				title:k_egypt.holder = { has_variable = var_egypt_holder_tulunid_tributary }
+				title:k_egypt.holder = { has_variable = var_egypt_holder_tulunid_vassal }
+			}
+		}
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		
+		if = { 
+			limit = { character:extra_tulunids_1 = { is_ai = yes } }
+			every_in_list = {
+				list = sinai_titles
+				limit = { tier >= tier_county }
+				change_title_holder = {
+					holder = character:me_egypt_turk_008
+					change = scope:change
+					take_baronies = yes
+				}
+			}
+			#title:d_sinai.holder = {
+			#	change_liege = {
+			#		liege = title:k_egypt.holder
+			#		change = scope:change
+			#	}
+			#}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+		every_living_character = {
+			limit = {
+				OR = {
+					is_close_or_extended_family_of = title:k_egypt.holder
+					is_spouse_of = title:k_egypt.holder
+				}
+			}
+			save_scope_as = courtier_tul
+			title:k_egypt.holder = { add_courtier = scope:courtier_tul }
+		}
+		title:k_egypt.holder = {
+			#add_courtier = character:me_egypt_turk_001
+			add_courtier = character:me_egypt_turk_004
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					has_game_rule = me_egypt_holder_hulwanid
+					title:k_egypt.holder = { is_ai = yes }
+				}
+				title:k_egypt.holder = { has_variable = var_egypt_holder_hulwanid }
+			}
+		}
+		
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		
+		if = { 
+			limit = { character:me_hashimid_046 = { is_alive  = yes } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+			character:me_egypt_turk_001 = {
+				get_title = title:k_egypt
+				get_title = title:d_delta
+				get_title = title:c_cairo
+				get_title = title:c_damietta
+				get_title = title:c_al-buhaira
+				get_title = title:c_al-gharbiya
+				get_title = title:c_sharkiya
+			}
+		}
+		if = { 
+			limit = { character:me_hashimid_046 = { is_alive  = no } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+			every_in_list = {
+				list = egypt_titles
+				change_title_holder = {
+					holder = character:me_egypt_turk_001
+					change = scope:change
+					take_baronies = yes
+				}
+			}
+		}
+		
+		every_in_list = {
+			list = sinai_titles
+			change_title_holder = {
+				holder = character:extra_karluks_4
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		title:c_farama.holder = {
+			change_liege = {
+				liege = character:extra_karluks_4
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					has_game_rule = me_egypt_holder_urtujid
+					title:k_egypt.holder = { is_ai = yes }
+				}
+				title:k_egypt.holder = { has_variable = var_egypt_holder_urtujid }
+			}
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		every_in_list = {
+			list = egypt_titles
+			change_title_holder = {
+				holder = character:extra_karluks_4 # Muzahim ibn Khaqan
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		
+		every_in_list = {
+			list = sinai_titles
+			change_title_holder = {
+				holder = character:extra_karluks_5 # Ahmad ibn Muzahim ibn Khaqan
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		title:c_farama.holder = {
+			change_liege = {
+				liege = character:extra_karluks_5
+				change = scope:change
+			}
+		}
+		character:extra_karluks_5 = { # Ahmad ibn Muzahim ibn Khaqan
+			change_liege = {
+				liege = title:k_egypt.holder
+				change = scope:change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:change
+		title:k_egypt.holder = {
+			add_courtier = character:me_egypt_turk_001
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					has_game_rule = me_egypt_holder_azjur
+					title:k_egypt.holder = { is_ai = yes }
+				}
+				title:k_egypt.holder = { has_variable = var_egypt_holder_azjur }
+			}
+		}
+		
+		if = {
+			limit = { character:me_egypt_turk_004 = { is_alive = yes } }
+			character:me_egypt_turk_004 = { save_scope_as = azjur }
+		}
+		else_if = {
+			limit = { character:RICE_upper_egypt_misc_001 = { is_alive = yes } }
+			character:RICE_upper_egypt_misc_001 = {
+				save_scope_as = azjur
+				destroy_title = title:d_laamp_RICE_al_turki_egypt
+			}
+		}
+		
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		
+		every_in_list = {
+			list = egypt_titles
+			change_title_holder = {
+				holder = scope:azjur
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		every_in_list = {
+			list = sinai_titles
+			change_title_holder = {
+				holder = character:me_egypt_turk_008
+				change = scope:change
+				take_baronies = yes
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_game_rule = me_egypt_holder_tulunid_tributary
+					character:163115 = { is_ai = yes }
+				}
+				any_player = { has_variable = var_egypt_holder_tulunid_tributary }
+			}
+		}
+		title:e_arabia.holder = {
+			save_scope_as = suzerain
+			title:k_egypt.holder = {
+				break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			}
+			character:al-farghani_1 = {
+				break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			}
+		}
+		title:k_egypt.holder = {
+			save_scope_as = suzerain
+			title:d_makuria.holder = {
+				break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			NOR = {
+				AND = {
+					has_game_rule = me_egypt_holder_tulunid_tributary
+					title:k_egypt.holder  = { is_ai = yes }
+				}
+				any_player = { has_variable = var_egypt_holder_tulunid_tributary }
+			}
+		}
+		
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		title:k_egypt.holder = {
+			change_liege = {
+				liege = title:e_arabia.holder
+				change = scope:change
+			}
+		}
+		character:al-farghani_1 = {
+			change_liege = {
+				liege = title:e_arabia.holder
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+		
+		title:e_arabia.holder = {
+			save_scope_as = suzerain
+			title:d_makuria.holder = {
+				break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			}
+		}
+	}
+	if = {
+		limit = { has_game_rule = me_alid_egypt_revolt_RICE }
+		if = {
+			limit = { title:d_al-said.holder = { is_at_war = no } }
+			title:d_al-said.holder = { # Ibn as_Sufi
+				start_war = {
+					cb = me_alid_egypt_revolt_cb
+					target = title:k_egypt.holder
+					target_title = title:d_al-said
+				}
+			}
+		}
+		if = {
+			limit = { title:c_sullum.holder = { is_at_war = no } }
+			title:c_sullum.holder = { # Bugha al-Asghar
+				start_war = {
+					cb = me_alid_egypt_revolt_cb
+					target = title:c_alexandria.holder
+					target_title = title:d_alexandria
+				}
+			}
+		}
+	}
+	
+	title:k_egypt.holder = {
+		if = {
+			limit = { has_realm_law = uncrowned }
+			add_realm_law = crowned_king
+		}
+	}
+	if = {
+		limit = { character:me_hashimid_046 = { is_alive  = no } } # Checking whether RICE is on by using ME's version of Ibn as-Sufi
+		title:k_egypt.holder = {
+			remove_trait = RICE_governor_of_aswan
+			add_courtier = character:me_persian_004
+		}
+	}
+}
+
+me_malay_islamic_ruler_setup = {
+	if = {
+		limit = { has_game_rule = me_malay_islamic_ruler_yes }
+		if = {
+			limit = { game_start_date = 867.1.1 }
+			character:malay_perlak_02 = {
+				change_first_name = Abd_al-Rahim
+				set_father = character:malay_perlak_01
+				set_house = character:malay_perlak_01.house
+				set_character_faith = faith:zayidi # Changed from Imami to Zayidi since most Shia Sayyids around 867 were Zayidi
+				change_government = clan_government
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 200
+					men_at_arms = {
+						type = pesilat_warriors
+						stacks = 3
+					}
+					location = province:11257 
+					origin = province:11257 
+					inheritable = yes
+				}
+				add_courtier = character:malay_perlak_01_fic
+			}
+			character:malay_perlak_03 = {
+				change_first_name = Abbas
+				set_house = character:malay_perlak_01.house
+				set_character_faith = faith:zayidi
+			}
+			title:c_SUM_perlak = {
+				set_county_faith = faith:zayidi
+				title_province = { set_holding_type = castle_holding }
+			}
+		}
+		if = {
+			limit = { game_start_date = 1066.9.15 }
+			character:malay_perlak_12 = {
+				change_first_name = Mansur
+				set_father = character:malay_perlak_11
+				set_house = character:malay_perlak_07.house
+				set_character_faith = faith:ashari
+				change_government = clan_government
+				set_realm_capital = title:c_SUM_perlak
+				set_primary_title_to = title:c_SUM_perlak
+				add_courtier = character:malay_perlak_10_fic
+				add_courtier = character:malay_barus_10_fic
+			}
+			character:malay_perlak_13 = {
+				change_first_name = Abdullah
+				set_house = character:malay_perlak_07.house
+				set_character_faith = faith:ashari
+			}
+			title:c_SUM_lambri = {
+				set_county_faith = faith:ashari
+				title_province = { set_holding_type = castle_holding }
+			}
+			title:c_SUM_barus = {
+				set_county_faith = faith:ashari
+				title_province = { set_holding_type = castle_holding }
+			}
+			title:c_SUM_panai = {
+				set_county_faith = faith:zayidi
+				title_province = { set_holding_type = castle_holding }
+			}
+			title:c_SUM_perlak = {
+				set_county_faith = faith:zayidi
+				title_province = { set_holding_type = castle_holding }
+			}
+		}
+		else_if = {
+			limit = { game_start_date = 1178.10.1 }
+			character:malay_perlak_17 = {
+				change_government = clan_government
+				set_realm_capital = title:c_SUM_perlak
+				set_primary_title_to = title:c_SUM_perlak
+				add_courtier = character:malay_barus_20_fic
+				add_courtier = character:malay_perlak_20_fic
+			}
+			character:malay_silu_01 = {
+				change_government = mandala_government
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 200
+					men_at_arms = {
+						type = pesilat_warriors
+						stacks = 3
+					}
+					location = province:11254 
+					origin = province:11254 
+					inheritable = yes
+				}
+				add_courtier = character:malay_lambri_20_fic
+			}
+			title:c_SUM_barus = {
+				set_county_faith = faith:ashari
+				title_province = { set_holding_type = castle_holding }
+			}
+			title:c_SUM_panai = {
+				set_county_faith = faith:zayidi
+				title_province = { set_holding_type = castle_holding }
+			}
+			title:c_SUM_perlak = { set_county_faith = faith:zayidi }
+			title:c_SUM_minangkabau = { set_county_faith = faith:zayidi }
+		}
+	}
+}
+
+### Tributary Effects
+me_867_tributary_setup_effect = {
+
+	character:34014 = { # Caliph al-Mu'tazz ibn al-Mutawakkil (Abbasid) of the Abbasid Caliphate
+		save_scope_as = suzerain
+		character:159725 = { # Marwan ibn Umar al-Aqta' (Marwanid) of the Emirate of Malatya 
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+#		character:me_egypt_turk_001 = { # Yazid al-Hulwani, governor of Egypt 
+#			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+#		}
+	}
+
+
+	character:159506 = { # Sultan Yayha II ibn Yahya (Idrisid) of the Idrisid Sultanate
+		save_scope_as = suzerain
+		character:me_majkasa_002 = { # Isam ibn Majakas (Majkasa) of the Emirate of Sabta
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	character:163097 = { # Imam Aflah ibn Abdal-Wahab (Rustamid) of the Rustamid Imamate
+		save_scope_as = suzerain
+		character:me_nefusa_003 = { # Abu 'Ubayda 'Abd al-Hamid (al-Djanāwunī) of the Emirate of Jafara (Jabal Nafusa)
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+}
+
+me_1066_tributary_setup_effect = {}
+
+me_1178_tributary_setup_effect = {}
+
+### Decision Effects
+mend_the_ibadi_schism_scripted_effect = {
+	add_piety = major_piety_gain
+	save_scope_as = reformer
+	if = {
+		limit = { scope:reformer = { faith = faith:ibadi } }
+		title:d_ibadi = { save_scope_as = ibadi_imamate }
+		faith:wahbiya = { save_scope_as = other_ibadi }
+		custom_tooltip = {
+			text = "unified_under_ibadi_imamate"
+			faith:wahbiya = { set_religious_head_title = scope:ibadi_imamate }
+		}
+	}
+	else_if = {
+		limit = { scope:reformer = { faith = faith:wahbiya } }
+		title:d_wahbiya = { save_scope_as = ibadi_imamate }
+		faith:ibadi = { save_scope_as = other_ibadi }
+		custom_tooltip = {
+			text = "unified_under_ibadi_imamate"
+			faith:ibadi = { set_religious_head_title = scope:ibadi_imamate }
+		}
+	}
+	faith:ibadi = {
+		change_fervor = {
+			value = 15
+			desc = fervor_gain_mend_the_ibadi_schism
+		}
+	}
+	faith:wahbiya = {
+		change_fervor = {
+			value = 15
+			desc = fervor_gain_mend_the_ibadi_schism
+		}
+	}
+}
+
+unite_the_andalusian_thrones_decision_effects = {
+	#Prestige
+	add_prestige = massive_prestige_gain
+
+	#Laws
+	if = {
+		limit = { has_realm_law = crown_authority_0 }
+		add_realm_law_skip_effects = crown_authority_2
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_realm_law = crown_authority_1
+				has_realm_law = crown_authority_2
+			}
+		}
+		add_realm_law_skip_effects = crown_authority_3
+	}
+
+	#Handle other Kingdom titles
+	title:k_andalusia = { add_to_list = andalusian_kingdoms }
+	title:k_badajoz = { add_to_list = andalusian_kingdoms }
+	title:k_valencia = { add_to_list = andalusian_kingdoms }
+	title:k_castille = { add_to_list = andalusian_kingdoms }
+	title:k_leon = { add_to_list = andalusian_kingdoms }
+	title:k_spanish_galicia = { add_to_list = andalusian_kingdoms }
+	title:k_portugal = { add_to_list = andalusian_kingdoms }
+	title:k_aragon = { add_to_list = andalusian_kingdoms }
+	title:k_navarra = { add_to_list = andalusian_kingdoms }
+
+	custom_tooltip = unite_the_andalusian_thrones_decision_titles_tt
+	hidden_effect = {
+		every_in_list = {
+			list = andalusian_kingdoms
+			limit = {
+				NOT = { this = scope:al_andalus_uniter.primary_title }
+				scope:al_andalus_uniter = { completely_controls = prev }
+			}
+
+			#De jure shift all held andalusian titles into your primary title
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_duchy }
+				set_de_jure_liege_title = scope:al_andalus_uniter.primary_title
+			}
+
+			#Destroys them all!
+			scope:al_andalus_uniter = { destroy_title = prev }
+		}
+	}
+}
+
+promote_islamic_hungarian_settlement_decision_scripted_effect = {
+	if = {
+		limit = {
+			culture = culture:mogyer
+		}
+
+		# Convert my culture to Hungarian Culture
+		set_culture = culture:hungarian
+		culture:hungarian = {
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:mogyer
+		}
+
+		# Convert my courtiers to Hungarian 
+		hidden_effect = {
+			every_courtier = {
+				limit = {
+					culture = culture:mogyer
+				}
+				set_culture = culture:hungarian
+			}
+		}
+
+		# Convert my vassals to Hungarian
+		every_vassal_or_below = {
+			limit = {
+				culture = culture:mogyer
+			}
+
+			custom = promote_hungarian_settlement_decision_every_vassal_custom
+			set_culture = culture:hungarian
+
+			# Convert their courtiers as well
+			hidden_effect = {
+				every_courtier = {
+					limit = {
+						culture = culture:mogyer
+					}
+					set_culture = culture:hungarian
+				}
+			}
+		}
+	}
+
+	title:k_hungary = {
+		every_in_de_jure_hierarchy = {
+			custom = promote_hungarian_settlement_decision_every_province_custom
+			limit = {
+				tier = tier_county
+				culture = culture:mogyer
+				title_province = { geographical_region = custom_hungary }
+				holder = {
+					OR = {
+						this = root
+						target_is_liege_or_above = root
+					}
+				}
+			}
+			set_county_culture = culture:hungarian
+			add_county_modifier = {
+				modifier = hungarian_resettlement_modifier_islamic
+				years = 100
+			}
+			custom_tooltip = promote_hungarian_settlement_decision_increased_development
+			custom_tooltip = promote_hungarian_settlement_decision_convert_county
+			hidden_effect = {
+				if = {
+					limit = {
+						development_level < 5
+					}
+					change_development_level = 1
+				}
+				random_list = {
+					30 = {
+						# Nothing happens
+					}
+					30 = {
+						trigger = {
+							NOT = {
+								faith = { 
+							religion = religion:islam_religion
+								}
+							}
+						}
+						set_county_faith = root.faith
+					}
+					30 = {
+						trigger = {
+							NOT = {
+								faith = { 
+							religion = religion:islam_religion
+								}
+							}
+							any_neighboring_county = {
+								faith = { 
+							religion = religion:islam_religion
+								}
+							}
+						}
+						random_neighboring_county = {
+							limit = {
+								faith = { 
+							religion = religion:islam_religion
+								}
+							}
+							save_scope_as = neighboring_county
+						}
+						set_county_faith = scope:neighboring_county.faith
+					}
+				}
+			}
+		}
+	}
+}
+
+me_maltese_culture_forms_effects = {
+	title:c_malta = {
+		set_county_culture = culture:maltese
+	}
+	culture:maltese = {
+		reset_culture_creation_date = yes
+		get_all_innovations_from = scope:old_malta_culture
+	}
+}
+
+me_maltese_language_forms_effects = {
+	culture:maltese = {
+		custom_tooltip = {
+			text = form_maltese_language_tt
+			set_culture_pillar = language_maltese
+		}
+		if = {
+			limit = {
+				culture:maltese = { NOT = { has_name_list = name_list_maltese } }
+			}
+			custom_tooltip = {
+				text = form_maltese_names_tt
+				set_name_list = name_list_maltese
+			}
+		}
+	}
+}
+
+learn_language_linguist_arabic_effect = {
+	hidden_effect = { add_courtier = $LINGUIST$ }
+	$LINGUIST$ = { save_scope_as = selected_linguist }
+	custom_tooltip = me_religious_decisions.0007.tt.aptitude
+	send_interface_toast = {
+		title = learn_arabic_language_toast_title
+		left_icon = root
+		right_icon = $LINGUIST$
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+			}
+			appoint_court_position = {
+				recipient = $LINGUIST$
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = $LINGUIST$
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+		if = {
+			limit = {
+				NOT = { knows_language_of_culture = $LINGUIST$.culture }
+			}
+	    	start_scheme = {
+				type = learn_language
+				target_character = $LINGUIST$
+			}
+	    }
+	}
+}
+
+me_restore_ibadi_imamate_scripted_effect = {
+	add_piety = major_piety_gain
+	save_scope_as = reformer
+	create_title_and_vassal_change = {
+		type = returned
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:reformer.faith.religious_head_title = {
+		save_scope_as = imamate
+		change_title_holder = {
+			holder = scope:reformer
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+
+	religion:islam_religion = {
+		every_faith = {
+			limit = { religious_head_title = scope:imamate }
+			change_fervor = {
+				value = 15
+				desc = fervor_gain_restored_imamate
+			}
+		}
+	}
+}
+
+
+### Adventurer Effects
+me_create_ismaili_caliphate_scripted_effect = {
+	add_piety = major_piety_gain
+	save_scope_as = reformer
+	create_title_and_vassal_change = {
+		type = returned
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	title:d_shiite = {
+		save_scope_as = ismaili_caliphate
+		change_title_holder = {
+			holder = scope:reformer
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	faith:ismaili = {
+		change_fervor = {
+			value = 15
+			desc = fervor_gain_created_ismaili_caliphate
+		}
+	}
+
+	if = {
+		limit = { has_trait = me_hidden_imam }
+		remove_trait = me_hidden_imam
+	}
+}
+
+ME_become_ismaili_mahdi_decision_effect = {
+	add_prestige = 1000
+	save_scope_as = ismaili_mahdi
+	
+	add_trait = ME_ismaili_mahdi
+	give_nickname = nick_al_mahdi_billah_fatimid
+	faith:ismaili = {
+		change_fervor = {
+			value = 30
+			desc = fervor_gain_new_ismaili_mahdi
+		}
+	}
+
+	if = {
+		limit = { has_trait_xp = { trait = me_hidden_imam value >= 100 } }
+		add_character_flag = can_become_ismaili_mahdi_flag
+	}
+	remove_trait = me_hidden_imam
+}
+
+### Legend Effects
+me_mark_historical_legend_as_done = {
+	if = { # Ziyadid
+		limit = {
+			legend_property:ancestor ?= character:me_ziyadid_001
+			legend_property:title ?= title:k_yemen
+		}
+		set_global_variable = {
+			name = ziyadid_lineage_legend
+			value = yes
+		}
+	}
+	if = { # Makhzumis of Shewa
+		limit = {
+			legend_property:ancestor ?= character:me_makhzumi_031
+			legend_property:title ?= title:k_adal
+		}
+		set_global_variable = {
+			name = makhzumi_lineage_legend
+			value = yes
+		}
+	}
+	if = { # Idrisid Legacy
+		limit = {
+			legend_property:ancestor ?= character:159501
+			legend_property:title ?= title:k_maghreb
+		}
+		set_global_variable = {
+			name = idrisid_legacy_legend
+			value = yes
+		}
+	}
+	if = { # Himyarite Heritage
+		limit = {
+			legend_property:culture ?= culture:himyarite
+			legend_property:title ?= title:k_yemen
+			legend_property:original_region ?= geographical_region:ghw_region_arabia
+		}
+		set_global_variable = {
+			name = himyarite_heritage_legend
+			value = yes
+		}
+	}
+}
+
+me_legend_extras = {
+	if = { # Himyarite Heritage
+		limit = {
+			legend_property:culture ?= culture:himyarite
+			legend_property:title ?= title:k_yemen
+			legend_property:original_region ?= geographical_region:ghw_region_arabia
+		}
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = himyarite_heritage_dynasty_modifier
+			}
+		}
+	}
+}
+
+give_legendary_building_qurashi_lineage_tooltip_effect = { #50% chance
+	# Chance to get legendary building
+	if = {
+		limit = {
+			OR = {
+				root = {
+					locale_valid_for_legendary_buildings = yes
+				}
+				capital_province = { has_special_building_slot = no }
+				any_sub_realm_barony = {
+					title_province = { has_special_building_slot = no }
+				}
+			}
+		}
+		random = {
+			chance = {
+				value = 50
+			}
+			give_legendary_building_location_qurashi_lineage_effect = yes
+		}
+	}
+	set_variable = {
+		name = ME_legendary_reward_location
+		value = scope:legendary_locale
+	}
+	set_variable = {
+		name = legendary_figure
+		value = scope:protagonist
+	}
+}
+
+give_legendary_building_location_qurashi_lineage_effect = {
+	give_legendary_building_location_standard_effect = yes
+	custom_tooltip = {
+		text = can_build_legendary_mosque_tt
+		add_character_flag = legendary_mosque_flag
+	}
+}
+
+give_legendary_building_mythical_qurashi_lineage_tooltip_effect = {
+	if = {
+		limit = {
+			OR = {
+				root = {
+					locale_valid_for_legendary_buildings = yes
+				}
+				capital_province = { has_special_building_slot = no }
+				any_sub_realm_barony = {
+					title_province = { has_special_building_slot = no }
+				}
+			}
+		}
+		give_legendary_building_location_qurashi_lineage_effect = yes
+	}
+	set_variable = {
+		name = ME_legendary_reward_location
+		value = scope:legendary_locale
+	}
+	set_variable = {
+		name = legendary_figure
+		value = scope:protagonist
+	}
+}
+
+me_legend_give_qurashi_famed = {
+	random = {
+		chance = {
+			value = 25
+		}
+		me_legend_give_qurashi_mythical = yes
+	}
+}
+
+me_legend_give_qurashi_illustrious = {
+	random = {
+		chance = {
+			value = 50
+		}
+		me_legend_give_qurashi_mythical = yes
+	}
+}
+
+me_legend_give_qurashi_mythical = {
+	custom_tooltip = {
+		text = dynasty_gains_qurashi_tt
+		every_living_character = {
+			limit = {
+				dynasty = root.dynasty
+			}
+			add_trait = quraysh
+		}
+	}
+}
+
+### Artifact Effects
+ME_create_artifact_book_effect = {
+	$OWNER$ = { save_scope_as = owner } #Will always exist!
+	$CREATOR$ = { #Doesn't always exist
+		save_scope_as = author
+	}
+	save_temporary_scope_value_as = {
+		name = subject_is_set
+		value = $SET_SUBJECT$
+	}
+	save_temporary_scope_value_as = {
+		name = topic_is_set
+		value = $SET_TOPIC$
+	}
+	if = {
+		limit = {
+			exists = scope:dummy_gender
+			scope:author = scope:dummy_gender
+		}
+		clear_saved_scope = author
+		clear_saved_scope = dummy_gender
+	}
+	else = { #If we have an author we save them as a variable on the owner so that we can access them later on when setting the subject etc.
+		scope:owner = {
+			set_variable = {
+				name = book_artifact_author
+				value = scope:author
+				days = 1
+			}
+		}
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality and wealth
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+		
+
+		# To save the subject, topic, and other variables we'll need if it has been set in events or in the effect
+		get_book_variables_effect = yes
+
+		if = { #Should this be a court artifact?
+			limit = {
+				NOT = { exists = scope:should_be_trinket }
+			}
+			if = { #Do we have an author?
+				limit = {
+					exists = scope:author
+				}
+				if = { #Is this author using Palm Leaf (indian) books?
+					limit = {
+						scope:author = { artifact_use_indian_building_visuals_trigger = yes }
+					}
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							creator = scope:author
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = indian_book
+							type = book
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+							#decaying = no
+						}
+					}
+				}
+				else = { #Codices/Non-Indian books
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							creator = scope:author
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = book
+							type = book
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+							#decaying = no
+						}
+					}
+				}
+			}
+			else = { #We don't have an author
+				if = {
+					limit = { #Is this a palm leaf/indian book?
+						scope:owner = { artifact_use_indian_building_visuals_trigger = yes }
+					}
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = indian_book
+							type = book
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+							#decaying = no
+						}
+					}
+				}
+				else = { #This is a codex/non-indian book:
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = book
+							type = book
+							history = { type = created_before_history } # We don't know who wrote it
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+							#decaying = no
+						}
+					}
+				}
+			}
+		}
+		else = { #This is a court artifact
+			if = {
+				limit = {
+					exists = scope:author #We have an author
+				}
+				if = {
+					limit = {
+						scope:author = { artifact_use_indian_building_visuals_trigger = yes }
+					}
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							creator = scope:author
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = indian_book
+							type = miscellaneous
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+						}
+					}
+					# Subject and cover material is set as a required feature for a book-type artifact, but for a miscellaneous-type it's an optional feature, so we need to set it here
+					scope:newly_created_artifact = {
+						set_artifact_feature_group = book_subject
+						set_artifact_feature_group = book_cover_material
+					}
+				}
+				else = { #This is a codex/non-indian book
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							creator = scope:author
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = book
+							type = miscellaneous
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+							
+						}
+					}
+					# Subject and cover material is set as a required feature for a book-type artifact, but for a miscellaneous-type it's an optional feature, so we need to set it here
+					scope:newly_created_artifact = {
+						set_artifact_feature_group = book_subject
+						set_artifact_feature_group = book_cover_material
+					}
+				}
+			}
+			else = { #We don't have an author
+				if = {
+					limit = { #Is this a palm-leaf/indian book?
+						scope:owner = { artifact_use_indian_building_visuals_trigger = yes }
+					}
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = indian_book
+							type = miscellaneous
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+						}
+					}
+					# Subject and cover material is set as a required feature for a book-type artifact, but for a miscellaneous-type it's an optional feature, so we need to set it here
+					scope:newly_created_artifact = {
+						set_artifact_feature_group = book_subject
+						set_artifact_feature_group = book_cover_material
+					}
+				}
+				else = { #This isn't a palm leaf/indian book
+					scope:owner = {
+						create_artifact = {	
+							name = placeholder # Will be regenerated in the post-creation effects
+							description = placeholder # Will be regenerated in the post-creation effects
+							visuals = book
+							type = miscellaneous
+							history = { type = created_before_history } # We don't know who wrote it
+							modifier = artifact_placeholder_modifier
+							save_scope_as = newly_created_artifact
+							wealth = scope:wealth
+							quality = scope:quality
+						}
+					}
+					# Subject and cover material is set as a required feature for a book-type artifact, but for a miscellaneous-type it's an optional feature, so we need to 	set it here
+					scope:newly_created_artifact = {
+						set_artifact_feature_group = book_subject
+						set_artifact_feature_group = book_cover_material
+					}
+				}
+			}
+		}
+
+		scope:newly_created_artifact = {
+			set_artifact_feature_group = book_topic
+			set_artifact_feature_group = book_title
+			set_artifact_feature_group = book_decoration
+			set_artifact_feature_group = decoration_pattern
+			get_artifact_feature_references_effect = yes
+			# Get quality of written content
+			if = {
+				limit = {
+					NOT = { exists = scope:author }
+				}
+				get_book_content_quality_effect = { SKILL_BASE = scope:owner }
+			}
+			else = {
+				get_book_content_quality_effect = { SKILL_BASE = scope:author }
+			}
+			# We save these values as variables on the owner so that we can access them deep in scopes in the desc-loc later on
+			scope:owner = {
+				set_variable = {
+					name = quality
+					value = scope:quality
+				}
+				set_variable = {
+					name = wealth
+					value = scope:wealth
+				}
+				set_variable = {
+					name = book_content_quality
+					value = scope:book_content_quality
+				}
+			}
+			# Generate the updated - final description for the book
+			set_artifact_description = artifact_book_description
+			# Generate the updated title - final title for the book
+			set_artifact_name = artifact_book_title
+			if = {
+				limit = {
+					has_artifact_feature = book_subject_al_ghazali_revival
+				}
+				add_artifact_modifier = artifact_monthly_piety_1_modifier # 0.1
+				add_artifact_modifier = artifact_learning_per_piety_level_modifier
+				remove_artifact_modifier = artifact_placeholder_modifier
+			}
+			else_if = {
+				limit = {
+					has_artifact_feature = book_subject_al_ghazali_deliverance
+				}
+				add_artifact_modifier = artifact_monthly_piety_1_modifier # 0.1
+				add_artifact_modifier = artifact_stress_gain_2_modifier
+				remove_artifact_modifier = artifact_placeholder_modifier
+			}
+			# Modifiers applied based on topic
+			#
+			#
+			#
+
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+			set_variable = {
+				name = book_content_quality
+				value = scope:book_content_quality
+			}
+		}
+	}
+
+	#To clean out variables
+	if = {
+		limit = {
+			exists = scope:author
+		}
+		scope:author = {
+			if = {
+				limit = {
+					has_variable = book_subject
+				}
+				remove_variable = book_subject
+			}
+			if = {
+				limit = {
+					has_variable = book_topic
+				}
+				remove_variable = book_topic
+			}
+			if = {
+				limit = {
+					has_variable = book_topic_category
+				}
+				remove_variable = book_topic_category
+			}
+			if = {
+				limit = {
+					has_variable = book_content_quality
+				}
+				remove_variable = book_content_quality
+			}
+		}
+	}
+	scope:owner = {
+		if = {
+			limit = { has_variable = book_artifact_subject }
+			remove_variable = book_artifact_subject
+		}
+		if = {
+			limit = { has_variable = book_artifact_topic }
+			remove_variable = book_artifact_topic
+		}
+		if = {
+			limit = { has_variable = book_topic_category }
+			remove_variable = book_topic_category
+		}
+		if = {
+			limit = {
+				has_variable = book_topic_category
+			}
+			remove_variable = book_topic_category
+		}
+		if = {
+			limit = {
+				has_variable = book_content_quality
+			}
+			remove_variable = book_content_quality
+		}
+	}
+
+	if = {
+		limit = {
+			exists = scope:should_be_trinket 
+		}
+		clear_saved_scope = should_be_trinket 	
+	}
+} 

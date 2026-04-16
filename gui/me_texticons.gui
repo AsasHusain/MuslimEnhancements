@@ -1,0 +1,90 @@
+﻿texticon = {
+	icon = me_icon
+	iconsize = {
+		texture = "gfx/interface/icons/icon_me.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = preach_conv_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/public_conversions.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = buy_conv_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/buy_conversions.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = secret_conv_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/secret_conversions.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = contact_communities_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/contact.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = social_nobility_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/nobility.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = social_workers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/workers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = social_villagers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/widgets/villagers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = me_missionary_icon
+	iconsize = {
+		texture = "gfx/interface/icons/traits/ME_missionary_base.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+

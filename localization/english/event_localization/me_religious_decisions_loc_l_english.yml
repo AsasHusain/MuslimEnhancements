@@ -1,0 +1,149 @@
+﻿l_english:
+ #Unify the Ibadi Leadership 
+ ##Decision
+ mend_the_ibadi_schism_decision:0 "Unify the Ibadi Leadership"
+ mend_the_ibadi_schism_decision_desc:0 "If a righteous imam gains enough power and influence, the two distant Ibadi communities could be united under a single Imamate."
+ mend_the_ibadi_schism_decision_confirm:0 "I alone will lead Ahl al-Istiqamah!"
+ mend_the_ibadi_schism_decision_tooltip:1 "The Wahbi and Ibadi [faiths|E] will be united under a single [head_of_faith|E]."
+ mend_the_ibadi_schism_decision_effect_tooltip:1 "The Wahbi and Ibadi [faiths|E] will be united under a single [head_of_faith|E]."
+ 
+ mend_the_ibadi_schism_holy_sites:0 "You control at least 3 [THIS.Char.GetFaith.GetAdjective] [holy_sites|E]."
+ mend_the_ibadi_schism_other_imam:0 "There must not exist any Wahbi or Ibadi [head_of_faith|E] other than yourself."
+ fervor_gain_mend_the_ibadi_schism:0 "Ibadi communities united under [ibadi_imamate.GetName]"
+ unified_under_ibadi_imamate:0 "[other_ibadi.GetAdjective] [head_of_faith|E] changes to [ibadi_imamate.GetName]"
+ 
+ ##Events
+ me_religious_decisions.0001.t:0 "A United Community"
+ me_religious_decisions.0001.desc:0 "Ever since the Kharjite revolt, there had existed two imams, two leaders, one in North Africa and another in Oman, a split came out of neccesity as the large distance between the communities would not allow for a unified leadership.\n\nThis ends today. By [reformer.GetFaith.HighGodNamePossessive] will, I have managed to gain enough influence to establish connections between the two communities. With the backing of several respected scholars of the book, I have become recognized as the Imam of both the Middle eastern and North african communities, and I am ready to lead my followers against the wicked heretics and idolaters polluting our homeland!"
+ me_religious_decisions.0001.a:0 "Allahu Akbar!"
+ me_religious_decisions.0002.desc.ibadi:0  "Ever since the Kharjite revolt, there had existed two imams, two leaders, one in North Africa and another in Oman, this split came out of neccesity as the large distance between the communities would not allow for a unified leadership.\n\nThis ends today. By [reformer.GetFaith.HighGodNamePossessive] will, [reformer.GetFirstName] has managed to gain enough influence to establish connections between the two communities. With the backing of several respected scholars of the book, [reformer.GetSheHe] has been recognized as the Imam of both the Middle eastern and North african communities and stands ready to lead [reformer.GetHerHis] followers against the wicked heretics and idolaters polluting our homeland!"
+ me_religious_decisions.0002.desc.other:0 "Ever since the Kharjite revolt, there had existed two imams, two leaders, one in North Africa and another in Oman, this split came out of neccesity as the large distance between the communities would not allow for a unified leadership.\n\nYet, it appears that they have finally come together, under the wise leadership of [reformer.GetFirstName]. After establishing connections between the two communities and having legitimized [reformer.GetHerHis] claim as the Imam of both North africa and the Middle east, [reformer.GetFirstName] stands to begin a new age for the Ibadis."
+ me_religious_decisions.0002.a:0 "Allahu Akbar!"
+ me_religious_decisions.0002.b:0 "Better the devil you know, I suppose..."
+ 
+ 
+ #Hire a Hafidh
+ ##Decision
+ hire_hafidh_decision:0 "Search for a Qur'anic Expert"
+ hire_hafidh_decision_tooltip:3 "Your servants will suggest a number of suitable candidates for the position of [GetCourtPositionType('court_tutor_court_position').GetName()] who have the [GetTrait('hafidh').GetName( GetNullCharacter )] [trait|E]"
+ hire_hafidh_decision_desc:1 "A court tutor experienced enough with the sophisticated language of Qur'an can aid in becoming a [GetTrait('hafidh').GetName( GetNullCharacter )]. I will ask my servants to bring forth a number of suitable candidates."
+ hire_hafidh_decision_effect_tooltip:4 "You will be presented with a group of [GetCourtPositionType('court_tutor_court_position').GetName()] candidates and may hire one of them for a fee and a monthly salary of [gold_i][SCOPE.ScriptValue('medium_court_position_salary')]"
+ hire_hafidh_decision_confirm:0 "Start the search"
+ 
+ ##Events
+ me_religious_decisions.0003.t:0 "Qur'anic Expert"
+ me_religious_decisions.0003.decision.desc:0 "Finally, the search for a proficient Qur'anic mentor has yielded results. The candidates have been presented in front of me, each with their own recitation style and level of expertise in the Qur'an."
+ me_religious_decisions.0003.a:0 "Apparently, [high_skill_option.GetFirstNameNoTooltip] is quite experienced."
+ me_religious_decisions.0003.a.tt:1 "A [GetCourtPositionType('court_tutor_court_position').GetName()] also has a monthly salary of [gold_i][SCOPE.ScriptValue('medium_court_position_salary')]"
+ me_religious_decisions.0003.a.aptitude:0 "[high_skill_option.GetUINamePossessive] [aptitude|E] is [high_skill_option.GetCourtPositionAptitude( GetCourtPositionType( 'court_tutor_court_position' ) )]"
+ me_religious_decisions.0003.b:0 "[low_skill_option.GetFirstNameNoTooltip] seems enthusiastic, if nothing else."
+ me_religious_decisions.0003.b.aptitude:0 "[low_skill_option.GetUINamePossessive] [aptitude|E] is [low_skill_option.GetCourtPositionAptitude( GetCourtPositionType( 'court_tutor_court_position' ) )]"
+ me_religious_decisions.0003.c.two:0 "Both of them fail to impress me."
+ me_religious_decisions.0003.c.more:0 "They all fail to impress me."
+ me_religious_decisions.0003.c.tt:1 "I do not recruit anyone as my [GetCourtPositionType('court_tutor_court_position').GetName()]"
+ me_religious_decisions.0003.d:0 "[excellent_skill_option.GetFirstNameNoTooltip] is widely known for [excellent_skill_option.GetHerHis] Quranic recitations."
+ me_religious_decisions.0003.d.aptitude:0 "[excellent_skill_option.GetUINamePossessive] [aptitude|E] is [excellent_skill_option.GetCourtPositionAptitude( GetCourtPositionType( 'court_tutor_court_position' ) )]"
+ 
+ me_religious_decisions.0004.t:0 "Madrasa Teacher"
+ me_religious_decisions.0004.decision.desc:0 "The search for a Quranic expert has finally borne fruit, as the servants present in front of me [high_value_hafidh.GetFirstNameNoTooltip], a [high_value_hafidh.GetWomanMan] who is well-versed in matters of the Quran and the head teacher of a local madrasa.\n\n[high_value_hafidh.GetFirstNameNoTooltip], however, claims that [high_value_hafidh.GetSheHe] cannot leave the madrasa unattended and asks for your help in funding it in return for [high_value_hafidh.GetHerHis] services."
+ me_religious_decisions.0004.a:0 "Very well, you will have your funding."
+ me_religious_decisions.0004.a.aptitude:0 "[high_value_hafidh.GetUINamePossessive] [aptitude|E] is [high_value_hafidh.GetCourtPositionAptitude( GetCourtPositionType( 'court_tutor_court_position' ) )]"
+ me_religious_decisions.0004.b:0 "I'd rather find a cheaper alternative."
+ me_religious_decisions.0004.b.tt:0 "You will be presented with a diffrent variety of options in a few days."
+ me_religious_decisions.0004.c:0 "I have changed my mind, I no longer need a Qur'an teacher."
+ me_religious_decisions.0005.t:0 "Wandering Scholar"
+ me_religious_decisions.0005.decision.desc:0 "The search for a Quranic expert has finally borne fruit, as the servants present in front of me [high_value_hafidh.GetFirstNameNoTooltip], a wandering scholar who is quite well-versed in matters of the Quran.\n\n[high_value_hafidh.GetFirstNameNoTooltip] claims that [high_value_hafidh.GetSheHe] has studied under some very prominent names in the scholarly community, and for that reason, [high_value_hafidh.GetSheHe] is asking for a higher price than what is typically paid for the average scholar."
+ me_religious_decisions.0005.a:0 "Very well, give [high_value_hafidh.GetHerHim] what [high_value_hafidh.GetSheHe] wants."
+ me_religious_decisions.0005.b:0 "That price is outrageous!"
+ me_religious_decisions.0005.b.success: "[high_value_hafidh.GetSheHe|U] grudgingly acquiesces"
+ me_religious_decisions.0005.b.failure: "[high_value_hafidh.GetSheHe|U] refuses to budge and leaves"
+ me_religious_decisions.0006.t:0 "Zealous Traveller"
+ me_religious_decisions.0006.decision.desc:0 "The search for a Quranic expert has finally borne fruit, as the servants present in front of me [high_value_hafidh.GetFirstNameNoTooltip], a prominent scholar well-versed in matters of the Quran who came travelling from one of the neighboring towns.\n\nIt would seem that your pious reputation precedes you, as [high_value_hafidh.GetSheHe] claims to have made a mad dash for the capital in hopes of serving you the moment [high_value_hafidh.GetSheHe] heard of your need for a religious teacher. It appears [high_value_hafidh.GetSheHe] is quite keen on getting this job, as [high_value_hafidh.GetHerHis] asking price is rather low."
+ me_religious_decisions.0006.a:0 "Serve me well, [high_value_hafidh.GetFirstNameNoTooltip]."
+ me_religious_decisions.0006.b:0 "[high_value_hafidh.GetSheHe|U] fails to impress me, bring me someone else."
+
+ me_funded_madrasas_modifier:0 "Funded Local Madrasa"
+ me_funded_madrasas_modifier_desc:0 "The ruler of this county has funded a Madrasa in one of it's holdings."
+
+
+ #Invite Arabic linguist
+ ##Decision
+ invite_a_linguist_arabic:1 "Find $language_arabic_name$ Linguist"
+ invite_a_linguist_arabic_desc:0 "Learning the $language_arabic_name$ language can help my children and I study and memorize the Qur'an. I can bring in a skilled language tutor to ensure this."
+ invite_a_linguist_arabic_tooltip:0 "Recruit someone to teach the $language_arabic_name$ [language|E]"
+ invite_a_linguist_tt_arabic:1 "You will search for someone to teach the $language_arabic_name$ [language|E], which will grant [success_chance|E] and [scheme_power|E] for the [GetScheme('become_hafidh').GetTypeName] [scheme|E]"
+ invite_a_linguist_arabic_confirm:0 "$invite_a_linguist_self_confirm$"
+ 
+ ##Events
+ me_religious_decisions.0007.t:0 "Linguists at Court"
+ me_religious_decisions.0007.desc:1 "At last the search for an $language_arabic_name$ linguist has come to fruition. The candidates have been presented in front of me, each of them carrying their own expertise in foreign languages."
+ me_religious_decisions.0007.tt.aptitude:0 "[selected_linguist.GetUINamePossessive] [aptitude|E] is [selected_linguist.GetCourtPositionAptitude( GetCourtPositionType( 'court_tutor_court_position' ) )]"
+ me_religious_decisions.0007.a:2 "[good_linguist.GetNameNoTooltip] is a renowned $language_arabic_name$ linguist."
+ me_religious_decisions.0007.b:0 "[medium_linguist.GetNameNoTooltip] will do the job."
+ me_religious_decisions.0007.c:1 "[scholarly_linguist.GetNameNoTooltip] is a famous $language_arabic_name$ expert!"
+ me_religious_decisions.0007.d:0 "I know [cheap_linguist.GetNameNoTooltip] will practically work for free!"
+ me_religious_decisions.0007.e:0 "On second thought..."
+ learn_arabic_language_toast_title:1 "$language_arabic_name$ Teacher Hired"
+ 
+ 
+ #Restore the Ibadi Imamate (Ibadi/Wahbi/Nukkari)
+ ##Decision
+ me_restore_ibadi_imamate_decision:0 "Restore the [ROOT.Char.GetFaith.GetAdjective] Imamate"
+ me_restore_ibadi_imamate_decision_confirm:0 "I alone will lead the struggle!"
+ me_restore_ibadi_imamate_decision_desc:0 "Our community will have no leader to guide it unless a truely virtuous ruler steps up to fills this void and restore the Imamate, thus reuniting the true followers of Allah under a single cause!"
+ me_restore_ibadi_imamate_decision_tooltip:1 "You will become the [ROOT.Char.GetFaith.GetAdjective] Imam"
+ me_restore_ibadi_imamate_decision_effect_tooltip:1 "You will become the [ROOT.Char.GetFaith.GetAdjective] Imam"
+ me_restore_ibadi_imamate_decision.no_sinful_traits:0 "You have no [sinful|E] [traits|E]"
+ me_restore_ibadi_imamate_decision.x_virtuous_traits:0 "You have [EmptyScope.ScriptValue('appoint_a_righteous_caliph_decision_own_max_sins')|0] or more [virtuous|E] [traits|E]"
+ me_restore_ibadi_imamate_decision.3_virtuous_traits:0 "You have 3 or more [virtuous|E] [traits|E]"
+ me_restore_ibadi_imamate_decision.need_at_least_five_same_faith_counties:0 "You have at least 5 [CHARACTER.GetFaith.GetAdjective] [counties|E]"
+ fervor_gain_restored_imamate:0 "[imamate.GetName] restored"
+ 
+ ##Events
+ me_religious_decisions.0008.t:0 "A New Imamate"
+ me_religious_decisions.0008.desc:0 "For some time, our community had to endure without the proper leadership to guide us as we were forced to hide our true beliefs from those who seeks to do us harm.\n\nBut no more. For today [reformer.GetFaith.HighGodName] has granted us mercy, and blessed me with the piety and virtue neccesary to rise and be recognized by several of our esteemed scholars as an Imam over our community. I am now prepared to lead my followers towards a brighter future, against the infidels, heretics, and all those who seek to do us harm!"
+ me_religious_decisions.0008.a:0 "Allahu Akbar!"
+ me_religious_decisions.0009.t:0 "$me_religious_decisions.0008.t$"
+ me_religious_decisions.0009.desc.same_faith:0 "For some time, our community had to endure without the proper leadership to guide us as we were forced to hide our true beliefs from those who seeks to do us harm.\n\nBut no more. For today [reformer.GetFaith.HighGodName] has granted us mercy, and blessed [reformer.GetFirstName] with the piety and virtue neccesary to rise and be recognized by several of our esteemed scholars as an Imam over our community. [reformer.GetFirstName] now stands ready to lead us into brighter future, against all those who seek to do us harm"
+ me_religious_decisions.0009.desc.other_ibadi:0 "For some time, the [reformer.GetFaith.GetAdjective] community had to endure without the proper leadership to guide them, forced to hide their true beliefs from those who seek to do them harm.\n\nBut that ends today. By [reformer.GetFaith.HighGodNamePossessive] mercy, the virtuous [reformer.GetFirstName] has been recognized by several [reformer.GetFaith.GetName] scholars as an Imam over their community. [reformer.GetFirstName] now stands ready to lead them into future, whatever it may hold."
+ me_religious_decisions.0009.desc.other:0 "For some time, the [reformer.GetFaith.GetAdjective] community had to endure without the proper leadership to guide them, forced to hide their true beliefs from those who seek to do them harm.\n\nBut that ends today. By [reformer.GetFaith.HighGodNamePossessive] mercy, the virtuous [reformer.GetFirstName] has been recognized by several [reformer.GetFaith.GetName] scholars as an Imam over their community. [reformer.GetFirstName] now stands ready to lead them into future, whatever it may hold."
+ me_religious_decisions.0009.a:0 "Allahu Akbar!"
+ me_religious_decisions.0009.b:0 "Better the devil you know, I suppose..."
+ 
+ 
+ #Legitimize The Fatimid Geneology
+ ##Decision
+ me_legitimize_the_fatimid_lineage_decision:0 "Legitimize The Fatimid Lineage"
+ me_legitimize_the_fatimid_lineage_desc:0 "The [ROOT.Char.GetFaith.GetAdjective] scholars have always dismissed the geneology of the Fatimids as being falsified, instead choosing to refer to them as Ubaydis instead of Fatimids, my word alone should change this and allow the faithful to finally grant the heirs of the Prophet the respect they deserve."
+ me_legitimize_the_fatimid_lineage_decision_confirm:0 "The heirs of the Prophet will be acknowledged!"
+ me_legitimize_the_fatimid_lineage_decision_tooltip:1 "Every [faith|E] that considers you to be it's [head_of_faith|E] and has either the [GetFaithDoctrine('muhammad_succession_shia_doctrine').GetBaseName], [GetFaithDoctrine('islam_secondary_group_zandaqa_ghulat_doctrine').GetBaseName], or [GetFaithDoctrine('islam_secondary_group_zandaqa_qarmatian_doctrine').GetBaseName] [doctrine|E] will gain the [GetFaithDoctrine('special_doctrine_ubaydi_trait_acceptance').GetBaseName] doctrine."
+ me_legitimized_fatimid_geneology_opinion:0 "Legitimized My Lineage"
+ me_ubaydi_gain_opinion_tt:0 "Gain #p 50#! [opinion|E] from every character that has the [GetTrait('ubaydi').GetName( GetNullCharacter )] [trait|E]."
+
+ 
+ #Establish Berberist HoF
+ establish_berberist_hof_decision:0 "Establish the [ROOT.Char.GetFaith.GetReligiousHeadTitle.GetBaseName]"
+ establish_berberist_hof_decision_confirm:0 "I alone will lead the struggle!"
+ establish_berberist_hof_decision_desc:0 "There is no one to lead the faithful anymore, I must step up and fulfill my God given duty!."
+ establish_berberist_hof_decision_tooltip:1 "You will become the [ROOT.Char.GetFaith.GetAdjective] [head_of_faith|E]"
+ establish_berberist_hof_decision_effect_tooltip:1 "You will become the [ROOT.Char.GetFaith.GetAdjective] [head_of_faith|E]"
+ fervor_gain_restored_berberist_hof:0 "[berberist_title.GetName] restored"
+ 
+ 
+ #Pick a Side In The Musta'li Schism
+ ##Decision
+ ME_mustali_schism_convert_decision:0 "Pick a Side In The Musta'li Schism"
+ ME_mustali_schism_convert_decision_desc:0 "The death of al-Amir has cause a schism and a great amount of confusion within the [GetFaithByKey('ismaili').GetAdjective] world, we must pick a side in this struggle lest we remain leaderless forever."
+ ME_mustali_schism_convert_decision_tooltip:0 "The death of al-Amir has cause a schism and a great amount of confusion within the [GetFaithByKey('ismaili').GetAdjective] world, we must pick a side in this struggle lest we remain leaderless forever."
+ ME_CHOOSE_MUSTALI_FAITH:0 "Insha'Allah!"
+ ME_mustali_schism_convert_decision_confirm:0 "Insha'Allah!"
+ ME_mustali_schism_convert_hafizi_option: "[GetFaithByKey('hafizi').GetNameNoTooltip]"
+ ME_mustali_schism_convert_hafizi_option_desc:0 "[GetFaithByKey('hafizi').GetNameNoTooltip]"
+ ME_mustali_schism_convert_hafizi_option_tooltip: "The [GetFaithByKey('hafizi').GetAdjective] faithful believe that the true line of succession is through al-Hafiz, al-Amir's cousin."
+ ME_mustali_schism_convert_hafizi_percent:0 "70% chance for every [GetFaithByKey('ismaili').GetAdjective] [county|E] in your [realm|E] to convert to [GetFaithByKey('hafizi').GetName]"
+ ME_mustali_schism_convert_tayyibi_option: "[GetFaithByKey('tayyibi').GetNameNoTooltip]"
+ ME_mustali_schism_convert_tayyibi_option_desc:0 "[GetFaithByKey('tayyibi').GetNameNoTooltip]"
+ ME_mustali_schism_convert_tayyibi_option_tooltip: "The [GetFaithByKey('tayyibi').GetAdjective] faithful believe that the true successors of the Caliphate are in hiding, and in their absence they are lead by the Absolute Missionary (ad-Da'i al-Mutlaq)."
+ ME_mustali_schism_convert_tayyibi_percent:0 "70% chance for every [GetFaithByKey('ismaili').GetAdjective] [county|E] in your [realm|E] to convert to [GetFaithByKey('tayyibi').GetName]"
+ fervor_gain_mustali_convert:0 "Isma'ili ruler converted"
+ 

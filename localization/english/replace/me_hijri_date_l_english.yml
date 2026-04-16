@@ -1,0 +1,4 @@
+﻿l_english:
+
+ ## Hijri Calendar - Override CURRENT_DATE to support Islamic calendar display
+ CURRENT_DATE:0 "[GetPlayer.Custom('ME_GetDisplayDate')]"

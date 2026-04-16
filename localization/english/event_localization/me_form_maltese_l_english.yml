@@ -1,0 +1,40 @@
+﻿l_english:
+
+## Form Maltese
+#Decision
+ subsidize_latin_culture_in_malta_decision:0 "Subsidize Christian Culture in Malta"
+ subsidize_latin_culture_in_malta_decision_desc:0 "[GetTitleByKey('c_malta').GetNameNoTier]'s people still follow the customs of the Sarecens, if they are to become a fully-fledged part of Christendom, they need to start following Christian traditions." 
+ subsidize_latin_culture_in_malta_decision_confirm:0 "Subsidize Christian Culture"
+ subsidize_latin_culture_in_malta_decision_tooltip:1 "The Maltese [culture|E] will form in [GetTitleByKey('c_malta').GetNameNoTier]."
+
+ form_maltese_control_tt:0 "You control [GetTitleByKey('c_malta').GetNameNoTier]"
+ form_maltese_papal_character_tt:0 "You follow a [faith|E] with [GetTitleByKey('k_papal_state').GetNameNoTier] as it's [head_of_faith|E]"
+ form_maltese_papal_county_tt:0 "[GetTitleByKey('c_malta').GetNameNoTier] follows a [faith|E] with [GetTitleByKey('k_papal_state').GetNameNoTier] as it's [head_of_faith|E]."
+ form_maltese_heritage_arabic_tt:0 "[GetTitleByKey('c_malta').GetNameNoTier]'s [culture|E] has an $heritage_arabic_name$ [heritage|E]."
+ form_maltese_language_arabic_tt:0 "[GetTitleByKey('c_malta').GetNameNoTier]'s [culture|E] has an $heritage_arabic_name$ [language|E]."
+ form_maltese_formation_tt:0 "[GetTitleByKey('c_malta').GetNameNoTier]'s population will begin adopting Latin Christian traditions, and in a few years time, a unique Maltese [culture|E] will form."
+ form_maltese_conversion_tt:0 "If [GetTitleByKey('c_malta').GetNameNoTier] is your [realm_capital|E], you'll be able to convert to the Maltese [culture|E]"
+ form_maltese_language_tt:0 "Maltese culture has gained the $language_maltese_name$ [language|E] as a [culture_pillar|E]"
+ form_maltese_names_tt:0 "Maltese culture has began using unqiue Maltese naming practices."
+ 
+#Events
+ form_maltese.0001.t:0 "The Cross Atop the Isle"
+ form_maltese.0001.desc:0 "The harbours of [GetTitleByKey('c_malta').GetNameNoTier] have become filled with ships carrying the priests who will soon flood the island, filling every corner of every settlement with their presence, these learned men will help the Maltese abondon their barbaric saracen traditions and adopt the proper civilized Christian ways.\n\nIt will take time, it may even take years, but soon enough [GetTitleByKey('c_malta').GetNameNoTier] will become a proper part of christendom."
+ form_maltese.0001.a:0 "I look forward to seeing this new [GetTitleByKey('c_malta').GetNameNoTier]."
+ form_maltese.0001.tt:0 "If [GetTitleByKey('c_malta').GetNameNoTier] remains Christian, in twenty years, a new Maltese culture will form on the island."
+ 
+ form_maltese.0002.t:0 "A New Malta"
+ form_maltese.0002.desc_former:0 "My hard work has paid off, after twenty years, the people of [GetTitleByKey('c_malta').GetNameNoTier] have come to adopt many Christian customs, now they dress like Christians, hang crosses around their necks, and name their children with good Christian names.\n\nHowever, remnants of their old culture and language still remain, and have become blended with their new traditions, this gives the island a unique but familiar aesthetic that makes it's culture all the more beautiful."
+ form_maltese.0002.desc_islam:0 "The men of the cross have sunken their teeth deeper into the island of [GetTitleByKey('c_malta').GetNameNoTier], the people have come to adopt many Christian customs, now they dress like Christians, hang crosses around their necks, and name their children with Latin names instead of Arabic ones.\n\nHowever, remnants of their old culture and language still remain, and have become blended with their new traditions, this gives the island a strange atmosphere, to see Muslim customs being practiced by those who are clearly Christian."
+ form_maltese.0002.desc_norm:0 "It seems a new culture has emerged in [GetTitleByKey('c_malta').GetNameNoTier], numerous people have come to observe that the island's people have adopted many Christian customs, now they dress like Christians, hang crosses around their necks, and name their children with Christian names.\n\nHowever, remnants of their old culture and language still remain, and have become blended with their new traditions, this gives the island a unique aesthetic that makes it's culture all the more beautiful."
+ form_maltese.0002.a:0 "A new period for [GetTitleByKey('c_malta').GetNameNoTier] begins."
+ form_maltese.0002.b:0 "Perhaps... We should adopt this strange new culture."
+ form_maltese.0002.tt:0 "In 100 years, Maltese will form it's own unique language."
+ 
+ form_maltese.0003.t:0 "il-Lingwa Maltija"
+ form_maltese.0003.desc:0 "It seems that the locals have acknowledged this for quite some time, but the language spoken by the Maltese is no longer the same as of that spoken by the Arabs\n\nIt all began when the people of [GetTitleByKey('c_malta').GetNameNoTier] adopted Latin Christian customs and began writing their language using the Latin alphabet instead of the Arabic script, continuous interaction with the Latin Christians also resulted in the adoption of various Latin loan-words into $language_maltese_name$.\n\nEventually the differences between the two languages got so big that it was no longer possible to ignore, and today $language_maltese_name$ has been acknowledged as it's own separate language."
+ form_maltese.0003.a:0 "Today, a new language was born."
+
+ #######################
+
+

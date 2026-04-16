@@ -1,0 +1,227 @@
+﻿
+namespace = me_unique_decisions
+
+# 0001 - Unite the Andalusian Thrones
+# 0003 - Conquer the Italian Mainland
+# 0005
+
+
+##################################################
+# Unite the Andalusian Thrones
+##################################################
+
+#I have united the Andalusian thrones!
+me_unique_decisions.0001 = {
+	type = character_event
+	title = me_unique_decisions.0001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:al_andalus_uniter.culture = { has_cultural_pillar = language_arabic }
+				}
+				desc = me_unique_decisions.0001.arabic_desc
+			}
+			desc = me_unique_decisions.0001.non_arabic_desc
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:al_andalus_uniter
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		unite_the_andalusian_thrones_decision_effects = yes
+		legend_seed_great_deed_title_effect = {
+			TITLE = root.primary_title
+		}
+	}
+	
+	option = {
+		name = me_unique_decisions.0001.a
+
+		if = {
+			limit = {
+				scope:al_andalus_uniter.culture = { has_cultural_pillar = language_arabic }
+			}
+			give_nickname = nick_saqr_al_andalus
+		}
+		else_if = {
+			limit = {
+				scope:al_andalus_uniter.culture = { NOT = { has_cultural_pillar = language_arabic } }
+			}
+			give_nickname = nick_falcon_of_al_andalus
+		}
+	}
+}
+
+#Someone united the andalusian thrones!
+me_unique_decisions.0002 = {
+	type = character_event
+	title = me_unique_decisions.0001.t
+	desc = {
+		desc = me_unique_decisions.0002.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:al_andalus_uniter }
+				}
+				desc = me_unique_decisions.0002.relation_former.desc
+			}
+			desc = me_unique_decisions.0002.former.desc
+		}	
+		desc = me_unique_decisions.0002.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:al_andalus_uniter
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+
+##################################################
+# Conquer the Italian Mainland
+##################################################
+
+me_unique_decisions.0003 = {
+	type = character_event
+	title = me_unique_decisions.0003.t
+	desc = me_unique_decisions.0003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		save_scope_as = scoped_ruler
+		# De jure shifts.
+		hidden_effect = {
+			title:k_sicily = { # Shift all Kingdoms to Italy.
+				set_de_jure_liege_title = title:e_italy
+			}
+			title:k_italy = {
+				set_de_jure_liege_title = title:e_italy
+			}
+			title:k_venice = {
+				set_de_jure_liege_title = title:e_italy
+			}
+		}
+	}
+	option = {
+		name = me_unique_decisions.0003.a
+		add_prestige = medium_prestige_gain
+
+		# Send narrative fluff to other players (if any).
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				capital_province = { geographical_region = world_europe_west }
+			}
+			trigger_event = me_unique_decisions.0004
+		}
+		legend_seed_great_deed_region_effect = {
+			REGION = geographical_region:world_europe_south_italy
+		}
+	}
+}
+
+me_unique_decisions.0004 = {
+	type = character_event
+	title = me_unique_decisions.0003.t
+	desc = me_unique_decisions.0004.desc
+	theme = realm
+	left_portrait = {
+		character = scope:scoped_ruler
+		animation = personality_greedy
+	}
+
+	immediate = { play_music_cue = "mx_cue_positive_effect" }
+
+	option = {
+		name = me_unique_decisions.0004.a
+	}
+}
+
+##################################################
+# Promote Islamic Settlements in Hungary
+##################################################
+
+me_unique_decisions.0005 = {
+	type = character_event
+	title = me_unique_decisions.0005.t
+	desc = me_unique_decisions.0005.desc
+	theme = faith
+	left_portrait = {
+		character = scope:scoped_ruler
+		animation = personality_rational
+	}
+	
+	immediate = {
+		play_music_cue = "mx_cue_faith_conversion"
+		save_scope_as = scoped_ruler
+		promote_islamic_hungarian_settlement_decision_scripted_effect = yes
+	}
+	
+	option = {
+		name = me_unique_decisions.0005.a
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				capital_province = {
+					geographical_region = world_europe_east
+				}
+			}
+			trigger_event = me_unique_decisions.0006
+		}
+	}
+}
+
+me_unique_decisions.0006 = {
+	type = character_event
+	title = me_unique_decisions.0006.t
+	desc = {
+		first_valid = {
+			# Hungarian Vassal reaction.
+			triggered_desc = {
+				trigger = {
+					culture = culture:hungarian
+					target_is_liege_or_above = scope:scoped_ruler
+				}
+				desc = me_unique_decisions.0006.desc.vassals
+			}
+			desc = me_unique_decisions.0006.desc.others
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:scoped_ruler
+		animation = personality_rational
+	}
+	
+	option = {
+		name = {
+			trigger = {
+				culture = culture:hungarian
+				target_is_liege_or_above = scope:scoped_ruler
+			}	
+			text = me_unique_decisions.0006.a
+		}
+		name = {
+			trigger = {
+				NAND = {
+					culture = culture:hungarian
+					target_is_liege_or_above = scope:scoped_ruler
+				}
+			}
+			text = me_unique_decisions.0006.b
+		}
+	}
+}

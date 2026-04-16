@@ -1,0 +1,136 @@
+﻿k_armenia = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = k_armenia_islamic	
+	}		
+}
+
+d_greater_armenia = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = d_armenia_islamic	
+	}		
+}
+
+k_sicily = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = k_sicily_islamic	
+	}		
+}
+
+d_sicily = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = d_sicily_islamic	
+	}		
+}
+
+d_calabria = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = d_calabria_islamic	
+	}		
+}
+
+d_apulia = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = d_apulia_islamic	
+	}		
+}
+
+d_capua = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = d_capua_islamic	
+	}		
+}
+
+c_palermo = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_palermo_islamic	
+	}		
+}
+
+c_agrigento = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_agrigento_islamic	
+	}		
+}
+
+c_messina = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_messina_islamic	
+	}		
+}
+
+c_malta = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_malta_islamic	
+	}
+	item = {
+		trigger = { holder.faith.religious_head_title = title:k_papal_state }
+		coat_of_arms = c_malta_catholic	
+	}	
+}
+
+c_reggio_calabria = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_reggio_calabria_islamic	
+	}		
+}
+
+c_cosenza = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_cosenza_islamic	
+	}		
+}
+
+c_rossano = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_rossano_islamic	
+	}		
+}
+
+c_bari = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_bari_islamic	
+	}		
+}
+
+c_apulia = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_apulia_islamic	
+	}		
+}
+
+c_lecce = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_lecce_islamic	
+	}		
+}
+
+c_capua = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = c_capua_islamic	
+	}		
+}
+
+b_catania = {
+	item = {
+		trigger = { holder.faith.religion = religion:islam_religion }
+		coat_of_arms = b_catania_islamic	
+	}		
+}

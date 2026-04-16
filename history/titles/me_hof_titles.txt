@@ -1,0 +1,286 @@
+﻿d_barghawata = {
+	867.1.1 = { # Yunus publically proclaims his faith
+		holder = 168278 # Yunus ibn Ilyas/al-Yasa'
+		government = clan_government
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	885.1.1 = { 
+		holder = 168279 # Abu Ghufayl Yahmad ibn Mu'ad, nephew of Yunus
+	}
+	912.1.1 = { 
+		holder = 168280 # Abu al-Ansar Abdullah ibn Abu Ghufayl
+	}
+	952.1.1 = { 
+		holder = 168281 # Abu Mansur 'Isa ibn Abu al-Ansar
+	}
+	989.1.1 = { 
+		holder = baranis0011 ### Ahistorical ruler
+	}
+	1029.1.1 = { 
+		holder = baranis0012 ### Ahistorical ruler
+	}
+	1054.1.1 = { 
+		holder = baranis0013 ### Ahistorical ruler
+	}
+	1058.1.1 = { 
+		holder = 0 # Barghawata emirate falls to Almoravids 
+	}
+}
+
+d_hamimist = {
+	925.1.1 = {
+		holder = me_majkasa_005 # Ha-Mim ibn Mann-Allah
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	927.1.1 = { 
+		holder = me_majkasa_006 # Isa ibn Ha-Mim
+	}
+	935.1.1 = { 
+		holder = 0
+	}
+}
+
+d_kaduist = {
+	912.1.1 = {
+		holder = me_kaduist_001 # Kadu ibn Mu'arik al-Mawati
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	912.7.1 = {
+		holder = 0
+	}
+}
+
+d_hafizi = {
+	1132.1.23 = {
+		holder = 32907 # al-Hafiz
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	1149.1.1 = {
+		holder = 32908 # al-Zafir
+	}
+	1154.1.1 = {
+		holder = 32909 # al-Faiz
+	}
+	1160.1.1 = {
+		holder = 32910 # al-Adid
+	}
+	1171.1.1 = {
+		# Fall of the Fatimid Caliphate as independents, though they're still caliphs after this.
+		liege = k_egypt
+		holder = extra_fatimids_1
+	}
+}
+
+d_tayyibi = {
+	1138.1.1 = {
+		holder = me_tayyibi_001
+		government = theocracy_government
+	}
+	1151.4.29 = {
+		holder = me_tayyibi_003
+	}
+	1162.1.1 = {
+		holder = me_tayyibi_006
+	}
+	1199.11.9 = {
+		holder = me_tayyibi_007
+	}
+	1209.5.31 = {
+		holder = me_umayyads_015
+	}
+	1215.12.21 = {
+		holder = me_tayyibi_010
+	}
+	1229.2.8 = {
+		holder = me_umayyads_017
+	}
+	1230.1.1 = {
+		holder = me_umayyads_018
+	}
+}
+
+d_nukkari = {
+#	657.8.1 = {
+#		holder_ignore_head_of_faith_requirement = me_ibadi_001 # Abdullah ibn Wahb al-Rasbi, First elected Kharjite leader
+#	}	## It is debated whether he or Abdul-Wahab created the Wahbi Ibadi school.
+#	658.7.17 = {
+#		holder = 0
+#	}
+#	757.1.1 = {
+#		holder_ignore_head_of_faith_requirement = 273125 # Abu_l-Khattab ibn al-Samh al Ma'afiri
+#	}
+#	761.1.1 = {
+#		holder = 0
+#	}
+#	770.1.1 = {
+#		holder_ignore_head_of_faith_requirement = 210031 # Abū Ḥātim Yaqub ibn Labid al-Malzūzī
+#	}
+#	772.1.1 = {
+#		holder = 0
+#	}
+#	776.1.1 = {
+#		holder_ignore_head_of_faith_requirement = 210029 # Abdul-Rahman ibn Rustam, The first Rustamid ruler 
+#	}
+	784.1.1 = {
+		holder = me_ifrinid_009 # Abu Qudama ibn Fandin, Founder of the Nukkari sect
+	}
+	800.1.1 = {
+		holder = 0
+	}
+	910.1.1 = {
+		holder = me_ifrinid_008 # Abu Ammar Abdul-Hamid al-A'ma
+	}
+	928.1.1 = {
+		holder = me_ifrinid_001 # Abu Yazid Makhlad 'Sahib al-Himar' ibn Kaydad al-Yifrani
+	}
+	947.8.19 = {
+		holder = 0
+	}
+}
+
+d_wahbiya = {
+#	657.8.1 = {
+#		holder_ignore_head_of_faith_requirement = me_ibadi_001 # Abdullah ibn Wahb al-Rasbi, First elected Kharjite leader
+#	}	## It is debated whether he or Abdul-Wahab created the Wahbi Ibadi school.
+#	658.7.17 = {
+#		holder = 0
+#	}
+	757.1.1 = {
+		holder_ignore_head_of_faith_requirement = 273125 # Abu_l-Khattab ibn al-Samh al Ma'afiri
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	761.1.1 = {
+		holder = 0
+	}
+	770.1.1 = {
+		holder_ignore_head_of_faith_requirement = 210031 # Abū Ḥātim Yaqub ibn Labid al-Malzūzī
+	}
+	772.1.1 = {
+		holder = 0
+	}
+	776.1.1 = {
+		holder_ignore_head_of_faith_requirement = 210029 # Abdul-Rahman ibn Rustam, The first Rustamid ruler 
+	}
+	784.1.1 = {
+		holder = 210030 # Abdul-Wahab Rustamid
+	}
+	823.1.1 = {
+		holder = 163097 # Aflah ibn Abdal-Wahab Rustamid
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+	872.1.1 = { 
+ 		holder= 163148 # Abu Bakr ibn Aflah
+	}
+	874.1.1 = {
+		holder = 163149 # Muhammad ibn Aflah
+	}
+	894.1.1 = {
+		holder = me_rustamid_001 # Yusuf Abu Hatim ibn Muhammamad
+	}
+	895.1.1 = {
+		holder = 163150 # Yaqub ibn Aflah
+	}
+	899.1.1 = {
+		holder = me_rustamid_001 # Yusuf Abu Hatim ibn Muhammamad
+	}
+	906.1.1 = {
+		holder = me_rustamid_002 # al-Yaqzan ibn Muhammad
+	}
+	909.1.1 = {
+		holder = 0 # Fatimid invasion and the End of the Rustamids
+	}
+	910.1.1 = {
+		holder = me_nefusa_007 # Abu Yahya Zakariyya al-Irdjānī, last Wahbi Imam of North Africa
+	}
+	922.1.1 = {
+		holder = 0
+	}
+
+}
+
+d_ibadi = {
+	657.8.1 = {
+		holder = me_ibadi_001 # Abdullah ibn Wahb al-Rasbi, First elected Kharjite leader
+	}
+	658.7.17 = {
+		holder = 0
+	}
+
+	## Ibadi revolt of the Third Fitna 
+	747.1.1 = { 
+		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
+	}
+
+	## Imams of Oman
+	749.1.1 = {
+		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman 
+	}
+	751.1.1 = {
+		holder = 0
+	}
+	793.1.1 = {
+		holder = bedouin0145 # Muhammad b. Abi Affan
+	}
+	795.1.1 = {
+		holder = me_yahmadid_010 # al-Warith ibn Ka'ab al-Kharuṣi
+	}
+	807.1.1 = {
+		holder = me_yahmadid_007 # Ghassan ibn Abdullah al-Kharuṣi
+	}
+	823.4.16 = {
+		holder = me_azdid_029 # Abdul-Malik ibn Hamid as-Sawdawi
+	}
+	840.1.1 = {
+		holder = me_yahmadid_012 # al-Mihna ibn Jayfar al-Fijḥi
+	}
+	851.1.1 = {
+		holder = bedouin0147 # as-Salt b. Malik
+	}
+	886.1.1 = {
+		holder = me_yahmadid_027 # Rashid ibn an-Nadhar
+	}
+	890.1.1 = {
+		holder = bedouin0148 # Azzan b.Tamim
+	}
+
+
+	1066.1.1 = {
+		liege = e_persia
+		holder = bedouin0153
+	}
+
+	1154.1.1 = {
+		liege = 0
+		holder = 0
+	}
+}
+
+d_isfahani = {
+	931.1.1 = {
+		holder = me_isfahani_001 # Abu al-Fadl al-Isfahani
+	}
+	931.3.21 = {
+		holder = 0
+	}
+}
+
+#d_sufri = {
+#	778.1.1 = { # Abu Qurra proclaimed himself Imam/Caliph
+#		holder = 210032 # Abu Qurra Ifrinid
+#	}
+#}

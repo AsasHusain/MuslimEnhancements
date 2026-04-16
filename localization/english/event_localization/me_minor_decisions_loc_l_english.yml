@@ -1,0 +1,31 @@
+﻿l_english:
+ #Change the Dejure Capital of the Arabian Empire
+ ##Decision
+ change_capital_arabian_caliphate_title:0 "Change the Capital of the Caliphate"
+ change_capital_arabian_empire_title:0 "Change the Capital of the Empire"
+ change_capital_arabian_empire_desc:0 "The empire has had many capitals in the past, it's about time we changed it once more."
+ change_capital_arabian_empire_tooltip:0 "You will be able to set the [de_jure|E] [capital|E] of [GetTitleByKey('e_arabia').GetNameNoTier], this will NOT change your [realm_capital|E]."
+ change_capital_arabian_empire_confirm:0 "Change the Capital"
+ 
+ ME_change_arabian_capital_pick_a_capital:0 "Choose a new Capital"
+ ME_change_arabian_capital_pick_a_capital_gui:0 "Choose which city will become the new [de_jure|E] [capital|E]"
+ ME_arabian_capital_baghdad_option:0 "[GetTitleByKey('c_baghdad').GetNameNoTier]"
+ ME_arabian_capital_baghdad_option_desc:0 "The Jewel of Mesopotamia"
+ ME_arabian_capital_baghdad_option_tooltip:0 "[GetTitleByKey('c_baghdad').GetNameNoTier] becomes the [de_jure|E] [capital|E] of [GetTitleByKey('e_arabia').GetNameNoTier]"
+ ME_arabian_capital_samarra_option:0 "[GetTitleByKey('c_samarra').GetNameNoTier]"
+ ME_arabian_capital_samarra_option_desc:0 "The Stronghold of Caliphs"
+ ME_arabian_capital_samarra_option_tooltip:0 "[GetTitleByKey('c_samarra').GetNameNoTier] becomes the [de_jure|E] [capital|E] of [GetTitleByKey('e_arabia').GetNameNoTier]"
+ ME_arabian_capital_damascus_option:0 "[GetTitleByKey('c_damascus').GetNameNoTier]"
+ ME_arabian_capital_damascus_option_desc:0 "The Levantine Metropolis"
+ ME_arabian_capital_damascus_option_tooltip:0 "[GetTitleByKey('c_damascus').GetNameNoTier] becomes the [de_jure|E] [capital|E] of [GetTitleByKey('e_arabia').GetNameNoTier]"
+ 
+ ##Events
+ me_minor_decisions.0001.t:0 "A New Capital"
+ me_minor_decisions.0001.desc:0 "The empire has had many capitals in the past, but it is high time I chose which city shall the center of our empire for the next century."
+ me_minor_decisions.0001.a:0 "The old Umayyad capital, [GetTitleByKey('c_damascus').GetNameNoTier]."
+ me_minor_decisions.0001.b:0 "The great city of [GetTitleByKey('c_samarra').GetNameNoTier]."
+ me_minor_decisions.0001.c:0 "The bustling metropolis of [GetTitleByKey('c_baghdad').GetNameNoTier]."
+ me_minor_decisions.0001.d:0 "My current capital, [character_capital.GetName|U]"
+
+
+ #######################

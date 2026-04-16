@@ -1,0 +1,230 @@
+﻿me_spawn_historical_characters_effect = {
+
+	if = { # Ahmad Ibn Fadlan 
+		limit = {
+			current_year >= 919
+			current_year <= 921
+			NOT = { exists = global_var:hchar_me_ibn_fadlan }
+		}
+		set_global_variable = { name = hchar_me_ibn_fadlan value = yes }
+		if = {
+			limit = { title:c_baghdad.religion ?= religion:islam_religion }
+			title:c_baghdad.faith = { save_scope_as = char_faith }
+		}
+		else = { faith:ashari = { save_scope_as = char_faith } }
+		title:b_baghdad = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 35
+				name = Ahmad
+				dynasty_house = house:house_me_fadlanid
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = culture:levantine
+				father = character:me_ibn_fadlan_002
+				trait = education_learning_4
+				trait = theologian
+				random_traits_list = {
+					count = 3
+					zealous = {}
+					patient = {}
+					calm = {}
+					gregarious = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_fadlan
+				save_scope_as = major
+				add_character_flag = ai_will_not_convert
+				if = {
+					limit = {
+						has_ep1_dlc_trigger = yes
+					}
+					create_inspiration = adventure_inspiration
+					set_variable = {
+						name = adventure_destination
+						value = flag:steppe_west
+					}
+				}
+			}
+			if = { limit = { has_variable = me_ibn_fadlan 	 } } # Error suppression
+			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	if = { # Abd as-Samad Babek 
+		limit = {
+			current_year >= 997
+			current_year <= 999
+			NOT = { exists = global_var:hchar_me_abdusamed_babek }
+		}
+		set_global_variable = { name = hchar_me_abdusamed_babek value = yes }
+		if = {
+			limit = { title:c_hakkari.religion ?= religion:islam_religion }
+			title:b_hakkari.faith = { save_scope_as = char_faith }
+		}
+		else = { faith:ashari = { save_scope_as = char_faith } }
+		random_list = {
+			10 = { title:b_hakkari = { save_scope_as = char_location } }
+			10 = { title:b_baghdad = { save_scope_as = char_location } }
+			10 = { title:b_nishapur = { save_scope_as = char_location } }
+			10 = { title:b_mosul = { save_scope_as = char_location } }
+			10 = { title:b_hamadan = { save_scope_as = char_location } }
+		}
+		title:b_hakkari = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 25
+				name = Abdul-Sammad
+				dynasty_house = house:house_me_babek
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:char_location.title_province
+				faith = scope:char_faith
+				culture = culture:kurdish
+				father = global_var:hchar_me_babek_anc_03
+				trait = education_diplomacy_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					zealous = {}
+					compassionate = {}
+					patient = {}
+					calm = {}
+					gregarious = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_high_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_abdusamed_babek
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				add_character_flag = ai_will_not_convert
+				hidden_effect = {
+					learn_language_of_culture = culture:bedouin
+				}
+			}
+			if = { limit = { has_variable = me_abdusamed_babek 	 } } # Error suppression
+			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	# Ancestors of Abd as-Samad Babek
+	if = {  
+		limit = {
+			current_year >= 909
+			current_year <= 911
+			NOT = { exists = global_var:hchar_me_babek_anc_01 }
+		}
+		create_character = {
+			age = 30
+			name = Mansur
+			gender_female_chance = 0
+			location = title:b_hakkari.title_province
+			faith = faith:ashari
+			culture = culture:kurdish
+			trait = lifestyle_poet
+			save_scope_as = historical_character
+		}
+		set_global_variable = { name = hchar_me_babek_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = {  
+		limit = {
+			current_year >= 939
+			current_year <= 941
+			NOT = { exists = global_var:hchar_me_babek_anc_02 }
+		}
+		create_character = {
+			age = 30
+			name = Abd-al-Qasim
+			gender_female_chance = 0
+			location = title:b_hakkari.title_province
+			faith = faith:ashari
+			culture = culture:kurdish
+			father = global_var:hchar_me_babek_anc_01
+			save_scope_as = historical_character
+		}
+		set_global_variable = { name = hchar_me_babek_anc_02 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = {  
+		limit = {
+			current_year >= 969
+			current_year <= 971
+			NOT = { exists = global_var:hchar_me_babek_anc_03 }
+		}
+		create_character = {
+			age = 30
+			name = "Babek"
+			gender_female_chance = 0
+			location = title:b_hakkari.title_province
+			faith = faith:ashari
+			culture = culture:kurdish
+			father = global_var:hchar_me_babek_anc_02
+			save_scope_as = historical_character
+		}
+		set_global_variable = { name = hchar_me_babek_anc_03 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+
+}
+
+
+me_spawn_historical_characters_boilerplate_effect = {
+	county = { save_scope_as = county_scope }
+	county.holder = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			trigger_event = me_hchar_creation_events.001
+		}
+		else_if = {
+			limit = {
+				OR = {
+					exists = scope:major
+					has_game_rule = all_historical_characters
+				}
+				any_liege_or_above = {
+					is_ai = no
+				}
+			}
+			random_liege_or_above = {
+				limit = {
+					is_ai = no
+				}
+				trigger_event = me_hchar_creation_events.001
+			}
+		}
+		else_if = {
+			limit = {
+				exists = scope:county_scope.duchy.holder
+			}
+			scope:county_scope.duchy.holder = {
+				trigger_event = me_hchar_creation_events.001
+			}
+		}
+		else = {
+			top_liege = {
+				trigger_event = me_hchar_creation_events.001
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+﻿namespace = me_legend_story
+
+#Qurashi Lineage Ending Story Event
+me_legend_story.0001 = {
+	type = character_event
+	window = fullscreen_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					dynasty = dynasty:1042165 # Ziyadid
+				}
+				desc = me_legend_story.0001.t.ziyadid
+			}
+			triggered_desc = {
+				trigger = {
+					dynasty = dynasty:1022241 # Makhzumis of Shewa
+				}
+				desc = me_legend_story.0001.t.makhzumi
+			}
+			desc = me_legend_story.0001.t.fallback
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait = quraysh
+				}
+				desc = me_legend_story.0001.desc.qurashi
+			}
+			desc = me_legend_story.0001.desc.not_qurashi
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					dynasty = dynasty:1042165 # Ziyadid
+					has_trait = quraysh
+				}
+				desc = me_legend_story.0001.desc.ziyadid
+			}
+			triggered_desc = {
+				trigger = {
+					dynasty = dynasty:1022241 # Makhzumis of Shewa
+					has_trait = quraysh
+				}
+				desc = me_legend_story.0001.desc.makhzumi
+			}
+#			desc = story_event_legends.0002.desc.fallback
+		}
+	}
+	theme = legend
+	override_background = { reference = ce1_fullscreen_legitimizing_legend }
+	override_sound = { reference = "event:/DLC/FP4/SFX/UI/Unique/sfx_ui_spread_legend" }
+
+	immediate = {
+		play_music_cue = mx_cue_legend
+		set_variable = {
+			name = finished_legend_var
+			value = scope:promoted_legend
+		}
+		scope:promoted_legend = { set_variable = my_legend_var }
+		save_scope_as = legend_protagonist
+		
+		if = {
+			limit = { 
+				dynasty = dynasty:1042165 # Ziyadid
+				has_trait = quraysh
+			}
+			character:me_ziyadid_001 = {
+				remove_trait = disputed_heritage
+				add_trait = quraysh
+			}
+		}
+	}
+	
+	option = {
+		name = me_legend_story.0001.a
+		clicksound = "event:/DLC/FP2/SFX/UI/fp2_struggle_start_select"
+	}
+}

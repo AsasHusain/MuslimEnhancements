@@ -1,0 +1,36 @@
+﻿l_english:
+ bm_1066_swords_of_islam:1 "Swords of Islam"
+ bm_1066_swords_of_islam_desc:1 "After the dissolution of the Caliph's political authority in 936 AD, many local dynasties arose from the ashes of the once great Abbasid empire.\n\nIt was only a matter of time before the formidable and zealous Turks took over the reigns of the Muslim world, with Mahmud of Ghazna and Tughril of the Seljuks carving out vast empires from nothing, while the Karakhanids flourished in the greater Turan region.\n\n#bold As the protectors of the faith, it is upto you to defend the Ummah and see it flourish in every direction!#!"
+
+ #Alp Arslan
+ bookmark_alp_arslan:0 "Sultan Muhammad ibn Dawud Chaghri Alp-Arslan"
+ bookmark_alp_arslan_desc:0 "Alp Arslan- The Braveheart Lion, took over as the second Sultan of the Great Seljuks after his uncle Tughril. Military minded and trained for battle since childhood, Alp Arslan defeated his uncle Qutalmish for the Seljuk throne in 1063, and soon set out west with his eyes on Byzantine lands.\n\n#bold You are assured of your victory against the Romans. But don't let your guard down, for there are many who covet your throne.#!\n\nNote: Defeat the Byzantines for the chance to switch to another legendary Seljuk character who changed the course of History!"
+
+ bookmark_alp_arslan_alt_suleyman:0 "$Suleyman ibn Qutalmish$"
+ bookmark_alp_arslan_alt_malikshah:0 "$Malik Shah$"
+
+ #Qawurd
+ bookmark_qawurd:0 "Atabeg Qawurd ibn Dawud Chaghri"
+ bookmark_qawurd_desc:0 "Kara Arslan Ahmad Qawurd is the lesser known of the two Seljuk brothers. Qawurd took over the governorship of Kirman as his brother ascended the Great Seljuk throne, something Qawurd felt belonged to him. Building up his power base in the region along with his sons, there is no doubt in Qawurd's mind that one day he will have to go against his brother's family to claim what is his by birthright.\n\n#bold To see yourself on the great Seljuk throne, you must be patient. Build up your army, secure alliances and strike when the Emperor is weak or distracted.#!"
+
+ bookmark_qawurd_alt_elder_son:0 "$Turan Shah$"
+ bookmark_qawurd_alt_middle_son:0 "$Arslan Shah$"
+
+ #Ibrahim Tamghach
+ bookmark_karakhanid:0 "Tamghach Khan Ibrahim ibn Nasr"
+ bookmark_karakhanid_desc:0 "Ibrahim ibn Nasr, famously known as Böritigin, was one of the greatest rulers of the Karakhanid Dynasty, which by now was split into the Eastern and Western Khanates. His early military campaigns were spent invading and raiding the Ghaznavids and other local Karakhanid rulers. After a brief stint as a tributary and commander of the Ghaznavid Sultan Maw'dud, Ibrahim declares himself independent and looks to the east...\n\n#bold With years of military experience behind you, can you forge a unified Karakhanid Khanate and restore your family's prestige and honor once again?#!"
+
+ bookmark_karakhanid_son:0 "$Shams-al-Mulk Nasr$"
+
+ #Ghaznavids
+ bookmark_ghaznavid:0 "Sultan Ibrahim ibn Mas'ud"
+ bookmark_ghaznavid_desc:0 "Ibrahim ibn Mas'ud of Ghazna at the time of his ascendance was the last of the male Ghaznavids, the once-great dynasty brought to its knees after the usurper Toghrul massacred Ghaznavid princes at Barghund. Proving to be an exceptional ruler, Ibrahim single-handedly ushered in the Ghaznavid golden age. He soon went on the offensive- subjugating Ghur and deposing its king, and sending his ghazis to plunder the rich land of the Doab.\n\n#bold You have brought upon the Ghaznavid renaissance but your peace with the Seljuks is precarious, and the Hindus will soon look for revenge.#!"
+
+ bookmark_ghaznavid_alt_son:0 "$Mas'ud ibn Ibrahim$"
+
+ #Ghurids
+ bookmark_ghurid:0 "Amir Muhammad ibn Abbas"
+ bookmark_ghurid_desc:0 "Muhammad ibn Abbas Ghuri was installed as the ruler of Ghur after his father Abbas ibn Shith was deposed by the Ghaznavid ruler Ibrahim ibn Mas'ud in 1060. Left with no choice but to pay allegiance to the Turkic conqueror, Muhammad ruled in obscurity at the seat where his family ruled for ages.\n\n#bold Muhammad ibn Abbas isn't all that remarkable. He has average stats, and is a vassal to a very powerful ruler. But he did survive and continue his dynasty, a dynasty which would one day stretch from the Caspian to Bengal.#!"
+
+ bookmark_ghurid_alt_son:0 "$Hasan ibn Muhammad$"
+

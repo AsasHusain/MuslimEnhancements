@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "umm_kulthum_shield_mesh"
+	file = "umm_kulthum_shield.mesh"
+
+	meshsettings = {
+		name = "umm_kulthum_shieldShape"
+		index = 0
+		texture_diffuse = "umm_kulthum_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "umm_kulthum_shield_entity"
+	pdxmesh = "umm_kulthum_shield_mesh"
+}

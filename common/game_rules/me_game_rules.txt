@@ -1,0 +1,224 @@
+﻿me_sunni_unity = { # Converts counties of Muwalladi and/or Maturidi into the default Sunni 
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
+	default = me_sunni_normal
+
+	me_sunni_normal = {}
+	me_sunni_united = {}
+	me_sunni_muwalladi_only = {}
+	me_sunni_maturidi_only = {}
+}
+
+me_nukkari_revolt_game_rule = {
+	
+	categories = {
+		difficulty historicity flavor faith
+	}
+	
+	default = me_nukkari_revolt_yes
+
+	me_nukkari_revolt_yes = {}
+	me_nukkari_revolt_no = {}
+}
+
+me_berberist_invasion_game_rule = {
+	
+	categories = {
+		difficulty historicity flavor faith
+	}
+	
+	default = me_berberist_invasion_both
+
+	me_berberist_invasion_both = {}
+	me_berberist_invasion_H_only = {}
+	me_berberist_invasion_K_only = {}
+	me_berberist_invasion_K_ismaili = {}
+	me_berberist_invasion_H_K_ismaili = {}
+	me_berberist_invasion_none = {}
+}
+
+me_alid_egypt_revolt = { # Alid revolts in Egypt around 867
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
+	default = me_alid_egypt_revolt_ME
+
+	me_alid_egypt_revolt_ME = {}
+	me_alid_egypt_revolt_RICE = {}
+	me_alid_egypt_revolt_disabled = {}
+}
+
+me_egypt_holder_867 = { # Decides which governor holds Egypt
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
+	default = me_egypt_holder_tulunid_tributary
+
+	me_egypt_holder_tulunid_tributary = {}
+	me_egypt_holder_tulunid_vassal = {}
+	me_egypt_holder_hulwanid = {}
+	me_egypt_holder_urtujid = {}
+	me_egypt_holder_azjur = {}
+}
+
+me_bari_partition = { # Decides whether or not the Emirate of Bari gets partitioned after they lose the war
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
+	default = me_bari_partition_true
+
+	me_bari_partition_true = {}
+	me_bari_partition_false = {}
+}
+
+me_calabria_holder_867 = { # Decides whether Calabria is held by the Emirate of Bari or a Byzantine vassal
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
+	default = me_calabria_byzantine
+
+	me_calabria_byzantine = {}
+	me_calabria_bari = {}
+}
+
+me_rice_culture_name = { # Decides which name shared RICE cultures use
+	
+	categories = {
+		flavor
+	}
+	
+	default = me_rice_culture_name_ME
+
+	me_rice_culture_name_ME = {} # Siqilli and Mahri
+	me_rice_culture_name_RICE = {} # Siculo-Arabic and South Arabian
+	me_rice_culture_name_S_SA = {} # Siqilli and South Arabian
+	me_rice_culture_name_M_SA = {} # Siculo-Arabic and Mahri
+}
+
+me_siqilli_name_list = { # Decides which name list Siqilli uses
+	
+	categories = {
+		flavor
+	}
+	
+	default = me_siqilli_name_list_ME
+
+	me_siqilli_name_list_ME = {}
+	me_siqilli_name_list_RICE = {} # Requires RICE
+}
+
+me_adventerers_extra = { # Decides whether the fic adventerers get to stay or not
+	
+	categories = {
+		historicity flavor
+	}
+	
+	default = me_adventerers_extra_none
+
+	me_adventerers_fic_egg = {}
+	me_adventerers_fic_only = {}
+	me_adventerers_egg_only = {}
+	me_adventerers_extra_none = {}
+}
+
+me_caliph_rank = { # Decides whether the Fatimids and Abbasids gets extra titles in 1066
+	
+	categories = {
+		difficulty flavor
+	}
+	
+	default = me_caliph_rank_none
+
+	me_caliph_rank_none = {}
+	me_caliph_rank_both = {}
+	me_caliph_rank_fatimid = {}
+	me_caliph_rank_abbasid = {}
+}
+
+me_ayyubid_culture = { # Decides whether the living Ayubbids are Mashriqi or Kurdish
+	
+	categories = {
+		historicity flavor
+	}
+	
+	default = me_ayyubid_mashriqi
+
+	me_ayyubid_mashriqi = {}
+	me_ayyubid_kurdish = {}
+}
+
+me_fatimid_trait = { # Decides whether the Fatimids keep the Ubaydi trait or become normal Sayyids
+	
+	categories = {
+		historicity flavor
+	}
+	
+	default = me_fatimid_trait_ubaydi
+
+	me_fatimid_trait_ubaydi = {}
+	me_fatimid_trait_sayyid = {}
+}
+
+me_islamic_honorific_active = { # Decides whether regular Islamic rulers will take honorifics
+	
+	categories = {
+		flavor
+	}
+	
+	default = me_islamic_honorific_active_yes
+
+	me_islamic_honorific_active_yes = {}
+	me_islamic_honorific_active_no = {}
+}
+
+me_caliphal_honorific_active = { # Decides whether Islamic HoFs will take honorifics
+	
+	categories = {
+		flavor
+	}
+	
+	default = me_caliphal_honorific_active_historic_short
+
+	#me_caliphal_honorific_active_random_short = {}
+	#me_caliphal_honorific_active_random_long = {}
+	me_caliphal_honorific_active_historic_short = {}
+	me_caliphal_honorific_active_historic_long = {}
+	me_caliphal_honorific_active_no = {}
+}
+
+me_islamic_honorific_prefixed = { # Decides whether the Islamic honorifics are prefixed or not
+	
+	categories = {
+		flavor
+	}
+	
+	default = me_islamic_honorific_prefixed_both
+
+	me_islamic_honorific_prefixed_both = {}
+	me_islamic_honorific_prefixed_regular = {}
+	me_islamic_honorific_prefixed_caliphal = {}
+	me_islamic_honorific_prefixed_no = {}
+}
+
+me_malay_islamic_ruler = { # Decides whether the early Achenese muslim dynasties of dubious historicity exist or not
+	
+	categories = {
+		historicity
+	}
+	
+	default = me_malay_islamic_ruler_no
+
+	me_malay_islamic_ruler_yes = {}
+	me_malay_islamic_ruler_no = {}
+}

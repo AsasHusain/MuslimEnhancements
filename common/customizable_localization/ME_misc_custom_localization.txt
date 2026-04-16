@@ -1,0 +1,291 @@
+﻿### Override
+GetKnightErrantAnimal = { # Overriden to add lion to Middle East instead of swan
+	type = character
+	
+	text = {
+		trigger = {
+			location = {
+				geographical_region = world_europe
+			}
+		}
+		localization_key = GetKnightErrantAnimal_swan
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = ghw_region_caucasus
+					geographical_region = world_asia_china
+					geographical_region = world_asia_japan
+					geographical_region = world_asia_korea
+					geographical_region = world_asia_southeast
+				}
+			}
+		}
+		localization_key = GetKnightErrantAnimal_tiger
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_africa
+					geographical_region = world_middle_east
+				}
+			}
+		}
+		localization_key = GetKnightErrantAnimal_lion
+	}
+	text = { # Basically everywhere
+		localization_key = GetKnightErrantAnimal_hart
+		fallback = yes
+	}
+}
+
+
+### Misc
+ME_HistoricalCharacterDesc = {
+	type = character
+
+	text = {
+		trigger = {
+			has_variable = me_ibn_fadlan
+		}
+		localization_key = historical_character.me_ibn_fadlan
+	}
+
+	text = {
+		trigger = {
+			has_variable = me_abdusamed_babek
+		}
+		localization_key = historical_character.me_abdusamed_babek
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = generic_importance
+		fallback = yes
+	}
+}
+
+ME_BattlePoiNameHistorical = {
+	type = province
+
+	text = { # Battle of al-Qadisiyya
+		trigger = {
+			this = province:5994
+		}
+		localization_key = ME_BattlePoIHistoricalNameQadisiyya
+	}
+
+	text = { # Battle of Nahavand
+		trigger = {
+			this = province:4331
+		}
+		localization_key = ME_BattlePoIHistoricalNameNahavand
+	}
+
+	text = { # Battle of Guadalete
+		trigger = {
+			this = province:1842
+		}
+		localization_key = ME_BattlePoIHistoricalNameGuadalete
+	}
+
+	text = { # Seige of Amorium
+		trigger = {
+			this = province:5658
+		}
+		localization_key = ME_BattlePoIHistoricalNameAmorium
+	}
+}
+
+ME_BattlePoIDescriptionHistorical = {
+	type = province
+
+	text = { # Battle of al-Qadisiyya
+		trigger = {
+			this = province:5994
+		}
+		localization_key = ME_BattlePoIHistoricalDescQadisiyya
+	}
+
+	text = { # Battle of Nahavand
+		trigger = {
+			this = province:4331
+		}
+		localization_key = ME_BattlePoIHistoricalDescNahavand
+	}
+
+	text = { # Battle of Guadalete
+		trigger = {
+			this = province:1842
+		}
+		localization_key = ME_BattlePoIHistoricalDescGuadalete
+	}
+
+	text = { # Seige of Amorium
+		trigger = {
+			this = province:5658
+		}
+		localization_key = ME_BattlePoIHistoricalDescAmorium
+	}
+}
+
+## Nomadic
+ME_GetNomadicCouncilName = {
+	type = all
+
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_arabic
+					has_cultural_pillar = heritage_arabic
+				}
+			}
+		}
+		localization_key = me_nomadic_council_arabic
+	}
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_berber
+					has_cultural_pillar = heritage_berber
+				}
+			}
+		}
+		localization_key = me_nomadic_council_berber
+	}
+
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = me_nomadic_council_kurultai
+	}
+}
+
+ME_GetNomadicCouncilNameFull = {
+	type = all
+
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_arabic
+					has_cultural_pillar = heritage_arabic
+				}
+			}
+		}
+		localization_key = me_nomadic_council_full_arabic
+	}
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_berber
+					has_cultural_pillar = heritage_berber
+				}
+			}
+		}
+		localization_key = me_nomadic_council_berber
+	}
+
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = me_nomadic_council_kurultai
+	}
+}
+
+ME_GetNomadicCouncilNameMember = {
+	type = all
+
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_arabic
+					has_cultural_pillar = heritage_arabic
+				}
+			}
+		}
+		localization_key = me_nomadic_council_member_arabic
+	}
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_berber
+					has_cultural_pillar = heritage_berber
+				}
+			}
+		}
+		localization_key = me_nomadic_council_member_berber
+	}
+
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = me_nomadic_council_kurultai
+	}
+}
+
+ME_GetNomadicCouncilNameMembers = {
+	type = all
+
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_arabic
+					has_cultural_pillar = heritage_arabic
+				}
+			}
+		}
+		localization_key = me_nomadic_council_members_arabic
+	}
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = language_berber
+					has_cultural_pillar = heritage_berber
+				}
+			}
+		}
+		localization_key = me_nomadic_council_members_berber
+	}
+
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = me_nomadic_council_kurultai
+	}
+}
+
+ME_GetNomadicCouncilName_GC = {
+	type = character
+
+	text = {
+		trigger = {
+			top_liege.culture ?= {
+				OR = {
+					has_cultural_pillar = heritage_mongolic
+					has_cultural_pillar = heritage_turkic
+				}
+			}
+		}
+		localization_key = me_nomadic_council_kurultai
+	}
+
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = me_nomadic_council_norm
+	}
+}

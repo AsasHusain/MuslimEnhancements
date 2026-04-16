@@ -1,0 +1,116 @@
+﻿l_english:
+ ## Quraysh-related traits
+ trait_muslim_lineage:0 "Islamic Lineage"
+ 
+ trait_qurashi:0 "Qurayshi"
+ trait_qurashiyya:0 "Qurayshiyya"
+ trait_quraysh_desc:0 "The term Qurashi describes someone who descends from the legendary Quraysh Tribe of Arabia, though unlike a Sayyid, not descending directly from the Prophet Muhammad."
+ trait_quraysh_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the Blood of the Quraysh tribe flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ rich_presence_quraysh: "Having the blood of Quraysh running through [ROOT.Char.GetHerHis] veins as"
+
+ trait_ubaydi:0 "'Ubaydi"
+ trait_ubaydiyya:0 "'Ubaydiyya"
+ trait_ubaydi_desc:0 "The term 'Ubaydi was attributed to members of the Fatimid dynasty, which was believed by several Islamic sects to have forged it's descent from the Prophet Muhammad."
+ trait_ubaydi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is believed to be a descendant of Prophet Muhammad, a claim which is disputed by many."
+
+ ## Berberist religion traits
+ trait_blood_of_salih:0 "Blood of Salih"
+ trait_blood_of_salih_desc:0 "This character is a descendant of Salih ibn Tarif, the self-proclaimed berber prophet of the Barghawatian religion."
+ trait_blood_of_salih_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the Blood of the Barghawatian berber prophet, Salih ibn Tarif, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+
+ trait_blood_of_hamim:0 "Blood of Ḥa-Mim"
+ trait_blood_of_hamim_desc:0 "This character is a descendant of Ḥa-Mim ibn Mann-Allah, the self-proclaimed berber prophet of the Ḥa-Mimist religion."
+ trait_blood_of_hamim_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the Blood of the Ḥa-Mimist berber prophet, Ḥa-Mim ibn Mann-Allah, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ trait_blood_of_hamim_prophet_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Ḥa-Mimist berber prophet, and within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
+
+ trait_blood_of_kadu:0 "Blood of Kadu"
+ trait_blood_of_kadu_desc:0 "This character is a descendant of Kadu ibn Mu'arik, the berber prophet and mahdi of the Kaduist religion."
+ trait_blood_of_kadu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the Blood of the Kaduist berber prophet, Kadu ibn Mu'arik, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ trait_blood_of_kadu_prophet_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Kaduist berber prophet, and within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
+
+ trait_hamimist_prophet:0 "Ḥa-Mimist Prophet"
+ trait_hamimist_prophet_desc:0 "This character is the founder and self-proclaimed Berber Prophet of the Ḥa-Mimist religion."
+ trait_hamimist_prophet_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder and self-proclaimed Prophet of the Ḥa-Mimist religion."
+ 
+ trait_kaduist_prophet:0 "Kaduist Prophet"
+ trait_kaduist_prophet_desc:0 "This character is the Mahdi and Prophet of the Kaduist religion."
+ trait_kaduist_prophet_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Mahdi and Prophet of the Kaduist religion."
+
+ ## Berber tribal traits
+ trait_miknasa:0 "Miknasa"
+ trait_miknasa_desc:0 "The Miknasa are members the ancient Miknasa Berber tribe."
+ trait_miknasa_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Miknasa tribe."
+
+ trait_masmudi:0 "Masmuda"
+ trait_masmudi_desc:0 "The Masmuda are members the ancient Masmuda Berber tribe, who possess the blood of Masmud ibn Yunus ibn Barbar"
+ trait_masmudi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Masmuda tribe."
+
+ trait_sanhaja:0 "Sanhaja"
+ trait_sanhaja_desc:0 "The Sanhaja are members the ancient Sanhaja Berber tribe, who possess the blood of Sanhaj ibn Barnis ibn Mazigh"
+ trait_sanhaja_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Sanhaja tribe."
+
+ trait_zenata:0 "Zenata"
+ trait_zenata_desc:0 "The Zenata are members the ancient Zenata Berber tribe, who possess the blood of Jana/Shana, a descendant of Kadad ibn Mazigh"
+ trait_zenata_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Zenata tribe."
+ 
+ trait_kutama:0 "Kutama"
+ trait_kutama_desc:0 "The Kutama are members the ancient Kutama Berber tribe, who possess the blood of Kutama ibn Barnis ibn Mazigh."
+ trait_kutama_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Kutama tribe."
+ 
+ trait_hawwara:0 "Hawwara"
+ trait_hawwara_desc:0 "The Hawwara are members the ancient Hawwara Berber tribe, who possess the blood of Hawwar ibn Awrigh ibn Barnis ibn Mazigh."
+ trait_hawwara_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Hawwara tribe."
+ 
+ ## Other traits
+ trait_hafidh:0 "Hafidh"
+ trait_hafidh_1:0 "Aspiring Hafidh"
+ trait_hafidha_1:0 "Aspiring Hafidha"
+ trait_hafiz_1:0 "Aspiring Hafiz"
+ trait_hafiza_1:0 "Aspiring Hafiza"
+ trait_hafidh_2:0 "Experienced Hafidh"
+ trait_hafidha_2:0 "Experienced Hafidha"
+ trait_hafiz_2:0 "Experienced Hafiz"
+ trait_hafiza_2:0 "Experienced Hafiza"
+ trait_hafidh_3:0 "Hafidh"
+ trait_hafidha_3:0 "Hafidha"
+ trait_hafiz_3:0 "Hafiz"
+ trait_hafiza_3:0 "Hafiza"
+ trait_track_hafidh:0 "Hafidh"
+ trait_track_hafidh_desc:0 "#help You gain experience in this track by appointing a Hafidh court tutor and using the $become_hafidh_interaction$ [interaction|E].#!\n\nIn the name of Allah, the Most Gracious, the Most Merciful..."
+ trait_hafidh_desc:0 "This Character has dedicated themselves to commiting the entire Qur'an to memory."
+ trait_hafidh_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] aspires to completley memorize the Qur'an, but has yet to memorize any important chapters."
+ trait_hafidh_1_character_normal_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] aspires to completely memorize the Qur'an, [ROOT.GetCharacter.GetSheHe] has memorized a good amount of chapters a small amount of Hadith."
+ trait_hafidh_1_character_quranist_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] aspires to completely memorize the Qur'an and has memorized a good amount of chapters."
+ trait_hafidh_2_character_normal_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has memorized a great portion of the Qur'an and Hadith, this already large feat has given great [ROOT.GetCharacter.GetHerHim] respect within the Islamic community."
+ trait_hafidh_2_character_quranist_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has memorized a great portion of the Qur'an, this already large feat has given great [ROOT.GetCharacter.GetHerHim] respect within the Islamic community."
+ trait_hafidh_3_character_normal_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has completely memorized the Qur'an, word by word, letter by letter, this grand acomplishment along with  [ROOT.GetCharacter.GetHerHis] extensive knowledge of the Hadith serves as a sign of [ROOT.GetCharacter.GetHerHis] knowledge and piety to those that look towards [ROOT.GetCharacter.GetHerHim] for spiritual guidance."
+ trait_hafidh_3_character_quranist_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has completely memorized the Qur'an, word by word, letter by letter, this grand acomplishment serves as a sign of [ROOT.GetCharacter.GetHerHis] knowledge and piety to those that look towards [ROOT.GetCharacter.GetHerHim] for spiritual guidance."
+ 
+ trait_me_hidden_imam:0 "Hidden Imam"
+ trait_me_hidden_imam_desc:0 "This character is a Fatimid Imam in hiding who seeks to spread his faith and claim his rightful place as as Caliph of the Isma'ilis."
+ trait_me_hidden_imam_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Fatimid Imam in hiding who seeks to spread his faith and claim his rightful place as as Caliph of the Isma'ilis."
+ trait_track_me_hidden_imam:0 "Hidden Imam"
+ trait_track_me_hidden_imam_desc:0 "#help You gain experience in this track by using the Proselytize [decision|E] as an adventurer.#!\n\nLevel 1: #EMP Upon becoming landed, will gain the [GetTitleByKey('d_shiite').GetNameNoTier] [title|E].#!\nLevel 2: #EMP Can take the [GetDecisionWithKey('ME_become_ismaili_mahdi_decision').GetName] [decision|E].#!"
+ me_become_ismaili_caliph_tooltip:0 "Upon becoming landed, will gain the [GetTitleByKey('d_shiite').GetNameNoTier] [title|E]"
+ me_become_ismaili_mahdi_tooltip:0 "Can take the [GetDecisionWithKey('ME_become_ismaili_mahdi_decision').GetName] [decision|E]"
+ 
+ trait_ME_ismaili_mahdi:0 "al-Mahdi bi-llah"
+ trait_ME_ismaili_mahdi_desc:0 "This character has proclaimed themselves to be the Mahdi, promising to lead the Isma'ili faithful to glory."
+ trait_ME_ismaili_mahdi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has proclaimed himself the Mahdi, promising to lead the Isma'ili faithful to glory."
+
+ trait_ME_missionary:0 "Missionary"
+ trait_ME_missionary_1:0 "Amateur Missionary"
+ trait_ME_missionary_1_dai:0 "Amateur Da'i"
+ trait_ME_missionary_1_daiyah:0 "Amateur Da'iyah"
+ trait_ME_missionary_2:0 "Missionary"
+ trait_ME_missionary_2_dai:0 "Da'i"
+ trait_ME_missionary_2_daiyah:0 "Da'iyah"
+ trait_ME_missionary_3:0 "Renowned Missionary"
+ trait_ME_missionary_3_dai:0 "Renowned Da'i"
+ trait_ME_missionary_3_daiyah:0 "Renowned Da'iyah"
+ trait_track_ME_missionary:0 "Missionary"
+ trait_track_ME_missionary_desc:0 "#help You gain experience in this track by using the Proselytize [decision|E] as an adventurer.#!\n\nNot all missionaries are made the same, some are simply more competent than others."
+ trait_ME_missionary_desc:0 "This Character has commited themselves to traveling the land and converting the people to their faith."
+ trait_ME_missionary_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has commited [ROOT.GetCharacter.GetHerselfHimself] to traveling the land and converting the people to [ROOT.GetCharacter.GetHerHis] faith, though [ROOT.GetCharacter.GetSheHe]'s yet to gain much experience in that regard."
+ trait_ME_missionary_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has traveled the land and converting the people to [ROOT.GetCharacter.GetHerHis] faith."
+ trait_ME_missionary_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has converted countless people to [ROOT.GetCharacter.GetHerHis] faith, and [ROOT.GetCharacter.GetHerHis] name and efforts are known all throughout the land."

@@ -1,0 +1,2245 @@
+﻿
+namespace = me_missionary_event
+
+#####
+
+## Inheritance Event
+me_missionary_event.0001 = {
+	type = character_event
+	title = me_missionary_event.0001.t
+	desc = {
+		triggered_desc = {
+			trigger = { scope:previous_holder = { is_alive = no } }
+			desc = me_missionary_event.0001.desc.dead
+		}
+		triggered_desc = {
+			trigger = { scope:previous_holder = { is_alive = yes } }
+			desc = me_missionary_event.0001.desc.alive
+		}
+	}
+	theme = laamp
+	left_portrait = {
+		character = scope:previous_holder
+
+		triggered_animation = {
+			trigger = { scope:previous_holder = { is_alive = no } }
+			animation = dead
+		}
+	}
+	right_portrait = {
+		character = root
+		animation = zealous
+	}
+
+	trigger = {
+		government_has_flag = government_is_landless_adventurer
+		NOT = { has_trait = me_hidden_imam }
+		OR = {
+			faith = scope:previous_holder.faith
+			root.secret_faith = scope:previous_holder.secret_faith
+		}
+		scope:previous_holder = {
+			has_trait = ME_missionary
+		}
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = me_missionary_event.0001.a
+		stress_impact = {
+			cynical = major_stress_impact_gain
+		}
+		
+		add_trait = ME_missionary
+	}
+	option = {
+		name = me_missionary_event.0001.b
+		stress_impact = {
+			zealous = major_stress_impact_gain
+		}
+	}
+}
+
+## Critical Success
+# Challenger - Public
+me_missionary_event.1001 = {
+	type = character_event
+	title = me_missionary_event.1001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { var:me_missionary_event_1001_var = flag:diplomacy }
+				desc = me_missionary_event.1001.desc.diplomacy
+			}
+			triggered_desc = {
+				trigger = { var:me_missionary_event_1001_var = flag:intrigue }
+				desc = me_missionary_event.1001.desc.intrigue
+			}
+			triggered_desc = {
+				trigger = { var:me_missionary_event_1001_var = flag:learning }
+				desc = me_missionary_event.1001.desc.learning
+			}
+		}
+	}
+	theme = education
+	left_portrait = {
+		character = scope:challenger
+		triggered_animation = {
+			trigger = { root.var:me_missionary_event_1001_var = flag:diplomacy }
+			animation = personality_rational
+		}
+		triggered_animation = {
+			trigger = { root.var:me_missionary_event_1001_var = flag:intrigue }
+			animation = personality_dishonorable
+		}
+		triggered_animation = {
+			trigger = { root.var:me_missionary_event_1001_var = flag:learning }
+			animation = personality_honorable
+		}
+	}
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		ME_proselytize_success_effect = yes
+		ME_proselytize_remove_var_main_effect = yes
+		random_list = {
+			10 = {
+				create_character = {
+					template = me_diplomat_character_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.location.faith
+					save_scope_as = challenger
+				}
+				set_variable = {
+					name = me_missionary_event_1001_var
+					value = flag:diplomacy
+				}
+			}
+			10 = {
+				create_character = {
+					template = me_intrigue_character_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.location.faith
+					save_scope_as = challenger
+				}
+				set_variable = {
+					name = me_missionary_event_1001_var
+					value = flag:intrigue
+				}
+			}
+			10 = {
+				create_character = {
+					template = priest_character_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.location.faith
+					save_scope_as = challenger
+				}
+				set_variable = {
+					name = me_missionary_event_1001_var
+					value = flag:learning
+				}
+			}
+		}
+		hidden_effect = {
+			scope:challenger = {
+				remove_trait = cynical
+				add_trait = zealous
+			}
+		}
+	}
+
+	option = {
+		name = me_missionary_event.1001.a
+		remove_variable = me_missionary_event_1001_var
+		
+		if = {
+			limit = { var:me_missionary_event_1001_var = flag:diplomacy }
+			duel = {
+				skill = diplomacy
+				target = scope:challenger
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.1001.a.toast.debate_won
+					add_prestige = medium_prestige_gain
+					ME_proselytize_success_effect = yes
+					ME_proselytize_remove_var_main_effect = yes
+				}
+
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.1001.a.toast.debate_lost
+					add_prestige = medium_prestige_loss
+					add_character_modifier = {
+						modifier = me_lost_debate_modifier
+						years = 1 
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { var:me_missionary_event_1001_var = flag:intrigue }
+			duel = {
+				skill = intrigue
+				target = scope:challenger
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.1001.a.toast.debate_won
+					add_prestige = medium_prestige_gain
+					ME_proselytize_success_effect = yes
+					ME_proselytize_remove_var_main_effect = yes
+				}
+
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.1001.a.toast.debate_lost
+					add_prestige = medium_prestige_loss
+					add_character_modifier = {
+						modifier = me_lost_debate_modifier
+						years = 1 
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { var:me_missionary_event_1001_var = flag:learning }
+			duel = {
+				skill = learning
+				target = scope:challenger
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.1001.a.toast.debate_won
+					add_prestige = medium_prestige_gain
+					ME_proselytize_success_effect = yes
+					ME_proselytize_remove_var_main_effect = yes
+				}
+
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.1001.a.toast.debate_lost
+					add_prestige = medium_prestige_loss
+					add_character_modifier = {
+						modifier = me_lost_debate_modifier
+						years = 1 
+					}
+				}
+			}
+		}
+		hidden_effect = { scope:challenger = { death = { death_reason = death_disappearance } } }
+	}
+	option = {
+		name = me_missionary_event.1001.b
+		remove_variable = me_missionary_event_1001_var
+		hidden_effect = { scope:challenger = { death = { death_reason = death_disappearance } } }
+	}
+}
+
+# Successfully bought conversions and kept half the gold
+me_missionary_event.1002 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_missionary_event.1002.a.tt
+			ME_proselytize_success_effect = yes
+			ME_proselytize_remove_var_main_effect = yes
+			remove_short_term_gold = {
+				value = me_proselytize_buy_conversion_gold
+				multiply = 0.5
+			}
+		}
+	}
+}
+
+# Successfully bought conversions and got double the conversions
+me_missionary_event.1003 = {
+	hidden = yes
+
+	trigger = {
+		NAND = { 
+			root.location.county.var:converts_villagers_gold_tier = 4
+			root.location.county.var:converts_villagers_gold_faith = root.faith
+		}
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_missionary_event.1003.a.tt
+			ME_proselytize_success_double_effect = yes
+			remove_short_term_gold = me_proselytize_buy_conversion_gold
+		}
+	}
+}
+
+# Choose to keep half the gold or double the conversions
+me_missionary_event.1004 = {
+	type = character_event
+	title = me_missionary_event.1004.t
+	desc = me_missionary_event.1004.desc
+	theme = education
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = me_missionary_event.1004.a
+		ME_proselytize_success_double_effect = yes
+		remove_short_term_gold = me_proselytize_buy_conversion_gold
+	}
+	option = {
+		name = me_missionary_event.1004.b
+		ME_proselytize_success_effect = yes
+		ME_proselytize_remove_var_main_effect = yes
+		remove_short_term_gold = {
+			value = me_proselytize_buy_conversion_gold
+			multiply = 0.5
+		}
+	}
+}
+
+# Challenger - Secret
+me_missionary_event.1005 = {
+	type = character_event
+	title = me_missionary_event.1005.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { var:me_missionary_event_1005_var = flag:diplomacy }
+				desc = me_missionary_event.1005.desc.diplomacy
+			}
+			triggered_desc = {
+				trigger = { var:me_missionary_event_1005_var = flag:learning }
+				desc = me_missionary_event.1005.desc.learning
+			}
+		}
+	}
+	theme = education
+	left_portrait = {
+		character = scope:challenger
+		triggered_animation = {
+			trigger = { root.var:me_missionary_event_1005_var = flag:diplomacy }
+			animation = personality_rational
+		}
+		triggered_animation = {
+			trigger = { root.var:me_missionary_event_1005_var = flag:learning }
+			animation = personality_honorable
+		}
+	}
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		ME_proselytize_success_effect = yes
+		ME_proselytize_remove_var_main_effect = yes
+		random_list = {
+			10 = {
+				create_character = {
+					template = me_diplomat_character_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.location.faith
+					save_scope_as = challenger
+				}
+				set_variable = {
+					name = me_missionary_event_1005_var
+					value = flag:diplomacy
+				}
+			}
+			10 = {
+				create_character = {
+					template = priest_character_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.location.faith
+					save_scope_as = challenger
+				}
+				set_variable = {
+					name = me_missionary_event_1005_var
+					value = flag:learning
+				}
+			}
+		}
+		hidden_effect = {
+			scope:challenger = {
+				remove_trait = cynical
+				add_trait = zealous
+			}
+		}
+	}
+
+	option = {
+		name = {
+			trigger = { NOT = { scope:challenger.faith.religion = root.faith.religion } }
+			text = me_missionary_event.1005.a.different_rel
+		}
+		name = {
+			trigger = { NOT = { scope:challenger.faith.religion = root.faith.religion } }
+			text = me_missionary_event.1005.a.same_rel
+		}
+		remove_variable = me_missionary_event_1005_var
+		
+		if = {
+			limit = { var:me_missionary_event_1005_var = flag:diplomacy }
+			duel = {
+				skill = diplomacy
+				target = scope:challenger
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.1005.a.toast.success
+					
+					scope:challenger = { set_character_faith = root.faith }
+					ME_proselytize_success_effect = yes
+					ME_proselytize_remove_var_main_effect = yes
+				}
+
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.1005.a.toast.fail
+					add_prestige = minor_prestige_loss
+					add_character_modifier = {
+						modifier = me_suspicious_activity_modifier
+						years = 1 
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { var:me_missionary_event_1005_var = flag:learning }
+			duel = {
+				skill = learning
+				target = scope:challenger
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.1005.a.toast.success
+					
+					scope:challenger = { set_character_faith = root.faith }
+					ME_proselytize_success_effect = yes
+					ME_proselytize_remove_var_main_effect = yes
+				}
+
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.1005.a.toast.fail
+					add_prestige = minor_prestige_loss
+					add_character_modifier = {
+						modifier = me_suspicious_activity_modifier
+						years = 1 
+					}
+				}
+			}
+		}
+		hidden_effect = { scope:challenger = { death = { death_reason = death_disappearance } } }
+	}
+	option = {
+		name = me_missionary_event.1005.b
+		remove_variable = me_missionary_event_1005_var
+		hidden_effect = { scope:challenger = { death = { death_reason = death_disappearance } } }
+	}
+}
+
+
+# Success
+# Gain a few followers
+me_missionary_event.2001 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_missionary_event.2001.a.tt
+			ME_proselytize_success_effect = yes
+			ME_proselytize_remove_var_main_effect = yes
+		}
+	}
+}
+
+# Possible Recruit
+me_missionary_event.2002 = {
+	type = character_event
+	title = me_missionary_event.2002.t
+	desc = me_missionary_event.2002.desc
+	theme = education
+	left_portrait = {
+		character = scope:convert
+		animation = beg
+	}
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+		NOT = { has_variable = had_event_proselytize_courtier }
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				create_character = {
+					template = generic_peasant_character
+					location = root.location
+					culture = root.location.culture
+					faith = root.faith
+					save_scope_as = convert
+				}
+			}
+			10 = {
+				create_character = {
+					template = servant_character
+					location = root.location
+					culture = root.location.culture
+					faith = root.faith
+					save_scope_as = convert
+				}
+			}
+			10 = {
+				create_character = {
+					template = priest_character_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.faith
+					save_scope_as = convert
+				}
+			}
+			10 = {
+				create_character = {
+					template = merchant_template
+					location = root.location
+					culture = root.location.culture
+					faith = root.faith
+					save_scope_as = convert
+				}
+			}
+			10 = {
+				create_character = {
+					template = drunken_peasant_character
+					location = root.location
+					culture = root.location.culture
+					faith = root.faith
+					save_scope_as = convert
+				}
+			}
+			5 = {
+				create_character = {
+					template = beautiful_peasant_character
+					gender_female_chance = root_attraction_based_female_chance
+					location = root.location
+					culture = root.location.culture
+					faith = root.faith
+					save_scope_as = convert
+				}
+			}
+		}
+		hidden_effect = {
+			scope:convert = {
+				remove_trait = cynical
+				add_trait = zealous
+			}
+		}
+		set_variable = { # To make sure a player doesn't get too many followers
+			name = had_event_proselytize_courtier
+			value = yes
+			days = 600
+		}
+	}
+
+	option = {
+		name = me_missionary_event.2002.a
+		ME_proselytize_success_effect = yes
+		add_courtier = scope:convert
+		
+		ME_proselytize_remove_var_main_effect = yes
+	}
+	option = {
+		name = me_missionary_event.2002.b
+		ME_proselytize_success_effect = yes
+		ME_proselytize_courtier_advantage_effect = yes
+		hidden_effect = { scope:convert = { death = { death_reason = death_disappearance } } }
+		
+		ME_proselytize_remove_var_main_effect = yes
+	}
+}
+
+# Successfully bought conversions
+me_missionary_event.2003 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_missionary_event.2001.a.tt
+			ME_proselytize_success_effect = yes
+			ME_proselytize_remove_var_main_effect = yes
+			remove_short_term_gold = me_proselytize_buy_conversion_gold
+		}
+	}
+}
+
+
+## Critical Failure
+# Pelted with rocks
+me_missionary_event.3001 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		remove_variable = social_type
+		remove_variable = preach_type
+		send_interface_toast = {
+			type = event_toast_effect_bad
+			title = me_missionary_event.3001.a.tt
+			left_icon = root
+			random_list = {
+				50 = {
+					increase_wounds_effect = { REASON = skull_cracked_open }
+				}
+				5 = {
+					trigger = {
+						NOT = { has_trait = one_eyed }
+					}
+					add_trait = one_eyed
+				}
+			}
+		}
+	}
+}
+
+# Stabbed while preaching (Good Intrigue)
+me_missionary_event.3002 = {
+	type = character_event
+	title = me_missionary_event.3002.t
+	desc = me_missionary_event.3002.desc
+	theme = education
+	left_portrait = {
+		character = scope:roadman
+		animation = assassin
+	}
+	right_portrait = {
+		character = root
+		animation = scheme
+	}
+	lower_right_portrait =  scope:bodyguard
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+		intrigue >= 13
+	}
+
+	immediate = {
+		random_court_position_holder = {
+			limit = {
+				has_court_position = bodyguard_court_position
+			}
+			save_scope_as = bodyguard
+		}
+	
+		create_character = {
+			template = challenger_peasant_character
+			location = root.location
+			culture = root.location.culture
+			faith = root.location.faith
+			save_scope_as = roadman
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3002.a
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = prowess
+			target = scope:roadman
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3002.a.toast.won
+				add_prestige = medium_prestige_gain
+				scope:roadman = {
+					death = {
+						death_reason = death_duel
+						killer = root
+					}
+				}
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3002.a.toast.lost
+				increase_wounds_effect = { REASON = fight }
+				hidden_effect = { scope:roadman = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+	
+	option = {
+		name = me_missionary_event.3002.b
+		remove_variable = social_type
+		remove_variable = preach_type
+		add_prestige = minor_prestige_loss
+		hidden_effect = { scope:roadman = { death = { death_reason = death_disappearance } } }
+	}
+	
+	option = {
+		name = me_missionary_event.3002.c
+		trigger = {
+			employs_court_position = bodyguard_court_position
+		}
+		
+		remove_variable = social_type
+		remove_variable = preach_type
+		scope:bodyguard = {
+			duel = {
+				skill = prowess
+				target = scope:roadman
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.3002.a.toast.won_bodyguard
+					add_prestige = medium_prestige_gain
+					scope:roadman = {
+						death = {
+							death_reason = death_duel
+							killer = scope:bodyguard
+						}
+					}
+				}
+	
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.3002.a.toast.lost_bodyguard
+					increase_wounds_effect = { REASON = fight }
+					hidden_effect = { scope:roadman = { death = { death_reason = death_disappearance } } }
+				}
+			}
+		}
+	}
+}
+
+# Stabbed while preaching
+me_missionary_event.3003 = {
+	type = character_event
+	title = me_missionary_event.3003.t
+	desc = me_missionary_event.3003.desc
+	theme = education
+	left_portrait = {
+		character = scope:roadman
+		animation = assassin
+	}
+	right_portrait = {
+		character = root
+		animation = severelywounded
+	}
+	lower_right_portrait =  scope:bodyguard
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+		intrigue < 13
+	}
+
+	immediate = {
+		increase_wounds_effect = { REASON = fight }
+		random_court_position_holder = {
+			limit = {
+				has_court_position = bodyguard_court_position
+			}
+			save_scope_as = bodyguard
+		}
+	
+		create_character = {
+			template = challenger_peasant_character
+			location = root.location
+			culture = root.location.culture
+			faith = root.location.faith
+			save_scope_as = roadman
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3003.a
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = prowess
+			target = scope:roadman
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3002.a.toast.won
+				add_prestige = minor_prestige_gain
+				scope:roadman = {
+					death = {
+						death_reason = death_duel
+						killer = root
+					}
+				}
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3002.a.toast.lost
+				increase_wounds_effect = { REASON = fight }
+				hidden_effect = { scope:roadman = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+	
+	option = {
+		name = me_missionary_event.3003.b
+		trigger = {
+			employs_court_position = bodyguard_court_position
+		}
+		
+		remove_variable = social_type
+		remove_variable = preach_type
+		scope:bodyguard = {
+			duel = {
+				skill = prowess
+				target = scope:roadman
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.3002.a.toast.won_bodyguard
+					add_prestige = minor_prestige_gain
+					scope:roadman = {
+						death = {
+							death_reason = death_duel
+							killer = scope:bodyguard
+						}
+					}
+				}
+	
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.3002.a.toast.lost_bodyguard
+					increase_wounds_effect = { REASON = fight }
+					hidden_effect = { scope:roadman = { death = { death_reason = death_disappearance } } }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = me_missionary_event.3003.c
+		remove_variable = social_type
+		remove_variable = preach_type
+		add_prestige = minor_prestige_loss
+		hidden_effect = { scope:roadman = { death = { death_reason = death_disappearance } } }
+	}
+}
+
+# Guards come to arrest you
+me_missionary_event.3004 = {
+	type = character_event
+	title = me_missionary_event.3004.t
+	desc = me_missionary_event.3004.desc
+	theme = education
+	left_portrait = {
+		character = scope:guard
+		animation = aggressive_spear
+	}
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	lower_right_portrait =  scope:bodyguard
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+		NOR = {
+			AND = {
+				root.location.county.holder = { is_independent_ruler = no }
+				OR = {
+					root.location.county.holder.top_liege.faith = root.faith
+					root.location.county.holder.top_liege.faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value = faith_fully_accepted_level
+						}
+					}
+				}
+			}
+			AND = {
+				root.location.county.holder = { is_independent_ruler = yes }
+				OR = {
+					root.location.county.holder.faith = root.faith
+					root.location.county.holder.faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value = faith_fully_accepted_level
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_court_position_holder = {
+			limit = {
+				has_court_position = bodyguard_court_position
+			}
+			save_scope_as = bodyguard
+		}
+		
+		if = {
+			limit = { root.location.county.holder = { is_independent_ruler = no } }
+			root.location.county.holder.top_liege = { save_scope_as = liege }
+		}
+		else_if = {
+			limit = { root.location.county.holder = { is_independent_ruler = yes } }
+			root.location.county.holder = { save_scope_as = liege }
+		}
+	
+		create_character = {
+			template = bodyguard_court_position_template
+			location = root.location
+			culture = scope:liege.culture
+			faith = scope:liege.faith
+			save_scope_as = guard
+		
+			after_creation = {
+				add_character_flag = {
+					flag = need_military_outfit
+				}
+			}
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3004.a
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = diplomacy
+			target = scope:guard
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3004.a.toast.won
+				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3004.a.toast.lost
+				scope:liege = {
+					imprison = {
+							target = root
+							type = dungeon
+					}
+				}
+				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3004.b
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = prowess
+			target = scope:guard
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3004.b.toast.won
+				add_prestige = minor_prestige_gain
+				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+				
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = me_missionary_event.3004.b.toast.won
+					left_icon = scope:liege
+			
+					if = {
+						limit = {
+							NOR = {
+								root.location.county.holder.faith = root.faith
+								root.location.county.holder.faith = {
+									faith_hostility_level = {
+										target = root.faith
+										value = faith_fully_accepted_level
+									}
+								}
+							}
+						}
+						add_opinion = {
+							target = root
+							modifier = me_fugitive_opinion
+							opinion = -40
+						}
+					}
+					
+					root.location.county.holder = {
+						every_liege_or_above = {
+							limit = {
+								NOR = {
+									faith = root.faith
+									faith = {
+										faith_hostility_level = {
+											target = root.faith
+											value = faith_fully_accepted_level
+										}
+									}
+								}
+							}
+							add_opinion = {
+								target = root
+								modifier = me_fugitive_opinion
+								opinion = -40
+							}
+						}
+					}
+				}
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3004.b.toast.lost
+				scope:liege = {
+					imprison = {
+							target = root
+							type = dungeon
+					}
+				}
+				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+	
+	option = {
+		name = me_missionary_event.3004.c
+		trigger = {
+			employs_court_position = bodyguard_court_position
+		}
+		
+		remove_variable = social_type
+		remove_variable = preach_type
+		scope:bodyguard = {
+			duel = {
+				skill = prowess
+				target = scope:guard
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.3004.c.toast.won
+					add_prestige = minor_prestige_gain
+					hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+					
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						title = me_missionary_event.3004.c.toast.won
+						left_icon = scope:liege
+			
+						if = {
+							limit = {
+								NOR = {
+									root.location.county.holder.faith = root.faith
+									root.location.county.holder.faith = {
+										faith_hostility_level = {
+											target = root.faith
+											value = faith_fully_accepted_level
+										}
+									}
+								}
+							}
+							add_opinion = {
+								target = root
+								modifier = me_fugitive_opinion
+								opinion = -40
+							}
+						}
+						
+						root.location.county.holder = {
+							every_liege_or_above = {
+								limit = {
+									NOR = {
+										faith = root.faith
+										faith = {
+											faith_hostility_level = {
+												target = root.faith
+												value = faith_fully_accepted_level
+											}
+										}
+									}
+								}
+								add_opinion = {
+									target = root
+									modifier = me_fugitive_opinion
+									opinion = -40
+								}
+							}
+						}
+					}
+				}
+	
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.3004.c.toast.lost
+					scope:liege = {
+						imprison = {
+								target = scope:bodyguard
+								type = dungeon
+						}
+					}
+					hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = me_missionary_event.3004.d
+		trigger = {
+			gold >= 80
+		}
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = stewardship
+			target = scope:guard
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3004.a.toast.won
+				
+				if = {
+					limit = {
+						gold >= 30
+						gold < 300
+					}
+					remove_short_term_gold = 30
+				}
+				else_if = {
+					limit = {
+						gold >= 300
+						gold < 700
+					}
+					remove_short_term_gold = 200
+				}
+				else_if = {
+					limit = {
+						gold >= 700
+					}
+					remove_short_term_gold = 500
+				}
+				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3004.a.toast.lost
+				if = {
+					limit = {
+						gold >= 30
+						gold < 300
+					}
+					remove_short_term_gold = 100
+				}
+				else_if = {
+					limit = {
+						gold >= 300
+						gold < 700
+					}
+					remove_short_term_gold = 300
+				}
+				else_if = {
+					limit = {
+						gold >= 700
+					}
+					remove_short_term_gold = 700
+				}
+				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+}
+
+# Infidel wants to fight
+me_missionary_event.3005 = {
+	type = character_event
+	title = me_missionary_event.3005.t
+	desc = me_missionary_event.3005.desc
+	theme = education
+	left_portrait = {
+		character = scope:assailant
+		animation = threatening
+	}
+	right_portrait = {
+		character = root
+		animation = dismissal
+	}
+	lower_right_portrait =  scope:bodyguard
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		random_court_position_holder = {
+			limit = {
+				has_court_position = bodyguard_court_position
+			}
+			save_scope_as = bodyguard
+		}
+	
+		create_character = {
+			template = bodyguard_court_position_template
+			location = root.location
+			culture = root.location.county.culture
+			faith = root.location.county.faith
+			save_scope_as = assailant
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3005.a
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = diplomacy
+			target = scope:assailant
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3005.a.toast.won
+				hidden_effect = { scope:assailant = { death = { death_reason = death_disappearance } } }
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3005.a.toast.lost
+				increase_wounds_effect = { REASON = fight }
+				hidden_effect = { scope:assailant = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3005.b
+
+		remove_variable = social_type
+		remove_variable = preach_type
+		duel = {
+			skill = prowess
+			target = scope:assailant
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3005.b.toast.won
+				add_prestige = minor_prestige_gain
+				hidden_effect = { scope:assailant = { death = { death_reason = death_disappearance } } }
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3005.b.toast.lost
+				increase_wounds_effect = { REASON = fight }
+				hidden_effect = { scope:assailant = { death = { death_reason = death_disappearance } } }
+			}
+		}
+	}
+	
+	option = {
+		name = me_missionary_event.3005.c
+		trigger = {
+			employs_court_position = bodyguard_court_position
+		}
+		
+		remove_variable = social_type
+		remove_variable = preach_type
+		scope:bodyguard = {
+			duel = {
+				skill = prowess
+				target = scope:assailant
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					desc = me_missionary_event.3005.c.toast.won
+					add_prestige = minor_prestige_gain
+					hidden_effect = { scope:assailant = { death = { death_reason = death_disappearance } } }
+				}
+	
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = me_missionary_event.3005.c.toast.lost
+					increase_wounds_effect = { REASON = fight }
+					hidden_effect = { scope:assailant = { death = { death_reason = death_disappearance } } }
+				}
+			}
+		}
+	}
+}
+
+# They take the gold and continue to practice their old faith
+me_missionary_event.3006 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_bad
+			title = me_missionary_event.3006.a.tt
+			remove_short_term_gold = me_proselytize_buy_conversion_gold
+		}
+		remove_variable = social_type
+		remove_variable = preach_type
+	}
+}
+
+# Tailed in Public
+me_missionary_event.3007 = {
+	type = character_event
+	title = me_missionary_event.3007.t
+	desc = me_missionary_event.3007.desc
+	theme = education
+	left_portrait = {
+		character = scope:challenger
+		animation = scheme
+	}
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		ME_proselytize_remove_var_main_effect = yes
+		create_character = {
+			template = generic_peasant_character
+			location = root.location
+			culture = root.location.county.culture
+			faith = root.location.county.faith
+			save_scope_as = challenger
+		}
+	}
+
+	option = {
+		name = me_missionary_event.3007.a
+		
+		duel = {
+			skill = intrigue
+			value = average_skill_rating
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3007.a.toast.won
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3007.a.toast.lost
+				add_prestige = medium_prestige_loss
+				
+				if = {
+					limit = { root.location.county.holder = { is_independent_ruler = no } }
+					root.location.county.holder.top_liege = { save_scope_as = liege }
+				}
+				else_if = {
+					limit = { root.location.county.holder = { is_independent_ruler = yes } }
+					root.location.county.holder = { save_scope_as = liege }
+				}
+				if = {
+					limit = {
+						NOR = {
+							scope:liege.faith = root.faith
+							scope:liege.faith = {
+								faith_hostility_level = {
+									target = root.faith
+									value = faith_fully_accepted_level
+								}
+							}
+						}
+					}
+					scope:liege = {
+						imprison = {
+								target = root
+								type = dungeon
+						}
+					}
+				}
+				else = { increase_wounds_effect = { REASON = fight } }
+			}
+		}
+		hidden_effect = { scope:challenger = { death = { death_reason = death_disappearance } } }
+	}
+	option = {
+		name = me_missionary_event.3007.b
+
+		duel = {
+			skill = prowess
+			value = average_skill_rating
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3007.b.toast.won
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3007.b.toast.lost
+				
+				if = {
+					limit = { root.location.county.holder = { is_independent_ruler = no } }
+					root.location.county.holder.top_liege = { save_scope_as = liege }
+				}
+				else_if = {
+					limit = { root.location.county.holder = { is_independent_ruler = yes } }
+					root.location.county.holder = { save_scope_as = liege }
+				}
+				if = {
+					limit = {
+						NOR = {
+							scope:liege.faith = root.faith
+							scope:liege.faith = {
+								faith_hostility_level = {
+									target = root.faith
+									value = faith_fully_accepted_level
+								}
+							}
+						}
+					}
+					scope:liege = {
+						imprison = {
+								target = root
+								type = dungeon
+						}
+					}
+				}
+				else = { increase_wounds_effect = { REASON = fight } }
+			}
+		}
+		hidden_effect = { scope:challenger = { death = { death_reason = death_disappearance } } }
+	}
+}
+
+# Ambush
+me_missionary_event.3008 = {
+	type = character_event
+	title = me_missionary_event.3008.t
+	desc = me_missionary_event.3008.desc
+	theme = education
+	right_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	override_background = {
+		trigger = { var:social_type = flag:preach_nobility }
+		reference = bp2_university
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_workers }
+		reference = market
+	}
+	override_background = {
+		trigger = { var:social_type = flag:preach_villagers }
+		reference = courtyard
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		ME_proselytize_remove_var_main_effect = yes
+	}
+
+	option = {
+		name = me_missionary_event.3008.a
+		
+		duel = {
+			skill = intrigue
+			value = high_skill_rating
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_missionary_event.3008.a.toast.won
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_missionary_event.3008.a.toast.lost
+				add_prestige = medium_prestige_loss
+				
+				if = {
+					limit = { root.location.county.holder = { is_independent_ruler = no } }
+					root.location.county.holder.top_liege = { save_scope_as = liege }
+				}
+				else_if = {
+					limit = { root.location.county.holder = { is_independent_ruler = yes } }
+					root.location.county.holder = { save_scope_as = liege }
+				}
+				if = {
+					limit = {
+						NOR = {
+							scope:liege.faith = root.faith
+							scope:liege.faith = {
+								faith_hostility_level = {
+									target = root.faith
+									value = faith_fully_accepted_level
+								}
+							}
+						}
+					}
+					scope:liege = {
+						imprison = {
+								target = root
+								type = dungeon
+						}
+					}
+				}
+				else = { increase_wounds_effect = { REASON = fight } }
+			}
+		}
+	}
+	option = {
+		name = me_missionary_event.3008.b
+		add_character_modifier = {
+			modifier = me_preach_hiding_modifier
+			years = 1 
+		}
+	}
+}
+
+
+## Failure
+# Nobody listens 
+me_missionary_event.4001 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		remove_variable = social_type
+		remove_variable = preach_type
+		send_interface_toast = {
+			type = event_toast_effect_bad
+			title = me_missionary_event.4001.a.tt
+			stress_impact = {
+				base = miniscule_stress_impact_gain
+				shy = miniscule_stress_impact_gain
+				arrogant = miniscule_stress_impact_gain
+			}
+			ME_proselytize_fail_advantage_effect = yes
+			remove_variable = social_type
+			remove_variable = preach_type
+		}
+	}
+}
+
+# Chased Away by Mob
+me_missionary_event.4002 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		remove_variable = social_type
+		remove_variable = preach_type
+		send_interface_toast = {
+			type = event_toast_effect_bad
+			title = me_missionary_event.4002.a.tt
+			add_prestige = medium_prestige_loss
+		}
+	}
+}
+
+# Chased Away by Guards
+me_missionary_event.4003 = {
+	hidden = yes
+
+	trigger = {
+		NOR = {
+			AND = {
+				root.location.county.holder = { is_independent_ruler = no }
+				OR = {
+					root.location.county.holder.top_liege.faith = root.faith
+					root.location.county.holder.top_liege.faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value = faith_fully_accepted_level
+						}
+					}
+				}
+			}
+			AND = {
+				root.location.county.holder = { is_independent_ruler = yes }
+				OR = {
+					root.location.county.holder.faith = root.faith
+					root.location.county.holder.faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value = faith_fully_accepted_level
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		remove_variable = social_type
+		remove_variable = preach_type
+		
+		if = {
+			limit = { root.location.county.holder = { is_independent_ruler = no } }
+			root.location.county.holder.top_liege = { save_scope_as = liege }
+		}
+		else_if = {
+			limit = { root.location.county.holder = { is_independent_ruler = yes } }
+			root.location.county.holder = { save_scope_as = liege }
+		}
+		send_interface_toast = {
+			type = event_toast_effect_bad
+			title = me_missionary_event.4003.a.tt
+			left_icon = scope:liege
+			
+			if = {
+				limit = {
+					NOR = {
+						root.location.county.holder.faith = root.faith
+						root.location.county.holder.faith = {
+							faith_hostility_level = {
+								target = root.faith
+								value = faith_fully_accepted_level
+							}
+						}
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = me_fugitive_opinion
+					opinion = -40
+				}
+			}
+			root.location.county.holder = {
+				every_liege_or_above = {
+					limit = {
+						NOR = {
+							faith = root.faith
+							faith = {
+								faith_hostility_level = {
+									target = root.faith
+									value = faith_fully_accepted_level
+								}
+							}
+						}
+					}
+					add_opinion = {
+						target = root
+						modifier = irritated_opinion
+						opinion = -25
+					}
+				}
+			}
+		}
+	}
+}
+
+# Fail to recruit and lose a portion of gold
+me_missionary_event.4004 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		remove_variable = social_type
+		remove_variable = preach_type
+		random_list = {
+			10 = {
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = me_missionary_event.4004.a.tt
+					remove_short_term_gold = {
+						value = me_proselytize_buy_conversion_gold
+						multiply = 0.75
+					}
+				}
+			}
+			10 = {
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = me_missionary_event.4004.a.tt
+					remove_short_term_gold = {
+						value = me_proselytize_buy_conversion_gold
+						multiply = 0.5
+					}
+				}
+			}
+			10 = {
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = me_missionary_event.4004.a.tt
+					remove_short_term_gold = {
+						value = me_proselytize_buy_conversion_gold
+						multiply = 0.25
+					}
+				}
+			}
+		}
+	}
+}
+
+# Contact communities
+#me_missionary_event.5001 = {
+#	type = character_event
+#	title = me_missionary_event.5001.t
+#	desc = me_missionary_event.5001.desc
+#	theme = education
+#	left_portrait = {
+#		character = root
+#		animation = personality_zealous
+#	}
+#
+#	override_background = {
+#		reference = courtyard
+#	}
+#
+#	trigger = {
+#	}
+#
+#	immediate = {
+#	}
+#
+#	option = {
+#		name = me_missionary_event.5001.a
+#		trigger = {
+#			OR = {
+#				AND = {
+#					var:social_type = flag:preach_nobility
+#					root.location.county.var:converts_nobility_public_faith = root.faith
+#					root.location.county.var:converts_nobility_public_tier > 0
+#				}
+#				AND = {
+#					var:social_type = flag:preach_workers
+#					root.location.county.var:converts_workers_public_faith = root.faith
+#					root.location.county.var:converts_workers_public_tier > 0
+#				}
+#				AND = {
+#					var:social_type = flag:preach_villagers
+#					root.location.county.var:converts_villagers_public_faith = root.faith
+#					root.location.county.var:converts_villagers_public_tier > 0
+#				}
+#			}
+#		}
+#		set_variable = {
+#			name = preach_type
+#			value = flag:public
+#		}
+#		duel = {
+#			skill = learning
+#			value = average_skill_rating
+#			 50 = {
+#				compare_modifier = {
+#					 value = scope:duel_value
+#					 multiplier = 3.5
+#					 min = -49
+#				}
+#				desc = me_missionary_event.5001.a.toast.won
+#				ME_proselytize_refresh_decay_effect = yes
+#			}
+#
+#			50 = {
+#				compare_modifier = {
+#					value = scope:duel_value
+#					multiplier = -3.5
+#					min = -49
+#				}
+#				desc = me_missionary_event.5001.a.toast.lost
+#			}
+#		}
+#		ME_proselytize_remove_var_main_effect = yes
+#		root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+#	}
+#	option = {
+#		name = me_missionary_event.5001.b
+#		trigger = {
+#			OR = {
+#				AND = {
+#					var:social_type = flag:preach_nobility
+#					root.location.county.var:converts_nobility_gold_faith = root.faith
+#					root.location.county.var:converts_nobility_gold_tier > 0
+#				}
+#				AND = {
+#					var:social_type = flag:preach_workers
+#					root.location.county.var:converts_workers_gold_faith = root.faith
+#					root.location.county.var:converts_workers_gold_tier > 0
+#				}
+#				AND = {
+#					var:social_type = flag:preach_villagers
+#					root.location.county.var:converts_villagers_gold_faith = root.faith
+#					root.location.county.var:converts_villagers_gold_tier > 0
+#				}
+#			}
+#		}
+#		set_variable = {
+#			name = preach_type
+#			value = flag:gold
+#		}
+#		duel = {
+#			skill = stewardship
+#			value = average_skill_rating
+#			 50 = {
+#				compare_modifier = {
+#					 value = scope:duel_value
+#					 multiplier = 3.5
+#					 min = -49
+#				}
+#				desc = me_missionary_event.5001.a.toast.won
+#				ME_proselytize_refresh_decay_effect = yes
+#			}
+#
+#			50 = {
+#				compare_modifier = {
+#					value = scope:duel_value
+#					multiplier = -3.5
+#					min = -49
+#				}
+#				desc = me_missionary_event.5001.a.toast.lost
+#			}
+#		}
+#		ME_proselytize_remove_var_main_effect = yes
+#		root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+#	}
+#	option = {
+#		name = me_missionary_event.5001.c
+#		trigger = {
+#			OR = {
+#				AND = {
+#					var:social_type = flag:preach_nobility
+#					root.location.county.var:converts_nobility_secret_tier > 0
+#					OR = {
+#						AND = {
+#							NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+#							root.location.county.var:converts_nobility_secret_faith = root.faith
+#						}
+#						AND = {
+#							any_secret = { secret_type = secret_crypto_religionist }
+#							root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+#						}
+#					}
+#				}
+#				AND = {
+#					var:social_type = flag:preach_workers
+#					root.location.county.var:converts_workers_secret_tier > 0
+#					OR = {
+#						AND = {
+#							NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+#							root.location.county.var:converts_workers_secret_faith = root.faith
+#						}
+#						AND = {
+#							any_secret = { secret_type = secret_crypto_religionist }
+#							root.location.county.var:converts_workers_secret_faith = root.secret_faith
+#						}
+#					}
+#				}
+#				AND = {
+#					var:social_type = flag:preach_villagers
+#					root.location.county.var:converts_villagers_secret_tier > 0
+#					OR = {
+#						AND = {
+#							NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+#							root.location.county.var:converts_villagers_secret_faith = root.faith
+#						}
+#						AND = {
+#							any_secret = { secret_type = secret_crypto_religionist }
+#							root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+#						}
+#					}
+#				}
+#			}
+#		}
+#		set_variable = {
+#			name = preach_type
+#			value = flag:secret
+#		}
+#		duel = {
+#			skill = intrigue
+#			value = average_skill_rating
+#			 50 = {
+#				compare_modifier = {
+#					 value = scope:duel_value
+#					 multiplier = 3.5
+#					 min = -49
+#				}
+#				desc = me_missionary_event.5001.a.toast.won
+#				ME_proselytize_refresh_decay_effect = yes
+#			}
+#
+#			50 = {
+#				compare_modifier = {
+#					value = scope:duel_value
+#					multiplier = -3.5
+#					min = -49
+#				}
+#				desc = me_missionary_event.5001.a.toast.lost
+#			}
+#		}
+#		ME_proselytize_remove_var_main_effect = yes
+#		root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+#	}
+#	option = {
+#		name = me_missionary_event.5001.d
+#		trigger = {
+#			custom_tooltip = {
+#				text = me_missionary_event.5001.d.cooldown.tt
+#				NOT = { exists = root.location.county.var:ME_collected_donations }
+#			}
+#			custom_tooltip = {
+#				text = me_missionary_event.5001.d.no_teirs.tt
+#				OR = {
+#					AND = {
+#						var:social_type = flag:preach_nobility
+#						root.location.county.var:converts_nobility_public_faith = root.faith
+#						root.location.county.var:converts_nobility_public_tier > 0
+#					}
+#					AND = {
+#						var:social_type = flag:preach_workers
+#						root.location.county.var:converts_workers_public_faith = root.faith
+#						root.location.county.var:converts_workers_public_tier > 0
+#					}
+#					AND = {
+#						var:social_type = flag:preach_villagers
+#						root.location.county.var:converts_villagers_public_faith = root.faith
+#						root.location.county.var:converts_villagers_public_tier > 0
+#					}
+#					AND = {
+#						var:social_type = flag:preach_nobility
+#						root.location.county.var:converts_nobility_secret_tier > 0
+#						OR = {
+#							AND = {
+#								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+#								root.location.county.var:converts_nobility_secret_faith = root.faith
+#							}
+#							AND = {
+#								any_secret = { secret_type = secret_crypto_religionist }
+#								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+#							}
+#						}
+#					}
+#					AND = {
+#						var:social_type = flag:preach_workers
+#						root.location.county.var:converts_workers_secret_tier > 0
+#						OR = {
+#							AND = {
+#								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+#								root.location.county.var:converts_workers_secret_faith = root.faith
+#							}
+#							AND = {
+#								any_secret = { secret_type = secret_crypto_religionist }
+#								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+#							}
+#						}
+#					}
+#					AND = {
+#						var:social_type = flag:preach_villagers
+#						root.location.county.var:converts_villagers_secret_tier > 0
+#						OR = {
+#							AND = {
+#								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+#								root.location.county.var:converts_villagers_secret_faith = root.faith
+#							}
+#							AND = {
+#								any_secret = { secret_type = secret_crypto_religionist }
+#								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
+#		show_as_unavailable = { always = yes }
+#		reason = donations
+#		
+#		ME_proselytize_collect_donations_effect = yes
+#		root.location.county = { set_variable = { name = ME_collected_donations days = 365 } }
+#		root.location.county = { set_variable = { name = ME_visited_community days = 30 } }
+#	}
+#	option = {
+#		name = me_missionary_event.5001.e
+#	}
+#}

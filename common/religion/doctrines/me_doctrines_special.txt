@@ -1,0 +1,135 @@
+﻿## Additions ##
+#Ahl al-Bayt faiths
+is_alb_faith = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_alb_faith
+	}
+
+	special_doctrine_is_alb_faith = {
+		parameters = {
+			hostility_override_special_doctrine_is_islamic_faith = 0
+			hostility_override_tenet_islamic_syncretism = 2
+		}
+	}
+}
+
+#Ibadi Hostility doctrine
+is_ibadi_faith = {
+	group = "special"
+	
+	is_available_on_create = {
+		AND = { # Must be Muhakkima or else it wouldn't make sense
+			has_doctrine = special_doctrine_is_ibadi_faith
+			has_doctrine = muhammad_succession_muhakkima_doctrine
+		}
+	}
+
+	special_doctrine_is_ibadi_faith = {
+		parameters = {
+			hostility_override_special_doctrine_is_ibadi_faith = 0
+		}
+	}
+}
+
+#Ubaydi Trait Acceptance
+ubaydi_trait_acceptance = {
+	group = "special"
+	
+	is_available_on_create = {
+		always = no # Event will decide whether new faiths accept them
+	}
+
+	special_doctrine_ubaydi_trait_acceptance = {
+		parameters = {
+			ubaydi_trait_effects_active = yes
+		}
+	}
+}
+
+#Musta'li Schism doctrines
+mustali_main = { # Added to Isma'ilism to give schism effects
+	group = "special"
+	
+	is_available_on_create = {
+		always = no
+	}
+
+	special_doctrine_mustali_main = {
+		parameters = {
+			mustali_main_effects_active = yes
+			hostility_override_special_doctrine_mustali_schismed_sect = 0
+		}
+		character_modifier = {
+			faith_creation_piety_cost_mult = -0.25
+		}
+	}
+}
+
+mustali_schismed_sect = { # Added to Isma'ili sects to give schism effects
+	group = "special"
+	
+	is_available_on_create = {
+		always = no # For now
+	}
+
+	special_doctrine_mustali_schismed_sect = {
+		parameters = {
+			mustali_schismed_sect_effects_active = yes
+			hostility_override_special_doctrine_mustali_main = 0
+		}
+	}
+}
+
+#Barghawata trait doctrine
+is_barghawata_faith = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_barghawata_faith
+		has_doctrine = muhammad_succession_berberist_doctrine
+	}
+
+	special_doctrine_is_barghawata_faith = {
+		parameters = {
+			barghawata_trait_effects_active = yes
+		}
+	}
+}
+
+#Ha-Mimist trait doctrine
+is_hamimist_faith = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_hamimist_faith
+		has_doctrine = muhammad_succession_berberist_doctrine
+	}
+
+	special_doctrine_is_hamimist_faith = {
+		parameters = {
+			hamimist_trait_effects_active = yes
+		}
+	}
+}
+
+#Kaduist trait doctrine
+is_kaduist_faith = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_kaduist_faith
+		has_doctrine = muhammad_succession_berberist_doctrine
+	}
+
+	special_doctrine_is_kaduist_faith = {
+		parameters = {
+			kaduist_trait_effects_active = yes
+		}
+		
+		traits = {
+			virtues = { kutama }
+		}
+	}
+}

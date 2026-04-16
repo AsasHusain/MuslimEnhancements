@@ -1,0 +1,126 @@
+﻿l_english:
+
+ #############################################
+ ## Iberia ##
+ # Adj addition only
+ cn_al_andalus_adj:0 "Andalusi"
+ cn_liyyun_adj:0 "Liyyuni"
+ cn_burtughal_adj:0 "Burtughali"
+ cn_al_gharb_adj:0 "Gharbi"
+ cn_batalyaws_adj:0 "Batalaywsi"
+ cn_barshiluna_adj:0 "Barshiluni"
+ cn_qurtubah_adj:0 "Qurtubi"
+ cn_mayurqa_adj:0 "Mayurqi"
+ cn_mursiyyah_adj:0 "Mursi"
+ cn_tulaytulah_adj:0 "Tulaytili"
+ cn_balansiyyah_adj:0 "Balinsi"
+ cn_saraqustah_adj:0 "Saraqusti"
+ cn_qasr_abi_danis_adj:0 "Danisi"
+ cn_al_laqant_adj:0 "Laqanti"
+ cn_al_mariyyah_adj:0 "Mari"
+ cn_yaburah_adj:0 "Yaburi"
+ cn_qabra_adj:0 "Qabri"
+ cn_qadis_adj:0 "Qadisi"
+ cn_burjanna_adj: "Burjanni"
+ cn_itanyia_adj:0 "Itani"
+ cn_daniyyah_adj:0 "Dani"
+ cn_al_bash_adj:0 "Bashi"
+ cn_yabisa_adj:0 "Yabisi"
+ cn_sabtah_adj:0 "Sabti"
+ cn_al_ishbuna_adj:0 "Ishbuni"
+ cn_laridah_adj:0 "Laridi"
+ cn_malaqah_adj:0 "Maliqi"
+ cn_malilah_adj:0 "Malili"
+ cn_manurqa_adj:0 "Manurqi"
+ cn_maridah_adj:0 "Maridi"
+ cn_mulina_adj:0 "Mulini"
+ cn_al_manijah_adj:0 "Maniji"
+ cn_banbalunah_adj:0 "Banbaluni"
+ cn_labla_adj:0 "Labli"
+ cn_turtusah_adj:0 "Turtusi"
+ cn_al_bunt_adj:0 "Bunti"
+ cn_tutilah_adj:0 "Tutili"
+ cn_balad_al_walid_adj:0 "Walidi"
+ cn_sammurah_adj:0 "Sammuri"
+ 
+ # Full fix
+ cn_isbaniya:0 "Ashbanyah" #Historical Arabization of the name 'Hispania', also known as 'Asfanyah' 
+ cn_isbaniya_adj:0 "Ashbani"
+ cn_xenxir:0 "Batalyaws" #Badajoz
+ cn_xenxir_adj:0 "Batalyawsi"
+ cn_castalla:0 "al-Qashtalah" #Castille
+ cn_castalla_adj:0 "Qashtali"
+ cn_yilliqiyya:0 "Jalliqiyah" # Galicia
+ cn_yilliqiyya_adj:0 "Jalliqi"
+ cn_al_sarq:0 "ash-Sharq" # Valencia
+ cn_al_sarq_adj:0 "Sharqi"
+ cn_baya:0 "Bajah" # Beja
+ cn_baya_adj:0 "Baji" 
+ cn_al_quila:0 "al-Qila'"
+ cn_al_quila_adj:0 "Qila'i" 
+ cn_kulumriyya:0 "Qulumriyyah" #Coimbra
+ cn_kulumriyya_adj:0 "Qulumri"
+ cn_garnatah:0 "Ghirnatah" #Granada
+ cn_garnatah_adj:0 "Ghirnati"
+ cn_isbiliyyah:0 "Ishbiliyyah" #Sevilla
+ cn_isbiliyyah_adj:0 "Ishbili"
+ cn_al_banu_razin:0 "Shantamriyat ash-Sharq" #Albarracin, known after the Banu Razin in vanilla but that's anachronistic as the Banu Razin show up in 1013
+ cn_al_banu_razin_adj:0 "Shantamri"
+ cn_al_karas:0 "Jabal al-Karaz" #Alcaraz
+ cn_al_karas_adj:0 "Karazi"
+ cn_al_urqub:0 "al-Arkun" #Actual etymology is unknown, may come from al-'Arkun (The Corners), al-3arikun (The fighters), or al-Urqub (?) 
+ cn_al_urqub_adj:0 "Arkuni"
+ cn_al_gazirah_al_hadra:0 "al-Jazira al-Khadra'"
+ cn_al_gazirah_al_hadra_adj:0 "Khadrawi" 
+ cn_yaiyan:0 "Jayyan" 
+ cn_yaiyan_adj:0 "Jayyani"
+ cn_burgus:0 "Barghash" #Burgos
+ cn_burgus_adj:0 "Barghashi"
+ cn_hisn_qasras:0 "Hisn Qasrash" #Caceres
+ cn_hisn_qasras_adj:0 "Qasrashi"
+ cn_qalat_ayyub:0 "Qal'at Ayyub"
+ cn_qalat_ayyub_adj:0 "Ayyubi"
+ cn_qalat_rabah:0 "Qal'at Rabah"
+ cn_qalat_rabah_adj:0 "Rabahi"
+ cn_qaruniyah:0 "Qaraytah" #A Coruna
+ cn_qaruniyah_adj:0 "Qarjayti"
+ cn_siqubiyyah:0 "Shiqubiyyah" #Segovia
+ cn_siqubiyyah_adj:0 "Shiqubi"
+ cn_qunkah:0 "Qūnqah" #Cuenca
+ cn_qunkah_adj:0 "Qūnqi"
+ cn_santa_mariya_ibn_harun:0 "Shantamriyat al-Gharb" #Faro
+ cn_santa_mariya_ibn_harun_adj:0 "Shantamri"
+ cn_afraga:0 "Ifraghah" #Fraga
+ cn_afraga_adj:0 "Ifraghi"
+ cn_harundah:0 "Jarandah" #Girona
+ cn_harundah_adj:0 "Jarandi"
+ cn_al_magrit:0 "al-Majriţ" #Madrid
+ cn_al_magrit_adj:0 "Majriţi"
+ cn_uqlish:0 "Aqlish" #Ucles but is in c_mora
+ cn_uqlish_adj:0 "Aqlishi"
+ cn_nagirah:0 "Najrah" #Najera
+ cn_nagirah_adj:0 "Najri"
+ cn_salamanqa:0 "Shalmanqah" #Salamanca
+ cn_salamanqa_adj:0 "Shalmanqi"
+ cn_yant_yaqub:0 "Shant Yaqub"
+ cn_yant_yaqub_adj:0 "Yaqubi"
+ cn_silb:0 "Shilb" #Silves
+ cn_silb_adj:0 "Shilbi"
+ cn_madinat_qunka:0 "Madīnat Qūnqah" #Cuenca barony
+ cn_madinat_qunka_adj:0 "Qūnqi"
+ cn_al_mariyyat_bayyana:0 "Mariyyāt al-Bajjānah"
+ cn_al_mariyyat_bayyana_adj:0 "Bajani"
+ cn_al_qannis:0 "al-Kanā'is"
+ cn_al_qannis_adj:0 "Kanā'isi"
+ 
+ 
+ ## Italy ##
+ #Cultural Names
+ cn_siqilliya:0 "Siqilliya"
+ cn_siqilliya_adj:0 "Siqilli"
+ cn_sarqusa:0 "Saraqusah"
+ cn_sarqusa_adj:0 "Saraqusi"
+ cn_qasriyana:0 "Qasr Yanih"
+ cn_qasriyana_adj:0 "Qasriyani"
+ cn_balarm:0 "Balarm"
+ cn_balarm_adj:0 "Balarmi"

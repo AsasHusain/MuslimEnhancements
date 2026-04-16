@@ -1,0 +1,59 @@
+﻿########
+##The above section is for related characters essential for the family tree ^
+########
+
+altabari001 = { # Muhammad al-Tabari, the scholar
+	name = "Muhammad"
+	dynasty = me_tabari
+	culture = "daylamite"
+	religion = "ashari"
+
+	diplomacy = 14
+	martial = 7
+	stewardship = 12
+	intrigue = 3
+	learning = 20
+	prowess = 4
+
+	trait = education_learning_4
+	trait = intellect_good_3
+	
+	father = altabari002
+
+	839.11.24 = {
+		birth = 839.11.24
+	}
+	923.12.2 = {
+		death = 923.12.2
+	}
+}
+
+altabari002 = { # Jarir al-Tabari
+	name = "Jarir"
+	dynasty = me_tabari
+	culture = "daylamite"
+	religion = "ashari"
+
+	father = altabari003
+
+	800.3.1 = {
+		birth = 800.3.1
+	}
+	884.3.17 = {
+		death = 884.3.17
+	}
+}
+
+altabari003 = { # Yazid al-Tabari
+	name = "Yazid"
+	dynasty = me_tabari
+	culture = "daylamite"
+	religion = "ashari"
+
+	732.8.24 = {
+		birth = 732.8.24
+	}
+	818.2.11 = {
+		death = 818.2.11
+	}
+}

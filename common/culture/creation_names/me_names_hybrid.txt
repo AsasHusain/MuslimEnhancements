@@ -1,0 +1,402 @@
+﻿## Override
+
+bari = { # Emirate of Bari
+	trigger = {
+		capital_county = {
+			title:c_bari = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+		OR = {
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = language_arabic }
+					scope:culture = { has_cultural_pillar = heritage_berber }
+				}
+				OR = {
+					scope:other_culture = { has_cultural_pillar = heritage_latin }
+					scope:other_culture = { has_cultural_pillar = heritage_frankish }
+				}
+			}
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_latin }
+					scope:culture = { has_cultural_pillar = heritage_frankish }
+				}
+				OR = {
+					scope:other_culture = { has_cultural_pillar = heritage_arabic }
+					scope:other_culture = { has_cultural_pillar = language_arabic }
+					scope:other_culture = { has_cultural_pillar = heritage_berber }
+				}
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+neapolitan_hybrid = {
+	trigger = {
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+			NOT = {
+				title:d_sicily = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+		}
+		scope:culture = {
+			OR = {
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_berber
+			}
+		}
+		scope:other_culture = {
+			OR = {
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_berber
+				has_cultural_pillar = heritage_arabic
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+			title:d_capua = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+	hybrid = yes
+}
+
+siculo_norman = {
+	trigger = {
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+		scope:culture = culture:norman
+		scope:other_culture = {
+			OR = {
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = language_arabic
+				has_cultural_pillar = heritage_berber
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+## Additions
+
+siculo_barbari = {
+	trigger = {
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+		scope:culture = { has_cultural_pillar = heritage_berber }
+		scope:other_culture = {
+			OR = {
+				this = culture:norman
+				any_parent_culture_or_above = { this = culture:norman }
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = heritage_byzantine
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+siculo_greek_hybrid = {
+	trigger = {
+		capital_county = {
+			title:d_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+		scope:culture = {
+			AND = {
+				has_cultural_pillar = language_greek
+				has_cultural_pillar = heritage_byzantine
+			}
+		}
+		scope:other_culture = {
+			OR = {
+				this = culture:norman
+				any_parent_culture_or_above = { this = culture:norman }
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = heritage_berber
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+qalawri_hybrid = { # South Italy was sometines refered to as Qalawriyya by Arabic sources
+	trigger = {
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+			NOT = {
+				title:d_sicily = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+		}
+		scope:culture = {
+			OR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = language_arabic
+			}
+		}
+		scope:other_culture = {
+			OR = {
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_berber
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+			title:d_capua = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+	hybrid = yes
+}
+
+italo_greek = {
+	trigger = {
+		faith.religious_head_title = title:k_papal_state
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+			NOT = {
+				OR = {
+					title:d_sicily = {
+						is_de_jure_liege_or_above_target = prev
+					}
+					title:d_calabria = {
+						is_de_jure_liege_or_above_target = prev
+					}
+				}
+			}
+		}
+		scope:culture = {
+			OR = {
+				AND = {
+					has_cultural_pillar = language_greek
+					has_cultural_pillar = heritage_byzantine
+				}
+				has_cultural_pillar = heritage_latin
+			}
+		}
+		scope:other_culture = {
+			OR = {
+				AND = {
+					has_cultural_pillar = language_greek
+					has_cultural_pillar = heritage_byzantine
+				}
+				has_cultural_pillar = heritage_latin
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+italo_greek_calabria = {
+	trigger = {
+		faith.religious_head_title = title:k_papal_state
+		capital_county = {
+			title:d_calabria = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+		scope:culture = {
+			OR = {
+				AND = {
+					has_cultural_pillar = language_greek
+					has_cultural_pillar = heritage_byzantine
+				}
+				has_cultural_pillar = heritage_latin
+			}
+		}
+		scope:other_culture = {
+			OR = {
+				AND = {
+					has_cultural_pillar = language_greek
+					has_cultural_pillar = heritage_byzantine
+				}
+				has_cultural_pillar = heritage_latin
+			}
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+iqritshi_hybrid = { # Arabic-Kretan culture
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = language_arabic }
+				}
+				scope:other_culture = { has_cultural_pillar = heritage_byzantine }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_byzantine }
+				OR = {
+					scope:other_culture = { has_cultural_pillar = heritage_arabic }
+					scope:other_culture = { has_cultural_pillar = language_arabic }
+				}
+			}
+		}
+		OR = {
+			capital_county = {
+				title:k_krete = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			primary_title = title:k_krete
+			primary_title = title:d_krete
+		}
+	}
+	hybrid = yes
+}
+
+qubrusi_hybrid = { # Arabic-Cypriot culture
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = language_arabic }
+				}
+				scope:other_culture = { has_cultural_pillar = heritage_byzantine }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_byzantine }
+				OR = {
+					scope:other_culture = { has_cultural_pillar = heritage_arabic }
+					scope:other_culture = { has_cultural_pillar = language_arabic }
+				}
+			}
+		}
+		OR = {
+			capital_county = {
+				title:k_cyprus = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			primary_title = title:k_cyprus
+			primary_title = title:d_cyprus
+		}
+	}
+	hybrid = yes
+}
+
+ahwazi_hybrid = { # Arabs of Ahvaz/al-Ahwaz
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = language_arabic }
+				}
+				scope:other_culture = { has_cultural_pillar = heritage_iranian }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_iranian }
+				OR = {
+					scope:other_culture = { has_cultural_pillar = heritage_arabic }
+					scope:other_culture = { has_cultural_pillar = language_arabic }
+				}
+			}
+		}
+		OR = {
+			capital_county = {
+				title:d_khuzestan = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			primary_title = title:d_khuzestan
+		}
+	}
+	hybrid = yes
+}
+
+khache = { # Tibetian Muslims, name came from the Kashmiri Muslims who settled in Tibet and took Tibetian wives
+	trigger = {
+		faith = { religion_tag = islam_religion }
+		OR = {
+			AND = {
+				scope:culture = { has_cultural_pillar = language_kashmiri }
+				scope:other_culture = { has_cultural_pillar = heritage_tibetan }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_tibetan }
+				scope:other_culture = { has_cultural_pillar = language_kashmiri }
+			}
+		}
+		any_sub_realm_county = {
+			faith = { religion_tag = islam_religion }
+		}
+	}
+	hybrid = yes
+}

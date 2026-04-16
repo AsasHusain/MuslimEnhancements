@@ -1,0 +1,28 @@
+﻿l_english:
+
+ #Buildings
+ building_type_the_friday_mosque_01:0 "Jameh Mosque of Isfahan"
+ building_type_the_friday_mosque_01_desc:0 "#F The Jameh Mosque of Isfahan, otherwise known as the Friday Mosque, was built during the rule of the Umayyad dynasty. It is said that the Caliph personally made one of the pillars in the mosque. Before becoming a mosque, it is said that it used to be a house of worship for Zoroastrians.#!"
+
+ #Decisions
+ appoint_a_righteous_caliph_decision:0 "Appoint a Righteous [ROOT.Char.GetFaith.ReligiousHeadName]"
+ 
+ #Events
+ head_of_faith.0021.desc:0 "Rejecting the tawdry politics of the Sunnis and Shi'as has left [ROOT.Char.GetFaith.GetName] an adherent to the Muhakkima strand of Islam. However, the followers of our movement are confused on where we stand on the Muhakkima spectrum, do we consider ourselves Ibadis or are we our own people? and if so, who's leaders do we follow?"
+ head_of_faith.0021.ME.a:0 "We are Ibadis, but our leaders are our own."
+
+ #Knight Cultural Name
+ knight_faris_no_tooltip_plural:0 "Fursān"
+ knight_faris_no_tooltip_lowercase_plural:0 "fursān"
+ knight_faris_no_tooltip_lowercase_plural_possessive:0 "fursān's"
+ 
+ #Bari Culture Creation Name
+ bari_name:0 "Barī"
+ bari_collective_noun:0 "Barīs"
+ bari_prefix:0 "Barī"
+ 
+ #Languages
+ language_vrachada_name:0 "Punjabi"
+ 
+ #Legends
+ legend_chapter_conclusion_new_faith:0 "With the [ROOT.Legend.GetProperty( 'faith' ).Faith.PriestNeuterPlural] gathered and the Exegesis of the [ROOT.Legend.GetProperty( 'faith' ).Faith.ReligiousText|U] written anew, [ROOT.Legend.GetProperty( 'religion' ).Religion.GetNameNoTooltip|U] was at last restored in the vision of [ROOT.Legend.GetProperty( 'faith' ).Faith.PantheonTerm]!"

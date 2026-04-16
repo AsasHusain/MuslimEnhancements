@@ -1,0 +1,14 @@
+﻿me_sumra_001 = {
+	name = "Ali" # Somewhat unreliable source says Rajpal had a son who succeded him in 1049, added so that the aged Rajpal has an heir
+	dynasty = 1042090 # Sumra (Originally Qarmatia)
+	religion = "ashari" #had converted
+	culture = "sindhi"
+	trait = sayyid
+	father = ghaznavid_vassal_1 # Rajpal of Raja Bal
+	1029.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}

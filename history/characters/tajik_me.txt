@@ -1,0 +1,14 @@
+﻿1630_yaqub = {
+	name = "Yaqub"
+	dynasty_house = house_samanid
+	religion = "maturidi"
+	culture = "tajik"
+	father = 163154
+	835.4.9 = {
+		birth = yes
+	}
+	
+	892.1.1 = {
+		death = yes
+	}
+}

@@ -1,0 +1,29 @@
+﻿turkish_consolidation_control = {
+	icon = county_modifier_control_positive
+	monthly_county_control_growth_add = 3.0
+}
+
+turkish_consolidation_opinion = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 50
+}
+
+defending_against_turks_control = {
+	icon = prowess_positive
+	monthly_county_control_growth_add = 6.0
+}
+
+defending_against_turks_opinion = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 15
+}
+
+#bulgarian_unrest_control = {
+#	icon = county_modifier_control_positive
+#	monthly_county_control_growth_add = 12.0
+#}
+
+byzantine_retreat = {
+	icon = county_modifier_control_negative
+	monthly_county_control_growth_add = -12.0
+}

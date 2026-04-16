@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "uthman_shield_mesh"
+	file = "uthman_shield.mesh"
+
+	meshsettings = {
+		name = "uthman_shieldShape"
+		index = 0
+		texture_diffuse = "uthman_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "uthman_shield_entity"
+	pdxmesh = "uthman_shield_mesh"
+}

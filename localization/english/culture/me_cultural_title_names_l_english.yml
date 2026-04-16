@@ -1,0 +1,1240 @@
+﻿l_english:
+
+ ###Empire of Italia
+ cn_italy_arabic:0 "al-'Arḍ al-Kabīrah"
+ cn_italy_arabic_adj:0 "Italian"
+
+ ##Kingdom of Sicily
+ #Sicily
+ cn_sicily_latin:0 "Sicilia"
+ cn_sicily_latin_adj:0 "Sicilian"
+ cn_sicily_maltese:0 "Sqallija"
+ cn_sicily_maltese_adj:0 "Sqalli"
+ cn_sicily_greek:0 "Sikelía"
+ cn_sicily_greek_adj:0 "Sikelian"
+ cn_sicily_norse:0 "Sikiley"
+ cn_sicily_norse_adj:0 "Sikilian"
+ cn_sicily_kingdom_norse:0 "Langobardaland"
+ cn_sicily_kingdom_norse_adj:0 "Langobardalandian"
+ 
+ #Palermo
+ cn_palermo_roman:0 "Panormus"
+ cn_palermo_roman_adj:0 "Panormian"
+ 
+ #Trapani
+ cn_trapani_arabic:0 "'Atrabansh" 
+ cn_trapani_arabic_adj:0 "'Atrabanshi"
+ 
+ #Calatafimi
+ cn_calatafimi_arabic:0 "Qal'at Fimi"
+ cn_calatafimi_arabic_adj:0 "Fimī"
+ 
+ #Mazara
+ cn_mazara_arabic:0 "Mazar"
+ cn_mazara_arabic_adj:0 "Mazari"
+ 
+ #Messina
+ cn_messina_arabic:0 "Musayna"
+ cn_messina_arabic_adj:0 "Musayni"
+ cn_messina_roman:0 "Messana"
+ cn_messina_roman_adj:0 "Messanian"
+ cn_messina_greek:0 "Messene"
+ cn_messina_greek_adj:0 "Messenian"
+ 
+ #Cefalu
+ cn_cefalu_arabic:0 "Jilfudi"
+ cn_cefalu_arabic_adj:0 "Jilfudī"
+ cn_cefalu_roman:0 "Cephaloedium"
+ cn_cefalu_roman_adj:0 "Cephaloedian"
+ cn_cefalu_greek:0 "Kephaloídion"
+ cn_cefalu_greek_adj:0 "Kephaloídian"
+ 
+ #Catania
+ cn_catania_arabic:0 "Qataniyyah"
+ cn_catania_arabic_adj:0 "Qatani"
+ cn_catania_roman:0 "Catana"
+ cn_catania_roman_adj:0 "Catanian"
+ cn_catania_maltese:0 "Katanja"
+ cn_catania_maltese_adj:0 "Katani"
+ 
+ #Siracusa
+ cn_siracusa_roman:0 "Syracusae"
+ cn_siracusa_roman_adj:0 "Syracusian"
+ cn_siracusa_maltese:0 "Sirakuża"
+ cn_siracusa_maltese_adj:0 "Sirakużi"
+ cn_siracusa_greek:0 "Syrakoûsai"
+ cn_siracusa_greek_adj:0 "Syrakoûsian"
+ 
+ #Lentini
+ cn_lentini_roman:0 "Leontini"
+ cn_lentini_roman_adj:0 "Leontinian"
+ 
+ #Caltagirone
+ cn_caltagirone_arabic:0 "Qal'at Ghiran"
+ cn_caltagirone_arabic_adj:0 "Ghirani"
+ 
+ #Castrogiovanni
+ cn_castrogiovanni_roman:0 "Henna"
+ cn_castrogiovanni_roman_adj:0 "Hennan"
+ 
+ #Grigenti
+ cn_grigenti_arabic:0 "Jirjant"
+ cn_grigenti_arabic_adj:0 "Jirjanti"
+ cn_grigenti_roman:0 "Agrigentum"
+ cn_grigenti_roman_adj:0 "Agrigentian"
+ cn_grigenti_greek:0 "Akragas"
+ cn_grigenti_greek_adj:0 "Akragasian"
+ 
+ #Caltanissetta
+ cn_caltanisetta_arabic:0 "Qal'at al-Nisa'"
+ cn_caltanisetta_arabic_adj:0 "Qal'at al-Nisa'"
+ cn_caltanisetta_roman:0 "Castra Nicia"
+ cn_caltanisetta_roman_adj:0 "Nician"
+ cn_caltanisetta_maltese:0 "Kaltanissetta"
+ cn_caltanisetta_maltese_adj:0 "Kaltanissetti"
+ cn_caltanisetta_greek:0 "Kástro Nikiá"
+ cn_caltanisetta_greek_adj:0 "Nikián"
+ 
+ #Malta county
+ cn_malta_county_arabic:0 "Maltah"
+ cn_malta_county_arabic_adj:0 "Malti"
+ cn_malta_county_greek:0 "Gaudomelete"
+ cn_malta_county_greek_adj:0 "Gaudomeletian"
+ 
+ cn_malta_roman:0 "Melita"
+ cn_malta_roman_adj:0 "Melitan"
+ 
+ #Malta barony
+ cn_malta_barony_arabic:0 "Madinat Maltah"
+ cn_malta_barony_arabic_adj:0 "Malti"
+ cn_malta_barony_maltese:0 "Mdina"
+ cn_malta_barony_maltese_adj:0 "Mdina"
+ cn_malta_barony_greek:0 "Melite
+ cn_malta_barony_greek_adj:0 "Melitian"
+ 
+ #Benevento
+ cn_benevento_arabic:0 "Binbint"
+ cn_benevento_arabic_adj:0 "Binbinti"
+ cn_benevento_roman:0 "Beneventum"
+ cn_benevento_roman_adj:0 "Beneventian"
+ 
+ #Isernia
+ cn_isernia_roman:0 "Aesernia"
+ cn_isernia_roman_adj:0 "Aesernian"
+ 
+ #Melfi
+ cn_melfi_arabic:0 "Milf al-Barriyah"
+ cn_melfi_arabic_adj:0 "Milfi"
+ 
+ #Foggia
+ cn_foggia_arabic:0 "Fawj"
+ cn_foggia_arabic_adj:0 "Fawji"
+ cn_foggia_greek:0 "Fótza"
+ cn_foggia_greek_adj:0 "Fótzian"
+ 
+ #Lucera
+ cn_lucera_arabic:0 "Lutshira"
+ cn_lucera_arabic_adj:0 "Lutshiri"
+ 
+ #Larino
+ cn_larino_latin:0 "Larinum"
+ cn_larino_latin_adj:0 "Larinian"
+ 
+ #Vieste
+ cn_vieste_arabic:0 "Bistiyyah"
+ cn_vieste_arabic_adj:0 "Bistī"
+ 
+ #Capua
+ cn_capua_arabic:0 "Qabwa"
+ cn_capua_arabic_adj:0 "Qabwi"
+ cn_capua_roman:0 "Capuae"
+ cn_capua_roman_adj:0 "Capuan"
+ 
+ #Gaeta
+ cn_gaeta_arabic:0 "Ghayta"
+ cn_gaeta_arabic_adj:0 "Ghayti"
+ cn_gaeta_roman:0 "Caieta"
+ cn_gaeta_roman_adj:0 "Caietian"
+ 
+ #Cassino
+ cn_cassino_roman:0 "Casinum"
+ cn_cassino_roman_adj:0 "Casinian"
+ cn_cassino_greek:0 "Eulogimenopolis"
+ cn_cassino_greek_adj:0 "Eulogimenopolian"
+ 
+ #Napoli
+ cn_napoli_arabic:0 "Nabul"
+ cn_napoli_arabic_adj:0 "Nabuli"
+ cn_napoli_maltese:0 "Napli"
+ cn_napoli_maltese_adj:0 "Naplitan"
+ cn_napoli_greek:0 "Neapoli"
+ cn_napoli_greek_adj:0 "Neapolitanian"
+ 
+ #Amalfi
+ cn_amalfi_arabic:0 "Malf"
+ cn_amalfi_arabic_adj:0 "Malfi"
+ 
+ #Adersa
+ cn_aversa_arabic:0 "Adersa"
+ cn_aversa_arabic_adj:0 "Adersi"
+ 
+ #Apulia
+ cn_apulia_arabic:0 "Buliah"
+ cn_apulia_arabic_adj:0 "Bulī"
+ cn_apulia_latin:0 "Puglia"
+ cn_apulia_latin_adj:0 "Puglian"
+ cn_apulia_norse:0 "Pulsland"
+ cn_apulia_norse_adj:0 "Pulslandian"
+ cn_langobardia_greek:0 "Longovardía"
+ cn_langobardia_greek_adj:0 "Longovardían"
+ cn_langobardia_germanic:0 "Langbardland"
+ cn_langobardia_germanic_adj:0 "Langbardlandic"
+ 
+ #Trani
+ cn_trani_arabic:0 "Tranah"
+ cn_trani_arabic_adj:0 "Tranī"
+ cn_trani_roman:0 "Turenum"
+ cn_trani_roman_adj:0 "Turenian"
+ 
+ #Siponto
+ cn_siponto_arabic:0 "Sibent"
+ cn_siponto_arabic_adj:0 "Sibenti"
+ cn_siponto_roman:0 "Sipontum"
+ cn_siponto_roman_adj:0 "Sipontian"
+ cn_siponto_greek:0 "Sipious"
+ cn_siponto_greek_adj:0 "Sipian"
+ 
+ #Venosa
+ cn_venosa_arabic:0 "Binuṣah"
+ cn_venosa_arabic_adj:0 "Binuṣi"
+ cn_venosa_roman:0 "Venusia"
+ cn_venosa_roman_adj:0 "Venusian"
+ 
+ #Acerenza
+ cn_acerenza_arabic:0 "'Akirnza"
+ cn_acerenza_arabic_adj:0 "'Akirnzi"
+ cn_acerenza_greek:0 "Acheruntia"
+ cn_acerenza_greek_adj:0 "Acheruntian"
+ cn_acerenza_roman:0 "Aceruntia"
+ cn_acerenza_roman_adj:0 "Aceruntian"
+ 
+ #Bari
+ cn_bari_arabic:0 "Bari"
+ cn_bari_arabic_adj:0 "Barī"
+ cn_bari_roman:0 "Barium"
+ cn_bari_roman_adj:0 "Barian"
+ cn_bari_norse:0 "Bar"
+ cn_bari_norse_adj:0 "Barian"
+ 
+ #Matera
+ cn_matera_arabic:0 "Matira"
+ cn_matera_arabic_adj:0 "Matiri"
+ cn_matera_roman:0 "Matheola"
+ cn_matera_roman_adj:0 "Matheolian"
+ 
+ #Taranto
+ cn_taranto_arabic:0 "Tarant"
+ cn_taranto_arabic_adj:0 "Taranti"
+ cn_taranto_roman:0 "Tarentum"
+ cn_taranto_roman_adj:0 "Tarentian"
+ cn_taranto_greek:0 "Tarantas"
+ cn_taranto_greek_adj:0 "Tarantasian"
+ 
+ #Lecce
+ cn_lecce_arabic:0 "Lajj"
+ cn_lecce_arabic_adj:0 "Lajji"
+ cn_lecce_roman:0 "Licea"
+ cn_lecce_roman_adj:0 "Licean"
+ 
+ #Brindisi
+ cn_brindisi_arabic:0 "'Abrintas"
+ cn_brindisi_arabic_adj:0 "'Abrintasi"
+ cn_brindisi_roman:0 "Brindisium"
+ cn_brindisi_roman_adj:0 "Brindisian"
+ 
+ #Otranto (b_orlanto)
+ cn_orlanto_arabic:0 "'Adhrant"
+ cn_orlanto_arabic_adj:0 "'Adhranti"
+ cn_orlanto_roman:0 "Hydruntum"
+ cn_orlanto_roman_adj:0 "Hydruntian"
+ 
+ #Salerno
+ cn_salerno_arabic:0 "Slirnah"
+ cn_salerno_arabic_adj:0 "Slirni"
+ cn_salerno_roman:0 "Salernum"
+ cn_salerno_roman_adj:0 "Salernian"
+ 
+ #Maratea
+ cn_maratea_arabic:0 "Mirathyah"
+ cn_maratea_arabic_adj:0 "Mirathi"
+ cn_maratea_greek:0 "Marathéa"
+ cn_maratea_greek_adj:0 "Marathéan"
+ 
+ #Potenza
+ cn_potenza_arabic:0 "Butinsah"
+ cn_potenza_arabic_adj:0 "Butinsi"
+ 
+ #Policastro
+ cn_policastro_arabic:0 "Baliqastruah"
+ cn_policastro_arabic_adj:0 "Baliqastri"
+ 
+ #Tursi (c_camarda)
+ cn_tursi_arabic:0 "Tursi"
+ cn_tursi_arabic_adj:0 "Tursī"
+ cn_tursi_roman:0 "Tursium"
+ cn_tursi_roman_adj:0 "Tursian"
+ cn_tursi_greek:0 "Thyrsoí"
+ cn_tursi_greek_adj:0 "Thyrsian"
+ 
+ #Tricarico (b_stigliano)
+ cn_tricarico_arabic:0 "Itrīgharqu"
+ cn_tricarico_arabic_adj:0 "Itrīgharqi"
+ cn_tricarico_greek:0 "Triakrikon"
+ cn_tricarico_greek_adj:0 "Triakrikonian"
+ 
+ #Calabria
+ cn_calabria_arabic:0 "Qalawriyah"
+ cn_calabria_arabic_adj:0 "Qalawri"
+ cn_calabria_greek:0 "Kalavría"
+ cn_calabria_greek_adj:0 "Kalavrían"
+ 
+ #Reggio Calabria
+ cn_reggio_calabria_arabic:0 "Riyyah"
+ cn_reggio_calabria_arabic_adj:0 "Riyyi"
+ cn_reggio_calabria_roman:0 "Rhegium Julii"
+ cn_reggio_calabria_roman_adj:0 "Rhegian"
+ cn_reggio_calabria_norman:0 "Rìsa"
+ cn_reggio_calabria_norman_adj:0 "Rìsian"
+ cn_reggio_calabria_catalan:0 "Regols"
+ cn_reggio_calabria_catalan_adj:0 "Regolian"
+ 
+ #Squilluce
+ cn_squillace_arabic:0 "Asjilasah"
+ cn_squillace_arabic_adj:0 "Asjilasi"
+ cn_squillace_roman:0 "Scylacium"
+ cn_squillace_roman_adj:0 "Scylacian"
+ cn_squillace_greek:0 "Skylakion"
+ cn_squillace_greek_adj:0 "Skylakian"
+ 
+ #Tropea
+ cn_tropea_arabic:0 "'Atrabiyah"
+ cn_tropea_arabic_adj:0 "'Atrabi"
+ cn_tropea_roman:0 "Tropaea"
+ cn_tropea_roman_adj:0 "Tropaean"
+ 
+ #Cosenza
+ cn_cosenza_arabic:0 "Kashnatah"
+ cn_cosenza_arabic_adj:0 "Kashnati"
+ 
+ #Castrovillari
+ cn_castrovillari_arabic:0 "Qatrubli"
+ cn_castrovillari_arabic_adj:0 "Qatrublī"
+ cn_castrovillari_roman:0 "Castrum Villarum"
+ cn_castrovillari_roman_adj:0 "Castrian"
+ cn_castrovillari_greek:0 "Neon Sassonio"
+ cn_castrovillari_greek_adj:0 "Neon Sassonio"
+ cn_castrovillari_norman:0 "Castra"
+ cn_castrovillari_norman_adj:0 "Castrian"
+ 
+ #Rossano
+ cn_rossano_arabic:0 "Rusyanah'
+ cn_rossano_arabic_adj:0 "Rusyani"
+ cn_rossano_roman:0 "Roscianum"
+ cn_rossano_roman_adj:0 "Roscianian"
+ cn_rossano_greek:0 "Rosáno"
+ cn_rossano_greek_adj:0 "Rosánian"
+ 
+ #Crotone (b_cotrone)
+ cn_cotrone_arabic:0 "Qatrunah"
+ cn_cotrone_arabic_adj:0 "Qatruni"
+ cn_cotrone_roman:0 "Crotona"
+ cn_cotrone_roman_adj:0 "Crotonian"
+ cn_cotrone_maltese:0 "Croton"
+ cn_cotrone_maltese_adj:0 "Crotoni"
+ cn_cotrone_greek:0 "Kroton"
+ cn_cotrone_greek_adj:0 "Krotonian"
+ 
+ #Catanzaro
+ cn_catanzaro_arabic:0 "Qatanṣar"
+ cn_catanzaro_arabic_adj:0 "Qatanṣari"
+ cn_catanzaro_roman:0 "Catacium"
+ cn_catanzaro_roman_adj:0 "Catacian"
+ cn_catanzaro_greek:0 "Katantzàrion"
+ cn_catanzaro_greek_adj:0 "Katantzàrian"
+ cn_catanzaro_norman:0 "Cathacem"
+ cn_catanzaro_norman_adj:0 "Cathacemian"
+ 
+ 
+ ##Kingdom of Venice
+ cn_venice_arabic:0 "al-Bunduqiyya"
+ cn_venice_arabic_adj:0 "Bunduqi"
+
+
+ ##Kingdom of Italy
+ #Aquileia
+ cn_aquileia_arabic:0 "Iklayah"
+ cn_aquileia_arabic_adj:0 "Iklayi"
+ 
+ #Trieste
+ cn_trieste_arabic:0 "Iṣtajanku"
+ cn_trieste_arabic_adj:0 "Iṣtajanki"
+ 
+ #Grado
+ cn_grado_arabic:0 "Kradis"
+ cn_grado_arabic_adj:0 "Kradisi"
+ 
+ #Verona
+ cn_verona_arabic:0 "Fayrunah"
+ cn_verona_arabic_adj:0 "Fayruni"
+ 
+ #Padua
+ cn_padua_arabic:0 "Badhuah"
+ cn_padua_arabic_adj:0 "Badhuah"
+ 
+ #Turin
+ cn_turin_arabic:0 "Tarunah"
+ cn_turin_arabic_adj:0 "Taruni"
+ 
+ #Lombardy
+ cn_lombardia_arabic:0 "'Anbarḍiah"
+ cn_lombardia_arabic_adj:0 "'Anbarḍi"
+ 
+ #Pavia
+ cn_pavia_arabic:0 "Babiah"
+ cn_pavia_arabic_adj:0 "Babi"
+ 
+ #Savona
+ cn_savona_arabic:0 "Shaghunah"
+ cn_savona_arabic_adj:0 "Shaghuni"
+ 
+ #Pisa
+ cn_pisa_arabic:0 "Bishah"
+ cn_pisa_arabic_adj:0 "Bishi"
+ 
+ #Tuscany
+ cn_toscana_arabic:0 "Tusqanah"
+ cn_toscana_arabic_adj:0 "Tusqani"
+ 
+ #Firenze
+ cn_firenze_arabic:0 "'Ifluransah"
+ cn_firenze_arabic_adj:0 "'Ifluransi"
+ 
+ 
+ ##Kingdom of Sardinia
+ cn_sardinia_arabic:0 "Sardanyah"
+ cn_sardinia_arabic_adj:0 "Sardani"
+ cn_sardinia_kingdom_castilian:0 "Cerdeña y Córcega"
+ cn_sardinia_kingdom_castilian_adj:0 "Córso-Cerdeñian"
+ 
+ #Corsica
+ cn_corsica_arabic:0 "Qurshiqah"
+ cn_corsica_arabic_adj:0 "Qurshiqi"
+ cn_corsica_greek:0 "Korsiki"
+ cn_corsica_greek_adj:0 "Korsikian"
+ cn_corsica_catalan:0 "Còrsega"
+ cn_corsica_catalan_adj:0 "Còrsegian"
+ cn_corsica_castilian:0 "Córcega"
+ cn_corsica_castilian_adj:0 "Córcegian"
+ 
+ #Sardinia Duchy
+ cn_sardinia_latin:0 "Sardegna"
+ cn_sardinia_latin_adj:0 "Sardegnian"
+ cn_sardinia_catalan:0 "Sardenya"
+ cn_sardinia_catalan_adj:0 "Sardenian"
+ cn_sardinia_castilian:0 "Cerdeña"
+ cn_sardinia_castilian_adj:0 "Cerdeñian"
+ 
+ #Cagliari
+ cn_cagliari_arabic:0 "Qalmarah"
+ cn_cagliari_arabic_adj:0 "Qalmari"
+ 
+ 
+ ##Kingdom of Romagna
+ #Rome
+ cn_rome_arabic:0 "Rumiyah"
+ cn_rome_arabic_adj:0 "Rumi"
+ 
+ #Ravenna
+ cn_ravenna_arabic:0 "Rabnah"
+ cn_ravenna_arabic_adj:0 "Rabni"
+ 
+ #Rimini
+ cn_rimini_arabic:0 "'Arimnis"
+ cn_rimini_arabic_adj:0 "'Arimnisi"
+ 
+ #Ancona
+ cn_ancona_arabic:0 "'Anqunah"
+ cn_ancona_arabic_adj:0 "Anquni"
+ 
+ #Camerino
+ cn_camerino_arabic:0 "Qamrin"
+ cn_camerino_arabic_adj:0 "Qamrini"
+ 
+ #Pesaro
+ cn_pesaro_arabic:0 "Biṣrah"
+ cn_pesaro_arabic_adj:0 "Biṣri"
+ 
+ #Lanciano
+ cn_lanciano_arabic:0 "Ankazmah"
+ cn_lanciano_arabic_adj:0 "Ankazmi"
+ 
+ #Agnone
+ cn_agnone_arabic:0 "ar-Rakn"
+ cn_agnone_arabic_adj:0 "Rakni"
+ 
+ #Civitavecchia
+ cn_civitavecchia_arabic:0 "Jabt Bakkah"
+ cn_civitavecchia_arabic_adj:0 "Bakki"
+ 
+ #Tivoli
+ cn_tivoli_arabic:0 "Tudhur"
+ cn_tivoli_arabic_adj:0 "Tudhuri"
+ 
+ #Terracina
+ cn_terracina_arabic:0 "Tarjinah"
+ cn_terracina_arabic_adj:0 "Tarjini"
+ 
+ 
+ ##Kingdom of Krete
+ #Krete
+ cn_krete_arabic:0 "Iqritish"
+ cn_krete_arabic_adj:0 "Iqritshi"
+ 
+ #Chandax
+ cn_chandax_arabic:0 "Rabḍ al-Khandaq"
+ cn_chandax_arabic_adj:0 "Rabḍi"
+ 
+ #Chania
+ cn_chania_arabic:0 "al-Hanim"
+ cn_chania_arabic_adj:0 "Hanimi"
+ 
+ 
+ ##Kingdom of Cyprus
+ #Cyprus
+ cn_cyprus_arabic:0 "Qubrus"
+ cn_cyprus_arabic_adj:0 "Qubrusi"
+ 
+ #Nicosia
+ cn_nicosia_arabic:0 "al-'Afqusiyah"
+ cn_nicosia_arabic_adj:0 "'Afqusi"
+ 
+ #Famagusta
+ cn_famagusta_arabic:0 "al-Maghusah" # al-Maghuṣah
+ cn_famagusta_arabic_adj:0 "Maghusi" # Maghuṣi
+ 
+ ##Kingdom of Armenia
+ #Armenia
+ cn_armenia_arabic:0 "Arminiya"
+ cn_armenia_arabic_adj:0 "Armini"
+ cn_armenia_turkish:0 "Ermenistan"
+ cn_armenia_turkish_adj:0 "Ermenistani"
+ 
+ #Theodosiopolis
+ cn_theodosiopolis_arabic:0 "Qaliqala"
+ cn_theodosiopolis_arabic_adj:0 "Qaliqali"
+ 
+ #Martyropolis
+ cn_martyropolis_arabic:0 "Mayyafariqin"
+ cn_martyropolis_arabic_adj:0 "Mayyafariqini"
+ cn_martyropolis_iranian:0 "Miyafarkin"
+ cn_martyropolis_iranian_adj:0 "Miyafarkini"
+ 
+ #Arsamosata
+ cn_arsamosata_arabic:0 "Shimshat"
+ cn_arsamosata_arabic_adj:0 "Shimshati"
+ cn_arsamosata_greek:0 "Asmosaton"
+ cn_arsamosata_greek_adj:0 "Asmosatonian"
+ 
+ #Camacha
+ cn_camacha_arabic:0 "Kimakh"
+ cn_camacha_arabic_adj:0 "Kimakhi"
+ cn_camacha_turkish:0 "Kemah"
+ cn_camacha_turkish_adj:0 "Kemahian"
+ 
+ #Vaspurakan
+ cn_vaspurakan_duchy_arabic:0 "al-Basfurrajan"
+ cn_vaspurakan_duchy_arabic_adj:0 "Basfurrajani"
+ cn_vaspurakan_county_arabic:0 "Asfurjan"
+ cn_vaspurakan_county_arabic_adj:0 "Asfurjani"
+ 
+ #Van
+ cn_van_arabic:0 "Wan"
+ cn_van_arabic_adj:0 "Wani"
+ 
+ #Berkri
+ cn_berkri_arabic:0 "Barghiri"
+ cn_berkri_arabic_adj:0 "Barghiri"
+ 
+ #Apahunik
+ cn_apahunik_arabic:0 "Bahunays"
+ cn_apahunik_arabic_adj:0 "Bahunaysi"
+ 
+ #Tatvan
+ cn_tatvan_arabic:0 "Taytawana"
+ cn_tatvan_arabic_adj:0 "Taytawani"
+ 
+ #Khlat
+ cn_khlat_arabic:0 "Akhlat"
+ cn_khlat_arabic_adj:0 "Akhlati"
+ cn_khlat_georgian:0 "Khlati"
+ cn_khlat_georgian_adj:0 "Khlatian"
+ 
+ #Manzikert
+ cn_manzikert_arabic:0 "Miladhkird"
+ cn_manzikert_arabic_adj:0 "Miladhkirdi"
+ 
+ #Arjesh
+ cn_arjesh_kurdish:0 "Erdish"
+ cn_arjesh_kurdish_adj:0 "Erdishi"
+ cn_arjesh_greek:0 "Arzes"
+ cn_arjesh_greek_adj:0 "Azesian"
+ 
+ #Ani (Hayk)
+ cn_ani_arabic:0 "Āna"
+ cn_ani_arabic_adj:0 "Ānawi"
+ 
+ #Kars
+ cn_kars_arabic:0 "Qarṣ"
+ cn_kars_arabic_adj:0 "Qarṣi"
+ cn_kars_persian:0 "Qars"
+ cn_kars_persian_adj:0 "Qarsi"
+ cn_kars_kurdish:0 "Qers"
+ cn_kars_kurdish_adj:0 "Qersi"
+ cn_kars_turkish:0 "Kars"
+ cn_kars_turkish_adj:0 "Karsi"
+ 
+ #Suenik
+ cn_suenik_arabic:0 "Sisajan"
+ cn_suenik_arabic_adj:0 "Sisajani"
+ 
+ #Dvin
+ cn_dvin_arabic:0 "Dabil"
+ cn_dvin_arabic_adj:0 "Dabili"
+ cn_dvin_greek:0 "Doubios"
+ cn_dvin_greek_adj:0 "Doubiosian"
+ 
+ #Naxcivan
+ cn_naxcivan_arabic:0 "Nashawah"
+ cn_naxcivan_arabic_adj:0 "Nashawi"
+ 
+ #Kingdom of Georgia
+ #Georgia
+ cn_georgia_arabic:0 "al-Kurj"
+ cn_georgia_arabic_adj:0 "Kurji"
+ cn_georgia_iranian:0 "Gorjestan"
+ cn_georgia_iranian_adj:0 "Gorjestani"
+ cn_georgia_turkish:0 "Gürcistan"
+ cn_georgia_turkish_adj:0 "Gürcistani"
+ 
+ #Tao
+ cn_tao_arabic:0 "Siraj-Tair"
+ cn_tao_arabic_adj:0 "Siraj-Tairi"
+ 
+ #Tortomi
+ cn_tortomi_turkish:0 "Tortum"
+ cn_tortomi_turkish_adj:0 "Tortumi"
+ 
+ #Akhaltsikhe
+ cn_akhaltsikhe_arabic:0 "Akhiskha"
+ cn_akhaltsikhe_arabic_adj:0 "Akhiskhawi"
+ cn_akhaltsikhe_persian:0 "Akhesqeh"
+ cn_akhaltsikhe_persian_adj:0 "Akhesqi"
+ cn_akhaltsikhe_turkish:0 "Ahıska"
+ cn_akhaltsikhe_turkish_adj:0 "Ahıski"
+ 
+ #Hamamshen (Acampse)
+ cn_hamamshen_arabic:0 "Hamshin"
+ cn_hamamshen_arabic_adj:0 "Hamshini"
+ cn_hamamshen_iranian:0 "Hemshin"
+ cn_hamamshen_iranian_adj:0 "Hemshini"
+ cn_hamamshen_turkish:0 "Hemşin"
+ cn_hamamshen_turkish_adj:0 "Hemşini"
+ 
+ #Tskhumi
+ cn_tskhumi_arabic:0 "Ṣukhum"
+ cn_tskhumi_arabic_adj:0 "Ṣukhumi"
+ cn_tskhumi_turkish:0 "Suhum"
+ cn_tskhumi_turkish_adj:0 "Suhumi"
+ 
+ #Kutaisi
+ cn_kutaisi_arabic:0 "Qutis"
+ cn_kutaisi_arabic_adj:0 "Qutisi"
+ 
+ #Georgia (Duchy) - Juzan is the name of the Abbasid province name with which the Tbilisi dirhams are minted
+ cn_juzan_arabic:0 "Juzan"
+ cn_juzan_arabic_adj:0 "Juzani"
+ 
+ #Tbilisi
+ cn_tbilisi_arabic:0 "Tifilis"
+ cn_tbilisi_arabic_adj:0 "Tifilisi"
+ 
+ 
+ ###Empire of Persia
+ #Gilan
+ cn_gilan_arabic:0 "Jilan"
+ cn_gilan_arabic_adj:0 "Jilani"
+ 
+ #Suhravard
+ cn_suhravard_arabic:0 "Suhraward"
+ cn_suhravard_arabic_adj:0 "Suhrawardi"
+ 
+ #Qazwin
+ cn_qazvin_iranian:0 "Qazvin"
+ cn_qazvin_iranian_adj:0 "Qazvinian"
+ 
+ #Baduspan
+ cn_baduspan_arabic:0 "Badusban"
+ cn_baduspan_arabic_adj:0 "Badusbani"
+ 
+ #Gurgan
+ cn_gurgan_arabic:0 "Jurjan"
+ cn_gurgan_arabic_adj:0 "Jurjani"
+ 
+ #Azerbaijan
+ cn_azerbaijan_arabic:0 "Adharbayjan"
+ cn_azerbaijan_arabic_adj:0 "Adharbayjani"
+ 
+ #Talish
+ cn_talish_arabic:0 "at-Tailasan"
+ cn_talish_arabic_adj:0 "Tailasani"
+ 
+ #Shirvan
+ cn_shirvan_arabic:0 "Shirwan"
+ cn_shirvan_arabic_adj:0 "Shirwani"
+ 
+ #Salyan
+ cn_salyan_mongol:0 "Dalan-Navur"
+ cn_salyan_mongol_adj:0 "Dalan-Navurian"
+ 
+ #Paidangaran
+ cn_paidangaran_arabic:0 "Baylaqan"
+ cn_paidangaran_arabic_adj:0 "Baylaqani"
+ 
+ #Aran
+ cn_aran_arabic:0 "ar-Rān"
+ cn_aran_arabic_adj:0 "Rāni"
+ cn_aran_armenian:0 "Aghvank"
+ cn_aran_armenian_adj:0 "Aghvankian"
+ cn_aran_georgian:0 "Rani"
+ cn_aran_georgian_adj:0 "Ranian"
+ cn_aran_greek:0 "Ariania"
+ cn_aran_greek_adj:0 "Arianian"
+ 
+ #Ganja
+ cn_ganja_arabic:0 "Janza"
+ cn_ganja_arabic_adj:0 "Janzi"
+ cn_ganja_armenian:0 "Gandzak"
+ cn_ganja_armenian_adj:0 "Gandzakian"
+ 
+ #Barda
+ cn_barda_arabic:0 "Bardha'ah"
+ cn_barda_arabic_adj:0 "Bardha'i"
+ cn_barda_armenian:0 "Partaw"
+ cn_barda_armenian_adj:0 "Partawian"
+ cn_barda_georgian:0 "Bardavi"
+ cn_barda_georgian_adj:0 "Bardavian"
+ 
+ #Mugan
+ cn_mugan_arabic:0 "Muqan"
+ cn_mugan_arabic_adj:0 "Muqani"
+ 
+ #Varsan
+ cn_varsan_arabic:0 "Warthan"
+ cn_varsan_arabic_adj:0 "Warthani"
+ 
+ #Ahvas
+ cn_ahvaz_arabic:0 "al-Ahwaz"
+ cn_ahvaz_arabic_adj:0 "Ahwazi"
+ 
+ #Ramhurmuz
+ cn_ramhurmuz_arabic:0 "Ramiz"
+ cn_ramhurmuz_arabic_adj:0 "Ramizi"
+ 
+ #Gondishapur
+ cn_gondishapur_arabic:0 "Jundaysabur"
+ cn_gondishapur_arabic_adj:0 "Jundaysaburi"
+ 
+ 
+ ###Empire of Iberia
+ #Cantillana
+ cn_cantillana_arabic:0 "Qatinyanah"
+ cn_cantillana_arabic_adj:0 "Qatinyani"
+ 
+ #Guadiato
+ cn_guadiato_arabic:0 "Wadi Qurtubah"
+ cn_guadiato_arabic_adj:0 "Qurtubi"
+ 
+ #Pedroche
+ cn_pedroche_arabic:0 "Bitrauch"
+ cn_pedroche_arabic_adj:0 "Bitrauchi"
+ 
+ #Alarcos
+ cn_alarcos_arabic:0 "al-Arak"
+ cn_alarcos_arabic_adj:0 "Araki"
+ 
+ #Almaden
+ cn_almaden_arabic:0 "al-Ma'din"
+ cn_almaden_arabic_adj:0 "Ma'dini"
+ 
+ #Ubeda
+ cn_ubeda_arabic:0 "Ubbadah"
+ cn_ubeda_arabic_adj:0 "Ubbadi"
+ 
+ #Huescar
+ cn_huescar_arabic:0 "Ashkar"
+ cn_huescar_arabic_adj:0 "Ashkari"
+ 
+ #Guadix
+ cn_guadix_arabic:0 "Wadi Ash"
+ cn_guadix_arabic_adj:0 "Ashi"
+ 
+ #Lorca
+ cn_lorca_arabic:0 "Lurqah"
+ cn_lorca_arabic_adj:0 "Lurqi"
+ 
+ #Baza
+ cn_baza_arabic:0 "Bastah"
+ cn_baza_arabic_adj:0 "Basti"
+ 
+ #Antequera
+ cn_antequera_arabic:0 "Antaqirah"
+ cn_antequera_arabic_adj:0 "Antaqiri"
+ 
+ #Nerja
+ cn_nerja_arabic:0 "Nirkhah"
+ cn_nerja_arabic_adj:0 "Nirkhi"
+ 
+ #Motril
+ cn_motril_arabic:0 "Mutril"
+ cn_motril_arabic_adj:0 "Mutrili"
+ 
+ #Carmona
+ cn_carmona_arabic:0 "Qarmunah"
+ cn_carmona_arabic_adj:0 "Qarmuni"
+ 
+ #Almonte
+ cn_almonte_arabic:0 "al-Munt"
+ cn_almonte_arabic_adj:0 "Munti"
+ 
+ #Aznalcollar
+ cn_aznalcollar_arabic:0 "Hisn al-Kollar"
+ cn_aznalcollar_arabic_adj:0 "Kollari"
+ 
+ #Tarifa
+ cn_tarifa_arabic:0 "Jazirat Tarif"
+ cn_tarifa_arabic_adj:0 "Tarifi"
+ 
+ #Jerez
+ cn_jerez_arabic:0 "Sharish"
+ cn_jerez_arabic_adj:0 "Sharishi"
+ 
+ #Arcos
+ cn_arcos_arabic:0 "Arkash"
+ cn_arcos_arabic_adj:0 "Arkashi"
+ 
+ #Moron
+ cn_moron_arabic:0 "Murur"
+ cn_moron_arabic_adj:0 "Mururi"
+ 
+ #Huelva
+ cn_huelva_arabic:0 "Walbah"
+ cn_huelva_arabic_adj:0 "Walbi"
+ 
+ #Aracena
+ cn_aracena_arabic:0 "Arthinah"
+ cn_aracena_arabic_adj:0 "Arthini"
+ 
+ #Serpa
+ cn_serpa_arabic:0 "Shirbah"
+ cn_serpa_arabic_adj:0 "Shirbi"
+ 
+ #Maqueda
+ cn_maqueda_arabic:0 "Makkadah"
+ cn_maqueda_arabic_adj:0 "Makkadi"
+ 
+ #Talavera
+ cn_talavera_arabic:0 "Talabayrah"
+ cn_talavera_arabic_adj:0 "Talabayri"
+ 
+ #Guadaljara
+ cn_gudalajara_arabic:0 "Wadi al-Hijarah"
+ cn_gudalajara_arabic_adj:0 "Hijari"
+ 
+ #Arganda
+ cn_arganda_arabic:0 "Arkhanda"
+ cn_arganda_arabic_adj:0 "Arkhandi"
+ 
+ #Atienza
+ cn_atienza_arabic:0 "Atisah"
+ cn_atienza_arabic_adj:0 "Atisi"
+ 
+ #Medinaceli
+ cn_medinaceli_arabic:0 "Madinat Salim"
+ cn_medinaceli_arabic_adj:0 "Salimi"
+ 
+ #Huelamo
+ cn_huelamo_arabic:0 "Walamu"
+ cn_huelamo_arabic_adj:0 "Walami"
+ 
+ #Huete
+ cn_huete_arabic:0 "Wabdhah"
+ cn_huete_arabic_adj:0 "Wabdhi"
+ 
+ #Mora
+ cn_mora_arabic:0 "Murah"
+ cn_mora_arabic_adj:0 "Muri"
+ 
+ #Santarem
+ cn_santarem_arabic:0 "Shantarin"
+ cn_santarem_arabic_adj:0 "Shantarini"
+ 
+ #Setubal
+ cn_setubal_arabic:0 "Shatubar"
+ cn_setubal_arabic_adj:0 "Sharubari"
+ 
+ #Llerena
+ cn_llerena_arabic:0 "Yarnah"
+ cn_llerena_arabic_adj:0 "Yarni"
+ 
+ #Coria
+ cn_coria_arabic:0 "Quriah"
+ cn_coria_arabic_adj:0 "Quri"
+ 
+ #Ambroz (In the place of Hervas)
+ cn_ambroz_arabic:0 "Amrus"
+ cn_ambroz_arabic_adj:0 "Amrusi"
+ 
+ #Almaraz
+ cn_almaraz_arabic:0 "al-Mahrath"
+ cn_almaraz_arabic_adj:0 "Mahrathi"
+ 
+ #Alcantara
+ cn_alcantara_arabic:0 "al-Qantarah"
+ cn_alcantara_arabic_adj:0 "Qantari"
+ 
+ #Zalaca
+ cn_zalaca_arabic:0 "Zallaqah"
+ cn_zalaca_arabic_adj:0 "zallaqi"
+ 
+ #Trujillo
+ cn_trujillo_arabic:0 "Tarjalah"
+ cn_trujillo_arabic_adj:0 "Tarjali"
+ 
+ #Medellin
+ cn_medellin_arabic:0 "Madalin"
+ cn_medellin_arabic_adj:0 "Madalini"
+ 
+ #Mertola
+ cn_mertola_arabic:0 "Martulah"
+ cn_mertola_arabic_adj:0 "Martuli"
+ 
+ #Lagos
+ cn_lagos_arabic:0 "Halaq az-Zawiah"
+ cn_lagos_arabic_adj:0 "Zawi"
+ 
+ #Murviedro
+ cn_murviedro_arabic:0 "Murbatar"
+ cn_murviedro_arabic_adj:0 "Murbatari"
+ 
+ #Requena
+ cn_requena_arabic:0 "Rikkanah"
+ cn_requena_arabic_adj:0 "Rikkani"
+ 
+ #Amposta
+ cn_amposta_arabic:0 "Ambustah"
+ cn_amposta_arabic_adj:0 "Ambusti"
+ 
+ #Segorbe - (Shibrib/Ishkarb)
+ cn_segorbe_arabic:0 "Shibrib"
+ cn_segorbe_arabic_adj:0 "Shibribi"
+ 
+ #Almansa
+ cn_almansa_arabic:0 "al-Mansaf"
+ cn_almansa_arabic_adj:0 "Mansafi"
+ 
+ #Albacete
+ cn_albacete_arabic:0 "al-Basit"
+ cn_albacete_arabic_adj:0 "Basiti"
+ 
+ #Alcudia
+ cn_alcudia_arabic:0 "al-Kudyah"
+ cn_alcudia_arabic_adj:0 "Kudyawi"
+ 
+ #Cartagena
+ cn_cartagena_arabic:0 "Qartajannah"
+ cn_cartagena_arabic_adj:0 "Qartajanni"
+ 
+ #Aguilas
+ cn_aguilas_arabic:0 "Aqilah"
+ cn_aguilas_arabic_adj:0 "Aqili"
+ 
+ #Caravaca De La Cruz
+ cn_caravacadelacruz_arabic:0 "Qarabakah"
+ cn_caravacadelacruz_arabic_adj:0 "Qarabaki"
+ 
+ #Cieza (Hisn Siyasa/Medina Siyasa)
+ cn_cieza_arabic:0 "Siyasa"
+ cn_cieza_arabic_adj:0 "Siyasi"
+ 
+ #Cotillas
+ cn_cotillas_arabic:0 "al-Qutiyah"
+ cn_cotillas_arabic_adj:0 "Quti"
+ 
+ #Segura
+ cn_segura_arabic:0 "Shaqurah"
+ cn_segura_arabic_adj:0 "Shaquri"
+ 
+ #Iniesta
+ cn_iniesta_arabic:0 "Yanashtah"
+ cn_iniesta_arabic_adj:0 "Yanashti"
+ 
+ #Alcazar
+ cn_alcazar_arabic:0 "al-Qasr"
+ cn_alcazar_arabic_adj:0 "Qasri"
+ 
+ #Palencia
+ cn_palencia_arabic:0 "Balintiyah"
+ cn_palencia_arabic_adj:0 "Balinti"
+ 
+ #Simancas
+ cn_simancas_arabic:0 "Shant Mankash"
+ cn_simancas_arabic_adj:0 "Mankashi"
+ 
+ #Soria
+ cn_soria_arabic:0 "Shuryah"
+ cn_soria_arabic_adj:0 "Shuri"
+ 
+ #Osma
+ cn_osma_arabic:0 "Wakhshamah"
+ cn_osma_arabic_adj:0 "Wakhshami"
+ 
+ #Gormaz (San Esteban de Gormaz)
+ cn_gormaz_arabic:0 "Ghurmaj"
+ cn_gormaz_arabic_adj:0 "Ghurmaji"
+ 
+ #Cantabria
+ cn_cantabria_arabic:0 "Qantabriyah"
+ cn_cantabria_arabic_adj:0 "Qantabri"
+ 
+ #Santiallana
+ cn_santiallana_arabic:0 "Shant Jilyanah"
+ cn_santiallana_arabic_adj:0 "Jilyani"
+ 
+ #Santander (Shant Andar/Shant Ardam)
+ cn_santander_arabic:0 "Shant Andar"
+ cn_santander_arabic_adj:0 "Andari"
+ 
+ #Reinosa
+ cn_reinosa_arabic:0 "Raynusah"
+ cn_reinosa_arabic_adj:0 "Raynusi"
+ 
+ #Ejea
+ cn_ejea_arabic:0 "Siyah"
+ cn_ejea_arabic_adj:0 "Siyawi"
+ 
+ #Zuera
+ cn_zuera_arabic:0 "Sukhayra"
+ cn_zuera_arabic_adj:0 "Sukhayri"
+ 
+ #Alto Aragon - Birt comes from the word Puerta, which means Gateway or Door
+ cn_alto_aragon_arabic:0 "Birt Jaqah"
+ cn_alto_aragon_arabic_adj:0 "Jaqi"
+ 
+ #Jaca
+ cn_jaca_arabic:0 "Jaqah"
+ cn_jaca_arabic_adj:0 "Jaqi"
+ 
+ #Sobrarbe (Kura of Barbitaniyah)
+ cn_sobrarbe_arabic:0 "Barbitaniyah"
+ cn_sobrarbe_arabic_adj:0 "Barbitani"
+ 
+ #Huesca
+ cn_huesca_arabic:0 "Washqah"
+ cn_huesca_arabic_adj:0 "Washqi"
+ 
+ #Barbastro
+ cn_barbastro_arabic:0 "Barbashtar"
+ cn_barbastro_arabic_adj:0 "Barbashtari"
+ 
+ #Daroca
+ cn_daroca_arabic:0 "Qal'at Daruqah"
+ cn_daroca_arabic_adj:0 "Daruqi"
+ 
+ #Monzon
+ cn_monzon_arabic:0 "Muntshun"
+ cn_monzon_arabic_adj:0 "Muntshuni"
+ 
+ #Caspe
+ cn_caspe_arabic:0 "Qasb"
+ cn_caspe_arabic_adj:0 "Qasbi"
+ 
+ #Calaceite
+ cn_calaceite_arabic:0 "Qal'at Zayd"
+ cn_calaceite_arabic_adj:0 "Zaydi"
+ 
+ #Berga
+ cn_berga_arabic:0 "Birjah"
+ cn_berga_arabic_adj:0 "Birji"
+ 
+ #Urgell
+ cn_urgell_arabic:0 "Arqallah"
+ cn_urgell_arabic_adj:0 "Arqalli"
+ 
+ #Andorra
+ cn_andorra_arabic:0 "ad-Darrah"
+ cn_andorra_arabic_adj:0 "Darri"
+ 
+ #Balaguer
+ cn_balaguer_arabic:0 "Balghi"
+ cn_balaguer_arabic_adj:0 "Balghi"
+ 
+ #Pallars
+ cn_pallars_arabic:0 "Balyarsh"
+ cn_pallars_arabic_adj:0 "Balyarshi"
+ 
+ #Cerdana
+ cn_cerdana_arabic:0 "Shartanyah"
+ cn_cerdana_arabic_adj:0 "Shartani"
+ 
+ #Llivia (Madinat al-Bab was the rebel Munuza's capital and where he made his last stand)
+ cn_llivia_arabic:0 "Madinat al-Bab"
+ cn_llivia_arabic_adj:0 "Babi"
+ 
+ #Tarragona
+ cn_tarragona_arabic:0 "Tarakunah"
+ cn_tarragona_arabic_adj:0 "Tarakuni"
+ 
+ #Navarra
+ cn_navarra_arabic:0 "Nabrah"
+ cn_navarra_arabic_adj:0 "Nabri"
+ 
+ #Tafalla
+ cn_tafalla_arabic:0 "at-Tafaylah"
+ cn_tafalla_arabic_adj:0 "Tafayli"
+ 
+ #Lizarra
+ cn_lizarra_arabic:0 "Qastiliyah"
+ cn_lizarra_arabic_adj:0 "Qastili"
+ 
+ #Logorno
+ cn_logrono_arabic:0 "Lukrawi"
+ cn_logrono_arabic_adj:0 "Lukrawi"
+ 
+ #Arnedo
+ cn_arnedo_arabic:0 "Arnit"
+ cn_arnedo_arabic_adj:0 "Arniti"
+ 
+ #Tarazona
+ cn_tarazona_arabic:0 "Tarasunah"
+ cn_tarazona_arabic_adj:0 "Tarasuni"
+ 
+ #Viscaya
+ cn_viscaya_arabic:0 "Bisqayah"
+ cn_viscaya_arabic_adj:0 "Biqayawi"
+ 
+ #Alava
+ cn_alava_arabic:0 "Albah"
+ cn_alava_arabic_adj:0 "Albi"
+ 
+ #Asturias
+ cn_asturias_arabic:0 "Ashturiyah"
+ cn_asturias_arabic_adj:0 "Ashturi"
+ 
+ #Avila
+ cn_avila_arabic:0 "Abilah"
+ cn_avila_arabic_adj:0 "Abili"
+ 
+ #Oviedo
+ cn_oviedo_arabic:0 "Abit"
+ cn_oviedo_arabic_adj:0 "Abiti"
+ 
+ #Tui
+ cn_tui_arabic:0 "Tuwiyah"
+ cn_tui_arabic_adj:0 "Tuwi"
+ 
+ #Astorga
+ cn_astorga_arabic:0 "Ashturqah"
+ cn_astorga_arabic_adj:0 "Ashturqi"
+ 
+ #Lugo
+ cn_lugo_arabic:0 "Aqsh"
+ cn_lugo_arabic_adj:0 "Aqshi"
+ 
+ #Braga
+ cn_braga_arabic:0 "Braqah"
+ cn_braga_arabic_adj:0 "Braqi"
+ 
+ #Leiria
+ cn_leiria_arabic:0 "Layriyah"
+ cn_leiria_arabic_adj:0 "Layri"
+ 
+ #Viseu
+ cn_viseu_arabic:0 "Bazu"
+ cn_viseu_arabic_adj:0 "Bazuwi"
+ 
+ #Lamego
+ cn_lamego_arabic:0 "Lamiqah"
+ cn_lamego_arabic_adj:0 "Lamiqi"
+ 
+ ## IBL Additions
+ #Alcocer
+ cn_alcocer_arabic:0 "al-Qusayr"
+ cn_alcocer_arabic_adj:0 "Qusayri"
+ 
+ #Aguilar de la Frontera
+ cn_aguilar_arabic:0 "Bulay"
+ cn_aguilar_arabic_adj:0 "Bulawi"
+ 
+ #Baeza
+ cn_baeza_arabic:0 "Bayyasah"
+ cn_baeza_arabic_adj:0 "Bayyasi"
+ 
+ #Priego
+ cn_priego_arabic:0 "Baghuh"
+ cn_priego_arabic_adj:0 "Baghuhi"
+ 
+ #Lucena
+ cn_lucena_arabic:0 "al-Yusanah"
+ cn_lucena_arabic_adj:0 "Yusani"
+ 
+ #Elvira
+ cn_elvira_arabic:0 "Ilbirah"
+ cn_elvira_arabic_adj:0 "Ilbiri"
+ 
+ #Velez
+ cn_velez_arabic:0 "Bilsh"
+ cn_velez_arabic_adj:0 "Bilshi"
+ 
+ #Vera
+ cn_vera_arabic:0 "Bayyrah"
+ cn_vera_arabic_adj:0 "Bayyri"
+ 
+ #Comares
+ cn_comares_arabic:0 "Qumarish"
+ cn_comares_arabic_adj:0 "Qumarishi"
+ 
+ 
+ 
+ 
+ 
+ 
+ ###Maghreb
+ #Tangiers
+ cn_tangiers_arabic:0 "Tanjah"
+ cn_tangiers_arabic_adj:0 "Tanji"
+ 
+ #Canary Islands
+ cn_canarias_arabic:0 "Juzur al-Khalidat"
+ cn_canarias_arabic_adj:0 "Khalidati"
+ 
+ #Tenerife
+ cn_tenerife_arabic:0 "Masfahan"
+ cn_tenerife_arabic_adj:0 "Masfahani"
+ 
+ #Gran Canaria
+ cn_grancanaria_arabic:0 "Laghus"
+ cn_grancanaria_arabic_adj:0 "Laghusi"
+ 
+ #######################
+
+

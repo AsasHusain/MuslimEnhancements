@@ -1,0 +1,286 @@
+﻿me_ismat_ad_din_khatun = {
+	name = "Ismat ad-Din Khatun"
+	female = yes
+	religion = "maturidi"
+	culture = "turkish"
+	father = me_muin_ad_din_unur
+	trait = beauty_good_2
+	trait = education_intrigue_3
+	1133.7.12 = {
+		birth = "1133.7.12"
+	}
+	1150.2.14 = {
+		add_spouse = 144031
+	}
+	1176.4.5 = {
+		add_spouse = 226000
+	}
+	1186.1.1 = {
+		death = "1186.1.1"
+	}
+}
+
+me_muin_ad_din_unur = {
+	name = "Muin ad-Din Unur"
+	religion = "maturidi"
+	culture = "turkish"
+	trait = diligent
+	trait = education_martial_4
+	1110.3.14 = {
+		birth = "1115.3.14"
+	}
+	1186.3.19 = {
+		death = "1186.3.19"
+	}
+}
+
+me_danishmend_001 = { # Father of Danishmend and the maternal grandfather of Sulayman ibn Qutalmish
+	name = "Ali_Taylu"
+	religion = "maturidi"
+	culture = "turkish"
+
+	996.1.1 = {
+		birth = yes
+	}
+	1045.1.1 = {
+		death = yes
+	}
+}
+
+## Caliphal Governors of Egypt
+me_egypt_turk_001 = {
+	name = "Yazid" # Yazid ibn Abdullah ibn Dinar, 867 governor of Egypt
+	dynasty = me_hulwanid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+	trait = education_martial_2
+
+	father = me_egypt_turk_002
+	825.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		effect = {
+			set_culture = culture:egyptian
+		}
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_002 = {
+	name = "Abdullah"
+	dynasty = me_hulwanid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+
+	father = me_egypt_turk_003
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_003 = {
+	name = "Dinar"
+	dynasty = me_hulwanid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+
+	770.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_004 = {
+	name = "Azjur" # Azjur at-Turki, also known as Arkhuz
+	dynasty = me_azjurid_dynasty
+	give_nickname = nick_me_al_turki
+	religion = "ashari"
+	culture = "turkish"
+
+	father = me_egypt_turk_005
+	835.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_005 = {
+	name = "Ulugh_Tarkhan"
+	religion = "ashari"
+	culture = "turkish"
+
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_006 = {
+	name = "Buhm" # Buhm ibn al-Husayn, Tulunid military commander
+	dynasty = me_buhmid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+	trait = education_martial_3
+	trait = brave
+	trait = diligent
+
+	father = me_egypt_turk_007
+	830.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		effect = {
+			add_trait = lifestyle_blademaster
+			add_trait_xp = {
+				trait = lifestyle_blademaster
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_007 = {
+	name = "al-Husayn"
+	religion = "ashari"
+	culture = "turkish"
+
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_008 = {
+	name = "Tukhshi" # Tukhshi ibn Balbard, Ibn Tulun's loyal deputy who governed Tarsus in 876
+	dynasty = me_balbardid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+	trait = education_stewardship_3 # Was skilled in civil administation
+	trait = diligent
+	trait = loyal
+	
+	father = me_egypt_turk_010
+	835.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		effect = {
+			add_trait = lifestyle_blademaster
+			add_trait_xp = {
+				trait = lifestyle_blademaster
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	886.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_009 = {
+	name = "Ibrahim" # Ibrahim ibn Balbard, Ibn Tulun's Sahib ash-Shurta
+	dynasty = me_balbardid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+
+	father = me_egypt_turk_010
+	840.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = me_egypt_turk_008
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_010 = {
+	name = "Balbard"
+	dynasty = me_balbardid_dynasty
+	religion = "ashari"
+	culture = "turkish"
+
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_011 = {
+	name = "Tayfur" # Tayfur at-Turki, Ibn Tulun's associate in Iraq who informed on the Abbasid court for him and delayed their efforts in replacing him
+	give_nickname = nick_me_al_turki
+	religion = "ashari"
+	culture = "turkish"
+	trait = education_intrigue_3
+
+	825.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		#employer = 163115 # Ahmad ibn Tulun
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_turk_012 = {
+	name = "Lu_Lu" # Lu'Lu', Tulunid commander who was given governorship over all of Syria, but would eventually defect to the side of al-Muwaffaq
+	religion = "ashari"
+	culture = "turkish"
+	trait = education_martial_3
+	trait = eunuch_1
+
+	837.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		#employer = 163115 # Ahmad ibn Tulun
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+
+me_egypt_fic_001 = {
+	name = "Nabhan"
+	religion = "ashari"
+	culture = "egyptian"
+
+	820.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}

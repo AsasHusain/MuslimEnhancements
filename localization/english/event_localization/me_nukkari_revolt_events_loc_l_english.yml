@@ -1,0 +1,103 @@
+﻿l_english:
+ #Early Encounter
+ me_nukkari_revolt.0001.t:0 "The Nukkari Preacher"
+ me_nukkari_revolt.0001.desc:0 "An old preacher, known as Abu Yazid, has been agitating the locals in [troubled_town.GetNameNoTier], attempting to convert them to [GetFaithByKey('nukkari').GetName] and organize them against our rule in the region. This is not the first city in which he has preached, but it is quickly becoming obvious that he is gaining a significant following in the city.\n\nOur representatives in [troubled_town.GetNameNoTier] are becoming restless; they wish for an official declaration to be able to arrest him. However, due to his strong influence on the [GetFaithByKey('nukkari').GetAdherentNamePlural] of the region, such an action could lead to some backlash."
+ me_nukkari_revolt.0001.a:0 "Bah! Leave the old fool to his devices, he is not worth the trouble"
+ me_nukkari_revolt.0001.a.tt:0 "You leave Abu Yazid to preach in the city"
+ me_nukkari_revolt.0001.b:0 "Arrest him, let us nip this in the bud before it becomes a larger problem"
+ me_nukkari_revolt.0001.b.tt:0 "You have the preacher arrested and placed in a dungeon"
+ 
+ me_nukkari_revolt.0001.tt.likely:0 "It seems likely you will see more of him in the future..."
+ me_nukkari_revolt.0001.tt.unlikely:0 "Hopefully you will not see any more of him in the future."
+ me_nukkari_revolt.0001.tt.nukkari_fail:0 "Abu Yazid fails to gain any more followers"
+ me_nukkari_revolt.0001.tt.nukkari_mid:0 "Abu Yazid gains a sizable following in the city"
+ me_nukkari_revolt.0001.tt.nukkari_success:0 "Abu Yazid gains a very strong following in the city"
+ me_nukkari_revolt.0001.tt.prison:0 "Abu Yazid has been imprisoned"
+ me_nukkari_revolt.0001.tt.prison_fail:0 "Abu Yazid fails to escape imprisonment"
+ me_nukkari_revolt.0001.tt.prison_flee:0 "Abu Yazid manages to escape imprisonment"
+ 
+ me_nukkari_discontent:0 "Nukkari Leader Arrested"
+ me_nukkari_discontent_desc:0 "One of the leaders of the [GetFaithByKey('nukkari').GetAdherentNamePlural] has been arrested, causing some unrest among his followers."
+ me_nukkari_rebellious:0 "Rebellious Nukkaris"
+ me_nukkari_rebellious_desc:0 "The [GetFaithByKey('nukkari').GetAdherentNamePlural] in this county have aggitated to rebel against their rulers."
+ me_nukkari_agitation_ended:0 "Nukkari Agitation Ended"
+ me_nukkari_agitation_ended_desc:0 "The Ruler of this county has managed to a rebellious group of [GetFaithByKey('nukkari').GetAdherentNamePlural]."
+ 
+ me_nukkari_revolt.0002.t:0 "A Botched Escape"
+ me_nukkari_revolt.0002.desc:0 "It would seem that the old [GetFaithByKey('nukkari').GetAdjective] preacher, Abu Yazid, had his followers attempt a foolhardy rescue mission to spring him out of jail. The rescue party, which consisted of forty men along with Abu Yazid’s sons and a blind old man, managed to find him and attempted to flee with him out of the city before being encircled by the guards.\n\nIn the ensuing skirmish, Abu Yazid along with most of his sons ended up dead, with the rest of the men either killed or maimed, and the blind man turned out to be the current leader of the [GetFaithByKey('nukkari').GetAdherentNamePlural]. With their leaders either captured or killed, the Nukkari community seems to have gone silent, ending any attempts at gathering more supporters to rebel against our rule."
+ me_nukkari_revolt.0002.a:0 "Well, that's the end of that then"
+ me_nukkari_revolt.0002.tt:0 "It seems you managed to end a revolt, before it even began..."
+ 
+ me_nukkari_revolt.0003.t:0 "Run for the Mountains"
+ me_nukkari_revolt.0003.desc:0 "Abu Yazid, the man arrested two weeks ago for preaching Nukkarism and agitating the locals, has been sprung out of confinement by his sons along with fourty of his followers. This event has caused quite the stir in the [troubled_town.GetNameNoTier], as the people view the escape of this dangerous rebel as incompetence on our part.\n\nAs for Abu Yazid, he has fled with the rest of his followers into the Aurés Mountains, hiding among the local tribes where none of our men can find them. It would seem that he has held a grudge for our imprisonment of him, and is now spreading word of overthrowing us and taking the region for the [GetFaithByKey('nukkari').GetAdherentNamePlural]."
+ me_nukkari_revolt.0003.a:0 "We'll see about that, you accursed old fool!"
+ me_nukkari_revolt.0003.tt:0 "It would seem a revolt is underway..."
+ 
+ me_nukkari_revolt.0004.t:0 "[GetFaithByKey('nukkari').GetAdjective] preachers convert [nr_converted_county.GetNameNoTier]"
+ 
+ me_nukkari_revolt.0005.t:0 "The Spreading Heresey"
+ me_nukkari_revolt.0005.desc:0 "A heresy has been spreading through the land as the tribes around us have all begun to abandon [ROOT.Faith.GetName] for the feverous [GetFaithByKey('nukkari').GetAdjective] sect which has drawn the interest and devotion of elders and young men alike, sperading throughout Northern Africa like wildfire.\n\nNow, with [GetFaithByKey('nukkari').GetName] knocking on our doorstep and most of [nr_capital.GetNameNoTooltip]’s people having accepted this new faith, many of the elders have called upon me to convert alongside them and leave what they refer to as 'the weakening religion of [ROOT.Faith.GetName]'."
+ me_nukkari_revolt.0005.a:0 "Perhaps... there is truth in [GetFaithByKey('nukkari').GetName]."
+ me_nukkari_revolt.0005.b:0 "I'm not about to convert to some heresey!"
+ 
+ 
+ #Nukkari Revolt Setup
+ me_nukkari_revolt.0101.t:0 "The Man on the Donkey"
+ me_nukkari_revolt.0101.desc:0 "Upon the donkey sits an old man in rags, holding nothing but a worn wooden staff in his hand. Behind him stand hundreds of tribal warriors with eyes full of zeal; their spears gleam white in the desert sun, yearning for battle, yearning for holy jihad.\n\nThis is the portrait painted by the [GetFaithByKey('nukkari').GetAdjective] preachers who have spread themselves all across North Africa, talking of [nukkari_leader.GetShortUIName|U]'s humble figure as if he were one of the prophets of old in hopes of gathering support for his cause in taking the regions [GetTitleByKey('d_tunis').GetNameNoTier] and [GetTitleByKey('d_kairouan').GetNameNoTier] with the promise of the opportunity to fight for God’s will."
+ me_nukkari_revolt.0101.a:0 "[nukkari_leader.GetShortUIName|U] will have our support!"
+ me_nukkari_revolt.0101.a.tt:0 "Your support will strengthen [nukkari_leader.GetShortUIName|U]'s forces, granting him more soldiers when the revolt starts."
+ me_nukkari_revolt.0101.b.non_muslim:0 "Damned Infidels..."
+ me_nukkari_revolt.0101.b.muslim:0 "Damned Heretics..."
+ me_nukkari_revolt.0101.b.nukkari:0 "May Allah grant them victory!"
+ me_nukkari_revolt.0101.b.tt:0 "In almost a year's time, [nukkari_leader.GetShortUIName|U] will attack the rulers of [GetTitleByKey('d_tunis').GetNameNoTier] and [GetTitleByKey('d_kairouan').GetNameNoTier] in an attempt to conquer the region."
+ 
+ me_supported_nukkari_revolt_modifier:0 "Supported the Revolt"
+ me_supported_nukkari_revolt_modifier_desc:0 "This character has aided his fellow brothers in faith in their attempt to take over [GetTitleByKey('d_tunis').GetNameNoTier] and [GetTitleByKey('d_kairouan').GetNameNoTier]."
+ 
+ me_nukkari_revolt.0102.t:0 "Departure for War"
+ me_nukkari_revolt.0102.desc:0 "The court is in an uproar; the [GetFaithByKey('nukkari').GetAdjective] preachers, a mere nuisance that would usually be quickly swatted away, have somehow wormed their influence into our court and convinced [nr_heretic_courtier.GetShortUIName|U] to join their so-called holy war.\n\n[nr_heretic_courtier.GetShortUIName|U], bewitched by their promises of holy glory, appeared in front of the whole court announcing that he shall be leaving for Tozeur to join [nukkari_leader.GetShortUIName|U]’s war and abandoning his old [old_faith.GetAdjective] faith for [GetFaithByKey('nukkari').GetName]. He attempted to convince many other members of the court to join him as well before he was taken out of the court by the guards, where he now awaits my judgment"
+ me_nukkari_revolt.0102.a:0 "Let him go, I couldn't care less."
+ me_nukkari_revolt.0102.a.tt:0 "[nr_heretic_courtier.GetFirstNameNoTooltip] leaves to aid the efforts of the Nukkaris"
+ me_nukkari_revolt.0102.b:0 "Try to convince him to abandon this foolishness."
+ me_nukkari_revolt.0102.b.a.desc:0 "[nr_heretic_courtier.GetFirstNameNoTooltip] is left unconvinced"
+ me_nukkari_revolt.0102.b.b.desc:0 "You successfully convince [nr_heretic_courtier.GetFirstNameNoTooltip]"
+ me_nukkari_revolt.0102.c:0 "[nr_scoped_chaplain.GetCouncilTitle] [nr_scoped_chaplain.GetFirstNameNoTooltip] may be able to help him."
+ me_nukkari_revolt.0102.c.no_cp:0 "Our [nr_scoped_chaplain.GetCouncilTitle] may be able to help him."
+ me_nukkari_revolt.0102.c.desc:0 "You call upon [nr_scoped_chaplain.GetCouncilTitleFirstNameNoTooltip] to to resolve the situation."
+ me_nukkari_revolt.0102.c.a.desc:0 "[nr_scoped_chaplain.GetCouncilTitleFirstNameNoTooltip] fails to convince [nr_heretic_courtier.GetFirstNameNoTooltip]."
+ me_nukkari_revolt.0102.c.b.desc:0 "[nr_heretic_courtier.GetFirstNameNoTooltip] is convinced by [nr_scoped_chaplain.GetCouncilTitleFirstNameNoTooltip] to remain in your court and return to [old_faith.GetAdjective]."
+ me_nukkari_revolt.0102.notif.b.t:0 "[nr_heretic_courtier.GetFirstNameNoTooltip] is convinced to remain [old_faith.GetAdjective]."
+ me_nukkari_revolt.0102.d:0 "He's not going anywhere. Guards! Take him to the dungeon!"
+ me_nukkari_revolt.0102.d.tt:0 "You imprison [nr_heretic_courtier.GetFirstNameNoTooltip] and stop him from leaving the city."
+ 
+ me_nukkari_tried_to_stop_me_opinion:0 "Tried to stop me from converting"
+ 
+ 
+ #Revolt Starts
+ me_nukkari_revolt.0201.t:0 "The Nukkari Revolt"
+ me_nukkari_revolt.0201.desc:0 "From the shadowed heights of the mountains, they descended with a swiftness that no one could have anticipated. The city, nestled in its fortified defenses, was caught off guard as hundreds of fierce tribal warriors emerged from the rugged terrain, quickly overwhelming the nearby fortifications.\n\nThe [GetFaithByKey('nukkari').GetAdjective] conquest has begun, and their eyes burning with religious zeal have been set upon [nr_begin_county.GetNameNoTooltip] as the first of the many that will fall."
+ me_nukkari_revolt.0201.a:0 "These drylands shall have their thirst quenched with blood."
+ 
+ me_nukkari_revolt.0202.t:0 "Rise of the Nukkaris"
+ me_nukkari_revolt.0202.desc.original.imam:0 "Abandoning his rags for soft silks and his donkey for a majestic white stallion, Abu Yazid has completely disowned the image of the humble messianic figure that he had originally fashioned for himself and declared himself Imam of the Nukkaris, vowing to spread the faith far and wide.\n\nAlthough disheartened after witnessing their once humble leader indulge himself in such a manner, his followers are still confident that with their newly won victory, Abu Yazid shall lead them into further glory."
+ me_nukkari_revolt.0202.desc.original.not_imam:0 "Abandoning his rags for soft silks and his donkey for a majestic white stallion, Abu Yazid has completely disowned the image of the humble messianic figure that he had originally fashioned for himself.\n\nAlthough disheartened after witnessing their once humble leader indulge himself in such a manner, his followers are still confident that with their newly won victory, Abu Yazid shall lead them into further glory and may even one day claim the title of Imam of the Nukkaris."
+ me_nukkari_revolt.0202.desc.leader_dead:0 "Today was a great day for the Nukkari Rebels, for they have claimed the first victory in the name of their faith. However, melancholy flows within their ranks, as the founder of their movement, Abu Yazid, lays dead in the ground having never witnessed the fruits of his labour.\n\nMany are still apprehensive and unsatisfied with their new leader, and only time will tell whether he will be able to fill the space left behind by his predecessor."
+ me_nukkari_revolt.0202.a:0 "Huh, intresting."
+ me_nukkari_revolt.0202.b:0 "@warning_icon! I wonder what they will do next..."
+ 
+ me_nukkari_revolt_war:0 "Nukkari Revolt"
+ me_nukkari_revolt_name:0 "Nukkari Revolt"
+ me_nukkari_revolt_army_title:0 "Nukkari Revolutionaries"
+ me_nukkari_revolt_victory_desc:1 "[attacker.GetShortUIName|U] gains any [title|E] within the [duchies|E] of [GetTitleByKey('d_tunis').GetDefinitiveName] and [GetTitleByKey('d_kairouan').GetDefinitiveName]."
+ fervor_gain_nukkari_imamate_established:0 "Nukkari Imamate established"
+ me_nukkari_convert_counties_custom:1 "Every [GetFaithByKey('ibadi').GetAdjective] and [GetFaithByKey('wahbiya').GetAdjective] [county|e] in North Africa"
+ me_nukkari_deconvert_counties_custom:1 "Every [GetFaithByKey('nukkari').GetAdjective] [county|e] in North Africa"
+ nukkaris_sieged_county.t:0 "[county.GetName] Razed by the Nukkari Army"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

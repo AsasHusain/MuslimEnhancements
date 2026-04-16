@@ -1,0 +1,58 @@
+﻿# Books
+	book_subject_al_ghazali_revival = { # The Revival of Religious Sciences (Ihya' Ulum ad-Din)
+		group = book_subject
+		trigger = {
+			trigger_if = { # If the subject has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_subject }
+				scope:owner.var:book_artifact_subject = flag:al_ghazali_revival
+			}
+		}
+		weight = 1
+	}
+
+	book_topic_al_ghazali_revival = {
+		group = book_topic
+		trigger = {
+			has_artifact_feature = book_subject_al_ghazali_revival
+			trigger_if = { # If the subject has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:al_ghazali_revival
+			}
+		}
+		weight = 1
+	}
+
+	book_title_al_ghazali_revival = {
+		group = book_title
+		trigger = { has_artifact_feature = book_subject_al_ghazali_revival }
+		weight = 1
+	}
+
+	book_subject_al_ghazali_deliverance = { # Deliverance From Error (al-Munqidh min aḍ-Ḍalal)
+		group = book_subject
+		trigger = {
+			trigger_if = { # If the subject has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_subject }
+				scope:owner.var:book_artifact_subject = flag:al_ghazali_deliverance
+			}
+		}
+		weight = 1
+	}
+
+	book_topic_al_ghazali_deliverance = {
+		group = book_topic
+		trigger = {
+			has_artifact_feature = book_subject_al_ghazali_deliverance
+			trigger_if = { # If the subject has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:al_ghazali_deliverance
+			}
+		}
+		weight = 1
+	}
+
+	book_title_al_ghazali_deliverance = {
+		group = book_title
+		trigger = { has_artifact_feature = book_subject_al_ghazali_deliverance }
+		weight = 1
+	}

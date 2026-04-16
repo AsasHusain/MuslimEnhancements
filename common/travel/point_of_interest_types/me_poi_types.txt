@@ -1,0 +1,84 @@
+﻿ME_poi_battles_historical = {
+	build_province_list = {
+		# Note, please try to keep these in chronological order
+		if = { # Battle of al-Qadisiyya
+			limit = { game_start_date > 636.11.19 }
+			province:5994 = { add_to_list = provinces }
+		}
+		if = { # Battle of Nahavand
+			limit = { game_start_date > 642.1.1 }
+			province:4331 = { add_to_list = provinces }
+		}
+		if = { # Battle of Guadalete
+			limit = { game_start_date > 711.1.1 }
+			province:1842 = { add_to_list = provinces }
+		}
+#		if = { # Seige of Amorium
+#			limit = { game_start_date > 838.8.1 }
+#			province:5658 = { add_to_list = provinces }
+#		}
+	}
+
+	on_visit = {
+		send_interface_toast = {
+			title = ME_travel_point_historical_name_visit_message
+			left_icon = root
+
+			if = {
+				limit = {
+					OR = {
+						has_variable = battle_poi_trait_gained
+						number_of_commander_traits > 1
+					}
+				}
+				add_poi_martial_experience_effect = yes
+			}
+			else = {
+				poi_lifestyle_experience_effect = {
+					LIFESTYLE = martial
+					VALUE = travel_minor_lifestyle_xp
+				}
+			}
+
+			if = {
+				limit = {
+					NOR = {
+						has_variable = battle_poi_trait_gained
+						number_of_commander_traits > 1
+					}
+				}
+				random_list = {
+					80 = {
+						add_poi_martial_experience_effect = yes
+					}
+					20 = {
+						scope:province = {
+							switch = {
+								trigger = this
+								# al-Qadisiyya
+								province:5994 = { battle_poi_trait_effect = { TRAIT = desert_warrior } }
+								# Nahavand
+								province:4331 = { battle_poi_trait_effect = { TRAIT = organizer } }
+								# Guadalete
+								province:1842 = { battle_poi_trait_effect = { TRAIT = holy_warrior } }
+								# Amorium
+								province:5658 = { battle_poi_trait_effect = { TRAIT = military_engineer } }
+							}
+						}
+						set_variable = battle_poi_trait_gained
+					}
+				}
+			}
+
+			traveler_danger_xp_effect = {
+				MIN = 1
+				MAX = 3
+			}
+
+			# Prestige for Wanderers
+			wanderer_lifestyle_destination_effect = yes
+		}
+
+		visiting_poi_effect = yes
+	}
+}

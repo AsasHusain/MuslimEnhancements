@@ -1,0 +1,377 @@
+﻿#######################################################################################################################
+
+namespace = me_alid_egypt_revolt
+
+
+### Ibn as-Sufi begins his revolt
+me_alid_egypt_revolt.0001 = {
+	title = me_alid_egypt_revolt.0001.t
+	desc = {
+		triggered_desc = {
+			trigger = { character:me_persian_007 = { is_ai = yes } }
+			desc = me_alid_egypt_revolt.0001.desc.ibn_yazdad_dead
+		}
+		triggered_desc = {
+			trigger = { character:me_persian_007 = { is_ai = no } }
+			desc = me_alid_egypt_revolt.0001.desc.ibn_yazdad_alive
+		}
+	}
+	theme = realm
+	override_background = { reference = terrain }
+	
+	right_portrait = {
+		character = scope:ibn_as_sufi
+		animation = assassin
+	}
+	
+	left_portrait = {
+		character = scope:ibn_yazdad
+		animation = fear
+	}
+
+	trigger = {
+		NOT = { exists = global_var:ibn_as_sufi_revolt_ended }
+	}
+
+	immediate = {
+		set_global_variable = { name = ibn_as_sufi_revolt_ended value = yes }
+		if = {
+			limit = { character:me_hashimid_046 = { is_alive = yes } }
+			character:me_hashimid_046 = { save_scope_as = ibn_as_sufi }
+		}
+		else_if = {
+			limit = { character:me_hashimid_046 = { is_alive = no } }
+			character:RICE_upper_egypt_013 = { save_scope_as = ibn_as_sufi }
+			create_dynamic_title = {
+				tier = duchy
+				name = d_laamp_me_ibn_as_sufi_867
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			scope:new_title = {
+				set_capital_county = title:c_qus
+				set_landless_title = yes
+				set_destroy_on_gain_same_tier = yes
+				set_no_automatic_claims = yes
+				set_can_be_named_after_dynasty = no
+				change_title_holder = {
+					holder = scope:ibn_as_sufi
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+			scope:new_title = {
+				generate_coa = yes
+				set_variable = {
+					name = temporary_title
+					value = yes
+				}
+			}
+		}
+		if = {
+			limit = { character:me_persian_007 = { is_ai = yes } }
+			character:me_persian_007 = {
+				save_scope_as = ibn_yazdad
+				death = {
+					death_reason = death_me_mutilated_and_crucified
+					killer = scope:ibn_as_sufi
+				}
+			}
+		}
+		scope:ibn_as_sufi = {
+			start_war = {
+				cb = me_alid_egypt_revolt_cb
+				target = title:k_egypt.holder
+				target_title = title:d_al-said
+			}
+			spawn_army = {
+				levies = 700
+				men_at_arms = {
+					type = mubarizun
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = pikemen_unit
+					stacks = 1
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_footmen
+					stacks = 2
+				}
+				location = capital_province
+				inheritable = yes
+				name = me_alid_egyptian_rebel_troops
+			}
+		}
+	}
+
+	option = {
+		name = me_alid_egypt_revolt.0001.a
+	}
+} 
+
+### Bugha al-Akbar appears
+me_alid_egypt_revolt.0002 = {
+	title = me_alid_egypt_revolt.0002.t
+	desc = me_alid_egypt_revolt.0002.desc
+	theme = realm
+	override_background = { reference = terrain }
+	
+	right_portrait = {
+		character = scope:bugha_al_akbar
+		animation = personality_zealous
+	}
+
+	trigger = {
+		NOT = { exists = global_var:bugha_al_akbar_revolt_ended }
+	}
+
+	immediate = {
+		set_global_variable = { name = bugha_al_akbar_revolt_ended value = yes }
+		title:b_qus = {
+			save_scope_as = current_location
+			create_character = {
+				age = 40
+				name = Ahmad
+				dynasty_house = character:me_hashimid_059.house
+				gender_female_chance = 0
+				location = scope:current_location.title_province
+				faith = faith:zayidi
+				culture = culture:bedouin
+				father = character:me_hashimid_059
+				trait = education_diplomacy_3
+				trait = sayyid
+				save_scope_as = bugha_al_akbar
+			}
+		}
+		hidden_effect = {
+			scope:bugha_al_akbar = { give_nickname = nick_me_bugha_al_akbar }
+		}
+	}
+
+	option = {
+		name = me_alid_egypt_revolt.0002.a
+		random = {
+			chance = 40
+			create_dynamic_title = {
+				tier = duchy
+				name = me_bugha_al_akbar_revolt_name
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			scope:new_title = {
+				set_capital_county = title:c_qus
+				set_landless_title = yes
+				set_destroy_on_gain_same_tier = yes
+				set_no_automatic_claims = yes
+				set_can_be_named_after_dynasty = no
+				change_title_holder = {
+					holder = scope:bugha_al_akbar
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+			scope:new_title = {
+				generate_coa = yes
+				set_variable = {
+					name = temporary_title
+					value = yes
+				}
+			}
+			scope:bugha_al_akbar = {
+				start_war = {
+					cb = me_alid_egypt_revolt_cb
+					target = title:k_egypt.holder
+					target_title = title:d_al-said
+				}
+				spawn_army = {
+					levies = 500
+					men_at_arms = {
+						type = mubarizun
+						stacks = 1
+					}
+					men_at_arms = {
+						type = light_horsemen
+						stacks = 1
+					}
+					men_at_arms = {
+						type = pikemen_unit
+						stacks = 1
+					}
+					men_at_arms = {
+						type = bowmen
+						stacks = 1
+					}
+					men_at_arms = {
+						type = light_footmen
+						stacks = 1
+					}
+					location = scope:current_location.title_province
+					inheritable = yes
+					name = me_alid_egyptian_rebel_troops
+				}
+			}
+		}
+	}
+	option = {
+		name = me_alid_egypt_revolt.0002.b
+		every_realm_county = {
+			limit = { de_jure_liege = title:d_al-said }
+			add_county_modifier = {
+				modifier = me_killed_alid_modifier 
+				years = 10
+			}
+		}
+		scope:bugha_al_akbar = {
+			death = { death_reason = death_disappearance }
+		}
+	}
+}
+
+### Bugha al-Asghar begins his revolt
+me_alid_egypt_revolt.0003 = {
+	title = me_alid_egypt_revolt.0003.t
+	desc = {
+		desc = me_alid_egypt_revolt.0003.desc.main
+		first_valid = {
+			# Is this our first move?
+			triggered_desc = {
+				trigger = { NOT = { completely_controls = title:c_alexandria } }
+				desc = me_alid_egypt_revolt.0003.desc.other
+			}
+		}
+	}
+	theme = realm
+	override_background = { reference = terrain }
+	
+	right_portrait = {
+		character = scope:bugha_al_asghar
+		animation = personality_bold
+	}
+
+	trigger = {
+		NOT = { exists = global_var:bugha_al_asghar_revolt_ended }
+	}
+
+	immediate = {
+		set_global_variable = { name = bugha_al_asghar_revolt_ended value = yes }
+		title:b_kanais_al-hadid = {
+			save_scope_as = current_location
+			create_character = {
+				age = 30
+				name = Ahmad
+				dynasty_house = character:me_hashimid_059.house
+				gender_female_chance = 0
+				location = scope:current_location.title_province
+				faith = faith:zayidi
+				culture = culture:bedouin
+				father = character:me_hashimid_061
+				trait = sayyid
+				save_scope_as = bugha_al_asghar
+			}
+		}
+		hidden_effect = {
+			scope:bugha_al_asghar = { give_nickname = nick_me_bugha_al_asghar }
+			create_dynamic_title = {
+				tier = duchy
+				name = me_bugha_al_asghar_revolt_name
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			scope:new_title = {
+				set_capital_county = title:c_sullum
+				set_landless_title = yes
+				set_destroy_on_gain_same_tier = yes
+				set_no_automatic_claims = yes
+				set_can_be_named_after_dynasty = no
+				change_title_holder = {
+					holder = scope:bugha_al_asghar
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+			scope:new_title = {
+				generate_coa = yes
+				set_variable = {
+					name = temporary_title
+					value = yes
+				}
+			}
+		}
+		scope:bugha_al_asghar = {
+			start_war = {
+				cb = me_alid_egypt_revolt_cb
+				target = title:c_alexandria.holder.top_liege
+				target_title = title:d_alexandria
+			}
+			spawn_army = {
+				levies = 500
+				men_at_arms = {
+					type = mubarizun
+					stacks = 1
+				}
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = pikemen_unit
+					stacks = 1
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = light_footmen
+					stacks = 1
+				}
+				location = scope:current_location.title_province
+				inheritable = yes
+				name = me_alid_egyptian_rebel_troops
+			}
+		}
+	}
+
+	option = {
+		name = me_alid_egypt_revolt.0003.a
+		if  = {
+			limit = { NOT = { completely_controls = title:c_alexandria } }
+			scope:bugha_al_asghar = {
+				every_character_war = {
+					limit = { using_cb = me_alid_egypt_revolt_cb }
+					add_to_list = war_to_join
+				}
+			}
+			every_in_list = {
+				list = war_to_join
+				hidden_effect = {
+					set_called_to = prev
+				}
+				add_defender = prev
+			}
+		}
+	}
+	option = {
+		name = me_alid_egypt_revolt.0003.b
+		trigger = { NOT = { completely_controls = title:c_alexandria } }
+	}
+}
+

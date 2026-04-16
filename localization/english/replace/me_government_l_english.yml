@@ -1,0 +1,76 @@
+﻿l_english:
+
+ kurultai_rights: "[GetPlayer.Custom('ME_GetNomadicCouncilName')] Rights"
+ 
+ kurultai_member: "[GetPlayer.Custom('ME_GetNomadicCouncilName')] Member"
+ kurultai_member_possessive: "[GetPlayer.Custom('ME_GetNomadicCouncilName')] Member's"
+ 
+ task_kurultai_default_modifier: "$task_kurultai_default_1$ #weak ([GetPlayer.Custom('ME_GetNomadicCouncilName')] Councillor Task)#!"
+ task_kurultai_fertility_modifier: "$task_kurultai_fertility_1$ #weak ([GetPlayer.Custom('ME_GetNomadicCouncilName')] Councillor Task)#!"
+ task_kurultai_court_astrologer_modifier: "$task_kurultai_court_astrologer_1$ #weak ([GetPlayer.Custom('ME_GetNomadicCouncilName')] Councillor Task)#!"
+ task_kurultai_exploit_modifier: "$task_kurultai_exploit_area_1$ #weak ([GetPlayer.Custom('ME_GetNomadicCouncilName')] Councillor Task)#!"
+ task_kurultai_raider_modifier: "$task_kurultai_raider_1$ #weak ([GetPlayer.Custom('ME_GetNomadicCouncilName')] Councillor Task)#!"
+ 
+ become_greatest_of_khans_decision_confirm:0 "Call the Great [GetPlayer.Custom('ME_GetNomadicCouncilName')]"
+ 
+ single_heir_succession_kurultai_law: "[GetPlayer.Custom('ME_GetNomadicCouncilNameFull')]"
+ single_heir_succession_kurultai_law_effects: "Under the Nomadic Council or [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession the [council|E] plays an important role in decision who will be next in line. If there are disagreeing voices amoung the [kurultai|E], it will lead to a Chaotic Succession.\n\nUnder a Chaotic Succession the line is unclear, and the [heir|E] will experience some negative effects at the start of their rule.\n\nIf all the [GetPlayer.Custom('ME_GetNomadicCouncilNameMembers')] fall in line, the realm will experience a Stable Succession where the [heir|E] will take the throne with the support of all their most powerful supporters."
+ 
+ had_chaotic_kurultai_succession: "Chaotic [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_chaotic_kurultai_succession_desc: "I experienced a chaotic [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_chaotic_kurultai_succession_desc_second_perspective: "you experienced a chaotic [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_chaotic_kurultai_succession_desc_third_perspective: "[owner.GetName] experienced a chaotic [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_stable_kurultai_succession: "Stable [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_stable_kurultai_succession_desc: "I experienced a stable [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_stable_kurultai_succession_desc_second_perspective: "you experienced a stable [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ had_stable_kurultai_succession_desc_third_perspective: "[owner.GetName] experienced a stable [GetPlayer.Custom('ME_GetNomadicCouncilName')] succession"
+ 
+ MY_REALM_WINDOW_KURULTAI_APPROVAL: "[GetPlayer.Custom('ME_GetNomadicCouncilName')] Succession Approval"
+ MY_REALM_WINDOW_KURULTAI_ELECTORS: "[GetPlayer.Custom('ME_GetNomadicCouncilNameMembers')] and other people who have impact on this succession"
+ 
+ kurultai_yurt_01_domicile_building: "Plush [GetPlayer.Custom('ME_GetNomadicCouncilName')] Seats"
+ kurultai_main_yurt_01_domicile_building: "Velvet [GetPlayer.Custom('ME_GetNomadicCouncilName')] Seats"
+ dynasty_court_yurt_01_domicile_building: "[GetPlayer.Custom('ME_GetNomadicCouncilNameMember')] by Blood"
+ 
+ action_reactive_advice_kurultai: "Advice: [GetPlayer.Custom('ME_GetNomadicCouncilName')] Council"
+ action_reactive_advice_kurultai_desc: "Open this to learn more about the Nomad Council, [GetPlayer.Custom('ME_GetNomadicCouncilNameFull')]."
+ 
+ ra_kurultai_1: "Nomadic Council"
+ ra_kurultai_1_desc: "You have a [kurultai|E] as a ruler in the [the_great_steppe|E]. \n\nYou migtht already be familiar with having a Council, but when playing as a [nomad|E] you will have a new type of administrators that will focus more on supporting your [county_fertility|E] growth or [herd|E]."
+ ra_kurultai_2: "Nomadic Council"
+ ra_kurultai_2_desc: "You can have 4 [kurultai|E] members on your [council|E], together with your [spouse|E] and a [spymaster|E]. The Nomadic Council can have various tasks attached to various [skills|E], for example Manage Fertility will be one based on your nomadic councillor's [stewardship|E]. If you have a nomadic councillor assigned you can click the button in the bottom left corner to swap the task out."
+ ra_kurultai_3: "Nomadic Council"
+ ra_kurultai_3_desc: "The [kurultai|E] will work on their assigned tasks, but their biggest impact will be on the [succession|E] of your [realm|E].\n\nEach character in the [the_great_steppe|E] can be [obedient|E] to one [ruler|E], and the obedience matters a lot specifically for your nomadic councillor members and their say in who your [heir|E] will be."
+ ra_kurultai_4: "Nomadic Council"
+ ra_kurultai_5: "Nomadic Council"
+ ra_kurultai_5_desc: "In the bar highlighted you will get an indication of if your [kurultai|E] and oldest children will approve of the [succession|E] or oppose it.\n\nTo get to the point of having a stable succession you need to keep the nomadic council [obedient|E] to you, but you will also need to have the [steppe_seasons|E] play in your favor. If the current season affects your lands in a bad way, like the Zud would, your people will think You are being punished and will question your rule and decision of who will succeed you. \n\nTo stay in control of the Succession, keep your people Obedient and [migrate|E] to lands that are in your favor."
+
+ mpo_nomads_season_events.0015.desc: "Everywhere I look, I see my subjects scrape the bottom of empty bowls, trying to salvage every morsel of our dwindling supplies. \n\nThe silence breaks with a loud clatter. [kurultai_2.GetTitledFirstName]'s bowl of [Glossary( 'kumis', 'KUMIS_GLOSS')] lies overturned on the ground, its contents seeping into the dry earth. [kurultai_1.GetTitledFirstName] stands above the scene laughing, and says, "I did not see you there." \n\n[kurultai_2.GetTitledFirstName] flies to [kurultai_2.GetHerHis] feet, shoulders tense. It appears as if my two [GetPlayer.Custom('ME_GetNomadicCouncilName')] members will come to blows."
+ 
+ chaotic_kurultai_intro_1: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('dead_parent'))] [dead_parent.GetFirstNameNicknamed] [dead_parent.GetDeathReasonHideKiller]. The dawn of my rule breaks. The disunited voices of the [GetPlayer.Custom('ME_GetNomadicCouncilName')] echo over the [ROOT.Char.GetCapitalLocation.Custom('TerrainTypeProvincePrefix')] [ROOT.Char.GetCapitalLocation.Custom('TerrainTypeProvince')].\n\n"
+ chaotic_kurultai_intro_2: "The dawn of my rule breaks. The disunited voices of the [GetPlayer.Custom('ME_GetNomadicCouncilName')] echo across the [ROOT.Char.GetCapitalLocation.Custom('TerrainTypeProvincePrefix')] [ROOT.Char.GetCapitalLocation.Custom('TerrainTypeProvince')]\n\n"
+ rival_kurultai_succession: "[TARGET_CHARACTER.GetShortUIName|U] [CharWereWas(TARGET_CHARACTER)] not unanimously chosen by the [GetPlayer.Custom('ME_GetNomadicCouncilName')] during succession, drawing the ire of [CHARACTER.GetShortUIName|U]."
+ rival_kurultai_succession_corresponding: "[CHARACTER.GetShortUIName|U] [CharWereWas(CHARACTER)] not unanimously chosen by the [GetPlayer.Custom('ME_GetNomadicCouncilName')] during succession, drawing the ire of [TARGET_CHARACTER.GetShortUIName|U]."
+ mpo_chaotic_kurultai_succession.0002.desc_addition: "With the backing of a traitorous member of the [GetPlayer.Custom('ME_GetNomadicCouncilName')], [backing_kurultai.GetFirstNameNicknamed]."
+ mpo_chaotic_kurultai_succession.0003.desc_addition: "[backing_kurultai.GetFirstNameNicknamed], a rebellious member of the [GetPlayer.Custom('ME_GetNomadicCouncilName')], is complicit in this betrayal."
+ mpo_chaotic_kurultai_succession.0004.desc_addition: "It is clear that they are spurred on by [backing_kurultai.GetFirstNameNicknamed], a [backing_kurultai.Custom('InsultAdjective')] member of the [GetPlayer.Custom('ME_GetNomadicCouncilName')]."
+ mpo_chaotic_kurultai_succession.1006.desc_addition: "My riders report seeing [backing_kurultai.GetTitledFirstNameNicknamed], a disobedient member of [ruler_rustled.GetFirstNamePossessiveNoTooltip] [GetPlayer.Custom('ME_GetNomadicCouncilName')], lurking in the outskirts. This is likely [backing_kurultai.GetHerHis] doing."
+ mpo_chaotic_kurultai_succession.1007.desc_addition: "They are likely spurred on by [backing_kurultai.GetTitledFirstNameNicknamed], a disobedient voice in [ruler_rustled.GetFirstNamePossessiveNoTooltip] [GetPlayer.Custom('ME_GetNomadicCouncilName')]."
+ mpo_chaotic_kurultai_succession.1008.desc_addition: "The fact that they are here is likely because of [backing_kurultai.GetTitledFirstNameNicknamed], a disobedient member of [ruler_rustled.GetFirstNamePossessiveNoTooltip] [GetPlayer.Custom('ME_GetNomadicCouncilName')]."
+ mpo_chaotic_kurultai_succession.0009.desc: "My siblings are furious at the [GetPlayer.Custom('ME_GetNomadicCouncilName')]’s verdict, looting the coffers for their share."
+ mpo_chaotic_kurultai_succession.0009.desc_addition: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('sibling_rival_1'))] [sibling_rival_1.GetFirstNameNicknamed] is furious at the [GetPlayer.Custom('ME_GetNomadicCouncilName')]’s verdict, looting the coffers for [sibling_rival_1.GetHerHis] share.\n\n[sibling_rival_1.GetSheHe|U] will pay for this betrayal."
+ mpo_chaotic_kurultai_succession.0012.desc: "It is decided. I will only inherit half of the realm. The rest will go to my [sibling_rival_1.Custom('InsultAdjective')] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('sibling_rival_1'))] [sibling_rival_1.GetFirstNameNicknamed], who has already moved to [sibling_rival_1.GetCapitalLocation.GetName]!\n\nOver half of the [GetPlayer.Custom('ME_GetNomadicCouncilName')] were in favor of this. They are misguided fools."
+ mpo_chaotic_kurultai_succession.0012.a: "The [GetPlayer.Custom('ME_GetNomadicCouncilName')] will pay for this!"
+ mpo_chaotic_kurultai_succession.0014.desc_alt: "But the voices are weak, impotent. There can be no decision, there can be no right, no law.\n\nThis is the end of [ROOT.Char.GetPrimaryTitle.GetName]. If only my predecessor had chosen enough members to the [GetPlayer.Custom('ME_GetNomadicCouncilName')]..."
+ 
+ central_asia.0002.desc:0 "I was summoned by my liege to a Great [GetPlayer.Custom('ME_GetNomadicCouncilName')], a gathering of every clan leader and vassal in the realm. We all knew why, and there was never any doubt in the night-long deliberations that were held in the smoky yurt. [genghis_khan.GetFirstName] [genghis_khan.GetDynastyName] is the [genghis_khan.GetLadyLord] of the universe — Genghis Khan.\n\nThere was no coronation ceremony, for who could judge [genghis_khan.GetHerHim]? Instead, [genghis_khan.GetSheHe] delivered a declaration before [genghis_khan.GetHerHis] gathered armies.\n\n"Today we go forth and conquer all that lies underneath the Great Sky!""
+ 
+ mpo_greatest_of_khans.0001.t: "My [GetPlayer.Custom('ME_GetNomadicCouncilName')] Speaks — For All the World!"
+ mpo_greatest_of_khans.0001.desc: "In the Heavens are many great lights. In the Heavens, the sun, moon, and stars. But on earth, there can be only one Khan.\n\nI, [ROOT.Char.GetFirstName], am that Khan — the Greatest of All Khans.\n\nAfter my victory over the snakes that coiled round my feet, none dare speak against me at the [GetPlayer.Custom('ME_GetNomadicCouncilName')] of all the clans. Eagerly, their chieftains submit and give their oaths, hungry for the conquest of the universe.\n\nThe first rays of the morning sun breach the horizon. I mount my horse, and all the armies of [ROOT.Char.GetPrimaryTitle.GetNameNoTier] roar."
+ 
+ vassal_directive_manage_fertility: "[recipient.GetUIName] will focus on increasing [county_fertility|E] by instructing [recipient.GetHerHis] [GetPlayer.Custom('ME_GetNomadicCouncilName')] Members to use #V $task_kurultai_fertility_1$#! [councillor_task|E]"
+ vassal_directive_explore_cultures: "[recipient.GetUIName] will focus on local [cultures|E] by instructing [recipient.GetHerHis] [GetPlayer.Custom('ME_GetNomadicCouncilName')] Members to use #V $task_kurultai_culture_1$#! [councillor_task|E]"
+ 
+ councillor_kurultai_modifier: "Liege's [GetPlayer.Custom('ME_GetNomadicCouncilName')] Member"
+ 
+ 

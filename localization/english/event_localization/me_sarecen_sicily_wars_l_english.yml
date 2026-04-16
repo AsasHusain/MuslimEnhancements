@@ -1,0 +1,76 @@
+﻿l_english:
+
+#Casus Bellis
+## Aghlabid Conquest of Sicily
+ siqilli_invasion_troops:0 "Siqilli Soldiers"
+
+## Bari Reconquest
+ me_italian_bari_reconquest_cb:0 "Reconquest of Bari"
+ bariot_troops:0 "Bariot Soldiers"
+ 
+## Zirid intervention in Sicily
+ war_1066_Zirid_Intervention_in_Sicily:0 "Zirid Intervention in Sicily"
+ me_zirid_sicily_intervention_cb:1 "Zirid Intervention in Sicily"
+ zirid_intervention_cb_defeat_desc_defender:1 "You keep the contested [titles|E].\n\n[attacker.GetShortUIName|U] loses control over [GetTitleByKey('d_sicily').GetNameNoTier]."
+ zirid_intervention_cb_defeat_desc_attacker:1 "[defender.GetShortUIName|U] keeps the contested title. All [factions|E] against you increase their [discontent|E].\n\nYou lose control over [GetTitleByKey('d_sicily').GetNameNoTier]."
+ zirid_intervention_cb_defeat_desc:1 "[defender.GetShortUIName|U] keeps the contested [titles|E]. You lose control over [GetTitleByKey('d_sicily').GetNameNoTier]."
+ zirid_intervention_cb_defeat_palermo:1 "[GetTitleByKey('c_palermo').GetNameNoTier] becomes [independent|E] and is ruled by a local noble."
+ zirid_intervention_cb_defeat_agrigento:1 "[GetTitleByKey('c_agrigento').GetNameNoTier] becomes [independent|E] and is ruled by a local noble."
+ zirid_intervention_cb_defeat_siracusa:1 "[GetTitleByKey('c_siracusa').GetNameNoTier] becomes [independent|E] and is ruled by a local noble."
+
+#Modifiers
+ won_bari_war_modifier:0 "Expelled the Sarecens from Bari"
+ won_bari_war_modifier_desc:0 "This character defeated the Sarecens in battle and expelled them from Bari, which earned him the respect of the Catholics of Italy."
+
+#Events 
+## Startup Events
+### Italy-Bari Startup
+ ss_wars.0200.t:0 "The Moors of Bari"
+ ss_wars.0200.desc:0 "Historically, the Emirate of Bari most likely only encompassed the city of Bari and its surrounding areas, and after their loss in the Italian reconquest all the Moors in South Italy were either killed or exiled.\nIn the game, the Emirate is given several counties beyond the scope of the region they controlled in order to make them a viably playable realm, and once they lose the Italian reconquest only Bari is lost but they get to keep all other counties. The 'Partition of Bari' is supposed to be a middle-ground between historicity and gameplay, it makes the Emirate loose all holdings after their loss but lets them keep all other counties before that in order to keep them viably playable."
+ ss_wars.0200.a:0 "#EMP Activate the Partition of Bari#!"
+ ss_wars.0200.b:0 "#EMP Deactivate the Partition of Bari#!"
+ 
+ ss_wars.0200.desc.true:0 "\n\nThe Partition of Bari is currently #G ACTIVATED.\n\n#!"
+ ss_wars.0200.desc.false:0 "\n\nThe Partition of Bari is currently #R DEACTIVATED.\n\n#!"
+ ss_wars.0200.desc.start:0 "#EMP Should Bari lose the war, the realm will be partitioned into:\nThe ruler of [GetTitleByKey('k_italy').GetNameNoTier] get the County of [GetTitleByKey('c_bari').GetNameNoTier].\n\nThe Holder of [GetTitleByKey('c_salerno').GetNameNoTier] gets [GetTitleByKey('c_camarda').GetNameNoTier].\n#!"
+ ss_wars.0200.desc.calabria_bari:0 "\n#EMP The counties of [GetTitleByKey('c_rossano').GetNameNoTier], [GetTitleByKey('c_cosenza').GetNameNoTier], and [GetTitleByKey('c_reggio_calabria').GetNameNoTier] will be held by a vassal of [GetTitleByKey('e_byzantium').GetNameNoTier].#!"
+ ss_wars.0200.desc.calabria_norm:0 "\n#EMP The Holder of [GetTitleByKey('c_rossano').GetNameNoTier] gets [GetTitleByKey('c_cosenza').GetNameNoTier].#!"
+
+### Italy Startup (Depricated Event)
+ ss_wars.0001.t:0 "The Moors of Bari"
+ ss_wars.0001.desc:0 "[GetTitleByKey('c_bari').GetNameNoTier], a beautiful port city that sits on the edge of the Adriatic sea, held in the foul grip of the Moors for nearly two centuries, and in those few years the Italin peninsula has been terrorized consistently by these Moorish barbarians who raided any Christian settlement that they could find, all while using [GetTitleByKey('c_bari').GetNameNoTier] as their main stronghold.\n\nNow, the Lombard principalities call for my aid, calling upon me to retake [GetTitleByKey('c_bari').GetNameNoTier], kick out the barbaric invaders, and finally free them from the terror of the Moorish scurge."
+ ss_wars.0001.a:0 "I will not fail them."
+ ss_wars.0001.tt:0 "If you are are victorious, the Muslims will be kicked out of South Italy:\nYou get the County of [GetTitleByKey('c_bari').GetNameNoTier].\nThe Holder of [GetTitleByKey('c_salerno').GetNameNoTier] gets [GetTitleByKey('c_camarda').GetNameNoTier].\nThe Holder of [GetTitleByKey('c_rossano').GetNameNoTier] gets [GetTitleByKey('c_cosenza').GetNameNoTier]."
+ 
+### Bari Startup (Depricated Event)
+ ss_wars.0002.t:0 "The Moors of Bari"
+ ss_wars.0002.desc:0 "[GetTitleByKey('c_bari').GetNameNoTier], a beautiful port city that sits on the edge of the Adriatic sea which has been in our control for nearly two centuries, is now being threatened as it seems that regular raiding and plundering of the neighbouring Christian realms for the plentiful bounty hidden beyond their walls has drawn their ire.\n\nUnable to handle our might, the neighbouring Christian principalities have called for the aid of the powerful Kingdom of [GetTitleByKey('k_italy').GetNameNoTier], who's armies not only seek to retake [GetTitleByKey('c_bari').GetNameNoTier] but also to exile us from the peninsula as a whole."
+ ss_wars.0002.a:0 "We must fight back."
+ ss_wars.0002.tt:0 "If you are are deafeated, you will be kicked out of South Italy:\nThe Holder of [GetTitleByKey('k_italy').GetNameNoTier] gets [GetTitleByKey('c_bari').GetNameNoTier].\nThe Holder of [GetTitleByKey('c_salerno').GetNameNoTier] gets [GetTitleByKey('c_camarda').GetNameNoTier].\nThe Holder of [GetTitleByKey('c_rossano').GetNameNoTier] gets [GetTitleByKey('c_cosenza').GetNameNoTier]."
+ 
+### Zirid Intervention Startup
+ ss_wars.0003.t:0 "The Zirid Intervention"
+ ss_wars.0003.desc:0 "It has been four years since the start of the Zirid Intervention, the war has been very costly and it shows no sign of stopping, and with the Arab tribes knocking at the doors of their capital, it would seem wiser to station their troops elsewhere.\n\nWith the option of leaving Sicily behind becoming more tempting by the second as the Island is beginning to appear more of a burden than a boon, only time will tell whether the Zirids will manage to hold onto Sicily or abondon it."
+ ss_wars.0003.a:0 "Let us see how things play out."
+ ss_wars.0003.tt:0 "If the Intervention fails, [zirid_africa.GetShortUINameNoTooltipNoFormat|U] will abandon Sicily, and several independant realms will spring up."
+ 
+## Post-war Events
+### Italian Victory - Byzantines
+ ss_wars.0100.t:0 "The Reclaimation of Bari"
+ ss_wars.0100.desc:0 "[attacker.GetShortUINameNoTooltipNoFormat|U] has finally managed to defeat the problematic Moors of [GetTitleByKey('c_bari').GetNameNoTier], with their leader exiled and the rest of the soldiery executed, and it has been a joyous occasion for the city's Christian population.\n\nHowever, now as [attacker.GetShortUINameNoTooltipNoFormat|U] sits on the throne of [GetTitleByKey('c_bari').GetNameNoTier], the $greek$ population of the city have come to call for it's return to us, it's rightful rulers, and so with the support of the local population now would be the perfect opportunity to retake what was lost and reclaim our holdings in [GetTitleByKey('d_apulia').GetNameNoTier]."
+ ss_wars.0100.a:0 "[GetTitleByKey('c_bari').GetNameNoTier] is rightfully ours."
+ 
+### Italian Victory - Rossano Holder
+ ss_wars.0101.t:0 "Reclaim What Was Lost"
+ ss_wars.0101.desc:0 "Some time ago, the Moors in [GetTitleByKey('c_bari').GetNameNoTier] had conquered and occupied [GetTitleByKey('c_cosenza').GetNameNoTier], which was once held by the rulers of [GetTitleByKey('c_rossano').GetNameNoTier].\n\nRecently however, [attacker.GetShortUINameNoTooltipNoFormat|U] managed to defeat and kick out these foreign invaders, and with their leader exiled and the majority of their soldiers killed or executed, [GetTitleByKey('c_cosenza').GetNameNoTier] became leaderless, and so now I find myself in the possession of the city as it's population sees me as it's rightful ruler."
+ ss_wars.0101.a:0 "Free land? why not."
+ 
+### Italian Victory - Salerno Holder
+ ss_wars.0102.t:0 "Reclaim What Was Lost"
+ ss_wars.0102.desc:0 "Some time ago, the Moors in [GetTitleByKey('c_bari').GetNameNoTier] had conquered and occupied [GetTitleByKey('c_camarda').GetNameNoTier], which was once held by the rulers of [GetTitleByKey('c_salerno').GetNameNoTier].\n\nRecently however, [attacker.GetShortUINameNoTooltipNoFormat|U] managed to defeat and kick out these foreign invaders, and with their leader exiled and the majority of their soldiers killed or executed, [GetTitleByKey('c_camarda').GetNameNoTier] became leaderless, and so now I find myself in the possession of the city as it's population sees me as it's rightful ruler."
+ ss_wars.0102.a:0 "Free land? why not."
+ 
+ #######################
+
+
+

@@ -1,0 +1,1866 @@
+﻿islam_religion = {
+	family = rf_abrahamic
+	
+	graphical_faith = "islamic_gfx"
+
+
+	doctrine_background_icon = core_tenet_banner_islam_ME.dds
+	#STANDARD DOCTRINES:
+
+	doctrine = doctrine_monotheist
+	#Abrahamic hostiliy group
+	doctrine = abrahamic_hostility_doctrine
+	#Polygamous marriages
+	doctrine = doctrine_polygamy
+	#Male dominated
+	doctrine = doctrine_gender_male_dominated
+	#Cousin consanguinity
+	doctrine = doctrine_consanguinity_cousins
+	#Divorce must be approved
+	doctrine = doctrine_divorce_approval
+	#No bastards
+	doctrine = doctrine_bastardry_none
+	#Illegal Homosexuality
+	doctrine = doctrine_homosexuality_crime
+	#Adultery is a sin
+	doctrine = doctrine_adultery_men_crime
+	doctrine = doctrine_adultery_women_crime
+	#Kinslaying is okay
+	doctrine = doctrine_kinslaying_accepted
+	#Deviancy is a sin
+	doctrine = doctrine_deviancy_shunned
+	#Witchcraft is illegal
+	doctrine = doctrine_witchcraft_crime
+	#Righteous
+	doctrine = doctrine_pluralism_righteous
+	#Lay clergy
+	doctrine = doctrine_theocracy_lay_clergy
+	#Zakat clerical function
+	doctrine = doctrine_clerical_function_alms_and_pacification
+	#Exclusively male clergy
+	doctrine = doctrine_clerical_gender_male_only
+	#Clerical marriage is okay
+	doctrine = doctrine_clerical_marriage_allowed
+	#Merit-based clerical succession
+	doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+	doctrine = doctrine_temporal_head
+
+	#Special Doctrine for Islamic Syncretism
+	doctrine = special_doctrine_is_islamic_faith
+
+	#Allow Pilgrimages by default
+	doctrine = doctrine_pilgrimage_mandatory_hajj
+
+	#Funeral tradition
+	doctrine = doctrine_funeral_stoic
+
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
+
+		## ME Addition ##
+	#Islamic Prohibition
+	doctrine = doctrine_me_intoxication_shunned
+	#Wudhu' - Partial Body Ablution
+	doctrine = doctrine_me_ablution_full
+
+	traits = {
+		virtues = { temperate generous just patient compassionate hafidh }
+		sins = { gluttonous greedy arbitrary }
+	}
+
+	#Generic Muslim Names - Only includes Quranic and non-sectarian Muslim names, any cultural names that are exclusive to Arabs, Persians, or Pakistanis have been removed
+	## NOTE: The names of important Islamic figures such as Ali and Omar have not been included as they are either not revered or seen as disbelievers by certain sects (such as the Kharijite Muhakkimas) ##
+	reserved_male_names = {
+		Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+		Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+	}
+
+	reserved_female_names = {
+		Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+	}
+
+	custom_faith_icons = {
+		shia_custom shia_custom_2 shia_custom_3 shia_custom_4 batriya_custom_1 batriya_custom_2 batriya_custom_3 batriya_custom_4 batriya_custom_5 custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 ibadi_custom muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 berberist_custom_1 berberist_custom_2 berberist_custom_3 berberist_custom_4
+		judaism_custom_1 custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_pentagram_inverted custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_black_sheep custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_scustom_faith_magatama custom_faith_soto custom_faith_benzhuism
+	}
+
+	holy_order_names = {
+		{ name = "holy_order_mujahideen_of_place" }
+		{ name = "holy_order_warriors_of_the_book" }
+		{ name = "holy_order_ghazis_of_place" }
+		{ name = "holy_order_warriors_of_the_wahy" }
+		{ name = "holy_order_servants_of_allah" }
+		{ name = "holy_order_champions_of_islam" }
+		{ name = "holy_order_ghazis_of_the_border" }
+		{ name = "holy_order_ayyar_of_symbol" }
+		{ name = "holy_order_ghazis_of_book" }
+		{ name = "holy_order_mujahideen_of_head" }
+		{ name = "holy_order_sahabi_of_place" }
+		{ name = "holy_order_warriors_of_symbol" }
+		{ name = "holy_order_zealots_of_head" }
+		{ name = "holy_order_guardians_of_head" }
+		{ name = "holy_order_companions_of_hira" }
+		{ name = "holy_order_ghazis_of_symbol" }
+		{ name = "holy_order_ayyar_of_book" }
+		{ name = "holy_order_mujahideen_of_symbol" }
+		{ name = "holy_order_sahabi_of_book" }
+		{ name = "holy_order_warriors_of_head" }
+		{ name = "holy_order_zealots_of_place" }
+		{ name = "holy_order_servants_of_head" }
+		{ name = "holy_order_zealots_of_book" }
+		{ name = "holy_order_sahabi_of_symbol" }
+		{ name = "holy_order_sahabi_of_head" }
+		{ name = "holy_order_zealots_of_symbol" }
+		{ name = "holy_order_mujahideen_of_book" }
+		{ name = "holy_order_ayyar_of_head" }
+		{ name = "holy_order_warriors_of_book" }
+		{ name = "holy_order_ghazis_of_head" }
+		
+	}
+
+	holy_order_maa = { mubarizun }
+
+	localization = {
+		#HighGod
+		HighGodName = islam_high_god_name
+		HighGodName2 = islam_high_god_name_2
+		HighGodNamePossessive = islam_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = islam_high_god_name_alternate
+		HighGodNameAlternatePossessive = islam_high_god_name_alternate_possessive
+
+		#Creator
+		CreatorName = islam_creator_god_name
+		CreatorNamePossessive = islam_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = islam_health_god_name
+		HealthGodNamePossessive = islam_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#FertilityGod
+		FertilityGodName = islam_fertility_god_name
+		FertilityGodNamePossessive = islam_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_HE
+		FertilityGodHerHis = CHARACTER_HERHIS_HIS
+		FertilityGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WealthGod
+		WealthGodName = islam_wealth_god_name
+		WealthGodNamePossessive = islam_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#HouseholdGod
+		HouseholdGodName = islam_household_god_name
+		HouseholdGodNamePossessive = islam_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FateGod
+		FateGodName = islam_fate_god_name
+		FateGodNamePossessive = islam_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
+
+		#KnowledgeGod
+		KnowledgeGodName = islam_knowledge_god_name
+		KnowledgeGodNamePossessive = islam_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = islam_war_god_name
+		WarGodNamePossessive = islam_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = islam_trickster_god_name
+		TricksterGodNamePossessive = islam_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#NightGod
+		NightGodName = islam_night_god_name
+		NightGodNamePossessive = islam_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_HE
+		NightGodHerHis = CHARACTER_HERHIS_HIS
+		NightGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WaterGod
+		WaterGodName = islam_water_god_name
+		WaterGodNamePossessive = islam_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+
+
+		PantheonTerm = islam_high_god_name
+		PantheonTerm2 = islam_high_god_name_2
+		PantheonTerm3 = islam_high_god_name_3
+		PantheonTermHasHave = pantheon_term_has
+		GoodGodNames = {
+			islam_high_god_name
+			HighGodNameAlternate
+			islam_good_god_rahim
+			islam_good_god_the_most_gracious
+			islam_good_god_the_giver_of_peace
+			islam_good_god_the_one
+			islam_good_god_the_prophet
+			islam_good_god_muhammad
+		}
+		DevilName = islam_devil_name
+		DevilNamePossessive = islam_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_HE
+		DevilHerHis = CHARACTER_HERHIS_HIS
+		DevilHerselfHimself = CHARACTER_HIMSELF
+		EvilGodNames = {
+			islam_evil_god_iblis
+		}
+		HouseOfWorship = islam_house_of_worship
+		HouseOfWorship2 = islam_house_of_worship_2
+		HouseOfWorship3 = islam_house_of_worship_3
+		HouseOfWorshipPlural = islam_house_of_worship_plural
+		ReligiousSymbol = islam_religious_symbol
+		ReligiousSymbol2 = islam_religious_symbol_2
+		ReligiousSymbol3 = islam_religious_symbol_3
+		ReligiousText = islam_religious_text
+		ReligiousText2 = islam_religious_text_2
+		ReligiousText3 = islam_religious_text_3
+		ReligiousHeadName = islam_religious_head_title
+		ReligiousHeadTitleName = islam_religious_head_title_name
+		DevoteeMale = islam_devotee
+		DevoteeMalePlural = islam_devotee_plural
+		DevoteeFemale = islam_devotee
+		DevoteeFemalePlural = islam_devotee_plural
+		DevoteeNeuter = islam_devotee
+		DevoteeNeuterPlural = islam_devotee_plural
+		PriestMale = islam_priest
+		PriestMalePlural = islam_priest_plural
+		PriestFemale = islam_priest
+		PriestFemalePlural = islam_priest_plural
+		PriestNeuter = islam_priest
+		PriestNeuterPlural = islam_priest_plural
+		AltPriestTermPlural = islam_priest_alternate_plural
+		BishopMale = islam_bishop
+		BishopMalePlural = islam_bishop_plural
+		BishopFemale = islam_bishop
+		BishopFemalePlural = islam_bishop_plural
+		BishopNeuter = islam_bishop
+		BishopNeuterPlural = islam_bishop_plural
+		DivineRealm = islam_positive_afterlife
+		DivineRealm2 = islam_positive_afterlife_2
+		DivineRealm3 = islam_positive_afterlife_3
+		PositiveAfterLife = islam_positive_afterlife
+		PositiveAfterLife2 = islam_positive_afterlife_2
+		PositiveAfterLife3 = islam_positive_afterlife_3
+		NegativeAfterLife = islam_negative_afterlife
+		NegativeAfterLife2 = islam_negative_afterlife_2
+		NegativeAfterLife3 = islam_negative_afterlife_3
+		DeathDeityName = islam_death_deity_name
+		DeathDeityNamePossessive = islam_death_deity_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+		WitchGodName = christianity_witchgodname_iblis
+		WitchGodNamePossessive = christianity_witchgodname_iblis_possessive
+		WitchGodHerHis = CHARACTER_HERHIS_HIS
+		WitchGodSheHe = CHARACTER_SHEHE_HE
+		WitchGodHerHim = CHARACTER_HERHIM_HIM
+		WitchGodMistressMaster = master
+		WitchGodMotherFather = father
+
+
+		GHWName = ghw_jihad
+		GHWNamePlural = ghw_jihads
+	}
+	
+	piety_icon_group = "islam"
+
+	faiths = {
+		ashari = { #Arabian Sunni Islam
+			color = { 0 0.6 0 }
+			icon = sunni
+			religious_head = d_sunni
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = baghdad
+			holy_site = sinai
+
+			#Tenet:
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_legalism
+
+			#DOCTRINES:
+			#Sunni - Orthodox
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = islam_secondary_group_sunni_orthodox_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			#Leadership
+			doctrine = doctrine_temporal_head
+
+			#Generic Sunni Names - Includes the names of several Sahabas
+			reserved_male_names = {
+				Abbas Abu_Bakr Ali Amr Anas Bilal Hafiz Hamza Hassan Husayn Jafar Khalid Malik Miqdad Muawiyah Muhsin Sa_d Sufyan Suhayl Talha Umar Uthman Walid
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aisha Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+		}
+		
+		muwalladi = { # Iberian Sunni Islam
+			color = { 0 0.4 0 }
+			icon = muwalladi
+			religious_head = d_sunni
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = cordoba
+			holy_site = fes
+
+			#Tenet:
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_communal_identity
+			doctrine = tenet_adaptive
+
+			#DOCTRINES:
+			#Sunni - Orthodox
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = islam_secondary_group_sunni_orthodox_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			#Homosexuality is a sin, but a much more tolerated one.
+			doctrine = doctrine_homosexuality_shunned
+			#Pluralistic
+			doctrine = doctrine_pluralism_pluralistic
+
+			#Generic Sunni Names - Includes the names of several Sahabas
+			reserved_male_names = {
+				Abbas Abu_Bakr Ali Amr Anas Bilal Hafiz Hamza Hassan Husayn Jafar Khalid Malik Miqdad Muawiyah Muhsin Sa_d Sufyan Suhayl Talha Umar Uthman Walid
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aisha Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+		}
+
+		maturidi = { # Persian Sunni Islam
+			color = { 0.1 0.5 0.3 }
+			icon = maturidi
+			religious_head = d_sunni
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = baghdad
+			holy_site = samarkand
+			holy_site = constantinople
+
+			#Tenet
+			doctrine = tenet_adaptive
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_legalism
+
+			#DOCTRINES
+			#Sunni - Orthodox
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = islam_secondary_group_sunni_orthodox_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			#Pluralistic
+			doctrine = doctrine_pluralism_pluralistic
+
+			#Generic Sunni Names - Includes the names of several Sahabas
+			reserved_male_names = {
+				Abbas Abu_Bakr Ali Amr Anas Bilal Hafiz Hamza Hassan Husayn Jafar Khalid Malik Miqdad Muawiyah Muhsin Sa_d Sufyan Suhayl Talha Umar Uthman Walid
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aisha Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+		}
+
+		masmudi = { # Reformist Sunni Islam (Almohads)
+			color = { 0 0.6 0.2 }
+			icon = masmudi
+			religious_head = d_masmudi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = tinmallal
+			holy_site = fes
+
+			#Tenet:
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_warmonger
+			doctrine = tenet_literalism
+
+			#DOCTRINES:
+			#Sunni - Puritanical
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = islam_secondary_group_sunni_puritanical_doctrine
+			#Pluralistic
+			doctrine = doctrine_pluralism_fundamentalist
+
+			localization = {			
+				ReligiousHeadName = masmudi_religious_head_title
+				ReligiousHeadTitleName = masmudi_religious_head_title_name
+			}
+
+			#Generic Sunni Names - Includes the names of several Sahabas
+			reserved_male_names = {
+				Abbas Abu_Bakr Ali Amr Anas Bilal Hafiz Hamza Hassan Husayn Jafar Khalid Malik Miqdad Muawiyah Sa_d Sufyan Suhayl Talha Umar Uthman Walid
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aisha Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+		}
+
+		mutazila = { # Rationalist school of Sunni Islam. Dominant between 8th and 10th centuries in the Abbasid Caliphate (Persia).
+			color = { 0 0.7 0.5 }
+			icon = mutazila
+			religious_head = d_sunni
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = baghdad
+			holy_site = sinai
+
+			#Tenet:
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_alexandrian_catechism #FP3 change 
+			doctrine = tenet_legalism
+
+			#DOCTRINES:
+			#Sunni - Heretical
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = islam_secondary_group_sunni_heresy_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_witchcraft_shunned
+
+			#Generic Sunni Names - Includes the names of several Sahabas
+			reserved_male_names = {
+				Abbas Abu_Bakr Ali Amr Anas Bilal Hafiz Hamza Hassan Husayn Jafar Khalid Malik Miqdad Muawiyah Muhsin Sa_d Sufyan Suhayl Talha Umar Uthman Walid
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aisha Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+		}
+
+		quranist = {
+			color = { 0.2 0.7 0.1 }
+			icon = quranist
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = kufa
+			holy_site = sinai
+
+			#Tenet
+			doctrine = tenet_literalism
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			#Zandaqa - Unaffiliated
+			#No Head
+			#Homosexuality is a crime
+			#Adultery is a crime
+			#Deviancy is a crime
+			#Fundamentalist
+			# Jizya
+			doctrine = special_doctrine_jizya
+			
+			doctrine = muhammad_succession_zandaqa_doctrine
+			doctrine = islam_secondary_group_zandaqa_unaffiliated_doctrine
+			doctrine = doctrine_no_head
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_homosexuality_shunned
+			doctrine = doctrine_adultery_men_shunned
+			doctrine = doctrine_adultery_women_shunned
+			doctrine = doctrine_deviancy_shunned
+			doctrine = doctrine_pluralism_pluralistic
+			doctrine = doctrine_monogamy
+		}
+
+		ismaili = { #Seveners (default Shia)
+			color = { 0.2 0.8 0 }
+			icon = shia
+			religious_head = d_shiite
+
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_esotericism
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			# Jizya
+			doctrine = special_doctrine_jizya
+			
+			#Leadership
+			doctrine = doctrine_temporal_head
+
+			#Shia
+			#Witchcraft is frowned upon
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_orthodox_doctrine
+			doctrine = doctrine_witchcraft_shunned
+			
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
+
+			# Musta'li Schism doctrine
+			#doctrine = special_doctrine_mustali_main
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		qarmatian = { #A branch of the Isma'ili with syncretic Zoroastrian elements, updated by Dvariak
+			#Founded a utopian republic in al-Hasa
+			color = { 0.1 0.8 0.1 }
+			icon = qarmatian
+
+			holy_site = bahrein
+			holy_site = arrajan
+			holy_site = basra
+			holy_site = nadjaf
+			holy_site = isfahan
+
+			doctrine = tenet_vows_of_poverty
+			doctrine = tenet_inner_journey
+			doctrine = tenet_warmonger
+
+			#Shia
+			#Homosexuality is a sin, but a much more tolerated one.
+			#Witchcraft is frowned upon
+			doctrine = doctrine_spiritual_head
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+			doctrine = doctrine_pluralism_fundamentalist
+			doctrine = doctrine_homosexuality_accepted
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_monogamy
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_pilgrimage_forbidden
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		nizari = {
+			color = { 0.2 0.7 0.1 }
+			icon = nizari
+			religious_head = d_nizari
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+#			holy_site = qom # Very important religious center in Iran
+			holy_site = karbala
+
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_false_conversion_sanction
+
+			# Fedayeen, else Struggle & Submission
+			doctrine_selection_pair = {
+				requires_dlc_flag = legacy_of_persia
+				doctrine = tenet_fp3_fedayeen
+				fallback_doctrine = tenet_struggle_submission
+			}
+			#Shia
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_orthodox_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			#Hereditary clerical succession
+			doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+			# Assassins
+			doctrine = doctrine_clerical_function_recruitment
+			
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
+
+			#Nizari Names - Includes the list of Generic Shi'ite names with the addition of 'Nizar'
+			reserved_male_names = {
+				Nizar
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+
+			holy_order_names = {
+				{ name = "holy_order_hashshashin" }
+			}
+		}
+
+		zayidi = {
+			color = { 0.3 0.8 0.2 }
+			icon = zayidi
+			religious_head = d_zayidi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_unrelenting_faith
+			doctrine = tenet_legalism
+
+			#Shia
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_orthodox_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_pluralism_pluralistic 
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		imami = { #Twelver Ithna Ashari
+			color = { 0 0.2 0 }
+			icon = imami
+			religious_head = d_imami
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_legalism
+			doctrine = tenet_false_conversion_sanction
+			doctrine = tenet_religious_legal_pronouncements
+
+			#Shia
+			#Homosexuality is a sin
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_orthodox_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+			doctrine = doctrine_witchcraft_shunned
+
+			#Twelver Names - Includes the list of Generic Shi'ite names with the addition of 'Narjis'
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Narjis
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				BishopMale = islam_ayatollah
+				BishopMalePlural = islam_ayatollah_plural
+				BishopFemale = islam_ayatollah
+				BishopFemalePlural = islam_ayatollah_plural
+				BishopNeuter = islam_ayatollah
+				BishopNeuterPlural = islam_ayatollah_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		ghulat = {
+			color = { 0.4 0.8 0.3 }
+			icon = ghulat
+			religious_head = d_ghulat
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = damascus
+
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_false_conversion_sanction
+			doctrine = tenet_communion
+
+			#Zandaqa - Ghulat
+			#No religious head
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_witchcraft_shunned
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		alawite = {
+			color = { 0.2 0.4 0.1 }
+			icon = alawite
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_esotericism
+			doctrine = tenet_reincarnation
+			doctrine = tenet_communion
+
+			#Zandaqa - Ghulat
+			#No head of faith: or, technically should be no head, but one is required for their communion tenet to work, so we give them a chief imam.
+			#Monogamy
+			#Free divorce
+			#Adultery is a crime
+			#Clergy - equal
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+			doctrine = doctrine_spiritual_head
+			doctrine = doctrine_monogamy
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_adultery_men_crime
+			doctrine = doctrine_adultery_women_crime
+			doctrine = doctrine_clerical_gender_either
+			doctrine = doctrine_pilgrimage_forbidden
+			#Alcohol consumption is allowed
+			doctrine = doctrine_me_intoxication_accepted
+			#No Ablution (They don't pray)
+			doctrine = doctrine_me_ablution_none
+			
+			# NO ubaydi trait acceptance doctrine (Alawites do not accept them and do not view them as HoF either)
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		ishaqiya = {
+			color = { 0.1 0.2 0.32 }
+			icon = ishaqiya
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_esotericism
+			doctrine = tenet_reincarnation
+			doctrine = tenet_communion
+
+			#Zandaqa - Ghulat
+			#No head of faith: or, technically should be no head, but one is required for their communion tenet to work, so we give them a chief imam.
+			#Monogamy
+			#Free divorce
+			#Adultery is a crime
+			#Clergy - equal
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+			doctrine = doctrine_spiritual_head
+			doctrine = doctrine_monogamy
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_adultery_men_crime
+			doctrine = doctrine_adultery_women_crime
+			doctrine = doctrine_clerical_gender_either
+			doctrine = doctrine_pilgrimage_forbidden
+			#Alcohol consumption is allowed
+			doctrine = doctrine_me_intoxication_accepted
+			#No Ablution (They don't pray)
+			doctrine = doctrine_me_ablution_none
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		alevi = {
+			color = { 0.4 0.6 0.1 }
+			icon = alevi
+
+			holy_site = mecca
+			holy_site = nishapur #Turko-Islamic cultural center and birth place of hajji bektash weli
+			holy_site = cappadocia #dergah of hacıbektaş, nevşehir
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_esotericism
+			doctrine = tenet_inner_journey
+			doctrine = tenet_communal_identity
+
+			#Zandaqa - Ghulat
+			#Monogamy
+			#Divorce forbidden
+			#Homosexuality is a sin
+			#Adultery is a crime
+			#Witchcraft is a sin
+			#Clerical gender - male
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+			doctrine = doctrine_divorce_disallowed
+			doctrine = doctrine_adultery_women_crime
+			doctrine = doctrine_adultery_men_crime
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_clerical_gender_male_only
+			doctrine = doctrine_pilgrimage_encouraged
+			doctrine = doctrine_monogamy
+			#Alcohol consumption is allowed
+			doctrine = doctrine_me_intoxication_accepted
+			#No Ablution (They don't pray)
+			doctrine = doctrine_me_ablution_none
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_alevi_priest
+				PriestMalePlural = islam_alevi_priest_plural
+				PriestFemale = islam_alevi_priest
+				PriestFemalePlural = islam_alevi_priest_plural
+				PriestNeuter = islam_alevi_priest
+				PriestNeuterPlural = islam_alevi_priest_plural
+				HouseOfWorship = alevi_house_of_worship
+				HouseOfWorship2 = alevi_house_of_worship_2
+				HouseOfWorship3 = alevi_house_of_worship_3
+				HouseOfWorshipPlural = alevi_house_of_worship_plural
+				ReligiousText = alevi_religious_text
+				ReligiousText2 = alevi_religious_text_2
+				ReligiousText3 = alevi_religious_text_3
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+
+				HighGodName = alevi_high_god_name 
+				HighGodName2 = alevi_high_god_name_2
+				HighGodNamePossessive = alevi_high_god_name_possessive
+				CreatorName = alevi_creator_god_name
+				CreatorNamePossessive = alevi_creator_god_name_possessive
+				HealthGodName = alevi_health_god_name
+				HealthGodNamePossessive = alevi_health_god_name_possessive
+				FertilityGodName = alevi_fertility_god_name
+				FertilityGodNamePossessive = alevi_fertility_god_name_possessive
+				WealthGodName = alevi_wealth_god_name
+				WealthGodNamePossessive = alevi_wealth_god_name_possessive
+				HouseholdGodName = alevi_household_god_name
+				HouseholdGodNamePossessive = alevi_household_god_name_possessive
+				FateGodName = alevi_fate_god_name
+				FateGodNamePossessive = alevi_fate_god_name_possessive
+				KnowledgeGodName = alevi_knowledge_god_name
+				KnowledgeGodNamePossessive = alevi_knowledge_god_name_possessive
+				WarGodName = alevi_war_god_name
+				WarGodNamePossessive = alevi_war_god_name_possessive
+				NightGodName = alevi_night_god_name
+				NightGodNamePossessive = alevi_night_god_name_possessive
+				WaterGodName = alevi_water_god_name
+				WaterGodNamePossessive = alevi_water_god_name_possessive
+
+				PantheonTerm = alevi_high_god_name
+				PantheonTerm2 = alevi_high_god_name_2
+				PantheonTerm3 = alevi_high_god_name_3
+				GoodGodNames = {
+					alevi_high_god_name
+					islam_high_god_name
+					HighGodNameAlternate
+					islam_good_god_the_most_gracious
+					islam_good_god_the_giver_of_peace
+					islam_good_god_the_one
+					islam_good_god_the_prophet
+					islam_good_god_muhammad
+				}
+			}
+
+			holy_order_names = {
+				{ name = "holy_order_bektashi_order" }
+			}
+		}
+
+		druze = {
+			color = { 0.3 0.7 0.1 }
+			icon = islam_druze
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = beirut
+			holy_site = zozan
+
+			doctrine = tenet_gnosticism
+			doctrine = tenet_reincarnation
+			doctrine = tenet_false_conversion_sanction
+
+			#Zandaqa - Ghulat
+			#No religious head
+			#Monogamy
+			#Divorce forbidden
+			#Homosexuality is a sin
+			#Adultery is a crime
+			#Witchcraft is a sin
+			#Clerical gender - Either
+
+			doctrine = doctrine_monogamy
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+			doctrine = doctrine_no_head
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_adultery_women_crime
+			doctrine = doctrine_adultery_men_crime
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_clerical_gender_either
+			doctrine = doctrine_pilgrimage_forbidden
+			#No Ablution (They don't pray)
+			doctrine = doctrine_me_ablution_none
+
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
+
+			#Druze Names - Includes the list of Generic Shi'ite names with a few addition
+			reserved_male_names = {
+				Hakim
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aziza
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousText = druze_religious_text
+				ReligiousText2 = druze_religious_text_2
+				ReligiousText3 = druze_religious_text_3
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		ibadi = {
+			color = { 0.3 0.6 0.3 }
+			icon = ibadi
+			religious_head = d_ibadi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = basra
+			holy_site = nizwa
+
+			#Tenet
+			doctrine = tenet_literalism
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			#Muhakkima - Moderate
+			#No religious head
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = islam_secondary_group_muhakkima_moderate_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_witchcraft_shunned
+
+			# Ibadi Hostility doctrine
+			doctrine = special_doctrine_is_ibadi_faith
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+
+			holy_order_names = {
+				{ name = "holy_order_haruriyya" }
+				{ name = "holy_order_judgement_of_god" }
+				{ name = "holy_order_judgement_of_head" }
+			}
+		}
+
+		wahbiya = { # North African Ibadi Islam
+			color = { 0.1 0.2 0 }
+			icon = wahbiya
+			religious_head = d_wahbiya
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = tahert
+			holy_site = nizwa
+
+			#Tenet
+			doctrine = tenet_literalism
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			#Muhakkima - Moderate
+			#No religious head
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = islam_secondary_group_muhakkima_moderate_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_witchcraft_shunned
+
+			# Ibadi Hostility doctrine
+			doctrine = special_doctrine_is_ibadi_faith
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+
+			holy_order_names = {
+				{ name = "holy_order_haruriyya" }
+				{ name = "holy_order_judgement_of_god" }
+				{ name = "holy_order_judgement_of_head" }
+			}
+		}
+
+		nukkari = {
+			color = { 0.3 1 0.5 }
+			icon = nukkari
+			religious_head = d_nukkari
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = tahert
+			holy_site = nizwa
+
+			#Tenet
+			doctrine = tenet_literalism
+			doctrine = tenet_pursuit_of_power
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			#Muhakkima - Moderate
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = islam_secondary_group_muhakkima_moderate_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_witchcraft_shunned
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+
+			holy_order_names = {
+				{ name = "holy_order_haruriyya" }
+				{ name = "holy_order_judgement_of_god" }
+				{ name = "holy_order_judgement_of_head" }
+			}
+		}
+
+		azariqa = {
+			color = { 0.3 0.7 0.7 }
+			icon = azariqa
+			religious_head = d_azariqa
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = siffa
+			holy_site = kufa
+
+			#Tenet
+			doctrine = tenet_legalism
+			doctrine = tenet_puritanical_islam
+
+			# Fedayeen, else Struggle & Submission
+			doctrine_selection_pair = {
+				requires_dlc_flag = legacy_of_persia
+				doctrine = tenet_fp3_fedayeen
+				fallback_doctrine = tenet_struggle_submission
+			}
+
+			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = islam_secondary_group_muhakkima_puritanical_doctrine
+			doctrine = doctrine_temporal_head
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_adultery_men_crime
+			doctrine = doctrine_adultery_women_crime
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_pluralism_fundamentalist
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		najdat = {
+			color = { 0.6 0.7 0.7 }
+			icon = nadjat
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = bahrein
+			holy_site = yamama			
+
+			#Tenet
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_esotericism
+
+			#Doctrines
+			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = islam_secondary_group_muhakkima_puritanical_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_temporal_head
+			doctrine = doctrine_witchcraft_shunned
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		sufri = {
+			color = { 0.3 0.5 0.5 }
+			icon = muhakkima_3
+
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = sijilmasa	
+			holy_site = siffa
+
+			#Tenet
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_literalism
+			doctrine = tenet_false_conversion_sanction
+
+			#Doctrines
+			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = islam_secondary_group_muhakkima_moderate_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_no_head
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_clerical_gender_either
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		hafizi = { #Sub-sect of Musta'li Ismailism that places al-Hafiz as heir to the Caliphate and that the line continues through him
+			color = { 0.5 0.8 0.4 }
+			icon = hafizi
+			religious_head = d_hafizi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = damascus
+
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_unrelenting_faith
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			# Jizya
+			doctrine = special_doctrine_jizya
+			
+			# Leadership
+			doctrine = doctrine_temporal_head
+
+			# Shia
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_orthodox_doctrine
+			# Main Doctrines
+			doctrine = doctrine_pluralism_fundamentalist
+			# Criminal Doctrines
+			doctrine = doctrine_witchcraft_shunned
+			# Clergy Doctrines
+			doctrine = doctrine_clerical_function_recruitment
+			
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
+
+			# Musta'li Schism doctrine
+			#doctrine = special_doctrine_mustali_schismed_sect
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				#ReligiousHeadName = islam_shia_religious_head_title
+				#ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		tayyibi = { #Sub-sect of Musta'li Ismailism that at-Tayyib as heir to the Caliphate and all subsequent caliphs are in concealment
+			color = { 25 100 63 }
+			icon = tayyibi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = damascus
+
+			doctrine = tenet_mendicant_preachers # Alluding to the office of ad-Da'i al-Mutlaq and how the South Asian community was converted
+			doctrine = tenet_esotericism
+			doctrine = tenet_false_conversion_sanction
+
+			#DOCTRINES
+			# Jizya
+			doctrine = special_doctrine_jizya
+			
+			# Leadership
+			doctrine = doctrine_spiritual_head
+
+			# Shia
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_orthodox_doctrine
+			# Criminal Doctrines
+			doctrine = doctrine_witchcraft_shunned
+			
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
+
+			# Musta'li Schism doctrine
+			#doctrine = special_doctrine_mustali_schismed_sect
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = tayyibi_religious_head_title
+				ReligiousHeadTitleName = tayyibi_religious_head_title_name
+			}
+		}
+
+		karrami = { # al-Karramiya - an Ascestic Sunni faith that was popular in Khorasan and Transoxia
+			color = { 91 54 13 }
+			icon = karrami
+			religious_head = d_sunni
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = baghdad
+			holy_site = nishapur
+
+			#Tenet
+			doctrine = tenet_vows_of_poverty
+			doctrine = tenet_mendicant_preachers
+			doctrine = tenet_asceticism
+
+			#DOCTRINES
+			#Sunni - Heretical
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = islam_secondary_group_sunni_heresy_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			#Pluralistic
+			doctrine = doctrine_pluralism_pluralistic
+
+			#Generic Sunni Names - Includes the names of several Sahabas
+			reserved_male_names = {
+				Abbas Abu_Bakr Ali Amr Anas Bilal Hafiz Hamza Hassan Husayn Jafar Khalid Malik Miqdad Muawiyah Muhsin Sa_d Sufyan Suhayl Talha Umar Uthman Walid
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aisha Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+		}
+
+		salihi = {
+			color = { 25 89 16 }
+			icon = salihi
+			religious_head = d_zayidi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_literalism
+			doctrine = tenet_legalism
+
+			#Shia - Batriya
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_shia_doctrine
+			doctrine = islam_secondary_group_shia_batriya_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_pluralism_pluralistic 
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+
+		barghawata = {  # Barghawatism - The Berberist religion of Salih ibn Tarif
+			color=rgb { 90 8 8 }
+			icon = barghawata
+			religious_head = d_barghawata
+
+			holy_site = tamasna
+			holy_site = fes
+			holy_site = carthage
+			holy_site = jerusalem
+			holy_site = cordoba
+
+			#Tenet
+			doctrine = tenet_astrology
+			doctrine = tenet_unreformed_syncretism
+			doctrine = tenet_communal_identity
+
+			#Doctrines
+			doctrine = muhammad_succession_berberist_doctrine
+			doctrine = islam_secondary_group_berberist_doctrine
+			doctrine = doctrine_divorce_allowed
+			doctrine = doctrine_witchcraft_accepted
+			doctrine = doctrine_consanguinity_restricted
+			doctrine = doctrine_clerical_function_recruitment
+			doctrine = doctrine_clerical_gender_either
+			doctrine = doctrine_pilgrimage_encouraged
+
+			# Barghawata trait doctrine
+			doctrine = special_doctrine_is_barghawata_faith
+
+			#Barghawata Names - Includes the names of a few Barghawata figures
+			reserved_male_names = {
+				Tarif Yahmud
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			localization = {		
+				PriestMale = barghawata_priest
+				PriestMalePlural = barghawata_priest_plural
+				PriestFemale = barghawata_priest
+				PriestFemalePlural = barghawata_priest_plural
+				PriestNeuter = barghawata_priest
+				PriestNeuterPlural = barghawata_priest_plural
+				ReligiousHeadName = barghawata_religious_head_title
+				ReligiousHeadTitleName = barghawata_religious_head_title_name
+
+				ReligiousText = barghawata_religious_text
+				ReligiousText2 = barghawata_religious_text_2
+				ReligiousText3 = barghawata_religious_text_3
+
+				HighGodName = barghawata_high_god_name 
+				HighGodName2 = barghawata_high_god_name_2
+				HighGodNamePossessive = barghawata_high_god_name_possessive
+				CreatorName = barghawata_creator_god_name
+				CreatorNamePossessive = barghawata_creator_god_name_possessive
+				HealthGodName = barghawata_health_god_name
+				HealthGodNamePossessive = barghawata_health_god_name_possessive
+				FertilityGodName = barghawata_fertility_god_name
+				FertilityGodNamePossessive = barghawata_fertility_god_name_possessive
+				WealthGodName = barghawata_wealth_god_name
+				WealthGodNamePossessive = barghawata_wealth_god_name_possessive
+				HouseholdGodName = barghawata_household_god_name
+				HouseholdGodNamePossessive = barghawata_household_god_name_possessive
+				FateGodName = barghawata_fate_god_name
+				FateGodNamePossessive = barghawata_fate_god_name_possessive
+				KnowledgeGodName = barghawata_knowledge_god_name
+				KnowledgeGodNamePossessive = barghawata_knowledge_god_name_possessive
+				WarGodName = barghawata_war_god_name
+				WarGodNamePossessive = barghawata_war_god_name_possessive
+				NightGodName = barghawata_night_god_name
+				NightGodNamePossessive = barghawata_night_god_name_possessive
+				WaterGodName = barghawata_water_god_name
+				WaterGodNamePossessive = barghawata_water_god_name_possessive
+
+				PantheonTerm = barghawata_high_god_name
+				PantheonTerm2 = barghawata_high_god_name_2
+				PantheonTerm3 = barghawata_high_god_name_3
+				GoodGodNames = {
+					barghawata_high_god_name
+					HighGodNameAlternate
+					islam_good_god_the_most_gracious
+					islam_good_god_the_giver_of_peace
+					islam_good_god_the_one
+					barghawata_good_god_the_prophet
+					barghawata_good_god_salih
+				}
+				DevilName = barghawata_devil_name
+				DevilNamePossessive = barghawata_devil_name_possessive
+			}
+
+			holy_order_names = {
+				{ name = "holy_order_servants_of_yakush" }
+				{ name = "holy_order_champions_of_barghawata" }
+			}
+		}
+		
+		hamimist = {	# Ha-Mimism - The Berberist religion of Ha-Mim ibn Mann-Allah al-Majkasi
+			color=rgb { 24 125 142 }
+			icon = hamimist
+			religious_head = d_hamimist
+
+			holy_site = ceuta # City held and rebuilt by Majkasa tribe
+			holy_site = fes
+			holy_site = tamasna
+			holy_site = jerusalem
+			holy_site = cordoba
+
+			#Tenet:
+			doctrine = tenet_unreformed_syncretism
+			doctrine = tenet_esotericism
+			doctrine = tenet_false_conversion_sanction
+
+			#Doctrines
+			doctrine = muhammad_succession_berberist_doctrine # Berberist
+			doctrine = islam_secondary_group_berberist_doctrine
+			doctrine = doctrine_clerical_gender_either
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_temporal_head
+			doctrine = doctrine_witchcraft_virtuous
+			doctrine = doctrine_pilgrimage_encouraged
+
+			# Ha-Mimist trait doctrine
+			doctrine = special_doctrine_is_hamimist_faith
+
+			#Ha-Mimist Names - Includes the names of a few Ha-Mimist figures
+			reserved_male_names = {
+				Ha-Mim Mann-Allah
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Taqit Daggu Debu Dbu
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {			
+				PriestMale = barghawata_priest
+				PriestMalePlural = barghawata_priest_plural
+				PriestFemale = barghawata_priest
+				PriestFemalePlural = barghawata_priest_plural
+				PriestNeuter = barghawata_priest
+				PriestNeuterPlural = barghawata_priest_plural
+				ReligiousHeadName = hamimist_religious_head_title
+				ReligiousHeadTitleName = hamimist_religious_head_title_name
+
+				ReligiousText = barghawata_religious_text
+				ReligiousText2 = barghawata_religious_text_2
+				ReligiousText3 = barghawata_religious_text_3
+
+				HighGodName = berberist_high_god_name 
+				HighGodName2 = berberist_high_god_name_2
+				HighGodNamePossessive = berberist_high_god_name_possessive
+				CreatorName = berberist_creator_god_name
+				CreatorNamePossessive = berberist_creator_god_name_possessive
+				HealthGodName = berberist_health_god_name
+				HealthGodNamePossessive = berberist_health_god_name_possessive
+				FertilityGodName = berberist_fertility_god_name
+				FertilityGodNamePossessive = berberist_fertility_god_name_possessive
+				WealthGodName = berberist_wealth_god_name
+				WealthGodNamePossessive = berberist_wealth_god_name_possessive
+				HouseholdGodName = berberist_household_god_name
+				HouseholdGodNamePossessive = berberist_household_god_name_possessive
+				FateGodName = berberist_fate_god_name
+				FateGodNamePossessive = berberist_fate_god_name_possessive
+				KnowledgeGodName = berberist_knowledge_god_name
+				KnowledgeGodNamePossessive = berberist_knowledge_god_name_possessive
+				WarGodName = berberist_war_god_name
+				WarGodNamePossessive = berberist_war_god_name_possessive
+				NightGodName = berberist_night_god_name
+				NightGodNamePossessive = berberist_night_god_name_possessive
+				WaterGodName = berberist_water_god_name
+				WaterGodNamePossessive = berberist_water_god_name_possessive
+
+				PantheonTerm = berberist_high_god_name
+				PantheonTerm2 = berberist_high_god_name_2
+				PantheonTerm3 = berberist_high_god_name_3
+				GoodGodNames = {
+					berberist_high_god_name
+					HighGodNameAlternate
+					islam_good_god_the_most_gracious
+					islam_good_god_the_giver_of_peace
+					islam_good_god_the_one
+					barghawata_good_god_the_prophet
+					hamimist_good_god_hamim
+				}
+				DevilName = barghawata_devil_name
+				DevilNamePossessive = barghawata_devil_name_possessive
+			}
+			
+			holy_order_names = {
+				{ name = "holy_order_servants_of_akush" }
+				{ name = "holy_order_champions_of_hamim" }
+			}
+		}
+
+		kaduist = {  # kaduist - The Berberist religion of Kadu ibn Mu'arik al-Mawati
+			color=rgb { 215 187 38 }
+			icon = kaduist
+			religious_head = d_kaduist
+
+			holy_site = mila # First city taken by the Kaduists and in some sources their qibla
+			holy_site = nadjaf
+			holy_site = karbala
+			holy_site = medina
+			holy_site = jerusalem
+
+			#Tenet:
+			doctrine = tenet_unreformed_syncretism
+			doctrine = tenet_polyamory
+			doctrine = tenet_esotericism
+
+			#Doctrines:
+			doctrine = muhammad_succession_berberist_doctrine # Berberist
+			doctrine = islam_secondary_group_berberist_doctrine
+			doctrine = doctrine_temporal_head
+			doctrine = doctrine_deviancy_accepted
+			doctrine = doctrine_homosexuality_accepted
+			doctrine = doctrine_witchcraft_virtuous # From Berber Paganism
+			doctrine = doctrine_pilgrimage_encouraged
+
+			# Kaduist trait doctrine
+			doctrine = special_doctrine_is_kaduist_faith
+
+			#Kaduist Names - Includes the names of a few Kaduist figures
+			reserved_male_names = {
+				Kadu Mu_arik
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			localization = {			
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = kaduist_religious_head_title
+				ReligiousHeadTitleName = kaduist_religious_head_title_name
+				
+				GoodGodNames = {
+					islam_high_god_name
+					HighGodNameAlternate
+					islam_good_god_the_most_gracious
+					islam_good_god_the_giver_of_peace
+					islam_good_god_the_one
+					barghawata_good_god_the_prophet
+					kaduist_good_god_kadu
+				}
+			}
+			
+			holy_order_names = {
+				{ name = "holy_order_champions_of_kadu" }
+			}
+		}
+	}
+}

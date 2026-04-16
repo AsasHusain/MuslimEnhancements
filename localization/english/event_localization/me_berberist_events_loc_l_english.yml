@@ -1,0 +1,57 @@
+﻿l_english:
+ 
+ #War
+ berberist_invasion_cb:0 "[ATTACKER.GetFaith.GetAdjective] Invasion"
+ BERBERIST_INVASION_CB_NAME:0 "Seize All [de_jure|E] Lands"
+ BERBERIST_INVASION_CB_WAR_NAME:1 "$ORDER$ [ATTACKER.GetFaith.GetAdjective] Invasion for the [TITLE.GetBaseName]"
+ BERBERIST_INVASION_CB_WAR_NAME_BASE:0 "[ATTACKER.GetFaith.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ me_hamimist_invasion_name:0 "Ḥa-Mimist Invasion"
+ me_hamimist_invasion_army_title:0 "Ḥa-Mimist Army"
+ me_kaduist_invasion_name:0 "Kaduist Invasion"
+ me_kaduist_invasion_army_title:0 "Kaduist Army"
+ 
+ #Ha-Mimist Invasion
+ me_berberist_events.0001.t:0 "Prophet of the Ghomara"
+ me_berberist_events.0001.desc:0 "There have been reports coming in from the mountains near [GetTitleByKey('c_ceuta').GetNameNoTier] that among the Ghomara Berber tribes there is a man accompanied by witches and known by the name of 'Ḥa-Mim' has claimed prophethood, and proclaimed himself the leader of these tribes. This so-called prophet created his religion by combining Islamic tradition with folk practicies of the Ghomara, and claims to have recieved a revelation from God written in Berber.\n\nAlthough this has put some members of the court on edge, many are asserting that it is unlikely for these tribes to cause any real trouble for us due to their lack of resources and limited numbers."
+ me_berberist_events.0001.a:0 "We'll have to wait and see..."
+ me_berberist_events.0001.a.tt:0 "In the following year, the [hamimist.GetAdjective] invasion will take place for the title of [GetTitleByKey('d_rif').GetNameNoTier]"
+ 
+ me_berberist_events.0003.t:0 "The Birth of Ha-Mimism"
+ me_berberist_events.0003.desc:0 "Hundreds tribesmen have roll down from the mountains, setting their eyes on [GetTitleByKey('c_ceuta').GetNameNoTier], hoping to take it in the name of their leader and self-proclaimed prophet, Ḥa-Mim.\n\nThe religion which he has created is a mixture of Islamic traditions and Berber folk practicies, in which he claims to have received a revelation written in Berber rather than Arabic. It is also said that he is accompanied by two powerful witchs, his sister Dajju and aunt Taqit."
+ me_berberist_events.0003.a:0 "Those heretics will regret ever leaving their filthy mountains!"
+ me_berberist_events.0003.a.tt:0 "[hamimist_leader.GetShortUIName] has started a war against you for the Duchy of [GetTitleByKey('d_rif').GetNameNoTier]"
+ 
+ me_berberist_events.0004.t:0 "A Premature End"
+ me_berberist_events.0004.desc:0 "Ha-Mim, along with every follower of his who hasn't been killed or fled, is now in chains. With the entire Ha-Mimist mob decimated, it seems that their religion has ended before it ever began.\n\nNow comes the matter of what to do with the survivors, the public is calling for their heads and it seems a public execution is expected of me."
+ me_berberist_events.0004.a:0 "Prepare the chopping block."
+ me_berberist_events.0004.a.tt:0 "Every imprisoned Ha-Mimist will be executed."
+ me_berberist_events.0004.b:0 "Execute their leader, the rest can live... for now."
+ me_berberist_events.0004.c:0 "I'll keep them in the dungeons for now."
+ 
+ me_berberist_events.0005.t:0 "The Rise of Ha-Mimism"
+ me_berberist_events.0005.desc:0 "Ha-Mim ibn Mann-Allah, a Ghomara Berber who has proclaimed himself a prophet, has managed to establish himself in [GetTitleByKey('c_ceuta').GetNameNoTier]. In his religion, which mixes Islamic traditions with Berber folk practices, he claims to have received a revelation written in Berber rather than Arabic\n\nWith [GetTitleByKey('c_ceuta').GetNameNoTier] in their hands, his followers are certain that the enirety of North Africa will fall too."
+ me_berberist_events.0005.a:0 "Dirty infidels..."
+ me_berberist_events.0005.b:0 "@warning_icon! I wonder what they will do next..."
+ 
+ #Kaduist Invasion
+ me_berberist_events.0101.t:0 "The Kutama Boy-Prophet"
+ me_berberist_events.0101.desc:0 "There have been reports coming in of missionaries emerging from [GetTitleByKey('c_satif').GetNameNoTier] and preaching a new heresy, proclaiming a new prophet and permitting all kinds of sexual deviancies.\n\nTheir so-called prophet and mahdi is a young boy by the name of Kadu ibn Mu'arik, it would appear that he along with his followers are members of Kutama tribal confederation that live within the mountains and are known for their deviant folk practicies.\n\nAlthough this has put some members of the court on edge, many are asserting that it is unlikely for these tribes to cause any real trouble for us due to their lack of resources and limited numbers."
+ me_berberist_events.0101.a:0 "We'll have to wait and see..."
+ me_berberist_events.0101.a.tt:0 "In the following year, the [kaduist.GetAdjective] invasion will take place for the title of [GetTitleByKey('d_bejaia').GetNameNoTier]"
+ 
+ me_berberist_events.0103.t:0 "The Birth of Kaduism"
+ me_berberist_events.0103.desc:0 "Hundreds tribesmen have roll down from the mountains, setting their eyes on [GetTitleByKey('c_satif').GetNameNoTier] and hoping to take it in the name of their Mahdi, the boy whom they have proclaimed a prophet, [kaduist_leader.GetShortUIName].\n\nThis religion of theirs contains significant Shi'ite influnces and permits all kinds of sexual deviancies in the name of it's so-called prophet. The boy is accompanied by his father [kaduist_father.GetShortUIName] and two Kutama commanders are who spear-heading the Kaduist armies, as neither the boy nor his father have any martial experience."
+ me_berberist_events.0103.a:0 "Those heretics will regret ever leaving their filthy mountains!"
+ me_berberist_events.0103.a.tt:0 "[kaduist_leader.GetShortUIName] has started a war against you for the Duchy of [GetTitleByKey('d_bejaia').GetNameNoTier]"
+ 
+ me_berberist_events.0104.t:0 "A Premature End"
+ me_berberist_events.0104.desc:0 "Kadu, along with every follower of his who hasn't been killed or fled, is now in chains. With the entire Kaduist mob decimated, it seems that their religion has ended before it ever began.\n\nNow comes the matter of what to do with the survivors, the public is calling for their heads and it seems a public execution is expected of me."
+ me_berberist_events.0104.a:0 "Prepare the chopping block."
+ me_berberist_events.0104.a.tt:0 "Every imprisoned Kaduist will be executed."
+ me_berberist_events.0104.b:0 "Execute the boy, the rest can live for now."
+ me_berberist_events.0104.c:0 "I'll keep them in the dungeons for now."
+ 
+ me_berberist_events.0105.t:0 "The Rise of Kaduism"
+ me_berberist_events.0105.desc:0 "Kadu ibn Mu'arik, a youth who's followers have proclaimed the Mahdi and a prophet, has managed to establish himself in [GetTitleByKey('c_satif').GetNameNoTier]. His religion is a mixture of Shi'a Islam and Kutama folk practices and has his followers permitting all kinds of sexual deviancies in his name.\n\nWith [GetTitleByKey('c_satif').GetNameNoTier] in their hands, his followers are certain that the enirety of North Africa will fall too."
+ me_berberist_events.0105.a:0 "Dirty infidels..."
+ me_berberist_events.0105.b:0 "@warning_icon! I wonder what they will do next..."

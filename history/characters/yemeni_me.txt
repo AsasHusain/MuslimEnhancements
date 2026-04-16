@@ -1,0 +1,720 @@
+﻿## Sulayhids
+me_sulayhid_1 = {
+	name = "Abdullah"
+	dynasty = 590 # Sulayhids
+	religion = "ismaili"
+	culture = "yemeni"
+	father = yemeni0001
+	1015.6.11 = {
+		birth = yes
+		set_relation_friend = character:45035
+	}
+	1081.1.1 = {
+		death = yes
+	}
+}
+
+## Ziyadids - decendents of Ziyad ibn Abihi (more exist in yemeni.txt)
+me_ziyadid_001 = { # Ziyad 'Ibn Abihi', his true ancestery is disputed but he was acknowledged by Caliph Mu'awiya to be his half-brother
+	name = "Ziyad"
+	dynasty = 1042165 # Ziyadid
+	give_nickname = nick_ibn_abihi # Ibn Abihi (The Son of his Father) 
+	religion = "ashari"
+	culture = "bedouin"
+	trait = disputed_heritage
+#	trait = legitimized_bastard
+#	trait = bastard_founder
+	
+	father = 163028 # Abu Sufyan ibn Harb Umayyad (Disputed) [exists in bedouin.txt]
+	mother = me_ziyadid_002
+	622.1.1 = {
+		birth = yes
+	}
+	673.1.1 = {
+		death = yes
+	}
+}
+
+me_ziyadid_002 = { 
+	name = "Sumayyah"
+	female = yes
+	religion = "ashari"
+	culture = "bedouin"
+	
+	592.1.1 = {
+		birth = yes
+	}
+	652.1.1 = {
+		death = yes
+	}
+}
+
+me_ziyadid_003 = {
+	name = "Ubayd-Allah" # Also known as Abdullah
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	651.1.1 = {
+		birth = yes
+	}
+	686.1.1 = {
+		death = {
+			death_reason = death_battle # Killed by Ibn al-Ashtar
+		}
+	}
+}
+
+me_ziyadid_004 = {
+	name = "Abd_ar-Rahman"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	653.1.1 = {
+		birth = yes
+	}
+	710.1.1 = {
+		death = yes
+	}
+}
+
+me_ziyadid_005 = {
+	name = "Abbad"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	655.1.1 = {
+		birth = yes
+	}
+	718.1.1 = {
+		death = yes
+	}
+}
+
+me_ziyadid_006 = {
+	name = "Salm"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	645.1.1 = {
+		birth = yes
+	}
+	692.1.1 = {
+		death = yes
+	}
+}
+
+me_ziyadid_007 = {
+	name = "Muslim"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	646.1.1 = {
+		birth = yes
+	}
+	685.1.1 = {
+		death = {
+			death_reason = death_murder # Killed by Abdullah ibn Khazim while praying
+		}
+	}
+}
+
+me_ziyadid_008 = {
+	name = "Yazid"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	649.1.1 = {
+		birth = yes
+	}
+	684.1.1 = {
+		death = {
+			death_reason = death_battle # Killed in battle against the Turk Shahis of Kabul
+		}
+	}
+}
+
+me_ziyadid_009 = {
+	name = "Muharib"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_006 # Salm ibn Ziyad ibn Abihi
+	680.1.1 = {
+		birth = yes
+	}
+	735.1.1 = {
+		death = yes
+	}
+}
+
+me_ziyadid_010 = { # A Basra based historian and grandson of Salim
+	name = "Maslama"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "levantine"
+	
+	father = me_ziyadid_009 # Muharib ibn Salim ibn Ziyad ibn Abihi
+	710.1.1 = {
+		birth = yes
+	}
+	775.1.1 = { # Died between 765 -785
+		death = yes
+	}
+}
+
+me_ziyadid_011 = { 
+	name = "Abdullah"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	660.1.1 = {
+		birth = yes
+	}
+	740.1.1 = { 
+		death = yes
+	}
+}
+
+me_ziyadid_012 = { 
+	name = "Ziyad"
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_011 # Abdullah ibn Ziyad ibn Abihi
+	720.1.1 = {
+		birth = yes
+	}
+	790.1.1 = { 
+		death = yes
+	}
+}
+
+me_ziyadid_013 = { 
+	name = "Ramlah"
+	female = yes
+	dynasty = 1042165 # Ziyadid
+	religion = "ashari"
+	culture = "bedouin"
+	
+	father = me_ziyadid_001 # Ziyad ibn Abihi
+	657.1.1 = {
+		birth = yes
+	}
+	675.1.1 = { 
+		add_spouse = me_umayyads_029 # Umayyah ibn Abdullah ibn Khalid al-Umawi (found in bedouin_me.txt)
+	}
+	715.1.1 = { 
+		death = yes
+	}
+}
+
+## Banu Sumadiḥ - Kinda cadet branch 
+me_sumadihid_001 = {
+	name = "Zakariyah"
+	dynasty_house = house_banu_sumadih # House Banu Sumadih
+	religion = muwalladi
+	culture = yemeni
+
+	father = 73252 # Rafi' ad-Dawla 'al-Hajib' Yahya (found in yemeni.txt)
+
+	1095.1.1 = {
+		birth = yes
+	}
+	1125.1.1 = {
+		death = yes
+	}
+}
+
+me_sumadihid_002 = {
+	name = "Muhammad"
+	dynasty_house = house_banu_sumadih # House Banu Sumadih
+	religion = muwalladi
+	culture = yemeni
+
+	father = 73251 # al-Wathiq 'Izz ad-Dawlah' Abdullah (found in yemeni.txt)
+
+	1090.1.1 = {
+		birth = yes
+	}
+	1120.1.1 = {
+		death = yes
+	}
+}
+
+me_sumadihid_003 = {
+	name = "Muhammad"
+	dynasty_house = house_banu_sumadih # House Banu Sumadih
+	religion = muwalladi
+	culture = yemeni
+
+	father = me_sumadihid_004
+
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+me_sumadihid_004 = {
+	name = "Abd-al-Rahman"
+	dynasty_house = house_banu_sumadih # House Banu Sumadih
+	religion = muwalladi
+	culture = yemeni
+
+	father = me_sumadihid_005
+
+	900.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes
+	}
+}
+
+me_sumadihid_005 = {
+	name = "Sumadih"
+	dynasty_house = house_me_Tujibid # Banu Tujib
+	religion = muwalladi
+	culture = yemeni
+
+	father = 73839 # [found in yemeni.txt] Assuming this is Abd al-Rahman ibn Abdullah, the common ancestor between the Sumadihids and the Zaragoza Tujibids (some sources do not mention Abdul-Aziz and instead atribute Abd al-Rahman's parentage to Abdullah)
+	865.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+
+## Rassids
+me_rassid_001 = {
+	name = "al-Qasim"
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = 159406
+	855.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_002 = {
+	name = "Ahmad"
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = me_rassid_001
+	890.1.1 = {
+		birth = yes
+	}
+	950.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_003 = {
+	name = "Isma_il" # Known by the kunya of Abi al-Barakat 
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = me_rassid_002
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_004 = {
+	name = "Ahmad"
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = me_rassid_003
+	970.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_005 = {
+	name = "al-Qasim"
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = me_rassid_004
+	1000.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_006 = {
+	name = "Abdullah"
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = me_rassid_005
+	1030.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_007 = {
+	name = "Malikah" # Mother of Zayidi Imam al-Mutawakkil Ahmad
+	female = yes
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+
+	father = me_rassid_006
+	1065.1.1 = {
+		birth = yes
+	}
+	1125.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_008 = {
+	name = "Isma_il" # Isma'il ibn al-Qasim, Resided in Egypt
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "bedouin"
+	trait = sayyid
+
+	father = 159397 # al-Qasim ar-Rassi
+	mother = me_rassid_009
+	817.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_009 = {
+	name = "Mu_nisah" # Mu'nisah, Maghrebi concubine and mother of Isma'il ibn al-Qasim
+	female = yes
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "baranis"
+
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_010 = {
+	name = "Musa" # Musa ibn al-Qasim, Resided in Egypt
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "bedouin"
+	trait = sayyid
+
+	father = 159397 # al-Qasim ar-Rassi
+	820.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_011 = {
+	name = "Yahya" # Yahya ibn al-Qasim, Resided in ar-Ramla, Palestine
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "bedouin"
+	trait = sayyid
+
+	father = 159397 # al-Qasim ar-Rassi
+	mother = me_hashimid_072
+	822.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_012 = {
+	name = "Sulayman" # Sulayman ibn al-Qasim, Resided in Medina
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "bedouin"
+	trait = sayyid
+
+	father = 159397 # al-Qasim ar-Rassi
+	825.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_013 = {
+	name = "al-Hasan" # al-Hasan ibn al-Qasim, Resided in Medina
+	dynasty = 576 # Rassids
+	religion = "zayidi"
+	culture = "bedouin"
+	trait = sayyid
+
+	father = 159397 # al-Qasim ar-Rassi
+	827.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+
+me_rassid_014 = {
+	name = "Ali" # Ali ibn al-Husayn ibn al-Qasim, mother was a concubine, resided in Sa'dah, Yemen
+	dynasty = 576
+	religion = "zayidi"
+	culture = "yemeni"
+	trait = sayyid
+	
+	father = 159398
+	855.1.1 = {
+		birth = yes
+	}
+	915.1.1 = {
+		death = yes
+	}
+}
+
+## Tayyibi Da'is
+me_tayyibi_001 = {
+	name = "Dhu_ayb" # Dhu'ayb ibn Musa, First Tayyibi Da'i (1138-1151)
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	father = me_tayyibi_002
+	1100.1.1 = {
+		birth = yes
+	}
+	1151.4.29 = {
+		death = yes
+	}
+}
+
+me_tayyibi_002 = {
+	name = "Musa"
+	dynasty = yemeni_hamdanid
+	religion = ismaili
+	culture = yemeni
+
+	1070.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_003 = {
+	name = "Ibrahim" # Ibrahim ibn al-Husayn, Second Tayyibi Da'i (1151-1162)
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	father = me_tayyibi_004
+	1110.1.1 = {
+		birth = yes
+	}
+	1162.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_004 = {
+	name = "al-Husayn"
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	father = me_tayyibi_005
+	1090.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_005 = {
+	name = "Abi_as-Sa_d"
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	1070.1.1 = {
+		birth = yes
+	}
+	1120.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_006 = {
+	name = "Hatim" # Hatim ibn Ibrahim, Third Tayyibi Da'i (1162-1199)
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+	trait = education_learning_3
+
+	father = me_tayyibi_003
+	1130.1.1 = {
+		birth = yes
+	}
+	1199.11.9 = {
+		death = yes
+	}
+}
+
+me_tayyibi_007 = {
+	name = "Ali" # Ali ibn Hatim, Fourth Tayyibi Da'i (1162-1199)
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	father = me_tayyibi_006
+	1160.1.1 = {
+		birth = yes
+	}
+	1209.5.31 = {
+		death = yes
+	}
+}
+
+me_tayyibi_008 = {
+	name = "Muhammad" # Muhammad ibn Tahir al-Harithi, Ma'dhun al-Da'wat til 1188
+	dynasty = me_harithi_dynasty # al-Harithi
+	religion = tayyibi
+	culture = yemeni
+	trait = education_learning_3
+
+	father = me_tayyibi_009
+	1130.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = me_tayyibi_006
+	}
+	1188.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_009 = {
+	name = "Tahir"
+	dynasty = me_harithi_dynasty # al-Harithi
+	religion = tayyibi
+	culture = yemeni
+
+	1100.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_010 = {
+	name = "Ali" # Ali ibn Handhalah, Sixth Tayyibi Da'i (1215-1229)
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	father = me_tayyibi_011
+	1170.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = me_tayyibi_006
+	}
+	1229.2.8 = {
+		death = yes
+	}
+}
+
+me_tayyibi_011 = {
+	name = "Handhalah"
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	father = me_tayyibi_012
+	1140.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = me_tayyibi_006
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_tayyibi_012 = {
+	name = "Abi_Salim"
+	dynasty = yemeni_hamdanid
+	religion = tayyibi
+	culture = yemeni
+
+	1110.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}

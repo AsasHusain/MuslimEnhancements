@@ -1,0 +1,94 @@
+﻿ziyadid_lineage = {
+	type = qurashi_lineage
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = ziyadid_lineage_legend
+		}
+		dynasty = dynasty:1042165 # Ziyadid
+		religion = religion:islam_religion
+	}
+	is_valid = {
+		prestige_level >= medium_prestige_level
+	}
+
+	chronicle = ME_ancestral_glory
+	chronicle_properties = {
+		ancestor = character:me_ziyadid_001 # Ziyad 'Ibn Abihi'
+		title = title:k_yemen
+	}
+}
+
+makhzumi_lineage = {
+	type = qurashi_lineage
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = makhzumi_lineage_legend
+		}
+		dynasty = dynasty:1022241 # Makhzumis of Shewa
+		religion = religion:islam_religion
+	}
+	is_valid = {
+		prestige_level >= medium_prestige_level
+	}
+
+	chronicle = ME_ancestral_glory
+	chronicle_properties = {
+		ancestor = character:me_makhzumi_031 # Wudd ibn Hisham al-Makhzumi
+		title = title:k_adal
+	}
+}
+
+idrisid_legacy = {
+	type = me_legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = idrisid_legacy_legend
+		}
+		house = house:house_hammudid
+	}
+	is_valid = {
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ME_ancestral_glory
+	chronicle_properties = {
+		ancestor = character:159501 # Idris ibn Abdullah, Founder of the Idrisids
+		title = title:k_maghreb
+	}
+}
+
+himyarite_heritage = {
+	type = me_legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = himyarite_heritage_legend
+		}
+		OR = {
+			culture = { has_cultural_pillar = language_sayhadic } # For Himyari speakimg cultures
+			has_trait = sanhaja
+			has_trait = kutama
+			has_trait = hawwara
+			dynasty = dynasty:9575 # Salihids of Nekor
+		}
+	}
+	is_valid = {
+		is_playable_character = yes
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ME_ancient_people
+	chronicle_properties = {
+		culture = culture:himyarite
+		title = title:k_yemen
+		original_region = geographical_region:ghw_region_arabia ### should replace with a yemen only GR eventually
+	}
+}

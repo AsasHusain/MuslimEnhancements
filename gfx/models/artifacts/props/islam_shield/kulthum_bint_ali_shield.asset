@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "kulthum_bint_ali_shield_mesh"
+	file = "kulthum_bint_ali_shield.mesh"
+
+	meshsettings = {
+		name = "kulthum_bint_ali_shieldShape"
+		index = 0
+		texture_diffuse = "kulthum_bint_ali_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "kulthum_bint_ali_shield_entity"
+	pdxmesh = "kulthum_bint_ali_shield_mesh"
+}

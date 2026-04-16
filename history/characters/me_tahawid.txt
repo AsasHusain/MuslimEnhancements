@@ -1,0 +1,28 @@
+﻿########
+##The above section is for related characters essential for the family tree ^
+########
+
+attahawi001 = { # Abu Ja'far Ahmad at-Tahawi, the scholar
+	name = "Ahmad"
+	dynasty = me_tahawi
+	culture = "egyptian"
+	religion = "ashari"
+
+	diplomacy = 9
+	martial = 3
+	stewardship = 3
+	intrigue = 9
+	learning = 21
+	prowess = 2
+	
+	trait = intellect_good_3
+	
+#	father = attahawi002
+
+	853.4.19 = {
+		birth = 853.4.19
+	}
+	933.11.5 = {
+		death = 933.11.5
+	}
+}

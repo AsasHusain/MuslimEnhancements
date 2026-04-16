@@ -1,0 +1,5 @@
+﻿disgraced_by_turks = {
+	opinion = -50
+	years = 10
+	decaying = yes
+}

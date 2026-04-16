@@ -1,0 +1,190 @@
+﻿name_list_punjabi = {
+
+	cadet_dynasty_names = { #These are largely superceded by script in found_cadet_house_decision_effect when new cadet branches are formed using the decision.
+		"dynn_Vopyadeva"
+		"dynn_Dakhinpara"
+		"dynn_Shina"
+		"dynn_Makpon"
+		"dynn_Hunza"
+		"dynn_Oddiyana"
+		"dynn_Katoch"
+		"dynn_Kutumbi"
+		"dynn_Divira"
+		"dynn_Patola_Sahi"
+		"dynn_Darel"
+		{ "dynn_Agarwal" }
+		{ "dynn_Ahluwalia" }
+		{ "dynn_Ahuja" }
+		{ "dynn_Anwer" }
+		{ "dynn_Arora" }
+		{ "dynn_Ashiq" }
+		{ "dynn_Bajwa" }
+		{ "dynn_Bakshi" }
+		{ "dynn_Bal" }
+		{ "dynn_Bansal" }
+		#{ "dynn_Basra" }
+		{ "dynn_Batra" }
+		{ "dynn_Bawa" }
+		{ "dynn_Begum" }
+		{ "dynn_Bhagat" }
+		{ "dynn_Bhalli" }
+		{ "dynn_Bhasin" }
+		{ "dynn_Bhatti" }
+		{ "dynn_Bhullar" }
+		{ "dynn_Butt" }
+		{ "dynn_Chand" }
+		{ "dynn_Chander" }
+		{ "dynn_Chandia" }
+		{ "dynn_Cheema" }
+		{ "dynn_Chopra" }
+		{ "dynn_Dhaliwal" }
+		{ "dynn_Gautam" }
+		{ "dynn_Gopal" }
+		{ "dynn_Gul" }
+		{ "dynn_Haider" }
+		{ "dynn_Jahangir" }
+		{ "dynn_Kalsi" }
+		{ "dynn_Kapur" }
+		{ "dynn_Kazim" }
+		{ "dynn_Khalsa" }
+		{ "dynn_Landa" }
+		{ "dynn_Madanpotra" }
+		{ "dynn_Mahi" }
+		{ "dynn_Masih" }
+		{ "dynn_Mehta" }
+		{ "dynn_Nakai" }
+		{ "dynn_Nanda" }
+		{ "dynn_Parvez" }
+		{ "dynn_Pervaiz" }
+		{ "dynn_Randhawa" }
+		{ "dynn_Sachdeva" }
+		{ "dynn_Sahni" }
+		{ "dynn_Sandhu" }
+		{ "dynn_Sarai" }
+		{ "dynn_Sawhney" }
+		{ "dynn_Sayal" }
+		{ "dynn_Siddiq" }
+		{ "dynn_Sidhu" }
+		{ "dynn_Tandon" }
+		{ "dynn_Tripathi" }
+		{ "dynn_Uppal" }
+		{ "dynn_Walia" }
+	}
+
+	dynasty_names = {
+		"dynn_Vopyadeva"
+		"dynn_Dakhinpara"
+		"dynn_Shina"
+		"dynn_Makpon"
+		"dynn_Hunza"
+		"dynn_Oddiyana"
+		"dynn_Katoch"
+		"dynn_Kutumbi"
+		"dynn_Divira"
+		"dynn_Patola_Sahi"
+		"dynn_Darel"
+		"dynn_Varha"
+		{ "dynn_Agarwal" }
+		{ "dynn_Ahuja" }
+		{ "dynn_Anwer" }
+		{ "dynn_Arora" }
+		{ "dynn_Ashiq" }
+		{ "dynn_Bajwa" }
+		{ "dynn_Bakshi" }
+		{ "dynn_Bal" }
+		{ "dynn_Bansal" }
+		#{ "dynn_Basra" }
+		{ "dynn_Batra" }
+		{ "dynn_Bawa" }
+		{ "dynn_Begum" }
+		{ "dynn_Bhagat" }
+		{ "dynn_Bhalli" }
+		{ "dynn_Bhasin" }
+		{ "dynn_Bhatti" }
+		{ "dynn_Bhullar" }
+		{ "dynn_Butt" }
+		{ "dynn_Chand" }
+		{ "dynn_Chander" }
+		{ "dynn_Chandia" }
+		{ "dynn_Cheema" }
+		{ "dynn_Chopra" }
+		{ "dynn_Dhaliwal" }
+		{ "dynn_Gautam" }
+		{ "dynn_Gopal" }
+		{ "dynn_Kalsi" }
+		{ "dynn_Kapur" }
+		{ "dynn_Kazim" }
+		{ "dynn_Khalsa" }
+		{ "dynn_Landa" }
+		{ "dynn_Madanpotra" }
+		{ "dynn_Mahi" }
+		{ "dynn_Masih" }
+		{ "dynn_Mehta" }
+		{ "dynn_Nakai" }
+		{ "dynn_Nanda" }
+		{ "dynn_Randhawa" }
+		{ "dynn_Sachdeva" }
+		{ "dynn_Sahni" }
+		{ "dynn_Sandhu" }
+		{ "dynn_Sarai" }
+		{ "dynn_Sawhney" }
+		{ "dynn_Sayal" }
+		{ "dynn_Siddiq" }
+		{ "dynn_Sidhu" }
+		{ "dynn_Tandon" }
+		{ "dynn_Tripathi" }
+		{ "dynn_Uppal" }
+		{ "dynn_Walia" }
+	}
+
+	male_names = {
+		Ajit Ajitapida Anangapida Ananta Asi Avantivarma 
+		Bag Bhagwant Bhiksacara Bhoja Bhuvana Budh 
+		Cakravarman Chand Chandrapida Charat Cippatajayapida 
+		Damodar Dasu Datu Dayaram Durlabhavardhana 
+		Gopalavarma Govinda Gunga 
+		Haidaracandra Hari Hariraja Harsa 
+		Jagadeva Jahm Jairam Jassaka Jassaraja Jayadeva Jayapida Jayasimha Jetha Amarji Rajpal
+		Kad Kalasa Kalyan Kehar Kharak Ksitiraja Kuvalayapida 
+		Laksmadeva Lalitaditya-Muktapida Lav Laxman Lothana
+		Mahadev MahipalMalla Mang Mohan Mohri 
+		NarayanNirjitavarman Nodha 
+		Paramanuka Partha Prithichand Prithvi Prithvyapida 
+		Rajadeva Ramacandra Ramadeva Ranjit RanjorRincana 
+		Sahdev Salhana Samgrama Samgramadeva Samgramapida  Simhadeva Simharaja Srichand Suhadeva Sukhavaraman Sukhavarma Suravarman Surgandha Sussala 
+		Tarapida Thakur Tribhuvanapida 
+		Uccala Udayanadeva Udayaraja Unmattavanti Uppa Utpalaka Utpalapida 
+		Vajraditya Vantideva Vigraha Vuppadeva
+	}
+	female_names = {
+		Aadhya Aarna Amro Anjali Anokhi Anu Anup 
+		Bhama Bhani 
+		Chakrika Chara Chhaya
+		Dani Darika Devi Didda  Durga 
+		Edha Estaa
+		Falak
+		Gayathri Geetika GitikaGujri Gulika
+		Indira Ishani
+		Jeevika Jiera Jodhabai 
+		Kalyanadevi Khivi Kishan Kotadevi 
+		Lachmi Lavanthika Lavi Liyana
+		Maira Mihika
+		Nanaki 
+		Padma Pallavi Parnika Parvati Pihu Priya
+		Ramo Ridhi 
+		Sabhirai Sahaja Saira Sangiya Suji Sulakhni Sundari Surgandha   
+		Thitiksha Tripta Turvi
+		Ullupi Utara Utkarsha   
+		Veda Venya Vidya Vimala 
+		Yashica
+	}
+	
+	founder_named_dynasties = yes
+	
+	
+
+	mercenary_names = {
+		{ name = "mercenary_company_company_of_the_punjab" }
+		{ name = "mercenary_company_host_of_sangala" }
+	}
+}

@@ -1,0 +1,226 @@
+﻿
+namespace = me_laamp_intro
+
+me_laamp_intro.0001 = {
+		
+	title = me_laamp_intro.0001.title
+	desc = me_laamp_intro.0001.desc
+	theme = laamp
+	
+	right_portrait = {
+		character = character:me_ea_cat_001
+		animation = personality_bold
+	}
+	
+	left_portrait = {
+		character = character:me_ea_cat_002
+		animation = personality_honorable
+	}
+	
+	lower_left_portrait =  character:me_ea_cat_003
+	lower_center_portrait =  character:me_ea_cat_004
+	lower_right_portrait =  character:me_ea_cat_005
+	
+	immediate = {
+		character:me_ea_cat_001 = { start_cat_story_cycle_effect = yes }
+		character:me_ea_cat_002 = { start_cat_story_cycle_effect = yes }
+		character:me_ea_cat_003 = { start_cat_story_cycle_effect = yes }
+		character:me_ea_cat_004 = { start_cat_story_cycle_effect = yes }
+		character:me_ea_cat_005 = { start_cat_story_cycle_effect = yes }
+		character:me_ea_cat_006 = { start_cat_story_cycle_effect = yes }
+		
+	}
+	
+	option = { # Ya'qub 'Qamar ad-Din' Dibyaza
+		name = me_laamp_intro.0001.a
+		set_player_character = character:me_ea_cat_001
+	}
+	
+	option = { # Khalid Kashmiri
+		name = me_laamp_intro.0001.b
+		
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = bisbis
+			add_claim_on_loss = yes
+		}
+		title:d_laamp_me_ea_cats = {
+			change_title_holder = {
+				holder = character:me_ea_cat_002
+				change = scope:bisbis
+			}
+		}
+		resolve_title_and_vassal_change = scope:bisbis
+		
+		set_player_character = character:me_ea_cat_002
+		
+		hidden_effect = {
+			title:d_laamp_me_ea_cats.holder = {
+				add_courtier = character:me_ea_cat_001
+				add_courtier = character:me_ea_cat_003
+				add_courtier = character:me_ea_cat_004
+				add_courtier = character:me_ea_cat_005
+				add_courtier = character:me_ea_cat_006
+			}
+		}
+	}
+	
+	option = { # Khidr Karawita
+		name = me_laamp_intro.0001.c
+		
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = bisbis
+			add_claim_on_loss = yes
+		}
+		title:d_laamp_me_ea_cats = {
+			change_title_holder = {
+				holder = character:me_ea_cat_003
+				change = scope:bisbis
+			}
+		}
+		resolve_title_and_vassal_change = scope:bisbis
+		
+		set_player_character = character:me_ea_cat_003
+		
+		hidden_effect = {
+			title:d_laamp_me_ea_cats.holder = {
+				add_courtier = character:me_ea_cat_001
+				add_courtier = character:me_ea_cat_002
+				add_courtier = character:me_ea_cat_004
+				add_courtier = character:me_ea_cat_005
+				add_courtier = character:me_ea_cat_006
+			}
+		}
+	}
+	
+	option = { # Ismail Ahmad Kanabawi
+		name = me_laamp_intro.0001.d
+		
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = bisbis
+			add_claim_on_loss = yes
+		}
+		title:d_laamp_me_ea_cats = {
+			change_title_holder = {
+				holder = character:me_ea_cat_004
+				change = scope:bisbis
+			}
+		}
+		resolve_title_and_vassal_change = scope:bisbis
+		
+		set_player_character = character:me_ea_cat_004
+		
+		hidden_effect = {
+			title:d_laamp_me_ea_cats.holder = {
+				add_courtier = character:me_ea_cat_001
+				add_courtier = character:me_ea_cat_002
+				add_courtier = character:me_ea_cat_003
+				add_courtier = character:me_ea_cat_005
+				add_courtier = character:me_ea_cat_006
+			}
+		}
+	}
+	
+	option = { # Uthman Abdul-Jalil Sisha
+		name = me_laamp_intro.0001.e
+		
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = bisbis
+			add_claim_on_loss = yes
+		}
+		title:d_laamp_me_ea_cats = {
+			change_title_holder = {
+				holder = character:me_ea_cat_005
+				change = scope:bisbis
+			}
+		}
+		resolve_title_and_vassal_change = scope:bisbis
+		
+		set_player_character = character:me_ea_cat_005
+		
+		hidden_effect = {
+			title:d_laamp_me_ea_cats.holder = {
+				add_courtier = character:me_ea_cat_001
+				add_courtier = character:me_ea_cat_002
+				add_courtier = character:me_ea_cat_003
+				add_courtier = character:me_ea_cat_004
+				add_courtier = character:me_ea_cat_006
+			}
+		}
+	}
+	
+	option = { # Muhammad Sumbul
+		name = me_laamp_intro.0001.f
+		
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = bisbis
+			add_claim_on_loss = yes
+		}
+		title:d_laamp_me_ea_cats = {
+			change_title_holder = {
+				holder = character:me_ea_cat_006
+				change = scope:bisbis
+			}
+		}
+		resolve_title_and_vassal_change = scope:bisbis
+		
+		set_player_character = character:me_ea_cat_006
+		
+		hidden_effect = {
+			title:d_laamp_me_ea_cats.holder = {
+				add_courtier = character:me_ea_cat_001
+				add_courtier = character:me_ea_cat_002
+				add_courtier = character:me_ea_cat_003
+				add_courtier = character:me_ea_cat_004
+				add_courtier = character:me_ea_cat_005
+			}
+		}
+	}
+}
+
+# 1178 Buhturids (Arslanids)
+me_laamp_intro.0002 = {
+	title = me_laamp_intro.0002.title
+	desc = me_laamp_intro.0002.desc
+	theme = laamp
+	
+#	right_portrait = {
+#		character = character:me_lakhmid_065
+#		animation = grief
+#	}
+	left_portrait = {
+		character = character:me_lakhmid_066
+		animation = grief
+	}
+	
+	immediate = {
+		character:me_lakhmid_063 = { save_scope_as = buhtur }
+		character:me_lakhmid_065 = { save_scope_as = ali }
+		character:me_lakhmid_066 = { save_scope_as = hajji }
+		character:226000 = { save_scope_as = saladin }
+	}
+	
+	option = { # Play as 'Sharaf ud-Dawlah' Ali 
+		name = me_laamp_intro.0002.a
+		custom_tooltip = me_laamp_intro.0002.tt
+	}
+	
+	option = { # Play as 'Jalal ud-Din' Hajji
+		name = me_laamp_intro.0002.b
+		character:me_lakhmid_066 = {
+			get_title = title:d_laamp_me_buhturid
+			give_nickname = nick_jamal_ud_din
+		}
+		set_player_character = character:me_lakhmid_066
+		hidden_effect = {
+			character:me_lakhmid_066 = {
+				add_courtier = character:me_lakhmid_065
+			}
+		}
+		custom_tooltip = me_laamp_intro.0002.tt
+	}
+}

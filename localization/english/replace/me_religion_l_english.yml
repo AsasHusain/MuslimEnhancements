@@ -1,0 +1,114 @@
+﻿l_english:
+
+ #Decisions
+ destroy_sunni_decision_effect_tooltip:0 "The Sunni Caliphate will be destroyed"
+ restore_sunni_caliphate_decision:0 "Restore the Sunni Caliphate"
+ restore_sunni_caliphate_decision_confirm:0 "I alone will lead the struggle!"
+ restore_sunni_caliphate_decision_desc:0 "If a righteous ruler reclaims the holy cities from the clutches of the infidels, the Caliphate could be restored and unite the followers of Allah under a single cause."
+ restore_sunni_caliphate_decision_tooltip:1 "You will become the Sunni Caliph"
+ restore_sunni_caliphate_decision_effect_tooltip:1 "You will become the Sunni Caliph"
+ 
+ #Doctrines
+ muhammad_succession_sunni_doctrine_desc:0 "Abu Bakr was chosen by the Ummah as it's first leader, followed by Umar, Uthman, and then Ali, with all four serving as the heavily revered 'Rightly-Guided Caliphs'."
+ muhammad_succession_shia_doctrine_desc:0 "Ali was named by Muhammad as the leader of the Ummah, only the Prophet's descendants through him can lead the Ummah and only through him can the lineage of leadership be traced."
+ muhammad_succession_muhakkima_doctrine_desc:0 "All four caliphs were chosen by the Muslims as their leaders by the process of Shura, hence their rule is legitimate, but Uthman's deviancies and Ali's acceptance of arbitration during the First Fitna goes against the will of Allah, which renders them both as sinners and disbelievers!"
+ muhammad_succession_zandaqa_doctrine_desc:0 "Though we may trace the line of the Prophet correctly or not matters little to other Muslims, for our beliefs mark us as outcasts regardless. Let the sinners call our beliefs Zandaqa (Heresy): we know the truth!"
+ doctrine_monotheist_name: "Exclusive Divinity"
+ doctrine_monotheist_desc: "Only one god or group of gods is worshipped. Other so-called 'gods' are at best empty idols, and at worst attempts by some malign deceiver to tempt the faithful away from proper worship of the divine."
+ doctrine_polytheist_name: "Polytheistic Divinity"
+ 
+ #Ithna Ash'ari
+ imami:0 "Ithna 'Asharism"
+ imami_adj:0 "Ithna 'Ashari"
+ imami_adherent:0 "Twelver Shia"
+ imami_adherent_plural:0 "Twelver Shi'ites"
+ imami_desc:0 "The Ithna 'Ashari, otherwise known as Twelver Shi'ites or Imamis, believe that the spiritual and political successors to the Prophet Muhammad are the twelve infallible Imams, starting with Imam Ali. These Imams are free of worldly desires and practice the utmost responsibility in their task of upholding Islam. Ithna 'Asharis believe that the twelfth Imam, Imam Mahdi will one day return to Earth and bring justice to this world."
+ 
+ #Hafizi
+ hafizi:0 "Hafizism"
+ hafizi_adj:0 "Hafizi"
+ hafizi_adherent:0 "Hafizi"
+ hafizi_adherent_plural:0 "Hafizis"
+ hafizi_desc:0 "Hafizism, also known as Majidism, holds that the rightful succession of the Fatimid Caliphate continued not through at-Tayyib, but through Abd al-Majid al-Hafiz, the cousin of al-Amir. Rejecting the notion of occultation, the Hafizis maintained that legitimacy lay in continuity and presence, recognizing al-Hafiz as both Caliph and Imam, and preserving the Fatimid line through his descendants."
+ 
+ #Nizari
+ nizari:0 "Nizarism"
+ nizari_adj:0 "Nizari"
+ nizari_adherent:0 "Nizari"
+ nizari_adherent_plural:0 "Nizaris"
+ nizari_desc:0 "Nizarism is a rationalist branch of Isma'ili Shi'ism that emphasizes the role of intellect in interpreting the Qur’an and hadith. The Nizaris uphold a hereditary line of Imams descending from Ali, believing the Imam to be the divinely guided leader of the Ummah. They reject the legitimacy of al-Musta'li’s succession, affirming instead that true authority passed to his relative, Nizar ibn al-Mansur."
+ 
+ #Alevism
+ alevi_desc:0 "Alevism is a heterodox Shi'ite branch which incorporates Tengrist beliefs. Believing that the Quran is mainly metaphorical and its real meaning is known only to Ali, Alevis take the Twelve Imams and the teachings of Turkic spiritual elders recorded in the Buyruk scriptures as their main source of theology. Allah, also known as Hakk, is the ultimate truth, prophet Muhammad and Imam Ali are reflections of His light on the world, therefore Ali is Muhammad, and Muhammad is Ali; they are one."
+ alevi_house_of_worship:0 "cemevi"
+ alevi_house_of_worship_plural:0 "cemevis"
+ 
+ #Maturidi
+ maturidi_desc:0 "A rationalist theology which espouses that ethics have an objective existence, and that there is a harmonious blend of reason and revelation and that understanding God's attributes is possible through both sources."
+
+ #Quranist
+ quranist_desc:0 "A movement within Islam that accepts only the Quran as a source of divine wisdom and rejects the hadith and scholarly opinions, arguing that everyone can interpret the Quran on their own without any supplements."
+
+ #Mu'tazila
+ mutazila_desc:0 "A rationalist school of theology that prioritizes reason in understanding religious concepts and asserts that the Quran is #EMP not#! eternally co-existing with God, and therefore can be re-interpreted."
+ 
+ #Majority Sunni
+ ashari:0 "Ahl as-Sunnah"
+ ashari_adj:0 "Sunni"
+ ashari_adherent:0 "Sunni"
+ ashari_adherent_plural:0 "Sunnis"
+ ashari_desc:0 "The term "Ahl as-Sunnah" encompasses the oldest forms of classical Sunnism; Atharism and Ash'arism. It's beliefs are built upon the idea of strict adherance to the 'Sunnah' or traditions of Prophet Muhammad, which are passed down through the Hadiths by his companions."
+
+# Ibadi
+ d_ibadi:0 "Ibadi Imamate"
+ d_ibadi_article:0 "the "
+ d_ibadi_adj:0 "Ibadi"
+ 
+ #Hafizi
+ d_hafizi:0 "Hafizi Caliphate"
+ d_hafizi_article:0 "the "
+ d_hafizi_adj:0 "Hafizi"
+ 
+ #Nizari
+ d_nizari:0 "Nizari Imamate"
+ d_nizari_adj:0 "Nizari"
+ d_nizari_article:0 "the "
+ 
+ #Zayidi
+ d_zayidi:0 "Zayidi Imamate"
+ d_zayidi_adj:0 "Alid"
+ d_zayidi_article:0 "the "
+ 
+ #Ismaili
+ d_ismaili:0 "Ismaili Imamate"
+ d_ismaili_adj:0 "Ismaili"
+ d_ismaili_article:0 "the "
+ 
+ d_shiite:0 "Shi'a Caliphate"
+ d_shiite_adj:0 "Caliphal"
+ d_shiite_article:0 "the "
+ 
+ #Ikhtilafi
+ d_ghulat:0 "Ikhtilafi Imamate"
+ d_ghulat_adj:0 "Ikhtilafi"
+ d_ghulat_article:0 "the "
+ 
+ #Sunni
+ d_sunni:0 "Sunni Caliphate"
+ d_sunni_adj:0 "Caliphal"
+ d_sunni_article:0 "the "
+ 
+ #Ithna 'Ashari
+ d_imami:0 "Twelver Imamate"
+ d_imami_adj:0 "Ithna 'Ashari"
+ d_imami_article:0 "the "
+ 
+ #Masmudi
+ d_masmudi:0 "Almohadi Caliphate"
+ d_masmudi_adj:0 "Caliphal"
+ d_masmudi_article:0 "the "
+ 
+ #Muwalladi
+ d_muwalladi:0 "Muwalladi Caliphate"
+ d_muwalladi_adj:0 "Caliphal"
+ d_muwalladi_article:0 "the "

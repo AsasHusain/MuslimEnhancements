@@ -1,0 +1,215 @@
+﻿test_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "test_shield_entity" }
+
+}
+
+abu_bakr_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abu_bakr_shield_entity" }
+
+}
+
+umar_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "umar_shield_entity" }
+
+}
+
+uthman_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "uthman_shield_entity" }
+
+}
+
+ali_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "ali_shield_entity" }
+
+}
+
+muawiyah_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "muawiyah_shield_entity" }
+
+}
+
+abu_sufyan_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abu_sufyan_shield_entity" }
+
+}
+
+abdullah_ibn_uthman_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abdullah_ibn_uthman_shield_entity" }
+
+}
+
+umm_habiba_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "umm_habiba_shield_entity" }
+
+}
+
+zaynab_bint_jahsh_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "zaynab_bint_jahsh_shield_entity" }
+
+}
+
+fatima_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "fatima_shield_entity" }
+
+}
+
+zaynab_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "zaynab_shield_entity" }
+
+}
+
+umm_kulthum_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "umm_kulthum_shield_entity" }
+
+}
+
+ruqayya_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "ruqayya_shield_entity" }
+
+}
+
+hasan_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "hasan_shield_entity" }
+
+}
+
+husayn_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "husayn_shield_entity" }
+
+}
+
+zaynab_bint_ali_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "zaynab_bint_ali_shield_entity" }
+
+}
+
+kulthum_bint_ali_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "kulthum_bint_ali_shield_entity" }
+
+}
+
+abdullah_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abdullah_shield_entity" }
+
+}
+
+abdulmutalib_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abdulmutalib_shield_entity" }
+
+}
+
+abbas_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abbas_shield_entity" }
+
+}
+
+abu_talib_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abu_talib_shield_entity" }
+
+}
+
+hamza_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "hamza_shield_entity" }
+
+}
+
+jafar_al_tayar_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "jafar_al_tayar_shield_entity" }
+
+}
+
+ZAB_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "ZAB_shield_entity" }
+
+}
+
+baqir_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "baqir_shield_entity" }
+
+}
+
+sadiq_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "sadiq_shield_entity" }
+
+}
+
+kadhim_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "kadhim_shield_entity" }
+
+}
+
+rida_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "rida_shield_entity" }
+
+}
+
+jawad_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "jawad_shield_entity" }
+
+}
+
+hadi_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "hadi_shield_entity" }
+
+}
+
+askari_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "askari_shield_entity" }
+
+}
+
+mahdi_twelver_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "mahdi_twelver_shield_entity" }
+
+}
+
+narjis_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "narjis_shield_entity" }
+
+}
+
+khalid_ibn_al_walid_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "khalid_ibn_al_walid_shield_entity" }
+
+}
+
+abdullah_ibn_umar_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abdullah_ibn_umar_shield_entity" }
+
+}

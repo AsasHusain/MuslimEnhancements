@@ -1,0 +1,154 @@
+﻿### Spawned Historical Characters ###
+house_me_babek = {
+	name = "dynn_me_babek"
+	dynasty = me_babek_dynasty
+}
+
+house_me_fadlanid = {
+	name = "dynn_me_fadlanid"
+	dynasty = me_fadlanid_dynasty
+}
+
+### Qurashi houses ###
+house_me_banu_hashim = {
+	name = "dynn_me_banu_hashim" # al-Hashimi
+	dynasty = 7296 # al-Qurashī
+	forced_coa_religiongroup = "muslim"
+}
+
+house_me_banu_adi = {
+	name = "dynn_me_banu_adi" # al-Adawi
+	dynasty = 7296 # al-Qurashī
+	forced_coa_religiongroup = "muslim"
+}
+
+house_me_banu_taym = {
+	name = "dynn_me_banu_taym" # at-Taymī
+	dynasty = 7296 # al-Qurashī
+	forced_coa_religiongroup = "muslim"
+}
+
+house_me_banu_abd_shams = {
+	name = "dynn_me_banu_abd_shams" # al-'Abshamī
+	dynasty = 7296 # al-Qurashī
+	forced_coa_religiongroup = "muslim"
+}
+
+house_me_banu_makhzum = {
+	name = "dynn_me_banu_makhzum" # al-Makhzumi
+	dynasty = 7296 # al-Qurashī
+	forced_coa_religiongroup = "muslim"
+}
+
+### Banu Sama ###
+house_me_munabbihid = { # Rulers of Multan 861-955
+	name = "dynn_me_munabbihid"
+	dynasty = 1042099 # Banu Sama
+}
+
+### Asad Tribe ###
+house_me_mazyadi = { # Rulers of the Mazyadid emirate
+	name = "dynn_me_mazyadi"
+	dynasty = me_banu_asad # Banu Asad
+}
+
+### Azd Tribe ###
+house_me_al_julandi = { # Banu al-Julanda, First Ibadi dynasty of Oman
+	name = "dynn_me_julandi"
+	dynasty = arabic_azd # Azd
+}
+
+### Abd al-Qays Tribe ###
+house_me_banu_zajjaj = { # az-Zajjaj, Rulers of Uwal (Modern day Bahrain)
+	name = "dynn_me_banu_zajjaj"
+	dynasty = 1042121 # Banu Abd al-Qays
+}
+
+house_me_jadhmi = { # al-Jadhmi, 1066 Ruling House of Qatif
+	name = "dynn_me_jadhmi"
+	dynasty = 1042121 # Banu Abd al-Qays
+}
+
+house_me_uyunids = { # al-Uyuni, The Uyunid Dynasty
+	name = "dynn_me_uyunids"
+	dynasty = 1042121 # Banu Abd al-Qays
+}
+
+### Kinda Tribe ###
+house_me_Tujibid = { # Banu Tujib, A branch of the Kinda tribe
+	name = "dynn_me_Tujibid"
+	dynasty = bedouin_kinda # Kinda Tribe
+}
+
+house_banu_sumadih = {
+	name = "dynn_Sumadihid"
+	dynasty = bedouin_kinda # Kinda Tribe
+}
+
+### Tamim Tribe ###
+house_me_handhali = {
+	name = "dynn_me_Handhali"
+	dynasty = 1042122 # Banu Tamim
+}
+
+### Tayy' Tribe ###
+house_me_jibrani = {
+	name = "dynn_me_Jibrani"
+	dynasty = bedouindyn010 # Banu Tayy'
+}
+
+### Lakhmid Tribe ###
+house_me_arslanid = { # Arslanid family of Southern Lebanon
+	name = "dynn_me_al_arslani"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+}
+
+house_me_wafidid = { # House of Ibn Wafid
+	name = "dynn_Banu_Wafid"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+}
+
+### Banu Iqbal of Shihr ###
+house_me_banu_iqbal = {
+	name = "dynn_me_al_iqbali"
+	dynasty = me_banu_faris_dynasty # Banu Faris
+}
+
+### Maghrawa Houses ###
+house_me_khazarids = {
+	name = "dynn_me_khazarids"
+	dynasty = 1027001 # Maghrawid dynasty
+}
+
+house_me_khazrunids = {
+	name = "dynn_me_khazrunids"
+	dynasty = 1027001 # Maghrawid dynasty
+}
+
+house_me_atiyyids = {
+	name = "dynn_me_atiyyids"
+	dynasty = 1027001 # Maghrawid dynasty
+}
+
+### Majkasa Houses ###
+house_me_isamids = {
+	name = "dynn_me_isamids"
+	dynasty = me_majkasa_dynasty # Majkasid dynasty
+}
+
+house_me_haririds = {
+	name = "dynn_me_haririds"
+	dynasty = me_majkasa_dynasty # Majkasid dynasty
+}
+
+##
+
+house_sistan_nasrids = {
+	name = "dynn_Nasrid"
+	dynasty = 812 #saffarids
+}
+
+me_removed_house = { # For fictional extentions of dynasties to be placed in when they are removed
+	name = "dynn_me_removed"
+	dynasty = me_removed_dynasty
+}

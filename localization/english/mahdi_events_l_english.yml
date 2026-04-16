@@ -1,0 +1,16 @@
+﻿l_english:
+  #Modifiers
+  mahdi_opinion_modifier:0 "False Mahdi"
+  mahdi_faith_cost_modifier:0 "Self-Proclaimed Mahdi"
+  
+  #A lunatic and zealous Mahdi
+  mahdi_events.0001.title:0 "A New Messiah"
+  mahdi_events.0001.desc:0 "As I set into bed, I stare at the ceiling, eyes bloodshot, awaiting yet another restless night of fits and visions.\n\n Tonight, the visions are especially vivid. I peer down across a vast landscape, a panorama of inequality and oppression, of believers crying out for justice underneath the crushing boot of unbelievers and hypocrites. I turn to my side and see a grand visage, wreathed in flame. Slowly, the flames part, and I recognise the face of the prophet Isa. It is then that I hear the cries from below, thumping ever harder against the walls of my mind until my entire head is consumed by them."
+  mahdi_events.0001.accept:0 "The time of Redemption has come!"
+  mahdi_events.0001.decline:0 "God forgive me of my vanity!"
+  
+  #A Lunatic and Arrogant Mehdi
+  mahdi_events.0002.title:0 "Mahdi"
+  mahdi_events.0002.desc:0 "As I recline in my throne, supplicant after supplicant enter to offer me praise, thanking me for throwing away the yokes of infidels and petty rulers and bringing them into the fold of a truly Islamic ruler. I lazily trace my fingers over a map of the known world, noticing how neatly the borders of my realm correspond with Dar al-Islam. It is then when I hear one of my supplicants say;\n\n'If I didn't know any better, I'd think you were the Mahdi!'"
+  mahdi_events.0002.accept:0 "Mahdi... That sounds nice..."
+  mahdi_events.0002.decline:0 "Mahdi? If the world ends, who'll be there to remember me?"

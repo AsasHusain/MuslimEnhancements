@@ -1,0 +1,26 @@
+﻿l_english:
+
+ ## Hijri Calendar Game Rule
+ rule_me_hijri_calendar:0 "@me_icon! Hijri Calendar"
+ setting_me_hijri_enabled:0 "Enabled"
+ setting_me_hijri_enabled_desc:0 "Muslim rulers will see the date displayed in the Hijri (Islamic) calendar format instead of the Gregorian calendar."
+ setting_me_hijri_disabled:0 "#R Disabled#!"
+ setting_me_hijri_disabled_desc:0 "All rulers will see the standard Gregorian calendar date."
+
+ ## Hijri Month Names
+ me_hijri_month_muharram:0 "Muharram"
+ me_hijri_month_safar:0 "Safar"
+ me_hijri_month_rabi_al_awwal:0 "Rabi' al-Awwal"
+ me_hijri_month_rabi_al_thani:0 "Rabi' al-Thani"
+ me_hijri_month_jumada_al_ula:0 "Jumada al-Ula"
+ me_hijri_month_jumada_al_thani:0 "Jumada al-Thani"
+ me_hijri_month_rajab:0 "Rajab"
+ me_hijri_month_shaban:0 "Sha'ban"
+ me_hijri_month_ramadan:0 "Ramadan"
+ me_hijri_month_shawwal:0 "Shawwal"
+ me_hijri_month_dhu_al_qidah:0 "Dhu al-Qi'dah"
+ me_hijri_month_dhu_al_hijjah:0 "Dhu al-Hijjah"
+
+ ## Hijri Date Format Strings
+ ME_HIJRI_DISPLAY_DATE:0 "[GetPlayer.Custom('ME_GetHijriMonthName')] [GetPlayer.MakeScope.ScriptValue('me_hijri_day_display')|0], [GetPlayer.MakeScope.ScriptValue('me_hijri_year_display')|0] AH"
+ ME_GREGORIAN_DISPLAY_DATE:0 "[GetCurrentDate.GetStringLong]"

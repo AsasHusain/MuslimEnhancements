@@ -1,0 +1,66 @@
+﻿l_english:
+
+ #Titles
+ # Arabia
+ ##Shammar could be a referance to Jabal Shammar in Ha'il, however, this duchy is in Northern Hejaz, not Ha'il.
+ d_shammar:0 "Tabuk"
+ d_shammar_adj:0 "Tabukian"
+ 
+ #Kedah
+ d_MAL_langkasuka:0 "Kedah"
+ d_MAL_langkasuka_adj:0 "Kedahan"
+
+ # Ethiopia
+ c_showa:0 "Shewa"
+ c_showa_adj:0 "Shewan"
+ d_showa:0 "Shewa"
+ d_showa_adj:0 "Shewan"
+ 
+ # Italy
+ c_camarda:0 "Tursi"
+ c_camarda_adj:0 "Tursian"
+ b_camarda:0 "Tursi"
+ b_stigliano:0 "Tricarico"
+ b_lentini:0 "Liuntini"
+ 
+ # Georgia
+ c_acampse:0 "Hamamshen"
+ c_acampse_adj:0 "Hamamshenian"
+ b_archabis:0 "Hamamshen"
+
+
+ ##Ace's changes:
+ #(Pakistan)
+ c_lahur_adj:0 "Lahori" #Correct adjective.
+ b_karoonjar:0 "Nagarparkar" #Karonjar/Karunjhar is a regional name, and the city's name should be Nagarparkar. 
+ b_amarkot:0 "Daplu" #Umarkot, (the correct spelling) is not a coastal town and is significantly further north.
+ b_bhakkar:0 "Sukkur" #Bhakkar was founded in the 1700s. 
+ c_bhakkar:0 "Sukkur"
+ b_nirun:0 "Nerun Kot" #Hyderabad's correct old name.
+ b_chachran:0 "Khanpur" #Chachran is nowhere near this geographical location. I think they mean Khanpur.
+ b_dajal:0 "Jampur" #Dajal is a super tiny and basically negligible settlement for CK3. I believe the more prominent Jampur does better here.
+ b_karor:0 "Depalpur" #Karor's old name. 
+ b_bhirr:0 "Jhang" #Faisalabad/Lyallpur is supposed to be here. Bhirr is a subdivision of Shorkot. Traditionally this area is the area of Jhang.
+ c_shorkot:0 "Jhang"
+ c_shorkot_adj:0 "Jhangi"
+ c_sakala:0 "Jammu"
+ c_karor:0 "Thal"
+ c_karor_adj:1 "Thali"
+ c_depalpur:0 "Thal"
+ c_depalpur_adj:1 "Thali"
+ c_mansura:0 "Sanghar" #Historical name of the region, since the entire province wasn't called Mansura. Just the city. 
+ c_mansura_adj:0 "Khasi"
+ b_uch:0 "Bahamanabad"
+ c_uch:0 "Rohi"
+ c_uch_adj:0 "Bahamanabadi"
+ b_karur:0 "Rojhanwali"
+ c_karur:0 "Rojhanwali"
+ c_karur_adj:0 "Rojhanwali"
+ b_dera_ghazi_khan:0 "Jampur" #D.G. Khan was founded in the 1500s.
+ b_dera_ghazi_khan_adj:0 "Jampuri"
+
+ #(India)
+ b_lakhnau:0 "Lucknow"
+ c_lakhnau:0 "Lucknow"
+ c_lakhnau_adj:0 "Lucknow"
+ c_trigarta:0 "Jalandhar"

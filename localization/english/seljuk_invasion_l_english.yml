@@ -1,0 +1,76 @@
+﻿l_english:
+
+ # Localization for Seljuk Invasion CBs
+  seljuk_invasion:0 "Seljuk Invasion"
+  SELJUK_INVASION_CB_NAME:1 "Invade Byzantium"
+  SELJUK_INVASION_CB_SPECIFIC_NAME:1 "Invade Byzantium"
+  SELJUK_INVASION_WAR_NAME:1 "Seljuk Invasion of Byzantium"
+  SELJUK_INVASION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+  seljuk_invasion_victory_desc_attacker:0 "You take all titles [defender.GetShortUIName] holds in Armenia."
+  seljuk_invasion_victory_desc:0 "[attacker.GetShortUIName|U] takes all titles [defender.GetShortUIName] holds in Armenia."
+  seljuk_invasion_white_peace_desc_defender:0 "You keep all contested titles."
+  seljuk_invasion_white_peace_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."
+  seljuk_invasion_defeat_desc_defender:0 "You keep all contested titles."
+  seljuk_invasion_defeat_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."
+
+  seljuk_rum_takeover_sulayman:0 "[sulayman.GetShortUIName|U] has taken the duchies of [GetTitleByKey('d_anatolia').GetNameNoTier], [GetTitleByKey('d_charsianon').GetNameNoTier], and [GetTitleByKey('d_cappadocia').GetNameNoTier] aswell as the counties of [GetTitleByKey('c_lydia').GetNameNoTier] and [GetTitleByKey('c_chonae').GetNameNoTier]."
+  seljuk_rum_takeover_danishmend:0 "[danishmend.GetShortUIName|U] has taken the duchies of [GetTitleByKey('d_sebasteia').GetNameNoTier], [GetTitleByKey('d_chaldia').GetNameNoTier], and [GetTitleByKey('d_mesopotamia').GetNameNoTier] aswell as the county of [GetTitleByKey('c_zela').GetNameNoTier]."
+  seljuk_roussels_takeover:0 "Roussel de Bailleul has taken over Galatia and its surrounding areas."
+  seljuk_bulgarian_takeover:0 "The Bulgarians have crowned a new King."
+
+  disgraced_by_turks:0 "Disgraced by Turks"
+  turkish_consolidation_control:0 "Turkish Consolidation"
+  turkish_consolidation_opinion:0 "Turkish Consolidation"
+  defending_against_turks_control:0 "Defending against Turks"
+  defending_against_turks_opinion:0 "Defending against Turks"
+  byzantine_retreat:0 "Byzantine Retreat"
+
+  #Suleiman Ibn Qutalmish becomes ruler of lands seized in the war
+  seljuk_invasion_events.0001.title:0 "Thin Blood"
+  seljuk_invasion_events.0001.desc:0 "With the Romans defeated, Antalya rests firmly in turkish hands. As the celebrations for our glorious victory are about to begin, a messenger enters the chambers and informs us of the takeover of our newly conquered territories in the west by my distant cousin, [sulayman.GetShortUIName|U], while a local turkic hero known as [danishmend.GetFirstNameNicknamed|U] has been propped up by the tribes in eastern Antalya.\n\nThe son of the pretender especially has always been a thorn in my side, and there is certainly no love lost between us, but seeing as how they both command the loyalty of the local Turkic tribes, maybe giving them control of the region under my supreme authority as a sign of goodwill is the best course of action. Let's hope they don't get any ideas."
+  seljuk_invasion_events.0001.desc_danishdead:0 "With the Romans defeated, Antalya rests firmly in turkish hands. As the celebrations for our glorious victory are about to begin, a messenger enters the chambers and informs us of the takeover of our newly conquered territories in the west by my distant cousin, [sulayman.GetShortUIName|U].\n\nThe son of the pretender has always been a thorn in my side, and there is certainly no love lost between us, but seeing as how he commands the loyalty of the local Turkic tribes, maybe giving him control of the region under my supreme authority as a sign of goodwill is the best course of action. Let's hope he doesn't get any ideas."
+  seljuk_invasion_events.0001.a:0 "A new Eagle soars over the skies of Antalya."
+  seljuk_invasion_events.0001.b:0 "Atleast they still recognize our authority, right?"
+  seljuk_invasion_events.0001.c:0 "It seems Danishmend has a bright future in front of him..."
+  
+  #The Seljuks win the war against the Byzantines
+  seljuk_invasion_events.0002.title:0 "The Scourge of God"
+  seljuk_invasion_events.0002.desc:0 "The invading Seljuks have completely devastated the Byzantines. The heartlands of Anatolia have fallen to the fearsome conquerors, and what remains of the rest of their fractured authority in Asia Minor will be easy pickings for the rapidly expanding Turks, who are migrating west en masse. \n\nMeanwhile one of the Latin Christian generals, the Norman [norman_leader.GetShortUIName|U], has taken over Galatia and its surrounding land and declared independence from his defeated Byzantine overlord."
+  seljuk_invasion_events.0002.desc_bulgaria:0 "\n\nAt the same time, the Bulgarians have risen up in the west and crowned Konstantin Bodin as their new independent King."
+  seljuk_invasion_events.0002.a:0 "A new Eagle soars over the skies of Anatolia."
+  
+  #White peace between the Byzantines and the Seljuks
+  seljuk_invasion_events.0003.title:0 "What is it good for?"
+  seljuk_invasion_events.0003.desc:0 "After countless deaths and fierce battles, the fighting between the Seljuks and the Byzantines has come to a stop, though no clear winner has emerged, The Byzantines are celebrating this as a victory claiming to have defended their lands from the enchroaching Turks.\n\nThe Turks on the other hand while repelled are not yet defeated, they lick their wounds for now and must deal with the rising discontent over the failed war among the nobles."
+  seljuk_invasion_events.0003.a:0 "All this death and destruction... for what purpose?"
+  
+  #Byzantines win the war against the Seljuks
+  seljuk_invasion_events.0004.title:0 "Roma Invicta"
+  seljuk_invasion_events.0004.desc:0 "The Byzantines have impossibly repelled the Seljuk horde! Christendom rejoices at the news and takes heart in the fact that the mightiest of infidel armies cannot challenge the superiority of Rome.\n\nWhile the Christians celebrate, news spreads throughout the Islamic world in a solemn and sombre fashion. Many rulers have risen and started to question the authority of the Seljuks, who must now contend with internal strife while their wounds lie exposed to vulturous neighbors."
+  seljuk_invasion_events.0004.a:0 "The old age of the Roman eagle is better than the youth of the Seljuk sparrow."
+
+  #Alexios and Bailleul lock horns
+  seljuk_invasion_events.0005.title:0 "Traitor"
+  seljuk_invasion_events.0005.desc:0 ""
+  seljuk_invasion_events.0005.b:0 "I will strike that traitor down myself!"
+
+  #New Bulgarian King
+  seljuk_invasion_events.0006.title:0 "Final Stand"
+  seljuk_invasion_events.0006.desc:0 ""
+  seljuk_invasion_events.0006.b:0 "I am content with my lot."
+  
+  #Sulayman and Danishmend intro event
+  seljuk_invasion_events.0007.title:0 "Turks in Anatolia"
+  seljuk_invasion_events.0007.desc:0 "The Seljuk Empire has thrown itself upon Anatolia, and with it comes the full weight of the Turkish tribes, all of whom wish to carve themselves a large piece of this rich and fertile land.\n\nThis presents a unique opportunity; since I command the respect of many Turks within the empire, I can easily establish myself as the ruler within these lands. Although I’ll have to be subject to the sultan and his rule, servitude is but a small price to pay…"
+  seljuk_invasion_events.0007.a:0 "...If I stay in Anatolia that is."
+  seljuk_invasion_events.0007.tt:0 "If your camp remains within the region of [GetGeographicalRegion('ghw_region_anatolia').GetName], you will be presented with a unique opportunity to gain large amounts of land should the Seljuks win the war."
+
+  #Sulayman and Danishmend players chose whether to gain land or not
+  seljuk_invasion_events.0008.title:0 "Turks in Anatolia"
+  seljuk_invasion_events.0008.desc:0 "The inevitable has happened, the Turks have been proven victorious in their fight against the Romans. All men are taking all the riches that they can get their hands on, and the lands of Anatolia are being divided between the various tribes, many of whom are settling in these fertile hills.\n\nWith my reputation and high standing among the Turks, I can easily establish myself as a ruler upon these lands. Should I wish to do so, then the time to strike is now; there will be no other chance."
+  seljuk_invasion_events.0008.a:0 "My time has come!"
+  seljuk_invasion_events.0008.b:0 "No, I have a greater calling elsewhere."
+  seljuk_invasion_events.0008.tt.sulayman:0 "You will gain the duchies of [GetTitleByKey('d_anatolia').GetNameNoTier], [GetTitleByKey('d_charsianon').GetNameNoTier], and [GetTitleByKey('d_cappadocia').GetNameNoTier] aswell as the counties of [GetTitleByKey('c_lydia').GetNameNoTier] and [GetTitleByKey('c_chonae').GetNameNoTier]."
+  seljuk_invasion_events.0008.tt.danishmend:0 "You will gain the duchies of [GetTitleByKey('d_sebasteia').GetNameNoTier], [GetTitleByKey('d_chaldia').GetNameNoTier], and [GetTitleByKey('d_mesopotamia').GetNameNoTier] aswell as the county of [GetTitleByKey('c_zela').GetNameNoTier]."
+  seljuk_invasion_events.0008.tt.landless:0 "You will remain a landless adventerer."
+

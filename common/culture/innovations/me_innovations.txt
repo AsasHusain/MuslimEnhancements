@@ -1,0 +1,24 @@
+﻿@leadership_2 = "gfx/interface/icons/culture_innovations/innovation_leadership_02.dds"
+
+innovation_me_summer_raids = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	icon = @leadership_2
+
+	potential = {
+		OR = {
+			has_cultural_pillar = heritage_arabic
+			culture_head.faith.religion = religion:islam_religion
+		}
+	}
+
+	character_modifier = {
+		raid_speed = 0.1
+	}
+	
+	custom = unlocks_me_saifa_intent
+
+	flag = global_regional
+	flag = tribal_era_regional
+}

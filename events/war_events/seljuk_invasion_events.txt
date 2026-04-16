@@ -1,0 +1,310 @@
+﻿namespace = seljuk_invasion_events
+
+#The Seljuk Emperor recieves news of Suleyman's takeover
+seljuk_invasion_events.0001 = {
+		
+	title = seljuk_invasion_events.0001.title
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					character:danishmendid_1 = {
+						is_alive = yes
+					}
+				}
+				desc = seljuk_invasion_events.0001.desc
+			}
+			desc = seljuk_invasion_events.0001.desc_danishdead
+		}
+	}
+	theme = war
+	
+	# Left portrait is Suleyman, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = character:3046
+		animation = personality_dishonorable
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = war_over_win
+	}
+	
+	lower_right_portrait = { # Lower right is Danishmend
+		character = character:danishmendid_1
+	}
+
+	immediate = {
+		custom_tooltip = seljuk_rum_takeover_sulayman
+		if = {
+			limit = {
+				character:danishmendid_1 = {
+					is_alive = yes
+				}
+			}
+			custom_tooltip = seljuk_rum_takeover_danishmend
+		}
+		character:3046 = { save_scope_as = sulayman }
+		character:danishmendid_1 = { save_scope_as = danishmend }
+	}
+
+	option = {
+		name = seljuk_invasion_events.0001.a
+		set_player_character = character:3046
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = seljuk_invasion_events.0001.c
+		set_player_character = character:danishmendid_1
+		trigger = {
+			character:danishmendid_1 = {
+				is_alive = yes
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = seljuk_invasion_events.0001.b
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Seljuk Victory
+seljuk_invasion_events.0002 = {
+	title = seljuk_invasion_events.0002.title
+	desc = {
+		desc = seljuk_invasion_events.0002.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					character:20474 = {
+						is_alive = yes
+					}
+				}
+				desc = seljuk_invasion_events.0002.desc_bulgaria
+			}
+		}
+	}
+	theme = war
+	
+	# Left portrait is Byzantine Emperor, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = shame
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = war_over_win
+	}
+
+	lower_left_portrait = {
+		character = character:20474
+	}
+
+	lower_center_portrait = {
+		character = scope:norman_leader
+	}
+
+	option = {
+		name = seljuk_invasion_events.0002.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#White Peace
+seljuk_invasion_events.0003 = {
+	title = seljuk_invasion_events.0003.title
+	desc = seljuk_invasion_events.0003.desc
+	theme = war
+	
+	# Left portrait is Byzantine Emperor, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = pain
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = pain
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0003.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Byzantine Victory
+seljuk_invasion_events.0004 = {
+	title = seljuk_invasion_events.0004.title
+	desc = seljuk_invasion_events.0004.desc
+	theme = war
+	
+	# Left portrait is Byzantine Emperor, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = war_over_win
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = shame
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0004.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Alexios Komnenos
+seljuk_invasion_events.0005 = {
+	title = seljuk_invasion_events.0005.title
+	desc = 	seljuk_invasion_events.0005.desc
+	theme = war
+	
+	# Left portrait is Alexios, right portrait is Roussel
+	left_portrait = {
+		character = character:1742
+		animation = anger
+	}
+	
+	right_portrait = {
+		character = character:34220
+		animation = personality_dishonorable
+	}
+
+	immediate = {
+		custom_tooltip = seljuk_roussels_takeover
+	}
+
+	option = {
+		name = seljuk_invasion_events.0005.a
+		set_player_character = character:34220
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = seljuk_invasion_events.0005.b
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Bulgarian Revolt
+seljuk_invasion_events.0006 = {
+	title = seljuk_invasion_events.0006.title
+	desc = 	seljuk_invasion_events.0006.desc
+	theme = crown
+	
+	# Left portrait is Duklja Holder, right portrait is the new Bulgarian King
+	left_portrait = {
+		character = title:d_duklja.holder
+		animation = personality_content
+	}
+	
+	right_portrait = {
+		character = character:20474
+		animation = happiness
+	}
+
+	immediate = {
+		custom_tooltip = seljuk_bulgarian_takeover
+	}
+
+	option = {
+		name = seljuk_invasion_events.0006.a
+		set_player_character = character:20474
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = seljuk_invasion_events.0006.b
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Sulayman and Danishmend intro event
+seljuk_invasion_events.0007 = {
+		
+	title = seljuk_invasion_events.0007.title
+	desc = seljuk_invasion_events.0007.desc
+	theme = war
+	override_background = { reference = ep2_travel_settlement_hills }
+	
+	right_portrait = {
+		character = root
+		animation = personality_dishonorable
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0007.a
+		custom_tooltip = seljuk_invasion_events.0007.tt
+	}
+}
+
+# Sulayman and Danishmend players chose whether to gain land or not
+seljuk_invasion_events.0008 = {
+		
+	title = seljuk_invasion_events.0008.title
+	desc = seljuk_invasion_events.0008.desc
+	theme = war
+	
+	right_portrait = {
+		character = root
+		animation = war_over_win
+	}
+	
+	immediate = {
+	}
+	
+	option = { # Become a landed ruler
+		name = seljuk_invasion_events.0008.a
+		if = {
+			limit = { this = character:3046 } # Sulayman ibn Qutalmish
+			hidden_effect = { me_seljuk_invasion_sulayman_effect = yes }
+			custom_tooltip = seljuk_invasion_events.0008.tt.sulayman
+		}
+		if = {
+			limit = { this = character:danishmendid_1 } # Danishmend
+			hidden_effect = { me_seljuk_invasion_danishmend_effect = yes }
+			custom_tooltip = seljuk_invasion_events.0008.tt.danishmend
+		}
+	}
+	
+	option = { # Continue as adventerer
+		name = seljuk_invasion_events.0008.b
+		custom_tooltip = seljuk_invasion_events.0008.tt.landless
+	}
+}

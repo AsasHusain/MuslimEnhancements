@@ -1,0 +1,1472 @@
+﻿### Startup Wars
+## Seljuk War
+me_seljuk_war_qawurd_start = {
+	character:3041 = { # Qawurd, brother of Alp Arslan that rebelled
+		add_gold = 500
+		random_character_war = {
+			save_scope_as = starting_seljuk_war
+		}
+		spawn_army = {
+			name = event_troop_default_name
+			men_at_arms = {
+				type = light_horsemen
+				stacks = 3
+			}
+			location = province:4855
+			origin = province:4333
+			war = scope:starting_seljuk_war
+		}
+		
+		spawn_army = {
+			name = event_troop_default_name
+			men_at_arms = {
+				type = onager
+				stacks = 1
+			}
+			location = province:4855
+			origin = province:4333
+			war = scope:starting_seljuk_war
+		}
+		spawn_army = {
+			name = event_troop_default_name
+			men_at_arms = {
+				type = horse_archers
+				stacks = 3
+			}
+			location = province:4855
+			origin = province:4333
+			war = scope:starting_seljuk_war
+		}
+		spawn_army = {
+			name = event_troop_default_name
+			levies = 1195
+			location = province:4859
+			origin = province:4333
+			war = scope:starting_seljuk_war
+		}
+		spawn_army = {
+			name = event_troop_default_name
+			levies = 1195
+			location = province:4859
+			origin = province:4333
+			war = scope:starting_seljuk_war
+		}
+	}
+}
+
+## Italian-Bari War
+bari_partition_effect = {
+	if = {
+		limit = { 
+			has_global_variable = me_bari_partition_true_variable
+			NOT = { title:c_bari.holder = { completely_controls = title:c_reggio_calabria } }
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = bariot_change
+			add_claim_on_loss = yes
+		}
+		title:c_camarda = {
+			change_title_holder = {
+				holder = title:c_salerno.holder
+				change = scope:bariot_change
+				take_baronies = yes
+			}
+		}
+		title:c_cosenza = {
+			change_title_holder = {
+				holder = title:c_rossano.holder
+				change = scope:bariot_change
+				take_baronies = yes
+			}
+		}
+		resolve_title_and_vassal_change = scope:bariot_change
+	}
+
+	else_if = {
+		limit = { 
+			has_global_variable = me_bari_partition_true_variable
+			title:c_bari.holder = { completely_controls = title:c_reggio_calabria }
+		}
+
+		create_character = {
+			template = calabria_duke_template
+			location = title:c_reggio_calabria.title_province
+			gender_female_chance = 0
+			after_creation = { save_scope_as = calabria_duke }
+		}
+
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = bariot_change
+			add_claim_on_loss = yes
+		}
+		title:c_camarda = {
+			change_title_holder = {
+				holder = title:c_salerno.holder
+				change = scope:bariot_change
+				take_baronies = yes
+			}
+		}
+		title:c_cosenza = {
+			change_title_holder = {
+				holder = scope:calabria_duke
+				change = scope:bariot_change
+				take_baronies = yes
+			}
+		}
+		title:c_rossano = {
+			change_title_holder = {
+				holder = scope:calabria_duke
+				change = scope:bariot_change
+				take_baronies = yes
+			}
+		}
+		title:c_reggio_calabria = {
+			change_title_holder = {
+				holder = scope:calabria_duke
+				change = scope:bariot_change
+				take_baronies = yes
+			}
+		}
+		scope:calabria_duke = {
+			change_liege = {
+				liege = title:e_byzantium.holder
+				change = scope:bariot_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:bariot_change
+	}
+
+}
+
+## Zirid Intervention
+me_zirid_intervention_defeat_effect = {
+	custom_tooltip = zirid_intervention_cb_defeat_palermo
+	custom_tooltip = zirid_intervention_cb_defeat_agrigento
+	custom_tooltip = zirid_intervention_cb_defeat_siracusa
+	##The Zirids leave Sicily, only if their capital isn't in sicily. (to stop them from disappearing if they somehow lose all holdings in North Africa)
+	create_title_and_vassal_change = {
+		type = independency
+		save_scope_as = taifa_change
+		add_claim_on_loss = yes
+	}
+	if = {
+		limit = { 
+			scope:attacker = {
+				NOT = {
+					capital_county = {
+						OR = {
+							this = title:c_palermo
+							this = title:c_agrigento
+							this = title:c_siracusa
+						}
+					}
+				}
+			}
+		}
+
+		title:d_sicily.holder = {
+			destroy_title = title:d_sicily
+		}
+
+		#Ibn al-Ba'ba' takes Palermo
+		if = {
+			limit = {
+				character:ss_taifa_003 = {
+					is_alive = yes
+					is_landed = no
+				}
+			}
+			character:ss_taifa_003 = { save_scope_as = palermo_leader }
+			title:c_palermo = {
+				change_title_holder = {
+					holder = character:ss_taifa_003
+					change = scope:taifa_change
+					take_baronies = yes
+				}
+			}
+		}
+		else = {
+			title:c_palermo = { save_scope_as = palermo }
+			create_character = {
+				location = scope:palermo.capital_province
+				template = palermo_leader_template
+				faith = scope:palermo.faith
+				culture = scope:palermo.culture
+				save_scope_as = palermo_leader
+				gender_female_chance = {
+					if = {
+						limit = { scope:the_faith = { has_doctrine = doctrine_gender_male_dominated } }
+						add = 0
+					}
+					else_if = {
+						limit = { scope:the_faith = { has_doctrine = doctrine_gender_female_dominated } }
+						add = 100
+					}
+					else = {
+						add = 50
+					}
+				}
+			}
+			title:c_palermo = {
+				change_title_holder = {
+					holder = scope:palermo_leader
+					change = scope:taifa_change
+					take_baronies = yes
+				}
+			}
+		}
+	
+		#Hammud takes Castrogiovanni (Agrigento)
+		if = {
+			limit = {
+				character:maghrebi0014 = {
+					is_alive = yes
+					is_landed = no
+				}
+			}
+			character:maghrebi0014 = { save_scope_as = castrogiovanni_leader }
+			title:c_agrigento = {
+				change_title_holder = {
+					holder = character:maghrebi0014
+					change = scope:taifa_change
+					take_baronies = yes
+				}
+			}
+		}
+		else = {
+			title:c_agrigento = { save_scope_as = castrogiovanni }
+			create_character = {
+				location = scope:castrogiovanni.capital_province
+				template = castrogiovanni_leader_template
+				faith = scope:castrogiovanni.faith
+				culture = scope:castrogiovanni.culture
+				save_scope_as = castrogiovanni_leader
+			}
+			title:c_agrigento = {
+				change_title_holder = {
+					holder = scope:castrogiovanni_leader
+					change = scope:taifa_change
+					take_baronies = yes
+				}
+			}
+		}
+		
+		#Ibn Abbad takes Syracuse
+		if = {
+			limit = {
+				character:20829 = {
+					is_alive = yes
+					is_landed = no
+				}
+			}
+			character:20829 = { save_scope_as = syracuse_leader }
+			title:c_siracusa = {
+				change_title_holder = {
+					holder = character:20829
+					change = scope:taifa_change
+					take_baronies = yes
+				}
+			}
+		}
+		else = {
+			title:c_siracusa = { save_scope_as = syracuse }
+			create_character = {
+				location = scope:syracuse.capital_province
+				template = syracuse_leader_template
+				faith = scope:syracuse.faith
+				culture = scope:syracuse.culture
+				save_scope_as = syracuse_leader
+				gender_female_chance = 0
+			}
+			title:c_siracusa = {
+				change_title_holder = {
+					holder = scope:syracuse_leader
+					change = scope:taifa_change
+					take_baronies = yes
+				}
+			}
+		}
+		hidden_effect = { taifa_independency_effect }
+	}
+	resolve_title_and_vassal_change = scope:taifa_change
+	
+	create_title_and_vassal_change = {
+		type = independency
+		save_scope_as = taifa_indep_change
+		add_claim_on_loss = no
+	}
+	title:c_palermo.holder = { save_scope_as = palermo_ruler }
+	title:c_agrigento.holder = { save_scope_as = castrogiovanni_ruler }
+	title:c_siracusa.holder = { save_scope_as = syracuse_ruler }
+	scope:palermo_ruler = {
+		change_liege_or_become_independent = {
+			CHANGE = scope:taifa_indep_change
+			VASSAL = scope:palermo_ruler
+		}
+	}
+	scope:castrogiovanni_ruler = {
+		change_liege_or_become_independent = {
+			CHANGE = scope:taifa_indep_change
+			VASSAL = scope:castrogiovanni_ruler
+		}
+	}
+	scope:syracuse_ruler = {
+		change_liege_or_become_independent = {
+			CHANGE = scope:taifa_indep_change
+			VASSAL = scope:syracuse_ruler
+		}
+	}
+	resolve_title_and_vassal_change = scope:taifa_indep_change
+}
+
+taifa_independency_effect = {
+	
+}
+
+### Nukkari Revolt
+spawn_nukkari_revolt_character_effect = {
+	character:me_ifrinid_002 = { set_age = 50 } # Kaydad, Father of Abu Yazid
+	character:me_ifrinid_003 = { set_age = 50 } # Sabika, Mother of Abu Yazid
+	create_character = { # Abu Yazid Makhlad 'Sahib al-Himar'
+		age = { 61 63 }
+		name = "Abu Yazid"
+		gender = male
+		faith = faith:nukkari
+		location = title:c_qashtiliya.title_province # Tozeur, where the early encounter event historically took place
+		culture = culture:baranis
+		father = character:me_ifrinid_002
+		mother = character:me_ifrinid_003
+		dynasty_house = character:me_ifrinid_002.house # Ifrinid
+
+		trait = education_learning_3
+		trait = zenata
+		trait = deceitful
+		trait = ambitious
+		trait = diligent
+		trait = shrewd
+		trait = hajjaj
+		trait = peasant_leader
+
+		random_traits = no
+		#Skills
+		learning = {
+			min_template_high_skill
+			max_template_high_skill
+		}
+		martial = {
+			min_template_average_skill
+			max_template_average_skill
+		}
+		prowess = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+		diplomacy = {
+			min_template_average_skill
+			max_template_average_skill
+		}
+		intrigue = {
+			min_template_high_skill
+			max_template_high_skill
+		}
+		stewardship = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+
+		save_scope_as = nukkari_leader
+	}
+
+	create_character = { # Abu Ammar Abdul-Hamid al-A'ma
+		age = { 62 64 }
+		name = "Abu Ammar Abdul-Hamid"
+		gender = male
+		faith = faith:nukkari
+		location = title:c_qashtiliya.title_province
+		culture = culture:baranis
+		dynasty = none
+
+		trait = education_learning_3
+		trait = blind
+		trait = loyal
+
+		#Skills
+		learning = {
+			min_template_high_skill
+			max_template_high_skill
+		}
+		martial = {
+			min_template_average_skill
+			max_template_average_skill
+		}
+
+		save_scope_as = nukkari_al_ama
+	}
+
+	# Sons of Abu Yazid (Ages are all estimates)
+	create_character = {
+		age = { 40 43 }
+		name = "Yazid"
+		gender = male
+		faith = faith:nukkari
+		location = title:c_qashtiliya.title_province
+		culture = culture:baranis
+		father = scope:nukkari_leader
+		dynasty_house = character:me_ifrinid_002.house # Ifrinid
+		trait = zenata
+
+		save_scope_as = nukkari_yazid
+	}
+
+	create_character = {
+		age = { 35 39 }
+		name = "Yunus"
+		gender = male
+		faith = faith:nukkari
+		location = title:c_qashtiliya.title_province
+		culture = culture:baranis
+		father = scope:nukkari_leader
+		dynasty_house = character:me_ifrinid_002.house # Ifrinid
+		trait = zenata
+
+		save_scope_as = nukkari_yunus
+	}
+
+	create_character = {
+		age = { 30 34 }
+		name = "al-Fadl"
+		gender = male
+		faith = faith:nukkari
+		location = title:c_qashtiliya.title_province
+		culture = culture:baranis
+		father = scope:nukkari_leader
+		dynasty_house = character:me_ifrinid_002.house # Ifrinid
+		trait = zenata
+
+		save_scope_as = nukkari_al_fadl
+	}
+
+	create_character = {
+		age = { 27 29 }
+		name = "Ayyub"
+		gender = male
+		faith = faith:nukkari
+		location = title:c_qashtiliya.title_province
+		culture = culture:baranis
+		father = scope:nukkari_leader
+		dynasty_house = character:me_ifrinid_002.house # Ifrinid
+		trait = zenata
+
+		save_scope_as = nukkari_ayyub
+	}
+}
+
+inherit_nukkari_revolt_effect = {
+	if = {
+		limit = { scope:nukkari_al_ama = { is_alive = yes } }
+		scope:nukkari_al_ama = { save_scope_as = nukkari_leader }
+	}
+	else_if = {
+		limit = { scope:nukkari_yazid = { is_alive = yes } }
+		scope:nukkari_yazid = { save_scope_as = nukkari_leader }
+	}
+	else_if = {
+		limit = { scope:nukkari_yunus = { is_alive = yes } }
+		scope:nukkari_yunus = { save_scope_as = nukkari_leader }
+	}
+	else_if = {
+		limit = { scope:nukkari_al_fadl = { is_alive = yes } }
+		scope:nukkari_al_fadl = { save_scope_as = nukkari_leader }
+	}
+	else_if = {
+		limit = { scope:nukkari_ayyub = { is_alive = yes } }
+		scope:nukkari_ayyub = { save_scope_as = nukkari_leader }
+	}
+	else_if = {
+		limit = { scope:nukkari_leader = { is_alive = no } }
+		scope:nukkari_leader = {
+			random_owned_story = {
+				limit = {
+					story_type = story_nukkari_revolt
+				}
+					end_story = yes
+			}
+		}
+#		every_player = { trigger_event = me_nukkari_revolt.0300 }
+	}
+
+	change_global_variable = {
+		name = nukkari_revolt_strength_score
+		add = -3
+	}
+	
+	scope:nukkari_leader = { save_scope_as = story_owner }
+	
+	if = {
+		limit = { global_var:nukkari_revolt_strength_score <= 0 }
+		scope:nukkari_leader = {
+			random_owned_story = {
+				limit = {
+					story_type = story_nukkari_revolt
+				}
+					end_story = yes
+			}
+		}
+#		every_player = { trigger_event = me_nukkari_revolt.0301 }
+	}
+}
+
+nukkari_event_launcher_effect = {
+	if = { # Early Encounter
+		limit = {
+			current_date >= 937.1.1
+			current_date < 938.1.1
+			NOT = { exists = global_var:nukkari_revolt_ended }
+		}
+		
+		set_global_variable = {
+			name = nukkari_revolt_strength_score
+			value = 5
+		}
+		random_list = { # Abu Yazid picks a random town in the region he will revolt in (Historically he does this in Tozeur)
+		
+			5 = {
+				title:c_tunis = { save_scope_as = troubled_town }
+			}
+			5 = {
+				title:c_satfura = { save_scope_as = troubled_town }
+			}
+			5 = {
+				title:c_medjerda = { save_scope_as = troubled_town }
+			}
+			5 = {
+				title:c_mahdiya = { save_scope_as = troubled_town }
+			}
+			5 = {
+				title:c_west_qamuda = { save_scope_as = troubled_town }
+			}
+			5 = {
+				title:c_tabassa = { save_scope_as = troubled_town }
+			}
+		}
+		
+		if = { # We prioritize the player in this event
+			limit = {
+				scope:troubled_town.holder = { is_ai = no }
+			}
+			scope:troubled_town.holder = {
+				trigger_event = {
+					id = me_nukkari_revolt.0001
+					days = { 70 300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { # Player doesn't control the county
+				scope:troubled_town.holder = { is_ai = yes }
+				scope:troubled_town.holder = { any_liege_or_above = { is_ai = yes } }
+			}
+			scope:troubled_town.holder = {
+				trigger_event = {
+					id = me_nukkari_revolt.0001
+					days = { 70 300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { # Player is county's first liege (Duchy)
+				scope:troubled_town.holder.liege = {is_ai = no }
+			}
+			scope:troubled_town.holder.liege = {
+				trigger_event = {
+					id = me_nukkari_revolt.0001
+					days = { 70 300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { # Player is county's second liege (Kingdom)
+				scope:troubled_town.holder.liege.liege = {is_ai = no }
+			}
+			scope:troubled_town.holder.liege.liege = {
+				trigger_event = {
+					id = me_nukkari_revolt.0001
+					days = { 70 300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { # Player is county's third liege (Empire)
+				scope:troubled_town.holder.liege.liege.liege = {is_ai = no }
+			}
+			scope:troubled_town.holder.liege.liege.liege = {
+				trigger_event = {
+					id = me_nukkari_revolt.0001
+					days = { 70 300 }
+				}
+			}
+		}
+	}
+
+	if = { # Ibadi/Wahbi counties start converting to Nukkari
+		limit = {
+			current_date >= 937.1.1
+			current_date <= 945.1.1
+			NOT = { exists = global_var:nukkari_revolt_ended }
+		}
+		random_county_in_region = {
+			region = ghw_region_north_africa
+			limit = { 
+				faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				NOT = { is_in_list = NR_004_counties }
+			}
+			add_to_list = NR_004_counties
+			save_scope_as = nr_converted_county
+			trigger_event = {
+				id = me_nukkari_revolt.0004
+				days = { 5 360 }
+			}
+		}
+		if = { # If the Wahbi Imamate doesn't exist, double the amount of counties that convert
+			limit = { NOT = { exists = title:d_wahbiya.holder } }
+			random_county_in_region = {
+				region = ghw_region_north_africa
+				limit = { 
+					faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+					NOT = { is_in_list = NR_004_counties }
+				}
+				add_to_list = NR_004_counties
+				save_scope_as = nr_converted_county
+				trigger_event = {
+					id = me_nukkari_revolt.0004
+					days = { 5 360 }
+				}
+			}
+		}
+		random_ruler = { # Tribal rulers have a chance to convert to Nukkarism
+			limit = {
+				faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				capital_province.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				NOT = { is_in_list = NR_005_rulers }
+				government_has_flag = government_is_tribal
+				OR = {
+					capital_province = { geographical_region = world_africa_sahara }
+					capital_province = { geographical_region = ghw_region_north_africa }
+				}
+			}
+			random = {
+				chance = 20
+				trigger_event = {
+					id = me_nukkari_revolt.0005
+					days = { 5 360 }
+				}
+				add_to_list = NR_005_rulers
+			}
+		}
+	}
+
+	if = { # Abu Yazid spawns in.
+		limit = {
+			current_date >= 943.1.1
+			current_date < 944.1.1
+			NOT = { exists = global_var:nukkari_revolt_ended }
+		}
+		trigger_event = me_nukkari_revolt.0100
+	}
+}
+
+me_start_nukkari_revolt_effect = {
+
+	$REBEL_LEADER$ = { save_scope_as = rebel_leader }
+	$TARGET_COUNTY$ = { save_scope_as = target_county }
+	#Give the nukkari leader a title
+	create_dynamic_title = {
+		tier = duchy
+		name = me_nukkari_revolt_name
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:target_county
+		set_landless_title = yes
+		set_destroy_on_gain_same_tier = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = scope:rebel_leader
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		generate_coa = yes
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war(s), every independent ruler gets into a seperate war	
+	every_living_character = {
+		limit = { 
+			NOT = { faith = faith:nukkari }
+			OR = {
+				has_title = title:c_kairwan
+				has_title = title:c_west_qamuda
+				has_title = title:c_tabassa
+				has_title = title:c_tunis
+				has_title = title:c_satfura
+				has_title = title:c_medjerda
+				has_title = title:c_mahdiya
+			}
+		}
+		top_liege = { add_to_list = NR_defenders }
+	}
+	every_in_list = {
+		list = NR_defenders
+		scope:rebel_leader = {
+			start_war = {
+				cb = me_nukkari_revolt_war
+				target = PREV
+				target_title = title:d_kairouan
+			}
+		}
+		trigger_event = me_nukkari_revolt.0201
+	}
+	
+	# Setup event troops.
+	scope:rebel_leader = {
+		spawn_army = {
+			levies = nukkari_revolt_strength_score_levy
+			men_at_arms = {
+				type = pikemen_unit
+				stacks = nukkari_revolt_strength_score_pikemen
+			}
+			men_at_arms = {
+				type = bowmen
+				stacks = nukkari_revolt_strength_score_bowmen
+			}
+			men_at_arms = {
+				type = light_footmen
+				stacks = nukkari_revolt_strength_score_skirmishers
+			}
+			location = province:4589 # c_medjerda 
+			origin = province:4589
+			inheritable = yes
+			name = me_nukkari_revolt_army_title
+		}
+		#Sami's addition
+		spawn_army = {
+			levies = nukkari_revolt_strength_score_levy
+			men_at_arms = {
+				type = light_footmen
+				stacks = nukkari_revolt_strength_score_skirmishers
+			}
+			location = province:4594 # c_kairwan 
+			origin = province:4594
+			inheritable = yes
+			name = me_nukkari_revolt_army_title
+		}
+	}
+	
+	# Historical Khazarid Maghrawa who joined the Revolt
+	if = {
+		limit = {
+			character:me_maghrawa_008 = { # Ma'abad ibn Khazar ibn Muhammad
+				is_imprisoned = no
+				is_alive = yes
+				is_healthy = yes 
+				NOR = {
+					exists = liege
+					has_character_modifier = lust_for_adventure
+				}
+			}
+		}
+		character:me_maghrawa_008 = {
+			move_to_pool_at = scope:nukkari_leader.location
+			set_character_faith_with_conversion = faith:nukkari
+			add_to_list = NR_102_courtiers
+		}
+	}
+
+	# Place the courtiers into the Nukkari Leader's emploment
+	scope:nukkari_leader = {
+		every_in_list = {
+			list = NR_102_courtiers
+			add_courtier = prev 
+		}
+	}
+}
+
+nukkaris_loot_county_effect = {
+	change_development_level = {
+		subtract = scope:county.development_level
+		multiply = 0.2
+		floor = yes
+	}
+}
+
+### Berberist Invasions
+spawn_hamimist_invasion_character_effect = {
+	character:me_majkasa_008 = { set_age = 60 } # Mann-Allah, Father of Ha-Mim
+	character:me_majkasa_009 = { set_age = 60 } # Harir, Grandfather of Ha-Mim
+	create_character = { # Ha-Mim ibn Mann-Allah
+		age = { 38 40 }
+		name = "Ha-Mim"
+		gender = male
+		faith = faith:hamimist
+		location = title:c_ceuta.title_province
+		culture = culture:baranis
+		father = character:me_majkasa_008
+		dynasty_house = character:me_majkasa_008.house # Haririd house of the Majkasa tribe
+
+		trait = education_learning_3
+		trait = masmudi
+		trait = hamimist_prophet
+		trait = blood_of_hamim
+		trait = deceitful
+		random_traits_list = {
+			count = 2
+			vengeful = {}
+			ambitious = {}
+			wrathful = {}
+			diligent = {}
+			zealous = {}
+		}
+
+		random_traits = no
+		#Skills
+		learning = {
+			min_template_high_skill
+			max_template_high_skill
+		}
+		martial = {
+			min_template_average_skill
+			max_template_average_skill
+		}
+		prowess = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+		diplomacy = {
+			min_template_average_skill
+			max_template_average_skill
+		}
+		intrigue = {
+			min_template_high_skill
+			max_template_high_skill
+		}
+		stewardship = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+
+		save_scope_as = hamimist_leader
+	}
+
+	# Daggu, sister of Ha-Mim
+	create_character = {
+		age = { 28 30 }
+		name = "Daggu"
+		gender = female
+		faith = faith:hamimist
+		location = title:c_ceuta.title_province
+		culture = culture:baranis
+		father = character:me_majkasa_008
+		dynasty_house = character:me_majkasa_008.house
+		trait = masmudi
+		trait = witch
+		trait = beauty_good_3
+
+		after_creation = { add_to_list = HI_characters }
+	}
+
+	# Taqit, aunt of Ha-Mim 
+	create_character = {
+		age = { 63 65 }
+		name = "Taqit"
+		gender = female
+		faith = faith:hamimist
+		location = title:c_ceuta.title_province
+		culture = culture:baranis
+		father = character:me_majkasa_009
+		dynasty_house = character:me_majkasa_008.house
+		trait = masmudi
+		trait = witch
+
+		save_scope_as = hamimist_taqit
+		after_creation = { add_to_list = HI_characters }
+	}
+
+	# Isa, son of Ha-Mim 
+	create_character = {
+		age = { 18 20 }
+		name = "Isa"
+		gender = male
+		faith = faith:hamimist
+		location = title:c_ceuta.title_province
+		culture = culture:baranis
+		father = scope:hamimist_leader
+		dynasty_house = character:me_majkasa_008.house
+		trait = masmudi
+		trait = blood_of_hamim
+
+		after_creation = { add_to_list = HI_characters }
+	}
+}
+
+hamimist_event_launcher_effect = {
+	if = { # Early Warning
+		limit = {
+			current_date >= 924.1.1
+			current_date < 925.1.1
+			NOT = { exists = global_var:hamimist_invasion_ended }
+		}
+		
+		every_living_character = {
+			limit = {
+				OR = {
+					completely_controls = title:c_ceuta
+					completely_controls = title:c_melilla
+					completely_controls = title:c_tangiers
+				}
+			}
+			trigger_event = {
+				id = me_berberist_events.0001
+				days = { 70 300 }
+			}
+		}
+	}
+
+	if = { # Ha-Mimist 'Invasion' starts
+		limit = {
+			current_date >= 925.1.1
+			current_date < 926.1.1
+			NOT = { exists = global_var:hamimist_invasion_ended }
+		}
+		trigger_event = {
+			id = me_berberist_events.0002
+			days = { 70 300 }
+		}
+	}
+}
+
+me_start_hamimist_invasion_effect = {
+	$REBEL_LEADER$ = { save_scope_as = rebel_leader }
+	$TARGET_COUNTY$ = { save_scope_as = target_county }
+	#Give the berberist leader a title
+	create_dynamic_title = {
+		tier = duchy
+		name = me_hamimist_invasion_name
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:target_county
+		set_landless_title = yes
+		set_destroy_on_gain_same_tier = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = scope:rebel_leader
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		set_coa = d_hamimist
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war(s), every independent ruler gets into a seperate war	
+	title:c_ceuta.holder = {
+		top_liege = {
+			scope:rebel_leader = {
+				start_war = {
+					cb = berberist_invasion_cb
+					target = PREV
+					target_title = title:d_rif
+				}
+			}
+			trigger_event = me_berberist_events.0003			
+		}
+	}
+	
+	# Setup event troops.
+	scope:rebel_leader = {
+		spawn_army = {
+			levies = 170
+			men_at_arms = {
+				type = pikemen_unit
+				stacks = 6
+			}
+			men_at_arms = {
+				type = bowmen
+				stacks = 4
+			}
+			men_at_arms = {
+				type = light_footmen
+				stacks = 4
+			}
+			location = province:4680 # b_ghumira 
+			origin = province:4680
+			inheritable = yes
+			name = me_hamimist_invasion_army_title
+		}
+	}
+
+	# Place the courtiers into the Berberist Leader's emploment
+	scope:hamimist_leader = {
+		every_in_list = {
+			list = HI_characters
+			add_courtier = prev 
+		}
+	}
+}
+
+spawn_kaduist_invasion_character_effect = {
+	# Mu'arik, father of Kadu
+	create_character = {
+		age = { 40 42 }
+		name = "Mu_arik"
+		gender = male
+		faith = faith:kaduist
+		location = title:c_satif.title_province
+		culture = culture:baranis
+		trait = kutama
+		trait = education_intrigue_2
+
+		martial = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+		prowess = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+		
+		after_creation = {
+			dynasty = { set_coa = me_mawatid_dynasty }
+			dynasty = { set_dynasty_name = dynn_me_mawatid }
+			house = { set_house_name = dynn_me_mawatid }
+			add_to_list = KI_characters
+		}
+		save_scope_as = kaduist_father
+	}
+
+	create_character = { # Kadu ibn Mu'arik
+		age = { 11 13 }
+		name = "Kadu"
+		gender = male
+		faith = faith:kaduist
+		location = title:c_satif.title_province
+		culture = culture:baranis
+		father = scope:kaduist_father
+		dynasty_house = scope:kaduist_father.house
+
+		trait = kutama
+		trait = kaduist_prophet
+		trait = blood_of_kadu
+
+		martial = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+		prowess = {
+			min_template_low_skill
+			max_template_low_skill
+		}
+
+		save_scope_as = kaduist_leader
+	}
+
+	# The two commanders that accomponied Kadu and his father
+	create_character = {
+		template = new_warrior_character
+		faith = faith:kaduist
+		culture = culture:baranis
+		gender = male
+		location = scope:kaduist_leader.location
+		trait = kutama
+
+		after_creation = { add_to_list = KI_characters }
+	}
+	create_character = {
+		template = new_warrior_character
+		faith = faith:kaduist
+		culture = culture:baranis
+		gender = male
+		location = scope:kaduist_leader.location
+		trait = kutama
+
+		after_creation = { add_to_list = KI_characters }
+	}
+}
+
+kaduist_event_launcher_effect = {
+	if = { # Is there any Ismaili presence?
+		limit = {
+			current_date >= 911.1.1
+			current_date < 912.1.1
+			OR = {
+				has_game_rule = me_berberist_invasion_H_K_ismaili
+				has_game_rule = me_berberist_invasion_K_ismaili
+			}
+			any_county_in_region = {
+				region = ghw_region_north_africa
+				OR = {
+					faith = faith:ismaili
+					holder = { faith = faith:ismaili }
+					holder = { any_liege_or_above = { faith = faith:ismaili } }
+				}
+			}
+		}
+		
+		set_global_variable = {
+			name = kaduist_ismaili_presence
+			value = yes
+		}
+	}
+
+	if = { # Early Warning
+		limit = {
+			current_date >= 911.1.1
+			current_date < 912.1.1
+			NOT = { exists = global_var:kaduist_invasion_ended }
+			OR = {
+				NOR = {
+					has_game_rule = me_berberist_invasion_H_K_ismaili
+					has_game_rule = me_berberist_invasion_K_ismaili
+				}
+				exists = global_var:kaduist_ismaili_presence
+			}
+		}
+		
+		every_living_character = {
+			limit = { completely_controls = title:c_satif }
+			trigger_event = {
+				id = me_berberist_events.0101
+				days = { 70 300 }
+			}
+		}
+	}
+
+	if = { # Kaduist 'Invasion' starts
+		limit = {
+			current_date >= 912.1.1
+			current_date < 913.1.1
+			NOT = { exists = global_var:kaduist_invasion_ended }
+			OR = {
+				NOR = {
+					has_game_rule = me_berberist_invasion_H_K_ismaili
+					has_game_rule = me_berberist_invasion_K_ismaili
+				}
+				exists = global_var:kaduist_ismaili_presence
+			}
+		}
+		trigger_event = {
+			id = me_berberist_events.0102
+			days = { 70 300 }
+		}
+	}
+}
+
+me_start_kaduist_invasion_effect = {
+	$REBEL_LEADER$ = { save_scope_as = rebel_leader }
+	$TARGET_COUNTY$ = { save_scope_as = target_county }
+	#Give the berberist leader a title
+	create_dynamic_title = {
+		tier = duchy
+		name = me_kaduist_invasion_name
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:target_county
+		set_landless_title = yes
+		set_destroy_on_gain_same_tier = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = scope:rebel_leader
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		set_coa = d_kaduist
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war(s), every independent ruler gets into a seperate war	
+	title:c_satif.holder = {
+		top_liege = {
+			scope:rebel_leader = {
+				start_war = {
+					cb = berberist_invasion_cb
+					target = PREV
+					target_title = title:d_bejaia
+				}
+			}
+			trigger_event = me_berberist_events.0103			
+		}
+	}
+	
+	# Setup event troops.
+	scope:rebel_leader = {
+		spawn_army = {
+			levies = 170
+			men_at_arms = {
+				type = pikemen_unit
+				stacks = 6
+			}
+			men_at_arms = {
+				type = bowmen
+				stacks = 4
+			}
+			men_at_arms = {
+				type = light_footmen
+				stacks = 4
+			}
+			location = province:4638 # b_ikjan
+			origin = province:4638
+			inheritable = yes
+			name = me_kaduist_invasion_army_title
+		}
+	}
+
+	# Place the courtiers into the Berberist Leader's emploment
+	scope:kaduist_leader = {
+		every_in_list = {
+			list = KI_characters
+			add_courtier = prev 
+		}
+	}
+}
+
+### Seljuk Invasion
+me_seljuk_invasion_sulayman_effect = {
+	create_title_and_vassal_change = {
+		type = conquest
+		save_scope_as = steal
+		add_claim_on_loss = yes
+	}
+
+	title:d_anatolia = {
+		every_in_de_jure_hierarchy = {
+			change_title_holder = {
+				holder = character:3046
+ 				change = scope:steal
+				take_baronies = yes
+			}
+
+			if = {
+				limit = {
+					tier = tier_county
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_control
+					years = 2
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_opinion
+					years = 20
+				}
+			}
+		}
+	}
+
+	title:d_charsianon = {
+		every_in_de_jure_hierarchy = {
+			change_title_holder = {
+				holder = character:3046
+				change = scope:steal
+				take_baronies = yes
+			}
+			
+			if = {
+				limit = {
+					tier = tier_county
+				}
+				set_county_culture = culture:turkish
+				add_county_modifier = {
+					modifier = turkish_consolidation_control
+					years = 2
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_opinion
+					years = 20
+				}
+			}
+		}
+	}
+
+	title:d_cappadocia = {
+		every_in_de_jure_hierarchy = {
+			change_title_holder = {
+				holder = character:3046
+				change = scope:steal
+				take_baronies = yes
+			}
+			
+			if = {
+				limit = {
+					tier = tier_county
+				}
+				set_county_culture = culture:turkish
+				add_county_modifier = {
+					modifier = turkish_consolidation_control
+					years = 2
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_opinion
+					years = 20
+				}
+			}
+		}
+	}
+
+	title:c_lydia = {
+		change_title_holder = {
+			holder = character:3046
+			change = scope:steal
+			take_baronies = yes
+		}
+	}
+
+	title:c_chonae = {
+		change_title_holder = {
+			holder = character:3046
+			change = scope:steal
+			take_baronies = yes
+		}
+	}
+
+	character:3046 = {
+		change_liege = {
+			liege = scope:attacker
+			change = scope:steal
+		}
+
+		add_gold = 800
+		add_prestige = 500
+		add_piety = 300
+	}
+	resolve_title_and_vassal_change = scope:steal
+}
+
+me_seljuk_invasion_danishmend_effect = {
+	create_title_and_vassal_change = {
+		type = conquest
+		save_scope_as = steal
+		add_claim_on_loss = yes
+	}
+	
+	title:d_sebasteia = {
+		every_in_de_jure_hierarchy = {
+			change_title_holder = {
+				holder = character:danishmendid_1
+				change = scope:steal
+				take_baronies = yes
+			}
+			
+			if = {
+				limit = {
+					tier = tier_county
+				}
+				set_county_culture = culture:turkish
+				add_county_modifier = {
+					modifier = turkish_consolidation_control
+					years = 2
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_opinion
+					years = 20
+				}
+			}
+		}
+	}
+
+	title:d_chaldia = {
+		every_in_de_jure_hierarchy = {
+			change_title_holder = {
+				holder = character:danishmendid_1
+				change = scope:steal
+				take_baronies = yes
+			}
+			
+			if = {
+				limit = {
+					tier = tier_county
+				}
+				set_county_culture = culture:turkish
+				add_county_modifier = {
+					modifier = turkish_consolidation_control
+					years = 2
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_opinion
+					years = 20
+				}
+			}
+		}
+	}
+
+	title:d_mesopotamia = {
+		every_in_de_jure_hierarchy = {
+			change_title_holder = {
+				holder = character:danishmendid_1
+				change = scope:steal
+				take_baronies = yes
+			}
+			
+			if = {
+				limit = {
+					tier = tier_county
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_control
+					years = 2
+				}
+				add_county_modifier = {
+					modifier = turkish_consolidation_opinion
+					years = 20
+				}
+			}
+		}
+	}
+
+	title:c_zela = {
+		change_title_holder = {
+		   holder = character:danishmendid_1
+		   change = scope:steal
+			take_baronies = yes
+		}
+    }
+
+	character:danishmendid_1 = {
+		change_liege = {
+			liege = scope:attacker
+			change = scope:steal
+		}
+
+		add_gold = 500
+		add_prestige = 200
+		add_piety = 100
+	}
+	resolve_title_and_vassal_change = scope:steal
+}

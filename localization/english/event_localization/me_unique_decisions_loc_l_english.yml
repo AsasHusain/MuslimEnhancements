@@ -1,0 +1,78 @@
+﻿l_english:
+ #Unite the Andalusian Thrones
+ ##Decision
+ unite_the_andalusian_thrones_decision:0 "Unite the Andalusian Thrones"
+ unite_the_andalusian_thrones_decision_desc:0 "al-Andalus will be united once more, and this time under the banner of the [ROOT.Char.GetDynasty.GetBaseNameNoTooltip] Dynasty."
+ unite_the_andalusian_thrones_decision_confirm:0 "Unite the Thrones"
+ unite_the_andalusian_thrones_decision_tooltip:0 "al-Andalus will be united once more"
+ unite_the_andalusian_thrones_decision_titles_tt:1 "Every Iberian [kingdom|E] [title|E] you own (except your [primary_title|E]) will be destroyed and their territories will become [de_jure|E] of your Primary Title ([THIS.Char.GetPrimaryTitle.GetNameNoTier])"
+ 
+ struggle_iberia_ending_hostility_decision_united_andalusian_throne_tt:0 "You united the Andalusian Thrones under your [primary_title|E]"
+ 
+ ##Events
+ me_unique_decisions.0001.t:0 "A United al-Andalus"
+ me_unique_decisions.0001.arabic_desc:0 "Once more, al-Andalus has been united under one [ROOT.Char.GetTitleAsNameNoTooltip]. The false taifa kings have been decrowned, while proud [ROOT.Char.GetPrimaryTitle.GetNameNoTier] stands stronger than ever.\n\nOne day I shall pass from this world and go to [ROOT.Char.GetFaith.DivineRealm], yet my legacy will remain on Earth forever. They will call me '[ROOT.Char.GetTitledFirstNameNoTooltip] — $nick_saqr_al_andalus$ (The Falcon of al-Andalus).'"
+ me_unique_decisions.0001.non_arabic_desc:0 "Once more, al-Andalus has been united under one [ROOT.Char.GetTitleAsNameNoTooltip]. The false taifa kings have been decrowned, while proud [ROOT.Char.GetPrimaryTitle.GetNameNoTier] stands stronger than ever.\n\nOne day I shall pass from this world and go to [ROOT.Char.GetFaith.DivineRealm], yet my legacy will remain on Earth forever. They will call me '[ROOT.Char.GetTitledFirstNameNoTooltip] — The Falcon of al-Andalus.'"
+ me_unique_decisions.0001.a:1 "This is the dawn of a new era."
+
+ me_unique_decisions.0002.start.desc:0 "One after one, the Iberian Kingdoms have fallen under the rule of [al_andalus_uniter.GetPrimaryTitle.GetNameNoTier]."
+ me_unique_decisions.0002.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', al_andalus_uniter)] [al_andalus_uniter.GetTitledFirstName]"
+ me_unique_decisions.0002.former.desc:0 "[al_andalus_uniter.GetTitledFirstName]"
+ me_unique_decisions.0002.end.desc:0 "has compared [al_andalus_uniter.GetHerselfHimself] to Abd al-Rahman '$nick_the_hawk_of_quraysh$' (The Falcon of Quraysh) and declared [al_andalus_uniter.GetHerselfHimself] 'The Falcon of al-Andalus.'\n\n[al_andalus_uniter.GetHerHis|U] name will surely live on for centuries, but will [al_andalus_uniter.GetSheHe] be remembered as a hero or a tyrant? Only [ROOT.Char.GetFaith.FateGodName] knows."
+ 
+ # Conquer the Italian Mainland
+ ##Decision
+ conquer_italian_mainland_decision:0 "Conquer the Italian Mainland"
+ conquer_italian_mainland_decision_confirm:0 "The peninsula shall be mine"
+ conquer_italian_mainland_decision_desc:0 "The Italian mainland was once the central province of the great and prestigious Roman empire, now the peninsula is divided into squabbling city-states and barbarous realms, begging for a great conqueror to come and rule them."
+ conquer_italian_mainland_decision_tooltip:0 "Sicily and Venice are brought under [de_jure|E] Italia."
+ conquer_italian_mainland_decision_effect_tooltip:0 "Sicily and Venice are brought under [de_jure|E] Italia"
+ 
+ ##Events
+ me_unique_decisions.0003.t:0 "The Riches of Italy"
+ me_unique_decisions.0003.desc:0 "Italia, once the central province of the great and prestigious Roman empire, has been fractured between rebellious city-states, greedy bishops, and foriegn conquerors.\n\nToo weak and too busy with petty infighting, they made themselves an easy target for my dynasty, and now we rise as a dominant power in the Mediterranean. The riches of beautiful Italia are our to claim!"
+ me_unique_decisions.0003.a:0 "The Riches of Italia are Mine!"
+ me_unique_decisions.0004.desc:0 "Ever since the fall of the Western Empire, the Italian peninsula has been fractured between rebellious city-states, greedy bishops, and foriegn conquerors, its ancient glory squandered in petty infighting.\n\nToo weak and too busy with petty infighting, they made themselves an easy target for [scoped_ruler.GetTitledFirstNamePossessive], who conquered Italy and reaped it's riches for himself, rising as a dominant power in the Mediterranean. Once contended between Franks and Greeks, it has now become an Empire on its own right, ruling over the core of the old Roman heartlands."
+ me_unique_decisions.0004.a:0 "Interesting..."
+
+ #Promote Islamic Settlements in Hungary
+ ##Decision
+ promote_islamic_hungarian_settlement_decision:0 "Promote Muslim Settlements"
+ promote_islamic_hungarian_settlement_decision_desc:1 "By opening the [ROOT.Char.GetPrimaryTitle.GetName] to traders and settlers from across the Muslim world, I will be able to speed the development of my country and bring our people closer to the Sunnah of the Prophet."
+ promote_islamic_hungarian_settlement_decision_tooltip:0 "Welcome new Muslim Settlers in [ROOT.Char.GetPrimaryTitle.GetNameNoTooltip]"
+ promote_islamic_hungarian_settlement_decision_confirm:0 "Send out the announcement!"
+ promote_islamic_hungarian_settlement_decision_convert_county:0 "May convert to an Islamic [faith|E]"
+ promote_hungarian_settlement_decision_muslim:0 "Your [faith|E] is an Islamic [faith]."
+ 
+ hungarian_resettlement_modifier_islamic:0 "Muslim Settlers"
+ hungarian_resettlement_modifier_islamic_desc:0 "This once wild land is experiencing an unexpected growth due to a steady influx of new settlers coming from nearby realms."
+ 
+ ##Events
+ me_unique_decisions.0005.t:0 "New Beginning"
+ me_unique_decisions.0005.desc:0 "When our people crossed over the Carpathians into the Hungarian plains, we brought along with us the Böszörmény, Turkic tribesmen professing the faith of the Arab prophet who had joined our confederation. By promoting members of these tribes into positions of prominence and inviting settlers, merchants and soldiers from across the Muslim world, [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] will soon become a bastion of Islam in a sea of Christians and pagans; perhaps one day, [scoped_ruler.GetCapital.GetNameNoTierNoTooltip] on the Danube will rival Baghdad on the Tigris.\n\nAs we import scholars and jurists to establish our own ulema, hopefully the imposition of Islamic law and custom will calm the rowdier subjects of [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] as it is brought into the [scoped_ruler.GetFaith.GetAdjective] fold."
+ me_unique_decisions.0005.a:0 "God is good!"
+ me_unique_decisions.0006.t:0 "The New Settlers"
+ me_unique_decisions.0006.desc.vassals:0 "[scoped_ruler.GetTitledFirstName] has decided to welcome foreign settlers from across the Muslim world.\n\n[scoped_ruler.GetSheHe|U] hopes that these new arrivals will help populate our land faster and increase commerce with our allies."
+ me_unique_decisions.0006.desc.others:1 "[scoped_ruler.GetTitledFirstName] has decided to welcome foreign settlers from across the Muslim world into [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip].\n\n[scoped_ruler.GetSheHe|U] hopes that these new arrivals will help populate [scoped_ruler.GetHerHis] land faster and increase commerce with [scoped_ruler.GetHerHis] allies."
+ me_unique_decisions.0006.a:0 "They better not come for my wine!"
+ me_unique_decisions.0006.b:0 "I see..."
+
+ #######################
+ 
+ # Choose a faith for Persia
+ choose_karrami_desc: "[GetFaithByKey('karrami').GetName]"
+ choose_karrami_tooltip: "While the [GetFaithByKey('karrami').GetAdjective] [faith|E] is still subject to the [GetFaithDoctrine('muhammad_succession_sunni_doctrine').GetBaseName] Caliph, it's beliefs are marked as heretical by the [GetFaithDoctrine('muhammad_succession_sunni_doctrine').GetBaseName] orthodoxy and its members are heavily ostracized, which would grant us a great deal of autonomy."
+ choose_karrami_name: "[GetFaithByKey('karrami').GetNameNoTooltip]"
+ choose_salihi_desc: "[GetFaithByKey('salihi').GetName]"
+ choose_salihi_tooltip: "The [GetFaithDoctrine('islam_secondary_group_shia_batriya_doctrine').GetBaseName] of the [GetFaithByKey('salihi').GetAdjective] [faith|E] offers us a middle position between the [GetFaithDoctrine('muhammad_succession_shia_doctrine').GetBaseName] and [GetFaithDoctrine('muhammad_succession_sunni_doctrine').GetBaseName] succession, which could allow us to appeal to both of these groups while being completely independent of the Caliphate."
+ choose_salihi_name: "[GetFaithByKey('salihi').GetNameNoTooltip]"
+ choose_ibadi_desc: "[GetFaithByKey('ibadi').GetName]"
+ choose_ibadi_tooltip: "The [GetFaithByKey('ibadi').GetAdjective] [faith|E] has very little roots in Persia, but it's teaching emphasize the equality of all men regardless of their descendancy or heritage, which may help us in forming stronger bonds of unity between the diverse peoples of Persia."
+ choose_ibadi_name: "[GetFaithByKey('ibadi').GetNameNoTooltip]"
+ choose_urartuism_desc: "[GetFaithByKey('urartuism').GetName]"
+ choose_urartuism_tooltip: "The [GetFaithByKey('urartuism').GetAdjective] [faith|E] has very ancient roots in both Persia and Armenia, by adopting it we could deeping the Armenian influence present in our people and Persia as a whole."
+ choose_urartuism_name: "[GetFaithByKey('urartuism').GetNameNoTooltip]"
+ choose_urartuism_must_be_armenian_tt:0 "Your [culture|E] must either be Armenian or descended from Armenian."
+ choose_manichean_desc: "[GetFaithByKey('manichean').GetName]"
+ choose_manichean_tooltip: "The appeal that the Abrahamic faiths has to the people of Persia is undeniable, and the [GetFaithByKey('manichean').GetAdjective] [faith|E] has strong influences from Abrahamic theology, by adopting it we would be taking a faith that is both appealling to the Persian people and Persian in nature."
+ choose_manichean_name: "[GetFaithByKey('manichean').GetNameNoTooltip]"

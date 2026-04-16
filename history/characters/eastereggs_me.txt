@@ -1,0 +1,161 @@
+﻿me_ea_cat_001 = { # Ya'qub 'Qamar ad-Din' Dibyaza
+	name = "Ya_qub"
+	dna = me_ea_dibyaza_dna
+	dynasty = me_dynasty_ea_dibyaza
+	give_nickname = nick_qamar_ud_din_nonprefix
+	religion = "ashari"
+	culture = "levantine"
+	trait = education_diplomacy_3
+
+	1145.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_002 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_003 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_004 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_005 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_006 }
+		}
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_002 = { # Khalid Kashmiri
+	name = "Khalid"
+	dna = me_ea_kashmiri_dna
+	dynasty = me_dynasty_ea_kashmiri
+	religion = "ashari"
+	culture = "kashmiri"
+	trait = education_martial_3
+
+	1148.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_003 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_004 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_005 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_006 }
+		}
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_003 = { # Khidr Karawita
+	name = "Khidr"
+	dna = me_ea_karawita_dna
+	dynasty = me_dynasty_ea_karawita
+	religion = "ashari"
+	culture = "baranis"
+	trait = education_martial_3
+
+	1140.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_004 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_005 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_006 }
+		}
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_004 = { # Ismail Ahmad Kanabawi
+	name = "Isma_il"
+	dna = me_ea_kanabawi_dna
+	dynasty = me_dynasty_ea_kanabawi
+	religion = "muwalladi"
+	culture = "andalusian"
+	trait = education_martial_3
+
+	father = me_ea_cat_007 # Ahmad Kanabawi
+	1128.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_005 }
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_006 }
+		}
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_005 = { # Uthman Abdul-Jalil Sisha
+	name = "Uthman"
+	dna = me_ea_sisha_dna
+	dynasty = me_dynasty_ea_sisha
+	religion = "ashari"
+	culture = "persian"
+	trait = education_learning_3
+
+	father = me_ea_cat_008 # Abdul-Jalil Sisha
+	1125.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:me_ea_cat_006 }
+		}
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_006 = { # Muhammad Sumbul
+	name = "Muhammad"
+	dna = me_ea_sumbul_dna
+	dynasty = me_dynasty_ea_sumbul
+	religion = "maturidi"
+	culture = "turkmen"
+	trait = education_martial_3
+
+	1125.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_007 = { # Father of Ismail Ahmad Kanabawi
+	name = "Ahmad"
+	dynasty = me_dynasty_ea_kanabawi
+	religion = "muwalladi"
+	culture = "andalusian"
+
+	1100.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+me_ea_cat_008 = { # Father of Uthman Abdul-Jalil Sisha
+	name = "Abdul-Jalil"
+	dynasty = me_dynasty_ea_sisha
+	religion = "ashari"
+	culture = "persian"
+
+	1098.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}

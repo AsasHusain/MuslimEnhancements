@@ -1,0 +1,80 @@
+﻿l_english:
+
+ #Nicknames
+ nick_the_hawk_of_quraysh:0 "Saqr Quraysh"
+ nick_the_hawk_of_quraysh_desc:1 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharHaveHas(CHARACTER)] escaped the bloodthirsty swords and spears of the Abbasids that chased [CharYouHerHim(CHARACTER)] across from Syria to al-Andalus, where [CharYouSheHe(CHARACTER)] began [CharYourHerHis(CHARACTER)] dynasty's golden age in [GetTitleByKey('c_cordoba').GetNameNoTier].\n\nSo grand was this feat, that [CharYourHerHis(CHARACTER)] rival, the Abbasid Caliph al-Mansur, bestowed upon [CharYouHerHim(CHARACTER)] the epithet of '$nick_the_hawk_of_quraysh$' (The Falcon of Quraysh)."
+ nick_avicenna: "Ibn Sina"
+ nick_averroes: "Ibn Rushd"
+ nick_alhazen: "Ibn al-Haytham"
+ nick_ibn_battuta_desc: "A matronymic literally meaning "son of the duckling", refering to his mother Fatuma who was given the pet name of Battuta."
+ 
+ #Names
+ ## Arabic Names
+ Abu_al-Fadl:0 "Abu al-Faḍl"
+ Al-Fadl:0 "al-Faḍl"
+ al-Fadl:0 "al-Faḍl"
+ al-Harith:0 "al-Ḥarith"
+ al-YasA_:0 "al-Yasa'"
+ Fadlun:0 "Faḍlun"
+ Hafs:0 "Ḥafṣ"
+ Mahbub:0 "Maḥbub"
+ Riyah:0 "Riyāḥ"
+ Sawdan:0 "Sawdān"
+ Sumadih:0 "Sumadiḥ"
+ 
+ dynn_Ukhaidhirid:0 "al-Ukhaydiri"
+ dynn_Habbari:0 "al-Habbāri"
+ dynn_Banu_Sama:0 "as-Sami"
+ dynn_Kaysite:0 "al-Qaysi"
+ dynn_Manjawa:0 "al-Manjawi"
+ dynn_Muqqadam:0 "al-Muqaddami"
+ dynn_Musikid:0 "Takshid"
+ 
+ ##Arabian tribes
+ dynn_Banu_Tamim:0 "at-Tamīmī"
+ dynn_Kinda:0 "al-Kindī"
+ dynn_Sumadihid:0 "as-Sumadihi" # as-Sumadiḥi
+ dynn_Banu_Kinanah:0 "al-Kinani"
+ dynn_Banu_Taghlib:0 "at-Taghlibi"
+ dynn_al_adawiyya:0 "al-'Adawi"
+ dynn_attab:0 "al-Attabi"
+ dynn_Hamdanid:0 "al-Hamdani"
+ dynn_Banu_Wafid:0 "al-Wafidi"
+ dynn_Tayyi:0 "at-Ta'ī"
+ dynn_Jarrahid:0 "al-Jarrāhi" # al-Jarrāḥi
+ dynn_Fadlid:0 "al-Faḍli"
+ dynn_Mirid:0 "al-Miri"
+ dynn_Farajid:0 "al-Faraji"
+ dynn_Azdid:0 "al-Azdi"
+ dynn_Yahmad:0 "al-Yahmadi" # al-Yaḥmadi
+ dynn_Fazara:0 "al-Fazāri"
+ 
+ ## North African Names
+ dynn_Maghrawavid:0 "Maghrāwid"
+ dynn_Malzuzi:0 "al-Malzūzī"
+ 
+ ##Andalusian Names
+ Jattab:0 "Khattab"
+ Jalaf_Allah:0 "Khalaf Allah"
+ Jayr:0 "Khayr" 
+ Jayrun:0 "Khayrun"
+ Jidr:0 "Khidr"
+ Jyad:0 "Iyad"
+ 
+ dynn_al-Yiliqi:0 "al-Jilliqi"
+ dynn_Jattabid:0 "Khattabid"
+ dynn_Jayranid:0 "Khayranid"
+ dynn_Jyadid:0 "Iyadid
+ dynn_Mardanisid:0 "Mardanishid"
+ dynn_Nayid:0 "Naja'id"
+ 
+ ##Siqilli Names
+ dynn_Kalbid:0 "al-Kalbi"
+ dynn_Mdinid:0 "al-Madani"
+ dynn_al-Hawasid:0 "al-Ḥawwāsi"
+ dynn_at-Timnahid:0 "ath-Thumnawi"
+ dynn_Sawdanid:0 "Sawdānid"
+ 
+ ##Punjabi Dynasty names
+ dynn_Tandon:0 "Tandu"
+ 

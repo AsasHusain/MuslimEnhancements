@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "khalid_ibn_al_walid_shield_mesh"
+	file = "khalid_ibn_al_walid_shield.mesh"
+
+	meshsettings = {
+		name = "khalid_ibn_al_walid_shieldShape"
+		index = 0
+		texture_diffuse = "khalid_ibn_al_walid_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "khalid_ibn_al_walid_shield_entity"
+	pdxmesh = "khalid_ibn_al_walid_shield_mesh"
+}

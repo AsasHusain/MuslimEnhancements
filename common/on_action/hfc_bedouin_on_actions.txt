@@ -1,0 +1,13 @@
+﻿# Moved effect to ME_game_start
+#on_game_start_after_lobby = {
+#	on_actions = {
+#		hfc_bedouin
+#	}
+#}
+
+#hfc_bedouin = {
+#	effect = {
+#		hfc_bedouin_traditions = yes
+#		hfc_bedouin_counties = yes
+#	}
+#}

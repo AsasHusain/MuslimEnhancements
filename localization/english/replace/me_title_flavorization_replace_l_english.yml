@@ -1,0 +1,35 @@
+﻿l_english:
+
+ #############################################
+### Arabic ###
+# Republic 
+ duke_republic_female_arabic_group:0 "Wâlia-Emira"
+ king_republic_female_arabic_group:0 "Wâlia-Malika"
+ 
+### Turkish ###
+# Feudal / Clan 
+ count_feudal_male_turkish:1 "Bey"
+ duke_feudal_male_turkish:1 "Atabey"
+ 
+ 
+ prince_muslim_female_dravidian_group:0 "Shehzadi"
+ prince_muslim_male_dravidian_group:0 "Shehzada"
+ 
+ # Andalusian Taifa/Emirate
+ duchy_feudal_andalusian_independent:0 "[CHARACTER.Custom('ME_DuchyAndalusian')]"
+ duchy_andalusian_taifa:0 "Taifa"
+ duchy_andalusian_default:0 "$duchy_feudal_arabic_group$"
+
+ king_clan_male_iberian_group:0 "$king_feudal_muslim_male_arabic_group$"
+ king_clan_female_iberian_group:0 "$king_feudal_muslim_female_arabic_group$"
+ kingdom_clan_iberian_group:0 "$kingdom_feudal_muslim_arabic_group$"
+ emperor_clan_male_iberian_group:0 "$emperor_feudal_muslim_male_arabic_group$"
+ emperor_clan_female_iberian_group:0 "$emperor_feudal_muslim_female_arabic_group$"
+ empire_clan_iberian_group:0 "$empire_feudal_muslim_arabic_group$"
+ 
+ # Nomadic Council
+ COUNCIL_WINDOW_TITLE_KURULTAI: "[GetPlayer.Custom('ME_GetNomadicCouncilNameFull')]"
+ THE_GREAT_STEPPE_WINDOW_GURKHAN_SUBTITLE: "[gurkhan_dominant_nomad|E]"
+ game_concept_gurkhan_dominant_nomad: "Dominant Nomad"
+ game_concept_gurkhan_desc: "The biggest threat of [the_great_steppe|E]. The $game_concept_gurkhan_dominant_nomad$ or $game_concept_gurkhan$ is that [GetGovernment( 'nomad_government' ).GetName] [ruler|E] with the biggest [herd|E] in the entire region, marking them as a powerful ally or a dreadful enemy.\n\nOnly the $game_concept_gurkhan$ may reach the highest level of [nomadic_authority|E], allowing them to become the [GetTrait('greatest_of_khans').GetName( GetNullCharacter )] and marking them as a target."
+

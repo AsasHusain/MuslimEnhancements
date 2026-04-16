@@ -1,0 +1,513 @@
+﻿
+## Kedah genology, taken from Serajah Kedah which takes from a 16th century text known as Hikayat Merong Mahawangsa (which vanilla seems to have taken some characters form), unknown how much of it is true
+### Starts from the Muslim sultans of Kedah as the historicity of the pre-Islamic period is highly suspect (the first hindu ruler was apparently a persian king turned exile)
+
+#me_kedah_001 = {
+#	name = "Muzaffar" # Paduka Sri Sultan Muzaffar Shah, First Muslim ruler of Kedah, used as a template for (malay_kedah_20_fic) and as such is not active
+#	dynasty = malay_mahawangsa
+#	religion = ashari
+#	culture = malay
+#	
+#	1120.1.1 = {
+#		birth = yes
+#	}
+#	1179.1.1 = {
+#		death = yes
+#	}
+#}
+
+me_kedah_002 = {
+	name = "Mu_azzam" # Paduka Sri Sultan Mu'azzam Shah, Second Sultan of Kedah
+	dynasty = malay_mahawangsa
+	religion = ashari
+	culture = malay
+	
+	#father = malay_kedah_20_fic
+	1150.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = malay_kedah_20_fic
+	}
+	1202.5.1 = { # Died in Sha'ban 598
+		death = yes
+	}
+}
+
+me_kedah_003 = {
+	name = "Sulayman" # Tanku Sulayman, Also known as Raja Laksama, ruled or governed Langkawi island alongside other islands
+	dynasty = malay_mahawangsa
+	religion = ashari
+	culture = malay
+	
+	#father = malay_kedah_20_fic
+	1155.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = malay_kedah_20_fic
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+me_kedah_004 = {
+	name = "Muhammad" # Tanku Muhammad, Also known as Raja Muda, ruled or governed Mukim Padang Terap
+	dynasty = malay_mahawangsa
+	religion = ashari
+	culture = malay
+	
+	#father = malay_kedah_20_fic
+	1159.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = malay_kedah_20_fic
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+me_kedah_005 = {
+	name = "Muhammad" # Paduka Sri Sultan Muhammad Shah, Third Sultan of Kedah
+	dynasty = malay_mahawangsa
+	religion = ashari
+	culture = malay
+	
+	father = me_kedah_002
+	1170.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = malay_kedah_20_fic
+	}
+	1237.1.1 = { # Died in JUmada al-Awwal 634
+		death = yes
+	}
+}
+
+me_kedah_006 = {
+	name = "Puteri" # Tanku Puteri
+	female = yes
+	dynasty = malay_mahawangsa
+	religion = ashari
+	culture = malay
+	
+	father = me_kedah_002
+	1175.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = malay_kedah_20_fic
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+
+me_kedah_007 = {
+	name = "Maheran" # Tanku Maheran
+	female = yes
+	dynasty = malay_mahawangsa
+	religion = ashari
+	culture = malay
+	
+	father = me_kedah_002
+	1178.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = malay_kedah_20_fic
+	}
+	1240.1.1 = {
+		death = yes
+	}
+}
+
+## Fictional characters for game start effects
+me_malay_fic_001 = {
+	name = "Putera"
+	religion = vajrayana
+	culture = acehnese
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_malay_fic_002 = {
+	name = "Mahasenapati"
+	religion = vajrayana
+	culture = acehnese
+	1000.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+###
+## Perlak
+
+#Shia Sayyidi Sultan Dynasty
+malay_perlak_01 = { #Sultan Alaiddin Syed Maulana Abdul Aziz Shah
+	name = "Abd_al-Aziz"
+	dynasty = dk_sayyid_perlak
+	religion = zayidi # Changed from imami to zayidi since most Shia Sayyids around 867 were Zayidi
+	culture = acehnese
+	#trait = sayyid # Activated via Event/Legend
+	trait = zealous
+	trait = stubborn
+	trait = calm
+	
+	804.1.1 = {
+		birth = yes
+	}
+	864.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_02 = {#Sultan Alaiddin Syed Maulana Abdul Rahim Shah
+	name = "Abd_al-Rahim"
+	dynasty = dk_sayyid_perlak
+	religion = zayidi
+	culture = acehnese
+	#trait = sayyid # Activated via Event/Legend
+	trait = zealous
+	trait = ambitious
+	trait = arbitrary
+	
+	father = malay_perlak_01
+	823.1.1 = {
+		birth = yes
+	}
+	888.1.1 = {
+		death = yes
+	}
+}
+	
+malay_perlak_03 = { #Sultan Alaiddin Syed Maulana Abbas Shah
+	name = "Abbas"
+	dynasty = dk_sayyid_perlak
+	religion = zayidi
+	culture = acehnese
+	#trait = sayyid # Activated via Event/Legend
+	
+	father = malay_perlak_02
+	858.1.1 = {
+		birth = yes
+	}
+	888.1.1 = {
+		effect = {
+			set_realm_capital = title:c_SUM_perlak
+			set_primary_title_to = title:c_SUM_perlak
+		}
+	}
+	913.1.1 = {
+		death = yes
+	}
+}
+	
+malay_perlak_04 = {#Sultan Alaiddin Syed Maulana Ali Mughat Shah
+	name = "Ali"
+	dynasty = dk_sayyid_perlak
+	religion = zayidi
+	culture = acehnese
+	#trait = sayyid # Activated via Event/Legend
+	
+	father = malay_perlak_03
+	888.1.1 = {
+		birth = yes
+	}
+	918.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_05 = { #Fictional father
+	name = "Ahmad_Ahmad"
+	dynasty = dk_sayyid_perlak
+	religion = zayidi
+	culture = acehnese
+	#trait = sayyid # Activated via Event/Legend
+	
+	father = malay_perlak_04
+	900.1.1 = {
+		birth = yes
+	}
+	954.1.1 = {
+		death = yes
+	}
+}
+	
+malay_perlak_06 = { #Only named as Sultan Alaiddin Syed Maulana Shah (the name all Sayyidi Perlak's Sultan uses)
+	name = "Zayd" #Fictional name
+	dynasty = dk_sayyid_perlak
+	religion = zayidi
+	culture = acehnese
+	#trait = sayyid # Activated via Event/Legend
+	
+	father = malay_perlak_05
+	947.1.1 = {
+		birth = yes
+	}
+	988.1.1 = {
+		death = yes
+	}
+}
+	
+#Sunni Makhdumi Sultan Dynasty
+
+malay_perlak_07 = { #Sultan Makhdum Alaiddin Malik Abdul Kadir Shah Johan Berdaulat
+	name = "Abd_al-Kadir"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	trait = peasant_leader
+	trait = zealous
+	
+	884.1.1 = {
+		birth = yes
+	}
+	932.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_08 = { #Sultan Makhdum Alaiddin Malik Muhammad Amin Shah Johan Berdaulat
+	name = "Muhammad"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_07
+	905.1.1 = {
+		birth = yes
+	}
+	956.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_09 = { #Sultan Makhdum Alaiddin Abdul Malik Shah Johan Berdaulat
+	name = "Abd_al-Malik"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_08
+	926.1.1 = {
+		birth = yes
+	}
+	983.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_10 = { #Sultan Makhdum Alaiddin Malik Ibrahim Shah Johan Berdaulat
+	name = "Ibrahim"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	trait = stubborn
+	trait = brave
+	trait = calm
+	trait = holy_warrior
+	
+	father = malay_perlak_09
+	949.1.1 = {
+		birth = yes
+	}
+	1023.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_11 = { #Sultan Makhdum Alaiddin Malik Mahmud Shah Johan Berdaulat
+	name = "Mahmud"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_10
+	996.1.1 = {
+		birth = yes
+	}
+	1059.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_12 = { #Sultan Makhdum Alaiddin Malik Mansur Shah Johan Berdaulat
+	name = "Mansur"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	trait = arrogant
+	trait = arbitrary
+	trait = patient
+	
+	father = malay_perlak_11
+	1027.1.1 = {
+		birth = yes
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_13 = { #Sultan Makhdum Alaiddin Malik Abdullah Shah Johan Berdaulat
+	name = "Abdullah"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_12
+	1048.1.1 = {
+		birth = yes
+	}
+	1109.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_14 = { #Sultan Makhdum Alaiddin Malik Ahmad Shah Johan Berdaulat
+	name = "Ahmad_Ahmad"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_13
+	1089.1.1 = {
+		birth = yes
+	}
+	1135.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_15 = { #Sultan Makhdum Alaiddin Malik Mahmud Shah Johan Berdaulat
+	name = "Mahmud"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_14
+	1103.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_16 = { #Sultan Makhdum Alaiddin Malik Usman Shah Johan Berdaulat
+	name = "Uthman"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_15
+	1129.1.1 = {
+		birth = yes
+	}
+	1173.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_17 = { #Sultan Makhdum Alaiddin Malik Muhammad Shah Johan Berdaulat
+	name = "Muhammad"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	trait = compassionate
+	trait = content
+	trait = just
+	
+	father = malay_perlak_16
+	1147.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+malay_perlak_18 = { #Sultan Makhdum Alaiddin Abdul Jalil Shah Johan Berdaulat
+	name = "Abdul-Jaleel"
+	dynasty = dk_makhdum_perlak
+	religion = ashari
+	culture = acehnese
+	
+	father = malay_perlak_17
+	1160.1.1 = {
+		birth = yes
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+
+#Silu Pasai Sultan Dynasty
+
+malay_silu_01 = { #Fictional
+	name = "Purnama"
+	dynasty = dk_pasai_silu
+	religion = shaivism
+	culture = acehnese
+	trait = calm
+	trait = generous
+	trait = gregarious
+	
+	learning = 20
+	
+	1160.1.1 = {
+		birth = yes
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+malay_silu_02 = { #Fictional
+	name = "Budiman"
+	dynasty = dk_pasai_silu
+	religion = shaivism
+	culture = acehnese
+	trait = ambitious
+	
+	learning = 24
+	
+	father = malay_silu_01
+	1216.1.1 = {
+		birth = yes
+	}
+	1267.1.1 = {
+		death = yes
+	}
+}
+
+malay_silu_03 = { #Sultan al-Malik al-Salih
+	name = "Mara"
+	dynasty = dk_pasai_silu
+	religion = ashari
+	culture = acehnese
+	trait = zealous
+	trait = just
+	
+	father = malay_silu_02
+	1237.1.1 = {
+		birth = yes
+	}
+	1297.1.1 = {
+		death = yes
+	}
+}

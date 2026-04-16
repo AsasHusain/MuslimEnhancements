@@ -1,0 +1,122 @@
+﻿ME_ancestral_glory = {
+	name = {
+		first_valid = {
+			# Triggered seeds
+			triggered_desc = {
+				trigger = {
+					scope:ancestor = character:me_ziyadid_001 # Ziyad 'Ibn Abihi'
+				}
+				desc = legend_ziyadid_lineage
+			}
+			triggered_desc = {
+				trigger = {
+					scope:ancestor = character:me_makhzumi_031 # Wudd ibn Hisham al-Makhzumi
+				}
+				desc = legend_makhzumi_lineage
+			}
+			triggered_desc = {
+				trigger = {
+					scope:ancestor = character:159501 # Idris ibn Abdullah, Founder of the Idrisids
+				}
+				desc = legend_idrisid_legacy
+			}
+			random_valid = {
+				desc = legend_history
+				desc = legend_chronicles
+				desc = legend_compendium
+				desc = legend_genealogy
+				desc = legend_manuscripts
+				desc = legend_record
+				desc = legend_annals
+				desc = legend_title_history
+				desc = legend_court
+			}
+		}
+	}
+	description = {
+		first_valid = {
+			# Triggered seeds
+			triggered_desc = {
+				trigger = {
+					scope:ancestor = character:me_ziyadid_001 # Ziyad 'Ibn Abihi'
+				}
+				desc = legend_ziyadid_lineage_desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:ancestor = character:me_makhzumi_031 # Wudd ibn Hisham al-Makhzumi
+				}
+				desc = legend_makhzumi_lineage_desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:ancestor = character:159501 # Idris ibn Abdullah, Founder of the Idrisids
+				}
+				desc = legend_idrisid_legacy_desc
+			}
+			random_valid = {
+				desc = legend_chronicle_ancestral_glory_desc
+			}
+		}
+	}
+
+	portrait_animation = personality_honorable
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+}
+
+ME_ancient_people = {
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:culture = culture:himyarite
+					scope:title = title:k_yemen
+					scope:original_region = geographical_region:ghw_region_arabia
+				}
+				desc = legend_himyarite_heritage
+			}
+			desc = legend_ancient_people_name
+		}
+	}
+	description = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:culture = culture:himyarite
+					scope:title = title:k_yemen
+					scope:original_region = geographical_region:ghw_region_arabia
+				}
+				desc = legend_himyarite_heritage_desc
+			}
+			desc = legend_ancient_people_desc
+		}
+	}
+
+	portrait_animation = page_flipping
+
+	properties = {
+		culture = culture
+		title = landed_title
+		original_region = geographical_region
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancient_people
+		motivation = legend_chapter_motivation_generic
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_generic
+		conclusion = legend_chapter_conclusion_ancient_people
+	}
+}

@@ -1,0 +1,26 @@
+﻿become_hafidh_success = {
+	random_events = {
+		100 = become_hafidh_outcome.1000 # Hafidh trait is not max level
+		100 = become_hafidh_outcome.1001 # Hafidh trait reaches max level
+	}
+}
+
+become_hafidh_failure = {
+	random_events = {
+		100 = become_hafidh_outcome.2000
+	}
+}
+
+
+become_hafidh_ongoing = {
+	trigger = {
+		is_playable_character = yes
+		is_physically_able = yes
+	}
+	random_events = {
+		500 = 0
+		2 = become_hafidh_ongoing.1000 # Young character memorizes the Qur'an *really* fast
+		2 = become_hafidh_ongoing.1010 # Old character has hard time memorizing the Qur'an
+		2 = become_hafidh_ongoing.1020 # Your tutor is a heretic, and interprets the verses in an unorthodox way
+	}
+}

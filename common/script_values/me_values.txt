@@ -1,0 +1,68 @@
+﻿# Proselytize
+me_proselytize_buy_conversion_gold = {
+	value = root.location.county.development_level
+	if = {
+		limit = { var:social_type = flag:preach_nobility }
+		multiply = 100
+	}
+	if = {
+		limit = { var:social_type = flag:preach_workers }
+		multiply = 50
+	}
+	if = {
+		limit = { var:social_type = flag:preach_villagers }
+		multiply = 25
+	}
+}
+
+# Conversion Task
+puritanical_islam_conversion_bonus_root_value = 0.3
+
+puritanical_islam_conversion_bonus_actual_value = {
+	value = court_chaplain_conversion_base_total
+	multiply = puritanical_islam_conversion_bonus_root_value
+}
+
+mustali_schismed_sect_conversion_bonus_root_value = 0.5
+
+mustali_schismed_sect_conversion_bonus_actual_value = {
+	value = court_chaplain_conversion_base_total
+	multiply = mustali_schismed_sect_conversion_bonus_root_value
+}
+
+# Nukkari Revolt
+
+nukkari_revolt_strength_score_levy = {
+		value = 0
+		if = {
+			limit = { has_global_variable = nukkari_revolt_strength_score }
+			add = global_var:nukkari_revolt_strength_score
+		}
+		multiply = 200
+}
+
+nukkari_revolt_strength_score_skirmishers = {
+		value = 0
+		if = {
+			limit = { has_global_variable = nukkari_revolt_strength_score }
+			add = global_var:nukkari_revolt_strength_score
+		}
+}
+
+nukkari_revolt_strength_score_bowmen = {
+		value = 0
+		if = {
+			limit = { has_global_variable = nukkari_revolt_strength_score }
+			add = global_var:nukkari_revolt_strength_score
+		}
+		multiply = 0.5
+}
+
+nukkari_revolt_strength_score_pikemen = {
+		value = 0
+		if = {
+			limit = { has_global_variable = nukkari_revolt_strength_score }
+			add = global_var:nukkari_revolt_strength_score
+		}
+		multiply = 0.5
+}

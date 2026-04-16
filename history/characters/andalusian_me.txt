@@ -1,0 +1,1251 @@
+﻿
+### Minor Andalusian Characters ###
+me_andalusian_001 = { 
+	name = "Abdullah" # Ibn Ya'qub, a Faris employed by Emir al-Mu'tadid of Sevilla
+	religion = ashari
+	culture = andalusian
+	trait = education_martial_3
+
+	father = me_andalusian_002
+	1035.1.1 = {
+		birth = yes
+	}
+	1065.1.1 = {
+		employer = 3212 # Emir al-Mu'tadid of Sevilla
+		effect = {
+			add_trait = lifestyle_blademaster
+			add_trait_xp = {
+				trait = lifestyle_blademaster
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	1085.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_002 = { 
+	name = "Ya_qub"
+	religion = ashari
+	culture = andalusian
+
+	1000.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_003 = {
+	name = "al-Izz" # al-Izz ibn Ishaq, son of the third Naib of Carmona, his death caused his father to abdicate
+	dynasty = al-birzali # Banu al-Birzali Dynasty
+	religion = wahbiya
+	culture = baranis
+	trait = zenata
+
+	father = baranis0090 # Naib Ishaq ibn Muhammad of Carmona
+
+	1030.1.1 = {
+		birth = yes
+	}
+	1053.1.1 = {
+		death = {
+			death_reason = death_battle # Died in a trap set up al-Mu'tadhid
+			killer = 3900 # Emir al-Muzaffar of Banu al-Aftas
+		}
+	}
+}
+
+me_andalusian_004 = {
+	name = "as-Sammar" # as-Sammār, a eunuch that Umm al-Kirām made love poetry for
+	religion = muwalladi
+	culture = andalusian
+	trait = eunuch_1
+	trait = beauty_good_2
+
+	1068.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = {
+			death_reason = death_execution
+			killer = 45006 # Sheik al-Mutasim of Almería
+		}
+	}
+}
+
+me_andalusian_005 = {
+	name = "Muhammad" # Abdallah ibn al-Gazi ibn Qays, son of a famous Andalusian Maliki faqih who is said to have also learned fiqh
+	dynasty = 12296 # Banu Qays Dynasty
+	religion = ashari
+	culture = andalusian
+	trait = education_learning_3
+	trait = zealous
+
+	father = 73908 # al-Gazi ibn Qays
+	780.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_006 = {
+	name = "Qays" # Father of famous Andalusian faqih al-Gazi ibn Qays
+	dynasty = 12296 # Banu Qays Dynasty
+	religion = ashari
+	culture = andalusian
+
+	720.1.1 = {
+		birth = yes
+	}
+	770.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_007 = {
+	name = "Muhammad" # Muhammad ibn Sidray ibn Wazir al-Qaysi, Almohad Commander
+	dynasty = 12197
+	religion = masmudi
+	culture = andalusian
+
+	father = 73203
+	1150.1.1 = {
+		birth = yes
+	}
+	1217.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_008 = {
+	name = "Abdullah" # Abdullah ibn Muhammad ibn Sidray ibn Wazir al-Qaysi, Almohad Commander
+	dynasty = 12197
+	religion = masmudi
+	culture = andalusian
+
+	father = me_andalusian_007
+	1170.1.1 = {
+		birth = yes
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_009 = {
+	name = "Khashkhash" # Khashkhash ibn Sa'id ibn Aswad, a man who according to al-Mas'udi claimed to have crossed the atlantic during 889 and came back with with treasures from an undiscoverd land
+	dynasty = me_khashkhash_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_andalusian_010
+	865.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		trait = education_intrigue_3
+		trait = deceitful
+	}
+	925.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_010 = {
+	name = "Sa_id" 
+	dynasty = me_khashkhash_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_andalusian_011
+	835.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_011 = {
+	name = "Aswad" 
+	dynasty = me_khashkhash_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	805.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_012 = {
+	name = "Subay_ah" # Subay'ah, mother of Muhammad ibn al-Qasim Hammudid of al-Jazira al-Khadra', stopped Naja' as-Saqlabi's invasion by chastizing him
+	female = yes
+	religion = muwalladi
+	culture = andalusian
+	trait = education_diplomacy_3
+
+	965.1.1 = {
+		birth = yes
+	}
+	1045.1.1 = {
+		death = yes
+	}
+}
+
+### Banu Mardanish
+me_mardanish_001 = {
+	name = "Mardanish"
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+	1010.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_002 = {
+	name = "Ahmad"
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_mardanish_001
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_003 = {
+	name = "Muhammad"
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_mardanish_002
+	1070.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_004 = {
+	name = "Abdullah"
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_mardanish_003
+	1105.1.1 = {
+		birth = yes
+	}
+	1146.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+me_mardanish_005 = {
+	name = "Ghanim" # Ghanim ibn Muhammad, Granted command of all Andalusian troops due to family ties with the ruling dynasty 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+	trait = education_martial_3 # Military leader
+
+	father = 73241
+	1155.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_006 = {
+	name = "Aminah" # Wife of Almohad Caliph Yusuf ibn Abd al-Mu'min, real name unknown
+	female = yes
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1157.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+		add_spouse = 224000 # Yusuf ibn Abd al-Mu'min, Almohad Caliph
+	}
+	1217.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_007 = {
+	name = "Ghanim" # Ghanim ibn Sa'd ibn Mardanish, Almohad commander who was captured during 1179
+	dynasty = 12211
+
+	religion = muwalladi
+	culture = andalusian
+	trait = education_martial_3 # Military leader
+	trait = brave
+
+	father = 73240
+	mother = 73242
+
+	1128.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1188.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_008 = {
+	name = "Abd_al-Ula" # Abd al-'Ula ibn Sa'd ibn Mardanish, Almohad commander who was captured during 1179
+	dynasty = 12211
+
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73240
+	mother = 73242
+
+	1130.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1190.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_009 = {
+	name = "Safiya" # Wife of the Almohad Caliph Ya'qub ibn Yusuf
+	female = yes
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1159.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+		add_spouse = 32980 # Ya'qub ibn Yusuf, Almohad Caliph
+	}
+	1217.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_010 = {
+	name = "az-Zubayr" 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1156.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1220.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_011 = {
+	name = "Aziz" 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1158.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1220.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_012 = {
+	name = "Nusayr" 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1159.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1220.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_013 = {
+	name = "Badr" 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1160.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1225.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_014 = {
+	name = "Arqam" 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1161.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1225.1.1 = {
+		death = yes
+	}
+}
+
+me_mardanish_015 = {
+	name = "_Askar" 
+	dynasty = 12211
+	religion = muwalladi
+	culture = andalusian
+
+	father = 73241
+	1162.1.1 = {
+		birth = yes
+	}
+	1172.3.1 = {
+		religion = masmudi
+	}
+	1225.1.1 = {
+		death = yes
+	}
+}
+
+### Banu Hamushk
+me_hamushk_001 = {
+	name = "Ibrahim"
+	dynasty = me_hamushk_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_hamushk_003
+	1107.1.1 = {
+		birth = yes
+	}
+	1169.1.1 = {
+		religion = masmudi
+	}
+	1175.1.1 = {
+		death = yes
+	}
+}
+
+me_hamushk_002 = {
+	name = "Fatimah" # Ex-wife of Ibn Mardanish, name unknown
+	female = yes
+	dynasty = me_hamushk_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_hamushk_001
+	1127.1.1 = {
+		birth = yes
+	}
+	1147.1.1 = {
+		add_spouse = 73241
+	}
+	1169.1.1 = {
+		religion = masmudi
+		remove_spouse = 73241
+	}
+	1190.1.1 = {
+		death = yes
+	}
+}
+
+me_hamushk_003 = {
+	name = "Muhammad"
+	dynasty = me_hamushk_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_hamushk_004
+	1075.1.1 = {
+		birth = yes
+	}
+	1135.1.1 = {
+		death = yes
+	}
+}
+
+me_hamushk_004 = {
+	name = "Mufarraj"
+	dynasty = me_hamushk_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_hamushk_005
+	1045.1.1 = {
+		birth = yes
+	}
+	1105.1.1 = {
+		death = yes
+	}
+}
+
+me_hamushk_005 = {
+	name = "Hamushk"
+	dynasty = me_hamushk_dynasty
+	religion = muwalladi
+	culture = andalusian
+	1015.1.1 = {
+		birth = yes
+	}
+	1075.1.1 = {
+		death = yes
+	}
+}
+
+### Ibn Sahib al-Salat
+me_sahib_salat_001 = {
+	name = "Abd-al-Malik" # Abd al-Malik 'Ibn Sahib al-Salat' al-Baji, Andalusian historian loyal to the Almohads
+	dynasty = me_sahib_salat_dynasty
+	give_nickname = nick_me_ibn_sahib_al_salat # Ibn Sahib al-Salat
+	religion = masmudi
+	culture = andalusian
+	trait = education_learning_3 # Historian and theologian
+	trait = theologian
+	trait = zealous
+	trait = humble
+	trait = lifestyle_poet
+	trait = loyal
+	trait = lifestyle_traveler
+
+	father = me_sahib_salat_003
+	1130.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = 224000 # Yusuf ibn Abd al-Mu'min, Almohad Caliph
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_traveler
+				track = travel
+				value = 50
+			}
+		}
+	}
+	1198.1.1 = {
+		death = yes
+	}
+}
+
+me_sahib_salat_002 = {
+	name = "Marwan"
+	dynasty = me_sahib_salat_dynasty
+	religion = masmudi
+	culture = andalusian
+
+	father = me_sahib_salat_001
+	1160.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = 224000 # Yusuf ibn Abd al-Mu'min, Almohad Caliph
+	}
+	1220.1.1 = {
+		death = yes
+	}
+}
+
+me_sahib_salat_003 = {
+	name = "Muhammad"
+	dynasty = me_sahib_salat_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_sahib_salat_004
+	1100.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+me_sahib_salat_004 = {
+	name = "Ahmad"
+	dynasty = me_sahib_salat_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_sahib_salat_005
+	1070.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+
+me_sahib_salat_005 = {
+	name = "Muhammad"
+	dynasty = me_sahib_salat_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_sahib_salat_006
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_sahib_salat_006 = {
+	name = "Ibrahim"
+	dynasty = me_sahib_salat_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	1010.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+me_sahib_salat_007 = {
+	name = "Abu_Ja_far"
+	dynasty = me_sahib_salat_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_sahib_salat_008
+	1120.1.1 = {
+		birth = yes
+	}
+	1172.1.1 = {
+		death = {
+			death_reason = death_fight
+		}
+	}
+}
+
+me_sahib_salat_008 = {
+	name = "Isma_il"
+	dynasty = me_sahib_salat_dynasty
+	religion = muwalladi
+	culture = andalusian
+
+	father = me_sahib_salat_004
+	1090.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		death = yes
+	}
+}
+
+### Ibn Rushd
+me_ibn_rushd_001 = {
+	name = "Ahmad"
+	dynasty = me_ibn_rushd_dynasty
+	religion = ashari
+	culture = andalusian
+	trait = education_learning_3
+	trait = zealous
+
+	father = me_ibn_rushd_003
+	1100.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_rushd_002 = {
+	name = "al-Walid"
+	dynasty = me_ibn_rushd_dynasty
+	religion = ashari
+	culture = andalusian
+
+	father = averroes_1
+	1155.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = almohad_2
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_rushd_003 = {
+	name = "Muhammad"
+	dynasty = me_ibn_rushd_dynasty
+	give_nickname = nick_me_ibn_rushd
+	religion = ashari
+	culture = andalusian
+	trait = education_learning_3
+	trait = zealous
+
+	father = me_ibn_rushd_004
+	1070.1.1 = {
+		birth = yes
+	}
+	1126.12.1 = {
+		death = yes
+	}
+}
+
+me_ibn_rushd_004 = {
+	name = "Ahmad"
+	dynasty = me_ibn_rushd_dynasty
+	religion = ashari
+	culture = andalusian
+
+	father = me_ibn_rushd_005
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_rushd_005 = {
+	name = "Rushd"
+	dynasty = me_ibn_rushd_dynasty
+	religion = ashari
+	culture = andalusian
+
+	1010.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+### Ibn Tufayl
+me_ibn_tufayl_001 = {
+	name = "Abd-al-Malik"
+	dynasty = me_ibn_tufayl_dynasty # Banu Qays
+	religion = ashari
+	culture = andalusian
+
+	father = me_ibn_tufayl_003
+	1070.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_tufayl_002 = {
+	name = "Bakr"
+	dynasty = me_ibn_tufayl_dynasty # Banu Qays
+	religion = ashari
+	culture = andalusian
+
+	father = ibn_tufayl_1
+	1135.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = 224000
+	}
+	1195.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_tufayl_003 = {
+	name = "Muhammad"
+	dynasty = me_ibn_tufayl_dynasty # Banu Qays
+	religion = ashari
+	culture = andalusian
+
+	father = me_ibn_tufayl_004
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_tufayl_004 = {
+	name = "Muhammad"
+	dynasty = me_ibn_tufayl_dynasty # Banu Qays
+	religion = ashari
+	culture = andalusian
+
+	father = me_ibn_tufayl_005
+	1010.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_tufayl_005 = {
+	name = "Tufayl"
+	dynasty = me_ibn_tufayl_dynasty # Banu Qays
+	religion = ashari
+	culture = andalusian
+
+	980.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
+### Andalusian Lakhmids
+## Ibn Mada'
+me_ibn_mada_001 = {
+	name = "Ahmad"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	give_nickname = nick_me_ibn_mada
+	religion = masmudi
+	culture = andalusian
+	trait = education_learning_4
+	trait = scholar
+	trait = theologian
+	trait = zealous
+	trait = diligent
+
+	father = me_ibn_mada_003
+	1116.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = 224000 # Yusuf ibn Abd al-Mu'min, Almohad Caliph
+		give_council_position = councillor_chancellor # Chief Qadi
+		effect = {
+			add_trait = lifestyle_physician
+			add_trait_xp = {
+				trait = lifestyle_physician
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	1195.1.1 = {
+		death = yes
+	}
+}
+
+me_ibn_mada_002 = {
+	name = "al-Abbas"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = masmudi
+	culture = andalusian 
+	
+	father = me_ibn_mada_001
+	1145.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = 224000 # Yusuf ibn Abd al-Mu'min, Almohad Caliph
+	}
+	1210.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_003 = {
+	name = "Abd-ar-Rahman"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_004
+	1080.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_004 = {
+	name = "Muhammad"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_005
+	1050.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 20852
+	}
+	1110.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_005 = {
+	name = "Sa_id"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_006
+	1020.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 20852
+	}
+	1080.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_006 = {
+	name = "Harith"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_007
+	990.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_007 = {
+	name = "Asim"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_008
+	960.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_008 = {
+	name = "MaDA_" # Maḍā' ibn Muhannad al-Lakhmi
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_009
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_009 = {
+	name = "Muhannad"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_ibn_mada_010
+	900.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes 
+	}
+}
+
+me_ibn_mada_010 = {
+	name = "Umayr"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	870.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes 
+	}
+}
+
+## Ibn Wafid
+me_wafidid_001 = { # Son of Ibn Wafid
+	name = "al-Mutarrif"
+	dynasty_house = house_me_wafidid # Banu Wafid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = andalusian_0002 # Ibn al-Wafid (found in andalusian.txt)
+	1020.1.1 = {
+		birth = yes
+	}
+	1055.1.1 = {
+		employer = 3924
+	}
+	1080.1.1 = {
+		death = yes 
+	}
+}
+
+me_wafidid_002 = {
+	name = "Muhammad"
+	dynasty_house = house_me_wafidid # Banu Wafid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_wafidid_003
+	970.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes 
+	}
+}
+
+me_wafidid_003 = {
+	name = "Abd_al-Kabir"
+	dynasty_house = house_me_wafidid # Banu Wafid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_wafidid_004
+	940.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes 
+	}
+}
+
+me_wafidid_004 = {
+	name = "Yahya"
+	dynasty_house = house_me_wafidid # Banu Wafid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_wafidid_005
+	910.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes 
+	}
+}
+
+me_wafidid_005 = {
+	name = "Wafid"
+	dynasty_house = house_me_wafidid # Banu Wafid
+	religion = muwalladi
+	culture = andalusian 
+	
+	father = me_wafidid_006
+	870.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes 
+	}
+}
+
+me_wafidid_006 = {
+	name = "Muhannad"
+	dynasty = me_lakhmid_dynasty # Lakhmid
+	religion = muwalladi
+	culture = andalusian 
+	
+	840.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes 
+	}
+}
+
+### Fictional Umayyads for later start dates (Removable via game rule) ###
+me_umayyad_fic_001 = { # andalusian0065
+	name = "Ahmad" # Fictional, taken from previous versions
+	dynasty = 597 # Umayyad Dynasty
+	religion = muwalladi
+	culture = andalusian
+	trait = quraysh
+
+	father = andalusian0064 # Muhammad ibn Muhammad (Fictional)
+
+	1024.1.1 = {
+		birth = yes
+	}
+	1074.1.1 = {
+		death = yes
+	}
+}
+
+me_umayyad_fic_002 = { # andalusian0066
+	name = "Abd-al-Aziz" # Fictional, taken from previous versions
+	dynasty = 597 # Umayyad Dynasty
+	religion = muwalladi
+	culture = andalusian
+	trait = quraysh
+
+	father = me_umayyad_fic_001
+
+	1042.1.1 = {
+		birth = yes
+	}
+	1092.1.1 = {
+		death = yes
+	}
+} 
+
+me_umayyad_fic_003 = {
+	name = "Marwan"
+	dynasty = 597 # Umayyad Dynasty
+	religion = muwalladi
+	culture = andalusian
+	trait = quraysh
+
+	father = me_umayyad_fic_002
+
+	1072.1.1 = {
+		birth = yes
+	}
+	1132.1.1 = {
+		death = yes
+	}
+} 
+
+me_umayyad_fic_004 = {
+	name = "Hamdan"
+	dynasty = 597 # Umayyad Dynasty
+	religion = muwalladi
+	culture = andalusian
+	trait = quraysh
+
+	father = me_umayyad_fic_003
+
+	1102.1.1 = {
+		birth = yes
+	}
+	1162.1.1 = {
+		death = yes
+	}
+} 
+
+me_umayyad_fic_005 = {
+	name = "Abd-al-Rahman"
+	dynasty = 597 # Umayyad Dynasty
+	religion = muwalladi
+	culture = andalusian
+	trait = quraysh
+
+	father = me_umayyad_fic_004
+
+	1135.1.1 = {
+		birth = yes
+		effect = {
+			learn_language_of_culture = culture:butr
+		}
+	}
+	1192.1.1 = {
+		death = yes
+	}
+} 
+
+me_umayyad_fic_006 = {
+	name = "Umar"
+	dynasty = 597 # Umayyad Dynasty
+	religion = muwalladi
+	culture = andalusian
+	trait = quraysh
+
+	father = me_umayyad_fic_005
+
+	1160.1.1 = {
+		birth = yes
+		effect = {
+			learn_language_of_culture = culture:butr
+		}
+	}
+	1222.1.1 = {
+		death = yes
+	}
+} 

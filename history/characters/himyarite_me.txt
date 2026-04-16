@@ -1,0 +1,703 @@
+﻿## Early Kings of Saba and Himyar
+me_himyarite_001 = {
+	name = "Karb_Il_Watar" # Karb Il Watar 'Yahn'am' Ibn Dhimar Ali Bayn, one of the most famous kings of the first century AD
+	dynasty = me_himyar_dynasty
+	give_nickname = nick_me_yahn_am
+	religion = "pagan"
+	culture = "himyarite"
+
+#	father = ### # Dhamar Ali Bayn II Ibn Yada Il Watar
+	2.1.1 = {
+		birth = yes
+	}
+	70.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_002 = {
+	name = "Halak"
+	dynasty = me_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_001
+	20.1.1 = {
+		birth = yes
+	}
+	80.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_003 = {
+	name = "Dhamar_Ali_Dharih"
+	dynasty = me_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_001
+	25.1.1 = {
+		birth = yes
+	}
+	80.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_004 = {
+	name = "Karb_Il_Bayn"
+	dynasty = me_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_003
+	40.1.1 = {
+		birth = yes
+	}
+	85.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_005 = {
+	name = "Yuhaqim_Yarzih"
+	dynasty = me_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_003
+	50.1.1 = {
+		birth = yes
+	}
+	95.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_006 = {
+	name = "Nasha_Karb"
+	dynasty = me_himyar_dynasty
+	give_nickname = nick_me_yaha_man
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_003
+	55.1.1 = {
+		birth = yes
+	}
+	105.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_007 = {
+	name = "Amdan_Bayn"
+	dynasty = me_himyar_dynasty
+	give_nickname = nick_me_yahqabid
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_001
+	45.1.1 = {
+		birth = yes
+	}
+	120.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_008 = {
+	name = "La_zim_Yahnif"
+	give_nickname = nick_me_yahasdaq
+	religion = "pagan"
+	culture = "himyarite"
+
+	180.1.1 = {
+		birth = yes
+	}
+	217.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_009 = {
+	name = "Shammar"
+	give_nickname = nick_me_yahahmad
+	religion = "pagan"
+	culture = "himyarite"
+
+	180.1.1 = {
+		birth = yes
+	}
+	245.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_010 = {
+	name = "Karb_Il_Ayfa_"
+	religion = "pagan"
+	culture = "himyarite"
+
+	200.1.1 = {
+		birth = yes
+	}
+	267.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_011 = {
+	name = "Karb_Il_Watar"
+	give_nickname = nick_me_yahn_am
+	religion = "pagan"
+	culture = "himyarite"
+
+	270.1.1 = {
+		birth = yes
+	}
+	319.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_012 = {
+	name = "Dhamar_Ali"
+	dynasty = me_dhamarid_dynasty
+	give_nickname = nick_me_yahbur
+	religion = "pagan"
+	culture = "himyarite"
+
+	270.1.1 = {
+		birth = yes
+	}
+	319.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_013 = {
+	name = "Tha_ran"
+	dynasty = me_dhamarid_dynasty
+	give_nickname = nick_me_yahn_am
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_012
+	290.1.1 = {
+		birth = yes
+	}
+	373.1.1 = {
+		death = yes
+	}
+}
+
+me_himyarite_014 = {
+	name = "Hasan_Maliki_Karib"
+	dynasty = me_dhamarid_dynasty
+	give_nickname = nick_me_yaha_man
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_himyarite_013
+	320.1.1 = {
+		birth = yes
+	}
+	385.1.1 = {
+		death = yes
+	}
+}
+
+## Raydanid Kings of Dhu Rayan
+me_raydanid_001 = {
+	name = "Yasir"
+	dynasty = me_raydanid_dynasty
+	give_nickname = nick_me_yahasdaq
+	religion = "pagan"
+	culture = "himyarite"
+
+	70.1.1 = {
+		birth = yes
+	}
+	130.1.1 = {
+		death = yes
+	}
+}
+
+me_raydanid_002 = {
+	name = "Shammar"
+	dynasty = me_raydanid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_raydanid_001
+	100.1.1 = {
+		birth = yes
+	}
+	135.1.1 = {
+		death = yes
+	}
+}
+
+me_raydanid_003 = {
+	name = "Dhamar_Ali"
+	dynasty = me_raydanid_dynasty
+	give_nickname = nick_me_yahbur
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_raydanid_001
+	105.1.1 = {
+		birth = yes
+	}
+	175.1.1 = {
+		death = yes
+	}
+}
+
+me_raydanid_004 = {
+	name = "Tha_ran_Ya_b"
+	dynasty = me_raydanid_dynasty
+	give_nickname = nick_me_yahn_am
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_raydanid_003
+	130.1.1 = {
+		birth = yes
+	}
+	214.1.1 = {
+		death = yes
+	}
+}
+
+## Lineage of Yasir 'Yahan'am'
+me_yasirid_001 = {
+	name = "Yasir"
+	dynasty = me_yasirid_himyar_dynasty
+	give_nickname = nick_me_yahn_am
+	religion = "pagan"
+	culture = "himyarite"
+
+	#father = ### # Has a dubious geneology provided by several historians
+	235.1.1 = {
+		birth = yes
+	}
+	317.1.1 = {
+		death = yes
+	}
+}
+
+me_yasirid_002 = {
+	name = "Shammar"
+	dynasty = me_yasirid_himyar_dynasty
+	give_nickname = nick_me_yahar_ish
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_yasirid_001
+	255.1.1 = {
+		birth = yes
+	}
+	312.1.1 = {
+		death = yes
+	}
+}
+
+me_yasirid_003 = {
+	name = "Tha_ran_Ayfa_"
+	dynasty = me_yasirid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_yasirid_001
+	260.1.1 = {
+		birth = yes
+	}
+	315.1.1 = {
+		death = yes
+	}
+}
+
+me_yasirid_004 = {
+	name = "Dhara_Amr_Ayman"
+	dynasty = me_yasirid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_yasirid_001
+	265.1.1 = {
+		birth = yes
+	}
+	317.1.1 = {
+		death = yes
+	}
+}
+
+## Kings of Saba
+me_saba_001 = {
+	name = "Ilisharah_Yahdub" # believed to be the father of Bilqis in Arabian folklore
+	dynasty = me_bakilid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	60.1.1 = {
+		birth = yes
+	}
+	125.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_002 = {
+	name = "Watar"
+	dynasty = me_bakilid_dynasty
+	give_nickname = nick_me_yaha_man
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_001
+	90.1.1 = {
+		birth = yes
+	}
+	132.1.1 = {
+		death = {
+			death_reason = death_murder
+		}
+	}
+}
+
+me_saba_003 = {
+	name = "Sa_d_Shams_Asra_"
+	dynasty = me_dhamarid_saba_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	80.1.1 = {
+		birth = yes
+	}
+	159.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_004 = {
+	name = "Marthad"
+	dynasty = me_dhamarid_saba_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_003
+	100.1.1 = {
+		birth = yes
+	}
+	160.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_005 = {
+	name = "Wahb_Il_Yahuz"
+	dynasty = me_maahirid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+	trait = education_diplomacy_4
+
+	father = me_saba_006
+	100.1.1 = {
+		birth = yes
+	}
+	165.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_006 = {
+	name = "_Amid"
+	dynasty = me_maahirid_dynasty
+	give_nickname = nick_me_yahahmad
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_007
+	70.1.1 = {
+		birth = yes
+	}
+	130.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_007 = {
+	name = "Ma_ahir"
+	dynasty = me_maahirid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	50.1.1 = {
+		birth = yes
+	}
+	110.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_008 = {
+	name = "Karb_Il_Watar"
+	dynasty = me_maahirid_dynasty
+	give_nickname = nick_me_yahn_am
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_005
+	130.1.1 = {
+		birth = yes
+	}
+	175.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_009 = {
+	name = "Anmar" # Anmar 'Yaha'man', may or may not be the son of Wahb Il Yahuz
+	dynasty = me_maahirid_dynasty
+	give_nickname = nick_me_yaha_man
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_005
+	140.1.1 = {
+		birth = yes
+	}
+	180.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_010 = {
+	name = "Luhay_Atht_Yarkhum"
+	dynasty = me_maahirid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_005
+	155.1.1 = {
+		birth = yes
+	}
+	225.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_011 = {
+	name = "Rab_Shams_Nimran"
+	dynasty = me_batid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	120.1.1 = {
+		birth = yes
+	}
+	190.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_012 = {
+	name = "Far_Yanhab"
+	dynasty = me_jartid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	170.1.1 = {
+		birth = yes
+	}
+	230.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_013 = {
+	name = "Ilisharah_Yahdub"
+	dynasty = me_jartid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_012
+	200.1.1 = {
+		birth = yes
+	}
+	265.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_014 = {
+	name = "Ya_zil"
+	dynasty = me_jartid_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_012
+	205.1.1 = {
+		birth = yes
+	}
+	260.1.1 = {
+		death = yes
+	}
+}
+
+me_saba_015 = {
+	name = "Nasha_Karb"
+	dynasty = me_jartid_dynasty
+	give_nickname = nick_me_yaman_yaharhib
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_saba_013
+	230.1.1 = {
+		birth = yes
+	}
+	280.1.1 = {
+		death = yes
+	}
+}
+
+## Himayritic Hamdanids
+me_hamdanid_himyar_001 = {
+	name = "Yarim_Ayman"
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_002
+	100.1.1 = {
+		birth = yes
+	}
+	170.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_002 = {
+	name = "Awsalah_Rafshan"
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_003
+	70.1.1 = {
+		birth = yes
+	}
+	135.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_003 = {
+	name = "A_yan_al-Hafshadi"
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	50.1.1 = {
+		birth = yes
+	}
+	110.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_004 = {
+	name = "Burj"
+	dynasty = me_hamdanid_himyar_dynasty
+	give_nickname = nick_me_yaharhib
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_002
+	105.1.1 = {
+		birth = yes
+	}
+	175.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_005 = {
+	name = "Haywa_Athtar_Yada_"
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_001
+	120.1.1 = {
+		birth = yes
+	}
+	165.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_006 = {
+	name = "_Alhan"
+	dynasty = me_hamdanid_himyar_dynasty
+	give_nickname = nick_me_nahfan
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_001
+	130.1.1 = {
+		birth = yes
+	}
+	200.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_007 = {
+	name = "Sha_ir_Awtar"
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_006
+	150.1.1 = {
+		birth = yes
+	}
+	217.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_008 = {
+	name = "Haywa_Athtar_Yada_"
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_006
+	160.1.1 = {
+		birth = yes
+	}
+	220.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_himyar_009 = {
+	name = "Malak_Halak" # Malak Halak, wife of al-Azilt bin Am Dhakhar, King of Hadramaut
+	female = yes
+	dynasty = me_hamdanid_himyar_dynasty
+	religion = "pagan"
+	culture = "himyarite"
+
+	father = me_hamdanid_himyar_006
+	165.1.1 = {
+		birth = yes
+	}
+	220.1.1 = {
+		death = yes
+	}
+}

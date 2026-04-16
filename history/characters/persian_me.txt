@@ -1,0 +1,552 @@
+﻿###
+me_persian_001 = { # Mother of Umayyad Caliph Yazid III and Daughter of the would-be Sassanian King Peroz III
+	name = "Shah-i-Afrid"
+	female = yes
+	dynasty = 1029100
+	religion = "ashari"
+	culture = "persian"
+
+	father = 180640 # Peroz III
+	675.1.1 = {
+		birth = yes
+	}
+	735.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_002 = { # Father of Abu Awn Abd al-Malik al-Khurasani
+	name = "Yazid"
+	dynasty = 1042126 # Khurasanid
+	religion = "ashari"
+	culture = "persian"
+	700.1.1 = {
+		birth = yes
+	}
+	760.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_003 = { # Son of Abu Awn Abd al-Malik al-Khurasani
+	name = "_Awn"
+	dynasty = 1042126 # Khurasanid
+	religion = "ashari"
+	culture = "persian"
+
+	father = 188650 # Abu Awn Abd al-Malik al-Khurasani
+	750.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_004 = { 
+	name = "Yahya" # Yayha 'Shihab ad-Din' Suhrawardi, founder of the Illumination school
+	dynasty = me_suhrawardid_dynasty # Suhrawardid
+	give_nickname = nick_shihab_ud_din
+	religion = "ashari"
+	culture = "persian"
+	trait = education_learning_4
+	trait = scholar
+
+	father = me_persian_005
+	1154.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		birth = yes
+		effect = {
+	 		learn_language_of_culture = culture:bedouin
+		}
+	}
+	1191.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_005 = { 
+	name = "Habash"
+	dynasty = me_suhrawardid_dynasty # Suhrawardid
+	religion = "ashari"
+	culture = "persian"
+
+	father = me_persian_006
+	1120.1.1 = {
+		birth = yes
+	}
+	1180.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_006 = { 
+	name = "Amirak"
+	dynasty = me_suhrawardid_dynasty # Suhrawardid
+	religion = "ashari"
+	culture = "persian"
+
+	1090.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_007 = { 
+	name = "Abdullah" # Ibn Yazdad/Zadhad (First name unknown), a Tulunid commander who was mutilated and crucified by Ibn as-Sufi
+	dynasty = me_yazdadid_egypt_dynasty
+	religion = "ashari"
+	culture = "persian" # The name Yazdad is of persian origin
+	trait = education_martial_2
+
+	father = me_persian_008
+	835.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:bedouin
+		}
+	}
+	870.1.1 = {
+		death = {
+			death_reason = death_me_mutilated_and_crucified
+			killer = me_hashimid_046 # Ibn as-Sufi
+		}
+	}
+}
+
+me_persian_008 = { 
+	name = "Yazdad"
+	dynasty = me_yazdadid_egypt_dynasty
+	religion = "ashari"
+	culture = "persian" # The name Yazdad is of persian origin
+
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_009 = { 
+	name = "Ahmad" # Ahmad ibn Jayghawayh, Tulunid commander who was appointed over Harran
+	dynasty = me_jayghawayhid_dynasty
+	religion = "ashari"
+	culture = "sogdian" # The name Jayghawayh is likely of either Sogdian or Tocharian origin, as the only other instant I could find was a ruler who fought Asad al-Qasri alongside the Turgesh around 735
+
+	father = me_persian_010
+	825.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		#employer = 163115 # Ahmad ibn Tulun
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_010 = { 
+	name = "Jayghawayh"
+	dynasty = me_jayghawayhid_dynasty
+	religion = "ashari"
+	culture = "sogdian"
+	
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_011 = {
+	name = "Muhammad" # Abu Ja'far Muhammad 'Ibn Abd Kan' ibn Ahmad ibn Mawdud
+	dynasty = me_ibn_abd_kan_dynasty
+	give_nickname = nick_me_ibn_abd_kan # Ibn Abd Kan (Son of the Little Servent) [Kan is a diminutive medieval persian]
+	religion = "ashari"
+	culture = "persian"
+	diplomacy = 6
+	stewardship = 7
+	trait = education_diplomacy_3
+	trait = administrator
+	trait = lifestyle_poet
+	
+	father = me_persian_012
+	830.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:bedouin
+		}
+	}
+	866.1.1 = {
+		#employer = 163115 # Ahmad ibn Tulun
+	}
+	891.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_012 = { 
+	name = "Ahmad"
+	dynasty = me_ibn_abd_kan_dynasty
+	religion = "ashari"
+	culture = "persian"
+	
+	father = me_persian_013
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_013 = { 
+	name = "Mawdud"
+	dynasty = me_ibn_abd_kan_dynasty
+	religion = "ashari"
+	culture = "persian"
+	
+	770.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_014 = { 
+	name = "Suhrab" # Suhrab, Persian governor of al-Hira
+	religion = "mazdayasna"
+	culture = "persian"
+	
+	540.1.1 = {
+		birth = yes
+	}
+	600.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_015 = { 
+	name = "Zadeh" # Zadeh ibn Mahbayan ibn Bandad, Persian governor of al-Hira
+	religion = "mazdayasna"
+	culture = "persian"
+	
+	father = me_persian_016
+	590.1.1 = {
+		birth = yes
+	}
+	640.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_016 = { 
+	name = "Mahbayan"
+	religion = "mazdayasna"
+	culture = "persian"
+	
+	father = me_persian_017
+	560.1.1 = {
+		birth = yes
+	}
+	620.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_017 = { 
+	name = "Bandad"
+	religion = "mazdayasna"
+	culture = "persian"
+	
+	530.1.1 = {
+		birth = yes
+	}
+	590.1.1 = {
+		death = yes
+	}
+}
+
+### Banu al-Mudabbir - Two brothers with the same nickname that served the Abbasids
+me_mudabbirid_001 = {
+	name = "Ahmad" # Abu'l Hasan Ahmad 'Ibn al-Mudabbir' ibn Muhammad, Fiscal Administrator of Egypt
+	dynasty = me_mudabbirid_dynasty
+	religion = "ashari"
+	culture = "persian"
+	stewardship = 7
+	learning = 6
+	trait = education_diplomacy_3 # distinguished man of letters
+	trait = lifestyle_poet # esteemed as a poet by Caliph al-Mutawakkil, his friend
+	trait = greedy # was said to increase taxes in Egypt unfairly
+	trait = callous # was said to increase taxes in Egypt unfairly
+	trait = ambitious # was said to increase taxes in Egypt unfairly
+
+	father = me_mudabbirid_003
+	835.1.1 = {
+		birth = yes
+	}
+	883.1.1 = {
+		death = {
+			death_reason = death_prison 
+		}
+	}
+}
+
+me_mudabbirid_002 = {
+	name = "Ibrahim" # Abu Ishaq Ibrahim 'Ibn al-Mudabbir' ibn Muhammad, Fiscal Administrator for the Abbasids
+	dynasty = me_mudabbirid_dynasty
+	religion = "ashari"
+	culture = "persian"
+	trait = education_stewardship_3 # wrote a book on administration
+	trait = lifestyle_poet # esteemed as a poet by Caliph al-Mutawakkil, his friend
+	trait = diligent # broke a prison wall to escape while captured by Zanj rebels
+
+	father = me_mudabbirid_003
+	838.1.1 = {
+		birth = yes
+	}
+	866.1.1 = {
+		employer = 34014 # Al-Mutazz
+	}
+	892.1.1 = {
+		death = yes
+	}
+}
+
+me_mudabbirid_003 = {
+	name = "Muhammad"
+	dynasty = me_mudabbirid_dynasty
+	religion = "ashari"
+	culture = "persian"
+
+	father = me_mudabbirid_004
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_mudabbirid_004 = {
+	name = "Abdullah"
+	dynasty = me_mudabbirid_dynasty
+	religion = "ashari"
+	culture = "persian"
+
+	father = me_mudabbirid_005
+	770.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+me_mudabbirid_005 = {
+	name = "al-Mudabbir"
+	dynasty = me_mudabbirid_dynasty
+	religion = "ashari"
+	culture = "persian"
+
+	740.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+### Nizami Ganjavi, famous persian poet
+me_ganjavid_001 = {
+	name = "Nizami" # Illyas 'Jamal ud-Din' ibn Yusuf, Nizami is his pen-name 
+	dynasty = me_ganjavid_dynasty # Ganjavid
+	give_nickname = nick_jamal_ud_din
+	religion = "maturidi"
+	culture = "persian"
+	trait = education_diplomacy_4
+	trait = lifestyle_poet
+
+	father = me_ganjavid_002
+	mother = me_ganjavid_005
+	1141.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		add_spouse = me_ganjavid_008
+	}
+	1178.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:bedouin
+		}
+	}
+	1209.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_002 = {
+	name = "Yusuf"
+	religion = "maturidi"
+	culture = "persian"
+
+	father = me_ganjavid_003
+	1110.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_003 = {
+	name = "Zakki"
+	religion = "maturidi"
+	culture = "persian"
+
+	1080.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_004 = {
+	name = "Umar" # Khawaja Umar, Maternal Uncle of Nizami who took care of him and educated him
+	religion = "maturidi"
+	culture = "kurdish"
+	trait = education_learning_4
+
+	father = me_ganjavid_006
+	1105.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_005 = {
+	name = "Ra_isa" # Mother of Nizami
+	female = yes
+	religion = "maturidi"
+	culture = "kurdish"
+
+	father = me_ganjavid_006
+	1110.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_006 = {
+	name = "Abdullah" # Fictional grandfather to connect Ra'isa and Umar together
+	religion = "maturidi"
+	culture = "kurdish"
+
+	1080.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_007 = {
+	name = "Muhammad" # Muhammad, son of Nazami and his Kipchak wife 
+	dynasty = me_ganjavid_dynasty # Ganjavid
+	religion = "maturidi"
+	culture = "persian"
+
+	father = me_ganjavid_001
+	mother = me_ganjavid_008
+	1173.1.1 = {
+		birth = yes
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+
+me_ganjavid_008 = {
+	name = "Afaq" # Nazami's his Kipchak wife, her name may not be Afaq
+	female = yes
+	religion = "maturidi"
+	culture = "kipchak"
+
+	1150.1.1 = {
+		birth = yes
+	}
+	1180.1.1 = {
+		death = yes
+	}
+}
+
+### Barmakids
+me_barmakid_001 = {
+	name = "Sulayman"
+	dynasty = 1042125 # Barmakid
+	religion = "mahayana"
+	culture = "persian"
+	father = 188642
+	707.1.1 = {
+		birth = yes
+	}
+	730.1.1 = {
+		religion = "ashari"
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+
+me_barmakid_002 = {
+	name = "al-Hasan"
+	dynasty = 1042125 # Barmakid
+	religion = "mahayana"
+	culture = "persian"
+	father = 188642
+	709.1.1 = {
+		birth = yes
+	}
+	730.1.1 = {
+		religion = "ashari"
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+
+### The Isfahanist Mahdi-Caliph
+me_isfahani_001 = { 
+	name = "Abu_al-Fadl" # Abu al-Fadl al-Isfahani
+	dynasty = me_isfahanid_dynasty
+	give_nickname = nick_isfahanist_mahdi # al-Mahdi al-Isfahani
+	religion = "isfahani"
+	culture = "persian"
+
+	911.1.1 = {
+		birth = yes
+	}
+	931.3.21 = {
+		death = {
+			death_reason = death_execution
+			killer = qarm005 # Abu Tahir Sulayman ibn Hasan al-Jannabi
+		}
+	}
+}
+

@@ -1,0 +1,20 @@
+﻿### Override
+gurkhan = {
+	texture = "gfx/interface/icons/icon_gurkhan.dds"
+	alias = { gurkhan_dominant_nomad }
+	parent = the_great_steppe
+}
+
+###
+
+me_caliphal_succession_law = {
+	texture = "gfx/interface/icons/message_feed/law.dds"
+	alias = { me_caliphal_succession_law_concept me_caliphal_succession_laws_concept }
+	parent = law
+}
+
+me_shura_preferance_law = {
+	texture = "gfx/interface/icons/message_feed/law.dds"
+	alias = { me_shura_preferance_law_concept me_shura_preferance_laws_concept }
+	parent = law
+}

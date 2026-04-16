@@ -1,0 +1,380 @@
+﻿### Shaddadids
+me_shaddadid_001 = {
+	name = "Fezl" # Fadl IV
+	dynasty_house = house_shaddadid
+	religion = "ashari"
+	culture = "kurdish"
+	father = 41604
+	1078.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = {
+			death_reason = death_murder
+		}
+	}
+}
+
+me_shaddadid_002 = {
+	name = "Khushchikr" # Brother of Fadl IV
+	dynasty_house = house_shaddadid
+	religion = "ashari"
+	culture = "kurdish"
+	father = 41604
+	1082.1.1 = {
+		birth = yes
+	}
+	1130.6.1 = {
+		death = yes
+	}
+}
+
+me_shaddadid_003 = {
+	name = "Shaddad" # Fakr ud-Din Shaddad ibn Mahmud
+	dynasty_house = house_shaddadid
+	give_nickname = nick_fakhr_ud_din
+	religion = "ashari"
+	culture = "kurdish"
+	father = 93521
+	1110.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+me_shaddadid_004 = {
+	name = "Fezl" # Fadl V ibn Madmud
+	dynasty_house = house_shaddadid
+	religion = "ashari"
+	culture = "kurdish"
+	father = 93521
+	1113.1.1 = {
+		birth = yes
+	}
+	1165.1.1 = {
+		death = yes
+	}
+}
+
+me_shaddadid_005 = {
+	name = "Shahanshah" # Shahanshah ibn Madmud
+	dynasty_house = house_shaddadid
+	religion = "ashari"
+	culture = "kurdish"
+	father = 93521
+	1115.1.1 = {
+		birth = yes
+	}
+	1175.1.1 = {
+		death = yes
+	}
+}
+
+me_shaddadid_006 = {
+	name = "Sultan" # Sultan ibn Madmud
+	dynasty_house = house_shaddadid
+	religion = "ashari"
+	culture = "kurdish"
+	father = 93521
+	1120.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_shaddadid_007 = {
+	name = "Shaddad" # Semi-Fictional son of Sultan
+	dynasty_house = house_shaddadid
+	religion = "ashari"
+	culture = "kurdish"
+	father = me_shaddadid_006
+	1150.1.1 = {
+		birth = yes
+	}
+	1220.1.1 = {
+		death = yes
+	}
+}
+
+### Abd as-Samad Babek
+me_babek_001 = {
+	name = "Abdul-Sammad" # Abd as-Samad Babek, First Kurdish poet to write in Kurmanji
+	dynasty_house = house_me_babek
+	religion = "ashari"
+	culture = "kurdish"
+	trait = education_diplomacy_4
+	trait = lifestyle_poet
+	trait = zealous
+
+	father = me_babek_002
+	972.1.1 = {
+		birth = yes
+	}
+	1019.1.1 = {
+		death = yes
+	}
+}
+
+me_babek_002 = {
+	name = "Babek" 
+	religion = "ashari"
+	culture = "kurdish"
+
+	father = me_babek_003
+	940.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
+
+me_babek_003 = {
+	name = "Abd-al-Qasim" 
+	religion = "ashari"
+	culture = "kurdish"
+
+	father = me_babek_004
+	910.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}
+}
+
+me_babek_004 = {
+	name = "Mansur" 
+	religion = "ashari"
+	culture = "kurdish"
+	trait = lifestyle_poet
+
+	880.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+
+### Mas'ud Ibn Namdar, a Kurdish author and collector of documents, the records he compiled in about 1111 gives alot of information about the events that happened around this time 
+me_namdarid_001 = {
+	name = "Mas_ud"
+	dynasty = me_namdarid_dynasty
+	religion = "ashari"
+	culture = "kurdish"
+
+	father = me_namdarid_002
+	1060.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 41600 # Abu'l-Aswar Sawur Shaddadid
+	}
+	1111.1.1 = { # Wrote poetry in Arabic, Turkish, and Kurdish
+		trait = lifestyle_poet
+		effect = {
+			learn_language_of_culture = culture:bedouin
+			learn_language_of_culture = culture:turkish
+		}
+	}
+	1120.1.1 = {
+		death = yes
+	}
+}
+
+me_namdarid_002 = {
+	name = "Namdar"
+	dynasty = me_namdarid_dynasty
+	religion = "ashari"
+	culture = "kurdish"
+
+	1030.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 41600 # Abu'l-Aswar Sawur Shaddadid
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+
+### Takshids, the dynasty of Salah ud-Din's mother, they come from the Hadhbanid tribe
+me_takshid_001 = {
+	name = "Khatun" # Mother of Salah ud-Din, First name is unknown with Khatun being a title
+	female = yes
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "kurdish"
+	
+	father = me_takshid_002
+	1110.1.1 = {
+		birth = yes
+	}
+	1128.1.1 = {
+		add_spouse = 226053
+	}
+	1145.1.1 = { # Likely dies between 1139-1146
+		death = yes
+	}
+}
+
+me_takshid_002 = {
+	name = "Taksh" # Also known as Baksh, Salah ud-Din's maternal grandfather
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "kurdish"
+
+	1080.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}
+
+me_takshid_003 = {
+	name = "Mahmud" # 'Shihab ud-Din' Mahmud ibn Taksh al-Harmi, Salah ud-Din's maternal uncle who was granted Hama after it's conquest
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "kurdish"
+	
+	father = me_takshid_002
+	1113.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		give_nickname = nick_shihab_ud_din
+	}
+	1178.10.1 = { # Likely dies sometime before 1179, when al-Mudhaffar Umar is granted Hama
+		death = yes
+	}
+}
+
+me_takshid_004 = {
+	name = "Jakku" # Father of Izz ud-Din Musak and Salah ud-Din's maternal uncle
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "kurdish"
+	
+	father = me_takshid_002
+	1115.1.1 = {
+		birth = yes
+	}
+	1178.9.1 = { # Likely dies sometime before 1179, when al-Mudhaffar Umar is granted Hama
+		death = yes
+	}
+}
+
+me_takshid_005 = {
+	name = "Dawud" # 'Imad ud-Din' Dawud ibn Musak al-Hadhbani
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "levantine"
+	
+	father = musikid_1
+	1170.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+	 		learn_language_of_culture = culture:kurdish
+		} 
+	}
+	1190.1.1 = {
+		give_nickname = nick_imad_ud_din
+		trait = education_learning_4 # Was an Imam
+		trait = zealous
+	}
+	1247.1.1 = { # Dies 644 Hijri
+		death = yes
+	}
+}
+
+me_takshid_006 = {
+	name = "Musa"  
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "levantine"
+	
+	father = musikid_1
+	1173.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+	 		learn_language_of_culture = culture:kurdish
+		} 
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+me_takshid_007 = {
+	name = "al-Husayn"
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "levantine"
+	
+	father = me_takshid_006
+	1205.1.1 = {
+		birth = yes
+	}
+	1265.1.1 = {
+		death = yes
+	}
+}
+
+me_takshid_008 = {
+	name = "Ahmad"
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "levantine"
+	
+	father = me_takshid_007
+	1240.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+
+me_takshid_009 = {
+	name = "Ahmad" # Ahmad ibn Ahmad ibn al-Husayn al-Hikari, Hadith Imam and a descendant of 'Izz ud-Din' Musak ibn Jakku
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "levantine"
+	trait = education_learning_4
+	trait = zealous
+	
+	father = me_takshid_008
+	1275.1.1 = { # Born 674 Hijri
+		birth = yes
+	}
+	1350.1.1 = { # Dies 750 or 751 Hijri
+		death = yes
+	}
+}
+
+me_takshid_010 = {
+	name = "Sitt_Harim" # Aunt of Salah ud-Din, First name is unknown with Sitt Harim being a title
+	female = yes
+	dynasty = levantine_musikid # Takshids
+	religion = "ashari"
+	culture = "kurdish"
+	
+	father = me_takshid_002
+	1115.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}

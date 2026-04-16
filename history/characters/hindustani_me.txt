@@ -1,0 +1,12 @@
+﻿hind001 = { #fictional
+	name = "Jatanpal"
+	dynasty = hind_khatri
+	culture = "hindustani"
+	religion = "kalikula_shaktism"
+	1039.1.1 = {
+		birth = yes
+	}
+	1101.1.1 = {
+		death = yes
+	}
+}

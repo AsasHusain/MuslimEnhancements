@@ -1,0 +1,72 @@
+﻿language_sindhi = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sindhi
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sindhi }
+			multiply = 10
+		}
+	}
+	
+	color = magyar
+}
+
+language_maltese = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_maltese
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_maltese }
+			multiply = 10
+		}
+	}
+	
+	color = maltese
+}
+
+##
+language_sayhadic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sayhadic
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sayhadic }
+			multiply = 10
+		}
+	}
+	
+	color = { 0.53 0.66 0.56 }
+}
+
+language_south_arabian = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_south_arabian
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_south_arabian }
+			multiply = 10
+		}
+	}
+	
+	color = { 0.59 0.97 0.69 }
+}

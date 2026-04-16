@@ -1,0 +1,32 @@
+﻿l_english:
+  become_hafidh_outcome.1000.t:1 "$become_hafidh$: One Step Further!"
+  become_hafidh_outcome.1000.desc:3 "After tireless dedication and unwavering commitment, I've managed to memorize several additional chapters of the Qur'an by heart! Countless hours spent reciting verses, sleepless nights striving for perfection in pronunciation, and continuous practice in mastering the intricate rhythm... it was all worth it in the end.\n\nWith the aid of [target.GetTitledFirstName], with whom I endeavored to perfectly emulate [target.GetHerHis] recitation style, I am now one step closer to fully memorizing the Noble Qu'ran."
+  become_hafidh_outcome.1000.a.normal:0 "Alhamdulilah!"
+  become_hafidh_outcome.1000.a.cynical:0 "I feel accomplished!"
+  become_hafidh_outcome.1000.b:3 "Why stop now? I should continue with my efforts!"
+  
+  become_hafidh_outcome.1001.t:1 "$become_hafidh$: Success!"
+  become_hafidh_outcome.1001.desc:3 "Finally, today I have succeeded where many have failed, today I have compeletely memorized the Noble Qur'an by heart! In my pursuit, I endeavored to perfectly emulate every syllable in [target.GetTitledFirstNamePossessive] pronunciation of the sacred verses — I am confident that my recitation will reflect the utmost reverence and dedication!\n\nAnd, undoubtedly, the Islamic community now holds me in higher regard since I've devoted myself to memorizing the Qur'an."
+  become_hafidh_outcome.1001.a.normal:0 "Alhamdulilah!"
+  become_hafidh_outcome.1001.a.cynical:0 "I feel accomplished!"
+ 
+  become_hafidh_outcome.2000.t:1 "$become_hafidh$: Failure"
+  become_hafidh_outcome.2000.desc:3 "Despite my numerous painstaking attempts, the sacred verses elude me... it feels utterly impossible! No matter how hard I try, with every verse of the Qur'an that I memorize, I seem to forget ten others.\n\nI feel mentally exhausted, perhaps this is enough for now..."
+  become_hafidh_outcome.2000.a:3 "I will take a break, God knows I need it..."
+  become_hafidh_outcome.2000.b:0 "No! I shall try again, for the sake of Allah!"
+  
+  become_hafidh_outcome.3000.t:1 "$become_hafidh$: Resume Studies?"
+  become_hafidh_outcome.3000.desc:4 "Unfortunately [target.GetTitledFirstName] is incapable of aiding me in my efforts of becoming a Hafidh. It is a shame, I was looking to [target.GetHerHim] as I was relying on his guidance to refine my recitation style.\n\nThat said, no need to cut my studies short — I just need to find someone else to emulate!"
+  become_hafidh_outcome.3000.a:0 "[potential_continuation_target_1.GetTitledFirstNamePossessiveNoTooltip] style is beautiful!"
+  become_hafidh_outcome.3000.b:0 "Perhaps [potential_continuation_target_2.GetTitledFirstNameNoTooltip]? [potential_continuation_target_2.GetHerHis|U] seems to have some experience regarding the Qur'an."
+  become_hafidh_outcome.3000.c:0 "Maybe [potential_continuation_target_3.GetTitledFirstNameNoTooltip]?"
+  become_hafidh_outcome.3000.d:0 "Ah, I was looking for a reason to stop studying! Hooray!"
+  
+  child_memorizing_quran_title:0 "[owner.Custom('GetDaughterSon')|U] memorizes the Qur'an!"
+  child_memorizing_quran_desc:0 "Your [owner.Custom('GetDaughterSon')] memorized several new chapters of the Qur'an"
+  child_became_hafidh_title:0 "[owner.Custom('GetDaughterSon')|U] became a Hafidh!"
+  child_became_hafidh_desc:0 "Your [owner.Custom('GetDaughterSon')] has compeletely memorized the Qur'an"
+  child_memorizing_quran_fail_title:0 "[owner.Custom('GetDaughterSon')|U] failed to memorize the Qur'an."
+  child_memorizing_quran_fail_desc:0 "Your [owner.Custom('GetDaughterSon')] is having difficulties with memorizing the Qur'an"
+  child_became_hafidh_invalidated_title:0 "Your Child's Become Hafidh Scheme Invalidated"
+  child_became_hafidh_invalidated_desc:0 "Your Child's [GetScheme('become_hafidh').GetTypeName] [scheme|E] was Invalidated"

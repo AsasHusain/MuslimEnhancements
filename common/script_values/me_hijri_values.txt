@@ -1,0 +1,58 @@
+### Hijri Calendar Script Values ###
+
+# Safely read Hijri year from global variable
+me_hijri_year_display = {
+	value = 0
+	if = {
+		limit = { exists = global_var:me_hijri_year }
+		add = global_var:me_hijri_year
+	}
+}
+
+# Safely read Hijri month from global variable
+me_hijri_month_value = {
+	value = 0
+	if = {
+		limit = { exists = global_var:me_hijri_month }
+		add = global_var:me_hijri_month
+	}
+}
+
+# Safely read Hijri day from global variable
+me_hijri_day_display = {
+	value = 0
+	if = {
+		limit = { exists = global_var:me_hijri_day }
+		add = global_var:me_hijri_day
+	}
+}
+
+# Check if current Hijri month is odd (1,3,5,7,9,11 = 30 days)
+me_hijri_month_is_odd = {
+	value = 0
+	if = {
+		limit = { exists = global_var:me_hijri_month }
+		add = global_var:me_hijri_month
+	}
+	modulo = 2
+}
+
+# Leap year check: (11 * year + 14) mod 30 < 11 means leap year
+me_hijri_leap_check = {
+	value = 0
+	if = {
+		limit = { exists = global_var:me_hijri_year }
+		add = global_var:me_hijri_year
+	}
+	multiply = 11
+	add = 14
+	modulo = 30
+}
+
+# Fallback Hijri year calculation from current_year (for unknown start dates)
+me_hijri_year_from_formula = {
+	value = current_year
+	subtract = 622
+	multiply = 33
+	divide = 32
+}

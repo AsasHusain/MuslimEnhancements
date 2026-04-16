@@ -1,0 +1,1710 @@
+﻿
+## Easter Eggs ###
+me_dynasty_ea_dibyaza = { # Yaqub 'Qamar ad-Din' Dibyazah
+	pattern="pattern__solid_designer.dds"
+	color1=yellow
+	color2=yellow
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.660000 0.660000 } }
+	}
+}
+
+me_dynasty_ea_kashmiri = { # Khalid Kashmiri
+	pattern="pattern__solid_designer.dds"
+	color1=red
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.660000 0.660000 } }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+
+me_dynasty_ea_karawita = { # Khidr Karawita
+	pattern="pattern__solid_designer.dds"
+	color1=blue
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=blue
+		color2=white
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.660000 0.660000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=blue_light
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+me_dynasty_ea_kanabawi = { # Isma'il Ahmad Kanabawi
+	pattern="pattern__solid_designer.dds"
+	color1=green
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.660000 0.660000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=green
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+me_dynasty_ea_sisha = { # Uthman Abdul-Jalil Sisha
+	pattern="pattern__solid_designer.dds"
+	color1=grey
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=grey
+		color2=white
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.660000 0.660000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=grey
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+me_dynasty_ea_sumbul = { # Muhammad sumbul
+	pattern="pattern__solid_designer.dds"
+	color1=brown
+	color2=yellow
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.660000 0.660000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=brown
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+## Quraysh Dynasties ##
+597 = { # Umayyads 
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+}
+
+me_anfid_dynasty = { # Banu al-Anf - Umayyad branch
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=black
+	colored_emblem={
+		color1=black
+		color2=white
+		color3=black
+		texture="ce_mena_lion.dds"
+		instance={ position={ 0.500000 0.460000 } scale={ -0.900000 1.000000 } }
+	}
+}
+
+
+7296  = { # Bani Quraysh 
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"	
+	colored_emblem = {
+		texture = "ce_star_07.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 }  }	
+	}
+	colored_emblem = {
+		texture = "ce_circle_mask.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.50 } scale = { 0.35 0.35 }  }	
+	}	
+	colored_emblem = {
+		texture = "ce_crescent_mask.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.53 } scale = { 0.4 0.4 }  }	
+	}		
+}
+
+house_me_banu_hashim  = { # Hashimid
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"	
+	colored_emblem = {
+		texture = "ce_star_07.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 }  }	
+	}
+	colored_emblem = {
+		texture = "ce_circle_mask.dds"
+		color1 = "red"
+		color2 = "red"		
+		instance = { position = { 0.5 0.50 } scale = { 0.35 0.35 }  }	
+	}	
+	colored_emblem = {
+		texture = "ce_crescent_mask.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.53 } scale = { 0.4 0.4 }  }	
+	}		
+}
+
+house_me_banu_adi  = { # al-Adawi
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"	
+	colored_emblem = {
+		texture = "ce_star_07.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 }  }	
+	}
+	colored_emblem = {
+		texture = "ce_circle_mask.dds"
+		color1 = "green"
+		color2 = "green"		
+		instance = { position = { 0.5 0.50 } scale = { 0.35 0.35 }  }	
+	}	
+	colored_emblem = {
+		texture = "ce_crescent_mask.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.53 } scale = { 0.4 0.4 }  }	
+	}		
+}
+
+house_me_banu_taym = { # at-Taymī
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.350000 0.350000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.780000 0.780000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=white
+		texture="ce_star_07.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.900000 0.900000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=white
+		texture="ce_crescent_mask.dds"
+		instance={ position={ 0.500000 0.530000 } scale={ 0.400000 0.400000 } }
+	}
+}
+
+house_me_banu_abd_shams = { # al-'Abshamī
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=yellow
+	colored_emblem={
+		color1=yellow
+		color2=white
+		texture="ce_star_07.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.900000 0.900000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=black
+		color2=black
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.350000 0.350000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=orange
+		color2=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.240000 0.240000 } }
+	}
+}
+
+house_me_banu_makhzum  = { # al-Makhzumi
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"	
+	colored_emblem = {
+		texture = "ce_star_07.dds"
+		color1 = "red"
+		color2 = "red"		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 }  }	
+	}
+	colored_emblem = {
+		texture = "ce_circle_mask.dds"
+		color1 = "white"
+		color2 = "white"		
+		instance = { position = { 0.5 0.50 } scale = { 0.35 0.35 }  }	
+	}	
+	colored_emblem = {
+		texture = "ce_crescent_mask.dds"
+		color1 = "red"
+		color2 = "red"		
+		instance = { position = { 0.5 0.53 } scale = { 0.4 0.4 }  }	
+	}		
+}
+
+
+house_ukhaidhirid = {
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=green
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.350000 0.350000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=green
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.780000 0.780000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=green
+		texture="ce_star_07.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.900000 0.900000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=green
+		texture="ce_crescent_mask.dds"
+		instance={ position={ 0.500000 0.530000 } scale={ 0.400000 0.400000 } }
+	}
+}
+
+1043005 = { # Banu Habbar - Rulers of Sindh
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=yellow
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_tamgha_roundel_frame.dds"
+		instance={ scale={ 0.810000 0.810000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=yellow
+		texture="ce_zulfiqar_and_shield.dds"
+		instance={ scale={ 0.760000 0.760000 } }
+	}
+}
+
+me_as_sufi_dynasty = { # Ibn as-Sufi (Sufids)
+	pattern="pattern_solid.dds"
+	color1=green_light
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_zulfiqar.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.640000 0.640000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_polylobe_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=1.010000 }
+	}
+}
+
+me_tabatabaid_dynasty = { # at-Tabataba'i (Tabataba'ids)
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_barrulets_2.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.45 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_mena_ceremonial_sword.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.45 } scale = { 0.75 0.75 }  }
+	}
+}
+
+
+## Fatimids
+house_husaynid = {
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.700000 0.700000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_mena_lion.dds"
+		instance={ scale={ -0.770000 0.770000 } }
+	}
+}
+
+me_ba_alawi_dynasty = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=white
+		color3=black
+		texture="ce_mena_lion.dds"
+		instance={ position={ 0.500000 0.460000 } scale={ -0.900000 1.000000 } }
+	}
+}
+
+## Ziyadids - Umayyad Bastard Dynasty ### 
+1042165 = {  
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=yellow
+	colored_emblem={
+		color1=yellow
+		color2=black
+		texture="ce_rubh_el_hizb_flower.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.590000 0.590000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_rubh_el_hizb_iranian_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ position={ 0.500000 0.490000 } scale={ 0.360000 0.360000 } }
+	}
+}
+
+## The Makhzumids of Shewa ###
+1022241 = {
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=red
+	colored_emblem={
+		color1=red
+		texture="ce_rubh_el_hizb_flower.dds"
+		instance={ scale={ 0.680000 0.680000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ scale={ 0.430000 0.430000 } }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_india_doted_frame.dds"
+		instance={ scale={ 0.770000 0.770000 } depth=2.010000 }
+	}
+}
+
+## Umarid Dynasty ###
+bedouindyn002 = { # al-Umari
+	pattern="pattern_tricolor_bend_02.dds"
+	color1=green
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_empty.dds"
+	}
+	colored_emblem={
+		color1=black
+		color2=black
+		texture="ce_sabre.dds"
+		instance={ position={ 0.520000 0.470000 } scale={ 0.830000 0.830000 } depth=1.010000 rotation=-45 }
+	}
+}
+
+## Idrisids and Sulaymanids ###
+1029055 = { # Idrisid dynasty
+	pattern="pattern_horizontal_split_01.dds"
+	color1=red
+	color2=red
+	colored_emblem={
+		color1=red
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_solomon_star_08.dds"
+		instance={ scale={ 0.870000 0.870000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ scale={ 0.480000 0.480000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=yellow
+		texture="ce_border_circle.dds"
+		instance={ depth=3.010000 }
+	}
+}
+
+house_hammudid = { # Hammudid house - Idrisids
+	pattern="pattern_horizontal_split_01.dds"
+	color1=green
+	color2=green
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_solomon_star_08.dds"
+		instance={ scale={ 0.870000 0.870000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ scale={ 0.480000 0.480000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=yellow
+		texture="ce_border_circle.dds"
+		instance={ depth=3.010000 }
+	}
+}
+
+me_sulaymanid = { # Sulaymanid dynasty
+	pattern="pattern_horizontal_split_01.dds"
+	color1=blue
+	color2=blue
+	colored_emblem={
+		color1=blue
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_solomon_star_08.dds"
+		instance={ scale={ 0.870000 0.870000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ scale={ 0.480000 0.480000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=yellow
+		texture="ce_border_circle.dds"
+		instance={ depth=3.010000 }
+	}
+}
+
+## Rustamids ##
+808 = {
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=rgb { 17 106 87 }
+	colored_emblem={
+		color1=rgb { 17 106 87 }
+		color2=black
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_rubh_el_hizb_flower.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.700000 0.700000 } }
+	}
+}
+## Talakata Clan ##
+me_zirid_pre_dynasty = {
+	pattern="pattern_tricolor_horizontal_01.dds"
+	color1=green
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=green
+		color2=green
+		texture="ce_mena_key_pale.dds"
+		instance={ position={ 0.720000 0.500000 } scale={ -0.330000 0.330000 } depth=1.010000 }
+		instance={ position={ 0.280000 0.500000 } scale={ 0.330000 0.330000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_border_circle_metal.dds"
+	}
+	colored_emblem={
+		color1=green
+		color2=red
+		texture="ce_mena_khanja.dds"
+		instance={ scale={ 0.330000 0.330000 } depth=3.010000 }
+	}
+}
+
+## Banu Ifran - Ifrinids ##
+1048004 = { 
+	pattern="pattern_vertical_split_01.dds"
+	color1=white
+	color2=red
+	colored_emblem={
+		color1=red
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.820000 0.820000 } }
+		mask = { 1 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.830000 0.830000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=black
+		texture="ce_star_ibadi.dds"
+		instance={ depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.520000 0.520000 } depth=3.010000 }
+	}
+}
+
+ifrinid_alt = { 
+	pattern="pattern_vertical_split_01.dds"
+	color1=white
+	color2=rgb { 121 38 88 }
+	colored_emblem={
+		color1=rgb { 121 38 88 }
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.820000 0.820000 } }
+		mask = { 1 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.830000 0.830000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=black
+		texture="ce_star_ibadi.dds"
+		instance={ depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.520000 0.520000 } depth=1.010000 }
+	}
+}
+ifrinid_old = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 146 47 33 }
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.630000 0.480000 } scale={ 0.550000 0.550000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=rgb { 146 47 33 }
+		texture="ce_star_ibadi.dds"
+		instance={ position={ 0.630000 0.480000 } scale={ 0.640000 0.640000 }
+		}
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_block_03.dds"
+		instance={ position={ 0.140000 0.430000 } depth=2.010000 rotation=90
+		}
+	}
+}
+
+## Maghrawa Dynasty ##
+
+house_me_khazarids = { # Maghrawavids of Banu Khazar
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=yellow
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.610000 0.610000 } depth=1.010000 } 
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_octogon_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.810000 0.810000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.650000 0.650000 } }
+	}
+}
+
+house_me_khazrunids = { # Maghrawavids of Banu Khazrun
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=red
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.610000 0.610000 } depth=1.010000 } 
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_octogon_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.810000 0.810000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.650000 0.650000 } }
+	}
+}
+
+house_me_atiyyids = { # Maghrawavids of Banu 'Aṭiyya
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=red
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.610000 0.610000 } depth=1.010000 } 
+	}
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_octogon_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.810000 0.810000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.650000 0.650000 } }
+	}
+}
+
+1027001 = { # Maghrawa dynasty
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=yellow
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_octogon_plain_frame.dds" instance={ position={ 0.500000 0.480000 } scale={ 0.810000 0.810000 } depth=5.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.610000 0.610000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		texture="ce_block_04.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.280000 0.560000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_octogon_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=4.010000 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_block_04.dds"
+		instance={ scale={ 0.570000 0.260000 } rotation=90 }
+	}
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_tamgha_mongol_01.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.500000 0.500000 } depth=2.010000 }
+	}
+}
+
+## Berberist ##
+9576 ={ # Barghawata
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 26 117 74 }
+	color2=black
+	color3=green
+	colored_emblem={ color1=white texture="ce_star_hexagram.dds" }
+	colored_emblem={
+		color1=black
+		color2=rgb { 43 164 107 }
+		texture="ce_octogon_plain_frame.dds"
+		instance={ scale={ 0.860000 0.860000 } depth=1.010000 }
+	}
+}
+
+house_me_haririds = { # Haririds, House of Ha-Mim
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 62 121 141 }
+	color2=black
+	colored_emblem={
+		color1=black
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.790000 0.790000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=black
+		color2=black
+		texture="ce_solomon_star_08.dds"
+		instance={ scale={ 0.880000 0.880000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=black
+		texture="ce_border_circle.dds"
+	}
+	colored_emblem={
+		color1=black
+		texture="ce_rubh_el_hizb_knot.dds"
+		instance={ scale={ 0.370000 0.370000 } depth=2.010000
+		}
+	}
+}
+
+me_mawatid_dynasty = { # Mawatids, House of Kadu ibn Mu'arik
+	pattern="pattern__solid_designer.dds"
+	color1=yellow
+	color2=black
+	colored_emblem={
+		color1=black
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.790000 0.790000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=black
+		color2=black
+		texture="ce_solomon_star_08.dds"
+		instance={ scale={ 0.880000 0.880000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=black
+		texture="ce_border_circle.dds"
+	}
+	colored_emblem={
+		color1=black
+		texture="ce_rubh_el_hizb_knot.dds"
+		instance={ scale={ 0.370000 0.370000 } depth=2.010000
+		}
+	}
+}
+
+
+## Sicily Dynasties ##
+12241 = { #al-Madani
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_crescent_random.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.650000 0.650000 } }
+	}
+}
+
+806 = { #Sawdanids
+	pattern="pattern_tricolor_bend_02.dds"
+	color1=black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_sabre.dds"
+		instance={ scale={ 0.600000 0.600000 } rotation=-45 }
+	}
+}
+
+## al-Karrami - Ibn Karram ##
+me_karrami_dynasty = {
+	pattern="pattern_solid.dds"
+	color1=brown
+	colored_emblem={
+		color1=yellow
+		texture="ce_mena_crescent_outline.dds"
+		instance={ rotation=270 }
+	}
+}
+
+## Nizami Ganjavid ##
+me_ganjavid_dynasty = {
+	pattern="pattern__solid_designer.dds"
+	color1=green_light
+	color2=white
+	colored_emblem={
+		color1=brown
+		color2=yellow
+		texture="ce_frame_circle_borre_double_knots_03.dds"
+		instance={ scale={ 0.870000 0.870000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_fire.dds"
+		instance={ scale={ 0.610000 0.610000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.790000 0.790000 } depth=2.010000 }
+	}
+}
+
+
+## Banu Taghlib ##
+1042127 = { # Banu Taghlib
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=green
+	colored_emblem={
+		color1=green
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=green
+		color2=black
+		color3=white
+		texture="ce_eagle_islamic.dds"
+		instance={ scale={ 0.630000 0.630000 } }
+	}
+}
+
+house_al_adawiyya = { 
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=blue
+	colored_emblem={
+		color1=white
+		color2=white
+		color3=blue
+		texture="ce_eagle_islamic.dds"
+		instance={ scale={ 0.630000 0.630000 } }
+	}
+	colored_emblem={
+		color1=blue
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=blue
+		color2=blue_light
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+house_attab = {
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=yellow
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		color3=white
+		texture="ce_eagle_islamic.dds"
+		instance={ scale={ 0.630000 0.630000 } }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=blue_light
+		texture="ce_india_doted_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=1.010000 }
+	}
+}
+
+house_hamdan = {
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=green
+	colored_emblem={
+		color1=white
+		color2=black
+		color3=white
+		texture="ce_arabic_allah_kufic.dds"
+		instance={ scale={ 0.630000 0.630000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_pagan_circle_frame.dds"
+		instance={ scale={ 0.690000 0.690000 } }
+	}
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_polylobe_circle_frame.dds"
+		instance={ scale={ 0.800000 0.800000 } depth=2.010000 }
+	}
+}
+
+## Banu Kahlan ###
+me_banu_kahlan_dynasty = {
+	pattern="pattern__solid_designer.dds"
+	color1=black
+	color2=white
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.960000 0.960000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.260000 0.260000 } }
+	}
+}
+
+
+## Madhḥaj Tribe ###
+me_mudhhaj_dynasty = {
+	pattern="pattern__solid_designer.dds"
+	color1=brown
+	color2=yellow
+	colored_emblem={
+		color1=brown
+		color2=black
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.960000 0.960000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_mena_axe.dds"
+		instance={ scale={ 0.590000 0.590000 } }
+	}
+}
+
+## Tayy' Tribe ###
+bedouindyn010 = { # Banu Tayy'
+	pattern="pattern__solid_designer.dds"
+	color1=black
+	color2=black
+	colored_emblem={
+		color1=red
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_mena_axe.dds"
+		instance={ scale={ 0.590000 0.590000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=yellow
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.960000 0.960000 } depth=1.010000 }
+	}
+}
+
+house_fadlid = {
+	pattern="pattern__solid_designer.dds"
+	color1=black
+	color2=black
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_rosetta_06.dds"
+		instance={ scale={ 0.590000 0.590000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.960000 0.960000 } depth=1.010000 }
+	}
+}
+
+house_mirid = {
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=white
+	colored_emblem={
+		color1=red
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_rosetta_06.dds"
+		instance={ scale={ 0.590000 0.590000 } }
+	}
+	colored_emblem={
+		color1=red
+		color2=white
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.960000 0.960000 } depth=1.010000 }
+	}
+}
+
+house_farajid = {
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=blue
+	colored_emblem={
+		color1=red
+		color2=blue
+		texture="ce_rosetta_06.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.510000 0.510000 } }
+	}
+	colored_emblem={
+		color1=blue
+		color2=red
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_square_kaaba.dds"
+		instance={ position={ 0.500000 0.480000 } scale={ 0.700000 0.700000 } depth=1.010000 }
+	}
+}
+
+house_jarrahid = {
+	pattern="pattern_chief.dds"
+	color1=white
+	color2=red
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_fur_potent_01.dds"
+		instance={ depth=4.010000 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_circle_mask.dds"
+		instance={ position={ 0.500000 0.630000 } scale={ 0.430000 0.430000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_rosetta_06.dds"
+		instance={ position={ 0.500000 0.630000 } scale={ 0.490000 0.490000 } }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_block_01.dds"
+		instance={ position={ 0.500000 0.050000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_mena_crescent.dds"
+		instance={ position={ 0.500000 0.170000 } scale={ 0.330000 0.330000 } depth=2.010000 }
+	}
+}
+
+house_me_jibrani = {
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=white
+	colored_emblem={
+		color1=green
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		color2=green
+		texture="ce_rosetta_06.dds"
+		instance={ scale={ 0.590000 0.590000 } }
+	}
+	colored_emblem={
+		color1=green
+		color2=white
+		texture="ce_quadrilobe.dds"
+		instance={ scale={ 0.960000 0.960000 } depth=1.010000 }
+	}
+}
+
+## Azd Tribe ###
+arabic_azd = { # Azd Tribe
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 172 115 30 }
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_mena_ceremonial_sword.dds"
+		instance={ scale={ 0.870000 0.870000 } }
+	}
+}
+
+house_me_al_julandi = { # Banu al-Julanda
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=yellow
+		color2=black
+		texture="ce_mena_ceremonial_sword.dds"
+		instance={ scale={ 0.870000 0.870000 } }
+	}
+}
+
+1042182 = { # Banu Yahmad, Imams of Oman
+	pattern="pattern__solid_designer.dds"
+	color1=black
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=yellow
+		color2=brown
+		texture="ce_mena_ceremonial_sword.dds"
+		instance={ scale={ 0.870000 0.870000 } }
+	}
+}
+
+## Lakhmids
+me_lakhmid_dynasty = {
+	pattern="pattern_solid.dds"
+	color1=green_light
+	color2=red
+	colored_emblem={
+		color1=rgb { 124 14 0 }
+		color2=green_light
+		texture="ce_mena_sun.dds"
+		instance={ scale={ 0.930000 0.930000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_circle.dds"
+		instance={ scale={ 0.250000 0.250000 } }
+	}
+}
+
+house_me_wafidid = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=white
+	colored_emblem={
+		color1=black
+		texture="ce_circle.dds"
+		instance={ scale={ 0.250000 0.250000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_mena_sun.dds"
+		instance={ scale={ 0.930000 0.930000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+}
+
+house_me_arslanid = {
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	colored_emblem={
+		color1=red
+		texture="ce_circle.dds"
+		instance={ scale={ 0.250000 0.250000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_mena_sun.dds"
+		instance={ scale={ 0.930000 0.930000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.720000 0.720000 } depth=2.010000 }
+	}
+}
+
+house_me_arslanid_old = {
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=black
+	color3=red
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_mena_sun.dds"
+		instance={ position={ 0.500000 0.510000 } scale={ 0.870000 0.870000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_circle.dds"
+		instance={ position={ 0.500000 0.510000 } scale={ 0.270000 0.270000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=red
+		texture="ce_doted_roundel_frame.dds"
+		instance={ position={ 0.500000 0.510000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+}
+
+## Banu Rasib ###
+me_ar_rasibi = {
+	pattern="pattern__solid_designer.dds"
+	color1=blue
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_mena_ceremonial_sword.dds"
+		instance={ scale={ 0.870000 0.870000 } }
+	}
+}
+
+## Kinda Tribe ###
+bedouin_kinda = { # Kinda Tribe
+	pattern="pattern_horizontal_stripes_01.dds"
+	color1=yellow
+	color2=red
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.630000 0.630000 } }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=red
+		texture="ce_doted_roundel_frame.dds"
+		instance={ scale={ 0.700000 0.700000 } depth=1.010000 }
+	}
+}
+
+house_me_Tujibid = { # Banu Tujib, A branch of the Kinda tribe
+	pattern="pattern_horizontal_stripes_01.dds"
+	color1=red
+	color2=blue
+	colored_emblem={
+		color1=blue_light
+		color2=blue
+		texture="ce_doted_roundel_frame.dds"
+		instance={ scale={ 0.700000 0.700000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=red
+		color2=blue_light
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.630000 0.630000 } }
+	}
+}
+
+house_banu_sumadih = { # Banu Tujib, A sub-branch of the Banu Tujib
+	pattern="pattern_horizontal_stripes_01.dds"
+	color1=brown
+	color2=yellow
+	colored_emblem={
+		color1=yellow
+		color2=brown
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.630000 0.630000 } }
+	}
+	colored_emblem={
+		color1=brown
+		color2=yellow
+		texture="ce_doted_roundel_frame.dds"
+		instance={ scale={ 0.700000 0.700000 } depth=1.010000 }
+	}
+}
+
+## Abd al-Qays Tribe ##
+1042121 = { # Banu Abd al-Qays
+	pattern="pattern_solid.dds"
+	color1=rgb { 51 102 75 }
+	color2=white
+	colored_emblem={
+		color1=red
+		texture="ce_crescent_random.dds"
+		instance={ position={ 0.460000 0.480000 } scale={ 0.750000 0.750000 } depth=1.010000 rotation=89 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_star_05.dds"
+		instance={ position={ 0.600000 0.490000 } scale={ 0.480000 0.480000 } }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ position={ 0.500000 0.470000 } scale={ 0.820000 0.820000 } depth=2.010000 }
+	}
+}
+
+
+house_me_banu_zajjaj = { # az-Zajjaj, 1066 rulers of Uwal (taken from Vanilla Uyunid COA)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_chief_indented.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = { position = { 0.5 0.5 } rotation = -90 scale = { 1.0 1.0 }  }
+	}
+}
+
+house_me_jadhmi = { # al-Jadhmi, 1066 rulers of Qatif (and Qatar)
+	pattern="pattern_solid.dds"
+	color1=rgb { 89 26 40 }
+	color2=white
+	colored_emblem={
+		color1=white
+		color2=red
+		texture="ce_chief_indented_alpha.dds"
+		instance={ rotation=-90 }
+	}
+}
+
+house_me_uyunids = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=red
+		texture="ce_crescent_random.dds"
+		instance={ position={ 0.490000 0.300000 } scale={ 0.570000 0.570000 } depth=1.010000 rotation=89 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_star_05.dds"
+		instance={ position={ 0.590000 0.300000 } scale={ 0.330000 0.330000 } }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_ordinary_pile_01.dds"
+		instance={ position={ 0.500000 0.520000 } depth=2.010000 }
+	}
+}
+
+## Bedouin Dynasties ##
+1042122 = { # Banu Tamim
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_sabre.dds"
+		instance={ scale={ -0.650000 -0.650000 } rotation=135 }
+		instance={ scale={ 0.650000 -0.650000 } depth=1.010000 rotation=225 }
+	}
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={ scale={ 0.750000 -0.750000 } depth=2.010000 rotation=240 }
+	}
+}
+
+house_me_handhali = { # Banu Handhala - Banu Tamim house
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_sabre.dds"
+		instance={ scale={ -0.650000 -0.650000 } rotation=135 }
+		instance={ scale={ 0.650000 -0.650000 } depth=1.010000 rotation=225 }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={ scale={ 0.750000 -0.750000 } depth=2.010000 rotation=240 }
+	}
+}
+
+me_banu_thaqif = { # Banu Thaqif - al-Thaqafi
+	pattern="pattern__solid_designer.dds"
+	color1=white
+	color2=yellow
+	colored_emblem={
+		color1=yellow
+		color2=yellow
+		texture="ce_tamgha_roundel_frame.dds"
+		instance={ scale={ 0.810000 0.810000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		color3=yellow
+		texture="ce_sabre.dds"
+		instance={ scale={ 0.700000 0.700000 } rotation=306 }
+	}
+}
+
+me_banu_asad = { # Banu Asad - al-Asadi
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	colored_emblem={
+		color1=white
+		texture="ce_circle_mask.dds"
+		instance={ scale={ 0.700000 0.700000 } depth=1.010000
+		}
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_mena_lion.dds"
+		instance={ scale={ 0.730000 0.730000 } }
+	}
+}
+
+12211 = { # Banu Mardanish
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	colored_emblem={
+		color1=white
+		texture="ce_mena_rosette.dds"
+		instance={ scale={ 0.310000 0.310000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_rubh_el_hizb_flower.dds"
+		instance={ scale={ 0.710000 0.710000 } depth=2.010000 rotation=22 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_bend_thin.dds"
+		instance={ position={ 0.560000 0.300000 } depth=4.010000 }
+		instance={ position={ 0.430000 0.610000 } depth=5.010000 }
+	}
+	colored_emblem={
+		color1=black
+		color2=black
+		texture="ce_octogon_frame.dds"
+		instance={ scale={ 0.740000 0.740000 } }
+	}
+	colored_emblem={
+		color1=black
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ scale={ 0.820000 0.820000 } depth=3.010000 }
+	}
+}
+
+me_al_madharai_dynasty = { # The Madhara'ids
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "yellow"
+	colored_emblem = {
+		texture = "ce_mena_chalice_penbox.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 0.8 0.8 }  }
+	}
+}
+
+## Malaysian Dynasties
+dk_sayyid_perlak = {
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={ scale={ 0.850000 0.850000 } }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_arabic_mahdi.dds"
+		instance={ position={ 0.500000 0.430000 } scale={ 0.590000 0.590000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_khmer_boat.dds"
+		instance={ position={ 0.500000 0.640000 } scale={ 0.730000 0.390000 } depth=2.010000}
+	}
+}
+
+dk_makhdum_perlak = {
+	pattern="pattern_solid.dds"
+	color1=orange
+	color2=green
+	color3=white
+	colored_emblem={
+		color1=yellow
+		texture="ce_iranian_floral_pattern.dds"
+		instance={ position={ 0.500000 0.930000 } }
+	}
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_octogon_plain_frame.dds"
+		instance={ position={ 0.500000 0.400000 } scale={ 0.750000 0.750000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=orange
+		color2=orange
+		texture="ce_arabic_allah.dds"
+		instance={ position={ 0.500000 0.420000 } scale={ 0.700000 0.700000 } depth=1.010000}
+	}
+}
+
+
+
+# Removed Dynasties (To stop them from appearing in the Error file)
+me_removed_dynasty = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 255 32 1 }
+	color2=white
+	colored_emblem={
+		color1=white
+		texture="ce_letter_d.dds"
+		instance={ position={ 0.700000 0.760000 } scale={ 0.630000 0.630000 } }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_letter_m.dds"
+		instance={ position={ 0.740000 0.350000 } scale={ 0.670000 0.670000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_letter_v.dds"
+		instance={ position={ 0.270000 0.770000 } scale={ 0.630000 0.630000 } depth=1.010000 }
+	}
+	colored_emblem={
+		color1=white
+		texture="ce_letter_r.dds"
+		instance={ position={ 0.270000 0.350000 } scale={ 0.700000 0.700000 } depth=3.010000 }
+	}
+}
+
+ me_removed_house = me_removed_dynasty
+ 577 = me_removed_dynasty
+ 587 = me_removed_house
+ 844 = me_removed_dynasty
+ 1042142 = me_removed_dynasty
+ 1056 = me_removed_dynasty
+ 1048002 = me_removed_dynasty
+ 1042181 = me_removed_dynasty
+ 12194 = me_removed_dynasty
+ 12278 = me_removed_dynasty
+ 1042117 = me_removed_dynasty
+ salimid = me_removed_dynasty
+ andalusiandyn001 = me_removed_dynasty

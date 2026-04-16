@@ -1,0 +1,129 @@
+﻿### Arabic
+yemeni = {
+	color = { 0.2 0.6 0.2 }
+	created = 500.1.1
+	parents = { bedouin himyarite }
+	history_loc_override = yemeni_himyar_history_loc
+	
+	ethos = ethos_communal
+	heritage = heritage_arabic
+	language = language_arabic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_mountaineers
+		tradition_mountain_herding 
+		tradition_religion_blending
+		tradition_maritime_mercantilism
+	}
+	
+	name_list = name_list_yemeni
+
+	coa_gfx = { arabic_group_coa_gfx } 
+	building_gfx = { arabic_group_building_gfx mena_building_gfx } 
+	clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx } 
+	unit_gfx = { mena_unit_gfx } 	
+	house_coa_frame = house_frame_13
+	house_coa_mask_offset = { 0.0 -0.03 }
+	house_coa_mask_scale = { 0.95 0.95 }
+
+	ethnicities = {
+		62 = arab
+		38 = east_african
+	}
+}
+
+### Indo-Aryan ###
+punjabi = {
+	color = punjabi
+	
+	ethos = ethos_communal
+	heritage = heritage_indo_aryan
+	language = language_vrachada
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_wedding_ceremonies
+		tradition_poetry
+		tradition_agrarian
+		tradition_gardening
+	}
+	
+	name_list = name_list_punjabi
+	
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+	
+	ethnicities = {
+		50 = indian
+		50 = arab
+	}
+}
+
+sindhi = { # Indo-Aryan
+	color = { 1.0 0.2 0.0 }
+	
+	ethos = ethos_spiritual
+	heritage = heritage_indo_aryan
+	language = language_sindhi
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_poetry
+		tradition_seafaring
+		tradition_mendicant_mystics
+		tradition_xenophilic
+		tradition_religious_patronage
+	}
+	
+	name_list = name_list_sindhi
+	
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+	
+	ethnicities = {
+		50 = indian
+		50 = mediterranean
+	}
+}
+
+kashmiri = { # Indo-Aryan Dardic
+	color = kashmiri
+	
+	ethos = ethos_spiritual
+	heritage = heritage_indo_aryan
+	language = language_kashmiri
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_himalayan_settlers
+		tradition_religious_patronage
+		tradition_equal_inheritance
+		tradition_artisans
+	}
+
+	dlc_tradition = {
+		trait = tradition_fp2_malleable_subjects
+		requires_dlc_flag = the_fate_of_iberia
+		fallback = tradition_storytellers
+	}
+	
+	name_list = name_list_kashmiri
+	
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	house_coa_frame = house_frame_17
+	
+	ethnicities = {
+		91 = indian
+		9 = asian_tibetan
+	}
+}

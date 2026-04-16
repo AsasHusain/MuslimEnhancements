@@ -1,0 +1,212 @@
+﻿namespace = me_misc_religion_event
+
+me_misc_religion_event.0001 = {
+	title = me_misc_religion_event.0001.t
+	desc = me_misc_religion_event.0001.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	artifact = {
+		target = scope:revival_book
+		position = lower_left_portrait
+	}
+	artifact = {
+		target = scope:deliverance_book
+		position = lower_right_portrait
+	}
+
+	trigger = {
+		root.faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+	}
+
+	immediate = {
+		# Book creation
+		random_dummy_gender_effect = yes #used for book creation
+
+		save_temporary_scope_value_as = {
+			name = should_be_trinket
+			value = yes
+		}
+		hidden_effect_new_object = {
+			create_artifact_book_effect = { #using effect to ensure that scope:owner is set properly
+				OWNER = root
+				CREATOR = scope:dummy_gender
+				SET_SUBJECT = flag:al_ghazali_revival
+				SET_TOPIC = flag:al_ghazali_revival
+			}
+			scope:newly_created_artifact = {
+				flag_as_trash_artifact = yes
+				set_variable = {
+					name = al_ghazali_revival
+					value = yes
+				}
+				save_scope_as = revival_book
+			}
+		}
+
+		save_temporary_scope_value_as = {
+			name = should_be_trinket
+			value = yes
+		}
+		hidden_effect_new_object = {
+			ME_create_artifact_book_effect = { #using effect to ensure that scope:owner is set properly
+				OWNER = root
+				CREATOR = scope:dummy_gender
+				SET_SUBJECT = flag:al_ghazali_deliverance
+				SET_TOPIC = flag:al_ghazali_deliverance
+			}
+			scope:newly_created_artifact = {
+				flag_as_trash_artifact = yes
+				set_variable = {
+					name = al_ghazali_deliverance
+					value = yes
+				}
+				save_scope_as = deliverance_book
+			}
+		}
+
+	}
+
+	option = {
+		name = me_misc_religion_event.0001.a
+		custom_tooltip = me_misc_religion_event.0001.a.tt
+		remove_short_term_gold = 15
+
+		hidden_effect = {
+			destroy_artifact = scope:deliverance_book
+		}
+
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+					ai_zeal < -1
+					ai_greed >= medium_positive_ai_value
+					gold <= 50
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_trait = zealous
+					ai_zeal > 0.5
+				}
+			}
+		}
+	}
+	option = {
+		name = me_misc_religion_event.0001.b
+		custom_tooltip = me_misc_religion_event.0001.b.tt
+		remove_short_term_gold = 15
+
+		hidden_effect = {
+			destroy_artifact = scope:revival_book
+		}
+
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+					ai_zeal < -1
+					ai_greed >= medium_positive_ai_value
+					gold <= 50
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_trait = zealous
+					ai_zeal > 0.5
+				}
+			}
+		}
+	}
+	option = {
+		name = me_misc_religion_event.0001.c
+		custom_tooltip = me_misc_religion_event.0001.c.tt
+		remove_short_term_gold = 30
+
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+					ai_zeal < 0
+					ai_greed >= medium_positive_ai_value
+					gold <= 100
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_trait = zealous
+					ai_zeal > 1
+				}
+			}
+		}
+	}
+	option = {
+		name = me_misc_religion_event.0001.d
+
+		hidden_effect = {
+			destroy_artifact = scope:revival_book
+			destroy_artifact = scope:deliverance_book
+		}
+
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+me_misc_religion_event.0002 ={
+	hidden = yes
+
+	trigger = {
+		has_character_flag = has_islam_only_laqab
+		NOT = { faith.religion = religion:islam_religion }
+	}
+	immediate = {
+		remove_nickname = yes
+		remove_character_flag = has_islam_only_laqab
+	}
+}
+
+me_misc_religion_event.0003 ={
+	hidden = yes
+
+	immediate = {
+		every_county = {
+			limit = { faith = faith:maturidi }
+			set_county_faith = faith:ashari
+		}
+		every_living_character = {
+			limit = { faith = faith:maturidi }
+			set_character_faith = faith:ashari
+		}
+	}
+}

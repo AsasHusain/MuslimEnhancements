@@ -1,0 +1,275 @@
+﻿## Unique traits
+me_hidden_imam = {	
+	category = fame
+	icon = "hidden_imam.dds"
+
+	shown_in_ruler_designer = no
+
+	track = {
+		50 = {
+			diplomacy = 1
+			monthly_piety_gain_mult = 0.1
+			same_faith_opinion = 10
+			#custom_tooltip = me_become_ismaili_caliph_tooltip
+		}
+		100 = {
+			diplomacy = 2
+			monthly_piety_gain_mult = 0.1
+			same_faith_opinion = 10
+			#custom_tooltip = me_become_ismaili_mahdi_tooltip
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_me_hidden_imam_desc
+			}
+			desc = trait_me_hidden_imam_character_desc
+		}
+	}
+}
+
+##
+
+ME_missionary = {
+	category = lifestyle
+	icon = "ME_missionary_base.dds"
+
+	# Modifiers
+	learning = 1
+	monthly_piety_gain_mult = 0.05
+	same_faith_opinion = 5
+	zealot_opinion = 5
+	
+	culture_modifier = {
+		parameter = prowess_from_religious_traits
+		prowess = 1
+	}
+	culture_modifier = {
+		parameter = build_bonuses_on_religious_traits
+		church_holding_build_gold_cost = -0.05
+		church_holding_holding_build_gold_cost = -0.05
+	}
+	
+	track = {
+		50 = {
+			learning = 1
+			monthly_piety_gain_mult = 0.1
+			same_faith_opinion = 5
+			zealot_opinion = 5
+			culture_modifier = {
+				parameter = prowess_from_religious_traits
+				prowess = 1
+			}
+
+			culture_modifier = {
+				parameter = build_bonuses_on_religious_traits
+				church_holding_build_gold_cost = -0.05
+				church_holding_holding_build_gold_cost = -0.05
+			}
+		}
+		100 = {
+			learning = 2
+			monthly_piety_gain_mult = 0.15
+			same_faith_opinion = 5
+			zealot_opinion = 5
+			culture_modifier = {
+				parameter = prowess_from_religious_traits
+				prowess = 1
+			}
+			culture_modifier = {
+				parameter = build_bonuses_on_religious_traits
+				church_holding_build_gold_cost = -0.05
+				church_holding_holding_build_gold_cost = -0.05
+			}
+		}
+	}
+	
+	ruler_designer_cost = 25
+	shown_in_ruler_designer = yes
+	
+	
+	# AI Values
+	ai_zeal = 30
+
+	# Loc
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_ME_missionary
+			}
+			#Renowned Da'i
+			triggered_desc = {
+				trigger = {
+					is_male = yes
+					faith = { religion_tag = islam_religion }
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 100
+					}
+				}
+				desc = trait_ME_missionary_3_dai
+			}
+			#Renowned Da'iyah
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+					faith = { religion_tag = islam_religion }
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 100
+					}
+				}
+				desc = trait_ME_missionary_3_daiyah
+			}
+			#Renowned Missionary
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 100
+					}
+				}
+				desc = trait_ME_missionary_3
+			}
+			#Da'i
+			triggered_desc = {
+				trigger = {
+					is_male = yes
+					faith = { religion_tag = islam_religion }
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 50
+					}
+				}
+				desc = trait_ME_missionary_2_dai
+			}
+			#Da'iyah
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+					faith = { religion_tag = islam_religion }
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 50
+					}
+				}
+				desc = trait_ME_missionary_2_daiyah
+			}
+			#Missionary
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 50
+					}
+				}
+				desc = trait_ME_missionary_2
+			}
+			#Amateur Da'i
+			triggered_desc = {
+				trigger = {
+					is_male = yes
+					faith = { religion_tag = islam_religion }
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value < 50
+					}
+				}
+				desc = trait_ME_missionary_1_dai
+			}
+			#Amateur Da'iyah
+			triggered_desc = {
+				trigger = {
+					is_female = yes
+					faith = { religion_tag = islam_religion }
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value < 50
+					}
+				}
+				desc = trait_ME_missionary_1_daiyah
+			}
+			#Amateur Missionary
+			triggered_desc = {
+				trigger = {
+					is_male = yes
+					exists = this
+					has_trait_xp = {
+						trait = ME_missionary
+						value < 50
+					}
+				}
+				desc = trait_ME_missionary_1
+			}
+			desc = trait_ME_missionary
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_ME_missionary_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 100
+					}
+				}
+				desc = trait_ME_missionary_3_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = ME_missionary
+						value >= 50
+					}
+				}
+				desc = trait_ME_missionary_2_character_desc
+			}
+			desc = trait_ME_missionary_1_character_desc
+		}
+	}
+
+	compatibility = {
+		whole_of_body = @pos_compat_medium
+		scholar = @pos_compat_medium
+		theologian = @pos_compat_medium
+		lifestyle_gardener = @pos_compat_medium
+		intellect_good_1 = @pos_compat_low
+		intellect_good_2 = @pos_compat_low
+		intellect_good_3 = @pos_compat_low
+		pensive = @pos_compat_low
+		shrewd = @pos_compat_low
+		diligent = @pos_compat_low
+		lazy = @neg_compat_low
+		intellect_bad_1 = @neg_compat_low
+		intellect_bad_2 = @neg_compat_low
+		intellect_bad_3 = @neg_compat_low
+		zealous = @pos_compat_low
+		cynical = @neg_compat_low
+	}
+}

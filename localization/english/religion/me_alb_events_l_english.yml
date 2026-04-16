@@ -1,0 +1,79 @@
+﻿l_english:
+ #Main Event
+ alb_cm.0001.t:0 "Effects of The Fitnah and the Schism"
+ alb_cm.0001.desc.intro:0 "Ever since the First Fitnah, the first Muslim civil war, the Muslims have been divided upon who the true successors of Prophet Muhammad and the rightful leaders of the Muslims are, the narratives of what happened to cause this succession problem differs too greatly between sects, it is the root of many sectarian conflicts, it is a schism that can never be mended.\n\nWhat can be mended however, is the relations between Muslims, this Faith was created as a compromise, as each group believes that the Prophet and those close to him backed their claims instead of that of others.\n\nThis faith is not meant to be played, only seen and observed as it is merely symbolic." 
+ alb_cm.0001.desc.main:0 ""
+ alb_cm.0001.desc.shia:0 ""
+ alb_cm.0001.a:0 "Convert to an Islamic Faith"
+ alb_cm.0001.tt.showlist:0 "Sends you to a list of Islamic faiths to choose from."
+ alb_cm.0001.b:0 "Convert to the Faith of your capital"
+ alb_cm.0001.c:0 "Kill off your Character"
+ 
+ #Main List
+ alb_cm.0002.t:0 "Islamic Faiths"
+ alb_cm.0002.desc:0 "Faiths are in this list are grouped based on the Islamic Succession doctrine.\n\nIn the game, Ahl al-Sunnah are the largest group, followed by the Muhakkima and Shi'at 'Ali.\nIn modern times, Sunnis have remained the largest, while the Shi'ites became the second-largest."
+ alb_cm.0002.a:0 "Ahl al-Sunnah"
+ alb_cm.0002.tt.sunni:0 "Sends you to a list of Sunni faiths to choose from"
+ alb_cm.0002.b:0 "Shi'at 'Ali"
+ alb_cm.0002.tt.shia:0 "Sends you to a list of Shia faiths to choose from"
+ alb_cm.0002.c:0 "Batriya"
+ alb_cm.0002.tt.batriya:0 "Sends you to a list of Batriya faiths to choose from"
+ alb_cm.0002.d:0 "Muhakkima"
+ alb_cm.0002.tt.muhakkima:0 "Sends you to a list of Muhakkima faiths to choose from"
+ alb_cm.0002.e:0 "Zandaqa"
+ alb_cm.0002.tt.zandaqa:0 "Sends you to a list of Zandaqa faiths to choose from"
+ alb_cm.0002.f:0 "Ghulat"
+ alb_cm.0002.tt.ghulat:0 "Sends you to a list of Ghulat faiths to choose from"
+ alb_cm.0002.g:0 "Return to Previous Options"
+ alb_cm.0002.tt.mainev:0 "Sends you back to the previous page."
+ 
+ #Sunni List
+ alb_cm.0003.t:0 "Sunni Faiths"
+ alb_cm.0003.desc:0 "Sunni Islam is the largest branch of Islam, its name commes from the word Sunnah, refering to the tradition of Prophet Muhammad, they are refered to as 'Ahl as-Sunnah wal-Jama'ah' which means in Arabic 'The People of the Tradition and the Community'.\n\nAhl al-Sunnah believe that Prophet Muhammad's successors are the 'Four Rightly Guided Caliphs': Abu Bakr, Umar, Uthman, and Ali.\nThey also believe that one does not need to be a decendant of the Prophet to be a Caliph."
+ alb_cm.0003.a:0 "Sunnism"
+ alb_cm.0003.b:0 "Muwalladism"
+ alb_cm.0003.c:0 "Maturidism"
+ alb_cm.0003.d:0 "Almohadism"
+ 
+ #Shia List
+ alb_cm.0004.t:0 "Shi'a Faiths"
+ alb_cm.0004.desc:0 "Shi'a Islam is the second-largest branch of islam, its name comes from the word 'Shi'at 'Ali' which means 'The Party of Ali' in Arabic\n\nShi'a Muslims believe that Prophet Muhammad apointed Ali ibn Abi Talib as his successor, but he was prevented from taking succession by the Prophets other companions\nThey also believe that in order for someone to be a Caliph, they must be a decendant of the Prophet."
+ alb_cm.0004.a:0 "Isma'ilism"
+ alb_cm.0004.b:0 "Nizarism"
+ alb_cm.0004.c:0 "Zayidism"
+ alb_cm.0004.d:0 "Ithna 'Asharism"
+ alb_cm.0004.e:0 "Hafizism"
+ 
+ #Batriya List
+ alb_cm.0005.t:0 "Batriya Faiths"
+ alb_cm.0005.desc:0 "al-Batriyya is a Shi'ite term given to deviant Shi'a sects that did not view Abu Bakr, Umar, or Uthman as disbelievers.\n\nHistorically, it was used as to refer to a subsect of Zayidis but was also used as a derogatory term against Zayidi Shi'ites."
+ alb_cm.0005.a:0 "Salihism"
+ 
+ #Muhakkima list
+ alb_cm.0006.t:0 "Muhakkima Faiths"
+ ##I dont know if the Muhakkima in the game refer to the same group in real life or is simply a term for the kharjite succession, I nontheless put the groups description.
+ alb_cm.0006.desc:0 "Faith, according to the Muḥakkima, is simply speech, actions, and obligations, and if someone was to abandon their obligations, then they would have existed the fold of Islam.\nThey believe that Ali ibn Abi Talib abandoned his obligation when he fought in the First Fitna, and has therefore become a disbeliever and unfit to lead the Muslims\n\nThey get their name from their slogan 'La Hukma illa li'llah' which means 'Judgement belongs to God alone'."
+ alb_cm.0006.a:0 "Ibadism"
+ alb_cm.0006.b:0 "Wahbiya"
+ alb_cm.0006.c:0 "Nukkarism"
+ alb_cm.0006.d:0 "Azraqism"
+ alb_cm.0006.e:0 "Najdatism"
+ alb_cm.0006.f:0 "Sufrism"
+ 
+ #Zandaqa List
+ alb_cm.0007.t:0 "Zandaqa Faiths"
+ alb_cm.0007.desc:0 "The Zanādiqa are individuals who hold views or follow practices that are contrary to central Islamic practices.\nZandaqa is usually translated as 'heresy' and is often used to emphasise the seriousness of the religious error made by the 'Zindiq'.\n\nThe term was originally used to refer to followers of the $manichean$ faith but soon came to apply to Muslims who concealed their devient beliefs."
+ alb_cm.0007.a:0 "Mu'tazilism"
+ alb_cm.0007.b:0 "Qur'anism"
+ alb_cm.0007.c:0 "Nazzamism"
+ alb_cm.0007.d:0 "Barghawata"
+ 
+ #Ghulat list
+ alb_cm.0008.t:0 "Ghulat Faiths"
+ alb_cm.0008.desc:0 "al-Ghulāt were a branch of early Shi'a Muslims who despite their sometimes significant differences shared a number of common ideas.\n\nThe term Ghulat comes from the word 'ghulu' which means to exaggerate, they were named as such by Sunni and Shi'a Muslims for their exaggerated veneration of the Prophet and his family."
+ alb_cm.0008.a:0 "Qarmatianism"
+ alb_cm.0008.b:0 "Ikhtilafism"
+ alb_cm.0008.c:0 "Alawism"
+ alb_cm.0008.d:0 "Ishaaqiya"
+ alb_cm.0008.e:0 "Alevism"
+ alb_cm.0008.f:0 "Druze"

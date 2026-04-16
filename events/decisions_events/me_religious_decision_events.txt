@@ -1,0 +1,1479 @@
+﻿
+namespace = me_religious_decisions
+
+# 0001 - Mend the Ibadi Schism
+# 0003 - Hire a Hafidh
+# 0004 - Hire an Arabic Linguist
+# 0005 - Restoring The Imamate (Ibadi/Wahbi/Nukkari)
+
+
+##################################################
+# Unify the Ibadi Leadership
+##################################################
+
+me_religious_decisions.0001 = {
+	type = character_event
+	title = me_religious_decisions.0001.t
+	desc = me_religious_decisions.0001.desc
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_faith_conversion"
+		mend_the_ibadi_schism_scripted_effect = yes
+	}
+
+	option = {
+		name = me_religious_decisions.0001.a
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				faith.religion = faith:ibadi.religion
+			}
+			trigger_event = me_religious_decisions.0002 # Notification.
+		}
+	}
+}
+
+# Players notified.
+me_religious_decisions.0002 = {
+	type = character_event
+	title = me_religious_decisions.0001.t
+	desc = {
+		first_valid = {
+			# Ibadi-Wahbi Reaction
+			triggered_desc = {
+				trigger = {
+					root.faith = {
+						OR = {
+							faith:ibadi
+							faith:wahbiya
+						}
+					}
+				}
+				desc = me_religious_decisions.0002.desc.ibadi
+			}
+			#Every other Muslim
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						root.faith = {
+							OR = {
+								faith:ibadi
+								faith:wahbiya
+							}
+						}
+					}
+
+				}
+				desc = me_religious_decisions.0002.desc.other
+			}
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		#Rejoice! Musak! (wtf does muzak mean?)
+		if = {
+			limit = {
+				faith = { religion_tag = islam_religion }
+			}
+			play_music_cue = "mx_cue_faith_conversion"
+		}
+		#Woe! Muzak!
+		if = {
+			limit = {
+				faith = { religion_tag = christianity_religion }
+			}
+			play_music_cue = "mx_cue_crusade_starts"
+		}
+		#Probably trouble? Muzak!
+		else = { play_music_cue = "mx_cue_combat_2" }
+	}
+
+	option = {
+		name = me_religious_decisions.0002.a
+		trigger = {
+			root.faith = {
+				OR = {
+					faith:ibadi
+					faith:wahbiya
+				}
+			}
+		}
+	}
+	option = {
+		name = me_religious_decisions.0002.b
+		trigger = {
+			NOT = {
+				root.faith = {
+					OR = {
+						faith:ibadi
+						faith:wahbiya
+					}
+				}
+			}
+		}
+	}
+}
+
+
+##################################################
+# Hire a Hafidh
+##################################################
+
+scripted_trigger find_hafidh_basic_requirements_trigger = {
+	is_adult = yes
+	is_imprisoned = no
+	is_alive = yes # Because apparently there can be dead characters in the pool (remove when fixed)
+	is_claimant = no # We don't want recruiting tutors to be a cheap way of getting claimants
+	learning >= low_skill_rating
+	has_trait = hafidh
+	AND = {
+		faith.religion = religion:islam_religion
+		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+		NOT = { faith = faith:druze }
+	}
+}
+
+scripted_trigger find_hafidh_excellent_skill_tutor_trigger = {
+	find_hafidh_basic_requirements_trigger = yes
+	learning >= high_skill_rating # 15
+}
+
+scripted_trigger find_hafidh_high_skill_tutor_trigger = {
+	find_hafidh_basic_requirements_trigger = yes
+	#Empire/kingdom
+	trigger_if = {
+		limit = {
+			root = { highest_held_title_tier >= tier_kingdom }
+		}
+		learning <= very_high_skill_rating # 18
+		learning >= decent_skill_rating # 12
+	}
+	#Duchy/county
+	trigger_else = {
+		learning <= high_skill_rating  # 15
+		learning >= medium_skill_rating  # 10
+	}
+}
+
+scripted_trigger find_hafidh_low_skill_tutor_trigger = {
+	find_hafidh_basic_requirements_trigger = yes
+	#Empire/kingdom
+	trigger_if = {
+		limit = {
+			root = { highest_held_title_tier >= tier_kingdom }
+		}
+		learning <= decent_skill_rating # 12
+		learning >= mediocre_skill_rating # 8
+	}
+	#Duchy/county
+	trigger_else = {
+		learning <= medium_skill_rating # 10
+		learning >= low_skill_rating # 5
+	}
+}
+
+scripted_trigger find_hafidh_low_skill_tutor_light_trigger = {
+	find_hafidh_basic_requirements_trigger = yes
+	learning >= medium_skill_rating # 10
+}
+
+#Ruler picking hafidh court tutor
+me_religious_decisions.0003 = {
+	type = character_event
+	title = me_religious_decisions.0003.t
+	desc = me_religious_decisions.0003.decision.desc
+	theme = education
+	left_portrait = scope:high_skill_option
+	right_portrait = scope:low_skill_option
+	lower_right_portrait = scope:excellent_skill_option
+
+	trigger = { exists = capital_province } #If I lost it before I got this event, I shouldn't get a tutor
+	
+
+	immediate = {
+		hidden_effect = {
+			#Find some appropriate options
+
+			if = { #Performance heavy option finding is only for players
+				limit = { is_ai = no }
+
+				#EXCELLENT SKILL CHARACTER (for learned rulers)
+				if = {
+					limit = {
+						OR = {
+							has_learning_lifestyle_trait_trigger = yes
+							learning >= high_skill_rating
+						}
+					}
+					random_pool_character = {
+						province = capital_province
+						limit = {
+							find_hafidh_excellent_skill_tutor_trigger = yes
+							has_trait = intellect_good
+							knows_language = language_arabic
+						}
+						alternative_limit = {
+							find_hafidh_excellent_skill_tutor_trigger = yes
+							knows_language = language_arabic
+						}
+						alternative_limit = { find_hafidh_excellent_skill_tutor_trigger = yes }
+						weight = {
+							base = 1
+							modifier = {
+								faith = root.faith
+								factor = 10
+							}
+							modifier = {
+								knows_language = language_arabic
+								factor = 10
+							}
+							modifier = {
+								has_trait = intellect_good
+								factor = 10
+							}
+							modifier = {
+								has_trait = zealous
+								factor = 10
+							}
+							modifier = {
+								has_trait = shrewd
+								factor = 10
+							}
+							modifier = {
+								has_trait = theologian
+								factor = 10
+							}
+							modifier = {
+								has_trait = scholar
+								factor = 10
+							}
+						}
+						save_scope_as = excellent_skill_option
+						# Knows the Arabic language
+						if = {
+							limit = {
+								NOT = { knows_language = language_arabic }
+							}
+							learn_language_of_culture = culture:bedouin
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_trait_xp = {
+										trait = hafidh
+										value >= 30
+									}
+								}
+							}
+							add_trait_xp = {
+				                trait = hafidh
+				                value = {
+				                    integer_range = {
+				                        min = 30
+				                        max = 100
+				                    }
+				                }
+				            }
+						}
+					}
+					#Backup excellent generation
+					if = {
+						limit = { NOT = { exists = scope:excellent_skill_option } }
+						create_character = {
+							location = root.capital_province
+							template = hafidh_excellent_character_template
+							save_scope_as = excellent_skill_option
+						}
+					}
+
+					# Ensure some ability of understanding the Qur'an
+					scope:excellent_skill_option ?= {
+						if = {
+							limit = {
+								NOT = { has_trait = hafidh }
+							}
+							add_trait = hafidh
+							add_trait_xp = {
+								trait = hafidh
+								value = {
+									65
+									100
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								has_trait_xp = {
+									trait = hafidh
+									value <= 50
+								}
+							}
+							add_trait_xp = {
+								trait = hafidh
+								value = {
+									30
+									60
+								}
+							}
+						}
+			}
+				}
+
+				#HIGH-SKILL CHARACTER
+				random_pool_character = {
+					province = capital_province
+					limit = {
+						find_hafidh_high_skill_tutor_trigger = yes
+						has_trait = hafidh
+						NOT = { scope:excellent_skill_option ?= this }
+					}
+					alternative_limit = {
+						find_hafidh_high_skill_tutor_trigger = yes
+						NOT = { scope:excellent_skill_option ?= this }
+					}
+					weight = {
+						base = 1
+						modifier = {
+							faith = root.faith
+							factor = 10
+						}
+						modifier = {
+							knows_language = language_arabic
+							factor = 10
+						}
+						modifier = {
+							has_trait = intellect_good
+							factor = 10
+						}
+						modifier = {
+							has_trait = zealous
+							factor = 10
+						}
+						modifier = {
+							has_trait = shrewd
+							factor = 10
+						}
+						modifier = {
+							has_trait = theologian
+							factor = 10
+						}
+						modifier = {
+							has_trait = scholar
+							factor = 10
+						}
+					}
+					save_scope_as = high_skill_option
+				}
+
+				#Backup high generation
+				if = {
+					limit = { NOT = { exists = scope:high_skill_option } }
+					create_character = {
+						location = root.capital_province
+						template = hafidh_high_character_template
+						save_scope_as = high_skill_option
+					}
+				}
+
+				# Ensure some ability of understanding the Qur'an
+				scope:high_skill_option ?= {
+					if = {
+						limit = {
+							NOT = { has_trait = hafidh }
+						}
+						add_trait = hafidh
+						add_trait_xp = {
+							trait = hafidh
+							value = {
+								30
+								65
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = hafidh
+								value <= 30
+							}
+						}
+						add_trait_xp = {
+							trait = hafidh
+							value = {
+								10
+								40
+							}
+						}
+					}
+				}
+
+				#LOW-MEDIUM-SKILL CHARACTER
+				random_pool_character = {
+					province = root.capital_province
+					limit = { 
+						find_hafidh_low_skill_tutor_trigger = yes
+						has_trait = hafidh
+						NOT = { scope:excellent_skill_option ?= this }
+						NOT = { scope:high_skill_option ?= this }
+					}
+					alternative_limit = {
+						find_hafidh_low_skill_tutor_trigger = yes
+						NOT = { scope:excellent_skill_option ?= this }
+						NOT = { scope:high_skill_option ?= this }
+					}
+					weight = {
+						base = 1
+						modifier = {
+							faith = root.faith
+							factor = 10
+						}
+					}
+					save_scope_as = low_skill_option
+				}
+			}
+			else = { #Ai get someone simple
+				random_pool_character = {
+					province = root.capital_province
+					limit = { find_hafidh_low_skill_tutor_light_trigger = yes }
+					weight = {
+						base = 1
+						modifier = {
+							faith = root.faith
+							factor = 10
+						}
+					}
+					save_scope_as = low_skill_option
+				}
+			}
+			
+			#Backup low generation
+			if = {
+				limit = { NOT = { exists = scope:low_skill_option } }
+				create_character = {
+					location = root.capital_province
+					template = hafidh_low_character_template
+					save_scope_as = low_skill_option
+				}
+			}
+
+			# Ensure ability of understanding the Qur'an
+			scope:low_skill_option ?= {
+				if = {
+					limit = {
+						NOT = { has_trait = hafidh }
+					}
+					random = {
+						chance = 50
+						add_trait = hafidh
+						add_trait_xp = {
+							trait = hafidh
+							value = {
+								10
+								30
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_trait_xp = {
+							trait = hafidh
+							value <= 5
+						}
+					}
+					add_trait_xp = {
+						trait = hafidh
+						value = {
+							10
+							45
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Amazing skill
+	option = {
+		trigger = {
+			exists = scope:excellent_skill_option
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = me_religious_decisions.0003.d
+		trait = scholar
+		skill = learning
+
+		custom_tooltip = me_religious_decisions.0003.d.aptitude
+		pay_short_term_gold = {
+			target = scope:excellent_skill_option
+			gold = medium_gold_value
+		}
+		custom_tooltip = me_religious_decisions.0003.a.tt
+		
+		add_courtier = scope:excellent_skill_option
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+				has_royal_court = yes
+			}
+			appoint_court_position = {
+				recipient = scope:excellent_skill_option
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = scope:excellent_skill_option
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+
+		ai_chance = {
+			factor = 500
+			modifier = {
+				short_term_gold < medium_gold_value
+				factor = 0
+			}
+		}
+	}
+
+	#High skill
+	option = {
+		trigger = {
+			is_landed = yes #extra check to make sure they haven't lost their status
+			exists = scope:high_skill_option #Doesn't exists for AI
+		}
+		name = me_religious_decisions.0003.a
+
+		custom_tooltip = me_religious_decisions.0003.a.aptitude
+		pay_short_term_gold = {
+			target = scope:high_skill_option
+			gold = medium_gold_value
+		}
+		custom_tooltip = me_religious_decisions.0003.a.tt
+
+		add_courtier = scope:high_skill_option
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+				has_royal_court = yes
+			}
+			appoint_court_position = {
+				recipient = scope:high_skill_option
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+				has_royal_court = yes
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = scope:high_skill_option
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				short_term_gold < medium_gold_value
+				factor = 0
+			}
+		}
+	}
+
+	#Low
+	option = {
+		trigger = {
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = me_religious_decisions.0003.b
+
+		custom_tooltip = me_religious_decisions.0003.b.aptitude
+		if = {
+			limit = {
+				OR = {
+					is_ai = no
+					short_term_gold >= minor_gold_value #Because AI would never have enough money
+				}
+			}
+			pay_short_term_gold = {
+				target = scope:low_skill_option
+				gold = minor_gold_value
+			}
+		}
+		custom_tooltip = me_religious_decisions.0003.a.tt
+
+		add_courtier = scope:low_skill_option
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+				has_royal_court = yes
+			}
+			appoint_court_position = {
+				recipient = scope:low_skill_option
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = scope:low_skill_option
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	#None...
+	option = {
+		name = {
+			trigger = {
+				NOR = {
+					exists = scope:excellent_skill_option
+				}
+			}
+			text = me_religious_decisions.0003.c.two
+		}
+		name = {
+			trigger = {
+				OR = {
+					exists = scope:excellent_skill_option
+				}
+			}
+			text = me_religious_decisions.0003.c.more
+		}
+		custom_tooltip = me_religious_decisions.0003.c.tt
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#True Hafidh shows up - Madrasa Teacher
+me_religious_decisions.0004 = {
+	type = character_event
+	title = me_religious_decisions.0004.t
+	desc = me_religious_decisions.0004.decision.desc
+	theme = education
+	right_portrait = scope:high_value_hafidh
+
+	trigger = {
+		exists = capital_province #If I lost it before I got this event, I shouldn't get a tutor
+		NOT = { has_variable = had_event_high_value_hafidh }
+	}
+	
+
+	immediate = {
+		set_variable = { # To make sure a player doesn't get high learning characters too often
+			name = had_event_high_value_hafidh
+			value = yes
+			days = 1825
+		}
+	
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				template = hafidh_excellent_character_template
+				save_scope_as = high_value_hafidh
+			}
+			scope:high_value_hafidh ?= {
+				add_trait = hafidh
+				add_trait_xp = {
+					trait = hafidh
+					value = 100
+				}
+			}
+		}
+	}
+
+	#Recruit them
+	option = {
+		trigger = {
+			exists = scope:high_value_hafidh
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = me_religious_decisions.0004.a
+
+		custom_tooltip = me_religious_decisions.0004.a.aptitude
+		remove_short_term_gold = major_gold_value
+		custom_tooltip = me_religious_decisions.0003.a.tt
+		
+		root.capital_county = {
+			add_county_modifier = {
+				modifier = me_funded_madrasas_modifier
+				years = 5
+			}
+		}
+		
+		add_courtier = scope:high_value_hafidh
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+				has_royal_court = yes
+			}
+			appoint_court_position = {
+				recipient = scope:high_value_hafidh
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = scope:high_value_hafidh
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+
+		ai_chance = {
+			factor = 500
+			modifier = {
+				short_term_gold < major_gold_value
+				factor = 0
+			}
+		}
+	}
+
+	#I want a cheaper alternative
+	option = {
+		name = me_religious_decisions.0004.b
+		custom_tooltip = me_religious_decisions.0004.b.tt
+
+		trigger_event = {
+			id = me_religious_decisions.0003
+			days = 3
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#I don't want a Hafidh anymore
+	option = {
+		name = me_religious_decisions.0004.c
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#True Hafidh shows up - Wandering Scholar
+me_religious_decisions.0005 = {
+	type = character_event
+	title = me_religious_decisions.0005.t
+	desc = me_religious_decisions.0005.decision.desc
+	theme = education
+	right_portrait = scope:high_value_hafidh
+
+	trigger = {
+		exists = capital_province #If I lost it before I got this event, I shouldn't get a tutor
+		NOT = { has_variable = had_event_high_value_hafidh }
+	}
+	
+
+	immediate = {
+		set_variable = { # To make sure a player doesn't get high learning characters too often
+			name = had_event_high_value_hafidh
+			value = yes
+			days = 1825
+		}
+	
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				template = hafidh_excellent_character_template
+				save_scope_as = high_value_hafidh
+			}
+			scope:high_value_hafidh ?= {
+				add_trait = hafidh
+				add_trait_xp = {
+					trait = hafidh
+					value = 100
+				}
+			}
+		}
+	}
+
+	#Recruit them
+	option = {
+		trigger = {
+			exists = scope:high_value_hafidh
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = me_religious_decisions.0005.a
+
+		custom_tooltip = me_religious_decisions.0004.a.aptitude
+		pay_short_term_gold = {
+			target = scope:high_value_hafidh
+			gold = major_gold_value
+		}
+		custom_tooltip = me_religious_decisions.0003.a.tt
+		
+		add_courtier = scope:high_value_hafidh
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+				has_royal_court = yes
+			}
+			appoint_court_position = {
+				recipient = scope:high_value_hafidh
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = scope:high_value_hafidh
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+
+		ai_chance = {
+			factor = 500
+			modifier = {
+				short_term_gold < major_gold_value
+				factor = 0
+			}
+		}
+	}
+
+	#Haggle with them
+	option = {
+		name = me_religious_decisions.0005.b
+		custom_tooltip = me_religious_decisions.0004.a.aptitude
+
+		duel = {
+			skills = { stewardship diplomacy }
+			target = scope:high_value_hafidh
+			# They agree
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				send_interface_toast = {
+					title = me_religious_decisions.0005.b.success
+					left_icon = root
+					right_icon = scope:high_value_hafidh
+
+					pay_short_term_gold = {
+						target = scope:high_value_hafidh
+						gold = medium_gold_value
+					}
+		
+					add_courtier = scope:high_value_hafidh
+					if = {
+						limit = {
+							can_employ_court_position_type = court_tutor_court_position
+							has_royal_court = yes
+						}
+						appoint_court_position = {
+							recipient = scope:high_value_hafidh
+							court_position = court_tutor_court_position
+						}
+					}
+					else_if = {
+						limit = {
+							exists = court_position:court_tutor_court_position
+						}
+						court_position:court_tutor_court_position = {
+							add_opinion = {
+								target = root
+								modifier = disappointed_opinion
+								opinion = -5
+							}
+						}
+						replace_court_position = {
+							recipient = scope:high_value_hafidh
+							holder = court_position:court_tutor_court_position
+							court_position = court_tutor_court_position
+						}
+					}
+				}
+			}
+			# They refuse
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				send_interface_toast = {
+					title = me_religious_decisions.0005.b.failure
+					left_icon = root
+					right_icon = scope:high_value_hafidh
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 500
+			modifier = {
+				short_term_gold < major_gold_value
+				factor = 0
+			}
+		}
+	}
+
+	#I want a cheaper alternative
+	option = {
+		name = me_religious_decisions.0004.b
+		custom_tooltip = me_religious_decisions.0004.b.tt
+
+		trigger_event = {
+			id = me_religious_decisions.0003
+			days = 3
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#I don't want a Hafidh anymore
+	option = {
+		name = me_religious_decisions.0004.c
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#True Hafidh shows up - Zealous Scholar
+me_religious_decisions.0006 = {
+	type = character_event
+	title = me_religious_decisions.0006.t
+	desc = me_religious_decisions.0006.decision.desc
+	theme = education
+	right_portrait = {
+		character = scope:high_value_hafidh
+		animation = personality_zealous
+	}
+
+	trigger = {
+		exists = capital_province #If I lost it before I got this event, I shouldn't get a tutor
+		NOT = { has_variable = had_event_high_value_hafidh }
+		piety_level >= high_piety_level
+	}
+	
+
+	immediate = {
+		set_variable = { # To make sure a player doesn't get high learning characters too often
+			name = had_event_high_value_hafidh
+			value = yes
+			days = 1825
+		}
+	
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				template = hafidh_excellent_character_template
+				save_scope_as = high_value_hafidh
+			}
+			scope:high_value_hafidh ?= {
+				add_trait = zealous
+				add_trait = hafidh
+				add_trait_xp = {
+					trait = hafidh
+					value = 100
+				}
+			}
+		}
+	}
+
+	#Recruit them
+	option = {
+		trigger = {
+			exists = scope:high_value_hafidh
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = me_religious_decisions.0006.a
+
+		custom_tooltip = me_religious_decisions.0004.a.aptitude
+		pay_short_term_gold = {
+			target = scope:excellent_skill_option
+			gold = minor_gold_value
+		}
+		custom_tooltip = me_religious_decisions.0003.a.tt
+		
+		add_courtier = scope:high_value_hafidh
+		if = {
+			limit = {
+				can_employ_court_position_type = court_tutor_court_position
+				has_royal_court = yes
+			}
+			appoint_court_position = {
+				recipient = scope:high_value_hafidh
+				court_position = court_tutor_court_position
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_position:court_tutor_court_position
+			}
+			court_position:court_tutor_court_position = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -5
+				}
+			}
+			replace_court_position = {
+				recipient = scope:high_value_hafidh
+				holder = court_position:court_tutor_court_position
+				court_position = court_tutor_court_position
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	#I want another alternative
+	option = {
+		name = me_religious_decisions.0006.b
+		custom_tooltip = me_religious_decisions.0004.b.tt
+
+		trigger_event = {
+			id = me_religious_decisions.0003
+			days = 3
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#I don't want a Hafidh anymore
+	option = {
+		name = me_religious_decisions.0004.c
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			
+		}
+	}
+}
+
+
+##################################################
+# Hire an Arabic Linguist
+##################################################
+
+me_religious_decisions.0007 = {
+	type = character_event
+	title = me_religious_decisions.0007.t
+	desc = me_religious_decisions.0007.desc
+	theme = education
+	left_portrait = scope:good_linguist
+	lower_left_portrait = scope:cheap_linguist
+	right_portrait = scope:medium_linguist
+	lower_right_portrait = scope:scholarly_linguist
+	override_background = { reference = throne_room }
+
+	immediate = {
+		### Save cultures and languages
+		# Find 1st culture that speaks Arabic natively
+		random_culture_global = {
+			limit = {
+				exists = culture_head
+				has_cultural_pillar = language_arabic
+			}
+			save_scope_as = ling_cul_1
+		}
+		# Save liege as example to fetch faiths if relevant
+		if = { 
+			limit = {
+				exists = scope:language_scheme_type
+				liege = { has_court_language_of_culture = root.liege.culture }
+			}
+			liege = { save_scope_as = ling_cul_1_ruler }
+		}
+		# Otherwise find random cul_1 ruler
+		else = {
+			linguist_random_realm_effect = { CULTURE = ling_cul_1 }
+		}
+		# Find 2nd culture that speaks target language natively
+		if = {
+			limit = { 
+				any_culture_global = {
+					exists = culture_head
+					has_cultural_pillar = language_arabic
+					NOT = { THIS = scope:ling_cul_1 }
+				}
+			}
+			random_culture_global = { 
+				limit = {
+					exists = culture_head
+					has_cultural_pillar = language_arabic
+					NOT = { THIS = scope:ling_cul_1 }
+				}
+				save_scope_as = ling_cul_2
+			}
+		}
+		# If none, duplicate 1st
+		else = {
+			scope:ling_cul_1 = { save_scope_as = ling_cul_2 }
+		}
+		# Save random ruler of cul 2 to find faith
+		linguist_random_realm_effect = { CULTURE = ling_cul_2 }
+		# Save own culture
+		culture = { save_scope_as = ling_cul_3 }
+		# Bonus languages good linguists may know in addition to root and target
+		linguist_bonus_culture_effect = { CULTURE = ling_cul_1 }
+		linguist_bonus_culture_effect = { CULTURE = ling_cul_2 }
+		linguist_bonus_culture_effect = { CULTURE = ling_cul_3 }
+		#### Create Linguists
+		hidden_effect = {
+			# Poor Linguist
+			if = {
+				limit = { has_trait = greedy }
+				create_character = {
+					dynasty = none
+					template = court_linguist_arabic_cheap_template
+					location = root.capital_province
+					save_scope_as = cheap_linguist
+				}
+			}
+			# Average Linguist
+			create_character = {
+				dynasty = none
+				template = court_linguist_arabic_medium_template
+				location = root.capital_province
+				save_scope_as = medium_linguist
+			}
+			# Good Linguist
+			create_character = {
+				dynasty = none
+				template = court_linguist_arabic_good_template
+				culture = scope:ling_cul_2
+				faith = scope:ling_cul_2_ruler.faith
+				location = root.capital_province
+				save_scope_as = good_linguist
+			}
+			# Scholarly Linguist
+			if = {
+				limit = { has_trait = scholar }
+				create_character = {
+					dynasty = none
+					template = court_linguist_arabic_good_template
+					culture = scope:ling_cul_1
+					faith = scope:ling_cul_1_ruler.faith
+					location = root.capital_province
+					trait = scholar
+					save_scope_as = scholarly_linguist
+				}
+				if = {
+					limit = {
+						exists = scope:ling_cul_2_bonus
+						NOT = {
+							scope:scholarly_linguist = { knows_language_of_culture = scope:ling_cul_2_bonus }
+						}
+					}
+					scope:scholarly_linguist = { learn_language_of_culture = scope:ling_cul_2_bonus }
+				}
+			}
+		}
+	}
+
+	# Expensive linguist, great teacher
+	option = {
+		name = me_religious_decisions.0007.a
+		pay_short_term_gold = {
+			target = scope:good_linguist
+			gold = medium_gold_value
+		}
+		learn_language_linguist_arabic_effect = { LINGUIST = scope:good_linguist }
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				short_term_gold < medium_gold_value
+				factor = 0
+			}
+		}
+	}
+	
+	# Cheaper linguist; less learning, not a good teacher
+	option = {
+		name = me_religious_decisions.0007.b
+		pay_short_term_gold = {
+			target = scope:medium_linguist
+			gold = minor_gold_value
+		}
+		learn_language_linguist_arabic_effect = { LINGUIST = scope:medium_linguist }
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				short_term_gold < minor_gold_value_check
+				factor = 0
+			}
+		}
+	}
+	
+	# I know a good tutor through scholarly circles!
+	option = {
+		name = me_religious_decisions.0007.c
+		trait = scholar
+		trigger = { has_trait = scholar }
+		learn_language_linguist_arabic_effect = { LINGUIST = scope:scholarly_linguist }
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	# I'm cheap, get me anyone who can vaguely speak my language
+	option = {
+		name = me_religious_decisions.0007.d
+		trait = greedy
+		trigger = { has_trait = greedy }
+		learn_language_linguist_arabic_effect = { LINGUIST = scope:cheap_linguist }
+		ai_chance = {
+			base = 1000
+			modifier = { # Don't do it if you can hire the cool guy
+				has_trait = scholar
+				factor = 0
+			}
+		}
+	}
+	
+	# On seconds thoughts, I won't hire a linguist at all...
+	option = {
+		name = me_religious_decisions.0007.e
+		ai_chance = {
+			base = 0
+			modifier = {
+				short_term_gold < minor_gold_value_check
+				NOR = {
+					has_trait = scholar
+					has_trait = greedy
+				}
+				add = 10
+			}
+		}
+	}
+
+	after = {
+		every_in_list = {
+			list = court_linguist_list
+			limit = {
+				NOT = { is_courtier_of = root }
+			}
+			silent_disappearance_effect = yes
+		}
+	}
+}
+
+
+##################################################
+# Restoring The Ibadi Imamate
+##################################################
+
+me_religious_decisions.0008 = {
+	type = character_event
+	title = me_religious_decisions.0008.t
+	desc = me_religious_decisions.0008.desc
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		save_scope_as = new_imam
+		play_music_cue = "mx_cue_faith_conversion"
+		me_restore_ibadi_imamate_scripted_effect = yes
+	}
+
+	option = {
+		name = me_religious_decisions.0008.a
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				faith.religion = faith:ibadi.religion
+			}
+			trigger_event = me_religious_decisions.0009 # Notification.
+		}
+	}
+}
+
+# Players notified.
+me_religious_decisions.0009 = {
+	type = character_event
+	title = me_religious_decisions.0009.t
+	desc = {
+		first_valid = {
+			# Same Faith/HoF Reaction
+			triggered_desc = {
+				trigger = {
+					root.faith.religious_head_title = scope:new_imam.faith.religious_head_title
+				}
+				desc = me_religious_decisions.0009.desc.same_faith
+			}
+			# Other Ibadi Reaction
+			triggered_desc = {
+				trigger = {
+					NOT = { root.faith.religious_head_title = scope:new_imam.faith.religious_head_title }
+					root.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+					scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				}
+				desc = me_religious_decisions.0009.desc.other_ibadi
+			}
+			#Every other Muslim
+			triggered_desc = {
+				trigger = {
+					NOT = { root.faith.religious_head_title = scope:new_imam.faith.religious_head_title }
+					OR = {
+						NOT = { root.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+						NOT = { scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+					}
+				}
+				desc = me_religious_decisions.0009.desc.other
+			}
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		#Rejoice!
+		if = {
+			limit = {
+				faith = { religion_tag = islam_religion }
+			}
+			play_music_cue = "mx_cue_faith_conversion"
+		}
+		#Woe!
+		if = {
+			limit = {
+				faith = { religion_tag = christianity_religion }
+			}
+			play_music_cue = "mx_cue_crusade_starts"
+		}
+		#Probably trouble?
+		else = { play_music_cue = "mx_cue_combat_2" }
+	}
+
+	option = {
+		name = me_religious_decisions.0009.a
+		trigger = {
+			OR = {
+				root.faith.religious_head_title = scope:new_imam.faith.religious_head_title
+				AND = {
+					root.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+					scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				}
+			}
+		}
+	}
+	option = {
+		name = me_religious_decisions.0009.b
+		trigger = {
+			NOT = { root.faith.religious_head_title = scope:new_imam.faith.religious_head_title }
+			OR = {
+				NOT = { root.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+				NOT = { scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+			}
+		}
+	}
+}

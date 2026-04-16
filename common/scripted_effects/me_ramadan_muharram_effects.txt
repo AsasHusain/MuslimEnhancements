@@ -1,0 +1,206 @@
+### Ramadan / Muharram Observance Effects ###
+#
+# The personal and patronage approach choices are stored as persistent character
+# variables. These effects translate those stored choices into active modifiers
+# — called from the Hijri daily pulse on the month-start boundary, and from the
+# decisions themselves if the holy month happens to already be in progress.
+#
+# Modifier durations:
+#   Ramadan fasting/patronage: 30 days (covers the full lunar month)
+#   Muharram mourning/patronage: 12 days (Ashura + surrounding mourning)
+#   Tatbir: 10 days (through Ashura itself)
+
+### Apply personal Ramadan fasting modifier based on stored approach ###
+me_apply_ramadan_modifier_effect = {
+	if = {
+		limit = { exists = var:me_ramadan_approach }
+		# Clear any lingering prior Ramadan modifier before applying the fresh one.
+		if = { limit = { has_character_modifier = me_ramadan_devout_fasting } remove_character_modifier = me_ramadan_devout_fasting }
+		if = { limit = { has_character_modifier = me_ramadan_casual_fasting } remove_character_modifier = me_ramadan_casual_fasting }
+		if = { limit = { has_character_modifier = me_ramadan_skipped } remove_character_modifier = me_ramadan_skipped }
+		# Devout
+		if = {
+			limit = { var:me_ramadan_approach = flag:devout }
+			add_character_modifier = {
+				modifier = me_ramadan_devout_fasting
+				days = 30
+			}
+			stress_impact = {
+				gluttonous = medium_stress_impact_gain
+				impatient = minor_stress_impact_gain
+				cynical = medium_stress_impact_gain
+				zealous = minor_stress_impact_loss
+				temperate = minor_stress_impact_loss
+			}
+		}
+		# Casual
+		else_if = {
+			limit = { var:me_ramadan_approach = flag:casual }
+			add_character_modifier = {
+				modifier = me_ramadan_casual_fasting
+				days = 30
+			}
+			stress_impact = {
+				gluttonous = minor_stress_impact_gain
+				zealous = minor_stress_impact_gain
+			}
+		}
+		# Skip
+		else_if = {
+			limit = { var:me_ramadan_approach = flag:skip }
+			add_character_modifier = {
+				modifier = me_ramadan_skipped
+				days = 30
+			}
+			stress_impact = {
+				zealous = major_stress_impact_gain
+				humble = minor_stress_impact_gain
+				cynical = minor_stress_impact_loss
+			}
+		}
+	}
+}
+
+### Apply personal Muharram mourning modifier based on stored approach ###
+me_apply_muharram_modifier_effect = {
+	if = {
+		limit = { exists = var:me_muharram_approach }
+		if = { limit = { has_character_modifier = me_muharram_deep_mourning } remove_character_modifier = me_muharram_deep_mourning }
+		if = { limit = { has_character_modifier = me_muharram_moderate_mourning } remove_character_modifier = me_muharram_moderate_mourning }
+		if = { limit = { has_character_modifier = me_muharram_tatbir } remove_character_modifier = me_muharram_tatbir }
+		if = { limit = { has_character_modifier = me_muharram_skipped } remove_character_modifier = me_muharram_skipped }
+		# Deep
+		if = {
+			limit = { var:me_muharram_approach = flag:deep }
+			add_character_modifier = {
+				modifier = me_muharram_deep_mourning
+				days = 12
+			}
+			stress_impact = {
+				impatient = medium_stress_impact_gain
+				cynical = medium_stress_impact_gain
+				callous = minor_stress_impact_gain
+				zealous = minor_stress_impact_loss
+				compassionate = minor_stress_impact_loss
+			}
+		}
+		# Moderate
+		else_if = {
+			limit = { var:me_muharram_approach = flag:moderate }
+			add_character_modifier = {
+				modifier = me_muharram_moderate_mourning
+				days = 12
+			}
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+			}
+		}
+		# Tatbir
+		else_if = {
+			limit = { var:me_muharram_approach = flag:tatbir }
+			add_character_modifier = {
+				modifier = me_muharram_tatbir
+				days = 10
+			}
+			stress_impact = {
+				cynical = medium_stress_impact_gain
+				craven = minor_stress_impact_gain
+				flagellant = medium_stress_impact_loss
+				brave = minor_stress_impact_loss
+			}
+		}
+		# Skip
+		else_if = {
+			limit = { var:me_muharram_approach = flag:skip }
+			add_character_modifier = {
+				modifier = me_muharram_skipped
+				days = 12
+			}
+			stress_impact = {
+				zealous = major_stress_impact_gain
+				compassionate = minor_stress_impact_gain
+				cynical = minor_stress_impact_loss
+			}
+		}
+	}
+}
+
+### Apply realm Ramadan patronage (character modifier + county modifiers) ###
+me_apply_ramadan_patronage_effect = {
+	if = {
+		limit = { exists = var:me_ramadan_patronage }
+		if = { limit = { has_character_modifier = me_ramadan_patronage_modest } remove_character_modifier = me_ramadan_patronage_modest }
+		if = { limit = { has_character_modifier = me_ramadan_patronage_grand } remove_character_modifier = me_ramadan_patronage_grand }
+		if = { limit = { has_character_modifier = me_ramadan_patronage_lavish } remove_character_modifier = me_ramadan_patronage_lavish }
+		# Modest
+		if = {
+			limit = { var:me_ramadan_patronage = flag:modest }
+			add_character_modifier = { modifier = me_ramadan_patronage_modest days = 30 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = { modifier = me_ramadan_iftar_modest_county days = 30 }
+			}
+			add_piety = minor_piety_gain
+		}
+		# Grand
+		else_if = {
+			limit = { var:me_ramadan_patronage = flag:grand }
+			add_character_modifier = { modifier = me_ramadan_patronage_grand days = 30 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = { modifier = me_ramadan_iftar_grand_county days = 30 }
+			}
+			add_piety = medium_piety_gain
+		}
+		# Lavish
+		else_if = {
+			limit = { var:me_ramadan_patronage = flag:lavish }
+			add_character_modifier = { modifier = me_ramadan_patronage_lavish days = 30 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = { modifier = me_ramadan_iftar_lavish_county days = 30 }
+			}
+			add_piety = major_piety_gain
+		}
+	}
+}
+
+### Apply realm Muharram patronage ###
+me_apply_muharram_patronage_effect = {
+	if = {
+		limit = { exists = var:me_muharram_patronage }
+		if = { limit = { has_character_modifier = me_muharram_patronage_modest } remove_character_modifier = me_muharram_patronage_modest }
+		if = { limit = { has_character_modifier = me_muharram_patronage_grand } remove_character_modifier = me_muharram_patronage_grand }
+		if = { limit = { has_character_modifier = me_muharram_patronage_lavish } remove_character_modifier = me_muharram_patronage_lavish }
+		# Modest
+		if = {
+			limit = { var:me_muharram_patronage = flag:modest }
+			add_character_modifier = { modifier = me_muharram_patronage_modest days = 12 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = { modifier = me_muharram_majalis_modest_county days = 12 }
+			}
+			add_piety = minor_piety_gain
+		}
+		# Grand
+		else_if = {
+			limit = { var:me_muharram_patronage = flag:grand }
+			add_character_modifier = { modifier = me_muharram_patronage_grand days = 12 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = { modifier = me_muharram_majalis_grand_county days = 12 }
+			}
+			add_piety = medium_piety_gain
+		}
+		# Lavish
+		else_if = {
+			limit = { var:me_muharram_patronage = flag:lavish }
+			add_character_modifier = { modifier = me_muharram_patronage_lavish days = 12 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = { modifier = me_muharram_majalis_lavish_county days = 12 }
+			}
+			add_piety = major_piety_gain
+		}
+	}
+}

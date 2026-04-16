@@ -1,0 +1,109 @@
+﻿me_succession_caliphal = {
+	default = me_qurashi_preference_succession_law
+	cumulative = no
+	flag = admin_law
+
+	me_qurashi_preference_succession_law = {
+		can_keep = {
+			has_realm_law = acclamation_succession_law
+			faith = {
+				religious_head = root
+				has_doctrine = doctrine_temporal_head
+				religion_tag = islam_religion
+				NOR = {
+					has_doctrine = muhammad_succession_muhakkima_doctrine
+					has_doctrine = muhammad_succession_shia_doctrine
+					has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	me_qurashi_only_succession_law = {
+		can_keep = {
+			has_realm_law = acclamation_succession_law
+			faith = {
+				religious_head = root
+				has_doctrine = doctrine_temporal_head
+				religion_tag = islam_religion
+				NOR = {
+					has_doctrine = muhammad_succession_muhakkima_doctrine
+					has_doctrine = muhammad_succession_shia_doctrine
+					has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	me_sayyid_only_succession_law = {
+		can_keep = {
+			has_realm_law = acclamation_succession_law
+			faith = {
+				religious_head = root
+				has_doctrine = doctrine_temporal_head
+				religion_tag = islam_religion
+				NOR = {
+					has_doctrine = muhammad_succession_muhakkima_doctrine
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	me_ubaydi_only_succession_law = {
+		can_keep = {
+			has_realm_law = acclamation_succession_law
+			faith = {
+				religious_head = root
+				has_doctrine = doctrine_temporal_head
+				religion_tag = islam_religion
+				NOR = {
+					has_doctrine = muhammad_succession_muhakkima_doctrine
+				}
+				has_doctrine = special_doctrine_ubaydi_trait_acceptance
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+}

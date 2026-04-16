@@ -1,0 +1,118 @@
+﻿qalawri = { # South Italy was sometines refered to as Qalawriyya by Arabic sources
+	trigger = {
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+			NOT = {
+				title:d_sicily = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = language_arabic
+			}
+		}
+		any_sub_realm_county = {
+			culture = scope:culture
+		}
+	}
+}
+
+siculo_greek = {
+	trigger = {
+		capital_county = {
+			title:d_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+		culture = {
+			AND = {
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = language_greek
+			}
+		}
+		any_sub_realm_county = {
+			title:d_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+}
+
+iqritshi = { # Arabic-Kretan culture
+	trigger = {
+		OR = {
+			capital_county = {
+				title:k_krete = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			primary_title = title:k_krete
+			primary_title = title:d_krete
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = language_arabic
+			}
+		}
+		any_sub_realm_county = {
+			title:k_krete = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+}
+
+qubrusi = { # Arabic-Cypriot culture
+	trigger = {
+		OR = {
+			capital_county = {
+				title:k_cyprus = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			primary_title = title:k_cyprus
+			primary_title = title:d_cyprus
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = language_arabic
+			}
+		}
+		any_sub_realm_county = {
+			title:k_cyprus = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+}
+
+ahwazi = { # Arabs of Ahvaz/al-Ahwaz
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_khuzestan = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			primary_title = title:d_khuzestan
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = language_arabic
+			}
+		}
+		any_sub_realm_county = {
+			title:d_khuzestan = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+}

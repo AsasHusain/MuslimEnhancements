@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "ruqayya_shield_mesh"
+	file = "ruqayya_shield.mesh"
+
+	meshsettings = {
+		name = "ruqayya_shieldShape"
+		index = 0
+		texture_diffuse = "ruqayya_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "ruqayya_shield_entity"
+	pdxmesh = "ruqayya_shield_mesh"
+}

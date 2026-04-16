@@ -1,0 +1,102 @@
+﻿
+# Buyids
+me_buyid_001 = {
+	name = "Rustam" # Abu Talib Rustam 'Majd ad-Dawlah', Last Buyid Amir of Ray
+	dynasty = 1102201 # Buyid
+	religion = imami
+	culture = daylamite
+	
+	father = 1231066
+	mother = me_bavandid_001
+	993.1.1 = {
+		birth = yes
+	}
+	997.1.1 = {
+		give_nickname = nick_majd_ud_dawlah
+	}
+	1035.1.1 = { # Unknown, but after 1029 in Ghazni
+		death = yes
+	}
+}
+
+me_buyid_002 = {
+	name = "Fana-Khusrau" # Abu Kalijar Fana-Khusrau ibn 'Majd ad-Dawlah', fought a losing war to attempt to preserve a part of his father's domains in the 1040s
+	dynasty = 1102201 # Buyid
+	religion = imami
+	culture = daylamite
+	
+	father = me_buyid_001
+	1015.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
+
+me_buyid_003 = {
+	name = "Abu-Dulaf" # Abu Dulaf ibn 'Majd ad-Dawlah'
+	dynasty = 1102201 # Buyid
+	religion = imami
+	culture = daylamite
+	
+	father = me_buyid_001
+	1020.1.1 = {
+		birth = yes
+	}
+	1065.1.1 = {
+		death = yes
+	}
+}
+
+me_buyid_004 = {
+	name = "Abu_Taher" # Abu Tahir 'Shams ad-Dawlah', Second to last Buyid Amir of Hamadan
+	dynasty = 1102201 # Buyid
+	religion = imami
+	culture = daylamite
+	
+	father = 1231066
+	mother = me_bavandid_001
+	995.1.1 = {
+		birth = yes
+	}
+	997.1.1 = {
+		give_nickname = nick_shams_ud_dawlah
+	}
+	1021.1.1 = {
+		death = yes
+	}
+}
+
+me_buyid_005 = {
+	name = "Sama_ad_Dawlah" # Sama' ad-Dawlah ibn Sham ad-Dawlah, Last Buyid Amir of Hamadan (Whether Sama' ad-Dawlah is his actual name or just his Laqab is unknown)
+	dynasty = 1102201 # Buyid
+	religion = imami
+	culture = daylamite
+	
+	father = me_buyid_004
+	1015.1.1 = {
+		birth = yes
+	}
+	1075.1.1 = {
+		death = yes
+	}
+}
+
+
+# Bavandids
+me_bavandid_001 = {
+	name = "Shirin" # Sayyida Shirin, mother of Buyid emirs Majd ud-Dawlah and Shams ud-Dawlah, acted as regent and practically ran the country for Majd ad-Dawlah
+	female = yes
+	dynasty_house = house_bavandid
+	religion = imami
+	culture = daylamite
+
+	father = 220995 # Rustam II ibn Sharwin, Sources differ on what her lineage truly was
+	960.1.1 = {
+		birth = yes
+	}
+	1028.1.1 = {
+		death = yes
+	}
+}

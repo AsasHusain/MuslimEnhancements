@@ -1,0 +1,689 @@
+﻿## Secondary Islamic Sect
+doctrine_islam_secondary_group = {
+	group = "main_group"
+	is_available_on_create = {
+		religion_tag = islam_religion
+	}
+	
+	### SUNNI GROUP
+	islam_secondary_group_sunni_orthodox_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_sunni_orthodox_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = islam_secondary_group_sunni_heresy_doctrine
+						has_doctrine = islam_secondary_group_sunni_puritanical_doctrine
+					}
+				}
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_sunni_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_sunni
+				doctrine:muhammad_succession_sunni_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			hostility_override_islam_secondary_group_sunni_orthodox_doctrine = 0
+			hostility_override_islam_secondary_group_sunni_heresy_doctrine = 1
+			hostility_override_islam_secondary_group_shia_batriya_doctrine = 1
+		}
+	}
+	
+	islam_secondary_group_sunni_heresy_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_sunni_heresy_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = islam_secondary_group_sunni_orthodox_doctrine
+						has_doctrine = islam_secondary_group_sunni_puritanical_doctrine
+					}
+				}
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_sunni_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_sunni
+				doctrine:muhammad_succession_sunni_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			hostility_override_islam_secondary_group_sunni_orthodox_doctrine = 1
+			hostility_override_islam_secondary_group_sunni_heresy_doctrine = 1
+			hostility_override_islam_secondary_group_shia_batriya_doctrine = 1
+		}
+	}
+	
+	islam_secondary_group_sunni_puritanical_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_sunni_puritanical_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = islam_secondary_group_sunni_orthodox_doctrine
+						has_doctrine = islam_secondary_group_sunni_heresy_doctrine
+					}
+				}
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_sunni_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_sunni
+				doctrine:muhammad_succession_sunni_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			me_puritanical_conversion_bonus_sunni = yes
+			same_hof_hostility_override = 0
+		}
+	}
+	
+	### SHI'ITE GROUP ###
+	islam_secondary_group_shia_orthodox_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = islam_secondary_group_shia_batriya_doctrine
+						has_doctrine = islam_secondary_group_shia_puritanical_doctrine
+					}
+				}
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_shia
+				doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			hostility_override_islam_secondary_group_shia_orthodox_doctrine = 1
+			hostility_override_islam_secondary_group_shia_batriya_doctrine = 1
+		}
+	}
+	
+	islam_secondary_group_shia_batriya_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_shia_batriya_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = islam_secondary_group_shia_orthodox_doctrine
+						has_doctrine = islam_secondary_group_shia_puritanical_doctrine
+					}
+				}
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_shia
+				doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			hostility_override_islam_secondary_group_shia_orthodox_doctrine = 1
+			hostility_override_islam_secondary_group_shia_batriya_doctrine = 1
+			hostility_override_islam_secondary_group_sunni_orthodox_doctrine = 1
+			hostility_override_islam_secondary_group_sunni_heresy_doctrine = 1
+		}
+	}
+	
+	islam_secondary_group_shia_puritanical_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_shia_puritanical_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = islam_secondary_group_shia_orthodox_doctrine
+						has_doctrine = islam_secondary_group_shia_batriya_doctrine
+					}
+				}
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_shia
+				doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			me_puritanical_conversion_bonus_shia = yes
+		}
+	}
+	
+	### MUHAKKIMA GROUP ###
+	islam_secondary_group_muhakkima_moderate_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_muhakkima_moderate_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = { has_doctrine = islam_secondary_group_muhakkima_puritanical_doctrine }
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_muhakkima_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_muhakkima
+				doctrine:muhammad_succession_muhakkima_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			hostility_override_islam_secondary_group_muhakkima_moderate_doctrine = 1
+		}
+	}
+	
+	islam_secondary_group_muhakkima_puritanical_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_muhakkima_puritanical_doctrine }
+				multiply = 0
+			}
+			else_if = {
+				limit = { has_doctrine = islam_secondary_group_muhakkima_moderate_doctrine }
+				multiply = 0.5
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_muhakkima_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_muhakkima
+				doctrine:muhammad_succession_muhakkima_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			me_puritanical_conversion_bonus_muhakkima = yes
+		}
+	}
+	
+	### ZANDAQA GROUP ###
+	islam_secondary_group_zandaqa_unaffiliated_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_zandaqa_unaffiliated_doctrine }
+				multiply = 0
+			}
+		}
+		is_shown = {
+			doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_zandaqa
+				doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			sayyid_bonus_normal = yes
+		}
+	}
+	
+	islam_secondary_group_zandaqa_ghulat_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+				multiply = 0
+			}
+		}
+		is_shown = {
+			OR = {
+				doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+				doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_zandaqa
+				doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			sayyid_bonus_increased_greatly = yes
+		}
+	}
+	
+	islam_secondary_group_zandaqa_qarmatian_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+				multiply = 0
+			}
+		}
+		is_shown = {
+			OR = {
+				doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+				doctrine:muhammad_succession_shia_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		can_pick = {
+			custom_description = {
+				text = must_select_zandaqa
+				doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+		parameters = {
+			sayyid_bonus_increased = yes
+			hostility_override_islam_secondary_group_zandaqa_qarmatian_doctrine = 2
+			hostility_override_special_doctrine_is_islamic_faith = 3
+		}
+	}
+	
+	### BERBERIST GROUP ###
+	islam_secondary_group_berberist_doctrine = {
+
+		is_shown = {
+			has_doctrine = muhammad_succession_berberist_doctrine
+		}
+		can_pick = {
+			has_doctrine = muhammad_succession_berberist_doctrine
+			custom_description = {
+				text = must_select_berberist
+				doctrine:muhammad_succession_berberist_doctrine = { is_in_list = selected_doctrines }
+			}
+		}
+
+		piety_cost = {
+			value = faith_doctrine_cost_massive
+			if = {
+				limit = { has_doctrine = muhammad_succession_berberist_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+		}
+	}
+}
+
+##Drunkard crimes doctrine
+doctrine_me_intoxication = {
+	group = "crimes"
+	doctrine_me_intoxication_crime = {
+		can_pick = {
+			custom_description = {
+				text = must_not_select_hedonistic
+				NOT = { doctrine:tenet_hedonistic = { is_in_list = selected_doctrines } }
+			}
+		}
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = islam_religion }
+					desc = doctrine_me_intoxication_crime_islamic_name
+				}
+				desc = doctrine_me_intoxication_crime_name
+			}
+		}
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = islam_religion }
+					desc = doctrine_me_intoxication_crime_islamic_desc
+				}
+				desc = doctrine_me_intoxication_crime_desc
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = doctrine_me_intoxication_crime }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_accepted }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_virtuous }
+				multiply = faith_changed_doctrine_cost_mult_three_step
+			}
+		}
+		traits = {
+			sins = {
+				drunkard
+			}
+		}
+		parameters = {
+			me_intoxication_illegal = yes
+		}
+	}
+	doctrine_me_intoxication_shunned = {
+		can_pick = {
+			custom_description = {
+				text = must_not_select_hedonistic
+				NOT = { doctrine:tenet_hedonistic = { is_in_list = selected_doctrines } }
+			}
+		}
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = islam_religion }
+					desc = doctrine_me_intoxication_shunned_islamic_name
+				}
+				desc = doctrine_me_intoxication_shunned_name
+			}
+		}
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = islam_religion }
+					desc = doctrine_me_intoxication_shunned_islamic_desc
+				}
+				desc = doctrine_me_intoxication_shunned_desc
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = doctrine_me_intoxication_shunned }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { religion_tag = islam_religion }
+				multiply = 0
+			}
+			else_if = { #This doesn't work
+				limit = { doctrine:tenet_islamic_syncretism = { is_in_list = selected_doctrines } }
+				multiply = 0
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_crime }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_virtuous }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		traits = {
+			sins = {
+				drunkard
+			}
+		}
+		parameters = {
+			me_intoxication_shunned = yes
+		}
+	}
+#	doctrine_me_intoxication_temperance = { #########################################
+#		piety_cost = {
+#			value = faith_doctrine_cost_low
+#			if = {
+#				limit = { has_doctrine = doctrine_deviancy_crime }
+#				multiply = faith_unchanged_doctrine_cost_mult
+#			}
+#			else_if = {
+#				limit = { has_doctrine = doctrine_deviancy_accepted }
+#				multiply = faith_changed_doctrine_cost_mult_two_step
+#			}
+#			else_if = {
+#				limit = { has_doctrine = doctrine_deviancy_virtuous }
+#				multiply = faith_changed_doctrine_cost_mult_three_step
+#			}
+#		}
+#		parameters = {
+#			me_intoxication_temperance = yes
+#		}
+#	}
+	doctrine_me_intoxication_accepted = {
+		is_shown = {
+			custom_description = { # Only Ghulat can refuse to do Wudhu
+				text = islamic_must_be_ghulat
+				OR = {
+					NOT = { religion_tag = islam_religion }
+					AND = {
+						religion_tag = islam_religion
+						doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+					}
+				}
+			}
+		}
+		can_pick = {
+			custom_description = { # Only Ghulat can refuse to do Wudhu
+				text = islamic_must_be_ghulat
+				OR = {
+					NOT = { religion_tag = islam_religion }
+					AND = {
+						religion_tag = islam_religion
+						doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+					}
+				}
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = doctrine_me_intoxication_accepted }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_crime }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_doctrine = doctrine_me_intoxication_crime
+						has_doctrine = doctrine_me_intoxication_shunned
+						has_doctrine = doctrine_me_intoxication_accepted
+						has_doctrine = doctrine_me_intoxication_virtuous
+					}
+				}
+				multiply = 0
+			}
+		}
+		parameters = {
+			me_intoxication_accepted = yes
+		}
+	}
+	doctrine_me_intoxication_virtuous = {
+		is_shown = {
+			custom_description = { # Only Ghulat can refuse to do Wudhu
+				text = islamic_must_be_ghulat
+				OR = {
+					NOT = { religion_tag = islam_religion }
+					AND = {
+						religion_tag = islam_religion
+						doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+					}
+				}
+			}
+		}
+		can_pick = {
+			custom_description = { # Only Ghulat can refuse to do Wudhu
+				text = islamic_must_be_ghulat
+				OR = {
+					NOT = { religion_tag = islam_religion }
+					AND = {
+						religion_tag = islam_religion
+						doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+					}
+				}
+			}
+			custom_description = {
+				text = must_select_hedonistic
+				doctrine:tenet_hedonistic = { is_in_list = selected_doctrines }
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_massive
+			if = {
+				limit = { has_doctrine = doctrine_me_intoxication_virtuous }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_shunned }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_intoxication_crime }
+				multiply = faith_changed_doctrine_cost_mult_three_step
+			}
+		}
+		traits = {
+			virtues = {
+				drunkard
+				lifestyle_reveler
+			}
+		}
+		parameters = {
+			me_intoxication_accepted = yes
+			allows_brewery = yes
+		}
+	}
+}
+
+##Ablution doctrine - (Wudhu/Water Rituals)
+doctrine_me_ablution = {
+	group = "clergy"
+	doctrine_me_ablution_none = {
+		can_pick = {
+			custom_description = { # Only Zandaqa can refuse to do Wudhu
+				text = must_select_zandaqa
+				OR = {
+					NOT = { religion_tag = islam_religion }
+					AND = {
+						religion_tag = islam_religion
+						doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+					}
+				}
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = doctrine_me_ablution_handwashing }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_ablution_full }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			me_ablution_none = yes
+		}
+	}
+	doctrine_me_ablution_handwashing = {
+		can_pick = {
+			custom_description = { # Only Ghulat can refuse to do Wudhu
+				text = islamic_must_be_ghulat
+				OR = {
+					NOT = { religion_tag = islam_religion }
+					AND = {
+						religion_tag = islam_religion
+						doctrine:muhammad_succession_zandaqa_doctrine = { is_in_list = selected_doctrines }
+					}
+				}
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = doctrine_me_ablution_none }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_ablution_full }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			me_ablution_handwashing = yes
+		}
+	}
+	doctrine_me_ablution_full = {
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = islam_religion }
+					desc = doctrine_me_ablution_wudhu_name
+				}
+				desc = doctrine_me_ablution_full_name
+			}
+		}
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = islam_religion }
+					desc = doctrine_me_ablution_wudhu_desc
+				}
+				desc = doctrine_me_ablution_full_desc
+			}
+		}
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = doctrine_me_ablution_none }
+				multiply = faith_changed_doctrine_cost_mult_three_step
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_me_ablution_handwashing }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			me_ablution_full = yes
+		}
+	}
+}

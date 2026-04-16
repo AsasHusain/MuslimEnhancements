@@ -1,0 +1,160 @@
+
+namespace = me_ramadan_muharram
+
+# 0001 - Ramadan State Patronage (Iftars) - Follow-up to main decision
+# 0010 - Muharram State Patronage (Majalis) - Follow-up to main decision
+#
+# Both events save the chosen patronage tier as a persistent character variable.
+# The actual income drain modifier and county modifiers are applied when the holy
+# month arrives via me_hijri_on_actions.
+
+##################################################
+# Ramadan State Patronage
+##################################################
+
+me_ramadan_muharram.0001 = {
+	type = character_event
+	title = me_ramadan_muharram.0001.t
+	desc = me_ramadan_muharram.0001.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	# None
+	option = {
+		name = me_ramadan_muharram.0001.none
+		custom_tooltip = me_ramadan_patronage_none_tt
+		set_variable = { name = me_ramadan_patronage value = flag:none }
+		ai_chance = {
+			base = 20
+			ai_value_modifier = { ai_greed = 0.5 ai_zeal = -0.5 }
+		}
+	}
+
+	# Modest
+	option = {
+		name = me_ramadan_muharram.0001.modest
+		set_variable = { name = me_ramadan_patronage value = flag:modest }
+		custom_tooltip = me_ramadan_patronage_modest_tt
+		if = {
+			limit = { me_is_ramadan_trigger = yes }
+			me_apply_ramadan_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = { ai_greed = 0.3 }
+		}
+	}
+
+	# Grand
+	option = {
+		name = me_ramadan_muharram.0001.grand
+		set_variable = { name = me_ramadan_patronage value = flag:grand }
+		custom_tooltip = me_ramadan_patronage_grand_tt
+		if = {
+			limit = { me_is_ramadan_trigger = yes }
+			me_apply_ramadan_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 30
+			ai_value_modifier = { ai_zeal = 0.3 ai_greed = -0.3 }
+		}
+	}
+
+	# Lavish
+	option = {
+		name = me_ramadan_muharram.0001.lavish
+		set_variable = { name = me_ramadan_patronage value = flag:lavish }
+		custom_tooltip = me_ramadan_patronage_lavish_tt
+		if = {
+			limit = { me_is_ramadan_trigger = yes }
+			me_apply_ramadan_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 10
+			ai_value_modifier = { ai_zeal = 0.5 ai_greed = -0.5 }
+		}
+	}
+}
+
+##################################################
+# Muharram State Patronage
+##################################################
+
+me_ramadan_muharram.0010 = {
+	type = character_event
+	title = me_ramadan_muharram.0010.t
+	desc = me_ramadan_muharram.0010.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+
+	# None
+	option = {
+		name = me_ramadan_muharram.0010.none
+		custom_tooltip = me_muharram_patronage_none_tt
+		set_variable = { name = me_muharram_patronage value = flag:none }
+		ai_chance = {
+			base = 20
+			ai_value_modifier = { ai_greed = 0.5 ai_zeal = -0.5 }
+		}
+	}
+
+	# Modest
+	option = {
+		name = me_ramadan_muharram.0010.modest
+		set_variable = { name = me_muharram_patronage value = flag:modest }
+		custom_tooltip = me_muharram_patronage_modest_tt
+		if = {
+			limit = {
+				me_is_muharram_trigger = yes
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = { ai_greed = 0.3 }
+		}
+	}
+
+	# Grand
+	option = {
+		name = me_ramadan_muharram.0010.grand
+		set_variable = { name = me_muharram_patronage value = flag:grand }
+		custom_tooltip = me_muharram_patronage_grand_tt
+		if = {
+			limit = {
+				me_is_muharram_trigger = yes
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 30
+			ai_value_modifier = { ai_zeal = 0.3 ai_greed = -0.3 }
+		}
+	}
+
+	# Lavish
+	option = {
+		name = me_ramadan_muharram.0010.lavish
+		set_variable = { name = me_muharram_patronage value = flag:lavish }
+		custom_tooltip = me_muharram_patronage_lavish_tt
+		if = {
+			limit = {
+				me_is_muharram_trigger = yes
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 10
+			ai_value_modifier = { ai_zeal = 0.5 ai_greed = -0.5 }
+		}
+	}
+}

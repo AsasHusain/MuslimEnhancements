@@ -1,0 +1,601 @@
+﻿become_hafidh = {
+	# Basic Setup
+	skill = learning
+	desc = become_hafidh_desc_general
+	success_desc = "BECOME_HAFIDH_SUCCESS_DESC"
+	icon = icon_scheme_become_hafidh
+	illustration = "gfx/interface/illustrations/event_scenes/corridor.dds"
+	target_type = character
+	is_secret = no
+	is_basic = yes
+	cooldown = { months = 2 }
+	
+	# Parameters
+	speed_per_skill_point = t1_spsp_owner_value
+	spymaster_speed_per_skill_point = 0
+	uses_resistance = no
+	base_progress_goal = 730
+	base_maximum_success = 95
+	minimum_success = 5
+	
+	# Core Triggers
+	allow = {
+		age >= 6
+
+		NAND = { 
+			has_trait_xp = {
+				trait = hafidh
+				value >= 100
+			}
+		}
+
+		AND = {
+			faith.religion = religion:islam_religion
+			NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+			NOT = { faith = faith:druze }
+		}
+
+		scope:target = {
+			AND = {
+				faith.religion = religion:islam_religion
+				NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+				NOT = { faith = faith:druze }
+				age >= 16
+			}
+		}
+		is_imprisoned = no
+
+		#AI blockers
+		trigger_if = {
+			limit = { is_ai = yes }
+
+			scope:target = {
+				trigger_if = { #So players don't get spammed by AI's
+					limit = {
+						is_ai = no
+					}
+					NOT = {
+						any_targeting_scheme = {
+							scheme_type = become_hafidh
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	valid = {
+		custom_tooltip = {
+			text = become_hafidh_relation_tt
+			OR = {
+				scope:target = cp:councillor_court_chaplain
+				#scope:owner.court_position:court_tutor_court_position = { 
+				#	this = scope:target
+				#}
+				scope:owner = {
+					AND = {
+						scope:target = { has_court_position = court_tutor_court_position }
+						is_court_position_employer = {
+							court_position = court_tutor_court_position
+							who = scope:target
+						}
+					}
+				}
+				scope:target = { has_relation_guardian = scope:owner }
+				AND = {
+					is_landed = no
+					OR = {
+						liege = { court_position:court_tutor_court_position = { this = scope:target } }
+						AND = {
+							scope:target = { is_courtier_of = scope:owner.liege }
+							scope:target = { has_council_position = councillor_court_chaplain }
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					is_playable_character = yes
+					scope:target = { is_courtier_of = scope:owner }
+				}
+			}
+		}
+		NAND = { 
+			has_trait_xp = {
+				trait = hafidh
+				value >= 100
+			}
+		}
+		AND = {
+			faith.religion = religion:islam_religion
+			NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+			NOT = { faith = faith:druze }
+		}
+		scope:target = {
+			has_trait = hafidh
+			AND = {
+				faith.religion = religion:islam_religion
+				NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+				NOT = { faith = faith:druze }
+				OR = {
+					exists = location
+					in_diplomatic_range = scope:owner
+				}
+			}
+		}
+	}
+	
+	# Prediction (abysmal/low/medium/high/excellent)
+	# scope:owner - Character starting the scheme
+	# scope:target - Whatever the scheme is targeting
+	odds_prediction = {
+		add = base_odds_prediction_target_is_char_value
+		add = odds_skill_contribution_learning_value
+		add = odds_learn_language_scheme_misc_value
+		min = 0
+	}
+
+	# Base Chances
+	base_success_chance = {
+		base = 0
+		
+		modifier = {
+			add = {
+				value = scope:owner.learning
+				multiply = 3
+			}
+			desc = SCHEME_LEARNING_MODIFIER
+			scope:owner.learning > 0
+		}
+		
+		modifier = {
+			add = {
+				value = scope:owner.piety_level
+				multiply = 10
+			}
+			desc = SCHEME_PIETY_LEVEL_MODIFIER
+			scope:owner.piety_level > 0
+		}
+		
+		modifier = {
+			add = scope:target.learning
+			desc = SCHEME_COURT_TUTOR_HELP_LEARNING_MODIFIER
+			exists = scope:target
+			scope:target.learning > 0
+		}
+		
+		modifier = {
+			add = {
+				value = 30
+				subtract = scope:owner.age
+				multiply = 2
+			}
+			desc = SCHEME_YOUTH_MODIFIER
+			scope:owner.age < 30
+		}
+
+		modifier = {
+			add = {
+				value = -30
+				subtract = scope:owner.age
+				multiply = 0.5
+			}
+			desc = SCHEME_OLD_AGE_MODIFIER
+			scope:owner.age > 65
+		}
+		
+#		modifier = { # Should find a way to check if they both speak atleast one similar language
+#			add = 10
+#			desc = SCHEME_HERITAGE_MODIFIER
+#			scope:target.culture = {
+#				has_same_culture_language = scope:owner.culture
+#			}
+#		}
+
+		modifier = {
+			add = 25
+			desc = SCHEME_SPEAK_ARABIC_MODIFIER
+			scope:owner = { knows_language = language_arabic }
+		}
+
+		modifier = {
+			add = 15
+			desc = SCHEME_SPEAK_ARABIC_TUTOR_MODIFIER
+			scope:target = { knows_language = language_arabic }
+		}
+		
+		modifier = {
+			add = -20
+			desc = SCHEME_TUTOR_HAFIDH_0_MODIFIER
+			scope:target = {
+				AND ={
+					has_trait_xp = {
+						trait = hafidh
+						value >= 0
+					}
+					has_trait_xp = {
+						trait = hafidh
+						value <= 29
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			add = -10
+			desc = SCHEME_TUTOR_HAFIDH_1_MODIFIER
+			scope:target = {
+				AND ={
+					has_trait_xp = {
+						trait = hafidh
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = hafidh
+						value <= 64
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			add = 10
+			desc = SCHEME_TUTOR_HAFIDH_2_MODIFIER
+			scope:target = {
+				AND ={
+					has_trait_xp = {
+						trait = hafidh
+						value >= 65
+					}
+					has_trait_xp = {
+						trait = hafidh
+						value <= 99
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			add = 20
+			desc = SCHEME_TUTOR_HAFIDH_3_MODIFIER
+			scope:target = {
+				has_trait_xp = {
+					trait = hafidh
+					value >= 100
+				}
+			}
+		}
+
+		#Intellect good
+		modifier = {
+			desc = "scheme_intellect_good_1"
+			scope:owner = { has_trait = intellect_good_1 }
+			add = 10
+		}
+		
+		modifier = {
+			desc = "scheme_intellect_good_2"
+			scope:owner = { has_trait = intellect_good_2 }
+			add = 20
+		}
+		
+		modifier = {
+			desc = "scheme_intellect_good_3"
+			scope:owner = { has_trait = intellect_good_3 }
+			add = 30
+		}
+		
+		modifier = {
+			scope:target = { has_trait = stubborn }
+			desc = "SCHEME_TRAIT_STUBBORN"
+			add = 10
+		}
+		
+		modifier = {
+			scope:target = { has_trait = diligent }
+			desc = "SCHEME_TRAIT_DILIGENT"
+			add = 10
+		}
+
+		modifier = {
+			scope:target = { has_trait = lazy }
+			desc = "SCHEME_TRAIT_LAZY"
+			add = -10
+		}
+
+		modifier = {
+			scope:target = { has_trait = zealous }
+			desc = "SCHEME_TRAIT_ZEALOUS"
+			add = 5
+		}
+
+		modifier = {
+			scope:target = { has_trait = cynical }
+			desc = "SCHEME_TRAIT_CYNICAL"
+			add = -5
+		}
+
+		modifier = {
+			scope:target = { has_trait = patient }
+			desc = "SCHEME_TRAIT_PATIENT"
+			add = 5
+		}
+
+		modifier = {
+			scope:target = { has_trait = impatient }
+			desc = "SCHEME_TRAIT_IMPATIENT"
+			add = -5
+		}
+
+		modifier = {
+			scope:target = { has_trait = ambitious }
+			desc = "SCHEME_TRAIT_AMBITIOUS"
+			add = 5
+		}
+		
+		#Paranoid value is added automatically because of trait	parameter enemy_personal_scheme_success_chance_add 
+		
+		# Lifestyles
+
+		# Dynasty Kin Personal Scheme Success Chance on Dynasty Perk
+		modifier = {
+			add = kin_legacy_4_success_chance
+			desc = KIN_LEGACY_DESC
+			exists = scope:owner.dynasty
+			scope:owner.dynasty = {
+				has_dynasty_perk = kin_legacy_4
+			}
+			scope:target.dynasty = scope:owner.dynasty
+		}
+
+		# House Personal Scheme Success Chance on Cultural Parameter
+		modifier = {
+			add = cultural_house_personal_scheme_success_chance
+			desc = KIN_PARAMETER_DESC
+			exists = scope:owner.house
+			exists = scope:target.house
+			scope:owner.culture = {
+				has_cultural_parameter = cultural_house_personal_scheme_success_chance
+			}
+			scope:target.house = scope:owner.house
+		}
+
+                # Pedagogy Perk
+                modifier = {
+                        add = 25
+                        desc = LEARN_LANGUAGE_PEDAGOGY_PERK_DESC
+                        scope:owner = {
+                                has_perk = pedagogy_perk
+                        }
+                }
+
+		# Thicker Than Water Perk
+		modifier = {
+			add = thicker_than_water_bonus
+			desc = BEFRIEND_THICKER_THAN_WATER_PERK_DESC
+			scope:owner = {
+				has_perk = thicker_than_water_perk
+			}
+			scope:target = {
+				is_close_or_extended_family_of = scope:owner
+			}
+		}
+
+		# Modifiers
+		# house_head_request_interaction
+		modifier = {
+			add = personal_scheme_variable_list_value
+			scope:owner = {
+				has_variable_list = supporting_personal_schemes
+			}
+			desc = HOUSE_HEAD_SCHEME_SUPPORT_DESC
+		}
+		modifier = {
+			add = -10
+			scope:owner = { has_character_modifier = personal_schemes_distracted_modifier }
+			desc = personal_schemes_distracted_modifier
+		}
+		# Estate
+		modifier = {
+			scope:owner.domicile ?= {
+				has_domicile_parameter = increased_success_personal_schemes_1
+			}
+			add = estate_increased_personal_scheme_success_1_value
+		}
+		modifier = {
+			scope:owner.domicile ?= {
+				has_domicile_parameter = increased_success_personal_schemes_2
+			}
+			add = estate_increased_personal_scheme_success_2_value
+		}
+		modifier = {
+			scope:owner.domicile ?= {
+				has_domicile_parameter = increased_success_personal_schemes_3
+			}
+			add = estate_increased_personal_scheme_success_3_value
+		}
+
+		# Personal Scheme Shared
+		personal_scheme_base_success_chance_modifiers = yes
+	}
+
+	# On Actions
+	on_phase_completed = {
+		# Grab our scopes.
+		save_scope_as = scheme
+		scheme_target_character = { save_scope_as = target }
+		scheme_owner = { save_scope_as = owner }
+		scope:scheme = {
+			random = {
+				chance = scope:scheme.scheme_success_chance
+
+				save_scope_value_as = {
+					name = scheme_successful
+					value = yes
+				}
+			}
+			scope:owner = {
+				if = {
+					limit = {
+						exists = scope:scheme_successful
+					}
+					trigger_event = {
+						on_action = become_hafidh_success
+					}
+				}
+				else = {
+					trigger_event = {
+						on_action = become_hafidh_failure
+					}	
+				}
+			}
+		}
+	}
+	on_monthly = {
+		save_scope_as = scheme
+		scheme_target_character = { save_scope_as = target }
+		scheme_owner = {
+			save_scope_as = owner
+			trigger_event = { on_action = become_hafidh_ongoing }
+		}
+	}
+	on_invalidated = {
+		scheme_target_character = {
+			save_scope_as = target
+		}
+		scheme_owner = {
+			save_scope_as = owner
+		}
+		if = {
+			limit = {
+				scope:target = { is_alive = no }
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = become_hafidh_invalidated
+					custom_tooltip = become_hafidh_invalidated_dead_desc
+					left_icon = scope:target
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:owner = {
+					AND = { # Can't memorize the Qur'an if you've already memorized it 
+						has_trait = hafidh
+						has_trait_xp = {
+							trait = hafidh
+							value >= 100
+						}
+					}
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = become_hafidh_invalidated
+					custom_tooltip = become_hafidh_invalidated_cannot_memorize_anymore_desc
+					left_icon = scope:target
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target = {
+					AND = {
+						is_alive = yes
+						OR = {
+							NOT = { faith.religion = religion:islam_religion }
+							faith = { has_doctrine = muhammad_succession_berberist_doctrine }
+							faith = faith:druze
+						}
+					}
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = become_hafidh_invalidated
+					custom_tooltip = become_hafidh_invalidated_target_became_kaffir_desc
+					left_icon = scope:target
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				scope:owner = { 
+					OR ={
+						NOT = { faith.religion = religion:islam_religion }
+						faith = { has_doctrine = muhammad_succession_berberist_doctrine }
+						faith = faith:druze
+					}
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = become_hafidh_invalidated
+					custom_tooltip = become_hafidh_invalidated_you_became_kaffir_desc
+					left_icon = scope:target
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				scope:target = { 
+					NOT = { in_diplomatic_range = scope:owner }
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = become_hafidh_invalidated_title
+					left_icon = scope:target
+					custom_description_no_bullet = {
+						object = scope:target
+						text = scheme_target_not_in_diplomatic_range
+					}
+				}
+			}
+		}
+		
+		scope:owner = {
+			if = {
+				limit = {
+					is_alive = yes
+					AND = {
+						faith.religion = religion:islam_religion
+						NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+						NOT = { faith = faith:druze }
+					}
+					scope:target = {
+						OR = {
+							is_alive = no
+							NOT = { faith.religion = religion:islam_religion }
+							faith = { has_doctrine = muhammad_succession_berberist_doctrine }
+							faith = faith:druze
+							NOT = { in_diplomatic_range = scope:owner }
+						}
+					}
+					NOT = {
+						has_trait_xp = {
+							trait = hafidh
+							value >= 100
+						}
+					}
+				}
+				set_variable = {
+					name = hafidh_progress
+					value = prev.scheme_progress
+				}
+				trigger_event = become_hafidh_outcome.3000
+			}
+			else_if = {
+				limit = {
+					has_trait_xp = {
+						trait = hafidh
+						value >= 100
+					}
+				}
+				trigger_event = become_hafidh_outcome.1001
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+me_hijri_calendar = { # Displays the Hijri (Islamic) calendar date for Muslim rulers
+
+	categories = {
+		flavor
+	}
+
+	default = me_hijri_enabled
+
+	me_hijri_enabled = {}
+	me_hijri_disabled = {}
+}

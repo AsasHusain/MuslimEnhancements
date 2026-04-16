@@ -1,0 +1,540 @@
+﻿l_english:
+
+ #############################################
+ # Indo Aryans
+ prince_male_indo_aryan_group:0 "Shehzada"
+ prince_female_indo_aryan_group:0 "Shehzadi"
+ 
+ # Georgians, by Ace (Muslim Enhancements)
+ ## As seen with 'King' Tamar, distinct titles for rulers based on gender did not exist in Georgian
+ baron_feudal_male_georgian_group:0 "Didebuli" # Nobility title
+ baron_feudal_female_georgian_group:0 "Didebuli"
+ barony_feudal_georgian_group:0 "Barony"
+ count_feudal_male_georgian_group:0 "Mtavari"
+ count_feudal_female_georgian_group:0 "Mtavari"
+ county_feudal_georgian_group:0 "Mtavarate"
+ duke_feudal_male_georgian_group:0 "Eristavi"
+ duke_feudal_female_georgian_group:0 "Eristavi"
+ duchy_feudal_georgian_group:0 "Saerismtavro" # Principality, Samtavro is the prince-bishopric equivilent
+ king_feudal_male_georgian_group:0 "Mepe"
+ king_feudal_female_georgian_group:0 "Mepe" 
+ kingdom_feudal_georgian_group:0 "Samepo"
+ emperor_feudal_male_georgian_group:0 "Imp’erat’ori"
+ emperor_feudal_female_georgian_group:0 "Imp’erat’ori"
+
+ # Armenians, by Ace (Muslim Enhancements)
+ ## Made changes to be more historically accurate, previous title holder names were direct translations of count and duke, titles were changed to be more in line with the CK3 style (ex. Emarah -> Emirate)
+ baron_feudal_male_armenian_group:0 "Azat" # Middle and Lower Nobility title
+ baron_feudal_female_armenian_group:0 "Azatuhi"
+ barony_feudal_armenian_group:0 "Azatate"
+ count_feudal_male_armenian_group:0 "Ishkhan"
+ count_feudal_female_armenian_group:0 "Ishkhanuhi"
+ county_feudal_armenian_group:0 "Ishkhanate" # Principality
+ duke_feudal_male_armenian_group:0 "Ishkhan"
+ duke_feudal_female_armenian_group:0 "Ishkhanuhi"
+ duchy_feudal_armenian_group:0 "High Ishkhanate" # Principality
+ king_feudal_male_armenian_group:0 "Tagavor"
+ king_feudal_female_armenian_group:0 "Taguhi"
+ kingdom_feudal_armenian_group:0 "Tagavorate"
+ emperor_feudal_male_armenian_group:0 "Kaysr"
+ emperor_feudal_female_armenian_group:0 "Kaysruhi"
+
+ me_armenian_principalities_prince:0 "Ishkhan"
+ me_armenian_principalities_princess:0 "Ishkhanuhi"
+ 
+ # Telugus, by Ace (Muslim Enhancements)
+ baron_male_telugu_group:0 "Dalapati"
+ baron_female_telugu_group:0 "Mukhyuralu"
+ barony_telugu_group:0 "Bhumulu"
+ count_male_telugu_group:0 "Prabhuvu"
+ count_female_telugu_group:0 "Stri"
+ county_telugu_group:0 "Rastram"
+ duke_male_telugu_group:0 "Yuvaraju"
+ duke_female_telugu_group:0 "Yuvarani"
+ duchy_telugu_group:0 "Prantam"
+ king_male_telugu_group:0 "Raju"
+ king_female_telugu_group:0 "Rani"
+ kingdom_telugu_group:0 "Rajyaṁ"
+ emperor_male_telugu_group:0 "Chakravarti"
+ emperor_female_telugu_group:0 "Samrajni"
+ empire_telugu_group:0 "Samrajyam"
+ duke_feudal_male_prince_telugu:0 "Adhineta"
+ duke_feudal_female_prince_telugu:0 "Mahila"
+ duchy_feudal_prince_telugu:0 "Prantam"
+ 
+ # Gujaratis, by Ace (Muslim Enhancements)
+ baron_male_gujarati_group:0 "Mukhya"
+ baron_female_gujarati_group:0 "Mukhya Mahila"
+ barony_gujarati_group:0 "Pradesa"
+ count_male_gujarati_group:0 "Saradara"
+ count_female_gujarati_group:0 "Umadastri"
+ county_gujarati_group:0 "Adhipatya"
+ duke_male_gujarati_group:0 "Sasaka"
+ duke_female_gujarati_group:0 "Sasana"
+ duchy_gujarati_group:0 "Ksetra"
+ king_male_gujarati_group:0 "Raja"
+ king_female_gujarati_group:0 "Rani"
+ kingdom_gujarati_group:0 "Rajya"
+ emperor_male_gujarati_group:0 "Samrata"
+ emperor_female_gujarati_group:0 "Samratni"
+ empire_gujarati_group:0 "Samrajya"
+ duke_feudal_male_prince_gujarati:0 "Rajakumara"
+ duke_feudal_female_prince_gujarati:0 "Rajakumarī"
+ duchy_feudal_prince_gujarati:0 "Ksetra"
+ # Malays, by Ace (Muslim Enhancements)
+ prince_male_malay_group:0 "Tunku"
+ prince_female_malay_group:0 "Tunku"
+ duke_male_malay_group:0 "Paduka Sri Sultan"
+ duke_female_malay_group:0 "Paduka Sri Sultanah"
+ # Oghuz Turks, by Ace (Muslim Enhancements)
+ baron_male_turkish_group:0 "Önder"
+ baron_female_turkish_group:0 "Hanımefendi"
+ barony_turkish_group:0 "Varlık"
+ count_male_turkish_group:0 "Başbuğ"
+ count_female_turkish_group:0 "Hanımefendi"
+ county_turkish_group:0 "Ülke"
+ duke_male_turkish_group:0 "Başkan"
+ duke_female_turkish_group:0 "Hanımefendi"
+ duchy_turkish_group:0 "Toprak"
+ king_male_turkish_group:0 "Khan"
+ king_female_turkish_group:0 "Hatun"
+ kingdom_turkish_group:0 "Khanate"
+ emperor_male_turkish_group:0 "Khagan"
+ emperor_female_turkish_group:0 "Hatun"
+ empire_turkish_group:0 "Khaganate"
+
+ ### Councillor Positions ###
+ councillor_kurultai_arabic:0 "Majlis Member"
+ councillor_kurultai_arabic_possessive:0 "Majlis Member's"
+ councillor_kurultai_berber:0 "Agraw Member" # Jamā'ah
+ councillor_kurultai_berber_possessive:0 "Agraw Member's"
+ 
+ me_nomadic_council_arabic:0 "Majlis"
+ me_nomadic_council_full_arabic:0 "Majlis ash-Shuyukh"
+ me_nomadic_council_member_arabic:0 "Majlis Member"
+ me_nomadic_council_members_arabic:0 "Majlis Members"
+ me_nomadic_council_berber:0 "Agraw"
+ me_nomadic_council_member_berber:0 "Agraw Member"
+ me_nomadic_council_members_berber:0 "Agraw Members"
+ me_nomadic_council_kurultai:0 "Kurultai"
+ me_nomadic_council_norm:0 "Nomadic Council"
+  
+ ### Arabic ###
+ # Sharifate (Mecca and Medina)
+ duke_feudal_sharif_male_arabic_group:0 "[CHARACTER.Custom('ME_DukeMaleSharif')]"
+ duke_feudal_sharif_female_arabic_group:0 "[CHARACTER.Custom('ME_DukeFemaleSharif')]"
+ duchy_feudal_sharif_arabic_group:0 "[CHARACTER.Custom('ME_DuchySharif')]"
+
+ duke_male_arabic_sharif:0 "Sharīf"
+ duke_female_arabic_sharif:0 "Sharīfah"
+ duchy_arabic_sharif:0 "Sharifate"
+ duke_male_arabic_default:0 "$duke_feudal_male_arabic_group$"
+ duke_female_arabic_default:0 "$duke_feudal_female_arabic_group$"
+ duchy_arabic_default:0 "$duchy_feudal_arabic_group$"
+
+ # Sharifate (Landless)
+ duke_sharif_landless_male_camp:0 "[CHARACTER.Custom('ME_LandlessMaleSharif')]"
+ duke_sharif_landless_female_camp:0 "[CHARACTER.Custom('ME_LandlessFemaleSharif')]"
+
+ duke_male_arabic_hidden_imam: "Imam"
+ duke_male_arabic_sharif_landless:0 "Sharīf"
+ duke_female_arabic_sharif_landless:0 "Sharīfah"
+
+# Arabian Landless
+ duke_male_arabic_default_landless:0 "Za'im"
+ duke_female_arabic_default_landless:0 "Za'imah"
+ spouse_landless_adventurer_arabic_male:0 "Sāhib"
+ spouse_landless_adventurer_arabic_female:0 "Sāhibah"
+
+ duke_male_arabic_mercenary:0 "Za'im"
+ duke_male_arabic_wanderer:0 "$duke_male_arabic_default_landless$"
+ duke_male_arabic_scholar:0 "$duke_male_arabic_default_landless$"
+ duke_male_arabic_explorer:0 "Ra'is"
+ duke_male_arabic_freebooter:0 "Saytar"
+ duke_male_arabic_legitimists:0 "$duke_male_arabic_default_landless$"
+
+ duke_female_arabic_mercenary:0 "Za'imah"
+ duke_female_arabic_wanderer:0 "$duke_female_arabic_default_landless$"
+ duke_female_arabic_scholar:0 "$duke_female_arabic_default_landless$"
+ duke_female_arabic_explorer:0 "Ra'isah"
+ duke_female_arabic_freebooter:0 "Saytarah"
+ duke_female_arabic_legitimists:0 "$duke_female_arabic_default_landless$"
+ 
+ # Iranian Landless
+ duke_male_iran_default_landless:0 "Sarwān"
+ duke_female_iran_default_landless:0 "Sarwāna"
+ spouse_landless_adventurer_iran_male:0 "Arbāb"
+ spouse_landless_adventurer_iran_female:0 "Arbāba"
+ 
+ duke_male_iran_mercenary:0 "Farmandeh"
+ duke_male_iran_wanderer:0 "$duke_male_iran_default_landless$"
+ duke_male_iran_scholar:0 "$duke_male_iran_default_landless$"
+ duke_male_iran_explorer:0 "Rahbar"
+ duke_male_iran_freebooter:0 "Ayyar"
+ duke_male_iran_legitimists:0 "$duke_male_iran_default_landless$"
+ 
+ duke_female_iran_mercenary:0 "Farmandeha"
+ duke_female_iran_wanderer:0 "$duke_female_iran_default_landless$"
+ duke_female_iran_scholar:0 "$duke_female_iran_default_landless$"
+ duke_female_iran_explorer:0 "Rahbara"
+ duke_female_iran_freebooter:0 "Ayyara"
+ duke_female_iran_legitimists:0 "$duke_female_iran_default_landless$"
+ 
+ # Andalusian Landless
+ duke_male_andalusian_default_landless:0 "Za'im"
+ duke_female_andalusian_default_landless:0 "Za'imah"
+ spouse_landless_adventurer_andalusian_male:0 "Sāhib"
+ spouse_landless_adventurer_andalusian_female:0 "Sāhibah"
+
+ duke_male_andalusian_mercenary:0 "Farkhān"
+ duke_male_andalusian_wanderer:0 "$duke_male_andalusian_default_landless$"
+ duke_male_andalusian_scholar:0 "$duke_male_andalusian_default_landless$"
+ duke_male_andalusian_explorer:0 "Ra'is"
+ duke_male_andalusian_freebooter:0 "Farkhān"
+ duke_male_andalusian_legitimists:0 "$duke_male_andalusian_default_landless$"
+
+ duke_female_andalusian_mercenary:0 "Farkhānah"
+ duke_female_andalusian_wanderer:0 "$duke_female_andalusian_default_landless$"
+ duke_female_andalusian_scholar:0 "$duke_female_andalusian_default_landless$"
+ duke_female_andalusian_explorer:0 "Ra'isah"
+ duke_female_andalusian_freebooter:0 "Farkhānah"
+ duke_female_andalusian_legitimists:0 "$duke_female_andalusian_default_landless$"
+ 
+ duke_male_iberian_mercenary:0 "Farfān"
+ duke_male_iberian_freebooter:0 "Farfān"
+ 
+ duke_female_iberian_mercenary:0 "Farfāna"
+ duke_female_iberian_freebooter:0 "Farfāna"
+ 
+ # Turks Landless
+ duke_male_turkish_default_landless:0 "Beg"
+ duke_female_turkish_default_landless:0 "Begum"
+ spouse_landless_adventurer_turkish_male:0 "Sahip"
+ spouse_landless_adventurer_turkish_female:0 "Bayan"
+
+ duke_male_turkish_mercenary:0 "Beg"
+ duke_male_turkish_wanderer:0 "$duke_male_turkish_default_landless$"
+ duke_male_turkish_scholar:0 "$duke_male_turkish_default_landless$"
+ duke_male_turkish_explorer:0 "Ra'is"
+ duke_male_turkish_freebooter:0 "Ayyar"
+ duke_male_turkish_legitimists:0 "$duke_male_turkish_default_landless$"
+
+ duke_female_turkish_mercenary:0 "Begum"
+ duke_female_turkish_wanderer:0 "$duke_female_turkish_default_landless$"
+ duke_female_turkish_scholar:0 "$duke_female_turkish_default_landless$"
+ duke_female_turkish_explorer:0 "Ra'isah"
+ duke_female_turkish_freebooter:0 "Ayyarah"
+ duke_female_turkish_legitimists:0 "$duke_female_turkish_default_landless$"
+ 
+ # Berber Landless
+ duke_male_berber_default_landless:0 "Qā'id"
+ duke_female_berber_default_landless:0 "Qā'idah"
+ spouse_landless_adventurer_berber_male:0 "Sāhib"
+ spouse_landless_adventurer_berber_female:0 "Sāhibah"
+
+ duke_male_berber_mercenary:0 "Ghazi"
+ duke_male_berber_wanderer:0 "$duke_male_berber_default_landless$"
+ duke_male_berber_scholar:0 "$duke_male_berber_default_landless$"
+ duke_male_berber_explorer:0 "Ra'is"
+ duke_male_berber_freebooter:0 "Farkhān"
+ duke_male_berber_legitimists:0 "$duke_male_berber_default_landless$"
+
+ duke_female_berber_mercenary:0 "Ghaziah"
+ duke_female_berber_wanderer:0 "$duke_female_berber_default_landless$"
+ duke_female_berber_scholar:0 "$duke_female_berber_default_landless$"
+ duke_female_berber_explorer:0 "Ra'isah"
+ duke_female_berber_freebooter:0 "Farkhanah"
+ duke_female_berber_legitimists:0 "$duke_female_berber_default_landless$"
+ 
+ # Estate Holders
+ spouse_estate_holder_arab_male:0 "Mawlā"
+ spouse_estate_holder_arab_female:0 "Mawlāh"
+ 
+ spouse_estate_holder_iran_male:0 "Azad"
+ spouse_estate_holder_iran_female:0 "Azada"
+ 
+# Andalusian Taifa/Emirate
+ duke_feudal_male_andalusian_independent:0 "Emir"
+ duke_feudal_female_andalusian_independent:0 "Emira"
+ duchy_feudal_andalusian_independent:0 "Taifa"
+
+ king_clan_male_iberian_group:0 "$king_feudal_muslim_male_arabic_group$"
+ king_clan_female_iberian_group:0 "$king_feudal_muslim_female_arabic_group$"
+ kingdom_clan_iberian_group:0 "$kingdom_feudal_muslim_arabic_group$"
+ emperor_clan_male_iberian_group:0 "$emperor_feudal_muslim_male_arabic_group$"
+ emperor_clan_female_iberian_group:0 "$emperor_feudal_muslim_female_arabic_group$"
+ empire_clan_iberian_group:0 "$empire_feudal_muslim_arabic_group$"
+ 
+ baron_male_muslim_andalusian:0 "Nā'ib"
+ baron_female_muslim_andalusian:0 "Nā'ibah"
+ barony_muslim_andalusian:0 "Hisn"
+ count_male_muslim_andalusian:0 "Qā'id"
+ count_female_muslim_andalusian:0 "Qā'idah"
+ county_muslim_andalusian:0 "Iqlim"
+ duke_male_muslim_andalusian:0 "Wālī al-'Azim"
+ duke_female_muslim_andalusian:0 "Wālīah al-'Azimah"
+ duchy_muslim_andalusian:0 "Kura"
+ king_male_muslim_andalusian:0 "Emir"
+ king_female_muslim_andalusian:0 "Emira"
+ kingdom_muslim_andalusian:0 "Emirate"
+ 
+ # Muslim Republics
+ county_republic_arabic_group:0 "Majlīs"
+ duchy_republic_arabic_group:0 "Jumhuriyyah"
+ kingdom_republic_arabic_group:0 "Dawlat al-Jumhuriyyah"
+ 
+ county_republic_muslim:0 "Majlīs"
+ duchy_republic_muslim:0 "Jumhuriyyah"
+ kingdom_republic_muslim:0 "Dawlat al-Jumhuriyyah"
+ 
+ # Iranian Admin
+ count_administrative_muslim_male_iranian_group:0 "Vālī"
+ count_administrative_muslim_female_iranian_group:0 "Vālīa"
+ county_administrative_muslim_iranian_group:0 "Vilāyah"
+ duke_administrative_muslim_male_iranian_group:0 "Amir"
+ duke_administrative_muslim_female_iranian_group:0 "Amira"
+ duchy_administrative_muslim_iranian_group:0 "Amirate"
+ king_administrative_muslim_male_iranian_group:0 "Amir-e Amiran"
+ king_administrative_muslim_female_iranian_group:0 "Amira-e Amiran"
+ kingdom_administrative_muslim_iranian_group:0 "Grand Amirate"
+ 
+ count_administrative_male_iranian_group:0 "Marzoban"
+ count_administrative_female_iranian_group:0 "Marzoban"
+ county_administrative_iranian_group:0 "Marzpanate"
+ duke_administrative_male_iranian_group:0 "Satrap"
+ duke_administrative_female_iranian_group:0 "Satrap"
+ duchy_administrative_iranian_group:0 "Satrapy"
+ king_administrative_male_iranian_group:0 "Shah"
+ king_administrative_female_iranian_group:0 "Banebshen"
+ kingdom_administrative_iranian_group:0 "Shahdom"
+ 
+ duke_administrative_independent_male_iranian_group:2 "[SelectLocalization( CHARACTER.HasLandedTitles, 'PRIMARY_TITLE_BASE_NAME', 'SPOUSE_PRIMARY_TITLE_BASE_NAME' )]shah"
+ duke_administrative_independent_female_iranian_group:2 "[SelectLocalization( CHARACTER.HasLandedTitles, 'PRIMARY_TITLE_BASE_NAME', 'SPOUSE_PRIMARY_TITLE_BASE_NAME' )]banebshen"
+ duchy_administrative_independent_iranian_group:1 "Shahdom"
+ 
+ # Turkish Admin
+ count_administrative_male_turkish:1 "Beg"
+ count_administrative_female_turkish:1 "Begum"
+ county_administrative_turkish:0 "Beylik"
+ duke_administrative_male_turkish:1 "Atabeg"
+ duke_administrative_female_turkish:1 "Atabegum"
+ duchy_administrative_turkish:1 "Atabegate"
+ king_administrative_male_turkish:0 "Wālī al-'Azim"
+ king_administrative_female_turkish:0 "Wālīah al-'Azimah"
+ kingdom_administrative_turkish:0 "Siyadah"
+ 
+ # Feudal / Clan 
+ emperor_feudal_muslim_male_arabic_group:1 "Sultan al-Mu'azzam"
+ emperor_feudal_muslim_female_arabic_group:1 "Sultanah al-Mu'azzamah"
+ empire_feudal_muslim_arabic_group:0 "[CHARACTER.Custom('ME_ArabicCaliphateEmpire')]"
+ empire_arabic_caliphate:0 "Caliphate"
+ empire_arabic_default:0 "Empire"
+ 
+ # Arab Admin
+ baron_administrative_muslim_male_arabic_group:0 "Sheikh"
+ baron_administrative_muslim_female_arabic_group:0 "Shaykhah"
+ barony_administrative_muslim_arabic_group:0 "Baladiyah"
+ baron_administrative_muslim_male_iberian_group:0 "$baron_administrative_male_arabic_group$"
+ baron_administrative_muslim_female_iberian_group:0 "$baron_administrative_female_arabic_group$"
+ barony_administrative_muslim_iberian_group:0 "$barony_administrative_arabic_group$"
+ 
+ baron_administrative_male_arabic_group:0 "Sheikh"
+ baron_administrative_female_arabic_group:0 "Shaykhah"
+ barony_administrative_arabic_group:0 "Baladiyah"
+ count_administrative_male_islam_religion:0 "Nā'ib"
+ count_administrative_female_islam_religion:0 "Nā'ibah"
+ county_administrative_islam_religion:0 "Qaryah"
+ duke_administrative_male_islam_religion:0 "Wālī"
+ duke_administrative_female_islam_religion:0 "Wālīah"
+ duchy_administrative_islam_religion:0 "Mintiqah"
+ king_administrative_male_islam_religion:0 "Wālī al-'Azim"
+ king_administrative_female_islam_religion:0 "Wālīah al-'Azimah"
+ kingdom_administrative_islam_religion:0 "Siyādah"
+ 
+ king_administrative_independent_male_islam_religion:0 "Sultan"
+ king_administrative_independent_female_islam_religion:0 "Sultanah"
+ kingdom_administrative_independent_islam_religion:0 "Sultanate"
+
+
+# Tribal 
+ baron_tribal_male_arabic_group:1 "Za'im"
+ baron_tribal_female_arabic_group:1 "Za'imah"
+ barony_tribal_arabic_group:1 "Qaryah"
+ count_tribal_male_arabic_group:0 "Qā'id"
+ count_tribal_female_arabic_group:0 "Qā'idah"
+ county_tribal_arabic_group:0 "Balad"
+ duke_tribal_male_arabic_group:0 "Wakīl"
+ duke_tribal_female_arabic_group:0 "Wakīlah"
+ duchy_tribal_arabic_group:0 "Ittihad"
+ king_tribal_male_arabic_group:1 "Ra'is"
+ king_tribal_female_arabic_group:1 "Ra'isah"
+ kingdom_tribal_arabic_group:1 "Siyadah"
+ emperor_tribal_male_arabic_group:1 "Malik al-Mu'azzam"
+ emperor_tribal_female_arabic_group:1 "Malikah al-Mu'azzamah"
+ empire_tribal_arabic_group:0 "Sitrah"
+ 
+ # Nomad 
+ baron_nomad_male_arabic_group:1 "Za'im"
+ baron_nomad_female_arabic_group:1 "Za'imah"
+ barony_nomad_arabic_group:1 "Qarya"
+ count_nomad_male_arabic_group:0 "Qā'id"
+ count_nomad_female_arabic_group:0 "Qā'idah"
+ county_nomad_arabic_group:0 "Balad"
+ duke_nomad_male_arabic_group:0 "Wakīl"
+ duke_nomad_female_arabic_group:0 "Wakīlah"
+ duchy_nomad_arabic_group:0 "Ittihad"
+ king_nomad_male_arabic_group:1 "Ra'is"
+ king_nomad_female_arabic_group:1 "Ra'isah"
+ kingdom_nomad_arabic_group:1 "Siyada"
+ emperor_nomad_male_arabic_group:1 "Malik al-Mu'azzam"
+ emperor_nomad_female_arabic_group:1 "Malikah al-Mu'azzamah"
+ empire_nomad_arabic_group:0 "Sitrah"
+ 
+ count_herder_male_arabic_group: "Ra'i"
+ count_herder_female_arabic_group: "Ra'iah"
+ 
+ # Berber Nomad
+ baron_nomad_male_berber_group:0 "Ajella"
+ baron_nomad_female_berber_group:0 "Tajallit"
+ barony_nomad_berber_group:1 "Anemjur"
+ count_nomad_male_berber_group:0 "Amasiw"
+ count_nomad_female_berber_group:0 "Tamasiwt"
+ county_nomad_berber_group:0 "Amasiwa"
+ duke_nomad_male_berber_group:0 "Iser"
+ duke_nomad_female_berber_group:0 "Iserah"
+ duchy_nomad_berber_group:0 "Iser"
+ king_nomad_male_berber_group:1 "Akerwa"
+ king_nomad_female_berber_group:1 "Akerwah"
+ kingdom_nomad_berber_group:1 "Akwar"
+ emperor_nomad_male_berber_group:1 "Amenkad"
+ emperor_nomad_female_berber_group:1 "Tagellidt"
+ empire_nomad_berber_group:0 "Amenkud"
+ 
+ # Somalian Nomad
+ baron_nomad_male_somalian_group:0 "Akil"
+ baron_nomad_female_somalian_group:0 "Akilad"
+ count_nomad_male_somalian_group:0 "Islan"
+ count_nomad_female_somalian_group:0 "Islanad"
+ duke_nomad_male_somalian_group:0 "Gerad"
+ duke_nomad_female_somalian_group:0 "Geradad"
+ king_nomad_male_somalian_group:0 "Ughaz"
+ king_nomad_female_somalian_group:0 "Ughazad"
+ king_nomad_male_somalian_group:0 "Suldaan"
+ king_nomad_female_somalian_group:0 "Suldaanad"
+ emperor_nomad_male_somalian_group:0 "Boqor"
+ emperor_nomad_female_somalian_group:0 "Boqorad"
+ 
+ # Bejan Nomad
+ baron_nomad_male_beja:0 "Omda"
+ baron_nomad_female_beja:0 "Omda"
+ count_nomad_male_beja:0 "Nazir"
+ count_nomad_female_beja:0 "Nazira"
+ duke_nomad_male_beja:0 "Emri"
+ duke_nomad_female_beja:0 "Emriza"
+ king_nomad_male_beja:0 "Mulk"
+ king_nomad_female_beja:0 "Mulka"
+ emperor_nomad_male_beja:0 "Asaltan"
+ emperor_nomad_female_beja:0 "Asaltna"
+ 
+ count_herder_male_arabic_group: "Rā'i"
+ count_herder_female_arabic_group: "Rā'iah"
+ 
+ # Islamic Prince/Princess
+ prince_male_islamic_group:0 "Wālī Ahad"
+ prince_female_islamic_group:0 "Wālīah Ahad"
+ prince_male_islamic_group_empire:0 "Amīr al-Dawlah"
+ prince_female_islamic_group_empire:0 "Amīrah al-Dawlah"
+ 
+ # Generic Arabic
+ prince_male_arabic_group:0 "Wālī Ahad"
+ prince_female_arabic_group:0 "Wālīah Ahad"
+ prince_male_arabic_group_empire:0 "Amīr al-Ahad"
+ prince_female_arabic_group_empire:0 "Amīrah al-Ahad"
+ 
+ # Andalusian
+ prince_male_andalusian_group:0 "Wālī al-Dawlah"
+ prince_female_andalusian_group:0 "Wālīah al-Dawlah"
+  
+### Islamic ###
+ # Clan / Iqta, by Ace (Muslim Enhancements)
+ baron_islamic_male_dravidian_group:0 "Sarkar"
+ baron_islamic_female_dravidian_group:0 "Begum"
+ barony_islamic_dravidian_group:0 "Haqumat"
+ count_islamic_male_dravidian_group:0 "Sardar"
+ count_islamic_female_dravidian_group:0 "Khatun"
+ county_islamic_dravidian_group:0 "Dawlat"
+ duke_islamic_male_dravidian_group:0 "Raja"
+ duke_islamic_female_dravidian_group:0 "Rani"
+ duchy_islamic_dravidian_group:0 "Raj"
+ king_islamic_male_dravidian_group:0 "Maharaja"
+ kingdom_islamic_dravidian_group:0 "Mamlikat"
+ king_islamic_female_dravidian_group:0 "Maharani"
+ emperor_islamic_male_dravidian_group:0 "Shahanshah"
+ emperor_islamic_female_dravidian_group:0 "Maharani"
+ 
+ ### Sicilian Taifas ###
+ # Feudal / Clan
+ count_feudal_male_siqilli_independent:0 "Qa'id"
+ count_feudal_female_siqilli_independent:0 "Qa'ida"
+ county_feudal_siqilli_independent:0 "[CHARACTER.Custom('ME_CountySiqilli')]"
+ county_siqilli_taifa:0 "Taifa"
+ county_siqilli_default:0 "$county_feudal_arabic_group$"
+
+ ### Maltese ###
+ ##Barony
+ baron_feudal_male_maltese:0 "Baruni" #google translate says the correct term is Barun, but I haven't found a source that uses it, only Baruni was used  
+ baron_feudal_female_maltese:0 "Barunessa"
+ barony_feudal_maltese:0 "Barony" #google translate says the correct term is Baronija, but I have a suspicion that google translate is wrong due to the results it has given me in the past.
+ ##County
+ count_feudal_male_maltese:0 "Konti"
+ count_feudal_female_maltese:0 "Kontessa"
+ county_feudal_maltese:0 "Kontea"
+ ##Duchy
+ duke_feudal_male_maltese:0 "Duka"
+ duke_feudal_female_maltese:0 "Dukessa"
+ duchy_feudal_maltese:0 "Dukat"
+ ##Kingdom
+ king_feudal_male_maltese:0 "Re" #some sources used Sultan and Sultana, they maybe more historically accurate  
+ king_feudal_female_maltese:0 "Reġina"
+ kingdom_feudal_maltese:0 "Renju"
+ king_feudal_muslim_male_maltese:0 "Sultan"
+ king_feudal_muslim_female_maltese:0 "Sultana"
+ kingdom_feudal_muslim_maltese:0 "Sultanat"
+ ##Empire
+ emperor_feudal_male_maltese:0 "Imperatur"
+ emperor_feudal_female_maltese:0 "Imperatriċi"
+ empire_feudal_maltese:0 "Imperu"
+ #Maltese Republic
+ ##County
+ count_republic_male_maltese:0 "Sindku"
+ count_republic_female_maltese:0 "Sindku" 
+ 
+ ## Austronesian Group ###
+ baron_feudal_muslim_male_austronesian_group:0 "Qā'id"
+ baron_feudal_muslim_female_austronesian_group:0 "Qā'idah"
+ count_feudal_muslim_male_austronesian_group:0 "Wālī"
+ count_feudal_muslim_female_austronesian_group:0 "Wālīah"
+ duke_feudal_muslim_male_austronesian_group:0 "Amir"
+ duke_feudal_muslim_female_austronesian_group:0 "Amirah"
+ king_feudal_muslim_male_austronesian_group:0 "Sultan"
+ king_feudal_muslim_female_austronesian_group:0 "Sultanah"
+ emperor_feudal_muslim_male_austronesian_group:0 "Sultan Agong"
+ emperor_feudal_muslim_female_austronesian_group:0 "Sultanah Agong"
+ barony_feudal_islam_austronesian_group:0 "Daerah"
+ county_feudal_islam_austronesian_group:0 "Qaryah"
+ duchy_feudal_islam_austronesian_group:0 "Negeri"
+ king_feudal_islam_austronesian_group:0 "Kesultanan"
+ empire_feudal_islam_austronesian_group:0 "Kesultanan Agong"
+ 
+ baron_feudal_muslim_male_austronesian_group_independent:0 "Wālī"
+ baron_feudal_muslim_female_austronesian_group_independent:0 "Wālīah"
+ count_feudal_muslim_male_austronesian_group_independent:0 "Sultan Kecil"
+ count_feudal_muslim_female_austronesian_group_independent:0 "Sultanah Kecil"
+ duke_feudal_muslim_male_austronesian_group_independent:0 "Sultan"
+ duke_feudal_muslim_female_austronesian_group_independent:0 "Sultanah"
+ king_feudal_muslim_male_austronesian_group_independent:0 "Sultan Besar"
+ king_feudal_muslim_female_austronesian_group_independent:0 "Sultanah Besar"
+ barony_feudal_islam_austronesian_group_independent:0 "Qaryah"
+ county_feudal_islam_austronesian_group_independent:0 "Kesultanan Kecil"
+ duchy_feudal_islam_austronesian_group_independent:0 "Kesultanan"
+ king_feudal_islam_austronesian_group_independent:0 "Kesultanan Besar"

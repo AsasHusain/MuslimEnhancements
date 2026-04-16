@@ -1,0 +1,2689 @@
+﻿k_maghreb = {
+	867.1.1 = {	change_development_level = 7 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 14 }
+	
+	788.1.1 = {
+		holder = 159501
+		government = clan_government
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505 # Yahya I
+	}
+	864.1.1 = {
+		holder = 159506 # Yahya II
+	}
+	1055.1.1 = {
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = {
+					set_court_language = language_arabic
+					if = {
+						limit = { NOT = { knows_court_language_of = this } }
+						learn_court_language_of = this
+					}
+				}
+			}
+		}
+	}
+	1071.1.1 = {
+		holder = 32965
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1266.1.1 = {
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32997
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33004
+	}
+	
+}
+
+
+d_marrakesh = {
+	1061.1.1 = {
+		government = clan_government
+		liege = k_maghreb
+		holder = 32965 #Yusuf b.Tashfin
+	}
+	1071.1.1 = {
+		holder = 32965
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+}
+
+
+c_marrakesh = {
+	867.1.1 = {	change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 53 }
+
+	767.1.1 = {
+		holder = 210039
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	864.1.1 = {
+		holder = 159510 # Yahya al-Miqdam
+	}
+	1055.1.1 = {
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1071.1.1 = {
+		holder = 32965
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_tadla = {
+	767.1.1 = {
+		holder = 210039
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	864.1.1 = {
+		holder = 159510 # Yahya al-Miqdam
+	}
+
+	1055.1.1 = {
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1061.1.1 = {
+		government = clan_government
+		liege = d_marrakesh
+		holder = 32965 #Yusuf b.Tashfin
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_fazaz = {
+	767.1.1 = {
+		holder = 210039
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	864.1.1 = {
+		holder = 159510 # Yahya al-Miqdam
+	}
+	1055.1.1 = {
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1061.1.1 = {
+		government = clan_government
+		liege = d_marrakesh
+		holder = 32965 #Yusuf b.Tashfin
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_tamasna = {
+	767.1.1 = {
+		government = clan_government
+		holder = 168276
+	}
+	792.1.1 = {
+		holder = 168277
+	}
+	842.1.1 = {
+		government = clan_government
+		holder = 168278
+	}
+	885.1.1 = {
+		holder = 168279
+	}
+	917.1.1 = {
+		holder = 168280
+	}
+	961.1.1 = {
+		holder = 168281
+	}
+	989.1.1 = {
+		holder = baranis0011
+	}
+
+	1029.1.1 = {
+		holder = baranis0012
+	}
+	1054.1.1 = {
+		holder = baranis0013
+	}
+	1060.1.1 = {
+		government = clan_government
+		liege = d_marrakesh
+		holder = 32965 #Yusuf b.Tashfin
+	}
+	1173.1.1 = {
+		holder = 32980 # Ya'qub
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_asfi = {
+	867.1.1 = {	change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
+	
+	767.1.1 = {
+		government = clan_government
+		holder = 168276
+	}
+	792.1.1 = {
+		holder = 168277
+	}
+	842.1.1 = {
+		government = clan_government
+		holder = 168278
+	}
+	885.1.1 = {
+		holder = 168279
+	}
+	917.1.1 = {
+		holder = 168280
+	}
+	961.1.1 = {
+		holder = 168281
+	}
+	989.1.1 = {
+		holder = baranis0011
+	}
+
+	1029.1.1 = {
+		holder = baranis0012
+	}
+	1054.1.1 = {
+		holder = baranis0013
+	}
+	1060.1.1 = {
+		government = clan_government
+		liege = d_marrakesh
+		holder = 32965 #Yusuf b.Tashfin
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_tinmallal = {
+	867.1.1 = {	change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
+	
+	767.1.1 = {
+		holder = 210038
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	864.1.1 = {
+		holder = 159510 # Yahya al-Miqdam
+	}
+	1055.1.1 = {
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1071.1.1 = {
+		holder = 32965
+	}
+	1106.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32981
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+d_sous = {
+	867.1.1 = {	change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
+
+}
+
+c_sous = {
+	842.1.1 = {
+		government = tribal_government
+		holder = butr0007
+	}
+	888.1.1 = {
+		holder = butr0012
+	}
+	913.1.1 = {
+		holder = butr0011
+	}
+	953.1.1 = {
+		holder = butr0010
+	}
+	985.1.1 = {
+		holder = butr0009
+	}
+	1008.1.1 = {
+		holder = butr0008
+	}
+	1046.1.1 = {
+		liege = k_maghreb
+		holder = butr0001
+	}
+	
+	1055.1.1 = {
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1173.1.1 = {
+		holder = butr0013
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32984
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1266.1.1 = {
+		holder = 32990
+	}
+	1269.1.1 = {
+		liege = "d_marrakesh"
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_agadir = {
+	769.1.1 = {
+		holder = 273107
+		government = tribal_government
+	}
+	812.1.1 = {
+		#liege = "k_maghreb"
+		holder = 273106
+	}
+	850.1.1 = {
+		holder = 273097
+	}
+	882.1.1 = {
+		holder = 273080
+	}
+	901.1.1 = {
+		holder = 273089
+	}
+	926.1.1 = {
+		holder = 273090
+	}
+	964.1.1 = {
+		holder = 273091
+	}
+	981.1.1 = {
+		holder = 273092
+	}
+	1002.1.1 = {
+		holder = 273093
+	}
+	1036.1.1 = {
+		holder = 273094
+	}
+	1056.1.1 = {
+		liege = "k_maghreb"
+	}
+	
+	1057.1.1 = {
+		holder = 3853
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1173.1.1 = {
+		holder = butr0013
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32984
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1266.1.1 = {
+		holder = 32990
+	}
+	1269.1.1 = {
+		liege = "d_marrakesh"
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_ifni = {
+	769.1.1 = {
+		holder = 273107
+		government = tribal_government
+	}
+	812.1.1 = {
+		#liege = "k_maghreb"
+		holder = 273106
+	}
+	850.1.1 = {
+		holder = 273097
+	}
+	882.1.1 = {
+		holder = 273080
+	}
+	901.1.1 = {
+		holder = 273089
+	}
+	926.1.1 = {
+		holder = 273090
+	}
+	964.1.1 = {
+		holder = 273091
+	}
+	981.1.1 = {
+		holder = 273092
+	}
+	1002.1.1 = {
+		holder = 273093
+	}
+	1036.1.1 = {
+		holder = 273094
+	}
+	1056.1.1 = {
+		liege = "k_maghreb"
+	}
+	1075.1.1 = {
+		holder = tagelmust0007
+	}
+	1098.1.1 = {
+		holder = tagelmust0008
+	}
+	1132.1.1 = {
+		holder = tagelmust0009
+	}
+	1169.1.1 = {
+		holder = tagelmust0010
+	}
+	1208.1.1 = {
+		holder = tagelmust0011
+	}
+}
+
+
+c_draa = {
+	842.1.1 = {
+		government = tribal_government
+		holder = butr0007
+	}
+	888.1.1 = {
+		holder = butr0012
+	}
+	913.1.1 = {
+		holder = butr0011
+	}
+	953.1.1 = {
+		holder = butr0010
+	}
+	985.1.1 = {
+		holder = butr0009
+	}
+	1008.1.1 = {
+		holder = butr0008
+	}
+	1046.1.1 = {
+		liege = k_maghreb
+		holder = butr0001
+	}
+	1064.1.1 = {
+		holder = butr0002
+	}
+	1097.1.1 = {
+		holder = butr0003
+	}
+	1119.1.1 = {
+		holder = butr0004
+	}
+	1143.1.1 = {
+		holder = butr0005
+	}
+	1173.1.1 = {
+		holder = butr0013
+	}
+	
+}
+
+d_canarias = {
+	867.1.1 = {	change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 20 }
+}
+
+c_canarias = {
+	767.1.1 = {
+		holder = 210040
+	government = tribal_government
+	}
+	850.1.1 = {
+		holder = 166423
+	}
+	877.1.1 = {
+		holder = 166424
+	}
+	906.1.1 = {
+		holder = 166425
+	}
+	929.1.1 = {
+		holder = 166426
+	}
+	941.1.1 = {
+		holder = 166427
+	}
+	964.1.1 = {
+		holder = 166428
+	}
+	979.1.1 = {
+		holder = 166429
+	}
+	994.1.1 = {
+		holder = 166430
+	}
+	1010.1.1 = {
+		holder = 166431
+	}
+	1030.1.1 = {
+		holder = 166432
+	}
+	
+	1066.1.1 = {
+		holder = 20842
+	}
+	1092.1.1 = {
+		holder = 73664
+	}
+	1106.1.1 = {
+		holder = 73663
+	}
+	1144.1.1 = {
+		holder = 73662
+	}
+	1169.1.1 = {
+		holder = 73661
+	}
+	1180.1.1 = {
+		holder = 73660
+	}
+	1212.1.1 = {
+		holder = 73659
+	}
+	1234.1.1 = {
+		holder = 73658
+	}
+	1273.1.1 = {
+		holder = 73657
+	}
+	1305.1.1 = {
+		holder = 73656
+	}
+	1330.1.1 = {
+		holder = 73655
+	}
+}
+
+c_fuerteventura = {
+	867.1.1 = {
+		holder = 210041
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = 20843
+	}
+	1178.1.1 = {
+		holder = tagatemiotise_10 # Fictional placeholder
+	}
+}
+
+c_madeira = {
+	867.1.1 = {	change_development_level = 1 }
+	1066.1.1 = { change_development_level = 1 }
+	1178.1.1 = { change_development_level = 2 }
+	867.1.1 = {
+		holder = 210042
+		government = tribal_government
+		liege = 0
+	}
+	1066.1.1 = {
+		holder = 20844
+	}
+	1178.1.1 = {
+		holder = tejalire_4 # Fictional placeholder
+	}
+}
+
+d_tafilalt = {
+	867.1.1 = {	change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
+
+	1178.1.1 = {
+		holder = hintata_4 # Muhammad of the Hintata
+		liege = k_maghreb
+	}
+}
+
+c_sijilmasa = {
+	867.1.1 = {	change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 31 }
+
+	757.1.1 = {
+		government = clan_government
+		holder = me_sijilmasa_001 # 'Isa ibn Mazyad al-Aswad, Founder of Sijilmasa
+	}
+	772.1.1 = {
+		holder = me_sijilmasa_002 # Abu al-Qasim Samgu ibn Wasul al-Miknasi
+	}
+	784.1.1 = {
+		holder = butr0015 # al-Yasa' 'al-Wazir' ibn Abu al-Qasim 
+	}
+	790.1.1 = {
+		holder = 1228834 # Abu Muntasir al-Yasa' ibn Abu al-Qasim 
+	}
+	824.1.1 = {
+		holder = 1228835 # Midrar 'Al-Muntasir' ibn Abu Muntasir al-Yasa', First Midrarid
+	}
+	867.1.1 = {
+		holder = 1228838 # Maymun 'ibn ar-Rustamiyya' ibn Midrar Al-Muntasir
+	}
+	869.1.1 = {
+		holder = 1228835 # Midrar 'Al-Muntasir' ibn Abu Muntasir al-Yasa'              ## The people of Sijilmasa depose 'Ibn ar-Rustamiyya', they place Midrar 'Al-Muntasir' on the throne again
+	}
+	869.4.4 = {
+		holder = 1228839 # Maymun 'al-Amir' ibn Midrar Al-Muntasir.       ##Midrar 'Al-Muntasir' tries to place 'Ibn ar-Rustamiyya' on the throne again, the people depose him and instead place 'al-Amir' on the throne
+	}
+	877.1.1 = {
+		holder = 1228840 # Muhammad ibn Maymun 'al-Amir'
+	}
+	883.1.1 = {
+		holder = 1228841 # al-Yasa' ibn Maymun 'al-Amir'
+	}
+	909.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_003 # Ibrahim ibn Ghaleb, Fatimid governer of Sijilmasa
+	}
+	909.3.1 = {
+		liege = 0
+		holder = me_sijilmasa_004 # 'al-Fath' Wasul ibn Maym?n ibn Thak/Baqiyya
+	}
+	913.1.1 = {
+		holder = me_sijilmasa_005 # Ahmad ibn 'al-Fath' Wasul
+	}
+	921.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_008 # Muhammad 'al-Mu'tazz' ibn Muhammad ibn Saru
+	}
+	933.1.1 = {
+		holder = me_sijilmasa_009 # Muhammad ibn Muhammad 'al-Mu'tazz'
+	}
+	942.1.1 = {
+		holder = me_sijilmasa_010 # Muhammad ibn Muhammad ibn Muhammad 'al-Mu'tazz'
+	}
+	942.3.1 = {
+		liege = 0
+		holder = me_sijilmasa_011 # Muhammad ibn 'al-Fath' Wasul
+	}
+	958.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_013 # Placeholder for Fatimid Governer
+	}
+	958.3.1 = {
+		liege = 0
+		holder = me_sijilmasa_010 
+	}
+	963.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_012 # Abu Muhammad Abdallah ibn Muhammad ibn Muhammad ibn Muhammad 'al-Mu'tazz'
+	}
+	##The End of Midrarid rule in Sijilmasa
+	976.1.1 = {
+		liege = "k_andalusia" #Coins were minted in the name of the Umayyad Caliph
+		holder = 1236308 # Khazrun ibn Fulful
+	}
+	979.1.1 = {
+		holder = 1236309 # Wanudin ibn Khazrun
+	}
+	980.1.1 = {
+		holder = 155121 # Temporary Occupation of Ziri ibn Attiya
+	}
+	999.1.1 = {
+		liege = 0
+		holder = 1236309 # Wanudin ibn Khazrun
+	}
+	1009.1.1 = {
+		holder = me_maghrawa_009 # Mas'ud ibn Wanudin
+	}
+	1022.1.1 = {
+		holder = me_maghrawa_010 # Muhammad ibn Mas'ud
+	}
+	1026.1.1 = {
+		holder = 1236312 # Mas'ud ibn Muhammad
+	}
+
+	1055.1.1 = {
+		liege = "k_maghreb"
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1061.1.1 = {
+		holder = 273087
+	}
+	1099.1.1 = {
+		holder = 32969
+	}
+	1143.1.1 = {
+		holder = 32971
+	}
+	1145.1.1 = {
+		holder = 32972
+	}
+	1146.1.1 = {
+		holder = 32970
+	}
+	1147.1.1 = {
+		holder = 32978
+	}
+	1163.1.1 = {
+		holder = 224000
+	}
+	1178.1.1 = {
+		holder = hintata_4 # Muhammad of the Hintata
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		liege = d_fes
+		holder = 32983
+	}
+	1224.1.1 = {
+		liege = k_maghreb
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+	}
+	1262.1.1 = {
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+c_tudgha = {
+	842.1.1 = {
+		government = tribal_government
+		holder = butr0007
+	}
+	888.1.1 = {
+		holder = butr0012
+	}
+	913.1.1 = {
+		holder = butr0011
+	}
+	953.1.1 = {
+		holder = butr0010
+	}
+	985.1.1 = {
+		holder = butr0009
+	}
+	1008.1.1 = {
+		holder = butr0008
+	}
+	1046.1.1 = {
+		liege = k_maghreb
+		holder = butr0001
+	}
+	
+	1055.1.1 = {
+		liege = "k_maghreb"
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1178.1.1 = {
+		holder = hintata_6 # Isa
+		liege = d_tafilalt
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		holder = 32984
+	}
+	1224.1.1 = {
+		holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1266.1.1 = {
+		holder = 32990
+	}
+	1269.1.1 = {
+		liege = "d_marrakesh"
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+
+c_ziz = {
+	800.1.1 = {
+		government = clan_government
+		holder = 1228834 # Abu Muntasir al-Yasa' ibn Abu al-Qasim 
+	}
+	824.1.1 = {
+		holder = 1228835 # Midrar 'Al-Muntasir' ibn Abu Muntasir al-Yasa', First Midrarid
+	}
+	867.1.1 = {
+		holder = 1228838 # Maymun 'ibn ar-Rustamiyya' ibn Midrar Al-Muntasir
+	}
+	869.1.1 = {
+		holder = 1228835 # Midrar 'Al-Muntasir' ibn Abu Muntasir al-Yasa'              ## The people of Sijilmasa depose 'Ibn ar-Rustamiyya', they place Midrar 'Al-Muntasir' on the throne again
+	}
+	869.4.4 = {
+		holder = 1228839 # Maymun 'Ibn Thakiyya/Baqiyya' ibn Midrar Al-Muntasir.       ##Midrar 'Al-Muntasir' tries to place 'Ibn ar-Rustamiyya' on the throne again, the people depose him and instead place 'Ibn Thakiyya/Baqiyya' on the throne
+	}
+	877.1.1 = {
+		holder = 1228840 # Muhammad ibn Maymun 'al-Amir'
+	}
+	883.1.1 = {
+		holder = 1228841 # al-Yasa' ibn Maymun 'al-Amir'
+	}
+	909.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_003 # Ibrahim ibn Ghaleb, Fatimid governer of Sijilmasa
+	}
+	909.3.1 = {
+		liege = 0
+		holder = me_sijilmasa_004 # 'al-Fath' Wasul ibn Maym?n ibn Thak/Baqiyya
+	}
+	913.1.1 = {
+		holder = me_sijilmasa_005 # Ahmad ibn 'al-Fath' Wasul
+	}
+	921.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_008 # Muhammad 'al-Mu'tazz' ibn Muhammad ibn Saru
+	}
+	933.1.1 = {
+		holder = me_sijilmasa_009 # Muhammad ibn Muhammad 'al-Mu'tazz'
+	}
+	942.1.1 = {
+		holder = me_sijilmasa_010 # Muhammad ibn Muhammad ibn Muhammad 'al-Mu'tazz'
+	}
+	942.3.1 = {
+		liege = 0
+		holder = me_sijilmasa_011 # Muhammad ibn 'al-Fath' Wasul
+	}
+	958.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_013 # Placeholder for Fatimid Governer
+	}
+	958.3.1 = {
+		liege = 0
+		holder = me_sijilmasa_010 
+	}
+	963.1.1 = {
+		liege = "k_africa" # Fatimids
+		holder = me_sijilmasa_012 # Abu Muhammad Abdallah ibn Muhammad ibn Muhammad ibn Muhammad 'al-Mu'tazz'
+	}
+	##The End of Midrarid rule in Sijilmasa
+	976.1.1 = {
+		liege = "k_andalusia" #Coins were minted in the name of the Umayyad Caliph
+		holder = 1236308 # Khazrun ibn Fulful
+	}
+	979.1.1 = {
+		holder = 1236309 # Wanudin ibn Khazrun
+	}
+	980.1.1 = {
+		holder = 155121 # Temporary Occupation of Ziri ibn Attiya
+	}
+	999.1.1 = {
+		liege = 0
+		holder = 1236309 # Wanudin ibn Khazrun
+	}
+	1009.1.1 = {
+		holder = me_maghrawa_009 # Mas'ud ibn Wanudin
+	}
+	1022.1.1 = {
+		holder = me_maghrawa_010 # Muhammad ibn Mas'ud
+	}
+	1026.1.1 = {
+		holder = 1236312 # Mas'ud ibn Muhammad
+	}
+
+	1055.1.1 = {
+		liege = "k_maghreb"
+		holder = 32958
+	}
+	1057.1.1 = {
+		holder = 3853
+	}
+	1061.1.1 = {
+		holder = 273087
+	}
+	1178.1.1 = {
+		holder = hintata_7 # Musa
+		liege = d_tafilalt
+	}
+	1184.7.29 = {
+		holder = 32980
+	}
+	1199.1.23 = {
+		holder = 224005
+	}
+	1213.1.1 = {
+		liege = d_fes
+	holder = 32983
+	}
+	1224.1.1 = {
+		liege = k_maghreb
+	holder = 32982
+	}
+	1225.1.1 = {
+		holder = 32983
+	}
+	1227.1.1 = {
+		holder = 32984
+	}
+	1229.1.1 = {
+		holder = 32985
+	}
+	1233.1.1 = {
+		holder = 32986
+	}
+	1242.1.1 = {
+		holder = 32987
+	}
+	1248.1.1 = {
+		holder = 32989
+	}
+	1262.1.1 = {
+		liege = "d_marrakesh"
+	}
+	1262.1.1 = {
+		holder = 32990
+	}
+	1269.1.1 = {
+		holder = 32998
+	}
+	1286.3.20 = {
+		holder = 32999
+	}
+	1300.1.1 = {
+		holder = 33002
+	}
+	1331.8.1 = {
+		holder = 33006
+	}
+}
+
+d_fes = {
+	867.1.1 = {	change_development_level = 10 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 20 }
+
+	866.1.1 = {
+		government = clan_government
+		liege = "k_maghreb"
+	}
+	866.1.1 = {
+		holder = 159506 # Yahya II
+	}
+	877.1.1 = {
+		liege = 0
+	}
+	
+	950.1.1 = {
+		holder = me_ifrinid_027 # Ya'la ibn Muhammad
+	}
+	958.6.1 = {
+		holder = 0
+	}
+	
+	991.6.1 = {
+		holder = 155121 # Ziri ibn Atiyyah al-Maghrawi
+	}
+	998.10.13 = {
+		holder = yemeni0039 # al-Muzaffar
+		liege = k_andalusia
+	}
+	999.1.1 = {
+		holder = andalusian0097 # Walih Wadih of Toledo
+	}
+	1000.1.1 = {
+		holder = 155008 # al-Mu'izz ibn Ziri ibn Atiyyah
+#		liege = "k_maghreb" # Was appointed governor of al-Maghreb al-Aqsa by the Umayyads, but their title rank is kingdom and wouldn't be able to vassalize him
+	}
+	1026.1.1 = {
+		holder = 155009 # Hamamah ibn al-Mu'izz ibn Atiyyah
+	}
+	1031.1.1 = {
+		liege = 0 # The Umayyads collapse
+	}
+	1040.1.1 = {
+		holder = 155010 # Dunas ibn Hammama ibn al-Mu'izz ibn Atiyyah
+	}
+	1059.1.1 = {
+		holder = 155011 # al-Futuh ibn Dunas ibn Hammama ibn al-Mu'izz
+	}
+	1060.1.1 = { # Ruled at the same time as his brother, just a different part of the city
+		holder = 155012 # Ajissa ibn Dunas ibn Hammama ibn al-Mu'izz
+	}
+	1061.1.1 = {
+		holder = 155011
+	}
+	1063.1.1 = {
+		holder = 155015
+	}
+	1068.1.1 = {
+		holder = 155016
+	}
+	1070.3.18 = {
+		liege = "k_maghreb"
+	}
+	1070.3.18 = {
+		holder = 32965
+	}
+	1075.1.1 = {
+		holder = 155033
+	}
+	1092.1.1 = {
+		holder = 155083
+	}
+	1106.12.6 = {
+		holder = 155075
+	}
+	1115.1.1 = {
+		holder = 155083
+	}
+	1146.1.1 = {
+		liege = 0
+	}
+	1146.1.1 = {
+		holder = 32978
+	}
+	1147.1.1 = {
+		liege = "k_maghreb"
+	}
+	1147.1.1 = {
+		holder = 155083
+	}
+	1152.1.1 = {
+		holder = 155088
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1191.1.1 = {
+		holder = 32983
+	}
+	1213.1.1 = {
+		holder = 32992
+	}
+	1223.1.1 = {
+		holder = 32987
+	}
+	1242.1.1 = {
+		holder = 32989
+	}
+	1248.1.1 = {
+		liege = 0
+	}
+	1248.1.1 = {
+		holder = 32996
+	}
+	1258.1.1 = {
+		holder = 32997
+	}
+	1269.1.1 = {
+		liege = "k_maghreb"
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+}
+
+c_fes = {
+	867.1.1 = {	change_development_level = 14 }
+	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 54 }
+
+	767.1.1 = {
+		holder = 210037
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	866.1.1 = {
+		liege = "d_fes"
+		holder = 159506 # Yahya II
+	}
+	
+	950.1.1 = {
+		holder = me_ifrinid_027 # Ya'la ibn Muhammad
+	}
+	952.1.1 = {
+		holder = me_ifrinid_035 # Muhammad ibn al-Khayr ibn Muhammad ibn Ashirah (Ya'la's Governor)
+		liege = "d_fes"
+	}
+	953.1.1 = {
+		holder = me_ifrinid_029 # Ahmad ibn Abi Bakr (Ya'la's Governor)
+	}
+	
+	991.6.1 = {
+		holder = 155121 # Ziri ibn Atiyyah al-Maghrawi
+	}
+	998.10.13 = {
+		holder = yemeni0039 # Walih al-Muzaffar of Fes
+	}
+	999.1.1 = {
+		holder = andalusian0097 # Walih Wadih of Toledo
+	}
+	1000.1.1 = {
+		holder = 155008 # al-Mu'izz ibn Ziri ibn Atiyyah
+	}
+	1026.1.1 = {
+		holder = 155009 # Hamamah ibn al-Mu'izz ibn Atiyyah
+	}
+	1040.1.1 = {
+		holder = 155010 # Dunas ibn Hammama ibn al-Mu'izz ibn Atiyyah
+	}
+	1059.1.1 = {
+		holder = 155011 # al-Futuh ibn Dunas ibn Hammama ibn al-Mu'izz
+	}
+	1060.1.1 = { # Ruled at the same time as his brother, just a different part of the city
+		holder = 155012 # Ajissa ibn Dunas ibn Hammama ibn al-Mu'izz
+	}
+	1061.1.1 = {
+		holder = 155011
+	}
+	1063.1.1 = {
+		holder = 155015
+	}
+	1068.1.1 = {
+		holder = 155016
+	}
+	1070.3.18 = {
+		holder = 32965
+	}
+	1075.1.1 = {
+		holder = 155033
+	}
+	1092.1.1 = {
+		holder = 155083
+	}
+	1106.12.6 = {
+		holder = 155075
+	}
+	1115.1.1 = {
+		holder = 155083
+	}
+	1152.1.1 = {
+		holder = 155088
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1191.1.1 = {
+		holder = 32983
+	}
+	1213.1.1 = {
+		holder = 32992
+	}
+	1223.1.1 = {
+		holder = 32987
+	}
+	1242.1.1 = {
+		holder = 32989
+	}
+	1248.1.1 = {
+		holder = 32996
+	}
+	1258.1.1 = {
+		holder = 32997
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+}
+
+
+c_muluya = {
+	867.1.1 = {	change_development_level = 7 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
+	
+	767.1.1 = {
+		holder = 210037
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	866.1.1 = {
+		liege = "d_fes"
+		holder = 159506 # Yahya II
+	}
+	1015.1.1 = {
+		holder = 155001
+	}
+	1039.1.1 = {
+		holder = 155002
+	}
+	1066.1.1 = {
+		government = clan_government
+		liege = 0
+		holder = 155003
+	}
+	1075.1.1 = {
+		liege = "d_fes" #under Almoravid
+		holder = 155033
+	}
+	1092.1.1 = {
+		holder = 155083
+	}
+	1106.12.6 = {
+		holder = 155075
+	}
+	1115.1.1 = {
+		holder = 155083
+	}
+	1152.1.1 = {
+		holder = 155088
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1191.1.1 = {
+		holder = 32983
+	}
+	1212.7.16 = {
+		liege = "k_maghreb"
+	}
+	1212.7.16 = {
+		holder = 32993
+	}
+	1217.1.1 = {
+		holder = 32994
+	}
+	1240.1.1 = {
+		holder = 32995
+	}
+	1244.1.1 = {
+		liege = 0
+	}
+	1244.1.1 = {
+		holder = 32996
+	}
+	1248.1.1 = {
+		liege = "d_fes"
+	}
+	1258.1.1 = {
+		holder = 32997
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+
+}
+
+
+c_taza = {
+	767.1.1 = {
+		holder = 210037
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	866.1.1 = {
+		liege = "d_fes"
+		holder = 159506 # Yahya II
+	}
+
+	1015.1.1 = {
+		holder = 155001
+	}
+	1039.1.1 = {
+		holder = 155002
+	}
+	1066.1.1 = {
+		government = clan_government
+		liege = 0
+		holder = 155003
+	}
+	1070.3.18 = {
+	}
+	1075.1.1 = {
+		liege = "d_fes" #under Almoravid
+		holder = 155033
+	}
+	1092.1.1 = {
+		holder = 155083
+	}
+	1106.12.6 = {
+		holder = 155075
+	}
+	1115.1.1 = {
+		holder = 155083
+	}
+	1152.1.1 = {
+		holder = 155088
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1191.1.1 = {
+		holder = 32983
+	}
+	1212.7.16 = {
+		liege = "k_maghreb"
+	}
+	1212.7.16 = {
+		holder = 32993
+	}
+	1217.1.1 = {
+		holder = 32994
+	}
+	1240.1.1 = {
+		holder = 32995
+	}
+	1244.1.1 = {
+		liege = 0
+	}
+	1244.1.1 = {
+		holder = 32996
+	}
+	1248.1.1 = {
+		liege = "d_fes"
+	}
+	1258.1.1 = {
+		holder = 32997
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+
+}
+
+
+c_meknes = {
+	1178.1.1 = { change_development_level = 34 }
+
+	767.1.1 = {
+		holder = 210037
+	}
+	788.1.1 = {
+		liege = "k_maghreb"
+	}
+	788.1.1 = {
+		holder = 159501
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	866.1.1 = {
+		liege = "d_fes"
+		holder = 159506 # Yahya II
+	}
+	1001.1.1 = {
+		holder = 155008 # al-Mu'izz ibn Ziri ibn Atiyyah
+	}
+	1026.1.1 = {
+		holder = 155009 # Hamamah ibn al-Mu'izz ibn Atiyyah
+	}
+	1040.1.1 = {
+		holder = 155010 # Dunas ibn Hammama ibn al-Mu'izz ibn Atiyyah
+	}
+	1059.1.1 = {
+		holder = 155011 # al-Futuh ibn Dunas ibn Hammama ibn al-Mu'izz
+	}
+	1060.1.1 = { # Ruled at the same time as his brother, just a different part of the city
+		holder = 155012 # Ajissa ibn Dunas ibn Hammama ibn al-Mu'izz
+	}
+	1061.1.1 = {
+		holder = 155011
+	}
+	1063.1.1 = {
+		holder = 155015
+	}
+	1068.1.1 = {
+		holder = 155016
+	}
+	1070.3.18 = {
+		holder = 32965
+	}
+	1075.1.1 = {
+		holder = 155033
+	}
+	1092.1.1 = {
+		holder = 155083
+	}
+	1106.12.6 = {
+		holder = 155075
+	}
+	1115.1.1 = {
+		holder = 155083
+	}
+	1152.1.1 = {
+		holder = 155088
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1191.1.1 = {
+		holder = 32983
+	}
+	1213.1.1 = {
+		holder = 32992
+	}
+	1223.1.1 = {
+		holder = 32987
+	}
+	1242.1.1 = {
+		holder = 32989
+	}
+	1248.1.1 = {
+		holder = 32996
+	}
+	1258.1.1 = {
+		holder = 32997
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+	
+
+}
+
+
+c_gharb = {
+
+	767.1.1 = {
+		holder = 210038
+	}
+
+	# Awraba Tribe of Walili (Volubilis)
+	780.1.1 = {
+		holder = me_awraba_002
+	}
+
+	809.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159503
+	}
+	836.1.1 = {
+		holder = 159504
+	}
+	848.1.1 = {
+		holder = 159505
+	}
+	864.1.1 = {
+		holder = 159508 # Ali ibn Umar
+		liege = k_maghreb
+	}
+	
+	1005.1.1 = { # Shala (Sala/Chellah) and its surrounding regions conquered by the Ifrinids from the Maghrawids
+		holder = me_ifrinid_045 # Hamamah ibn Ziri ibn Ya'la
+		liege = 0
+	}
+	1020.1.1 = {
+		holder = me_ifrinid_047 # Abu'l Kamal Tamim ibn Ziri ibn Ya'la
+	}
+	1054.6.1 = {
+		holder = me_ifrinid_048 # Hammad ibn Tamim ibn Ziri ibn Ya'la
+	}
+	1057.6.1 = {
+		holder = me_ifrinid_049 # Yusuf ibn Hammad ibn Tamim ibn Ziri
+	}
+	1066.1.1 = {
+		holder = me_ifrinid_050 # Muhammad ibn Tamim ibn Ziri ibn Ya'la, Last Ifrinid before Almoravid conquest
+	}
+	1070.1.1 = { # Region conquered by Almoravids
+		holder = 32965
+		liege = 0
+	}
+	1078.10.8 = {
+		liege = d_rif
+	}
+	1078.10.8 = {
+		holder = 155036
+	}
+	1114.1.1 = {
+		holder = 32966
+	}
+	1122.1.1 = {
+		holder = 32970
+	}
+	1146.1.1 = {
+		holder = 32979
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1173.1.1 = {
+		holder = 32980
+		liege = k_maghreb
+	}
+	1184.7.29 = {
+		holder = 155085
+	}
+	1189.1.1 = {
+		holder = 32992
+	}
+	1223.1.1 = {
+		holder = 32987
+	}
+	1242.1.1 = {
+		holder = 32989
+	}
+	1248.1.1 = {
+		holder = 32996
+		liege = d_fes
+	}
+	1258.1.1 = {
+		holder = 155164
+	}
+	1275.1.1 = {
+		holder = 32997
+	}
+	
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+}
+
+
+d_rif = {
+	1011.1.1 = {
+		holder = 73687 # Caliph Ali ibn Hammud of Andalusia
+		liege = k_andalusia
+	}
+	1016.7.1 = {
+		holder = 73690 # Caliph Yahya al-Muhtal of Andalusia
+	}
+	1018.3.22 = {
+		holder = 159497 # Idris I ibn Ali (Exchanges governorships with his brother)
+	}
+	1035.12.1 = {
+		liege = 0
+	}
+	1039.10.8 = {
+		holder = 159495 # Emir (Caliph) Hasan 'al-Mustansir Billah' ibn Yahya
+	}
+	1042.12.1 = {
+		holder = andalusian0105 # Abu'l Fawz Naja' 'as-Saqlabi'
+	}
+	1043.1.21 = {
+		holder = 159498 # Emir (Caliph) Idris 'al-Muta'ali/Aali Billah' ibn Yahya
+	}
+	1055.5.12 = {
+		holder = 0
+	}
+}
+
+c_tangiers = {
+	867.1.1 = {	change_development_level = 10 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
+	
+	## Idrisids
+	790.1.1 = {
+		holder = 159501
+		government = clan_government
+	}
+	791.6.1 = {
+		holder = me_idrisid_regent_001 # Rashid, ex-slave and regent of Idris II
+	}
+	801.1.1 = {
+		holder = 159502 # Idris II
+	}
+	828.1.1 = {
+		holder = 159509 # al-Qasim ibn Idris II
+		liege = k_maghreb
+	}
+	830.1.1 = {
+		holder = 159507 # Umar ibn Idris II
+	}
+	835.1.1 = {
+		holder = 159508 # Ali ibn Umar
+	}
+
+	950.1.1 = {
+		holder = me_ifrinid_027 # Ya'la ibn Muhammad
+	}
+	
+	998.10.13 = {
+		holder = yemeni0039 # Emir al-Muzaffar of Fes
+		liege = d_fes
+	}
+	999.1.1 = {
+		holder = andalusian0097 # Walih Wadih of Toledo
+	}
+	1000.1.1 = {
+		liege = 0
+	}
+	1011.1.1 = {
+		holder = 73687 # Caliph Ali ibn Hammud of Andalusia
+		liege = d_rif
+	}
+	1016.7.1 = {
+		holder = 73690 # Caliph Yahya al-Muhtal of Andalusia
+	}
+	1018.3.22 = {
+		holder = 159497 # Idris I ibn Ali (Exchanges governorships with his brother)
+	}
+	1035.12.1 = {
+		holder = 159495 # Emir (Caliph) Hasan 'al-Mustansir Billah' ibn Yahya
+		liege = d_rif # (Appointed as governor)
+	}
+	1040.1.1 = {
+		holder = andalusian0105 # Abu'l Fawz Naja' 'as-Saqlabi' (Given governorship)
+	}
+	1042.12.1 = {
+		liege = 0
+	}
+	1043.1.21 = {
+		holder = 159498 # Emir (Caliph) Idris 'al-Muta'ali/Aali Billah' of Rif
+	}
+	1055.5.12 = {
+		liege = 0
+	}
+	1061.1.1 = {
+		holder = 155005 # Suqut ibn Muhammad al-Barghawati
+	}
+	1078.10.8 = {
+		holder = 155036
+	}
+	1114.1.1 = {
+		holder = 32966
+	}
+	1122.1.1 = {
+		holder = 32970
+	}
+	1146.1.1 = {
+		holder = 32979
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1173.1.1 = {
+		holder = 32980
+	}
+	1184.7.29 = {
+		holder = 155085
+	}
+	1189.1.1 = {
+		holder = 32992
+	}
+	1223.1.1 = {
+		holder = 32987
+	}
+	1242.1.1 = {
+		holder = 32989
+	}
+	1244.1.1 = {
+		holder = 155165
+	}
+	1248.1.1 = {
+		liege = 0
+	}
+	1267.1.1 = {
+		liege = d_rif
+	}
+	1267.1.1 = {
+		holder = 155167
+	}
+	1287.1.1 = {
+		holder = 155168
+	}
+	1316.1.1 = {
+		holder = 155169
+	}
+}
+
+
+c_ceuta = {
+	867.1.1 = {	change_development_level = 10 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 34 }
+
+	690.1.1 = {
+		holder = 73980 # Conde Don Julián
+		government = clan_government
+	}
+	850.1.1 = {
+		government = clan_government
+		holder = me_majkasa_001
+	}
+	865.1.1 = {
+		holder = me_majkasa_002
+	}
+	900.1.1 = {
+		holder = me_majkasa_003
+	}
+	915.1.1 = {
+		holder = me_majkasa_004
+	}
+#	931.1.1 = { # Given up to the Umayyads
+#		holder = ###
+#	}
+
+	998.10.13 = {
+		holder = yemeni0039 # Emir al-Muzaffar of Fes
+		liege = d_fes
+	}
+	999.1.1 = {
+		holder = andalusian0097 # Walih Wadih of Toledo
+	}
+	1000.1.1 = {
+		liege = 0
+	}
+	1011.1.1 = {
+		holder = 73687 # Caliph Ali ibn Hammud of Andalusia
+		liege = d_rif
+	}
+	1016.7.1 = {
+		holder = 73690 # Caliph Yahya al-Muhtal of Andalusia
+	}
+	1018.3.22 = {
+		holder = 159497 # Idris I ibn Ali (Exchanges governorships with his brother)
+	}
+	1035.12.1 = {
+		holder = 159495 # Emir (Caliph) Hasan 'al-Mustansir Billah' ibn Yahya
+		liege = d_rif # (Appointed as governor)
+	}
+	1040.1.1 = {
+		holder = andalusian0105 # Abu'l Fawz Naja' 'as-Saqlabi' (Given governorship)
+	}
+	1042.12.1 = {
+		liege = 0
+	}
+	1043.1.21 = {
+		holder = 159498 # Emir (Caliph) Idris 'al-Muta'ali/Aali Billah' of Rif
+	}
+	1055.5.12 = {
+		liege = 0
+	}
+
+	1061.1.1 = {
+		holder = 155005 # Suqut ibn Muhammad al-Barghawati
+	}
+	1078.10.8 = {
+		holder = 32965 # Fell to the Almoravids
+	}
+
+	1083.7.1 = {
+		liege = d_rif
+	}
+	1083.7.1 = {
+		holder = 155036
+	}
+	1114.1.1 = {
+		holder = 32966
+	}
+	1122.1.1 = {
+		holder = 32970
+	}
+	1146.1.1 = {
+		holder = 32979
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1173.1.1 = {
+		holder = 32980
+	}
+	1184.7.29 = {
+		holder = 155085
+	}
+	1189.1.1 = {
+		holder = 32992
+	}
+	1212.7.16 = {
+		liege = k_maghreb
+	}
+	1212.7.16 = {
+		holder = 32993
+	}
+	1217.1.1 = {
+		holder = 32994
+	}
+	1240.1.1 = {
+		holder = 32995
+	}
+	1244.1.1 = {
+		liege = 0
+	}
+	1244.1.1 = {
+		holder = 32996
+	}
+	1248.1.1 = {
+		holder = 155166
+	}
+	1267.1.1 = {
+		holder = 155167
+		liege = d_rif
+	}
+	1287.1.1 = {
+		holder = 155168
+	}
+	1316.1.1 = {
+		holder = 155169
+	}
+}
+
+
+c_melilla = {
+	710.1.1 = {
+		government = clan_government
+		holder = 168254
+	}
+	749.1.1 = {
+		holder = 168255
+	}
+	755.1.1 = {
+		holder = 168256
+	}
+	760.1.1 = {
+		holder = 168257
+	}
+	803.1.1 = {
+		holder = 168258
+	}
+	864.1.1 = {
+		holder = 168259
+	}
+	916.1.1 = {
+		holder = 168260
+	}
+	927.1.1 = {
+		holder = 168261
+	}
+	929.1.1 = {
+		holder = 168264
+	}
+	1063.1.1 = {
+		holder = 200234 # Sheik Muhammad ibn Idris of Malaga
+	}
+	1075.1.1 = {
+		liege = "d_fes" #under Almoravid
+	}
+
+	1099.1.1 = {
+		holder = 155083
+	}
+	1106.12.6 = {
+		holder = 155075
+	}
+	1115.1.1 = {
+		holder = 155083
+	}
+	1152.1.1 = {
+		holder = 155088
+	}
+	1163.1.1 = {
+		holder = 155085
+	}
+	1191.1.1 = {
+		holder = 32983
+	}
+	1212.7.16 = {
+		liege = "k_maghreb"
+	}
+	1212.7.16 = {
+		holder = 32993
+	}
+	1217.1.1 = {
+		holder = 32994
+	}
+	1240.1.1 = {
+		holder = 32995
+	}
+	1244.1.1 = {
+		liege = 0
+	}
+	1244.1.1 = {
+		holder = 32996
+	}
+	1248.1.1 = {
+		liege = "d_fes"
+	}
+	1258.1.1 = {
+		holder = 32997
+	}
+	1286.3.20 = {
+		holder = 32998
+	}
+	1307.5.13 = {
+		holder = 33000
+	}
+	1308.7.28 = {
+		holder = 33001
+	}
+	1310.11.23 = {
+		holder = 33003
+	}
+	1316.1.1 = {
+		holder = 33004
+	}
+
+}

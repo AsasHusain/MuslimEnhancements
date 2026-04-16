@@ -1,0 +1,149 @@
+﻿## Exists to add some flavor for Quraysh trait ##
+
+
+# House Knight
+house_knight_attribute = {
+	adjective = "accolade_house"
+	noun = "accolade_house_knight"
+	accolade_categories = { eminent relationship dynasty educator defensive champion }
+
+	potential = {
+		prowess >= accolade_prowess_requirement_value
+		exists = house
+		house = liege.house
+		NOT = {
+			has_trait = denounced
+		}
+		dynasty = {
+			has_dynasty_perk = kin_legacy_4
+		}
+	}
+	
+	weight = {
+		# Should be a pretty common pick if you've bothered to unlock the legacy
+		value = accolade_standard_base_value
+		# Scope over to the liege to see if they even want this accolade.
+		scope:owner ?= {
+			# Culture
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = ethos_communal }
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					culture = {
+						OR = {
+							has_cultural_tradition = tradition_family_entrepreneurship
+							has_cultural_tradition = tradition_tribe_unity
+							has_cultural_tradition = tradition_mystical_ancestors
+							has_cultural_tradition = tradition_strong_kinship
+						}
+					}
+				}
+				add = 200
+			}
+			# Faith
+			if = {
+				limit = {
+					faith = {
+						has_doctrine = tenet_divine_marriage
+					}
+				}
+				add = 100
+			}
+			# family problems
+			if = {
+				limit = {
+					OR = {
+						has_trait = kinslayer_1
+						has_trait = kinslayer_2
+						has_trait = kinslayer_3
+						has_trait = disinherited
+					}
+				}
+				add = -200
+			}
+		}
+		# good blood
+		if = {
+			limit = {
+				OR = {
+					has_trait = consecrated_blood
+					has_trait = divine_blood
+					has_trait = sayyid
+					has_trait = quraysh
+					has_trait = ubaydi
+					has_trait = saoshyant_descendant
+					has_trait = pure_blooded
+				}
+			}
+			add = 200
+		}
+		# bad blood
+		if = {
+			limit = {
+				OR = {
+					has_trait = scaly
+					has_trait = clubfooted
+					has_trait = dwarf
+					has_trait = hunchbacked
+					has_trait = spindly
+					has_trait = physique_bad
+					has_trait = beauty_bad
+					has_trait = intellect_bad
+				}
+			}
+			add = -200
+		}
+		# Finally, weight for opinion.
+		if = {
+			limit = {
+				exists = liege
+			}
+			multiply = accolade_opinion_multiplier_value
+		}
+		scope:owner ?= {
+			## Factor 0s.
+			if = {
+				limit = { has_trait = denounced }
+				multiply = 0
+			}
+		}
+	}
+	ranks = {
+		# Rank 1
+		100 = {
+			accolade_parameters = {
+				accolade_defends_family_low
+			}
+		}
+		# Rank 2
+		300 = {
+			accolade_parameters = {
+				accolade_defends_family_low
+			}
+		}
+		# Rank 3
+		600 = {
+			liege_modifier = { monthly_dynasty_prestige_mult = 0.05 }
+			accolade_parameters = { acclaimed_knight_inspires_family accolade_defends_family_medium }
+		}
+		# Rank 4
+		1000 = {
+			liege_modifier = { monthly_dynasty_prestige_mult = 0.05 }
+			accolade_parameters = { acclaimed_knight_inspires_family accolade_defends_family_medium }
+		}
+		# Rank 5
+		1500 = {
+			liege_modifier = { monthly_dynasty_prestige_mult = 0.15 }
+			accolade_parameters = { acclaimed_knight_inspires_family_high accolade_defends_family_high }
+		}
+		# Rank 6
+		2100 = {
+			liege_modifier = { monthly_dynasty_prestige_mult = 0.15 }
+			accolade_parameters = { acclaimed_knight_inspires_family_high accolade_defends_family_high }
+		}
+	}
+}

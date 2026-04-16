@@ -1,0 +1,499 @@
+﻿
+namespace = me_hidden_imam_event
+
+#####
+
+## Adventurer Inheritance Event
+me_hidden_imam_event.0001 = {
+	type = character_event
+	title = me_hidden_imam_event.0001.t
+	desc = me_hidden_imam_event.0001.desc
+	theme = laamp
+	left_portrait = {
+		character = scope:previous_holder
+
+		triggered_animation = {
+			trigger = { scope:previous_holder = { is_alive = no } }
+			animation = dead
+		}
+	}
+	right_portrait = {
+		character = root
+		animation = zealous
+	}
+
+	trigger = {
+		government_has_flag = government_is_landless_adventurer
+		faith = faith:ismaili
+		OR = {
+			has_trait = sayyid
+			has_trait = ubaydi
+		}
+		scope:previous_holder = {
+			has_trait = me_hidden_imam
+			faith = faith:ismaili
+		}
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = me_hidden_imam_event.0001.a
+		
+		add_trait = me_hidden_imam
+		add_trait = ME_missionary
+		if = {
+			limit = { scope:previous_holder = { has_trait_xp = { trait = me_hidden_imam value >= 100 } } }
+			add_trait_xp = { trait = me_hidden_imam value = 100 }
+		}
+		else_if = {
+			limit = { scope:previous_holder = { has_trait_xp = { trait = me_hidden_imam value >= 50 } } }
+			add_trait_xp = { trait = me_hidden_imam value = 50 }
+		}
+		
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = me_hidden_imam
+					value >= 50
+				}
+				NOT = { has_variable = hidden_imam_can_become_mahdi }
+			}
+			set_variable = { name = hidden_imam_can_become_mahdi value = yes }
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = me_hidden_imam
+					value >= 100
+				}
+				NOT = { has_variable = hidden_imam_can_reform_faith }
+			}
+			set_variable = { name = hidden_imam_can_reform_faith value = yes }
+		}
+	}
+}
+
+## Hidden Imam gains land and becomes Caliph
+me_hidden_imam_event.0002 = {
+	type = character_event
+	title = me_hidden_imam_event.0002.t
+	desc = me_hidden_imam_event.0002.desc
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_bold
+	}
+
+	trigger = {
+		NOT = { has_character_flag = became_ismaili_caliph_flag }
+		NOT = { government_has_flag = government_is_landless_adventurer }
+		faith = faith:ismaili
+		is_male = yes
+		OR = {
+			has_trait_xp = {
+				trait = me_hidden_imam
+				value >= 50
+			}
+			has_trait = ME_ismaili_mahdi
+		}
+		OR = {
+			has_trait = sayyid
+			has_trait = ubaydi
+		}
+	}
+
+	immediate = {
+		add_character_flag = became_ismaili_caliph_flag
+		play_music_cue = "mx_cue_faith_conversion"
+		character:33917 = { save_scope_as = maktum }
+		me_create_ismaili_caliphate_scripted_effect = yes
+	}
+
+	option = {
+		name = me_hidden_imam_event.0002.a
+		
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				faith = { religion_tag = islam_religion }
+			}
+			trigger_event = me_hidden_imam_event.0003 # Notification.
+		}
+	}
+	option = {
+		name = me_hidden_imam_event.0002.b
+		trigger = { has_character_flag = can_become_ismaili_mahdi_flag }
+		custom_tooltip = me_hidden_imam_event.0002.b.tt
+		
+		show_as_tooltip = { ME_become_ismaili_mahdi_decision_effect = yes }
+		trigger_event = me_hidden_imam_event.1001
+	}
+	option = {
+		name = me_hidden_imam_event.0002.c
+		trigger = { has_trait = ME_ismaili_mahdi }
+		custom_tooltip = me_hidden_imam_event.0002.c.tt
+		
+		trigger_event = me_hidden_imam_event.1003
+	}
+}
+
+# Players notified.
+me_hidden_imam_event.0003 = {
+	type = character_event
+	title = me_hidden_imam_event.0002.t
+	desc = {
+		first_valid = {
+			# Isma'ili Reaction
+			triggered_desc = {
+				trigger = {
+					root.faith = faith:ismaili
+				}
+				desc = me_hidden_imam_event.0003.desc.ismaili
+			}
+			#Every other Muslim
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						root.faith = faith:ismaili
+					}
+
+				}
+				desc = me_hidden_imam_event.0003.desc.other
+			}
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		character:33917 = { save_scope_as = maktum }
+		#Rejoice!
+		if = {
+			limit = {
+				faith = faith:ismaili
+			}
+			play_music_cue = "mx_cue_faith_conversion"
+		}
+		#Woe!
+		if = {
+			limit = {
+				faith = { religion_tag = christianity_religion }
+			}
+			play_music_cue = "mx_cue_crusade_starts"
+		}
+		#Probably trouble?
+		else = { play_music_cue = "mx_cue_combat_2" }
+	}
+
+	option = {
+		name = me_hidden_imam_event.0003.a
+		trigger = {
+			root.faith = faith:ismaili
+		}
+	}
+	option = {
+		name = me_hidden_imam_event.0003.b
+		trigger = {
+			NOT = {
+				root.faith = faith:ismaili
+			}
+		}
+	}
+}
+
+# Proclaim yourself the Isma'ili Mahdi
+me_hidden_imam_event.1001 = {
+	type = character_event
+	title = me_hidden_imam_event.1001.t
+	desc = me_hidden_imam_event.1001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:ismaili_mahdi
+		animation = personality_zealous
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		ME_become_ismaili_mahdi_decision_effect = yes
+	}
+	
+	option = {
+		name = me_hidden_imam_event.1001.a
+		
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				faith = { religion_tag = islam_religion }
+			}
+			trigger_event = me_hidden_imam_event.1002 # Notification.
+		}
+	}
+	option = {
+		name = me_hidden_imam_event.1001.b
+		trigger = { is_landed = yes }
+		
+		custom_tooltip = me_hidden_imam_event.0002.c.tt
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				faith = { religion_tag = islam_religion }
+			}
+			trigger_event = me_hidden_imam_event.1002 # Notification.
+		}
+		trigger_event = me_hidden_imam_event.1003
+	}
+}
+
+# Players notified.
+me_hidden_imam_event.1002 = {
+	type = character_event
+	title = me_hidden_imam_event.1002.t
+	desc = me_hidden_imam_event.1002.desc
+	theme = faith
+	left_portrait = {
+		character = scope:ismaili_mahdi
+		animation = personality_zealous
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+	}
+
+	option = {
+		name = me_hidden_imam_event.1002.a
+		trigger = {
+			NOT = { root.faith = faith:ismaili }
+		}
+	}
+	option = {
+		name = me_hidden_imam_event.1002.b
+		trigger = {
+			root.faith = faith:ismaili
+		}
+	}
+	option = {
+		name = me_hidden_imam_event.1002.c
+		trigger = {
+			root.faith = faith:ismaili
+		}
+		
+		if = {
+			limit = {
+				capital_county.faith = faith
+			}
+			capital_county = { set_county_faith = faith:qarmatian }
+		}
+		show_as_tooltip = { set_character_faith = faith:qarmatian }
+		hidden_effect = {
+			set_character_faith_with_conversion = faith:qarmatian
+		}
+		custom_tooltip = {
+			text = ME_ismaili_mahdi_convert_qarmatian_percent
+			every_county = {
+				limit = {
+					faith = faith:ismaili
+					holder.top_liege = root
+				}
+				random = {
+					chance = 50
+					set_county_faith = faith:qarmatian
+				}
+			}
+		}
+	}
+}
+
+# Reform Isma'ilism - Plurality
+me_hidden_imam_event.1003 = {
+	type = character_event
+	title = me_hidden_imam_event.1003.t
+	desc = me_hidden_imam_event.1003.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+
+	immediate = {
+		save_scope_as = ismaili_mahdi
+	}
+	
+	option = {
+		name = me_hidden_imam_event.1003.a
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+			add_doctrine = doctrine_pluralism_pluralistic
+		}
+		trigger_event = me_hidden_imam_event.1004
+	}
+	option = {
+		name = me_hidden_imam_event.1003.b
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+			add_doctrine = doctrine_pluralism_righteous
+		}
+		trigger_event = me_hidden_imam_event.1004
+	}
+	option = {
+		name = me_hidden_imam_event.1003.c
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+			add_doctrine = doctrine_pluralism_fundamentalist
+		}
+		trigger_event = me_hidden_imam_event.1004
+	}
+}
+
+# Reform Isma'ilism - Secondary Sect Doctrine
+me_hidden_imam_event.1004 = {
+	type = character_event
+	title = me_hidden_imam_event.1004.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_pluralistic } }
+				desc = me_hidden_imam_event.1004.pluralistic
+			}
+			triggered_desc = {
+				trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_righteous } }
+				desc = me_hidden_imam_event.1004.righteous
+			}
+			triggered_desc = {
+				trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_fundamentalist } }
+				desc = me_hidden_imam_event.1004.fundamentalist
+			}
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = me_hidden_imam_event.1004.a
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+			add_doctrine = islam_secondary_group_shia_batriya_doctrine
+		}
+		trigger_event = me_hidden_imam_event.1005
+	}
+	option = {
+		name = me_hidden_imam_event.1004.b
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+			add_doctrine = islam_secondary_group_shia_orthodox_doctrine
+		}
+		trigger_event = me_hidden_imam_event.1005
+	}
+	option = {
+		name = me_hidden_imam_event.1004.c
+		trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_fundamentalist } }
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+			add_doctrine = islam_secondary_group_shia_puritanical_doctrine
+		}
+		trigger_event = me_hidden_imam_event.1005
+	}
+}
+
+# Reform Isma'ilism - Tenets
+me_hidden_imam_event.1005 = {
+	type = character_event
+	title = me_hidden_imam_event.1005.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_batriya_doctrine } }
+				desc = me_hidden_imam_event.1005.batriya
+			}
+			triggered_desc = {
+				trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_orthodox_doctrine } }
+				desc = me_hidden_imam_event.1005.orthodox
+			}
+			triggered_desc = {
+				trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_puritanical_doctrine } }
+				desc = me_hidden_imam_event.1005.puritanical
+			}
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = me_hidden_imam_event.1005.a
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
+			add_doctrine = tenet_mendicant_preachers
+		}
+		trigger_event = me_hidden_imam_event.1006
+	}
+	option = {
+		name = me_hidden_imam_event.1005.b
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
+			add_doctrine = tenet_false_conversion_sanction
+		}
+		trigger_event = me_hidden_imam_event.1006
+	}
+	option = {
+		name = me_hidden_imam_event.1005.c
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
+			add_doctrine = tenet_warmonger
+		}
+		trigger_event = me_hidden_imam_event.1006
+	}
+	option = {
+		name = me_hidden_imam_event.1005.d
+		trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_puritanical_doctrine } }
+		
+		faith:ismaili = {
+			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
+			add_doctrine = tenet_puritanical_islam
+		}
+		trigger_event = me_hidden_imam_event.1006
+	}
+}
+
+# Reform Isma'ilism - End
+me_hidden_imam_event.1006 = {
+	type = character_event
+	title = me_hidden_imam_event.1006.t
+	desc = me_hidden_imam_event.1006.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = me_hidden_imam_event.1006.a
+	}
+}

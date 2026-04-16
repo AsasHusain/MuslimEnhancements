@@ -1,0 +1,91 @@
+### Ramadan & Muharram Script Values ###
+
+# Count of same-faith counties in sub-realm (for gold cost scaling)
+me_muslim_county_count_value = {
+	value = 0
+	every_sub_realm_county = {
+		limit = { faith = root.faith }
+		add = 1
+	}
+}
+
+# Tiered gold costs for Iftars / Majalis (minimums enforced)
+me_realm_feast_modest_cost = {
+	value = me_muslim_county_count_value
+	multiply = 0.25
+	min = 1
+}
+
+me_realm_feast_grand_cost = {
+	value = me_muslim_county_count_value
+	multiply = 0.5
+	min = 2
+}
+
+me_realm_feast_lavish_cost = {
+	value = me_muslim_county_count_value
+	multiply = 1.0
+	min = 4
+}
+
+### AI Weight Values ###
+
+me_ai_devout_weight = {
+	value = 50
+	if = { limit = { has_trait = zealous }       add = 50 }
+	if = { limit = { has_trait = temperate }     add = 30 }
+	if = { limit = { has_trait = humble }        add = 20 }
+	if = { limit = { has_trait = patient }       add = 15 }
+	if = { limit = { has_trait = diligent }      add = 10 }
+	if = { limit = { has_trait = cynical }       add = -40 }
+	if = { limit = { has_trait = gluttonous }    add = -30 }
+	if = { limit = { has_trait = lazy }          add = -20 }
+}
+
+me_ai_casual_weight = {
+	value = 60
+	if = { limit = { has_trait = cynical }       add = -20 }
+	if = { limit = { has_trait = zealous }       add = -20 }
+	if = { limit = { has_trait = lazy }          add = 15 }
+	if = { limit = { has_trait = gluttonous }    add = 10 }
+}
+
+me_ai_skip_weight = {
+	value = 10
+	if = { limit = { has_trait = cynical }       add = 40 }
+	if = { limit = { has_trait = gluttonous }    add = 25 }
+	if = { limit = { has_trait = lazy }          add = 20 }
+	if = { limit = { has_trait = zealous }       add = -30 }
+	if = { limit = { has_trait = temperate }     add = -20 }
+}
+
+me_ai_tatbir_weight = {
+	value = 5
+	if = { limit = { has_trait = flagellant }    add = 60 }
+	if = { limit = { has_trait = zealous }       add = 25 }
+	if = { limit = { has_trait = brave }         add = 15 }
+	if = { limit = { has_trait = cynical }       add = -20 }
+}
+
+### AI weights for realm patronage tiers ###
+
+me_ai_patronage_modest_weight = {
+	value = 60
+	if = { limit = { has_trait = greedy }        add = 20 }
+	if = { limit = { has_trait = generous }      add = -20 }
+}
+
+me_ai_patronage_grand_weight = {
+	value = 40
+	if = { limit = { has_trait = zealous }       add = 20 }
+	if = { limit = { has_trait = generous }      add = 20 }
+	if = { limit = { has_trait = greedy }        add = -20 }
+}
+
+me_ai_patronage_lavish_weight = {
+	value = 15
+	if = { limit = { has_trait = zealous }       add = 30 }
+	if = { limit = { has_trait = generous }      add = 25 }
+	if = { limit = { has_trait = arrogant }      add = 15 }
+	if = { limit = { has_trait = greedy }        add = -40 }
+}

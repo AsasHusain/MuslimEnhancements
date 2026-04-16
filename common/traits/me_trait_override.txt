@@ -1,0 +1,148 @@
+﻿drunkard = { # Substance Abuse (Alcohol)
+	category = fame
+	stewardship = -2
+	prowess = -2
+	health = -0.15
+	stress_loss_mult = 0.2
+
+	same_opinion = 10
+	character_travel_safety = -10
+	
+	ruler_designer_cost = -10
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_drunkard_desc
+			}
+			desc = trait_drunkard_character_desc
+		}
+	}
+
+	ai_rationality = -10
+	ai_energy = -15
+
+	triggered_opinion = {
+		parameter = me_intoxication_illegal
+		opinion_modifier = me_drunkard_crime
+	}
+
+	compatibility = {
+		temperate = @neg_compat_low
+	}
+}
+
+# The Knight of the Swan
+knight_errant = {
+	category = fame
+	icon = {
+		first_valid = {
+			triggered_desc = { # If no character exists
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = knight_of_the_swan.dds
+			}
+			triggered_desc = {
+				trigger = {
+					location = {
+						geographical_region = world_europe
+					}
+				}
+				desc = knight_of_the_swan.dds
+			}
+			triggered_desc = {
+				trigger = {
+					location = {
+						OR = {
+							geographical_region = world_india
+							geographical_region = world_burma
+							geographical_region = ghw_region_caucasus
+							geographical_region = world_asia_china
+							geographical_region = world_asia_japan
+							geographical_region = world_asia_korea
+							geographical_region = world_asia_southeast
+						}
+					}
+				}
+				desc = knight_of_the_tiger.dds
+			}
+			triggered_desc = {
+				trigger = {
+					location = {
+						OR = {
+							geographical_region = world_africa
+							geographical_region = world_middle_east
+						}
+					}
+				}
+				desc = knight_of_the_lion.dds
+			}
+			desc = knight_of_the_swan.dds
+		}
+	}
+	shown_in_ruler_designer = yes
+
+	ruler_designer_cost = 75
+
+	knight_limit = 2
+	knight_effectiveness_per_prowess = 0.01
+	glory_hound_opinion = 15
+
+	culture_modifier = {
+		parameter = knight_errant_trait_bonuses
+		monthly_prestige_gain_mult = 0.02
+	}
+	
+	track = {
+		50 = { # Defender
+			prowess_per_prestige_level = 1
+			knight_limit = 1
+			men_at_arms_limit = 1
+			culture_modifier = {
+				parameter = knight_errant_trait_bonuses
+				tourney_participant_xp_gain_mult = 0.15
+			}
+		}
+		100 = { # Rightdoer
+			prowess_per_prestige_level = 2
+			knight_limit = 2
+			men_at_arms_limit = 2
+			culture_modifier = {
+				parameter = knight_errant_trait_bonuses
+				tourney_participant_xp_gain_mult = 0.25
+			}
+		}
+	}
+
+	# AI Values
+	ai_energy = 10
+	ai_sociability = 10
+
+	# Loc
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_knight_errant
+			}
+			desc = trait_knight_errant_character
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_knight_errant_desc
+			}
+			desc = trait_knight_errant_character_desc
+		}
+	}
+}

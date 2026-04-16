@@ -1,0 +1,346 @@
+﻿### Misc Title
+
+### Religious Titles
+d_hafizi = {
+	color = { 0.5 0.8 0.4 }
+	#color2 = { 0 25 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_cairo
+}
+
+d_tayyibi = {
+	color = { 0 30 0 }
+	#color2 = { 0 25 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_sanaa
+}
+
+d_isfahani = {
+	color = { 80 160 120 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+}
+
+d_ibadi = {
+	color = { 90 25 0 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
+	can_be_named_after_dynasty = no
+}
+
+d_wahbiya = {
+	color = { 15 70 44 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
+	can_be_named_after_dynasty = no
+}
+
+d_nukkari = {
+	color = { 156 21 0 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
+	can_be_named_after_dynasty = no
+}
+
+d_barghawata = {
+	color = { 60 153 107 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
+	can_be_named_after_dynasty = no
+	
+	capital = c_tamasna
+}
+
+d_hamimist = {
+	color=rgb { 24 125 142 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_ceuta
+}
+
+d_kaduist = {
+	color =rgb { 215 187 38 }
+	#color2 = { 220 220 0 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_satif
+}
+
+#Sami's addition
+
+d_sunni = {
+	color = { 40 160 40 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_baghdad
+
+	can_destroy = {
+		custom_tooltip = {
+			text = persian_struggle.tt.forbid_title_destruction
+			NOT = { exists = struggle:persian_struggle }
+		}
+	}
+}
+
+d_shiite = {
+	color = { 60 190 60 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_cairo
+}
+
+
+d_imami = {
+	color = { 28 142 62 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+}
+
+d_ismaili = {
+	color = { 28 142 62 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_cairo
+}
+
+d_zayidi = {
+	color = { 33 110 33 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_qazwin #Alamut 
+}
+
+d_nizari = {
+	color = { 72 110 72 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_qazwin #Alamut 
+}
+
+d_masmudi = {
+	color = { 80 160 120 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+}
+
+d_muwalladi = {
+	color = { 11 113 11 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+	
+	capital = c_toledo
+}
+
+d_ghulat = {
+	color = { 48 207 48 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_kufa
+}
+
+d_azariqa = {
+	color = { 0 255 255 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_al-haditha
+}
+
+d_qarmatian = {
+	color = { 153 255 51 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_qatif
+}
+
+d_alawi = {
+	color = { 204 255 51 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_damascus
+}
+
+d_ishaqi = {
+	color = { 0 153 255 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no
+	can_use_nomadic_naming = no
+
+	capital = c_rayy
+}
+
+### Landed Titles
+d_principality_of_khachen = {
+	color = { 215 73 73 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = no
+	can_use_nomadic_naming = no
+	
+	capital = c_khachen
+}
+
+d_principality_of_suenik = {
+	color = { 230 60 73 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = no
+	can_use_nomadic_naming = no
+	
+	capital = c_suenik
+}
+d_principality_of_vaspurakan = {
+	color = { 200 70 63 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = no
+	can_use_nomadic_naming = no
+	
+	capital = c_vaspurakan
+}
+d_principality_of_hamamshen = {
+	color = { 100 30 53 }
+	definite_form = yes
+	ruler_uses_title_name = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = no
+	can_use_nomadic_naming = no
+	
+	capital = c_acampse
+}

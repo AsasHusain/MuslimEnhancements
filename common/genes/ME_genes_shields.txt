@@ -1,0 +1,364 @@
+﻿special_genes = {
+	accessory_genes = {
+
+		ME_shields = {
+
+			ME_no_shield = {
+				index = 0
+				male = {
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			# Rashidun Caliphs
+			abu_bakr_shield = {
+				index = 1
+				male = {
+					1 = abu_bakr_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			umar_shield = {
+				index = 2
+				male = {
+					1 = umar_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			uthman_shield = {
+				index = 3
+				male = {
+					1 = uthman_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			ali_shield = {
+				index = 4
+				male = {
+					1 = ali_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			
+			# Umayyads
+			muawiyah_shield = {
+				index = 5
+				male = {
+					1 = muawiyah_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			abu_sufyan_shield = {
+				index = 6
+				male = {
+					1 = abu_sufyan_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			abdullah_ibn_uthman_shield = { # Abdullah ibn Uthman ibn Affan, grrandson of the Prophet
+				index = 7
+				male = {
+					1 = abdullah_ibn_uthman_shield
+				}
+				female = male
+				boy = {
+					1 = abdullah_ibn_uthman_shield
+				}
+				girl = female
+			}
+			
+			# Wives of the Prophet
+			umm_habiba_shield = { # 'Umm Habiba' Ramlah
+				index = 8
+				male = {
+					1 = umm_habiba_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			zaynab_bint_jahsh_shield = { # Zaynab bint Jahsh al-Asadi
+				index = 9
+				male = {
+					1 = zaynab_bint_jahsh_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			
+			# Daughters of the Prophet
+			fatima_shield = {
+				index = 10
+				male = {
+					1 = fatima_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			zaynab_shield = {
+				index = 11
+				male = {
+					1 = zaynab_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			umm_kulthum_shield = {
+				index = 12
+				male = {
+					1 = umm_kulthum_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			ruqayya_shield = {
+				index = 13
+				male = {
+					1 = ruqayya_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			# Children of Ali
+			hasan_shield = {
+				index = 14
+				male = {
+					1 = hasan_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			husayn_shield = {
+				index = 15
+				male = {
+					1 = husayn_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			zaynab_bint_ali_shield = {
+				index = 16
+				male = {
+					1 = zaynab_bint_ali_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			kulthum_bint_ali_shield = {
+				index = 17
+				male = {
+					1 = kulthum_bint_ali_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			# Hashimids
+			abdullah_shield = {
+				index = 18
+				male = {
+					1 = abdullah_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			abdulmutalib_shield = {
+				index = 19
+				male = {
+					1 = abdulmutalib_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			abbas_shield = {
+				index = 20
+				male = {
+					1 = abbas_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			abu_talib_shield = {
+				index = 21
+				male = {
+					1 = abu_talib_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			hamza_shield = {
+				index = 22
+				male = {
+					1 = hamza_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			jafar_al_tayar_shield = {
+				index = 23
+				male = {
+					1 = jafar_al_tayar_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			# Shi'ite Imams
+			ZAB_shield = {
+				index = 24
+				male = {
+					1 = ZAB_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			baqir_shield = {
+				index = 25
+				male = {
+					1 = baqir_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			sadiq_shield = {
+				index = 26
+				male = {
+					1 = sadiq_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			kadhim_shield = {
+				index = 27
+				male = {
+					1 = kadhim_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			rida_shield = {
+				index = 28
+				male = {
+					1 = rida_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			jawad_shield = {
+				index = 29
+				male = {
+					1 = jawad_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			hadi_shield = {
+				index = 30
+				male = {
+					1 = hadi_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			askari_shield = {
+				index = 31
+				male = {
+					1 = askari_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			mahdi_twelver_shield = {
+				index = 32
+				male = {
+					1 = mahdi_twelver_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+			narjis_shield = {
+				index = 33
+				male = {
+					1 = narjis_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			khalid_ibn_al_walid_shield = {
+				index = 34
+				male = {
+					1 = khalid_ibn_al_walid_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+
+			abdullah_ibn_umar_shield = {
+				index = 35
+				male = {
+					1 = abdullah_ibn_umar_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			test_shield = {
+				index = 36
+				male = {
+					1 = test_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+		
+			
+
+		}
+
+	}
+}

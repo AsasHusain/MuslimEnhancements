@@ -1,0 +1,107 @@
+﻿l_english:
+ ### ME Adventerers ###
+ ## Historical
+ d_hidden_imamate:0 "Hidden Imamate"
+ d_laamp_me_karrami: "Acolytes of Ibn Karram"
+ d_laamp_me_karrami_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_maghrawa: "$dynn_Maghrawavid$ Clan"
+ d_laamp_me_maghrawa_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_zirid_pre: "Takalata Clan"
+ d_laamp_me_zirid_pre_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_kindi: "Seekers of Wisdom"
+ d_laamp_me_kindi_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_tujibid: "Sons of the Nile"
+ d_laamp_me_tujibid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ibn_durayd: "Wine-Loving Poets"
+ d_laamp_me_ibn_durayd_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_khashkhash: "Fantastical Travellers"
+ d_laamp_me_khashkhash_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_uthmanid_berkri: "House of Uthman"
+ d_laamp_me_uthmanid_berkri_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_jahhafid: "Prince of Looters"
+ d_laamp_me_jahhafid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ibn_wahb: "Inqusitive Basris"
+ d_laamp_me_ibn_wahb_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ibn_as_sufi_867: "Swords of Ibn as-Sufi"
+ d_laamp_me_ibn_as_sufi_867_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_balnubi: "Wanderers of Ballanubah"
+ d_laamp_me_balnubi_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ibn_al_qatta: "Precious Pearls of Poetry" # Same name as RICE
+ d_laamp_me_ibn_al_qatta_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_hujwiri: "Revealers of the Hidden"
+ d_laamp_me_hujwiri_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_maghila: "Maghila Clan"
+ d_laamp_me_maghila_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ba_alawi_1066: "Ba'Alawi Sadat"
+ d_laamp_me_ba_alawi_1066_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ibn_as_sufi_1066: "Scholars of the Sacred Bloodline"
+ d_laamp_me_ibn_as_sufi_1066_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ba_alawi_1178: "Ba'Alawi Sadat"
+ d_laamp_me_ba_alawi_1178_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_idrisid: "Children of Idris"
+ d_laamp_me_idrisid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ganjavid: "Poets of Ganja"
+ d_laamp_me_ganjavid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_suhrawardid:0 "Masters of Illumination"
+ d_laamp_me_suhrawardid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_buhturid:0 "Warriors of al-Gharb"
+ d_laamp_me_buhturid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ 
+ ## Fictional/Easter Egg
+ d_laamp_me_umayyad_fic_1: "Heirs of Umayyah"
+ d_laamp_me_umayyad_fic_1_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_umayyad_fic_2: "Heirs of Umayyah"
+ d_laamp_me_umayyad_fic_2_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ea_cats: "Lions of War"
+ d_laamp_me_ea_cats_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+
+ #Jerusalem
+ c_quds_arabic:0 "al-Quds"
+ c_quds_arabic_adj:0 "Qudsi"
+ c_quds_default:0 "Quds"
+ c_quds_default_adj:0 "Qudsian"
+ c_jerusalem_default:0 "Jerusalem"
+ c_jerusalem_default_adj:0 "Jerusalemite"
+ 
+ #Syria
+ c_qalat_ja_bar:0 "Qal'at Ja'bar"
+ c_qalat_ja_bar_adj:0 "Ja'bari"
+ 
+ #Iraq
+ c_al_hira:0 "al-Ḥirah"
+ c_al_hira_adj:0 "Ḥiri"
+ 
+ #Arabia
+ c_dumat_al_jandal:0 "Dumat al-Jandal"
+ c_dumat_al_jandal_adj:0 "Jandali"
+ 
+ #Yemen
+ k_himyar:0 "Ḥimyar"
+ k_himyar_adj:0 "Ḥimyari"
+ d_saba:0 "Saba'"
+ d_saba_adj:0 "Saba'i"
+ d_dhu_raydan:0 "Dhu Raydan"
+ d_dhu_raydan_adj:0 "Raydani"
+ c_ma_rib:0 "Ma'rib"
+ c_ma_rib_adj:0 "Ma'ribi"
+
+ #(Caucasus)
+ me_derbent_persian:0 "Darband"
+
+ 
+
+ #By Ace, Muslim Enhancements.
+ #(Georgia)
+ d_principality_of_hamamshen:0 "Hamamshen"
+ d_principality_of_hamamshen_adj:0 "Hamamsheni"
+ d_principality_of_hamamshen_article:0 "the Principality of "
+
+ #(Armenia)
+ d_principality_of_suenik:0 "Syunik" #More popular spelling.
+ d_principality_of_suenik_article:0 "the Principality of "
+ d_principality_of_khachen:0 "Khachen"
+ d_principality_of_khachen_adj:0 "Khacheni"
+ d_principality_of_khachen_article:0 "the Principality of "
+ d_principality_of_vaspurakan:0 "Vaspurakan"
+ d_principality_of_vaspurakan_adj:0 "Vaspurakani"
+ d_principality_of_vaspurakan_article:0 "the Principality of "

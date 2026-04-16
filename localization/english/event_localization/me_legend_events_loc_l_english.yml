@@ -1,0 +1,57 @@
+﻿l_english:
+ #Misc Legends
+ legend_me_legitimizing: "Legitimizing Legend"
+ legend_me_legitimizing_name: "The Genealogy of [ROOT.Legend.GetOwner.GetNameNoTooltip]"
+ legend_me_legitimizing_desc: "The lineage of the [ROOT.Legend.GetOwner.GetDynasty.GetBaseNameNoTooltip] dynasty has ruled these lands for centuries."
+ legend_idrisid_legacy: "The First Dynasty of Morocco"
+ legend_idrisid_legacy_desc: "The [GetDynastyByID('1029055').GetNameNoTooltip] dynasty was the first dynasty to establish an independent state centered within Morocco that almost completely encompassed the region. It's founder Idris ibn Abdullah, a decendant of Prophet Muhammad, fled to the region fearing Abbasid persecution and with the help of local Berber tribes he managed to establish control over many important cities."
+ legend_himyarite_heritage: "Himyarite Heritage"
+ legend_himyarite_heritage_desc: "Our dynasty can trace it's line back to the Kingdom of Saba and Himyar in Yemen, and the founder of our dynasty was in fact one of the a great Himyarite kings who brought great prosperity to their kingdom."
+ himyarite_heritage_dynasty_modifier: "Himyarite Heritage"
+ himyarite_heritage_dynasty_modifier_desc: "Grants access to the #V $ME_choose_honorific_himyarite$#! [decision|E]"
+ 
+ #Qurashi Lineage
+ legend_qurashi_lineage: "Quraysh Legend"
+ legend_qurashi_lineage_name: "The Revered Genealogy of [ROOT.Legend.GetOwner.GetNameNoTooltip]"
+ legend_qurashi_lineage_desc: "The lineage of the [ROOT.Legend.GetOwner.GetDynasty.GetBaseNameNoTooltip] dynasty is traced to the tribe of Quraysh, the tribe of the noble Prophet Muhammad."
+ can_build_legendary_mosque_tt: "Gain access to the [GetBuilding('me_legendary_mosque').GetName] option in the #EMP $ME_clear_ground_for_legendary_building$#! [decision|E]"
+ dynasty_gains_qurashi_tt:0 "Every member of your dynasty gains the trait [GetTrait('quraysh').GetName( GetNullCharacter )]"
+ 
+ legend_ziyadid_lineage: "Ziyad, The Son of His Father"
+ legend_ziyadid_lineage_desc: "The [GetDynastyByID('1042165').GetNameNoTooltip] dynasty was an influencial one during the early Umayyad period, with many of it's members serving as governors and commanders. Although it's progenitor, Ziyad ibn Abihi, was Caliph Mu'awiya to be his legitimate half-brother, many have refused to accept him as such and instead claiming that he was born of adultery."
+ legend_makhzumi_lineage: "The Founders of Shewa"
+ legend_makhzumi_lineage_desc: "The [GetDynastyByID('1022241').GetNameNoTooltip] dynasty claims descent from Wudd ibn Hisham al-Makhzumi, a man from the illustrious house of Makhzum - part of the same tribe as Prophet Muhammad - who was migrated to southern ethiopia during the reign of Caliph Umar ibn al-Khattab, where his decendants eventually founded Shewa."
+ 
+ me_legend_story.0001.t.fallback:0 "The Revered Lineage"
+ me_legend_story.0001.t.ziyadid:0 "The Clan of Ziyad"
+ me_legend_story.0001.t.makhzumi:0 "The Makhzumi Mission"
+ me_legend_story.0001.desc.qurashi:0 "Though many still stubbornly refuse to acknowledge the lineage of our dynasty, the truth has been cemented within the minds of men, both noble and commonborn, that is, our blood is that of Quraysh, the tribe of our noble Prophet Muhammad."
+ me_legend_story.0001.desc.not_qurashi:0 "Most still stubbornly refuse to acknowledge the lineage of our dynasty, with some outright claim our geneology was 'falsified' and 'weak', despite that however the people have come to respect our dynasty, and our ancestors are commonly used as examples of prestige and piety."
+ me_legend_story.0001.desc.ziyadid:0 "\n\nOur grandfather, Ziyad, was not born of adultery; rather, his mother was a slave of Abu Sufyan, and as such, he is a fully legitimate child of the Umayyad clan and acknowledged by his half-brother Mu’awiya as such. Although our Umayyad kin may never accept us as one of them, the clan of Ziyad shall forge its own legend."
+ me_legend_story.0001.desc.makhzumi:0 "\n\nOur grandfather, Wudd ibn Hisham, was sent by the Prophet's close companion Umar ibn al-Khattab on a mission to bring Shewa into the fold of Islam, and although we have been assimulated into the local culture for several generations we have never lost sight of our mission, and we shall fullfil it and forge a legend that shall make our Makhzumi brethren proud."
+ me_legend_story.0001.a: "#EMP [legend_protagonist.GetHouse.GetMotto].#!"
+
+ ME_clear_ground_for_legendary_building: "Clear Ground for a Legendary Mosque"
+ ME_clear_ground_for_legendary_building_tooltip: "$clear_ground_for_legendary_building_tooltip$"
+ ME_clear_ground_for_legendary_building_desc: "$clear_ground_for_legendary_building_desc$"
+ ME_clear_ground_for_legendary_building_confirm: "$clear_ground_for_legendary_building_confirm$"
+ clear_ground_legendary_mosque: "$building_type_legendary_mosque$"
+ clear_ground_legendary_mosque_desc: "A held [barony|E] will gain a [GetBuilding('me_legendary_mosque').GetName] [special_building|E] Slot"
+ clear_ground_legendary_mosque_tooltip: "$clear_ground_legendary_mosque_desc$
+clear_ground_legendary_mosque_tt: "You must have completed a Mythical or Illustrious Quraysh [legend|E]"
+ clear_ground_legendary_mosque_ziyadid: "$building_type_legendary_mosque_ziyadid$"
+ clear_ground_legendary_mosque_ziyadid_desc: "A held [barony|E] will gain a [GetBuilding('me_legendary_mosque_ziyadid').GetName] [special_building|E] Slot"
+ clear_ground_legendary_mosque_ziyadid_tooltip: "$clear_ground_legendary_mosque_ziyadid_desc$
+ clear_ground_building_already_built: "This building has already been built somewhere in the world."
+ clear_ground_only_ziyadid: "Only members of the [GetDynastyByID('1042165').GetName] [dynasty|E] can construct this building."
+ ME_pick_legendary_barony_decision: "$ME_clear_ground_for_legendary_building$"
+ ME_pick_legendary_barony_decision_desc: "$clear_ground_for_legendary_building_desc$"
+ ME_pick_legendary_barony_decision_tooltip: "$clear_ground_for_legendary_building_tooltip$"
+ ME_pick_legendary_barony_decision_confirm: "$pick_legendary_barony_decision_confirm$"
+ 
+ building_type_legendary_mosque:0 "$building_type_me_legendary_mosque$"
+ building_type_legendary_mosque_desc:0 "$building_type_me_legendary_mosque_desc$"
+ building_type_legendary_mosque_ziyadid:0 "$building_type_me_legendary_mosque_ziyadid$"
+ building_type_legendary_mosque_ziyadid_desc:0 "$building_type_me_legendary_mosque_ziyadid_desc$"
+ 
+ 

@@ -1,0 +1,57 @@
+﻿namespace = me_minor_decisions
+
+# 0001 - Change the Dejure Capital of the Arabian Empire
+
+
+##################################################
+# Change the Dejure Capital of the Arabian Empire
+##################################################
+
+#me_minor_decisions.0001 = {
+#	type = character_event
+#	title = me_minor_decisions.0001.t
+#	desc = me_minor_decisions.0001.desc
+#	theme = crown
+#	left_portrait = {
+#		character = root
+#		animation = personality_rational
+#	}
+#
+#	immediate = {
+#		capital_county = { save_scope_as = character_capital }
+#	}
+#
+#	option = {
+#		name = me_minor_decisions.0001.a
+#		trigger = {
+#			NOT = { title:c_damascus = title:e_arabia.title_capital_county }
+#		}
+#		title:e_arabia = { set_capital_county = title:c_damascus }
+#	}
+#	option = {
+#		name = me_minor_decisions.0001.b
+#		trigger = {
+#			NOT = { title:c_samarra = title:e_arabia.title_capital_county }
+#		}
+#		title:e_arabia = { set_capital_county = title:c_samarra }
+#	}
+#	option = {
+#		name = me_minor_decisions.0001.c
+#		trigger = {
+#			NOT = { title:c_baghdad = title:e_arabia.title_capital_county }
+#		}
+#		title:e_arabia = { set_capital_county = title:c_baghdad }
+#	}
+#	option = {
+#		name = me_minor_decisions.0001.d
+#		trigger = {
+#			NOT = { scope:root.capital_county = title:e_arabia.title_capital_county }
+#			OR = {
+#				title:e_arabia = { is_de_jure_liege_or_above_target = scope:root.capital_county }
+#				title:k_mesopotamia = { is_de_jure_liege_or_above_target = scope:root.capital_county }
+#				title:k_jazira = { is_de_jure_liege_or_above_target = scope:root.capital_county }
+#			}
+#		}
+#		title:e_arabia = { set_capital_county = scope:root.capital_county }
+#	}
+#}

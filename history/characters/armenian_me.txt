@@ -1,0 +1,97 @@
+﻿###
+me_armenian_001 = {
+	name = "Maria" # Wife of Jahhafid founder and daughter of Mushel VI Maikonian (name fictional)
+	female = yes
+	dynasty = 23006 # Mamikonian
+	religion = "armenian_apostolic"
+	culture = "armenian"
+
+	father = 70450 # Mushel VI Maikonian
+	760.1.1 = {
+		birth = yes
+	}
+	780.1.1 = {
+		add_spouse = me_jahhafid_001
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
+
+me_armenian_002 = {
+	name = "Aruseak" # Wife of Sawada Jahhafid and daughter of Ashot Msaker
+	female = yes
+	dynasty = 507 # Bagratuni
+	religion = "armenian_apostolic"
+	culture = "armenian"
+
+	father = 41502
+	mother = 159882
+	812.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		add_spouse = me_jahhafid_004
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+### Principality of Hamamshen (Acampse)
+hamamshen_1 = {
+	name = "Shapuh" # Armenian prince who fled Vaspurakan with his son Hamam and 12,000 Armenians in the 8th century, settling in the region that would become known as Hamamshen
+	dynasty = me_amatuni
+	religion = "armenian_apostolic"
+	culture = "armenian"
+	765.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+hamamshen_2 = {
+	name = "Hamam" # Armenian prince who fled Vaspurakan, rebuilt the town of Tambur and renamed it into Hamamshen (Hamam's Hamlet)
+	dynasty = me_amatuni
+	religion = "armenian_apostolic"
+	culture = "armenian"
+	father = hamamshen_1
+	810.1.1 = {
+		birth = yes
+	}
+	875.1.1 = {
+		death = yes
+	}
+}
+
+me_hamamshen_1 = { # Fictional Amatuni since we have no knowledge of any of Hamam's children
+	name = "Grigor"
+	dynasty = me_amatuni
+	religion = "armenian_apostolic"
+	culture = "armenian"
+
+	father = hamamshen_2
+	840.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+###
+tao001 = {
+	name = "Gregory"
+	dynasty = 101436
+	religion = "orthodox"
+	culture = "armenian"
+	trait = education_martial_3
+	1035.1.1 = {
+		birth = "1035.1.1"
+	}
+	1086.1.1 = {
+		death = "1086.1.1"
+	}
+}

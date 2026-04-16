@@ -1,0 +1,290 @@
+﻿namespace = me_culture_emergence
+
+### Turkmen Emergence
+
+me_culture_emergence.0001 = {
+	scope = none
+	hidden = yes
+	
+	immediate = {
+		culture:turkish = { save_scope_as = turkish } # Save scope for player notification events.
+		culture:turkmen = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = scope:turkish
+			copy_all_traditions_from = scope:turkish
+
+			# Save scope for player notification events.
+			save_scope_as = turkmen 
+		}
+
+		# Compile a list of all turkish counties in Anatolia and Greece to convert to the appropriate culture.
+		culture:turkish = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						OR = {
+							geographical_region = ghw_region_anatolia
+							geographical_region = ghw_region_mainland_greece
+							geographical_region = custom_k_thessalonika
+						}
+					}
+				}
+				add_to_list = turkish_counties
+			}
+		}
+
+		# Convert the turkish counties to the new culture.
+		every_in_list = {
+			list = turkish_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:turkish
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:turkish
+							}
+						}
+					}
+				}
+			}
+						
+			# Convert all relevant Turkish counties to Turkmen
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:turkish
+				NEW_CULTURE = culture:turkmen
+				REGION = ghw_region_anatolia
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:turkish
+				NEW_CULTURE = culture:turkmen
+				REGION = ghw_region_mainland_greece
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:turkish
+				NEW_CULTURE = culture:turkmen
+				REGION = custom_k_thessalonika
+			}
+		}
+
+		# Send the appropriate notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					culture = culture:turkish
+					capital_province = {
+						OR = {
+							geographical_region = ghw_region_anatolia
+							geographical_region = ghw_region_mainland_greece
+							geographical_region = custom_k_thessalonika
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_liege_or_above = {
+								is_ai = no
+							}
+						}
+					}
+					trigger_event = me_culture_emergence.0002
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_ai = no
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = turkish_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = me_culture_emergence.0003
+				}
+			}
+		}
+	}
+}
+
+# If a player is strong enough, they can resist the culture flip for their sub-realm only.
+me_culture_emergence.0002 = {
+	type = character_event
+	title = me_culture_emergence.0002.t
+	desc = me_culture_emergence.0002.desc
+	theme = culture_change
+	left_portrait = root
+
+	immediate = {
+		culture:turkmen = { save_scope_as = my_new_culture }
+		culture = { save_scope_as = old_culture }
+	}
+
+	# Option 1 (Almost always the only option): Accept the culture conversion.
+	option = {
+		name = me_culture_emergence.0002.a
+		if = {
+			limit = {
+				capital_province = {
+					OR = {
+						geographical_region = ghw_region_anatolia
+						geographical_region = ghw_region_mainland_greece
+						geographical_region = custom_k_thessalonika
+					}
+				}
+			}
+			convert_player_realm_from_old_culture_to_new_effect = {
+				OLD_CULTURE = culture:turkish
+				NEW_CULTURE = scope:my_new_culture
+			}
+		}
+		else_if = { # Some of my realm is in Scandinavia but I am not
+			limit = {
+				any_sub_realm_county = {
+					culture = culture:turkish
+					title_province = {
+						OR = {
+							geographical_region = ghw_region_anatolia
+							geographical_region = ghw_region_mainland_greece
+							geographical_region = custom_k_thessalonika
+						}
+					}
+				}
+			}
+			every_county_in_region = {
+				region = ghw_region_anatolia
+				if = {
+					limit = { culture = culture:turkish }
+					set_county_culture = culture:turkmen
+					if = {
+						limit = {
+							holder = { capital_county = prev }
+						}
+						holder = { set_culture = culture:turkmen }
+					}
+				}
+			}
+			every_county_in_region = {
+				region = ghw_region_mainland_greece
+				if = {
+					limit = { culture = culture:turkish }
+					set_county_culture = culture:turkmen
+					if = {
+						limit = {
+							holder = { capital_county = prev }
+						}
+						holder = { set_culture = culture:turkmen }
+					}
+				}
+			}
+			every_county_in_region = {
+				region = custom_k_thessalonika
+				if = {
+					limit = { culture = culture:turkish }
+					set_county_culture = culture:turkmen
+					if = {
+						limit = {
+							holder = { capital_county = prev }
+						}
+						holder = { set_culture = culture:turkmen }
+					}
+				}
+			}
+		}
+	}
+
+	# Option 2: I am strong enough to keep our old culture intact!
+	option = {
+		name = me_culture_emergence.0002.b
+
+		trigger = {
+			custom_description = {
+				text = controls_enough_culture_counties
+				any_in_list = {
+					list = turkish_counties
+					percent >= 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		show_as_unavailable = {
+			custom_description = {
+				text = controls_enough_culture_counties	
+				any_in_list = {
+					list = turkish_counties
+					percent < 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = global_culture.custom.keep_culture
+	}
+}
+
+# As this is purely an informative event for players, it doesn't actually have any gameplay effects.
+me_culture_emergence.0003 = {
+	type = character_event
+	title = me_culture_emergence.0003.t
+	override_background = { reference = fp1_beached_longships }
+	left_portrait = {
+		character = scope:portrait_scope
+		animation = inspect_weapon
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					culture = culture:turkish
+				}
+				desc = me_culture_emergence.0003.desc_turkish
+			}
+			desc = me_culture_emergence.0003.desc
+		}
+	}
+	theme = culture_change
+	
+	immediate = {
+		culture:turkish.culture_head ?= { save_scope_as = portrait_scope }
+	}
+
+	option = {
+		trigger = {
+			NOT = { culture = culture:turkish }
+		}
+		name = me_culture_emergence.0003.a
+	}
+
+	option = {
+		trigger = {
+			culture = culture:turkish
+		}
+		name = me_culture_emergence.0003.b
+	}
+}

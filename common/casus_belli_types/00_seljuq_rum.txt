@@ -1,0 +1,1269 @@
+﻿seljuk_invasion_war = {
+	group = event
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = no }
+
+	allowed_for_character = {
+		NOR = {
+			has_character_flag = used_lifetime_invasion
+			faith = { has_doctrine_parameter = invasion_cb_enabled }
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		prestige_level >= 2
+	}
+	
+	allowed_against_character = {
+		scope:attacker = {
+			ALL_FALSE = {
+				top_liege = scope:defender.top_liege
+				liege = scope:defender
+			}
+		}
+	}
+	target_titles = all
+	target_title_tier = all
+	target_de_jure_regions_above = yes
+	ignore_effect = change_title_holder
+	ai_only_against_neighbors = yes
+	
+	valid_to_start = {
+		scope:target = {
+			tier = tier_kingdom
+		}
+	}
+
+	should_invalidate = {
+		NOT = {
+			any_in_list = {
+				list = target_titles
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_invasion_war_invalidated_message
+	
+	on_invalidated = {
+		scope:attacker = {
+			remove_character_flag = used_lifetime_invasion # If the war is invalidated, you should be permitted to try again
+		}
+	}
+
+	cost = {
+		piety = 25
+		prestige = 50
+	}
+	
+	on_declaration = {
+		on_declared_war = yes
+		scope:attacker = {
+			add_character_flag = used_lifetime_invasion
+		}
+	}	
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = seljuk_invasion_victory_desc_attacker
+			}
+			desc = seljuk_invasion_victory_desc
+		}
+		triggered_desc = {
+			trigger = { scope:attacker = { is_local_player = yes } }
+			desc = invasion_war_warning_desc
+		}
+	}
+	
+	on_victory = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+
+		setup_invasion_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			change = scope:change
+			take_occupied = yes
+		}
+
+		#If target is lower tier, vassalise them.
+		if = {
+			limit = {
+				scope:defender.primary_title.tier < scope:attacker.primary_title.tier
+			}
+			scope:defender = {
+				change_liege = {
+					liege = scope:attacker
+					change = scope:change
+				}
+			}
+		}
+
+		#If target has any personally-held titles of equal tier, excepting empires take them.
+		#If target is equal tier,
+		if = {
+			limit = {
+				#Conquering, or indirectly butchering, an entire empire in one war is a bit much.
+				NOT = { scope:defender.primary_title.tier = tier_empire }
+				scope:defender.primary_title.tier = scope:attacker.primary_title.tier
+			}
+			scope:defender = {
+				every_held_title = {
+					limit = { tier = scope:defender.primary_title.tier}
+					change_title_holder = {
+						holder = scope:attacker
+						change = scope:change
+					}
+				}
+			}
+		}
+
+		#Aftermath
+		
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = steal
+			add_claim_on_loss = yes
+		}
+
+		hidden_effect = {
+
+			#Suleyman steals titles
+			if = {
+				limit = {
+					character:3046 = {
+						is_alive = yes
+						is_ai = yes
+						is_landed_or_landless_administrative = no
+					}
+				}
+
+				title:d_anatolia = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:3046
+							change = scope:steal
+							take_baronies = yes
+						}
+
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_control
+								years = 2
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_opinion
+								years = 20
+							}
+						}
+					}
+				}
+
+				title:d_charsianon = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:3046
+							change = scope:steal
+							take_baronies = yes
+						}
+						
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							set_county_culture = culture:turkish
+							add_county_modifier = {
+								modifier = turkish_consolidation_control
+								years = 2
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_opinion
+								years = 20
+							}
+						}
+					}
+				}
+
+				title:d_cappadocia = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:3046
+							change = scope:steal
+							take_baronies = yes
+						}
+						
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							set_county_culture = culture:turkish
+							add_county_modifier = {
+								modifier = turkish_consolidation_control
+								years = 2
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_opinion
+								years = 20
+							}
+						}
+					}
+				}
+
+				title:c_lydia = {
+					change_title_holder = {
+						holder = character:3046
+						change = scope:steal
+						take_baronies = yes
+					}
+				}
+
+				title:c_chonae = {
+					change_title_holder = {
+						holder = character:3046
+						change = scope:steal
+						take_baronies = yes
+					}
+				}
+
+				character:3046 = {
+					change_liege = {
+						liege = scope:attacker
+						change = scope:steal
+					}
+
+					add_gold = 800
+					add_prestige = 500
+					add_piety = 300
+				}
+			}
+			
+			else_if = { # Sulayman players get to choose whether they become landed or not 
+				limit = {
+					character:3046 = {
+						is_alive = yes
+						is_landed_or_landless_administrative = no
+					}
+					any_county_in_region = {
+						region = ghw_region_anatolia
+						this = character:3046.capital_county 	
+					}
+				}
+				character:3046 = {
+					trigger_event = seljuk_invasion_events.0008
+				}
+			}
+
+			#Danishmend gets Eastern Provinces
+			if = {
+				limit = {
+					character:danishmendid_1 = {
+						is_alive = yes
+						is_ai = yes
+						is_landed_or_landless_administrative = no
+					}
+				}
+				
+				title:d_sebasteia = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:danishmendid_1
+							change = scope:steal
+							take_baronies = yes
+						}
+						
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							set_county_culture = culture:turkish
+							add_county_modifier = {
+								modifier = turkish_consolidation_control
+								years = 2
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_opinion
+								years = 20
+							}
+						}
+					}
+				}
+
+				title:d_chaldia = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:danishmendid_1
+							change = scope:steal
+							take_baronies = yes
+						}
+						
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							set_county_culture = culture:turkish
+							add_county_modifier = {
+								modifier = turkish_consolidation_control
+								years = 2
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_opinion
+								years = 20
+							}
+						}
+					}
+				}
+
+				title:d_mesopotamia = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:danishmendid_1
+							change = scope:steal
+							take_baronies = yes
+						}
+						
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_control
+								years = 2
+							}
+							add_county_modifier = {
+								modifier = turkish_consolidation_opinion
+								years = 20
+							}
+						}
+					}
+				}
+
+				title:c_zela = {
+					change_title_holder = {
+					   holder = character:danishmendid_1
+					   change = scope:steal
+						take_baronies = yes
+					}
+			    }
+
+				character:danishmendid_1 = {
+					change_liege = {
+						liege = scope:attacker
+						change = scope:steal
+					}
+
+					add_gold = 500
+					add_prestige = 200
+					add_piety = 100
+				}
+			}
+			
+			else_if = { # Danishmend players get to choose whether they become landed or not 
+				limit = {
+					character:danishmendid_1 = {
+						is_alive = yes
+						is_landed_or_landless_administrative = no
+					}
+					any_county_in_region = {
+						region = ghw_region_anatolia
+						this = character:danishmendid_1.capital_county 	
+					}
+				}
+				character:danishmendid_1 = {
+					trigger_event = seljuk_invasion_events.0008
+				}
+			}
+			
+			#Byzantine loss of control
+
+			title:e_byzantium.holder = {
+				every_vassal = {
+					add_opinion = {
+						target = title:e_byzantium.holder
+						modifier = disgraced_by_turks
+					}
+				}
+				every_councillor = {
+					add_opinion = {
+						target = title:e_byzantium.holder
+						modifier = disgraced_by_turks
+					}
+				}
+			}
+
+			title:c_kerch = {
+				add_county_modifier = {
+					modifier = byzantine_retreat
+					years = 1
+				}
+			}
+
+			title:d_macva = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:d_syrmia = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:k_bulgaria = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:k_epirus = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:k_hellas = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:k_krete = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:k_cyprus = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:d_strymon = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:d_thessalonika = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			title:d_thessaly = {
+				every_in_de_jure_hierarchy = {
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = byzantine_retreat
+							years = 1
+						}
+					}
+				}
+			}
+
+			#Provinces break off from Byzantium
+			title:d_antioch = {
+				holder = {
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+
+			title:d_cilicia = {
+				holder = {
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+			
+			title:d_cibyrrhaeot = {
+				holder = {
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+
+			title:d_ephese = {
+				holder = {
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+
+			title:d_thracesia = {
+				holder = {
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+
+			title:d_opsikion = {
+				holder = {
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+
+			#De Bailleul steals Byzantine Territory
+			if = {
+				limit = {
+					character:34220 = {
+						is_alive = yes
+						is_landed_or_landless_administrative = no
+					}
+				}
+
+				title:d_bucellaria = {
+					change_title_holder = {
+                        holder = character:34220
+                        change = scope:steal
+                        take_baronies = no
+                    }
+			    }
+
+				title:c_galatia = {
+					change_title_holder = {
+                        holder = character:34220
+                        change = scope:steal
+                        take_baronies = no
+                    }
+
+					add_county_modifier = {
+						modifier = defending_against_turks_control
+						years = 1
+					}
+					
+					add_county_modifier = {
+						modifier = defending_against_turks_opinion
+						years = 5
+					}
+			    }
+
+				title:c_hadrianopolis = {
+					change_title_holder = {
+                        holder = character:34220
+                        change = scope:steal
+                        take_baronies = no
+                    }
+
+					add_county_modifier = {
+						modifier = defending_against_turks_control
+						years = 1
+					}
+					
+					add_county_modifier = {
+						modifier = defending_against_turks_opinion
+						years = 5
+					}
+			    }
+
+				title:d_paphlagonia = {
+                	every_in_de_jure_hierarchy = {
+                		change_title_holder = {
+                            holder = character:34220
+                            change = scope:steal
+                            take_baronies = no
+                        }
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							add_county_modifier = {
+								modifier = defending_against_turks_control
+								years = 1
+							}
+							add_county_modifier = {
+								modifier = defending_against_turks_opinion
+								years = 5
+							}
+						}
+					}
+				}
+
+				title:d_armeniac = {
+                	every_in_de_jure_hierarchy = {
+                		change_title_holder = {
+                            holder = character:34220
+                            change = scope:steal
+                            take_baronies = no
+                        }
+					}
+				}
+
+				character:34220 = {
+					becomes_independent = {
+						change = scope:steal
+					}
+
+					add_gold = 300
+					add_prestige = 200
+					add_piety = 100
+					save_scope_as = norman_leader
+				}
+			}
+			
+			else = {
+				create_character = {
+					template = new_commander_character
+					location = title:c_honorias.title_province
+					faith = faith:catholic
+					culture = culture:norman
+					save_scope_as = norman_leader
+					gender_female_chance = 0
+				}
+			
+				title:d_bucellaria = {
+					change_title_holder = {
+                        holder = scope:norman_leader
+                        change = scope:steal
+                        take_baronies = no
+                    }
+			    }
+
+				title:c_galatia = {
+					change_title_holder = {
+                        holder = scope:norman_leader
+                        change = scope:steal
+                        take_baronies = no
+                    }
+
+					add_county_modifier = {
+						modifier = defending_against_turks_control
+						years = 1
+					}
+					
+					add_county_modifier = {
+						modifier = defending_against_turks_opinion
+						years = 5
+					}
+			    }
+
+				title:c_hadrianopolis = {
+					change_title_holder = {
+                        holder = scope:norman_leader
+                        change = scope:steal
+                        take_baronies = no
+                    }
+
+					add_county_modifier = {
+						modifier = defending_against_turks_control
+						years = 1
+					}
+					
+					add_county_modifier = {
+						modifier = defending_against_turks_opinion
+						years = 5
+					}
+			    }
+
+				title:d_paphlagonia = {
+                	every_in_de_jure_hierarchy = {
+                		change_title_holder = {
+                            holder = scope:norman_leader
+                            change = scope:steal
+                            take_baronies = no
+                        }
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							add_county_modifier = {
+								modifier = defending_against_turks_control
+								years = 1
+							}
+							add_county_modifier = {
+								modifier = defending_against_turks_opinion
+								years = 5
+							}
+						}
+					}
+				}
+
+				title:d_armeniac = {
+                	every_in_de_jure_hierarchy = {
+                		change_title_holder = {
+                            holder = scope:norman_leader
+                            change = scope:steal
+                            take_baronies = no
+                        }
+					}
+				}
+
+				scope:norman_leader = {
+					becomes_independent = {
+						change = scope:steal
+					}
+
+					add_gold = 300
+					add_prestige = 200
+					add_piety = 100
+				}
+			}
+
+			#Bulgaria crowns a new King
+			if = {
+				limit = {
+					character:20474 = {
+						is_alive = yes
+					}
+				}
+
+				title:d_bulgaria = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+                            holder = character:20474
+                            change = scope:steal
+                            take_baronies = no
+                        }
+					}
+				}
+				title:k_bulgaria = {
+					change_title_holder = {
+                        holder = character:20474
+                    	change = scope:steal
+                    }
+				}
+				character:20474 = {
+					becomes_independent = {
+						change = scope:steal
+					}
+
+					add_gold = 50
+					add_prestige = 100
+					add_piety = 50
+				}
+
+				title:d_duklja.holder = {
+					change_liege = {
+						liege = character:20474
+						change = scope:steal
+					}
+				}
+				
+				title:d_rashka = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = title:d_duklja.holder
+							change = scope:steal
+							take_baronies = no
+						}
+					}
+				}
+			}
+
+			#Alexios gets Optimatoi and honorias and allies with the broken states
+			if = {
+				limit = {
+					character:1742 = {
+						is_alive = yes
+					}
+				}
+
+				title:d_optimatoi = {
+                	every_in_de_jure_hierarchy = {
+                		change_title_holder = {
+                            holder = character:1742
+                            change = scope:change
+                            take_baronies = no
+                        }
+						if = {
+							limit = {
+								tier = tier_county
+							}
+							add_county_modifier = {
+								modifier = defending_against_turks_control
+								years = 1
+							}
+							add_county_modifier = {
+								modifier = defending_against_turks_opinion
+								years = 10
+							}
+						}
+					}
+				}
+
+				title:c_honorias = {
+					change_title_holder = {
+                        holder = character:1742
+                        change = scope:change
+                        take_baronies = no
+                    }
+
+					add_county_modifier = {
+						modifier = defending_against_turks_control
+						years = 1
+					}
+
+					add_county_modifier = {
+						modifier = defending_against_turks_opinion
+						years = 10
+					}
+			    }
+
+				character:1742 = {
+
+					create_alliance = {
+						target = title:d_antioch.holder
+						allied_through_owner = character:1742
+						allied_through_target = title:d_antioch.holder
+					}
+					create_alliance = {
+						target = title:d_cilicia.holder
+						allied_through_owner = character:1742
+						allied_through_target = title:d_cilicia.holder
+					}
+					create_alliance = {
+						target = title:d_cibyrrhaeot.holder
+						allied_through_owner = character:1742
+						allied_through_target = title:d_cibyrrhaeot.holder
+					}
+					create_alliance = {
+						target = title:d_ephese.holder
+						allied_through_owner = character:1742
+						allied_through_target = title:d_ephese.holder
+					}
+					create_alliance = {
+						target = title:d_thracesia.holder
+						allied_through_owner = character:1742
+						allied_through_target = title:d_thracesia.holder
+					}
+					create_alliance = {
+						target = title:d_opsikion.holder
+						allied_through_owner = character:1742
+						allied_through_target = title:d_opsikion.holder
+					}
+
+					add_gold = 500
+				}
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+		resolve_title_and_vassal_change = scope:steal
+
+		# Attacker gets Prestige Experience, Defender loses Prestige, all other participants gain Prestige based on their war contribution.
+		# Prestige level progress for the attacker
+		scope:attacker = {
+			add_prestige_experience = {
+				value = major_prestige_value
+			}
+		}
+
+		# Prestige loss for the defender
+		scope:defender = {
+			add_prestige = {
+				value = major_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = {
+				value = major_prestige_value
+			}
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = {
+				value = major_prestige_value
+			}
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		#Trigger Byzantines defeated event
+		scope:defender = {
+			trigger_event = seljuk_invasion_events.0002
+		}
+
+		#Trigger Bulgarian revolt event
+		if = {
+			limit = {
+				character:20474 = {
+					is_alive = yes
+				}
+			}
+
+			title:e_byzantium.holder = {
+				start_war = {
+					casus_belli = claim_cb
+					target = title:d_bulgaria.holder
+					claimant = title:e_byzantium.holder
+					target_title = title:k_bulgaria
+					target_title = title:d_bulgaria
+				}
+			}
+
+#			title:d_duklja.holder = {
+#				trigger_event = seljuk_invasion_events.0006
+#			}
+		}
+
+		#Trigger Alexios event
+		if = {
+			limit = {
+				character:1742 = {
+					is_alive = yes
+				}
+			}
+
+#			character:1742 = {
+#				trigger_event = seljuk_invasion_events.0005
+#			}
+		}
+
+		#Trigger Seljuk Victory Event
+		if = {
+			limit = {
+				character:3046 = {
+					is_alive = yes
+				}
+			}
+
+			scope:attacker = {
+				trigger_event = seljuk_invasion_events.0001
+			}
+
+			character:3046 = {
+				start_war = {
+					casus_belli = claim_cb
+					target = title:d_thracesia.holder
+					claimant = character:3046
+					target_title = title:d_thracesia
+				}
+			}
+		}
+		else = {
+			scope:attacker = {
+				trigger_event = seljuk_invasion_events.0002
+			}
+		}
+
+		#Get Men-at-Arms
+		if = {
+			limit = {
+				character:3046 = {
+					is_alive = yes
+				}
+			}
+
+			character:3046 = {
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 1000
+					men_at_arms = {
+						type = light_horsemen
+						stacks = 4
+					}
+					location = province:759
+					origin = province:4319
+				}
+				spawn_army = {
+					name = event_troop_default_name
+					men_at_arms = {
+						type = onager
+						stacks = 2
+					}
+					location = province:759
+					origin = province:4319
+				}
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 1000
+					men_at_arms = {
+						type = horse_archers
+						stacks = 4
+					}
+					location = province:759
+					origin = province:4319
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				character:20474 = {
+					is_alive = yes
+				}
+			}
+		
+			character:20474 = {
+				spawn_army = {
+					name = event_troop_default_name
+					men_at_arms = {
+						type = light_footmen
+						stacks = 2
+					}
+					levies = 3000
+					men_at_arms = {
+						type = pikemen_unit
+						stacks = 2
+					}
+					men_at_arms = {
+						type = bowmen
+						stacks = 2
+					}
+					men_at_arms = {
+						type = light_horsemen
+						stacks = 2
+					}
+					location = province:3580
+					origin = province:3580
+				}
+			}
+		}
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = seljuk_invasion_white_peace_desc_defender
+			}
+			desc = seljuk_invasion_white_peace_desc
+		}
+	}
+	
+	on_white_peace = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = major_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = major_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Truce
+		add_truce_white_peace_effect = yes
+
+		scope:attacker = {
+			add_prestige = mongol_invasion_cb_prestige_white_peace
+		}
+
+		#Trigger Byzantines white peace event
+		scope:defender = {
+			trigger_event = seljuk_invasion_events.0003
+		}
+		scope:attacker = {
+			trigger_event = seljuk_invasion_events.0003
+		}
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = seljuk_invasion_defeat_desc_defender
+			}
+			desc = seljuk_invasion_defeat_desc
+		}
+	}
+	
+	on_defeat = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			pay_short_term_gold = {
+				gold = 5
+				target = scope:defender
+				yearly_income = yes
+			}
+			add_prestige = {
+				value = massive_prestige_value
+				multiply = -1.0
+			}
+		}
+		
+		setup_invasion_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			claimant = scope:claimant
+			victory = no
+		}
+
+		# Attacker loses Prestige, all other war participants gain Prestige (Defender gains full prestige, all allies on both sides gain based on war contribution).
+		modify_all_participants_fame_values = {
+			WINNER = scope:defender
+			LOSER = scope:attacker
+			FAME_BASE = scope:cb_prestige_factor # Set by 'setup_claim_cb'
+			IS_RELIGIOUS_WAR = no
+			WINNER_FAME_SCALE = 10
+			LOSER_FAME_SCALE = -10
+			WINNER_ALLY_FAME_SCALE = 10
+			LOSER_ALLY_FAME_SCALE = 10
+		}
+	
+		add_truce_attacker_defeat_effect = yes
+		
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+		on_lost_aggression_war_discontent_loss = yes
+
+		#Trigger Byzantines victory event
+		scope:defender = {
+			trigger_event = seljuk_invasion_events.0004
+		}
+		scope:attacker = {
+			trigger_event = seljuk_invasion_events.0004
+		}
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
+	}
+	
+	transfer_behavior = transfer
+	
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+	
+	war_name = "SELJUK_INVASION_WAR_NAME"
+	war_name_base = "SELJUK_INVASION_WAR_NAME_BASE"
+	cb_name = "SELJUK_INVASION_CB_NAME"
+	
+	interface_priority = 100
+	
+	use_de_jure_wargoal_only = yes
+	
+	attacker_wargoal_percentage = 0.2
+	
+	max_ai_diplo_distance_to_title = 500
+}

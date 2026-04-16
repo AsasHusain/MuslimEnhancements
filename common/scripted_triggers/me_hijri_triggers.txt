@@ -1,0 +1,49 @@
+### Hijri Calendar Scripted Triggers ###
+
+# Is it currently Ramadan (Hijri month 9)?
+me_is_ramadan_trigger = {
+	me_hijri_month_value >= 9
+	me_hijri_month_value < 10
+}
+
+# Is it currently Muharram (Hijri month 1)?
+me_is_muharram_trigger = {
+	me_hijri_month_value >= 1
+	me_hijri_month_value < 2
+	exists = global_var:me_hijri_year # Ensure initialized (avoid false positive from value = 0)
+}
+
+# Is the character Muslim (any Islamic faith)?
+me_is_muslim_trigger = {
+	faith = { religion_tag = islam_religion }
+}
+
+# Is the character Shia?
+me_is_shia_trigger = {
+	faith = { has_doctrine = muhammad_succession_shia_doctrine }
+}
+
+# Is the character a top liege (independent ruler)?
+me_is_top_liege_trigger = {
+	is_landed = yes
+	top_liege = this
+}
+
+# Does the character already have a Ramadan modifier?
+me_has_ramadan_modifier_trigger = {
+	OR = {
+		has_character_modifier = me_ramadan_devout_fasting
+		has_character_modifier = me_ramadan_casual_fasting
+		has_character_modifier = me_ramadan_skipped
+	}
+}
+
+# Does the character already have a Muharram modifier?
+me_has_muharram_modifier_trigger = {
+	OR = {
+		has_character_modifier = me_muharram_deep_mourning
+		has_character_modifier = me_muharram_moderate_mourning
+		has_character_modifier = me_muharram_tatbir
+		has_character_modifier = me_muharram_skipped
+	}
+}

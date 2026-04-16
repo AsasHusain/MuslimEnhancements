@@ -1,0 +1,4648 @@
+﻿ME_proselytize_decay_effect = {
+	every_county = {
+		limit = {
+			OR = {
+				has_variable = converts_nobility_public_faith
+				has_variable = converts_workers_public_faith
+				has_variable = converts_villagers_public_faith
+				has_variable = converts_nobility_gold_faith
+				has_variable = converts_workers_gold_faith
+				has_variable = converts_villagers_gold_faith
+				has_variable = converts_nobility_secret_faith
+				has_variable = converts_workers_secret_faith
+				has_variable = converts_villagers_secret_faith
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_public_decay }
+				faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value >= faith_hostile_level } }
+				var:converts_nobility_public_tier > 1
+			}
+			change_variable = { name = converts_nobility_public_tier add = -1 }
+			set_variable = { name = converts_nobility_public_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_public_decay }
+				faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value = faith_astray_level } }
+				var:converts_nobility_public_tier > 1
+			}
+			change_variable = { name = converts_nobility_public_tier add = -1 }
+			set_variable = { name = converts_nobility_public_decay days = 730 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_public_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value < faith_astray_level } } }
+				var:converts_nobility_public_tier <= 1
+			}
+			remove_variable = converts_nobility_public_tier
+			remove_variable = converts_nobility_public_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_workers_public_decay }
+				faith = { faith_hostility_level = { target = var:converts_workers_public_faith value >= faith_hostile_level } }
+				var:converts_workers_public_tier > 1
+			}
+			change_variable = { name = converts_workers_public_tier add = -1 }
+			set_variable = { name = converts_workers_public_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_workers_public_decay }
+				faith = { faith_hostility_level = { target = var:converts_workers_public_faith value = faith_astray_level } }
+				var:converts_workers_public_tier > 1
+			}
+			change_variable = { name = converts_workers_public_tier add = -1 }
+			set_variable = { name = converts_workers_public_decay days = 730 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_workers_public_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_workers_public_faith value < faith_astray_level } } }
+				var:converts_workers_public_tier <= 1
+			}
+			remove_variable = converts_workers_public_tier
+			remove_variable = converts_workers_public_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_public_decay }
+				faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value >= faith_hostile_level } }
+				var:converts_villagers_public_tier > 1
+			}
+			change_variable = { name = converts_villagers_public_tier add = -1 }
+			set_variable = { name = converts_villagers_public_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_public_decay }
+				faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value = faith_astray_level } }
+				var:converts_villagers_public_tier > 1
+			}
+			change_variable = { name = converts_villagers_public_tier add = -1 }
+			set_variable = { name = converts_villagers_public_decay days = 730 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_public_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value < faith_astray_level } } }
+				var:converts_villagers_public_tier <= 1
+			}
+			remove_variable = converts_villagers_public_tier
+			remove_variable = converts_villagers_public_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_gold_decay }
+				faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value >= faith_hostile_level } }
+				var:converts_nobility_gold_tier > 1
+			}
+			change_variable = { name = converts_nobility_gold_tier add = -1 }
+			set_variable = { name = converts_nobility_gold_decay days = 180 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_gold_decay }
+				faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value = faith_astray_level } }
+				var:converts_nobility_gold_tier > 1
+			}
+			change_variable = { name = converts_nobility_gold_tier add = -1 }
+			set_variable = { name = converts_nobility_gold_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_gold_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value < faith_astray_level } } }
+				var:converts_nobility_gold_tier <= 1
+			}
+			remove_variable = converts_nobility_gold_tier
+			remove_variable = converts_nobility_gold_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_workers_gold_decay }
+				faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value >= faith_hostile_level } }
+				var:converts_workers_gold_tier > 1
+			}
+			change_variable = { name = converts_workers_gold_tier add = -1 }
+			set_variable = { name = converts_workers_gold_decay days = 180 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_workers_gold_decay }
+				faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value = faith_astray_level } }
+				var:converts_workers_gold_tier > 1
+			}
+			change_variable = { name = converts_workers_gold_tier add = -1 }
+			set_variable = { name = converts_workers_gold_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_workers_gold_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value < faith_astray_level } } }
+				var:converts_workers_gold_tier <= 1
+			}
+			remove_variable = converts_workers_gold_tier
+			remove_variable = converts_workers_gold_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_gold_decay }
+				faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value >= faith_hostile_level } }
+				var:converts_villagers_gold_tier > 1
+			}
+			change_variable = { name = converts_villagers_gold_tier add = -1 }
+			set_variable = { name = converts_villagers_gold_decay days = 180 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_gold_decay }
+				faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value = faith_astray_level } }
+				var:converts_villagers_gold_tier > 1
+			}
+			change_variable = { name = converts_villagers_gold_tier add = -1 }
+			set_variable = { name = converts_villagers_gold_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_gold_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value < faith_astray_level } } }
+				var:converts_villagers_gold_tier <= 1
+			}
+			remove_variable = converts_villagers_gold_tier
+			remove_variable = converts_villagers_gold_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_secret_decay }
+				faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value >= faith_hostile_level } }
+				var:converts_nobility_secret_tier > 1
+			}
+			change_variable = { name = converts_nobility_secret_tier add = -1 }
+			set_variable = { name = converts_nobility_secret_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_secret_decay }
+				faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value = faith_astray_level } }
+				var:converts_nobility_secret_tier > 1
+			}
+			change_variable = { name = converts_nobility_secret_tier add = -1 }
+			set_variable = { name = converts_nobility_secret_decay days = 730 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_nobility_secret_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value < faith_astray_level } } }
+				var:converts_nobility_secret_tier <= 1
+			}
+			remove_variable = converts_nobility_secret_tier
+			remove_variable = converts_nobility_secret_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_workers_secret_decay }
+				faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value >= faith_hostile_level } }
+				var:converts_workers_secret_tier > 1
+			}
+			change_variable = { name = converts_workers_secret_tier add = -1 }
+			set_variable = { name = converts_workers_secret_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_workers_secret_decay }
+				faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value = faith_astray_level } }
+				var:converts_workers_secret_tier > 1
+			}
+			change_variable = { name = converts_workers_secret_tier add = -1 }
+			set_variable = { name = converts_workers_secret_decay days = 730 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_workers_secret_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value < faith_astray_level } } }
+				var:converts_workers_secret_tier <= 1
+			}
+			remove_variable = converts_workers_secret_tier
+			remove_variable = converts_workers_secret_faith
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_secret_decay }
+				faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value >= faith_hostile_level } }
+				var:converts_villagers_secret_tier > 1
+			}
+			change_variable = { name = converts_villagers_secret_tier add = -1 }
+			set_variable = { name = converts_villagers_secret_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_secret_decay }
+				faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value = faith_astray_level } }
+				var:converts_villagers_secret_tier > 1
+			}
+			change_variable = { name = converts_villagers_secret_tier add = -1 }
+			set_variable = { name = converts_villagers_secret_decay days = 730 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = converts_villagers_secret_decay }
+				NOT = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value < faith_astray_level } } }
+				var:converts_villagers_secret_tier <= 1
+			}
+			remove_variable = converts_villagers_secret_tier
+			remove_variable = converts_villagers_secret_faith
+		}
+	}
+}
+
+ME_proselytize_refresh_decay_effect = {
+	every_county = {
+		limit = {
+			OR = {
+				has_variable = converts_nobility_public_faith
+				has_variable = converts_workers_public_faith
+				has_variable = converts_villagers_public_faith
+				has_variable = converts_nobility_gold_faith
+				has_variable = converts_workers_gold_faith
+				has_variable = converts_villagers_gold_faith
+				has_variable = converts_nobility_secret_faith
+				has_variable = converts_workers_secret_faith
+				has_variable = converts_villagers_secret_faith
+			}
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value >= faith_hostile_level } }
+				var:converts_nobility_public_tier >= 1
+			}
+			remove_variable = converts_nobility_public_decay
+			set_variable = { name = converts_nobility_public_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value = faith_astray_level } }
+				var:converts_nobility_public_tier >= 1
+			}
+			remove_variable = converts_nobility_public_decay
+			set_variable = { name = converts_nobility_public_decay days = 730 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_workers_public_faith value >= faith_hostile_level } }
+				var:converts_workers_public_tier >= 1
+			}
+			remove_variable = converts_workers_public_decay
+			set_variable = { name = converts_workers_public_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_workers_public_faith value = faith_astray_level } }
+				var:converts_workers_public_tier >= 1
+			}
+			remove_variable = converts_workers_public_decay
+			set_variable = { name = converts_workers_public_decay days = 730 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value >= faith_hostile_level } }
+				var:converts_villagers_public_tier >= 1
+			}
+			remove_variable = converts_villagers_public_decay
+			set_variable = { name = converts_villagers_public_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value = faith_astray_level } }
+				var:converts_villagers_public_tier >= 1
+			}
+			remove_variable = converts_villagers_public_decay
+			set_variable = { name = converts_villagers_public_decay days = 730 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value >= faith_hostile_level } }
+				var:converts_nobility_gold_tier >= 1
+			}
+			remove_variable = converts_nobility_gold_decay
+			set_variable = { name = converts_nobility_gold_decay days = 180 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value = faith_astray_level } }
+				var:converts_nobility_gold_tier >= 1
+			}
+			remove_variable = converts_nobility_gold_decay
+			set_variable = { name = converts_nobility_gold_decay days = 365 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value >= faith_hostile_level } }
+				var:converts_workers_gold_tier >= 1
+			}
+			remove_variable = converts_workers_gold_decay
+			set_variable = { name = converts_workers_gold_decay days = 180 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value = faith_astray_level } }
+				var:converts_workers_gold_tier >= 1
+			}
+			remove_variable = converts_workers_gold_decay
+			set_variable = { name = converts_workers_gold_decay days = 365 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value >= faith_hostile_level } }
+				var:converts_villagers_gold_tier >= 1
+			}
+			remove_variable = converts_villagers_gold_decay
+			set_variable = { name = converts_villagers_gold_decay days = 180 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value = faith_astray_level } }
+				var:converts_villagers_gold_tier >= 1
+			}
+			remove_variable = converts_villagers_gold_decay
+			set_variable = { name = converts_villagers_gold_decay days = 365 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value >= faith_hostile_level } }
+				var:converts_nobility_secret_tier >= 1
+			}
+			remove_variable = converts_nobility_secret_decay
+			set_variable = { name = converts_nobility_secret_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value = faith_astray_level } }
+				var:converts_nobility_secret_tier >= 1
+			}
+			remove_variable = converts_nobility_secret_decay
+			set_variable = { name = converts_nobility_secret_decay days = 730 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value >= faith_hostile_level } }
+				var:converts_workers_secret_tier >= 1
+			}
+			remove_variable = converts_workers_secret_decay
+			set_variable = { name = converts_workers_secret_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value = faith_astray_level } }
+				var:converts_workers_secret_tier >= 1
+			}
+			remove_variable = converts_workers_secret_decay
+			set_variable = { name = converts_workers_secret_decay days = 730 }
+		}
+		if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value >= faith_hostile_level } }
+				var:converts_villagers_secret_tier >= 1
+			}
+			remove_variable = converts_villagers_secret_decay
+			set_variable = { name = converts_villagers_secret_decay days = 365 }
+		}
+		else_if = {
+			limit = {
+				faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value = faith_astray_level } }
+				var:converts_villagers_secret_tier >= 1
+			}
+			remove_variable = converts_villagers_secret_decay
+			set_variable = { name = converts_villagers_secret_decay days = 730 }
+		}
+	}
+}
+
+ME_proselytize_success_remove_var_effect = {
+	switch = {
+		trigger = root.var:social_type
+		flag:preach_nobility = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = {
+					remove_variable =  me_fail_adv_nobility_public
+					remove_variable =  me_courtier_adv_nobility_public
+				} }
+				flag:gold = { root.location.county = {
+					remove_variable =  me_fail_adv_nobility_gold
+					remove_variable =  me_courtier_adv_nobility_gold
+				} }
+				flag:secret = { root.location.county = {
+					remove_variable =  me_fail_adv_nobility_secret
+					remove_variable =  me_courtier_adv_nobility_secret
+				} }
+			}
+		}
+		flag:preach_workers = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = {
+					remove_variable =  me_fail_adv_workers_public
+					remove_variable =  me_courtier_adv_workers_public
+				} }
+				flag:gold = { root.location.county = {
+					remove_variable =  me_fail_adv_workers_gold
+					remove_variable =  me_courtier_adv_workers_gold
+				} }
+				flag:secret = { root.location.county = {
+					remove_variable =  me_fail_adv_workers_secret
+					remove_variable =  me_courtier_adv_workers_secret
+				} }
+			}
+		}
+		flag:preach_villagers = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = {
+					remove_variable =  me_fail_adv_villagers_public
+					remove_variable =  me_courtier_adv_villagers_public
+				} }
+				flag:gold = { root.location.county = {
+					remove_variable =  me_fail_adv_villagers_gold
+					remove_variable =  me_courtier_adv_villagers_gold
+				} }
+				flag:secret = { root.location.county = {
+					remove_variable =  me_fail_adv_villagers_secret
+					remove_variable =  me_courtier_adv_villagers_secret
+				} }
+			}
+		}
+	}
+}
+
+ME_proselytize_remove_var_main_effect = {
+	remove_variable = social_type
+	remove_variable = preach_type
+}
+
+ME_proselytize_fail_advantage_effect = {
+	switch = {
+		trigger = root.var:social_type
+		flag:preach_nobility = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = { set_variable = { name = me_fail_adv_nobility_public value = yes } } }
+				flag:gold = { root.location.county = { set_variable = { name = me_fail_adv_nobility_gold value = yes } } }
+				flag:secret = { root.location.county = { set_variable = { name = me_fail_adv_nobility_secret value = yes } } }
+			}
+		}
+		flag:preach_workers = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = { set_variable = { name = me_fail_adv_workers_public value = yes } } }
+				flag:gold = { root.location.county = { set_variable = { name = me_fail_adv_workers_gold value = yes } } }
+				flag:secret = { root.location.county = { set_variable = { name = me_fail_adv_workers_secret value = yes } } }
+			}
+		}
+		flag:preach_villagers = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = { set_variable = { name = me_fail_adv_villagers_public value = yes } } }
+				flag:gold = { root.location.county = { set_variable = { name = me_fail_adv_villagers_gold value = yes } } }
+				flag:secret = { root.location.county = { set_variable = { name = me_fail_adv_villagers_secret value = yes } } }
+			}
+		}
+	}
+	custom_tooltip = ME_missionary_fail_advantage_tt
+}
+
+ME_proselytize_courtier_advantage_effect = {
+	switch = {
+		trigger = root.var:social_type
+		flag:preach_nobility = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = { set_variable = { name = me_courtier_adv_nobility_public value = yes } } }
+				flag:gold = { root.location.county = { set_variable = { name = me_courtier_adv_nobility_gold value = yes } } }
+				flag:secret = { root.location.county = { set_variable = { name = me_courtier_adv_nobility_secret value = yes } } }
+			}
+		}
+		flag:preach_workers = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = { set_variable = { name = me_courtier_adv_workers_public value = yes } } }
+				flag:gold = { root.location.county = { set_variable = { name = me_courtier_adv_workers_gold value = yes } } }
+				flag:secret = { root.location.county = { set_variable = { name = me_courtier_adv_workers_secret value = yes } } }
+			}
+		}
+		flag:preach_villagers = {
+			switch = {
+				trigger = root.var:preach_type
+				flag:public = { root.location.county = { set_variable = { name = me_courtier_adv_villagers_public value = yes } } }
+				flag:gold = { root.location.county = { set_variable = { name = me_courtier_adv_villagers_gold value = yes } } }
+				flag:secret = { root.location.county = { set_variable = { name = me_courtier_adv_villagers_secret value = yes } } }
+			}
+		}
+	}
+	custom_tooltip = ME_missionary_courtier_advantage_tt
+}
+
+ME_proselytize_success_effect = {
+	switch = {
+		trigger = root.var:social_type
+		
+		flag:preach_nobility = {
+			switch = {
+				trigger = root.var:preach_type
+		
+				flag:public = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_nobility_public_faith } }
+								NOT = { root.location.county.var:converts_nobility_public_faith = root.faith }
+								root.location.county.var:converts_nobility_public_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_public_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_public_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_public_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_public_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_public_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_nobility_public_tier >= 1
+							root.location.county.var:converts_nobility_public_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_nobility_public_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_public_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_public_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_public_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_public_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:gold = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_nobility_gold_faith } }
+								NOT = { root.location.county.var:converts_nobility_gold_faith = root.faith }
+								root.location.county.var:converts_nobility_gold_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_gold_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_gold_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_gold_decay
+									days = 180
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_gold_decay
+									days = 365
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_gold_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_nobility_gold_tier >= 1
+							root.location.county.var:converts_nobility_gold_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_nobility_gold_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_gold_decay
+									days = 180
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_gold_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_gold_decay
+									days = 365
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_gold_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:secret = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_nobility_secret_faith } }
+								NOT = { root.location.county.var:converts_nobility_secret_faith = root.faith }
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							any_secret = { secret_type = secret_crypto_religionist }
+							NOT = { root.location.county.var:converts_nobility_secret_faith = root.secret_faith }
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_faith
+								value = root.secret_faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_nobility_secret_tier >= 1
+							root.location.county.var:converts_nobility_secret_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_nobility_secret_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_nobility_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_nobility_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+			}
+		}
+		
+		flag:preach_workers = {
+			switch = {
+				trigger = root.var:preach_type
+		
+				flag:public = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_workers_public_faith } }
+								NOT = { root.location.county.var:converts_workers_public_faith = root.faith }
+								root.location.county.var:converts_workers_public_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_public_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_public_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_public_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_public_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_public_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_public_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_public_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_workers_public_tier >= 1
+							root.location.county.var:converts_workers_public_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_workers_public_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_public_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_public_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_public_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_public_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_public_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:gold = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_workers_gold_faith } }
+								NOT = { root.location.county.var:converts_workers_gold_faith = root.faith }
+								root.location.county.var:converts_workers_gold_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_gold_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_gold_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_gold_decay
+									days = 180
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_gold_decay
+									days = 365
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_gold_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_workers_gold_tier >= 1
+							root.location.county.var:converts_workers_gold_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_workers_gold_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_gold_decay
+									days = 180
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_gold_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_gold_decay
+									days = 365
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_gold_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:secret = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_workers_secret_faith } }
+								NOT = { root.location.county.var:converts_workers_secret_faith = root.faith }
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							any_secret = { secret_type = secret_crypto_religionist }
+							NOT = { root.location.county.var:converts_workers_secret_faith = root.secret_faith }
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_faith
+								value = root.secret_faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_workers_secret_tier >= 1
+							root.location.county.var:converts_workers_secret_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_workers_secret_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_workers_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_workers_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+			}
+		}
+		
+		flag:preach_villagers = {
+			switch = {
+				trigger = root.var:preach_type
+		
+				flag:public = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_villagers_public_faith } }
+								NOT = { root.location.county.var:converts_villagers_public_faith = root.faith }
+								root.location.county.var:converts_villagers_public_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_public_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_public_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_public_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_public_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_public_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_villagers_public_tier >= 1
+							root.location.county.var:converts_villagers_public_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_villagers_public_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_public_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_public_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_public_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_public_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:gold = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_villagers_gold_faith } }
+								NOT = { root.location.county.var:converts_villagers_gold_faith = root.faith }
+								root.location.county.var:converts_villagers_gold_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_gold_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_gold_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_gold_decay
+									days = 180
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_gold_decay
+									days = 365
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_gold_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_villagers_gold_tier >= 1
+							root.location.county.var:converts_villagers_gold_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_villagers_gold_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_gold_decay
+									days = 180
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_gold_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_gold_decay
+									days = 365
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_gold_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:secret = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_villagers_secret_faith } }
+								NOT = { root.location.county.var:converts_villagers_secret_faith = root.faith }
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							any_secret = { secret_type = secret_crypto_religionist }
+							NOT = { root.location.county.var:converts_villagers_secret_faith = root.secret_faith }
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_faith
+								value = root.secret_faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_tier
+								value = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_villagers_secret_tier >= 1
+							root.location.county.var:converts_villagers_secret_tier < 5
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_villagers_secret_tier
+								add = 1
+							}
+						}
+						if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value >= faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_secret_decay
+									days = 365
+								}
+							}
+						}
+						else_if = {
+							limit = { faith = { faith_hostility_level = { target = var:converts_villagers_secret_faith value < faith_hostile_level } } }
+							root.location.county = {
+								set_variable = {
+									name = converts_villagers_secret_decay
+									days = 730
+								}
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_secret_tt
+						ME_advance_missionary_trait_low = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+ME_proselytize_success_double_effect = {
+	switch = {
+		trigger = root.var:social_type
+		
+		flag:preach_nobility = {
+			switch = {
+				trigger = root.var:preach_type
+		
+				flag:public = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_nobility_public_faith } }
+								NOT = { root.location.county.var:converts_nobility_public_faith = root.faith }
+								root.location.county.var:converts_nobility_public_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_public_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_public_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_public_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_public_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_nobility_public_tier >= 1
+							root.location.county.var:converts_nobility_public_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_nobility_public_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_public_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_public_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:gold = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_nobility_gold_faith } }
+								NOT = { root.location.county.var:converts_nobility_gold_faith = root.faith }
+								root.location.county.var:converts_nobility_gold_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_gold_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_gold_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_gold_decay
+								days = 180
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_gold_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_nobility_gold_tier >= 1
+							root.location.county.var:converts_nobility_gold_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_nobility_gold_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_gold_decay
+								days = 180
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_gold_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:secret = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_nobility_secret_faith } }
+								NOT = { root.location.county.var:converts_nobility_secret_faith = root.faith }
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							any_secret = { secret_type = secret_crypto_religionist }
+							NOT = { root.location.county.var:converts_nobility_secret_faith = root.secret_faith }
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_faith
+								value = root.secret_faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_nobility_secret_tier >= 1
+							root.location.county.var:converts_nobility_secret_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_nobility_secret_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_nobility_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_nobility_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+			}
+		}
+		
+		flag:preach_workers = {
+			switch = {
+				trigger = root.var:preach_type
+		
+				flag:public = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_workers_public_faith } }
+								NOT = { root.location.county.var:converts_workers_public_faith = root.faith }
+								root.location.county.var:converts_workers_public_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_public_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_public_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_public_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_public_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_workers_public_tier >= 1
+							root.location.county.var:converts_workers_public_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_workers_public_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_public_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_public_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:gold = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_workers_gold_faith } }
+								NOT = { root.location.county.var:converts_workers_gold_faith = root.faith }
+								root.location.county.var:converts_workers_gold_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_gold_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_gold_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_gold_decay
+								days = 180
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_gold_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_workers_gold_tier >= 1
+							root.location.county.var:converts_workers_gold_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_workers_gold_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_gold_decay
+								days = 180
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_gold_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:secret = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_workers_secret_faith } }
+								NOT = { root.location.county.var:converts_workers_secret_faith = root.faith }
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							any_secret = { secret_type = secret_crypto_religionist }
+							NOT = { root.location.county.var:converts_workers_secret_faith = root.secret_faith }
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_faith
+								value = root.secret_faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_workers_secret_tier >= 1
+							root.location.county.var:converts_workers_secret_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_workers_secret_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_workers_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_workers_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+			}
+		}
+		
+		flag:preach_villagers = {
+			switch = {
+				trigger = root.var:preach_type
+		
+				flag:public = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_villagers_public_faith } }
+								NOT = { root.location.county.var:converts_villagers_public_faith = root.faith }
+								root.location.county.var:converts_villagers_public_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_public_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_public_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_public_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_public_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_villagers_public_tier >= 1
+							root.location.county.var:converts_villagers_public_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_villagers_public_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_public_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_public_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:gold = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_villagers_gold_faith } }
+								NOT = { root.location.county.var:converts_villagers_gold_faith = root.faith }
+								root.location.county.var:converts_villagers_gold_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_gold_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_gold_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_gold_decay
+								days = 180
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_gold_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_villagers_gold_tier >= 1
+							root.location.county.var:converts_villagers_gold_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_villagers_gold_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_gold_decay
+								days = 180
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_gold_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+				
+				flag:secret = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { root.location.county = { has_variable = converts_villagers_secret_faith } }
+								NOT = { root.location.county.var:converts_villagers_secret_faith = root.faith }
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_tier <= 0
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_faith
+								value = root.faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							any_secret = { secret_type = secret_crypto_religionist }
+							NOT = { root.location.county.var:converts_villagers_secret_faith = root.secret_faith }
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_faith
+								value = root.secret_faith
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_tier
+								value = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+					else_if = {
+						limit = {
+							root.location.county.var:converts_villagers_secret_tier >= 1
+							root.location.county.var:converts_villagers_secret_tier < 4
+						}
+						root.location.county = {
+							change_variable = {
+								name = converts_villagers_secret_tier
+								add = 2
+							}
+						}
+						root.location.county = {
+							set_variable = {
+								name = converts_villagers_secret_decay
+								days = 365
+							}
+						}
+						custom_tooltip = ME_gain_teir_villagers_secret_double_tt
+						ME_advance_missionary_trait_medium = yes
+						ME_proselytize_success_remove_var_effect = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+
+ME_proselytize_public_preaching_events = {
+	switch = {
+		trigger = root.var:social_type
+		
+		flag:preach_nobility = {
+			duel = {
+				skills = { diplomacy learning }
+				value = high_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_workers_public_tier
+							multiply = 5
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_villagers_public_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_nobility_public }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_nobility_public }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_public_preaching_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+		
+		flag:preach_workers = {
+			duel = {
+				skills = { diplomacy learning }
+				value = decent_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_nobility_public_tier
+							multiply = 3
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_villagers_public_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_workers_public }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_workers_public }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_public_preaching_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+		
+		flag:preach_villagers = {
+			duel = {
+				skills = { diplomacy learning }
+				value = medium_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_nobility_public_tier
+							multiply = 5
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_workers_public_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_villagers_public }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_villagers_public }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_public_preaching_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_public_preaching_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ME_proselytize_buy_conversions_events = {
+	switch = {
+		trigger = root.var:social_type
+		
+		flag:preach_nobility = {
+			duel = {
+				skills = { diplomacy stewardship }
+				value = decent_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_workers_gold_tier
+							multiply = 5
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_villagers_gold_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_nobility_gold }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_nobility_gold }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_buy_conversions_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+		
+		flag:preach_workers = {
+			duel = {
+				skills = { diplomacy stewardship }
+				value = medium_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_nobility_gold_tier
+							multiply = 3
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_villagers_gold_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_workers_gold }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_workers_gold }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_buy_conversions_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+		
+		flag:preach_villagers = {
+			duel = {
+				skills = { diplomacy stewardship }
+				value = mediocre_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_nobility_gold_tier
+							multiply = 5
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_workers_gold_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_villagers_gold }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_villagers_gold }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_buy_conversions_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_buy_conversions_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ME_proselytize_secret_conversions_events = {
+	switch = {
+		trigger = root.var:social_type
+		
+		flag:preach_nobility = {
+			duel = {
+				skills = { diplomacy intrigue }
+				value = high_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_suspicious_activity_modifier
+					}
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_preach_hiding_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_workers_secret_tier
+							multiply = 5
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_villagers_secret_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_nobility_secret }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_nobility_secret }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_secret_preaching_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+		
+		flag:preach_workers = {
+			duel = {
+				skills = { diplomacy intrigue }
+				value = decent_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_suspicious_activity_modifier
+					}
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_preach_hiding_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_nobility_secret_tier
+							multiply = 3
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_villagers_secret_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_workers_secret }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_workers_secret }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_secret_preaching_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+		
+		flag:preach_villagers = {
+			duel = {
+				skills = { diplomacy intrigue }
+				value = medium_skill_rating
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_lost_debate_modifier
+					}
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_suspicious_activity_modifier
+					}
+					modifier = {
+						factor = 0.75
+						has_character_modifier = me_preach_hiding_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						has_character_modifier = me_dangerous_zealot_modifier
+					}
+					modifier = {
+						factor = 0.3
+						has_character_modifier = me_bloodthirsty_zealot_modifier
+					}
+					
+					modifier = {
+						factor = 0.5
+						location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } }
+					}
+					modifier = {
+						factor = 0.7
+						NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = location.county.faith } } } }
+						location.county.duchy = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_province = {
+									barony = { is_holy_site_of = location.county.faith }
+								}
+							}
+						}
+					}
+					
+					random_list = {
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_success_critical }
+							custom_tooltip = ME_proselytize_success_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_success }
+							custom_tooltip = ME_proselytize_success_tt
+						}
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						add = location.county.development_level
+					}
+					
+					modifier = {
+						add = {
+							subtract = location.county.county_opinion
+						}
+					}
+					modifier = {
+						factor = 0.75
+						location.county.faith.religion = root.religion
+					}
+					modifier = {
+						factor = 0.75
+						knows_language_of_culture = location.county.culture
+					}
+					
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 50
+						}
+					}
+					modifier = {
+						factor = 0.75
+						has_trait_xp = {
+							trait = ME_missionary
+							value >= 100
+						}
+					}
+					modifier = {
+						factor = 0.75
+						root.faith = {
+							has_doctrine_parameter = mendicant_preachers_conversion_active
+						}
+					}
+					
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_nobility_secret_tier
+							multiply = 5
+						}
+					}
+					modifier = {
+						add = {
+							value = root.location.county.var:converts_workers_secret_tier
+							multiply = 3
+						}
+					}
+					
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_fail_adv_villagers_secret }
+					}
+					modifier = {
+						factor = 0.75
+						root.location.county = { has_variable = me_courtier_adv_villagers_secret }
+					}
+					
+					random_list = {
+						50 = {
+							modifier = {
+								add = 100
+								location.county.culture = {
+									has_cultural_parameter = harder_to_convert_county_faith
+								}
+							}
+							trigger_event = { on_action = ME_secret_preaching_events_failure_critical }
+							custom_tooltip = ME_proselytize_failure_critical_tt
+						}
+						50 = {
+							trigger_event = { on_action = ME_secret_preaching_events_failure }
+							custom_tooltip = ME_proselytize_failure_tt
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+ME_proselytize_cc_normal_success_opinion_effect = {
+	root.location.county.holder = {
+		if = {
+			limit = {
+				faith = {
+					faith_hostility_level = { target = root.faith value = faith_astray_level }
+				}
+			}
+			if = {
+				limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_success_astray_opinion
+					opinion = -25
+				}
+			}
+			else_if = {
+				limit = { any_secret = { secret_type = secret_crypto_religionist } }
+				add_opinion = {
+					target = root
+					modifier = suspicious_opinion
+					opinion = -10
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = {
+					faith_hostility_level = { target = root.faith value = faith_hostile_level }
+				}
+			}
+			if = {
+				limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_success_hostile_opinion
+					opinion = -50
+				}
+			}
+			else_if = {
+				limit = { any_secret = { secret_type = secret_crypto_religionist } }
+				add_opinion = {
+					target = root
+					modifier = suspicious_opinion
+					opinion = -20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = {
+					faith_hostility_level = { target = root.faith value = faith_evil_level }
+				}
+			}
+			if = {
+				limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_success_evil_opinion
+					opinion = -75
+				}
+			}
+			else_if = {
+				limit = { any_secret = { secret_type = secret_crypto_religionist } }
+				add_opinion = {
+					target = root
+					modifier = suspicious_opinion
+					opinion = -25
+				}
+			}
+		}
+		every_liege_or_above = {
+			if = {
+				limit = {
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_astray_level }
+					}
+				}
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					add_opinion = {
+						target = root
+						modifier = me_laamp_cc_success_astray_opinion
+						opinion = -25
+					}
+				}
+				else_if = {
+					limit = { any_secret = { secret_type = secret_crypto_religionist } }
+					add_opinion = {
+						target = root
+						modifier = suspicious_opinion
+						opinion = -10
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_hostile_level }
+					}
+				}
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					add_opinion = {
+						target = root
+						modifier = me_laamp_cc_success_hostile_opinion
+						opinion = -50
+					}
+				}
+				else_if = {
+					limit = { any_secret = { secret_type = secret_crypto_religionist } }
+					add_opinion = {
+						target = root
+						modifier = suspicious_opinion
+						opinion = -20
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_evil_level }
+					}
+				}
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					add_opinion = {
+						target = root
+						modifier = me_laamp_cc_success_evil_opinion
+						opinion = -75
+					}
+				}
+				else_if = {
+					limit = { any_secret = { secret_type = secret_crypto_religionist } }
+					add_opinion = {
+						target = root
+						modifier = suspicious_opinion
+						opinion = -25
+					}
+				}
+			}
+		}
+	}
+}
+
+ME_proselytize_cc_normal_failure_opinion_effect = {
+	root.location.county.holder = {
+		if = {
+			limit = {
+				faith = {
+					faith_hostility_level = { target = root.faith value = faith_astray_level }
+				}
+			}
+			if = {
+				limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_fail_astray_opinion
+					opinion = -15
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = {
+					faith_hostility_level = { target = root.faith value = faith_hostile_level }
+				}
+			}
+			if = {
+				limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_fail_hostile_opinion
+					opinion = -25
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = {
+					faith_hostility_level = { target = root.faith value = faith_evil_level }
+				}
+			}
+			if = {
+				limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_fail_evil_opinion
+					opinion = -35
+				}
+			}
+		}
+		every_liege_or_above = {
+			if = {
+				limit = {
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_astray_level }
+					}
+				}
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					add_opinion = {
+						target = root
+						modifier = me_laamp_cc_fail_astray_opinion
+						opinion = -15
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_hostile_level }
+					}
+				}
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					add_opinion = {
+						target = root
+						modifier = me_laamp_cc_fail_hostile_opinion
+						opinion = -25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_evil_level }
+					}
+				}
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					add_opinion = {
+						target = root
+						modifier = me_laamp_cc_fail_evil_opinion
+						opinion = -35
+					}
+				}
+			}
+		}
+	}
+}
+
+ME_proselytize_cc_force_opinion_effect = {
+	root.location.county.holder = {
+		if = {
+			limit = {
+				OR = {
+					faith = root.faith
+					faith = {
+						faith_hostility_level = { target = root.faith value = faith_fully_accepted_level }
+					}
+				}
+				faith = {
+					OR = {
+						has_doctrine = tenet_exaltation_of_pain
+						has_doctrine = tenet_fp3_fedayeen
+						has_doctrine = tenet_human_sacrifice
+						has_doctrine = tenet_sacrificial_ceremonies
+						has_doctrine = tenet_gruesome_festivals
+					}
+				}
+			}
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -15
+			}
+		}
+		else = {
+			add_opinion = {
+				target = root
+				modifier = me_laamp_cc_force_opinion
+				opinion = -75
+			}
+		}
+		every_liege_or_above = {
+			if = {
+				limit = {
+					OR = {
+						faith = root.faith
+						faith = {
+							faith_hostility_level = { target = root.faith value = faith_fully_accepted_level }
+						}
+					}
+					faith = {
+						OR = {
+							has_doctrine = tenet_exaltation_of_pain
+							has_doctrine = tenet_fp3_fedayeen
+							has_doctrine = tenet_human_sacrifice
+							has_doctrine = tenet_sacrificial_ceremonies
+							has_doctrine = tenet_gruesome_festivals
+						}
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = annoyed_opinion
+					opinion = -15
+				}
+			}
+			else = {
+				add_opinion = {
+					target = root
+					modifier = me_laamp_cc_force_opinion
+					opinion = -75
+				}
+			}
+		}
+	}
+}
+
+
+ME_proselytize_county_conversion_normal_effect = {
+	duel = {
+		skills = { diplomacy learning }
+		value = very_high_skill_rating
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = 3.5
+				min = -49
+			}
+			
+			modifier = {
+				factor = 0.75
+				has_character_modifier = me_lost_debate_modifier
+			}
+			
+			modifier = {
+				factor = 0.5
+				has_character_modifier = me_dangerous_zealot_modifier
+			}
+			modifier = {
+				factor = 0.3
+				has_character_modifier = me_bloodthirsty_zealot_modifier
+			}
+			
+			modifier = {
+				factor = 0.3
+				location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } }
+				location.county.duchy = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						any_county_province = {
+							barony = { is_holy_site_of = root.location.county.faith }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.7
+				NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } }
+				NOT = { location.county.duchy = { any_in_de_jure_hierarchy = { tier = tier_county any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } } }
+				location.county.kingdom = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						any_county_province = {
+							barony = { is_holy_site_of = root.location.county.faith }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } }
+				NOT = { location.county.duchy = { any_in_de_jure_hierarchy = { tier = tier_county any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } } }
+				NOT = { location.county.kingdom = { any_in_de_jure_hierarchy = { tier = tier_county any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } } }
+				location.county.empire = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						any_county_province = {
+							barony = { is_holy_site_of = root.location.county.faith }
+						}
+					}
+				}
+			}
+			
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = ep3_laamp_decision_event.1103.a.success
+				left_icon = root
+				right_icon = location.county
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					location.county = {
+						set_county_faith = root.faith
+					}
+				}
+				else_if = {
+					limit = { any_secret = { secret_type = secret_crypto_religionist } }
+					location.county = {
+						set_county_faith = root.secret_faith
+					}
+				}
+				ep3_hasan_advance_radicalism = yes
+				
+				ME_advance_missionary_trait_high = yes
+				hidden_effect = { ME_proselytize_cc_normal_success_opinion_effect = yes }
+			}
+			add_piety = {
+				value = 10
+				multiply = location.county.development_level
+				min = 20
+			}
+		}
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = -3.5
+				min = -49
+			}
+			modifier = {
+				add = location.county.development_level
+			}
+			
+			modifier = {
+				add = {
+					subtract = location.county.county_opinion
+				}
+			}
+			modifier = {
+				factor = 0.75
+				location.county.faith.religion = root.religion
+			}
+			modifier = {
+				factor = 0.75
+				knows_language_of_culture = location.county.culture
+			}
+			
+			modifier = {
+				factor = 0.75
+				has_trait_xp = {
+					trait = ME_missionary
+					value >= 50
+				}
+			}
+			modifier = {
+				factor = 0.75
+				has_trait_xp = {
+					trait = ME_missionary
+					value >= 100
+				}
+			}
+			modifier = {
+				factor = 0.75
+				root.faith = {
+					has_doctrine_parameter = mendicant_preachers_conversion_active
+				}
+			}
+			
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_nobility_public_tier
+					multiply = 5
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_workers_public_tier
+					multiply = 3
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_villagers_public_tier
+					multiply = 1
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_nobility_gold_tier
+					multiply = 5
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_workers_gold_tier
+					multiply = 3
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_villagers_gold_tier
+					multiply = 1
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_nobility_secret_tier
+					multiply = 5
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_workers_secret_tier
+					multiply = 3
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_villagers_secret_tier
+					multiply = 1
+				}
+			}
+			
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = ep3_laamp_decision_event.1103.a.failure
+				left_icon = root
+				right_icon = location.county
+				add_stress = minor_stress_gain
+				
+				hidden_effect = { ME_proselytize_cc_normal_failure_opinion_effect = yes }
+			}
+		}
+	}
+	
+	add_piety = {
+		value = 10
+		multiply = location.county.development_level
+		min = 20
+	}
+}
+
+ME_proselytize_county_conversion_force_effect = {
+	duel = {
+		skills = { martial intrigue }
+		value = very_high_skill_rating
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = 3.5
+				min = -49
+			}
+			
+			modifier = {
+				add = {
+					value = root.number_of_knights
+					multiply = 10
+				}
+			}
+			modifier = {
+				add = root.current_military_strength
+			}
+			modifier = {
+				factor = 1.2
+				root.faith = {
+					has_doctrine = tenet_armed_pilgrimages
+				}
+			}
+			
+			modifier = {
+				factor = 0.3
+				location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } }
+				location.county.duchy = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						any_county_province = {
+							barony = { is_holy_site_of = root.location.county.faith }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.7
+				NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } }
+				NOT = { location.county.duchy = { any_in_de_jure_hierarchy = { tier = tier_county any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } } }
+				location.county.kingdom = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						any_county_province = {
+							barony = { is_holy_site_of = root.location.county.faith }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { location.county = { any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } }
+				NOT = { location.county.duchy = { any_in_de_jure_hierarchy = { tier = tier_county any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } } }
+				NOT = { location.county.kingdom = { any_in_de_jure_hierarchy = { tier = tier_county any_county_province = { barony = { is_holy_site_of = root.location.county.faith } } } } }
+				location.county.empire = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						any_county_province = {
+							barony = { is_holy_site_of = root.location.county.faith }
+						}
+					}
+				}
+			}
+			
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = ep3_laamp_decision_event.1103.a.success
+				left_icon = root
+				right_icon = location.county
+				if = {
+					limit = { NOT = { any_secret = { secret_type = secret_crypto_religionist } } }
+					location.county = {
+						set_county_faith = root.faith
+					}
+				}
+				else_if = {
+					limit = { any_secret = { secret_type = secret_crypto_religionist } }
+					location.county = {
+						set_county_faith = root.secret_faith
+					}
+				}
+				ep3_hasan_advance_radicalism = yes
+				
+				ME_advance_missionary_trait_force = yes
+			}
+			add_piety = {
+				value = minor_piety_value
+				if = {
+					limit = { faith = { has_doctrine = tenet_exaltation_of_pain } }
+					add = minor_piety_value
+				}
+				if = {
+					limit = { faith = { has_doctrine = tenet_fp3_fedayeen } }
+					add = minor_piety_value
+				}
+				if = {
+					limit = { faith = { has_doctrine = tenet_human_sacrifice } }
+					add = minor_piety_value
+				}
+				if = {
+					limit = { faith = { has_doctrine = tenet_sacrificial_ceremonies } }
+					add = minor_piety_value
+				}
+				if = {
+					limit = { faith = { has_doctrine = tenet_gruesome_festivals } }
+					add = minor_piety_value
+				}
+			}
+		}
+		50 = {
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = -3.5
+				min = -49
+			}
+			modifier = {
+				add = location.county.development_level
+			}
+			modifier = {
+				add = location.barony.building_max_garrison
+			}
+			
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_nobility_public_tier
+					multiply = 5
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_workers_public_tier
+					multiply = 3
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_villagers_public_tier
+					multiply = 1
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_nobility_gold_tier
+					multiply = 5
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_workers_gold_tier
+					multiply = 3
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_villagers_gold_tier
+					multiply = 1
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_nobility_secret_tier
+					multiply = 5
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_workers_secret_tier
+					multiply = 3
+				}
+			}
+			modifier = {
+				add = {
+					value = root.location.county.var:converts_villagers_secret_tier
+					multiply = 1
+				}
+			}
+			
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = ep3_laamp_decision_event.1103.a.failure
+				left_icon = root
+				right_icon = location.county
+				increase_wounds_effect = { REASON = fight }
+				random_courtier ?= {
+					increase_wounds_effect = { REASON = fight }
+				}
+			}
+		}
+	}
+	add_piety = 50
+	ME_proselytize_cc_force_opinion_effect = yes
+	
+#	if = {
+#		limit ={ NOT = { has_variable = ME_cc_force_count } }
+#		set_variable = {
+#			name = ME_cc_force_count
+#			value = 1
+#		}
+#	}
+#	else_if = {
+#		limit ={
+#			has_variable = ME_cc_force_count
+#		}
+#		change_variable = {
+#			name = ME_cc_force_count
+#			add = 1
+#		}
+#	}
+#	if {
+#		limit ={
+#			has_variable = ME_cc_force_count
+#			var:ME_cc_force_count >= 3
+#			NOT = { has_character_modifier = me_dangerous_zealot_modifier }
+#			NOT = { has_character_modifier = me_bloodthirsty_zealot_modifier }
+#		}
+#		add_character_modifier = {
+#			modifier = me_dangerous_zealot_modifier
+#			years = 15
+#		}
+#	}
+#	if {
+#		limit ={
+#			has_variable = ME_cc_force_count
+#			var:ME_cc_force_count >= 6
+#			has_character_modifier = me_dangerous_zealot_modifier
+#			NOT = { has_character_modifier = me_bloodthirsty_zealot_modifier }
+#		}
+#		add_character_modifier = {
+#			modifier = me_bloodthirsty_zealot_modifier
+#			years = 15
+#		}
+#	}
+}
+
+
+ME_advance_missionary_trait_high = {
+	if = {
+		limit = { NOT = { has_trait = ME_missionary } }
+		add_trait = ME_missionary
+	}
+	add_trait_xp = {
+		trait = ME_missionary
+		value = 20
+	}
+	
+	if = {
+		limit = { has_trait = me_hidden_imam }
+		add_trait_xp = {
+			trait = me_hidden_imam
+			value = 20
+		}
+	}
+}
+
+ME_advance_missionary_trait_medium = {
+	if = {
+		limit = { NOT = { has_trait = ME_missionary } }
+		add_trait = ME_missionary
+	}
+	add_trait_xp = {
+		trait = ME_missionary
+		value = 10
+	}
+}
+
+ME_advance_missionary_trait_low = {
+	if = {
+		limit = { NOT = { has_trait = ME_missionary } }
+		add_trait = ME_missionary
+	}
+	add_trait_xp = {
+		trait = ME_missionary
+		value = 5
+	}
+}
+
+ME_advance_missionary_trait_force = {
+	if = {
+		limit = { NOT = { has_trait = ME_missionary } }
+		add_trait = ME_missionary
+	}
+	
+	if = {
+		limit = { has_trait = me_hidden_imam }
+		add_trait_xp = {
+			trait = me_hidden_imam
+			value = 20
+		}
+	}
+}
+
+ME_proselytize_collect_donations_effect = {
+	set_variable = {
+		name = temp_alms_gold
+		value = 0
+	}
+	hidden_effect = {
+		switch = {
+			trigger = root.var:social_type
+			flag:preach_nobility = {
+				#custom_tooltip = ME_proselytize_donation_public_tt
+				if = {
+					limit = {
+						root.location.county.var:converts_nobility_public_faith = root.faith
+						root.location.county.var:converts_nobility_public_tier = 1
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 5 } }
+						10 = { change_variable = { name = temp_alms_gold add = 10 } }
+						10 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_nobility_public_faith = root.faith
+						root.location.county.var:converts_nobility_public_tier = 2
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 10 } }
+						10 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_nobility_public_faith = root.faith
+						root.location.county.var:converts_nobility_public_tier = 3
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_nobility_public_faith = root.faith
+						root.location.county.var:converts_nobility_public_tier = 4
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+						10 = { change_variable = { name = temp_alms_gold add = 35 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_nobility_public_faith = root.faith
+						root.location.county.var:converts_nobility_public_tier = 5
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+						10 = { change_variable = { name = temp_alms_gold add = 35 } }
+						10 = { change_variable = { name = temp_alms_gold add = 40 } }
+					}
+				}
+				
+				#custom_tooltip = ME_proselytize_donation_secret_tt
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_nobility_secret_tier = 1
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 5 } }
+						10 = { change_variable = { name = temp_alms_gold add = 10 } }
+						10 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_nobility_secret_tier = 2
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 10 } }
+						10 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_nobility_secret_tier = 3
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_nobility_secret_tier = 4
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+						10 = { change_variable = { name = temp_alms_gold add = 35 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_nobility_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_nobility_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_nobility_secret_tier = 5
+					}
+					random_list = {
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+						10 = { change_variable = { name = temp_alms_gold add = 35 } }
+						10 = { change_variable = { name = temp_alms_gold add = 40 } }
+					}
+				}
+			}
+			
+			flag:preach_workers = {
+				#custom_tooltip = ME_proselytize_donation_public_tt
+				if = {
+					limit = {
+						root.location.county.var:converts_workers_public_faith = root.faith
+						root.location.county.var:converts_workers_public_tier = 1
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 5 } }
+						25 = { change_variable = { name = temp_alms_gold add = 10 } }
+						20 = { change_variable = { name = temp_alms_gold add = 15 } }
+						15 = { change_variable = { name = temp_alms_gold add = 20 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_workers_public_faith = root.faith
+						root.location.county.var:converts_workers_public_tier = 2
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 10 } }
+						25 = { change_variable = { name = temp_alms_gold add = 15 } }
+						20 = { change_variable = { name = temp_alms_gold add = 20 } }
+						15 = { change_variable = { name = temp_alms_gold add = 25 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_workers_public_faith = root.faith
+						root.location.county.var:converts_workers_public_tier = 3
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 15 } }
+						25 = { change_variable = { name = temp_alms_gold add = 20 } }
+						20 = { change_variable = { name = temp_alms_gold add = 25 } }
+						15 = { change_variable = { name = temp_alms_gold add = 30 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_workers_public_faith = root.faith
+						root.location.county.var:converts_workers_public_tier = 4
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 20 } }
+						25 = { change_variable = { name = temp_alms_gold add = 25 } }
+						20 = { change_variable = { name = temp_alms_gold add = 30 } }
+						15 = { change_variable = { name = temp_alms_gold add = 35 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_workers_public_faith = root.faith
+						root.location.county.var:converts_workers_public_tier = 5
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 25 } }
+						25 = { change_variable = { name = temp_alms_gold add = 30 } }
+						20 = { change_variable = { name = temp_alms_gold add = 35 } }
+						15 = { change_variable = { name = temp_alms_gold add = 40 } }
+					}
+				}
+				
+				#custom_tooltip = ME_proselytize_donation_secret_tt
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_workers_secret_tier = 1
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 5 } }
+						25 = { change_variable = { name = temp_alms_gold add = 10 } }
+						20 = { change_variable = { name = temp_alms_gold add = 15 } }
+						15 = { change_variable = { name = temp_alms_gold add = 20 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_workers_secret_tier = 2
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 10 } }
+						25 = { change_variable = { name = temp_alms_gold add = 15 } }
+						20 = { change_variable = { name = temp_alms_gold add = 20 } }
+						15 = { change_variable = { name = temp_alms_gold add = 25 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_workers_secret_tier = 3
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 15 } }
+						25 = { change_variable = { name = temp_alms_gold add = 20 } }
+						20 = { change_variable = { name = temp_alms_gold add = 25 } }
+						15 = { change_variable = { name = temp_alms_gold add = 30 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_workers_secret_tier = 4
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 20 } }
+						25 = { change_variable = { name = temp_alms_gold add = 25 } }
+						20 = { change_variable = { name = temp_alms_gold add = 30 } }
+						15 = { change_variable = { name = temp_alms_gold add = 35 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_workers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_workers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_workers_secret_tier = 5
+					}
+					random_list = {
+						50 = { change_variable = { name = temp_alms_gold add = 25 } }
+						25 = { change_variable = { name = temp_alms_gold add = 30 } }
+						20 = { change_variable = { name = temp_alms_gold add = 35 } }
+						15 = { change_variable = { name = temp_alms_gold add = 40 } }
+					}
+				}
+			}
+			
+			flag:preach_villagers = {
+				#custom_tooltip = ME_proselytize_donation_public_tt
+				if = {
+					limit = {
+						root.location.county.var:converts_villagers_public_faith = root.faith
+						root.location.county.var:converts_villagers_public_tier = 1
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 5 } }
+						50 = { change_variable = { name = temp_alms_gold add = 10 } }
+						25 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_villagers_public_faith = root.faith
+						root.location.county.var:converts_villagers_public_tier = 2
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 10 } }
+						50 = { change_variable = { name = temp_alms_gold add = 15 } }
+						25 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_villagers_public_faith = root.faith
+						root.location.county.var:converts_villagers_public_tier = 3
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 15 } }
+						50 = { change_variable = { name = temp_alms_gold add = 20 } }
+						25 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_villagers_public_faith = root.faith
+						root.location.county.var:converts_villagers_public_tier = 4
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 20 } }
+						50 = { change_variable = { name = temp_alms_gold add = 25 } }
+						25 = { change_variable = { name = temp_alms_gold add = 30 } }
+						10 = { change_variable = { name = temp_alms_gold add = 35 } }
+					}
+				}
+				else_if = {
+					limit = {
+						root.location.county.var:converts_villagers_public_faith = root.faith
+						root.location.county.var:converts_villagers_public_tier = 5
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 25 } }
+						50 = { change_variable = { name = temp_alms_gold add = 30 } }
+						25 = { change_variable = { name = temp_alms_gold add = 35 } }
+						10 = { change_variable = { name = temp_alms_gold add = 40 } }
+					}
+				}
+				
+				#custom_tooltip = ME_proselytize_donation_secret_tt
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_villagers_secret_tier = 1
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 5 } }
+						50 = { change_variable = { name = temp_alms_gold add = 10 } }
+						25 = { change_variable = { name = temp_alms_gold add = 15 } }
+						10 = { change_variable = { name = temp_alms_gold add = 20 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_villagers_secret_tier = 2
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 10 } }
+						50 = { change_variable = { name = temp_alms_gold add = 15 } }
+						25 = { change_variable = { name = temp_alms_gold add = 20 } }
+						10 = { change_variable = { name = temp_alms_gold add = 25 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_villagers_secret_tier = 3
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 15 } }
+						50 = { change_variable = { name = temp_alms_gold add = 20 } }
+						25 = { change_variable = { name = temp_alms_gold add = 25 } }
+						10 = { change_variable = { name = temp_alms_gold add = 30 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_villagers_secret_tier = 4
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 20 } }
+						50 = { change_variable = { name = temp_alms_gold add = 25 } }
+						25 = { change_variable = { name = temp_alms_gold add = 30 } }
+						10 = { change_variable = { name = temp_alms_gold add = 35 } }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+								root.location.county.var:converts_villagers_secret_faith = root.faith
+							}
+							AND = {
+								any_secret = { secret_type = secret_crypto_religionist }
+								root.location.county.var:converts_villagers_secret_faith = root.secret_faith
+							}
+						}
+						root.location.county.var:converts_villagers_secret_tier = 5
+					}
+					random_list = {
+						100 = { change_variable = { name = temp_alms_gold add = 25 } }
+						50 = { change_variable = { name = temp_alms_gold add = 30 } }
+						25 = { change_variable = { name = temp_alms_gold add = 35 } }
+						10 = { change_variable = { name = temp_alms_gold add = 40 } }
+					}
+				}
+			}
+		}
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = ME_laamp_proselytize_alms_tt
+
+			add_gold = var:temp_alms_gold
+		}
+	}
+	
+	remove_variable = temp_alms_gold
+}

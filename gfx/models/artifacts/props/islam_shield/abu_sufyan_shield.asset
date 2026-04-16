@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "abu_sufyan_shield_mesh"
+	file = "abu_sufyan_shield.mesh"
+
+	meshsettings = {
+		name = "abu_sufyan_shieldShape"
+		index = 0
+		texture_diffuse = "abu_sufyan_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "abu_sufyan_shield_entity"
+	pdxmesh = "abu_sufyan_shield_mesh"
+}

@@ -1,0 +1,65 @@
+﻿l_english:
+
+## Divergent Cultures 
+ qalawri_name:0 "Qalawri"
+ qalawri_collective_noun:0 "Qalawris"
+ qalawri_prefix:0 "Qalawro"
+ 
+ siculo_greek_name:0 "Sikelós" #Siculo-Greek
+ siculo_greek_collective_noun:0 "Sikelianoí" #Siculo-Greeks
+ siculo_greek_prefix:0 "Sikeló" #Siculo-Greco
+
+ iqritshi_name:0 "Iqritshi"
+ iqritshi_collective_noun:0 "Iqritshis"
+ iqritshi_prefix:0 "Iqritsho"
+ 
+ qubrusi_name:0 "Qubrusi"
+ qubrusi_collective_noun:0 "Qubrusis"
+ qubrusi_prefix:0 "Qubruso"
+ 
+ ahwazi_name:0 "Ahwazi"
+ ahwazi_collective_noun:0 "Ahwazis"
+ ahwazi_prefix:0 "Ahwazi"
+ 
+## Hybrid Cultures
+ siculo_barbari_name:0 "Siculo-Barbari"
+ siculo_barbari_collective_noun:0 "Siculo-Barbaris"
+ siculo_barbari_prefix:0 "Siculo-Barbaro"
+ 
+ siculo_greek_hybrid_name:0 "$siculo_greek_name$" #Siculo-Greek
+ siculo_greek_hybrid_collective_noun:0 "$siculo_greek_collective_noun$" #Siculo-Greeks
+ siculo_greek_hybrid_prefix:0 "$siculo_greek_hybrid_prefix$" #Siculo-Greco
+ 
+ #Alt "Grico" and "Grici/Grichi"(Plural)
+ italo_greek_name:0 "Griko" 
+ italo_greek_collective_noun:0 "Grichi" #Not sure if Griki is grammatically correct
+ italo_greek_prefix:0 "Griko"
+ 
+ #Alt "Grecanic"
+ italo_greek_calabria_name:0 "Grecanico"
+ italo_greek_calabria_collective_noun:0 "Grecanici"
+ italo_greek_calabria_prefix:0 "Grecanico"
+ 
+ qalawri_hybrid_name:0 "$qalawri_name$"
+ qalawri_hybrid_collective_noun:0 "$qalawri_collective_noun$"
+ qalawri_hybrid_prefix:0 "$qalawri_arabic_prefix$"
+
+ iqritshi_hybrid_name:0 "$iqritshi_name$"
+ iqritshi_hybrid_collective_noun:0 "$iqritshi_collective_noun$"
+ iqritshi_hybrid_prefix:0 "$iqritshi_prefix$"
+ 
+ qubrusi_hybrid_name:0 "$qubrusi_name$"
+ qubrusi_hybrid_collective_noun:0 "$qubrusi_collective_noun$"
+ qubrusi_hybrid_prefix:0 "$qubrusi_prefix$"
+ 
+ ahwazi_hybrid_name:0 "$ahwazi_name$"
+ ahwazi_hybrid_collective_noun:0 "$ahwazi_collective_noun$"
+ ahwazi_hybrid_prefix:0 "$ahwazi_prefix$"
+ 
+ khache_name:0 "Khache"
+ khache_collective_noun:0 "Khaches"
+ khache_prefix:0 "Khache"
+ 
+ #######################
+
+

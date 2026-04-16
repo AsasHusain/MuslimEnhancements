@@ -1,0 +1,100 @@
+﻿#namespace = mahdi_events
+#mahdi_events.0001 ={
+#	type = character_event
+#	title = mahdi_events.0001.title
+#	desc = mahdi_events.0001.desc
+#	trigger = {
+#		faith = { has_religion_tag = islam_religion }
+#		has_trait = zealous
+#		NOT = { has_character_modifier = mahdi_faith_cost_modifier }
+#		NOT = { has_character_modifier = mahdi_opinion_modifier }
+#		NOT = { has_character_flag = had_mahdi_event }
+#		OR = {
+#			has_trait = lunatic_1
+#			has_trait = lunatic_genetic
+#		}
+#	}
+#
+#	weight_multiplier = {
+#		base = 1
+#	}
+#
+#	theme = mental_health
+#	left_portrait = {
+#		character = root
+#		animation = pain
+#	}
+#	
+#	
+#	immediate = {
+#		add_character_flag = had_mahdi_event
+#	}
+#
+#	option = {
+#		name = mahdi_events.0001.accept
+#		add_character_modifier = {
+#			modifier = mahdi_opinion_modifier
+#			years = 5
+#		  }
+#		add_character_modifier = mahdi_faith_cost_modifier
+#		ai_chance = {
+#			base = 50
+#		}
+#	}
+#	option = {
+#		name = mahdi_events.0001.decline
+#		add_piety = medium_piety_gain
+#		random = {
+#			chance = 45
+#			add_trait = humble
+#		  }
+#	}
+#}
+#
+#mahdi_events.0002 ={
+#	type = character_event
+#	title = mahdi_events.0002.title
+#	desc = mahdi_events.0002.desc
+#	trigger = {
+#		faith = { has_religion_tag = islam_religion }
+#		has_trait = zealous
+#		NOT = { has_character_modifier = mahdi_faith_cost_modifier }
+#		NOT = { has_character_modifier = mahdi_opinion_modifier }
+#		NOT = { has_character_flag = had_mahdi_event }
+#		OR = {
+#			has_trait = arrogant
+#			sub_realm_size >= 120
+#		}
+#	}
+#
+#	weight_multiplier = {
+#		base = 1
+#	}
+#	
+#	theme = crown
+#	left_portrait = {
+#		character = root
+#		animation = win_over_war
+#	}
+#	
+#	
+#	immediate = {
+#		add_character_flag = had_mahdi_event
+#	}
+#
+#	option = {
+#		name = mahdi_events.0002.accept
+#		add_character_modifier = {
+#			modifier = mahdi_opinion_modifier
+#			years = 5
+#		  }
+#		add_character_modifier = mahdi_faith_cost_modifier
+#		ai_chance = {
+#			base = 50
+#		}
+#	}
+#	option = {
+#		name = mahdi_events.0002.decline
+#		add_piety = medium_piety_gain
+#	}
+#}

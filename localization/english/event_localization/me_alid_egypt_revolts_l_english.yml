@@ -1,0 +1,31 @@
+﻿l_english:
+
+ me_alid_egypt_revolt_cb:0 "Alid Revolt"
+ ALID_REVOLT_CB_NAME:0 "Seize All [de_jure|E] Lands"
+ ALID_REVOLT_CB_WAR_NAME:1 "$ORDER$ Alid Revolt for the [TITLE.GetBaseName]"
+ ALID_REVOLT_CB_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ me_alid_egyptian_rebel_troops:0 "Shi'ite Rebels"
+ me_bugha_al_akbar_revolt_name:0 "The Upper Egyptian Revolt"
+ me_bugha_al_asghar_revolt_name:0 "Bugha al-Asghar's Revolt"
+ 
+ # Ibn as-Sufi's Revolt
+ me_alid_egypt_revolt.0001.t:0 "Menace in Upper Egypt"
+ me_alid_egypt_revolt.0001.desc.ibn_yazdad_dead:0 "Within a field of dead soldiers stands the mutilated and crucified body of one of our commanders, [ibn_yazdad.GetFirstName] Ibn Yazdad, a message meant for the governor of Egypt himself.\n\nThis is the work of [ibn_as_sufi.GetFirstName] Ibn as-Sufi, a marauding Shi’ite revolutionary of Alid descent who has convinced several Bedouin tribes to follow him in terrorizing the people of upper Egypt, he is hellbent on taking over the country even if it means burning every city in his path, it seems this will not be the last act of barbarism we see from him."
+ me_alid_egypt_revolt.0001.desc.ibn_yazdad_alive:0 "Within a field of dead soldiers stands the mutilated and crucified body of one of our commanders, a message meant for the governor of Egypt himself.\n\nThis is the work of [ibn_as_sufi.GetFirstName] Ibn as-Sufi, a marauding Shi’ite revolutionary of Alid descent who has convinced several Bedouin tribes to follow him in terrorizing the people of upper Egypt, he is hellbent on taking over the country even if it means burning every city in his path, it seems this will not be the last act of barbarism we see from him."
+ me_alid_egypt_revolt.0001.a:0 "This menace cannot be allowed to remain in Egypt!"
+
+ # Bugha al-Akbar's Revolt
+ me_alid_egypt_revolt.0002.t:0 "Seeds of a Rebellion"
+ me_alid_egypt_revolt.0002.desc:0 "An Alid known as ‘[bugha_al_akbar.GetNickname|V]’ has been agitating the people in upper Egypt in an attempt to get the to revolt, although he has not managed to gain any significant following that may change in the coming days.\n\nWhile in any normal situation he would be instantly arrested, his noble lineage means that any attack on him may anger the Muslims of the region."
+ me_alid_egypt_revolt.0002.a:0 "Things will work out on their own"
+ me_alid_egypt_revolt.0002.b:0 "Put a stop to him by any means necessary!"
+ me_killed_alid_modifier:0 "Murder of an Alid"
+ 
+ # Bugha al-Asghar's Revolt
+ me_alid_egypt_revolt.0003.t:0 "One More Rebellion"
+ me_alid_egypt_revolt.0003.desc.main:0 "Another Alid by the name of ‘[bugha_al_asghar.GetNickname|V]’ has arisen on region known as al-Kana’is, though it seems he lacks the numbers shown by his predecessors, he still carries with him a significant number of followers.\n\n"
+ me_alid_egypt_revolt.0003.desc.other:0 "Since this is happening on Egyptian territory we are technically obligated to address this problem, however considering that the region is subject to an another governor and not to us we could simply let them handle this issue alone."
+ me_alid_egypt_revolt.0003.a:0 "Let's get this over with"
+ me_alid_egypt_revolt.0003.b:0 "They can deal with this themselves"
+ 
+ 

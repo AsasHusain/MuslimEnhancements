@@ -1,0 +1,53 @@
+﻿
+
+me_ethiopian_fic_001 = { 
+	name = "Siraj"
+	culture = "ethiopian"
+	religion = "ashari"
+
+	1020.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
+me_ethiopian_fic_002 = { 
+	name = "Ahmad"
+	culture = "ethiopian"
+	religion = "ashari"
+
+	1042.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+
+me_ethiopian_fic_003 = { 
+	name = "Umar"
+	culture = "ethiopian"
+	religion = "ashari"
+
+	1151.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_ethiopian_fic_004 = { 
+	name = "Ja_far"
+	culture = "ethiopian"
+	religion = "ashari"
+
+	1130.1.1 = {
+		birth = yes
+	}
+	1190.1.1 = {
+		death = yes
+	}
+}

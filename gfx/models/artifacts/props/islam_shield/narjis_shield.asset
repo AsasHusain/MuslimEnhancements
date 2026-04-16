@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "narjis_shield_mesh"
+	file = "narjis_shield.mesh"
+
+	meshsettings = {
+		name = "narjis_shieldShape"
+		index = 0
+		texture_diffuse = "narjis_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "narjis_shield_entity"
+	pdxmesh = "narjis_shield_mesh"
+}

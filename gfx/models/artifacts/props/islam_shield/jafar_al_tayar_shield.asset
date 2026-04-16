@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "jafar_al_tayar_shield_mesh"
+	file = "jafar_al_tayar_shield.mesh"
+
+	meshsettings = {
+		name = "jafar_al_tayar_shieldShape"
+		index = 0
+		texture_diffuse = "jafar_al_tayar_shield_diffuse.dds"
+		texture_normal = "prophet_shield_normal.dds"
+		texture_specular = "prophet_shield_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "jafar_al_tayar_shield_entity"
+	pdxmesh = "jafar_al_tayar_shield_mesh"
+}

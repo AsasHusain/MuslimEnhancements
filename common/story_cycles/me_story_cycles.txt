@@ -1,0 +1,17 @@
+﻿### 
+story_nukkari_revolt = {
+	
+	on_setup = {
+		if = {
+			limit = { NOT = { exists = global_var:nukkari_revolt_strength_score } }
+			set_global_variable = {
+				name = nukkari_revolt_strength_score
+				value = 5
+			}
+		}
+	}
+	on_owner_death = {
+		inherit_nukkari_revolt_effect = yes
+	}
+	on_end = {}
+}

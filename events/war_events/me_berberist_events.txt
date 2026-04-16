@@ -1,0 +1,330 @@
+﻿namespace = me_berberist_events
+
+### Ha-Mimists
+# Warning for Ha-Mimist Invasion
+me_berberist_events.0001 = {
+	title = me_berberist_events.0001.t
+	desc = me_berberist_events.0001.desc
+	theme = realm
+	override_background = { reference = terrain }
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		faith:hamimist = { save_scope_as = hamimist }
+	}
+
+	option = {
+		name = me_berberist_events.0001.a
+		custom_tooltip = me_berberist_events.0001.a.tt
+	}
+}
+
+# Setup event for Ha-Mimist Invasion
+me_berberist_events.0002 = {
+	hidden = yes
+	
+
+	trigger = {
+	}
+
+	immediate = {
+		spawn_hamimist_invasion_character_effect = yes
+		me_start_hamimist_invasion_effect = {
+			TARGET_COUNTY = title:c_ceuta
+			REBEL_LEADER = scope:hamimist_leader
+		}
+		set_global_variable = {
+			name = hamimist_invasion_ended
+			value = yes
+		}
+	}
+}
+
+# Informing about Ha-Mimist Invasion
+me_berberist_events.0003 = {
+	title = me_berberist_events.0003.t
+	desc = me_berberist_events.0003.desc
+	theme = realm
+	override_background = { reference = terrain }
+
+	right_portrait = {
+		character = scope:hamimist_leader
+		animation = personality_bold
+	}
+	left_portrait = {
+		character = scope:hamimist_taqit
+		animation = personality_zealous
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = me_berberist_events.0003.a
+		custom_tooltip = me_berberist_events.0003.a.tt
+	}
+}
+
+# Ha-Mimist defeat event
+me_berberist_events.0004 = {
+	title = me_berberist_events.0004.t
+	desc = me_berberist_events.0004.desc
+	theme = prison
+
+	left_portrait = {
+		character = scope:attacker
+		animation = prisondungeon
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = me_berberist_events.0004.a
+		custom_tooltip = me_berberist_events.0004.a.tt
+		
+		execute_prisoner_effect = {
+			VICTIM = scope:attacker
+			EXECUTIONER = root
+		}
+		add_piety = 1000
+
+		hidden_effect = {
+			every_prisoner = {
+				limit = { faith = faith:hamimist }
+				death = {
+					death_reason = death_execution
+					killer = root
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = me_berberist_events.0004.b
+		
+		execute_prisoner_effect = {
+			VICTIM = scope:attacker
+			EXECUTIONER = root
+		}
+		add_piety = 750
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = me_berberist_events.0004.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Ha-Mists win the war
+me_berberist_events.0005 = {
+	title = me_berberist_events.0005.t
+	desc = me_berberist_events.0005.desc
+	theme = realm
+	override_background = { reference = terrain }
+
+	left_portrait = {
+		character = scope:attacker
+		animation = personality_zealous
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = me_berberist_events.0005.a
+	}
+	option = {
+		name = me_berberist_events.0005.b
+		set_player_character = scope:attacker
+	}
+}
+
+
+### Kaduists
+# Warning for Kaduist Invasion
+me_berberist_events.0101 = {
+	title = me_berberist_events.0101.t
+	desc = me_berberist_events.0101.desc
+	theme = realm
+	override_background = { reference = terrain }
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+		faith:kaduist = { save_scope_as = kaduist }
+	}
+
+	option = {
+		name = me_berberist_events.0101.a
+		custom_tooltip = me_berberist_events.0101.a.tt
+	}
+}
+
+# Setup event for Kaduist Invasion
+me_berberist_events.0102 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		spawn_kaduist_invasion_character_effect = yes
+		
+		me_start_kaduist_invasion_effect = {
+			TARGET_COUNTY = title:c_satif
+			REBEL_LEADER = scope:kaduist_leader
+		}
+			
+		set_global_variable = {
+			name = kaduist_invasion_ended
+			value = yes
+		}
+	}
+}
+
+# Informing about Kaduist Invasion
+me_berberist_events.0103 = {
+	title = me_berberist_events.0103.t
+	desc = me_berberist_events.0103.desc
+	theme = realm
+	override_background = { reference = terrain }
+
+	right_portrait = {
+		character = scope:kaduist_leader
+		animation = personality_zealous
+	}
+	left_portrait = {
+		character = scope:kaduist_father
+		animation = personality_dishonorable
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = me_berberist_events.0103.a
+		custom_tooltip = me_berberist_events.0103.a.tt
+	}
+}
+
+# Kaduist defeat event
+me_berberist_events.0104 = {
+	title = me_berberist_events.0104.t
+	desc = me_berberist_events.0104.desc
+	theme = prison
+
+	left_portrait = {
+		character = scope:attacker
+		animation = prisondungeon
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = me_berberist_events.0104.a
+		custom_tooltip = me_berberist_events.0104.a.tt
+		
+		execute_prisoner_effect = {
+			VICTIM = scope:attacker
+			EXECUTIONER = root
+		}
+		add_piety = 1000
+
+		hidden_effect = {
+			every_prisoner = {
+				limit = { faith = faith:kaduist }
+				death = {
+					death_reason = death_execution
+					killer = root
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = me_berberist_events.0104.b
+		
+		execute_prisoner_effect = {
+			VICTIM = scope:attacker
+			EXECUTIONER = root
+		}
+		add_piety = 750
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = me_berberist_events.0104.c
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Kaduists win the war
+me_berberist_events.0105 = {
+	title = me_berberist_events.0105.t
+	desc = me_berberist_events.0105.desc
+	theme = realm
+	override_background = { reference = terrain }
+
+	left_portrait = {
+		character = scope:attacker
+		animation = personality_zealous
+	}
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = me_berberist_events.0105.a
+	}
+	option = {
+		name = me_berberist_events.0105.b
+		set_player_character = scope:attacker
+	}
+}

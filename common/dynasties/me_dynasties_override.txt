@@ -1,0 +1,61 @@
+﻿## Hashimid dynasty, changed to become the Quraysh dynasty
+7296 = {
+	name = "dynn_me_qurashi" # al-Qurashī
+	culture = "bedouin"
+	forced_coa_religiongroup = "muslim"
+}
+
+## The Andalusian Banū 'Abbād
+594 = {
+	name = "dynn_me_Banu_Abbad"
+	culture = "andalusian"
+}
+
+## Ibn Abbad dynasty
+12237 = {
+	name = "dynn_me_al_Abbadi"
+	culture = "siqilli"
+}
+
+## Banu Abd al-Qays
+1042121 = {
+	name = "dynn_me_Abd_al-Qays"
+	culture = "bedouin"
+}
+
+## Abu Awn Abd al-Malik ibn Yazid - Vanilla mistakenly made him an Azdi but he was a mawla of theirs and not a member
+1042126 = {
+	name = "dynn_Khurasanid"
+	culture = "persian"
+}
+
+## Fictional Multan dynasty (Qarmatia)
+1042101 = {
+	name = "dynn_Faridid"
+	culture = "punjabi"
+}
+
+## Banu Wazir - Qaysids
+12197 = {
+	name = "dynn_Qaysid"
+	culture = "andalusian"
+}
+
+## Muhammad Ibn al-Muqqadam, Ayyubid governor of Baalbek
+levantine_al-muqaddam = {
+	#prefix = "dynnp_al-"
+	name = "dynn_Muqqadam"
+	culture = "levantine"
+}
+
+# Rashid ud-Din Sinan of the Hashashin
+100765 = {
+	name = "dynn_Rashidid"
+	culture = "levantine"
+}
+
+# Takshids, Salah ud-Din's mother's dynasty
+levantine_musikid = {
+	name = "dynn_Musikid"
+	culture = "kurdish"
+}

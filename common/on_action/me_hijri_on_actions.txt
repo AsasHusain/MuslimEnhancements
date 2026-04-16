@@ -1,0 +1,105 @@
+### Hijri Calendar On-Actions ###
+
+# Hook into game start: initialize immediately, start the delayed daily pulse
+on_game_start = {
+	on_actions = {
+		me_hijri_start_pulse
+	}
+}
+
+# Initialize on lobby start (covers late-loading scenarios)
+on_game_start_after_lobby = {
+	effect = {
+		me_initialize_hijri_date_effect = yes
+	}
+}
+
+# Kick off the daily pulse with a 1-day delay so it does NOT advance on the start date
+me_hijri_start_pulse = {
+	effect = {
+		# Initialize here too in case on_game_start_after_lobby hasn't fired yet
+		me_initialize_hijri_date_effect = yes
+	}
+
+	on_actions = {
+		delay = { days = 1 }
+		me_hijri_daily_pulse
+	}
+}
+
+# Self-chaining daily pulse: advance the Hijri calendar by 1 day each game day
+me_hijri_daily_pulse = {
+	on_actions = {
+		delay = { days = 1 }
+		me_hijri_daily_pulse
+	}
+
+	effect = {
+		# Safety net: initialize if missing (e.g. mod added to existing save)
+		me_initialize_hijri_date_effect = yes
+		# Advance the Hijri date by exactly 1 day
+		me_advance_hijri_day_effect = yes
+
+		# On the first day of Ramadan, apply each Muslim character's stored fasting & patronage choice.
+		if = {
+			limit = {
+				me_hijri_month_value = 9
+				me_hijri_day_display = 1
+			}
+			every_living_character = {
+				limit = {
+					me_is_muslim_trigger = yes
+					exists = var:me_ramadan_approach
+				}
+				me_apply_ramadan_modifier_effect = yes
+			}
+			every_living_character = {
+				limit = {
+					me_is_muslim_trigger = yes
+					me_is_top_liege_trigger = yes
+					exists = var:me_ramadan_patronage
+				}
+				me_apply_ramadan_patronage_effect = yes
+			}
+		}
+
+		# On the first day of Muharram, apply each Shia character's stored mourning & patronage choice.
+		if = {
+			limit = {
+				me_hijri_month_value = 1
+				me_hijri_day_display = 1
+				exists = global_var:me_hijri_year
+			}
+			every_living_character = {
+				limit = {
+					me_is_muslim_trigger = yes
+					me_is_shia_trigger = yes
+					exists = var:me_muharram_approach
+				}
+				me_apply_muharram_modifier_effect = yes
+			}
+			every_living_character = {
+				limit = {
+					me_is_muslim_trigger = yes
+					me_is_shia_trigger = yes
+					me_is_top_liege_trigger = yes
+					exists = var:me_muharram_patronage
+				}
+				me_apply_muharram_patronage_effect = yes
+			}
+		}
+	}
+}
+
+# Safety net: yearly pulse re-initializes if somehow missed
+yearly_global_pulse = {
+	on_actions = {
+		me_hijri_yearly_check
+	}
+}
+
+me_hijri_yearly_check = {
+	effect = {
+		me_initialize_hijri_date_effect = yes
+	}
+}

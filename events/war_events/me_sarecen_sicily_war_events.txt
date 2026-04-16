@@ -1,0 +1,205 @@
+﻿#######################################################################################################################
+## 0001-0004 Aghlabid conquest of Sicily
+
+## 0005-0010 Zirid intervention in Sicily
+
+
+namespace = ss_wars
+
+# Startup Events
+## Italy Startup Event (Depricated)
+#ss_wars.0001 = {
+#	title = ss_wars.0001.t
+#	desc = ss_wars.0001.desc	
+#	theme = realm
+#	override_background = { reference = throne_room }
+#
+#	left_portrait = {
+#		character = title:k_italy.holder
+#		animation = personality_bold
+#	}
+#	right_portrait = {
+#		character = title:c_bari.holder
+#		animation = dismissal
+#	}
+#	
+#	immediate = {
+#	}
+#	
+#	option = {
+#		name = ss_wars.0001.a
+#		custom_tooltip = ss_wars.0001.tt
+#	}
+#}
+
+## Bari Startup Event (Depricated)
+#ss_wars.0002 = {
+#	title = ss_wars.0002.t
+#	desc = ss_wars.0002.desc
+#	theme = realm
+#	override_background = { reference = throne_room }
+#
+#	left_portrait = {
+#		character = title:c_bari.holder
+#		animation = worry
+#	}
+#	right_portrait = {
+#		character = title:k_italy.holder
+#		animation = personality_bold
+#	}
+#	
+#	immediate = {
+#	}
+#	
+#	option = {
+#		name = ss_wars.0002.a
+#		custom_tooltip = ss_wars.0002.tt
+#	}
+#}
+
+## Zirid Intervention Startup Event
+ss_wars.0003 = {
+	title = ss_wars.0003.t
+	desc = ss_wars.0003.desc
+	theme = realm
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = title:k_africa.holder
+		animation = worry
+	}
+	right_portrait = {
+		character = title:d_apulia.holder
+		animation = marshal
+	}
+	
+	trigger = { current_date = 1066.9.15 }
+	
+	immediate = {
+		title:k_africa.holder = { save_scope_as = zirid_africa }
+	}
+	
+	option = {
+		name = ss_wars.0003.a
+		custom_tooltip = ss_wars.0003.tt
+	}
+}
+
+# Victory Events
+## Italian Victory - Byzantines
+ss_wars.0100 = {
+	title = ss_wars.0100.t
+	desc = ss_wars.0100.desc
+	theme = realm
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	
+	immediate = {
+		add_unpressed_claim = title:d_apulia
+		show_as_tooltip = { bari_partition_effect = yes }
+	}
+	
+	option = {
+		name = ss_wars.0100.a
+	}
+}
+
+## Italian Victory - Rossano Holder
+ss_wars.0101 = {
+	title = ss_wars.0101.t
+	desc = ss_wars.0101.desc
+	theme = realm
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		show_as_tooltip = { bari_partition_effect = yes }
+	}
+	
+	option = {
+		name = ss_wars.0101.a
+	}
+}
+
+## Italian Victory - Salerno Holder
+ss_wars.0102 = {
+	title = ss_wars.0102.t
+	desc = ss_wars.0102.desc
+	theme = realm
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		show_as_tooltip = { bari_partition_effect = yes }
+	}
+	
+	option = {
+		name = ss_wars.0102.a
+	}
+}
+
+
+
+## Italy-Bari Startup
+ss_wars.0200 = {
+	title = ss_wars.0200.t
+	desc = {
+		desc = ss_wars.0200.desc
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { has_global_variable = me_bari_partition_true_variable }
+					desc = ss_wars.0200.desc.true
+				}
+				desc = ss_wars.0200.desc.false
+			}
+		}
+		desc = ss_wars.0200.desc.start
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { has_game_rule = me_calabria_bari }
+					desc = ss_wars.0200.desc.calabria_bari
+				}
+				desc = ss_wars.0200.desc.calabria_norm
+			}
+		}
+	}
+	theme = realm
+	override_background = { reference = throne_room }
+
+	trigger = { current_date = 867.1.1 }
+	
+	left_portrait = {
+		character = root
+		animation = title:c_bari.holder
+	}
+	
+	option = { # Activate Bari Partition
+		name = ss_wars.0200.a
+
+		hidden_effect = {
+			set_global_variable = {
+				name = me_bari_partition_true_variable
+				value = yes
+			}
+		}
+	}
+	option = { # Deactivate Bari Partition
+		name = ss_wars.0200.b
+
+		remove_global_variable = me_bari_partition_true_variable
+	}
+}

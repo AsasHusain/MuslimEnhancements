@@ -1,0 +1,125 @@
+﻿l_english:
+
+ ## Ramadan Decision
+ me_approach_to_ramadan_decision:0 "Assess Approach to Ramadan"
+ me_approach_to_ramadan_decision_desc:0 "Ramadan is the ninth month of the Islamic calendar, in which the Quran is said to have first been revealed to the Prophet Muhammad. For one lunar month, the faithful abstain from food, drink, and worldly indulgence from dawn until dusk, devoting themselves to prayer, charity, and reflection.\n\nDeclare how you will observe Ramadan. Your chosen approach is a #high standing decree#! ,  it will take effect each year #high when Ramadan arrives#!, and persist until you revise it. Independent rulers will, in a second step, also set the scale of state patronage for their realm's iftars."
+ me_approach_to_ramadan_decision_tooltip:0 "Set your standing approach to the holy month of Ramadan. The chosen observance activates when Ramadan begins each year."
+ me_approach_to_ramadan_decision_confirm:0 "Set My Observance"
+ me_ramadan_choose_approach:0 "Declare Your Approach"
+ me_ramadan_patronage_window_tt:0 "As an independent ruler, you will next set your #high standing scale of state patronage#! for realm iftars, to take effect when Ramadan arrives."
+
+ ## Ramadan Widget Options, Titles
+ me_ramadan_devout_option:0 "Observe a Devout Fast"
+ me_ramadan_casual_option:0 "Observe a Customary Fast"
+ me_ramadan_skip_option:0 "Forgo the Fast"
+
+ ## Ramadan Widget Options, Descriptions
+ me_ramadan_devout_option_desc:0 "Undertake the fast in full, rising before dawn for suhur and breaking it only at the call of maghrib. Extend your devotion with nightly tarawih prayers and generous zakat, withdrawing from feast and fury alike. The body grows lean, the mind clarifies, and the soul ascends.\n\n#T Effects (activate each year for the 30 days of Ramadan):#!\n#P +1.0#! Monthly #high Piety#!\n#P +0.3#! #high Health#!\n#N -1#! Diplomacy\n#N -2#! Prowess\n#P +10#! Same Faith Opinion\n#N Stress gain#! for #high Gluttonous#!, #high Impatient#!, #high Cynical#!\n#P Stress loss#! for #high Zealous#!, #high Temperate#!"
+ me_ramadan_casual_option_desc:0 "Fast by day and take a modest iftar at dusk, keeping the letter of the obligation without the ornaments of extra piety. The common path of most Muslims, honorable, sustainable, and uncontroversial. A gentler discipline still brings a measure of bodily renewal.\n\n#T Effects (activate each year for the 30 days of Ramadan):#!\n#P +0.5#! Monthly #high Piety#!\n#P +0.15#! #high Health#!\n#N -1#! Prowess\n#N Stress gain#! for #high Gluttonous#!, #high Zealous#!"
+ me_ramadan_skip_option_desc:0 "Eat, drink, and govern as in any other month. Iftar is a table you will not set; suhur a waking you will not keep. The ulema will whisper, the pious will grieve, and your coreligionists will remember.\n\n#T Effects (activate each year for the 30 days of Ramadan):#!\n#N -0.5#! Monthly #high Piety#!\n#N -15#! Same Faith Opinion\n#N Stress gain#! for #high Zealous#!, #high Humble#!\n#P Stress loss#! for #high Cynical#!"
+
+ ## Ramadan Widget Hover Tooltips
+ me_ramadan_devout_option_tooltip:0 "Standing decree: rigorous Ramadan observance. Strong piety and same-faith opinion gains, small health boost, with meaningful diplomacy and prowess penalties ,  active for the 30 days of Ramadan each year."
+ me_ramadan_casual_option_tooltip:0 "Standing decree: a measured, customary fast. Moderate piety and a small health boost with mild prowess cost ,  active for the 30 days of Ramadan each year."
+ me_ramadan_skip_option_tooltip:0 "Standing decree: ignore Ramadan entirely. Piety loss, same-faith opinion penalty, and stress consequences ,  active for the 30 days of Ramadan each year."
+
+ ## Ramadan Personal Modifier Names
+ me_ramadan_devout_fasting:0 "Devout Ramadan Fast"
+ me_ramadan_devout_fasting_desc:0 "Observing a strict Ramadan fast. Body renewed, soul exalted."
+ me_ramadan_casual_fasting:0 "Customary Ramadan Fast"
+ me_ramadan_casual_fasting_desc:0 "Observing the Ramadan fast in the customary manner of most Muslims."
+ me_ramadan_skipped:0 "Forgoing Ramadan"
+ me_ramadan_skipped_desc:0 "Has chosen not to observe the fast of Ramadan, to the dismay of the faithful."
+
+ ## Muharram Decision
+ me_approach_to_muharram_decision:0 "Assess Approach to Muharram"
+ me_approach_to_muharram_decision_desc:0 "Muharram is the first month of the Islamic calendar and, for the Shia, a month of profound grief. On the tenth day, known as #high Ashura#!, Husayn ibn Ali, grandson of the Prophet, was martyred with his companions at Karbala in 680 CE. The Shia commemorate his sacrifice through mourning assemblies, recitation of his tragedy, and, for some, acts of self-imposed suffering.\n\nDeclare how you will observe the mourning. Your chosen approach is a #high standing decree#! ,  it will take effect each year #high when Muharram arrives#! (for the first 12 days), and persist until you revise it. Independent Shia rulers will, in a second step, also set the scale of state patronage for their realm's majalis."
+ me_approach_to_muharram_decision_tooltip:0 "Set your standing approach to the mourning of Muharram. The chosen observance activates during the first 12 days of Muharram each year."
+ me_approach_to_muharram_decision_confirm:0 "Set My Observance"
+ me_muharram_choose_approach:0 "Declare Your Approach"
+ me_muharram_patronage_window_tt:0 "As an independent Shia ruler, you will next set your #high standing scale of state patronage#! for realm majalis, to take effect when Muharram arrives."
+
+ ## Muharram Widget Options, Titles
+ me_muharram_deep_option:0 "Enter Deep Mourning"
+ me_muharram_moderate_option:0 "Observe Customary Mourning"
+ me_muharram_tatbir_option:0 "Practice Tatbir"
+ me_muharram_skip_option:0 "Forgo Mourning"
+
+ ## Muharram Widget Options, Descriptions
+ me_muharram_deep_option_desc:0 "Wear black, eschew music and celebration, and attend nightly majalis where the maqtal of Imam Husayn is recited in full. Receive scholars and sayyids at your court, weep openly for the House of the Prophet, and let no cheerful voice be heard in your hall until Ashura has passed.\n\n#T Effects (activate each year for the first 12 days of Muharram):#!\n#P +1.0#! Monthly #high Piety#!\n#N -2#! Diplomacy\n#P +15#! Same Faith Opinion\n#N Stress gain#! for #high Impatient#!, #high Cynical#!, #high Callous#!\n#P Stress loss#! for #high Zealous#!, #high Compassionate#!"
+ me_muharram_moderate_option_desc:0 "Acknowledge the mourning as is proper, attend a majlis, host a scholar, wear sober colors on Ashura, while keeping the affairs of your realm in order. The path of most Shia rulers throughout history.\n\n#T Effects (activate each year for the first 12 days of Muharram):#!\n#P +0.5#! Monthly #high Piety#!\n#N -1#! Diplomacy\n#P +5#! Same Faith Opinion\n#N Stress gain#! for #high Zealous#!"
+ me_muharram_tatbir_option_desc:0 "Join the processions of #high Tatbir#!, striking your own head or back with blade or chain until blood flows, that you might share, however faintly, in the agonies of Karbala. Controversial even among Shia scholars, but for the flagellant soul, a cleansing fire.\n\n#italic Requires the Flagellant trait.#!\n\n#T Effects (activate each year for the 10 days leading up to Ashura):#!\n#P +0.75#! Monthly #high Piety#!\n#N -3#! Prowess\n#P +10#! Same Faith Opinion\n#P -25%#! Stress Gain\n#P Immediate (on declaration):#! #high medium stress loss#!\n#N Stress gain#! for #high Cynical#!, #high Craven#!\n#P Stress loss#! for #high Flagellant#!, #high Brave#!"
+ me_muharram_skip_option_desc:0 "Hold court, hunt, feast, and attend to politics as in any other month. The sayyids will not forget. The common Shia will not forget. Karbala is not a wound one may politely ignore.\n\n#T Effects (activate each year for the first 12 days of Muharram):#!\n#N -0.5#! Monthly #high Piety#!\n#N -15#! Same Faith Opinion\n#N Stress gain#! for #high Zealous#!, #high Compassionate#!\n#P Stress loss#! for #high Cynical#!"
+
+ ## Muharram Widget Hover Tooltips
+ me_muharram_deep_option_tooltip:0 "Standing decree: full withdrawal into mourning for Imam Husayn. Strong piety and same-faith opinion gains with a meaningful diplomacy penalty ,  active for the first 12 days of Muharram each year."
+ me_muharram_moderate_option_tooltip:0 "Standing decree: customary mourning. Moderate piety and opinion gains with a mild diplomacy penalty ,  active for the first 12 days of Muharram each year."
+ me_muharram_tatbir_option_tooltip:0 "Standing decree: ritual flagellation in the Tatbir processions. Flagellants only. Immediate stress relief on declaration; reduced stress gain, strong piety, significant prowess cost ,  active for the 10 days leading up to Ashura each year."
+ me_muharram_skip_option_tooltip:0 "Standing decree: ignore the mourning. Piety loss, same-faith opinion penalty, and stress consequences ,  active for the first 12 days of Muharram each year."
+
+ ## Muharram Personal Modifier Names
+ me_muharram_deep_mourning:0 "Deep Mourning for Husayn"
+ me_muharram_deep_mourning_desc:0 "In deep mourning for the martyrdom of Imam Husayn at Karbala."
+ me_muharram_moderate_mourning:0 "Mourning for Husayn"
+ me_muharram_moderate_mourning_desc:0 "Observing the mourning of Muharram in the customary manner."
+ me_muharram_tatbir:0 "Practicing Tatbir"
+ me_muharram_tatbir_desc:0 "Sharing in the suffering of Husayn through ritual flagellation. Body wounded, grief cathartically released."
+ me_muharram_skipped:0 "Forgoing Muharram"
+ me_muharram_skipped_desc:0 "Has shown no regard for the mourning of Imam Husayn, offending the Shia faithful."
+
+ ## Ramadan Patronage Event (Second Window)
+ me_ramadan_muharram.0001.t:0 "State Patronage of Ramadan"
+ me_ramadan_muharram.0001.desc:0 "Your viziers and court ulema await your word on the scale of state patronage for Ramadan. The iftars of an independent ruler are a public ledger of piety: every loaf of bread from the treasury is noted, every night without patronage remembered.\n\nYour choice is a #high standing decree#!: it will take effect each year when Ramadan arrives and persist until you revise it. The chosen tier will draw a #high percentage of your monthly income#! for the 30 days of Ramadan, and bestow county modifiers across your realm for that same period."
+ me_ramadan_muharram.0001.none:0 "No state patronage."
+ me_ramadan_muharram.0001.modest:0 "Fund modest iftars across the realm."
+ me_ramadan_muharram.0001.grand:0 "Fund grand iftars across the realm."
+ me_ramadan_muharram.0001.lavish:0 "Spare no expense; fund lavish iftars everywhere."
+
+ me_ramadan_patronage_none_tt:0 "#N No state patronage.#! No income drain, no county benefits. The common folk will not go hungry, but they will not eat at your table, either."
+ me_ramadan_patronage_modest_tt:0 "#high Modest patronage:#! each Ramadan, #N -5% monthly income#! for 30 days. Every sub-realm county of your faith gains the Modest Iftars modifier (#P +5 county opinion#!, #P +0.15 control growth#!) for 30 days."
+ me_ramadan_patronage_grand_tt:0 "#high Grand patronage:#! each Ramadan, #N -15% monthly income#! for 30 days. Every sub-realm county of your faith gains the Grand Iftars modifier (#P +10 county opinion#!, #P +0.3 control growth#!) for 30 days."
+ me_ramadan_patronage_lavish_tt:0 "#high Lavish patronage:#! each Ramadan, #N -35% monthly income#! for 30 days. Every sub-realm county of your faith gains the Lavish Iftars modifier (#P +20 county opinion#!, #P +0.5 control growth#!) for 30 days."
+
+ ## Ramadan Patronage Modifier Names & Descs (seen on character)
+ me_ramadan_patronage_modest:0 "Modest Ramadan Patronage"
+ me_ramadan_patronage_modest_desc:0 "Sponsoring simple community iftars across the realm. A dignified, frugal gesture. Treasury drawn upon at a #high 5% monthly income#! reduction for the 30 days of Ramadan."
+ me_ramadan_patronage_grand:0 "Grand Ramadan Patronage"
+ me_ramadan_patronage_grand_desc:0 "Sponsoring substantial nightly iftars across the realm. Treasury drawn upon at a #high 15% monthly income#! reduction for the 30 days of Ramadan."
+ me_ramadan_patronage_lavish:0 "Lavish Ramadan Patronage"
+ me_ramadan_patronage_lavish_desc:0 "A sweeping dynastic patronage of iftars across the realm. Treasury drawn upon at a #high 35% monthly income#! reduction for the 30 days of Ramadan."
+
+ ## Muharram Patronage Event (Second Window)
+ me_ramadan_muharram.0010.t:0 "State Patronage of Muharram"
+ me_ramadan_muharram.0010.desc:0 "Your viziers and the sayyids of your court await your word on the scale of state patronage for Muharram. The sponsorship of majalis by an independent Shia ruler is no small matter: it binds the faithful to your house, and quickens the bonds of faith in the counties you rule.\n\nYour choice is a #high standing decree#!: it will take effect each year when Muharram arrives and persist until you revise it. The chosen tier will draw a #high percentage of your monthly income#! for the first 12 days of Muharram, and bestow county modifiers across your realm for that same period."
+ me_ramadan_muharram.0010.none:0 "No state patronage."
+ me_ramadan_muharram.0010.modest:0 "Fund modest majalis across the realm."
+ me_ramadan_muharram.0010.grand:0 "Fund grand majalis across the realm."
+ me_ramadan_muharram.0010.lavish:0 "Spare no expense; fund lavish majalis everywhere."
+
+ me_muharram_patronage_none_tt:0 "#N No state patronage.#! No income drain, no county benefits. The mourning remains private; no majlis is held on the treasury's account."
+ me_muharram_patronage_modest_tt:0 "#high Modest patronage:#! each Muharram, #N -5% monthly income#! for 12 days. Every sub-realm county of your faith gains the Modest Majalis modifier (#P +5 county opinion#!, #P +0.25 control growth#!) for 12 days."
+ me_muharram_patronage_grand_tt:0 "#high Grand patronage:#! each Muharram, #N -15% monthly income#! for 12 days. Every sub-realm county of your faith gains the Grand Majalis modifier (#P +10 county opinion#!, #P +0.5 control growth#!) for 12 days."
+ me_muharram_patronage_lavish_tt:0 "#high Lavish patronage:#! each Muharram, #N -35% monthly income#! for 12 days. Every sub-realm county of your faith gains the Lavish Majalis modifier (#P +20 county opinion#!, #P +0.8 control growth#!) for 12 days."
+
+ ## Muharram Patronage Modifier Names & Descs
+ me_muharram_patronage_modest:0 "Modest Muharram Patronage"
+ me_muharram_patronage_modest_desc:0 "Sponsoring simple mourning assemblies across the realm. Treasury drawn upon at a #high 5% monthly income#! reduction for the first 12 days of Muharram."
+ me_muharram_patronage_grand:0 "Grand Muharram Patronage"
+ me_muharram_patronage_grand_desc:0 "Sponsoring substantial mourning assemblies with renowned reciters. Treasury drawn upon at a #high 15% monthly income#! reduction for the first 12 days of Muharram."
+ me_muharram_patronage_lavish:0 "Lavish Muharram Patronage"
+ me_muharram_patronage_lavish_desc:0 "A grand public mourning, with processions, husayniyyas, and the greatest reciters of the age. Treasury drawn upon at a #high 35% monthly income#! reduction for the first 12 days of Muharram."
+
+ ## County Modifiers
+ me_ramadan_iftar_modest_county:0 "Modest Ramadan Iftars"
+ me_ramadan_iftar_modest_county_desc:0 "The ruler has sponsored simple community iftars here."
+ me_ramadan_iftar_grand_county:0 "Grand Ramadan Iftars"
+ me_ramadan_iftar_grand_county_desc:0 "The ruler has sponsored substantial nightly iftars here, feeding rich and poor together."
+ me_ramadan_iftar_lavish_county:0 "Lavish Ramadan Iftars"
+ me_ramadan_iftar_lavish_county_desc:0 "The ruler has sponsored a sweeping patronage of nightly iftars here, remembered for generations."
+
+ me_muharram_majalis_modest_county:0 "Modest Muharram Majalis"
+ me_muharram_majalis_modest_county_desc:0 "The ruler has funded simple mourning assemblies here. The bonds of faith quicken, easing the path of conversion."
+ me_muharram_majalis_grand_county:0 "Grand Muharram Majalis"
+ me_muharram_majalis_grand_county_desc:0 "The ruler has sponsored substantial mourning assemblies here, drawing renowned reciters. Faith spreads more readily."
+ me_muharram_majalis_lavish_county:0 "Lavish Muharram Majalis"
+ me_muharram_majalis_lavish_county_desc:0 "The ruler has sponsored a grand public mourning here. Faith spreads swiftly; the bonds of community are at their strongest."

@@ -1,0 +1,188 @@
+﻿me_shura_elector_voting_pattern_modifier = {
+	modifier = {
+		add = 10
+		desc = tooltip_me_shura_vote_strength_hafidh
+		NOT = { this = scope:candidate }
+		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+		NOT = { faith = faith:druze }
+		has_trait_xp = {
+			trait = hafidh
+			value >= 100
+		}
+	}
+	
+	modifier = {
+		add = 5
+		desc = tooltip_me_shura_vote_strength_learning
+		NOT = { this = scope:candidate }
+		learning >= 10
+		learning < 15
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	modifier = {
+		add = 10
+		desc = tooltip_me_shura_vote_strength_learning
+		NOT = { this = scope:candidate }
+		learning >= 15
+		learning < 20
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	modifier = {
+		add = 15
+		desc = tooltip_me_shura_vote_strength_learning
+		NOT = { this = scope:candidate }
+		learning >= 20
+		learning < 25
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	modifier = {
+		add = 20
+		desc = tooltip_me_shura_vote_strength_learning
+		NOT = { this = scope:candidate }
+		learning >= 25
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	modifier = {
+		add = 15
+		desc = tooltip_feudal_elector_vote_spiritual_education
+		NOT = { this = scope:candidate }
+		this_is_spiritual_society_trigger = no
+		scope:candidate = {
+			learning >= 10
+			OR = {
+				has_trait = education_learning
+				has_lifestyle = learning_lifestyle
+				has_learning_lifestyle_trait_trigger = yes
+				has_trait = lifestyle_mystic
+				has_trait = lifestyle_physician
+			}
+		}
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	modifier = {
+		desc = tooltip_feudal_elector_vote_genius_diplomat
+		NOT = { this = scope:candidate } #Do not judge yourself.
+		this_is_diplomatic_society_trigger = no
+		this_is_spiritual_society_trigger = no
+		scope:candidate = {
+			OR = {
+				has_trait = intellect_good
+				has_trait = shrewd
+			}
+		}
+		add = {
+			value = 10
+			if = {
+				limit = {
+					scope:candidate = { has_trait = intellect_good_1 }
+				}
+				add = 5
+			}
+			if = {
+				limit = {
+					scope:candidate = {
+						OR = {
+							has_trait = intellect_good_2
+							has_trait = shrewd
+						}
+					}
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					scope:candidate = { has_trait = intellect_good_3 }
+				}
+				add = 15
+			}
+		}
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	modifier = {
+		desc = tooltip_feudal_elector_vote_genius
+		NOT = { this = scope:candidate } #Do not judge yourself.
+		this_is_diplomatic_society_trigger = no
+		this_is_spiritual_society_trigger = no
+		scope:candidate = {
+			OR = {
+				has_trait = intellect_good
+				has_trait = shrewd
+			}
+		}
+		add = {
+			value = 0
+			if = {
+				limit = {
+					scope:candidate = { has_trait = intellect_good_1 }
+				}
+				add = 5
+			}
+			if = {
+				limit = {
+					scope:candidate = {
+						OR = {
+							has_trait = intellect_good_2
+							has_trait = shrewd
+						}
+					}
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					scope:candidate = { has_trait = intellect_good_3 }
+				}
+				add = 15
+			}
+		}
+		scope:holder = { has_realm_law = me_shura_judicial_preferance_law }
+	}
+	
+	modifier = {
+		add = 5
+		desc = tooltip_me_shura_vote_strength_martial
+		NOT = { this = scope:candidate }
+		martial >= 10
+		martial < 15
+		scope:holder = { has_realm_law = me_shura_militaristic_preferance_law }
+	}
+	modifier = {
+		add = 10
+		desc = tooltip_me_shura_vote_strength_martial
+		NOT = { this = scope:candidate }
+		martial >= 15
+		martial < 20
+		scope:holder = { has_realm_law = me_shura_militaristic_preferance_law }
+	}
+	modifier = {
+		add = 15
+		desc = tooltip_me_shura_vote_strength_martial
+		NOT = { this = scope:candidate }
+		martial >= 20
+		martial < 25
+		scope:holder = { has_realm_law = me_shura_militaristic_preferance_law }
+	}
+	modifier = {
+		add = 20
+		desc = tooltip_me_shura_vote_strength_martial
+		NOT = { this = scope:candidate }
+		martial >= 25
+		scope:holder = { has_realm_law = me_shura_militaristic_preferance_law }
+	}
+	modifier = {
+		add = 15
+		desc = tooltip_feudal_elector_vote_martial_education
+		NOT = { this = scope:candidate }
+		this_is_martial_society_trigger = no
+		scope:candidate = {
+			martial >= 10
+			OR = {
+				has_trait = education_martial
+				has_lifestyle = martial_lifestyle
+				has_trait = lifestyle_blademaster
+				has_martial_lifestyle_trait_trigger = yes
+			}
+		}
+		scope:holder = { has_realm_law = me_shura_militaristic_preferance_law }
+	}
+}

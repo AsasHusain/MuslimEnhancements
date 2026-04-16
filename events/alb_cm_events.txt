@@ -1,0 +1,522 @@
+﻿#######################################################################################################################
+###These events are used as countermeasures should the player or AI manage to convert to the ALB faiths
+
+## alb_cm.0001: Main event, this explains to the player why the faith exists and why they can't play as it.
+#   -option a: this option sends the player to a list of Islamic faiths to choose from.
+#   -option b: this option converts the player to their capital's faith
+#   -option c: This option kills the character.
+
+## alb_cm.0002: Main list, this event creates a list of options that lead to a secondary list based on the succession doctrine.
+#   -option a: Sunni option, leads to an event that lists all sunni faiths that the player can convert to.
+#   -option b: Shia option, leads to an event that lists all shia faiths that the player can convert to.
+#   -option c: Batriya option, leads to an event that lists all batriya faiths that the player can convert to.
+#   -option d: Muhakkima option, leads to an event that lists all muhakkima faiths that the player can convert to.
+#   -option e: Zandaqa option, leads to an event that lists all zandaqa faiths that the player can convert to.
+#   -option f: Ghulat option, leads to an event that lists all ghulat faiths that the player can convert to.
+#   -option g: Sends the player to the previous event.
+
+## alb_cm.0003: Sunni list, this lists all sunni faiths that the player can convert to. 
+#   -option a: Ahl al-Sunnah (ashari)
+#   -option b: Muwalladi
+#   -option c: Maturidi
+#   -option d: Masmudi (Almohad), doesn't appear until 1130
+#   -option f: Sends the player to the previous event.
+
+## alb_cm.0004: Shia list, this lists all shia faiths that the player can convert to. 
+#   -option a: Isma'ili
+#   -option b: Nizari
+#   -option c: Zayidi
+#   -option d: Itha 'Ashri (imami)
+#   -option e: Hafizi
+#   -option f: Sends the player to the previous event.
+
+## alb_cm.0005: Batriya list, this lists all batriya faiths that the player can convert to. 
+#   -option a: Salihism
+#   -option b: Sends the player to the previous event.
+
+## alb_cm.0006: Muhakkima list, this lists all muhakkima faiths that the player can convert to. 
+#   -option a: Ibadi
+#   -option b: Wahbiya
+#   -option c: Nukkari
+#   -option d: Azariqa
+#   -option e: Najdat
+#   -option f: Sufri
+#   -option g: Sends the player to the previous event.
+
+## alb_cm.0007: Zandaqa list, this lists all zandaqa faiths that the player can convert to.
+#   -option a: Mutazila 
+#   -option b: Qur'anist
+#   -option c: Nazzamism (REMOVED)
+#   -option d: Barghawata
+#   -option e: Sends the player to the previous event.
+
+## alb_cm.0008: Ghulat list, this lists all ghulat faiths that the player can convert to. 
+#   -option a: Qarmatian
+#   -option b: Ikhtilafism (ghulat)
+#   -option c: Alawite
+#   -option d: Ishaqiya
+#   -option e: Alevi
+#   -option f: Druze
+#   -option g: Sends the player to the previous event.
+#######################################################################################################################
+
+namespace = alb_cm
+
+#Main Event
+alb_cm.0001 = {
+	title = alb_cm.0001.t
+	desc = {
+		desc = alb_cm.0001.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = { root.faith = faith:ns_islam }
+				desc = alb_cm.0001.desc.main
+			}
+			triggered_desc = {
+				trigger = { root.faith = faith:ns_islam_shia }
+				desc = alb_cm.0001.desc.shia
+			}
+		}
+	}
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Convert to different Islamic faith from list
+	option = {
+		name = alb_cm.0001.a
+		custom_tooltip = alb_cm.0001.tt.showlist
+
+		trigger = {
+			is_ai = no
+		}
+
+		trigger_event = alb_cm.0002
+	}
+
+	#Convert to faith of capital
+	option = {
+		name = alb_cm.0001.b
+
+		#Option shoudn't appear if capital is an ALB religion
+		trigger = {
+			is_ai = no
+			is_landed = yes
+			root.capital_county.faith = { NOT = { religion_tag = alb_religion } }
+		}
+
+		set_character_faith = root.capital_county.faith
+	}
+
+	#Kill off the character
+	option = {
+		name = alb_cm.0001.c
+
+		trigger = {
+			is_ai = no
+		}
+
+		death = {
+			death_reason = death_vanished
+		}
+	}
+}
+
+#Main List
+alb_cm.0002 = {
+	title = alb_cm.0002.t
+	desc = alb_cm.0002.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Sunni
+	option = {
+		name = alb_cm.0002.a
+		custom_tooltip = alb_cm.0002.tt.sunni
+
+		trigger_event = alb_cm.0003
+	}
+
+	#Shia
+	option = {
+		name = alb_cm.0002.b
+		custom_tooltip = alb_cm.0002.tt.shia
+
+		trigger_event = alb_cm.0004
+	}
+
+	#Batriya
+	option = {
+		name = alb_cm.0002.c
+		custom_tooltip = alb_cm.0002.tt.batriya
+
+		trigger_event = alb_cm.0005
+	}
+
+	#Muhakkima
+	option = {
+		name = alb_cm.0002.d
+		custom_tooltip = alb_cm.0002.tt.muhakkima
+
+		trigger_event = alb_cm.0006
+	}
+
+	#Zandaqa
+	option = {
+		name = alb_cm.0002.e
+		custom_tooltip = alb_cm.0002.tt.zandaqa
+
+		trigger_event = alb_cm.0007
+	}
+
+	#Ghulat
+	option = {
+		name = alb_cm.0002.f
+		custom_tooltip = alb_cm.0002.tt.ghulat
+
+		trigger_event = alb_cm.0008
+	}
+
+	#See previous options
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0001
+	}
+}
+
+#Sunni List
+alb_cm.0003 = {
+	title = alb_cm.0003.t
+	desc = alb_cm.0003.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Ahl al-Sunnah (ashari)
+	option = {
+		name = alb_cm.0003.a
+
+		set_character_faith = faith:ashari
+	}
+
+	#Muwalladi
+	option = {
+		name = alb_cm.0003.b
+
+		set_character_faith = faith:muwalladi
+	}
+
+	#Maturidi
+	option = {
+		name = alb_cm.0003.c
+
+		set_character_faith = faith:maturidi
+	}
+
+	#Masmudi (Almohad)
+	option = {
+		name = alb_cm.0003.d
+
+		set_character_faith = faith:masmudi
+	}
+
+	#Previous list
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0002
+	}
+}
+
+#Shia list
+alb_cm.0004 = {
+	title = alb_cm.0004.t
+	desc = alb_cm.0004.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Isma'ili
+	option = {
+		name = alb_cm.0004.a
+
+		set_character_faith = faith:ismaili
+	}
+
+	#Nizari
+	option = {
+		name = alb_cm.0004.b
+
+		set_character_faith = faith:nizari
+	}
+
+	#Zayidi
+	option = {
+		name = alb_cm.0004.c
+
+		set_character_faith = faith:zayidi
+	}
+
+	#Itha 'Ashri (imami)
+	option = {
+		name = alb_cm.0004.d
+
+		set_character_faith = faith:imami
+	}
+
+	#Hafizi
+	option = {
+		name = alb_cm.0004.e
+
+		set_character_faith = faith:hafizi
+	}
+
+	#return
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0002
+	}
+}
+
+#Batriya (PLACEHOLDER)
+alb_cm.0005 = {
+	title = alb_cm.0005.t
+	desc = alb_cm.0005.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Salihism
+	option = {
+		name = alb_cm.0005.a
+
+		set_character_faith = faith:salihi
+	}
+
+	#return
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0002
+	}
+}
+
+#Muhakkima list
+alb_cm.0006 = {
+	title = alb_cm.0006.t
+	desc = alb_cm.0006.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Ibadi
+	option = {
+		name = alb_cm.0006.a
+
+		set_character_faith = faith:ibadi
+	}
+
+	#wahbiya
+	option = {
+		name = alb_cm.0006.b
+
+		set_character_faith = faith:wahbiya
+	}
+
+	#Nukkari
+	option = {
+		name = alb_cm.0006.c
+
+		set_character_faith = faith:nukkari
+	}
+
+	#Azariqa
+	option = {
+		name = alb_cm.0006.d
+
+		set_character_faith = faith:azariqa
+	}
+
+	#Najdat
+	option = {
+		name = alb_cm.0006.e
+
+		set_character_faith = faith:najdat
+	}
+
+	#Sufri
+	option = {
+		name = alb_cm.0006.f
+
+		set_character_faith = faith:sufri
+	}
+
+	#return
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0002
+	}
+}
+
+#Zandaqa list
+alb_cm.0007 = {
+	title = alb_cm.0007.t
+	desc = alb_cm.0007.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Mutazila
+	option = {
+		name = alb_cm.0007.a
+
+		set_character_faith = faith:mutazila
+	}
+
+	#Qur'anist
+	option = {
+		name = alb_cm.0007.b
+
+		set_character_faith = faith:quranist
+	}
+
+	#Nazzamism (REMOVED)
+#	option = {
+#		name = alb_cm.0007.c
+#
+#		set_character_faith = faith:nazzamism
+#	}
+
+	#Barghawata
+	option = {
+		name = alb_cm.0007.d
+
+		set_character_faith = faith:barghawata
+	}
+
+	#return
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0002
+	}
+}
+
+#Ghulat list
+alb_cm.0008 = {
+	title = alb_cm.0008.t
+	desc = alb_cm.0008.desc
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	#Qarmatian
+	option = {
+		name = alb_cm.0008.a
+
+		set_character_faith = faith:qarmatian
+	}
+
+	#(Ikhtilafism) ghulat 
+	option = {
+		name = alb_cm.0008.b
+
+		set_character_faith = faith:ghulat
+	}
+
+	#Alawite
+	option = {
+		name = alb_cm.0008.c
+
+		set_character_faith = faith:alawite
+	}
+
+	#Ishaqiya
+	option = {
+		name = alb_cm.0008.d
+
+		set_character_faith = faith:ishaqiya
+	}
+
+	#Alevi
+	option = {
+		name = alb_cm.0008.e
+
+		set_character_faith = faith:alevi
+	}
+
+	#Druze
+	option = {
+		name = alb_cm.0008.f
+
+		set_character_faith = faith:druze
+	}
+
+	#return
+	option = {
+		name = alb_cm.0002.g
+		custom_tooltip = alb_cm.0002.tt.mainev
+
+		trigger_event = alb_cm.0002
+	}
+}
+
+###GAME START EVENT
+
+alb_cm.0100 = {
+	hidden = yes
+	
+	trigger = { 
+		}	
+	
+	immediate = {	
+		if = {
+			limit = {
+				faith = { religion_tag = alb_religion }
+			}
+			trigger_event = alb_cm.0001
+		}
+	}
+}

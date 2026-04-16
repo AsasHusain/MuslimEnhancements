@@ -1,0 +1,78 @@
+﻿l_english:
+ # Other Misc
+ TRAVEL_POINT_OF_INTEREST_TT_ME_poi_battles_historical: "#T $TRAVEL_POINT_OF_INTEREST_TT_ME_poi_battles_historical_name$#!\n$TRAVEL_POINT_OF_INTEREST_TT_ME_poi_battles_historical_desc$\n\n"
+ TRAVEL_POINT_OF_INTEREST_TT_ME_poi_battles_historical_name: "[Province.Custom('ME_BattlePoiNameHistorical')]"
+ TRAVEL_POINT_OF_INTEREST_TT_ME_poi_battles_historical_desc: "[Province.Custom('ME_BattlePoIDescriptionHistorical')]"
+ ME_travel_point_historical_name_visit_message: "[ROOT.Char.GetCurrentLocation.Custom('ME_BattlePoiNameHistorical')]"
+ ME_BattlePoIHistoricalNameQadisiyya: "The Battle of al-Qadisiyyah"
+ ME_BattlePoIHistoricalDescQadisiyya: "#emp Victor: Sa'd ibn Abi Waqqas\nDefeated: [GetScriptedCharacterByHistoryID( '180637' ).GetFullName]\nDate: 19th of November, 636 AD#!\n#weak The Battle of al-Qadisiyyah is one of the most significant battles of the Muslim conquest of Persia, as it marked the loss of Mesopotamia to the Muslims and opened up the Perian mainland for further conquest. In the aftermath of the battle, it is alleged that it saw the establishment of a Sassanid-Byzantine alliance by marriage of Emperor Heraclius' daughter to Yazdegerd III in order to put an end to the threat that the Rashidun Caliphate had caused to both empires.#!"
+ ME_BattlePoIHistoricalNameNahavand: "The Battle of Nahavand"
+ ME_BattlePoIHistoricalDescNahavand: "#emp Victor: Sa'd ibn Abi Waqqas\nDefeated: [GetScriptedCharacterByHistoryID( '180637' ).GetFullName]\nDate: 636 AD#!\n#weak The Battle of Nahavand is the one that marked the end of Sassanid Persia, whatever portion of the empire remained unconquered by the Muslim Caliphate had given rise to warlords who refused to accept Yazdegerd's suzerainty, with some even showing him open hostility. The Emperor-turned-exile died before ever mustering up any kind of help to reclaim his throne, and whatever was left of his realm was swallowed up by the Caliphate in the coming years.#!"
+ ME_BattlePoIHistoricalNameGuadalete: "The Battle of Guadalete"
+ ME_BattlePoIHistoricalDescGuadalete: "#emp Victor: [GetScriptedCharacterByHistoryID( 'me_ibn_ziyad_001' ).GetFullName]\nDefeated: [GetScriptedCharacterByHistoryID( '200251' ).GetFullName]\nDate: 111 AD#!\n#weak The Battle of Guadalete is the first major battle of the Muslim conquest of Iberia which saw the Muslims led by Tariq ibn Ziyad engage King Roderic of the Visigoths in battle, the aftermath of the battle saw the death of Roderic and heralded the conquest of most of the Iberian peninsula.#!"
+ ME_BattlePoIHistoricalNameAmorium: "The Siege of Amorium"
+ ME_BattlePoIHistoricalDescAmorium: "#emp Victor: [GetScriptedCharacterByHistoryID( '34008' ).GetFullName]\nDefeated: [GetScriptedCharacterByHistoryID( '70491' ).GetFullName]\nDate: 838 AD#!\n#weak The Siege of Amorium was one of the major events of the Arab-Byzantine Wars. The Abbasid campaign was led personally by the Caliph al-Mu'tasim in retaliation to an unopposed expedition launched by Emperor Theophilos. During the stalemate of the siege, Boiditzes, commander of a breached section, privately attempted to negotiate with the Caliph where he concluded a truce and left his post. This led to the Abbasids swarming the area, entering and capturing the city. Many of its inhabitants were slaughtered, and the remainder driven off as slaves. Most of the survivors were released after a truce in 841, but prominent officials were taken to the caliph's capital of Samarra and executed years later after refusing to convert to Islam, becoming known as the 42 Martyrs of Amorium.#!"
+ 
+ #Twelver Mahdi Appears
+ twelver_imam_event.0002.t:0 "The Mahdi Appears"
+ twelver_imam_event.0002.desc:0 "The great Imam [al_askari.GetFirstName] is dead, leaving behind no heir to claim the Imamate.\n\nOr at least, that what we thought at first. Uthman ibn Sa'id, the man who once represented [al_askari.GetFirstName] and [al_hadi.GetFirstName], has revealed that al-Askari had an infant son named Muhammad, who was proclaimed to be the Mahdi, and was kept hidden from the public in fear of his enemies' persecution.\n\nUthman, along with three other men, have come to represent Muhammad al-Mahdi while he is in his minor ghayba."
+ twelver_imam_event.0002.a:0 "Allahu Akbar!"
+ twelver_imam_event.0002.tt:0 ""
+ twelver_imam_event.0004.t:0 "The Great Ghayba"
+ twelver_imam_event.0004.desc:0 "The last of Muhammad al-Mahdi's representatives, Abu al-Hasan, is dead, before his death he received one final letter from al-Mahdi predicting Abu al-Hasan's death and informing him that al-Mahdi will be entering a period of occultation, which will continue until Allah grants him permission to manifest himself again when the earth is filled with tyranny.\n\nNow, all we have to do is await his return so that he may bring justice to the world once more."
+ twelver_imam_event.0004.a:0 "Allahu Akbar!"
+ twelver_imam_event.0004.tt:0 ""
+ 
+ # Turkmen Split
+ me_culture_emergence.0002.t:0 "Rise of the Turksmen"
+ me_culture_emergence.0002.desc:0 "Settling in the grand cities and fertile lands of Asia Minor, our people's history of survival in our original homeland of the steppe seems like a distant memory.\n\nOver time, the settlements in this new land flourished, attracting more of our kin from distant lands. As we put down roots, the bustling cities and prosperous farmlands have allowed us to take on new roles, or as other would believe, it has simply dulled our swords...\n\nWith this change in lifestyle, our people have begun to diverge culturally, forming new traditions and customs better suited to the diverse landscapes that surround us."
+ me_culture_emergence.0002.a:0 "We must ensure our own prosperity first and foremost."
+ me_culture_emergence.0002.b:0 "Unacceptable! The Turks #EMP must#! preserve their way of life."
+
+ me_culture_emergence.0003.t:0 "$me_culture_emergence.0002.t$"
+ me_culture_emergence.0003.desc:0 "Generals, mercenaries, and settlers... the Turks  have long traveled from the vast steppes of their homeland, leaving their mark across the lands they have touched.\n\nNow it appears that this age of wandering may be drawing to a close, as cultural shifts and lifestyle changes have given rise to a new local [turkmen.GetName] identity that has been fostered amongst them."
+ me_culture_emergence.0003.desc_turkish:0 "Traders, raiders, and mercenaries... our Turkish ancestors have long traveled from the vast steppes of our homeland, leaving their mark across the lands they have touched.\n\nNow it appears that this age of wandering may be drawing to a close, as cultural shifts and lifestyle changes have given rise to a new local [turkmen.GetName] identity that has been fostered amongst us."
+ me_culture_emergence.0003.a:0 "What does this mean for the future of Asia Minor?"
+ me_culture_emergence.0003.b:0 "What does this mean for the future of our people?"
+ 
+ #Legacy of al-Ghazali
+ me_misc_religion_event.0001.t:0 "The Legacy of al-Ghazali"
+ me_misc_religion_event.0001.desc:0 "Mere months ago, the Islamic world was hit by the death of one of its most prominent religious scholars, a Persian whose philosophical and theological achievements granted him the titles of 'Brilliance of the Religion' and 'Proof of Islam' — Abu Hamid al-Ghazali. With his passing, his many pupils and admirers have dedicated themselves to spreading his teachings and legacy, sending copies of his books across the Muslim world.\n\nAnd now it seems the caravans have reached our capital, as every knowledgable man and woman in court is engulfed in some discussion regarding his philosophy, there is not a single Ulema that can be seen not carrying one of his books, perhaps I too should get one..."
+ me_misc_religion_event.0001.a:0 "Revival of Religious Sciences is quite popular"
+ me_misc_religion_event.0001.a.tt:0 "You gain the [revival_book.GetName] [artifact|E]"
+ me_misc_religion_event.0001.b:0 "Deliverance From Error has caught my eye"
+ me_misc_religion_event.0001.b.tt:0 "You gain the [deliverance_book.GetName] [artifact|E]"
+ me_misc_religion_event.0001.c:0 "I'll get them both, the more the merrier!"
+ me_misc_religion_event.0001.c.tt:0 "You both gain the [revival_book.GetName] and the [deliverance_book.GetName] [artifact|E]"
+ me_misc_religion_event.0001.d:0 "I can do without a copy"
+ 
+ feature_book_title_al_ghazali_revival:0 "Revival of Religious Sciences"
+ feature_book_subject_al_ghazali_revival:0 "Islamic Ethics and Philosophy"
+ feature_book_topic_al_ghazali_revival:0 "A copy of Revival of Religious Sciences (#EMP Ihya' Ulum ad-Din#!) by al-Ghazali, widely considered to be one of his most important and influential works."
+ feature_book_title_al_ghazali_deliverance:0 "Deliverance From Error"
+ feature_book_subject_al_ghazali_deliverance:0 "Spiritual Autobiography"
+ feature_book_topic_al_ghazali_deliverance:0 "A copy of Revival of Deliverance From Error (#EMP al-Munqidh min aḍ-Ḍalal#!), an autobiography written by al-Ghazali towards the end of his life, considered to be a work of major importance."
+ 
+ #Egypt 867 ruler event
+ me_misc_event.0001.t:0 "Turmoil on the Nile"
+ me_misc_event.0001.desc:0 "The situation in Egypt is dire, the Bedouin tribes are running lawlessly in the south with Shi’ite pretenders agitating constantly them to revolt. Yazid al-Hulwani should have stamped them out before they had a chance to gather themselves, however, with half of Egypt under the control of another governor and an unjust financial superintendent watching over him, the powers of Egypt's governor are rather limited and it seems inevitable that he is to be replaced.\n\n#EMP You have the ability to choose which governor takes control over Egypt from all those who historically governed it in 867 and 868.#!"
+ me_misc_event.0001.a:0 "Yazid al-Hulwani can stay"
+ me_misc_event.0001.a.tt:0 "#EMP Yazid Ibn Abdullah al-Hulwani has been governor of Egypt since 856, and was the first Turk to take this position, however with him unable to take control of Egypt's situation he would be replaced in early 867 with Muzahim Ibn Khaqan.#!"
+ me_misc_event.0001.b:0 "Muzahim Ibn Khaqan is competent and loyal"
+ me_misc_event.0001.b.tt:0 "#EMP Muzahim is a prominent Turkic commander who quelled several uprisings for the Caliphate, he would receive the governorship of Egypt in early 867 but would die in mid-868 and be replaced by his son Ahmad who would follow him into the grave two months later.#!"
+ me_misc_event.0001.c:0 "Azjur at-Turki is familiar with Egypt"
+ me_misc_event.0001.c.tt:0 "#EMP Azjur at-Turki is a military officer who held several positions in Egypt, he would be assigned as governor of Egypt in mid-868 after the death of Ahmad Ibn Muzahim, but would be replaced later that year by Ibn Tulun.#!"
+ me_misc_event.0001.d:0 "(Vassal) Ibn Tulun is highly skilled, he can get this mess settled"
+ me_misc_event.0001.d.tt:0 "#EMP Ahmad Ibn Tulun would take over Egypt in late 868 as governor, and in a few years he would establish an efficient administration by getting rid of the caliph’s financial superintendent, Ibn al-Mudabbir, and gain authority over Alexandria and Barqa along with getting rid of the Shi’ite agitators.\n\nIbn Tulun would eventually take over Syria and establish himself as independent from the Caliphate, marking for the first time since the Ptolemaic age when Egypt was its own independent realm rather than a province in larger empires.#!\n\n(Ibn Tulun will be a vassal of the Abbasids)"
+ me_misc_event.0001.e:0 "(Tributary) Ibn Tulun is highly skilled, he can get this mess settled"
+ me_misc_event.0001.e.tt:0 "#EMP Ahmad Ibn Tulun would take over Egypt in late 868 as governor, and in a few years he would establish an efficient administration by getting rid of the caliph’s financial superintendent, Ibn al-Mudabbir, and gain authority over Alexandria and Barqa along with getting rid of the Shi’ite agitators.\n\nIbn Tulun would eventually take over Syria and establish himself as independent from the Caliphate, marking for the first time since the Ptolemaic age when Egypt was its own independent realm rather than a province in larger empires.#!\n\n(Ibn Tulun will be a tributary of the Abbasids)"
+ me_misc_event.0001.note.tt:0 "#R NOTE:#! #V Due to a game bug, this event is unable make you play as your chosen ruler of Egypt, as such you will have to select the character using either the death screen or the main menu in order to play as them.#!"
+ 
+ ## Makhzumids of Shewa startup
+ me_misc_event.0003.t:0 "The Makhzumis of Shewa"
+ me_misc_event.0003.desc:0 "Long ago, during the reign of Caliph Umar Ibn al-Khattab, a man from the tribe of Quraysh called Wudd ibn Hisham al-Makhzumi emigrated from Arabia alongside other Muslim Arab migrants into Shewa where we, his descendants, now reign.\n\nHowever, due to us holding no genealogical records of our connection to the house of Makhzum - from which the famed military commander and companion of Prophet Muhammad, Khalid ibn al-Walid, hails - our claims are brought into question."
+ me_misc_event.0003.a:0 "The world will know us for who we are one day!"
+ me_misc_event.0003.a.tt:0 "If you own #EMP Legends of the Dead#!, you will be able to legitimize your dynasty as Qurashis through a unique legend."
+ me_misc_event.0003.b:0 "There is no question, we #EMP are#! the sons of Wudd"
+ me_misc_event.0003.b.tt:0 "You and every member of your dynasty will become part of the [wudd.GetHouse.GetBaseNameNoTooltip] house and will gain the [GetTrait('quraysh').GetName( GetNullCharacter )] trait."
+ 

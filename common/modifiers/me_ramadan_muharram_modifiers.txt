@@ -1,0 +1,127 @@
+### Ramadan Personal Modifiers ###
+
+me_ramadan_devout_fasting = {
+	icon = health_positive
+	monthly_piety = 1.0
+	health = 0.3
+	diplomacy = -1
+	prowess = -2
+	same_faith_opinion = 10
+}
+
+me_ramadan_casual_fasting = {
+	icon = health_positive
+	monthly_piety = 0.5
+	health = 0.15
+	prowess = -1
+}
+
+me_ramadan_skipped = {
+	icon = health_negative
+	monthly_piety = -0.5
+	same_faith_opinion = -15
+}
+
+### Muharram Personal Modifiers (Shia) ###
+
+me_muharram_deep_mourning = {
+	icon = social_negative
+	monthly_piety = 1.0
+	diplomacy = -2
+	same_faith_opinion = 15
+}
+
+me_muharram_moderate_mourning = {
+	icon = social_negative
+	monthly_piety = 0.5
+	diplomacy = -1
+	same_faith_opinion = 5
+}
+
+me_muharram_tatbir = {
+	icon = martial_negative
+	monthly_piety = 0.75
+	prowess = -3
+	same_faith_opinion = 10
+	stress_gain_mult = -0.25
+}
+
+me_muharram_skipped = {
+	icon = county_modifier_opinion_negative
+	monthly_piety = -0.5
+	same_faith_opinion = -15
+}
+
+### Ramadan State Patronage (Personal Income Drain Modifiers) ###
+
+me_ramadan_patronage_modest = {
+	icon = county_modifier_opinion_positive
+	monthly_income_mult = -0.05
+}
+
+me_ramadan_patronage_grand = {
+	icon = county_modifier_opinion_positive
+	monthly_income_mult = -0.15
+}
+
+me_ramadan_patronage_lavish = {
+	icon = county_modifier_opinion_positive
+	monthly_income_mult = -0.35
+}
+
+### Muharram State Patronage (Personal Income Drain Modifiers) ###
+
+me_muharram_patronage_modest = {
+	icon = county_modifier_opinion_positive
+	monthly_income_mult = -0.05
+}
+
+me_muharram_patronage_grand = {
+	icon = county_modifier_opinion_positive
+	monthly_income_mult = -0.15
+}
+
+me_muharram_patronage_lavish = {
+	icon = county_modifier_opinion_positive
+	monthly_income_mult = -0.35
+}
+
+### Realm Iftar County Modifiers (Tiered) ###
+
+me_ramadan_iftar_modest_county = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 5
+	monthly_county_control_growth_add = 0.15
+}
+
+me_ramadan_iftar_grand_county = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 10
+	monthly_county_control_growth_add = 0.3
+}
+
+me_ramadan_iftar_lavish_county = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 20
+	monthly_county_control_growth_add = 0.5
+}
+
+### Realm Majalis County Modifiers (Tiered) — extra control growth represents accelerated bonds of faith easing conversion ###
+
+me_muharram_majalis_modest_county = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 5
+	monthly_county_control_growth_add = 0.25
+}
+
+me_muharram_majalis_grand_county = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 10
+	monthly_county_control_growth_add = 0.5
+}
+
+me_muharram_majalis_lavish_county = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 20
+	monthly_county_control_growth_add = 0.8
+}

@@ -1,0 +1,64 @@
+﻿l_english:
+
+#Exsisting Cultures
+ siqilli:0 "Siqilli"
+ siqilli_collective_noun:0 "Siqillis"
+ siqilli_prefix:0 "Siqillo"
+ siqilli_history_loc:0 "Formed from $arabic_group$ and $berber_group$ settlers who migrated to [GetTitleByKey('d_sicily').GetNameNoTier]" #in the year 856
+ name_list_siqilli:0 "Siqilli"
+ name_list_siculo_arabic:0 "Siculo-Arabic"
+ me_siqilli:0 "Siqilli"
+ me_siqilli_collective_noun:0 "Siqillis"
+ me_siqilli_prefix:0 "Siqillo"  
+ me_siculo_arabic:0 "Siculo-Arabic"
+ me_siculo_arabic_collective_noun:0 "Siculo-Arabs"
+ me_siculo_arabic_prefix:0 "Siculo-Arabs"
+
+ siqilli_spread.0001.desc:0 "It seems that the conversion of the inhabitants of South Italy to Islam, as well as the migration of several Muslim tribes into the region, has given rise a unique culture, affected by the myriad influences\n\nNow it is clear that the people in the [county_to_change.GetName] no longer see themselves as [old_culture.GetName], but as arabic-speaking [sicilian.GetCollectiveNoun]!"
+  
+ hadhrami:0 "Hadrami"
+ hadhrami_prefix:0 "Hadramo"
+ hadhrami_collective_noun:0 "Hadhramis"
+ name_list_hadhrami:0 "Hadhrami"
+
+ south_arabian:0 "Mahri"
+ south_arabian_prefix:0 "Mahro"
+ south_arabian_collective_noun:0 "Mahris"
+ me_south_arabian:0 "South Arabian"
+ me_south_arabian_prefix:0 "South Arabian"
+ me_south_arabian_collective_noun:0 "South Arabians"
+ me_mahri:0 "Mahri"
+ me_mahri_prefix:0 "Mahro"
+ me_mahri_collective_noun:0 "Mahris"
+ 
+ me_sudani:0 "Sudani"
+ me_sudani_prefix:0 "Sudani"
+ me_sudani_collective_noun:0 "Sudanis"
+ 
+ himyarite:0 "Himyari"
+ himyarite_collective_noun:0 "Himyaris"
+ himyarite_prefix:0 "Himyari"
+ name_list_himyarite:0 "Himyari"
+ language_sayhadic_name:0 "Himyari"
+ me_himyari:0 "Himyari"
+ me_himyari_collective_noun:0 "Himyaris"
+ me_himyari_prefix:0 "Himyari"
+ me_himyarite:0 "Himyarite"
+ me_himyarite_collective_noun:0 "Himyarites"
+ me_himyarite_prefix:0 "Himyarite"
+ 
+ yemeni_himyar_history_loc:0 "Formed from Yemeni [CULTURE.GetName] tribes and [TARGET_CULTURE.GetCollectiveNoun] that assimilated into their culture."
+ 
+ language_sindhi_name:0 "Sindhi"
+ 
+#Decision/Event Cultures
+ maltese:0 "Maltese"
+ maltese_collective_noun:0 "Maltese"
+ maltese_prefix:0 "Malteso"
+ maltese_history_loc:0 "Formed from the Latinazation of Maltese Christian $heritage_arabic_collective_noun$ in the year [DATE.GetYear]"
+ language_maltese_name:0 "Malti"
+ name_list_maltese:0 "Maltese"
+ 
+ #######################
+
+

@@ -1,0 +1,113 @@
+﻿l_english:
+ # Mesopotamian Religions by Ace
+ semitic_religion:0 "Mesopotamian"
+ semitic_religion_adj:0 "Mesopotamian"
+ semitic_religion_adherent:0 "Mesopotamian"
+ semitic_religion_adherent_plural:0 "Mesopotamians"
+ semitic_religion_desc:0 "The Ancient Mesopotamian religions believe in a pantheon of Gods which date back millennia. They are the last adherents of an ancient rite, and have held to their traditions by strictly controlling their interaction with outside influences."
+
+ semitic:0 "Mesopotamian"
+ semitic_adj:0 "Mesopotamian"
+ semitic_adherent:0 "Mesopotamian"
+ semitic_adherent_plural:0 "Mesopotamian"
+ semitic_desc:0 "The Ancient Mesopotamian religions believe in a pantheon of Gods which date back millennia. They are the last adherents of an ancient rite, and have held to their traditions by strictly controlling their interaction with outside influences."
+ semitic_high_god_name:0 "Shams"
+ semitic_high_god_name_2:0 "$semitic_high_god_name$" # Optional translation alt
+ semitic_high_god_name_possessive:0 "Shams'"
+ semitic_high_god_name_alternate:0 "Shamash"
+ semitic_high_god_name_alternate_possessive:0 "Shamash's"
+ semitic_good_god_shama:0 "Shams"
+ semitic_creator_god_name:0 "Shams"
+ semitic_creator_god_name_possessive:0 "Shams'"
+ semitic_house_of_worship:0 "temple"
+ semitic_house_of_worship_2:0 "$semitic_house_of_worship$" # Optional translation alt
+ semitic_house_of_worship_3:0 "$semitic_house_of_worship$" # Optional translation alt
+ semitic_house_of_worship_plural:0 "temples"
+ semitic_religious_symbol:0 "sun"
+ semitic_religious_symbol_2:0 "$semitic_religious_symbol$" # Optional translation alt
+ semitic_religious_symbol_3:0 "$semitic_religious_symbol$" # Optional translation alt
+ semitic_religious_text:0 "scrolls"
+ semitic_religious_text_2:0 "$semitic_religious_text$" # Optional translation alt
+ semitic_religious_text_3:0 "$semitic_religious_text$" # Optional translation alt
+ semitic_religious_head_title:0 "Sun Herald"
+ semitic_religious_head_title_name:0 "Solar Dominion"
+ semitic_devotee:0 "Mesopotamian"
+ semitic_devotee_plural:0 "Mesopotamians"
+ semitic_priest:0 "muraqib"
+ semitic_priest_plural:0 "muraqibs"
+ semitic_priest_alternate_plural:0 "clergy"
+ semitic_bishop:0 "baba"
+ semitic_bishop_plural:0 "babas"
+ semitic_positive_afterlife:0 "the life beyond"
+ semitic_positive_afterlife_2:0 "$semitic_positive_afterlife$" # Optional translation alt
+ semitic_positive_afterlife_3:0 "$semitic_positive_afterlife$" # Optional translation alt
+ semitic_negative_afterlife:0 "the realm of the gods"
+ semitic_negative_afterlife_2:0 "$semitic_negative_afterlife$" # Optional translation alt
+ semitic_negative_afterlife_3:0 "$semitic_negative_afterlife$" # Optional translation alt
+
+ # Holy Sites
+ holy_site_mardin_name:0 "Mardin"
+ holy_site_mardin_effect_name:0 "From [holy_site|E] #weak ($holy_site_mardin_name$)#!"
+
+ holy_site_edikukalama_name:0 "Edikukalama"
+ holy_site_edikukalama_effect_name:0 "From [holy_site|E] #weak ($holy_site_edikukalama_name$)#!"
+
+ holy_site_ekhulkhul_name:0 "Ekhulkhul"
+ holy_site_ekhulkhul_effect_name:0 "From [holy_site|E] #weak ($holy_site_ekhulkhul_name$)#!"
+
+ holy_site_ur_name:0 "Ur"
+ holy_site_ur_effect_name:0 "From [holy_site|E] #weak ($holy_site_ur_name$)#!"
+
+ ### SHAMSISM ###
+ shamsi_pagan:0 "Shamsism"
+ shamsi_pagan_adj:0 "Shamsi"
+ shamsi_pagan_adherent:0 "Shamsi"
+ shamsi_pagan_adherent_plural:0 "Shamsis"
+ shamsi_pagan_desc:0 "The Shamsiyah, otherwise known as Shamsis, are an ancient sect dedicated to the worship of the Mesopotamian sun god Shamash, whom they venerate by worshipping the sun. Little has been revealed about the practices of the Shamsis to the world, but they are known to pray in the direction of the sun and pull the hair from their dead to prepare their bodies for the next life."
+
+ shamsi_pagan_old:0 "Old Shamsi"
+
+ shamsi_priest:0 "sun priest"
+ shamsi_priest_plural:0 "sun priests"
+ shamsi_religious_head_title:0 "Sun Herald"
+ shamsi_religious_head_title_name:0 "Solar Dominion"
+
+ ### HARRANISM ###
+ harranian_pagan:0 "Harranism"
+ harranian_pagan_adj:0 "Harrani"
+ harranian_pagan_adherent:0 "Harrani"
+ harranian_pagan_adherent_plural:0 "Harranis"
+ harranian_pagan_desc:0 "The Harrani people are worshippers of the moon, stars, and sky, venerating the Mesopotamian moon god Sin who they believe provides them with respite from the scorching Sun in the form of night. Tracing their religion back to the time of Sumer, Harranis are some of the last vestiges of an ancient rite, and have kept their faith alive through careful protection of their beliefs."
+ harranian_pagan_old:0 "Old Harrani"
+
+ harrani_priest:0 "astrologer priest"
+ harrani_priest_plural:0 "astrologer priests"
+ harrani_religious_head_title:0 "Grand Astrologer"
+ harrani_religious_head_title_name:0 "Stellar Dominion"
+
+ harrani_high_god_name:0 "Sin"
+ harrani_high_god_name_2:0 "Nanna"
+ harrani_high_god_name_3:0 "Nusku"
+ harrani_high_god_name_possessive:0 "Sin's"
+ harrani_creator_god_name:0 "Nanna"
+ harrani_creator_god_name_possessive:0 "Nanna's"
+ harrani_health_god_name:0 "Bat-Nikkal"
+ harrani_health_god_name_possessive:0 "Bat-Nikkal's"
+ harrani_fertility_god_name:0 "Tar'atha"
+ harrani_fertility_god_name_possessive:0 "Tar'atha's"
+ harrani_wealth_god_name:0 "Nusku"
+ harrani_wealth_god_name_possessive:0 "Nusku's"
+ harrani_household_god_name:0 "Nusku"
+ harrani_household_god_name_possessive:0 "Nusku's"
+ harrani_fate_god_name:0 "Sin"
+ harrani_fate_god_name_possessive:0 "Sin's"
+ harrani_knowledge_god_name:0 "Nusku"
+ harrani_knowledge_god_name_possessive:0 "Nusku's"
+ harrani_war_god_name:0 "Shamash"
+ arrani_war_god_name_possessive:0 "Shamash's"
+ harrani_night_god_name:0 "Sin"
+ harrani_night_god_name_possessive:0 "Sin's"
+ harrani_water_god_name:0 "Nusku"
+ harrani_water_god_name_possessive:0 "Nusku's"
+ harrani_devil_name:0 "The Lord with his Dogs"
+ harrani_devil_name_possessive:0 "The Lord of Dogs's"

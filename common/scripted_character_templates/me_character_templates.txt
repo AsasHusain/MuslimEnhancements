@@ -1,0 +1,465 @@
+﻿### Generic ###
+me_diplomat_character_template = {
+	age = { 25 60 }
+	random_traits_list = {
+		count = 1
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_diplomacy_4 = {}
+	}
+	random_traits = yes
+	
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	diplomacy = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+
+me_intrigue_character_template = {
+	age = { 25 60 }
+	random_traits_list = {
+		count = 1
+		education_intrigue_2 = {}
+		education_intrigue_3 = {}
+		education_intrigue_4 = {}
+	}
+	random_traits = yes
+	
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	intrigue = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+
+### Bari 867 Partition ###
+calabria_duke_template = {
+	age = { 20 50 }
+	faith = faith:orthodox
+	culture = culture:greek
+	martial = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	stewardship = {
+		min_template_low_skill
+		max_template_low_skill
+	}
+	diplomacy = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	intrigue = {
+		min_template_low_skill
+		max_template_low_skill
+	}
+	learning = {
+		min_template_low_skill
+		max_template_low_skill
+	}
+}
+
+### Sicillian 1066 War Leaders ###
+palermo_leader_template = { # Merchant-type character
+	age = { 25 40 }
+	random_traits_list = {
+		count = 1
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_diplomacy_4 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_stewardship_4 = {}
+	}
+	random_traits_list = { # A good trait related to merchants/stewardship
+		count = 1
+		administrator = {}
+		architect = {}
+		avaricious = {}
+		greedy = {}
+		content = {}
+		temperate = {}
+	}
+	random_traits = yes
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	prowess = { 2 10 }
+	martial = { 2 10 }
+	learning = { 5 12 }
+	diplomacy = { 6 13 }
+}
+
+castrogiovanni_leader_template = { # Priest-type character
+	age = { 30 60 }
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	random_traits_list = { # A good trait related to priests/learning
+		count = 1
+		scholar = {}
+		theologian = {}
+		zealous = {}
+		chaste = {}
+		content = {}
+		temperate = {}
+	}
+	random_traits = yes
+	gender_female_chance = root_faith_clergy_gender_female_chance
+	learning = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	prowess = { 2 10 }
+	martial = { 2 10 }
+	stewardship = { 2 10 }
+	diplomacy = { 5 12 }
+}
+
+syracuse_leader_template = {  # Commander-type character (copied from new_commander_character template)
+	age = { 25 40 }
+	random_traits_list = {
+		count = 1
+		education_martial_2 = {}
+		education_martial_3 = {}
+		education_martial_4 = {}
+	}
+	random_traits_list = {
+		count = 1
+		brave = {}
+		just = {}
+	}
+	random_traits_list = {
+		count = 1
+		lustful = {}
+		chaste = {}
+		wrathful = {}
+		arrogant = {}
+		impatient = {}
+		humble = {}
+		calm = {}
+		patient = {}
+		impatient  = {}
+		
+	}
+	random_traits_list = {
+		honest = {}
+		ambitious = {}
+		cynical = {}
+		zealous = {}
+		compassionate = {}
+		stubborn = {}
+		generous = {}
+	}
+	random_traits = no
+	martial  = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+
+	after_creation = {
+		#Chance of receiving an extra commander trait
+		random = {
+			chance = 25
+			give_random_commander_trait_effect = yes
+		}
+	}
+}
+
+
+### Hafidh Trait Tutors ### 
+hafidh_low_character_template = {
+	age = { 18 50 }
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = 50
+
+	# Traits
+	random_traits_list = {
+		count = 1
+		education_learning_1 = {}
+		education_learning_2 = {}
+	}
+	trait = hafidh
+	random_traits = yes
+	
+	# Skills
+	learning = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+
+	after_creation = {
+		add_trait_xp = {
+			trait = hafidh
+			value = {
+				10
+				40
+			}
+		}
+	}
+}
+
+hafidh_high_character_template = {
+	age = { 30 60 }
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = 50
+
+	# Traits
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	trait = hafidh
+	random_traits = yes
+	
+	# Skills
+	learning = {
+		min_template_medium_skill
+		max_template_medium_skill
+	}
+
+	after_creation = {
+		add_trait_xp = {
+			trait = hafidh
+			value = {
+				30
+				65
+			}
+		}
+		random = {
+			chance = 25
+			if = {
+				limit = {
+					NOT = {
+						knows_language_of_culture = culture:bedouin
+					}
+				}
+				learn_language_of_culture = culture:bedouin
+			}
+		}
+	}
+}
+
+hafidh_excellent_character_template = {
+	age = { 40 70 }
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = 50
+
+	# Traits
+	random_traits_list = {
+		count = 1
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	random_traits_list = {
+		count = 1
+		scholar = {}
+		theologian = {}
+		zealous = {}
+		chaste = {}
+		content = {}
+		temperate = {}
+	}
+	trait = hafidh
+	random_traits = yes
+
+	# Skills
+	learning = {
+		min_template_medium_skill
+		max_template_medium_skill
+	}
+
+	after_creation = {
+		add_trait_xp = {
+			trait = hafidh
+			value = {
+				65
+				100
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					knows_language_of_culture = culture:bedouin
+				}
+			}
+			learn_language_of_culture = culture:bedouin
+		}
+		random = {
+			chance = 25
+			if = {
+				limit = {
+					NOT = { has_trait = scholar }
+				}
+				add_trait = scholar
+			}
+		}
+	}
+}
+
+### Arabic Linguists ###
+court_linguist_arabic_good_template = {
+	age = { 18 35 }
+	dynasty = none
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+
+	random_traits_list = {
+		count = 1
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+
+	random_traits_list = { # A trait demonstrating their skill at language
+		count = 1
+		lifestyle_poet = {}
+		scholar = {}
+		gregarious = {}
+		administrator = {}
+		tourney_participant = {}
+	}
+
+	learning = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	random_traits = yes
+
+	after_creation = {
+		add_to_list = court_linguist_list
+		add_character_flag = court_linguist_flag
+		if = { # Learn the desired court language
+			limit = {
+				NOT = { knows_language = language_arabic }
+			}
+			learn_language = language_arabic
+		}
+		if = { # If the character does not speak the ruler's language, learn it
+			limit = {
+				NOT = { knows_language_of_culture = root.culture }
+			}
+			learn_language_of_culture = root.culture
+		}
+		random_list = {
+			2 = {
+				trigger = {
+					#Foreign culture relative
+					exists = scope:ling_cul_1_bonus
+					NOT = { knows_language_of_culture = scope:ling_cul_1_bonus }
+				}
+				learn_language_of_culture = scope:ling_cul_1_bonus
+			}
+			2 = {
+				trigger = {
+					# Root culture relative
+					exists = scope:ling_cul_3_bonus
+					NOT = { knows_language_of_culture = scope:ling_cul_3_bonus }
+				}
+				learn_language_of_culture = scope:ling_cul_3_bonus
+			}
+		}
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = tourney_participant
+			TRACK = wit
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+	}
+}
+
+court_linguist_arabic_medium_template = {
+
+	age = { 18 35 }
+	dynasty = none
+	culture = scope:ling_cul_1
+	faith = scope:ling_cul_1_ruler.faith
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+
+	random_traits_list = { # A trait demonstrating their skill at language
+		count = { 0 1 }
+		tourney_participant = {}
+	}
+
+	learning = {
+		min_template_average_skill
+		max_template_average_skill
+	}
+	random_traits = yes
+
+	after_creation = {
+		add_to_list = court_linguist_list
+		add_character_flag = court_linguist_flag
+		if = { # Learn the desired court language
+			limit = {
+				NOT = { knows_language = language_arabic }
+			}
+			learn_language = language_arabic
+		}
+		if = { # If the character does not speak the ruler's language, learn it
+			limit = {
+				NOT = { knows_language_of_culture = root.culture }
+			}
+			learn_language_of_culture = root.culture
+		}
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = tourney_participant
+			TRACK = wit
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+	}
+}
+
+court_linguist_arabic_cheap_template = {
+
+	age = { 18 55 }
+	dynasty = none
+	culture = scope:ling_cul_2
+	faith = scope:ling_cul_2_ruler.faith
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+
+	random_traits_list = {
+		count = 1
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+	}
+
+	learning = {
+		min_template_low_skill
+		max_template_low_skill
+	}
+	random_traits = yes
+
+	after_creation = {
+		add_to_list = court_linguist_list
+		add_character_flag = court_linguist_flag
+		assign_quirk_effect = yes
+		if = { # Learn the desired court language
+			limit = {
+				NOT = { knows_language = language_arabic }
+			}
+			learn_language = language_arabic
+		}
+	}
+}

@@ -1,0 +1,94 @@
+﻿hfc_bedouin_traditions = {
+	culture:bedouin = { 
+		add_culture_tradition = tradition_hfc_bedouin_honor_codes 
+		remove_variable = tradition_cooldown
+	}
+	culture:bedouin = { 
+		add_culture_tradition = tradition_hfc_bedouin_oral_poetry
+		remove_variable = tradition_cooldown
+	}
+}
+
+#hfc_bedouin_counties = {
+	# Duchy: PALMYRA
+#	province:5945 = { # County: Sukhna
+#		set_holding_type = tribal_holding 
+#	}
+
+	# KUFA
+#	province:5991 = { # Safata
+#		set_holding_type = tribal_holding 
+#	}
+#	province:6000 = { # Waqisa
+#		set_holding_type = tribal_holding 
+#	}
+#	title:c_waqisa = { 
+#		set_county_culture = culture:bedouin 
+#	}
+
+	# SINAI
+#	province:6033 = { # Sinai
+#		set_holding_type = tribal_holding 
+#	}
+#	title:c_sinai = { 
+#		set_county_culture = culture:bedouin 
+#	}
+#	province:6030 = { # Firaun
+#		set_holding_type = tribal_holding 
+#	}
+#	title:c_firaun = { 
+#		set_county_culture = culture:bedouin 
+#	}
+#	character:20788 = { 
+#		change_government = tribal_government 
+#	}
+
+	# AMMAN
+#	province:5988 = { # Jilat
+#		set_holding_type = tribal_holding 
+#	}
+#	title:c_jilat = { 
+#		set_county_culture = culture:bedouin 
+#	}
+
+	# SHAMMAR
+#	title:c_maan = { # Ma'an
+#		set_county_culture = culture:bedouin 
+#	}
+#	title:c_al_aqabah = { # Al-Aqabah
+#		set_county_culture = culture:bedouin 
+#	}
+
+	# AL_JAWF
+#	province:5989 = { #Sirhan
+#		set_holding_type = tribal_holding 
+#	}
+#	province:6178 = { # Al-Jawf
+#		set_holding_type = tribal_holding 
+#	}
+#	character:bedouin0079 = { 
+#		change_government = tribal_government 
+#	}
+
+	# BAHRAIN
+#	province:6161 = { # Samman
+#		set_holding_type = tribal_holding 
+#	}
+#	character:20900 = { 
+#		change_government = tribal_government 
+#	}
+
+	# AL_HASA
+#	province:6154 = { # Al-Hasa
+#		set_holding_type = tribal_holding 
+#	}
+#	province:6148 = { # Dhafra
+#		set_holding_type = tribal_holding 
+#	}
+	
+	# OMAN
+#	province:6269 = { # Duqm
+#		set_holding_type = tribal_holding 
+#	}
+
+#}

@@ -1,0 +1,90 @@
+﻿me_drunkard_crime = {
+	imprisonment_reason = yes
+	revoke_title_reason = yes
+}
+
+sayyid_opinion_normal = {
+	opinion = 10
+}
+
+sayyid_opinion_increased = {
+	opinion = 15
+}
+
+sayyid_opinion_increased_greatly = {
+	opinion = 20
+}
+
+me_stuttering_buffoon_opinion = {
+	decaying = yes
+	years = 5
+}
+
+me_nukkari_tried_to_stop_me_opinion = {
+	opinion = -25
+	decaying = yes
+	years = 5
+}
+
+me_nukkari_reassured_faith_opinion = {
+	opinion = 25
+	decaying = yes
+	years = 10
+}
+
+me_legitimized_fatimid_geneology_opinion = {
+	opinion = 50
+}
+
+me_bestowed_laqab_opinion = {
+	opinion = 10
+	decaying = yes
+	years = 5
+}
+
+me_fugitive_opinion = {
+	imprisonment_reason = yes
+	execute_reason = yes
+	years = 10
+	decaying = yes
+}
+
+me_laamp_cc_success_astray_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_success_astray_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_success_hostile_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_success_evil_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_fail_astray_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_fail_hostile_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_fail_evil_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}
+
+me_laamp_cc_force_opinion = {
+	monthly_change = 0.05
+	decaying = yes
+}

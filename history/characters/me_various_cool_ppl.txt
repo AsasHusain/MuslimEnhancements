@@ -1,0 +1,74 @@
+﻿
+########
+##The above section is for non-thaqifid characters essential for the family tree ^
+########
+
+#############################################
+########## AL - KINDI & ASSOCIATES ##########
+#############################################
+### Moved to bedouin_me.txt
+
+#############################################
+#TERKEN KHATUN
+#############################################
+me_terken_khatun = {
+	name = "Terken Khatun" # 
+	female = yes
+	religion = maturidi
+	culture = kipchak
+	trait = education_diplomacy_4
+	trait = deceitful
+	trait = ambitious
+	father = 302626
+	1151.12.4 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		add_spouse = 230000
+	}
+	1200.9.13 = {
+		death = yes
+	}
+}
+
+
+#########################################################
+########## ABU ZAYD AHMED IBN SAHL AL - BALKHI ##########
+#########################################################
+#albalkhi1 = { # TO BE MADE INTO A SPAWNABLE CHARACTER 
+#	name = "Ahmad"
+#	dynasty = me_al_balkhi
+#	culture = "afghan"
+#	religion = "ashari" # He was Sunni, then had a crisis of faith before returning to Sunni Islam
+#
+#	diplomacy = 14
+#	martial = 4
+#	stewardship = 6
+#	intrigue = 2
+#	learning = 17
+#	prowess = 8
+#
+#	trait = intellect_good_3
+#	
+#	father = albalkhi2
+#	850.9.24 = {
+#		birth = 850.9.24
+#	}
+#	934.4.7 = {
+#		death = 934.4.7
+#	}
+#}
+#
+#albalkhi2 = { #Real Character
+#	name = "Sahl"
+#	dynasty = me_al_balkhi
+#	culture = "afghan"
+#	religion = "ashari"
+#
+#	822.1.5 = {
+#		birth = 822.1.5
+#	}
+#	899.3.21 = {
+#		death = 899.3.21
+#	}
+#}

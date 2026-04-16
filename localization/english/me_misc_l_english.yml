@@ -1,0 +1,24 @@
+﻿l_english:
+
+ #
+ CHARACTER_TITLED_FIRST_NAME_ONLY_NICKNAMED_PREFIX: "$TIER$ $NICK$ $NAME$"
+
+ # Innovations
+ innovation_me_summer_raids:1 "Summer Raids"
+ innovation_me_summer_raids_desc:1 "Developed under the Islamic Caliphate, #EMP Ṣa'ifas#! or summer raids were yearly raiding expeditions that were seen as the duty of every Muslim ruler in order to keep up the spirit of Jihad."
+ unlocks_me_saifa_intent: "Unlocks the #V Ṣa'ifa#! [raid_intent|E]"
+ 
+ # Raid intents
+ # $BULLET$[prestige_i][prestige|E]: 50%\n\t\t$BULLET$[legitimacy_i][legitimacy|E]: 10 Gained with every [faith_hostile|E] or [faith_evil|E] owned county that is [occupied|E] (Maximum of 120)
+ ME_saifa_intent: "Ṣa'ifa"
+ ME_saifa_intent_desc: "$ME_saifa_intent_loot$\n$ME_saifa_intent_flavor$"
+ ME_saifa_intent_loot: "#bol Types of Loot:#!\n\t\t$BULLET$[gold_i][gold|E]: #V 50%#!\n\t\t$BULLET$[legitimacy_i][legitimacy|E]: #V 50%#! (Maximum of 150)"
+ ME_saifa_intent_flavor: "#weak A raid every #EMP ṣaif#! (summer) will assure our people of our strength and remind our enemies of our might.#!"
+ ME_saifa_intent_months:0 "Ṣa'ifa raids can only be undertaken in the summer months of June, July, and August."
+ 
+ 
+ # Language Discriptors
+ DestinationInspiredLanguageDescriptorArabic: "elegant and intricate"
+ DestinationInspiredLanguageDescriptorMaltese: "unique and melodic"
+ DestinationInspiredLanguageDescriptorHimyaritic: "ancient and poetic"
+ DestinationInspiredLanguageDescriptorSouthArabian: "ancient and resilient"

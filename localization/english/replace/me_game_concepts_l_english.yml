@@ -1,0 +1,7 @@
+﻿l_english: 
+
+ game_concept_kurultai: "Nomadic Council"
+ game_concept_kurultais: "Nomadic Councillors"
+ game_concept_kurultai_member: "Nomadic Council Member"
+ game_concept_kurultai_members: "Nomadic Council Members"
+ game_concept_kurultai_desc: "The Nomadic Council or '#EMP [GetPlayer.Custom('ME_GetNomadicCouncilNameFull')]#!' replaces the [council|E] for the [nomadic_government|E]. The [GetPlayer.Custom('ME_GetNomadicCouncilName')] members are among the elite of the realm, and should either be appeased or forced into [obedience|E] to assure a smooth [succession|E].\n\nAfter the event of a chaotic succession, they may steal some [herd|E], abandon their new [liege|E], they will gain a [claim|E] on the [realm|E] [title|E]."

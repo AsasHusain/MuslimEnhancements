@@ -1,0 +1,10 @@
+﻿l_english:
+ 
+ ## Main Event
+ me_hchar_creation_events.desc: "[historical_character.Custom('HistoricalCharacterJobDesc')] known as [historical_character.GetFullNameNicknamed] is reportedly wandering my realm in search of employ. [historical_character.GetSheHe|U] hails from the [birth_location.GetName], and has a certain air about [historical_character.GetHerHim]... [historical_character.Custom('DescriptorPositiveStandalone')] yet somewhat [historical_character.Custom('DescriptorNegativeStandalone')].\n\n\n@historical_character_icon! #weak This character is historical:#!\n#help_light_background [historical_character.Custom('ME_HistoricalCharacterDesc')]#!"
+ me_hchar_creation_events_alternative.desc: "[historical_character.Custom('HistoricalCharacterJobDesc')], known as [historical_character.GetFullNameNicknamed], has made a name for [historical_character.GetHerselfHimself] at court. [historical_character.GetSheHe|U] is [historical_character.Custom('DescriptorPositiveStandalone')], and while I cannot put my finger on it, there is something extraordinary about [historical_character.GetHerHim]...\n\n\n@historical_character_icon! #weak This character is historical:#!\n#help_light_background [historical_character.Custom('ME_HistoricalCharacterDesc')]#!"
+ 
+ ## Character Description
+ historical_character.me_ibn_fadlan: "Ahmad ibn Fadlan was a theologian in the employ of the Abbasids who was sent as an embassy and religious teacher to the recently converted Volga Bulgars, the account of his travels became very famous as it offered a rare glimpse into the lifestyle of the Bulgars, Turkic pagans, and Vikings that lived in the Volga region."
+ historical_character.me_abdusamed_babek: "Abd as-Samad Babek, also known as Evdilsemede Babek, was considered to be one of the first who wrote in Kurmaji and the first Kurdish poet to emerge after Islam spread among the Kurds, his poems focused mainly on religion and nature and became very famous among his kinsmen."
+ 

@@ -1,0 +1,1033 @@
+﻿#######################################################################################################################
+
+namespace = me_nukkari_revolt
+
+
+### Early Encounter with Abu Yazid in Tozeur, 7 years before the revolt 
+me_nukkari_revolt.0001 = {
+	title = me_nukkari_revolt.0001.t
+	desc = me_nukkari_revolt.0001.desc
+	theme = intrigue
+	override_background = { reference = bp1_courtyard_mena }
+
+	trigger = {
+		OR = { # No one that has control over the county is Nukkari
+			NOT = { scope:troubled_town.holder.faith = faith:nukkari }
+			NOT = { scope:troubled_town.holder = { any_liege_or_above = { faith = faith:nukkari } } }
+		}
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = me_nukkari_revolt.0001.a
+		custom_tooltip = me_nukkari_revolt.0001.a.tt
+
+		random_list = {
+			35 = { # Abu Yazid fails to do anything - 0 strength
+
+				custom_tooltip = me_nukkari_revolt.0001.tt.nukkari_fail
+				hidden_effect = {
+					send_interface_toast = {
+						title = me_nukkari_revolt.0001.tt.nukkari_fail
+						custom_tooltip = me_nukkari_revolt.0001.tt.likely
+						left_icon = scope:troubled_town
+					}
+				}
+			}
+			60 = { # Abu Yazid gains some followers - +1 strength 
+
+				custom_tooltip = me_nukkari_revolt.0001.tt.nukkari_mid
+				hidden_effect = {
+					send_interface_toast = {
+						title = me_nukkari_revolt.0001.tt.nukkari_mid
+						custom_tooltip = me_nukkari_revolt.0001.tt.likely
+						left_icon = scope:troubled_town 
+					}
+				}
+
+				change_global_variable = {
+					name = nukkari_revolt_strength_score
+					add = 1
+				}
+			}
+			5 = { # Abu Yazid gains alot of followers - +2 strength
+
+				custom_tooltip = me_nukkari_revolt.0001.tt.nukkari_success
+				send_interface_toast = {
+					title = me_nukkari_revolt.0001.tt.nukkari_success
+					left_icon = scope:troubled_town
+					scope:troubled_town = {
+						add_county_modifier = {
+							modifier = me_nukkari_rebellious
+							years = 5
+						}
+					}
+					if = {
+						limit = { scope:troubled_town.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+						scope:troubled_town = { set_county_faith = faith:nukkari }
+					}
+				}
+
+				change_global_variable = {
+					name = nukkari_revolt_strength_score
+					add = 2
+				}
+			}
+		}
+	}
+
+	option = {
+		name = me_nukkari_revolt.0001.b
+		custom_tooltip = me_nukkari_revolt.0001.b.tt
+
+		scope:troubled_town = {
+			add_county_modifier = {
+				modifier = me_nukkari_discontent
+				years = 5
+			}
+		}
+
+		duel = {
+			skill = intrigue
+			value = high_skill_rating
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				custom_tooltip = me_nukkari_revolt.0001.tt.prison_fail
+				hidden_effect = {
+					send_interface_toast = {
+						title = me_nukkari_revolt.0001.tt.prison
+						custom_tooltip = me_nukkari_revolt.0001.tt.unlikely
+					}
+				}
+				trigger_event = {
+					id = me_nukkari_revolt.0002 
+					days = 14
+				}
+			}
+
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				custom_tooltip = me_nukkari_revolt.0001.tt.prison_flee
+				hidden_effect = {
+					send_interface_toast = {
+						title = me_nukkari_revolt.0001.tt.prison
+						custom_tooltip = me_nukkari_revolt.0001.tt.unlikely
+					}
+				}
+				trigger_event = {
+					id = me_nukkari_revolt.0003 
+					days = 14
+				}
+			}
+		}
+	}
+}
+
+### Abu Yazid killed in escape attempt
+me_nukkari_revolt.0002 = {
+	title = me_nukkari_revolt.0002.t
+	desc = me_nukkari_revolt.0002.desc
+	theme = prison
+	override_background = { reference = alley_night }
+
+	immediate = {
+		set_global_variable = {
+			name = nukkari_revolt_ended
+			value = yes
+		}
+		scope:troubled_town = { remove_county_modifier = me_nukkari_discontent }
+		scope:troubled_town = {
+			add_county_modifier = {
+				modifier = me_nukkari_agitation_ended
+				years = 2
+			}
+		}
+	}
+	
+	option = {
+		name = me_nukkari_revolt.0002.a
+		custom_tooltip = me_nukkari_revolt.0002.tt
+	}
+}
+
+### Abu Yazid escapes from confinment
+me_nukkari_revolt.0003 = {
+	title = me_nukkari_revolt.0003.t
+	desc = me_nukkari_revolt.0003.desc
+	theme = prison
+	override_background = { reference = alley_night }
+
+	immediate = {
+		add_prestige = minor_prestige_loss
+		scope:troubled_town = { change_county_control = minor_county_control_loss }
+	}
+	
+	option = {
+		name = me_nukkari_revolt.0003.a
+		custom_tooltip = me_nukkari_revolt.0003.tt
+	}
+}
+
+### Ibadi/Wahbi county converts to Nukkari
+me_nukkari_revolt.0004 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		scope:nr_converted_county.holder = {
+			send_interface_toast = {
+				title = me_nukkari_revolt.0004.t
+				left_icon = scope:nr_converted_county
+				
+				scope:nr_converted_county = { set_county_faith = faith:nukkari }
+			}
+			every_liege_or_above = {
+				send_interface_toast = {
+					title = me_nukkari_revolt.0004.t
+					left_icon = scope:nr_converted_county
+					
+					show_as_tooltip = {
+						scope:nr_converted_county = { set_county_faith = faith:nukkari }
+					}
+				}
+			}
+		}
+	}
+}
+
+### Tribal ruler gets the option to convert to Nukkarism
+me_nukkari_revolt.0005 = {
+	title = me_nukkari_revolt.0005.t
+	desc = me_nukkari_revolt.0005.desc
+	theme = faith
+	override_background = { reference = council_chamber }
+
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		capital_county = { 
+			set_county_faith = faith:nukkari
+			save_scope_as = nr_capital
+		}
+	}
+	
+	option = {
+		name = me_nukkari_revolt.0005.a
+		
+		set_character_faith = faith:nukkari
+		
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = zealous
+					ai_zeal >= 1
+				}
+			}
+		}
+	}
+	option = {
+		name = me_nukkari_revolt.0005.b
+		
+		add_piety = medium_piety_gain
+		
+		ai_chance = {
+			base = 10 # ai is more likely to take the other choice
+		}
+	}
+}
+
+
+### Nukkari Revolt Setup
+me_nukkari_revolt.0100 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		spawn_nukkari_revolt_character_effect = yes
+		scope:nukkari_leader = {
+			save_scope_as = story_owner
+			create_story = story_nukkari_revolt
+			copy_inheritable_appearance_from = character:me_ifrinid_001_dna_clone
+			give_nickname = nick_sahib_al_himar # He recieved his donkey in 944, but he's more well known by this name so lets move things along
+			set_relation_friend = scope:nukkari_al_ama
+		}
+		scope:nukkari_al_ama = { give_nickname = nick_al_ama }
+
+		every_living_character = {
+			limit = { 
+				OR = { 
+					capital_province = { geographical_region = ghw_region_north_africa } 
+					AND = {
+						is_ai = no
+						any_county_in_region = {
+							region = custom_roman_africa
+							count >= 1
+							holder = root
+						}
+					}
+				}
+			}
+			trigger_event = {
+				id = me_nukkari_revolt.0101
+			}
+		}
+		
+		#Random courtiers start joining Abu Yazid's revolt
+		random_ruler = {
+			limit = {
+				NOT = { faith = faith:nukkari }
+				is_available = yes
+				capital_province = { geographical_region = ghw_region_north_africa }
+				NOT = { is_in_list = NR_102_rulers }
+			}
+			add_to_list = NR_102_rulers
+			random_courtier = {
+				limit = {
+					is_female = no
+					faith = root.faith
+					NOT = { has_trait = cynical }
+					NOT = { is_vassal_of = root }
+					is_capable_adult_ai = yes
+					is_imprisoned = no
+					is_healthy = yes 
+				}
+				save_scope_as = nr_heretic_courtier
+				faith = { save_scope_as = old_faith }
+			}
+			trigger_event = {
+				id = me_nukkari_revolt.0102
+				days = { 70 365 }
+			}
+		}
+		random_ruler = {
+			limit = {
+				NOT = { faith = faith:nukkari }
+				is_available = yes
+				capital_province = { geographical_region = ghw_region_north_africa }
+				NOT = { is_in_list = NR_102_rulers }
+			}
+			add_to_list = NR_102_rulers
+			random_courtier = {
+				limit = {
+					is_female = no
+					faith = root.faith
+					NOT = { has_trait = cynical }
+					NOT = { is_vassal_of = root }
+					is_capable_adult_ai = yes
+					is_imprisoned = no
+					is_healthy = yes 
+				}
+				save_scope_as = nr_heretic_courtier
+				faith = { save_scope_as = old_faith }
+			}
+			trigger_event = {
+				id = me_nukkari_revolt.0102
+				days = { 70 365 }
+			}
+		}
+		random_ruler = {
+			limit = {
+				NOT = { faith = faith:nukkari }
+				is_available = yes
+				capital_province = { geographical_region = ghw_region_north_africa }
+				NOT = { is_in_list = NR_102_rulers }
+			}
+			add_to_list = NR_102_rulers
+			random_courtier = {
+				limit = {
+					is_female = no
+					faith = root.faith
+					NOT = { has_trait = cynical }
+					NOT = { is_vassal_of = root }
+					is_capable_adult_ai = yes
+					is_imprisoned = no
+					is_healthy = yes 
+				}
+				save_scope_as = nr_heretic_courtier
+				faith = { save_scope_as = old_faith }
+			}
+			trigger_event = {
+				id = me_nukkari_revolt.0102
+				days = { 70 365 }
+			}
+		}
+		
+		# Nukkari Revolt starts
+		trigger_event = {
+			id = me_nukkari_revolt.0200
+			days = { 370 470 }
+		}
+		
+#		every_player = { trigger_event = me_nukkari_revolt.0200 } # for testing purposes only 
+		
+	}
+}
+
+### Message to all rulers in the region
+me_nukkari_revolt.0101 = {
+	title = me_nukkari_revolt.0101.t
+	desc = me_nukkari_revolt.0101.desc
+	theme = faith
+	override_background = { reference = drylands }
+
+	right_portrait = {
+		character = scope:nukkari_leader
+		animation = personality_zealous
+	}
+	left_portrait = {
+		character = scope:nukkari_al_ama
+		animation = marshal
+	}
+
+	immediate = {
+	
+	}
+	
+	option = {
+		name = me_nukkari_revolt.0101.a
+		custom_tooltip = me_nukkari_revolt.0101.a.tt
+		custom_tooltip = me_nukkari_revolt.0101.b.tt
+		
+		trigger = { faith = faith:nukkari }
+		
+		remove_short_term_gold = 50
+		change_global_variable = {
+			name = nukkari_revolt_strength_score
+			add = 1
+		}
+		add_piety = medium_piety_gain
+		add_character_modifier = {
+			modifier = me_supported_nukkari_revolt_modifier
+			years = 10
+		}
+		
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+					ai_zeal < -1
+					ai_greed >= medium_positive_ai_value
+					gold <= 60
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_trait = zealous
+					ai_zeal > 0.5
+				}
+			}
+		}
+	}
+	option = {
+		name = {
+			text = me_nukkari_revolt.0101.b.non_muslim
+			trigger = { NOT = { religion = religion:islam_religion } }
+		}
+		name = {
+			text = me_nukkari_revolt.0101.b.muslim
+			trigger = { 
+				religion = religion:islam_religion
+				NOT = { faith = faith:nukkari }
+			}
+		}
+		name = {
+			text = me_nukkari_revolt.0101.b.nukkari
+			trigger = { faith = faith:nukkari }
+		}
+		
+		custom_tooltip = me_nukkari_revolt.0101.b.tt
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+### Courtier converts to Nukkarism
+me_nukkari_revolt.0102 = {
+	title = me_nukkari_revolt.0102.t
+	desc = me_nukkari_revolt.0102.desc
+	theme = faith
+	override_background = { reference = council_chamber }
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:nr_heretic_courtier
+		animation = personality_bold
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:nr_scoped_chaplain }
+		character = scope:nr_scoped_chaplain
+	}
+	
+	trigger = { exists = scope:nr_heretic_courtier }
+
+	immediate = {
+		if = {
+			limit = { 
+				exists = cp:councillor_court_chaplain
+				NOT = { cp:councillor_court_chaplain = scope:nr_heretic_courtier }
+			}
+			cp:councillor_court_chaplain = { save_scope_as = nr_scoped_chaplain }
+		}
+	}
+	
+	
+	# I copied the duel stuff for the options from the 'Borders of Faith' event (fp2_struggle.2006)
+	option = { # Let them leave
+		name = me_nukkari_revolt.0102.a
+		custom_tooltip = me_nukkari_revolt.0102.a.tt
+		stress_impact = { zealous = medium_stress_impact_gain }
+		
+		scope:nr_heretic_courtier = {
+			move_to_pool_at = scope:nukkari_leader.location
+			hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
+			show_as_tooltip = { set_character_faith = faith:nukkari }
+		}
+		
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_compassion = 0.1
+				ai_rationality = 0.6
+				ai_zeal = -0.7
+			}
+	  	}
+	}
+	option = { # Try to convince them
+		name = me_nukkari_revolt.0102.b
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+		}
+
+		duel = {
+			skill = learning
+			value = medium_skill_rating
+
+			15 = {
+				desc = me_nukkari_revolt.0102.b.a.desc
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.5
+				}
+				modifier = {
+					add = 10
+					has_trait = fickle
+				}
+				modifier = {
+					add = 10
+					has_trait = heresiarch
+				}
+				modifier = {
+					add = 2
+					has_trait = impotent
+				}
+				modifier = {
+					add = 5
+					has_trait = irritable
+				}
+				modifier = {
+					add = 5
+					has_trait = dull
+				}
+				modifier = {
+					add = 10
+					has_trait = depressed_genetic
+				}
+				modifier = {
+					add = 10
+					has_trait = arrogant
+				}
+				modifier = {
+					add = 5
+					has_trait = arbitrary
+				}
+				modifier = {
+					add = 10
+					has_trait = lazy
+				}
+				modifier = {
+					add = 2
+					has_trait = stubborn
+				}
+				modifier = {
+					add = 5
+					has_trait = craven
+				}
+
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = me_nukkari_revolt.0102.b.a.desc
+					left_icon = scope:nr_heretic_courtier
+
+					scope:nr_heretic_courtier = {
+						move_to_pool_at = scope:nukkari_leader.location
+						hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
+						show_as_tooltip = { set_character_faith = faith:nukkari }
+
+						add_opinion = {
+							target = root
+							modifier = me_nukkari_tried_to_stop_me_opinion
+						}
+						add_to_list = NR_102_courtiers
+					}
+					progress_towards_rival_effect = {
+						REASON = rival_fraternising_enemy
+						CHARACTER = scope:nr_heretic_courtier
+						OPINION = 0
+					}
+				}
+			}
+			15 = {
+				desc = me_nukkari_revolt.0102.b.b.desc
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.5
+				}
+				modifier = {
+					add = 10
+					has_trait = calm
+				}
+				modifier = {
+					add = 10
+					has_trait = humble
+				}
+				modifier = {
+					add = 3
+					has_trait = forgiving
+				}
+				modifier = {
+					add = 5
+					has_trait = honest
+				}
+				modifier = {
+					add = 10
+					has_trait = humble
+				}
+				modifier = {
+					add = 3
+					has_trait = patient
+				}
+				modifier = {
+					add = 20
+					has_trait = zealous
+				}
+				modifier = {
+					add = 4
+					has_trait = compassionate
+				}
+				modifier = {
+					add = 20
+					has_trait = theologian # Could be it's own option, but I can't think of what argument could be used...
+				}
+				modifier = {
+					add = 10
+					has_trait = devoted
+				}
+				modifier = {
+					add = 2
+					has_trait = lifestyle_poet
+				}
+				modifier = {
+					add = 10
+					has_trait = saint
+				}
+
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = me_nukkari_revolt.0102.b.b.desc
+					left_icon = scope:nr_heretic_courtier
+
+					add_piety = medium_piety_gain
+					progress_towards_friend_effect = {
+						REASON = friend_guided_right_path
+						CHARACTER = scope:nr_heretic_courtier
+						OPINION = 0
+					}
+					
+					
+					if = {
+						limit = {
+							NOT = { this = root }
+						}
+						add_opinion = {
+							target = root
+							modifier = me_nukkari_reassured_faith_opinion
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 45
+			ai_value_modifier = {
+				ai_compassion = 0.2
+				ai_sociability = 0.3
+				ai_zeal = 0.2
+			}
+	 	}
+	}
+	option = { # Have the Chaplain convince them
+		name = {
+			text = me_nukkari_revolt.0102.c
+			trigger = { exists = scope:nr_scoped_chaplain }
+		}
+		name = {
+			text = me_nukkari_revolt.0102.c.no_cp
+			trigger = { NOT = { exists = scope:nr_scoped_chaplain } }
+		}
+		flavor = me_nukkari_revolt.0102.c.desc
+		trigger = { exists = scope:nr_scoped_chaplain }
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}
+
+		scope:nr_scoped_chaplain = { 
+			duel = {
+				skill = learning
+				value = medium_skill_rating
+	
+				15 = {
+					desc = me_nukkari_revolt.0102.c.a.desc
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -1.5
+					}
+					modifier = {
+						add = 10
+						has_trait = fickle
+					}
+					modifier = {
+						add = 10
+						has_trait = heresiarch
+					}
+					modifier = {
+						add = 2
+						has_trait = impotent
+					}
+					modifier = {
+						add = 5
+						has_trait = irritable
+					}
+					modifier = {
+						add = 5
+						has_trait = dull
+					}
+					modifier = {
+						add = 10
+						has_trait = depressed_genetic
+					}
+					modifier = {
+						add = 10
+						has_trait = arrogant
+					}
+					modifier = {
+						add = 5
+						has_trait = arbitrary
+					}
+					modifier = {
+						add = 10
+						has_trait = lazy
+					}
+					modifier = {
+						add = 2
+						has_trait = stubborn
+					}
+					modifier = {
+						add = 5
+						has_trait = craven
+					}
+
+					root = { send_interface_toast = {
+						type = event_toast_effect_bad
+						title = me_nukkari_revolt.0102.c.a.desc
+						left_icon = scope:nr_heretic_courtier
+	
+						scope:nr_heretic_courtier = {
+							move_to_pool_at = scope:nukkari_leader.location
+							hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
+							show_as_tooltip = { set_character_faith = faith:nukkari }
+	
+
+							add_opinion = {
+								target = root
+								modifier = me_nukkari_tried_to_stop_me_opinion
+							}
+							add_opinion = {
+								target = scope:nr_scoped_chaplain
+								modifier = me_nukkari_tried_to_stop_me_opinion
+							}
+							add_to_list = NR_102_courtiers
+						}
+						progress_towards_rival_effect = {
+							REASON = rival_fraternising_enemy
+							CHARACTER = scope:nr_heretic_courtier
+							OPINION = 0
+						}
+						scope:nr_scoped_chaplain = { progress_towards_rival_effect = {
+							REASON = rival_fraternising_enemy
+							CHARACTER = scope:nr_heretic_courtier
+							OPINION = 0
+						} }
+					} }
+				}
+				15 = {
+					desc = me_nukkari_revolt.0102.c.b.desc
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 1.5
+					}
+					modifier = {
+						add = 10
+						has_trait = calm
+					}
+					modifier = {
+						add = 10
+						has_trait = humble
+					}
+					modifier = {
+						add = 3
+						has_trait = forgiving
+					}
+					modifier = {
+						add = 5
+						has_trait = honest
+					}
+					modifier = {
+						add = 10
+						has_trait = humble
+					}
+					modifier = {
+						add = 3
+						has_trait = patient
+					}
+					modifier = {
+						add = 20
+						has_trait = zealous
+					}
+					modifier = {
+						add = 4
+						has_trait = compassionate
+					}
+					modifier = {
+						add = 20
+						has_trait = theologian # Could be it's own option, but I can't think of what argument could be used...
+					}
+					modifier = {
+						add = 10
+						has_trait = devoted
+					}
+					modifier = {
+						add = 2
+						has_trait = lifestyle_poet
+					}
+					modifier = {
+						add = 10
+						has_trait = saint
+					}
+	
+					root = { send_interface_toast = {
+						type = event_toast_effect_good
+						title = me_nukkari_revolt.0102.notif.b.t
+						left_icon = scope:nr_heretic_courtier
+	
+						add_piety = medium_piety_gain
+						progress_towards_friend_effect = {
+							REASON = friend_guided_right_path
+							CHARACTER = scope:nr_heretic_courtier
+							OPINION = 0
+						}
+						
+						scope:nr_scoped_chaplain = {
+							progress_towards_friend_effect = {
+								REASON = friend_guided_right_path
+								CHARACTER = scope:nr_heretic_courtier
+								OPINION = 0
+							}
+						}
+						
+						
+						hidden_effect = {
+							scope:nr_heretic_courtier = { add_piety = minor_piety_gain }
+							scope:nr_scoped_chaplain = { add_piety = medium_piety_gain }
+						}
+						
+						if = {
+							limit = {
+								NOT = { this = root }
+							}
+							add_opinion = {
+								target = root
+								modifier = me_nukkari_reassured_faith_opinion
+							}
+						}
+					} }
+				}
+			}
+		}
+
+		ai_chance = {
+  			base = 45
+			ai_value_modifier = {
+				ai_compassion = 0.2
+				ai_energy = -0.1
+				ai_rationality = 0.2
+				ai_sociability = -0.2
+				ai_zeal = 0.3
+			}
+		}
+	}
+	option = { # Imprison them
+		name = me_nukkari_revolt.0102.d
+		custom_tooltip = me_nukkari_revolt.0102.d.tt
+		
+		rightfully_imprison_character_effect = {
+			TARGET = scope:nr_heretic_courtier
+			IMPRISONER = root
+		}
+		progress_towards_rival_effect = {
+			CHARACTER = scope:nr_heretic_courtier
+			REASON = rival_imprisoned
+			OPINION = default_rival_opinion
+		}
+		
+		scope:nr_heretic_courtier = {
+			hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
+			show_as_tooltip = { set_character_faith = faith:nukkari }
+		}
+		
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			sadistic = minor_stress_impact_loss
+			zealous = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_compassion = -0.5
+				ai_zeal = 0.1
+			}
+		}
+	}
+}
+
+
+
+### Nukkari Revolt Starts
+me_nukkari_revolt.0200 = {
+	scope = none
+	hidden = yes
+
+
+	immediate = {
+		scope:nukkari_leader = {
+			hidden_effect = {
+				random_owned_story = {
+					limit = {
+						story_type = story_nukkari_revolt
+					}
+					end_story = yes
+				}
+			}
+		}
+		me_start_nukkari_revolt_effect = {
+			TARGET_COUNTY = title:c_kairwan
+			REBEL_LEADER = scope:nukkari_leader
+		}
+	}
+	
+}
+
+### Message to all rulers that are being attacked
+me_nukkari_revolt.0201 = {
+	type = character_event
+	theme = battle
+	override_background = { reference = drylands }
+	title = me_nukkari_revolt.0201.t
+	desc = me_nukkari_revolt.0201.desc
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:nukkari_leader
+		animation = celebrate_sword
+	}
+
+	immediate = {
+		title:c_medjerda = { save_scope_as = nr_begin_county }
+	}
+
+	option = {
+		name = me_nukkari_revolt.0201.a
+	}
+}
+
+### Nukkaris have won, play as them?
+me_nukkari_revolt.0202 = {
+	type = character_event
+	title = me_nukkari_revolt.0202.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:attacker = { has_title = title:d_nukkari }
+					scope:attacker = { has_nickname = nick_sahib_al_himar }
+				}
+				desc = me_nukkari_revolt.0202.desc.original.imam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = { NOT = { has_title = title:d_nukkari } }
+					scope:attacker = { has_nickname = nick_sahib_al_himar }
+				}
+				desc = me_nukkari_revolt.0202.desc.original.not_imam
+			}
+			desc = me_nukkari_revolt.0202.desc.leader_dead
+		}
+	}
+
+	theme = crown
+
+	left_portrait = {
+		character = scope:attacker
+		animation = personality_bold
+	}
+	
+	option = { 
+		name = me_nukkari_revolt.0202.a
+	}
+
+	option = {
+		name = me_nukkari_revolt.0202.b
+		set_player_character = scope:attacker
+	}
+}

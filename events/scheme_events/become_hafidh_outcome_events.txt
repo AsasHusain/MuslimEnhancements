@@ -1,0 +1,573 @@
+﻿namespace = become_hafidh_outcome
+
+######################
+# Positive Outcomes
+# 1000-1999
+######################
+
+# Success! but Hafidh trait is not max level
+become_hafidh_outcome.1000 = {
+	type = character_event
+	title = become_hafidh_outcome.1000.t
+	desc = become_hafidh_outcome.1000.desc
+	theme = education
+
+	trigger = {
+		NOT = {
+			has_trait_xp = {
+				trait = hafidh
+				value >= 65
+			}
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		trigger = { root = { is_travelling = no } }
+		character = scope:target
+		animation = personality_rational
+	}
+	lower_right_portrait = {
+		trigger = { root = { is_travelling = yes } }
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	override_background = {
+		trigger = { is_travelling = yes }
+		reference = terrain_travel
+	}
+
+	immediate = {
+		scope:target = {
+			save_scope_as = target
+		}
+		scope:owner = {
+			save_scope_as = owner
+		}
+
+		if = {
+			limit = {
+				NOT = { has_trait = hafidh }
+			}
+			add_trait = hafidh
+		}
+		add_trait_xp = {
+			trait = hafidh
+			value = 35
+		}
+
+		every_parent = {
+			limit = {
+				is_ai = no
+			}
+			send_interface_toast = {
+				title = child_memorizing_quran_title
+				left_icon = scope:owner
+				right_icon = scope:target
+				custom_tooltip = child_memorizing_quran_desc
+			}
+		}
+
+		scope:owner = {
+			add_piety = medium_piety_gain
+		}
+	}
+
+	option = {
+		name = {
+			text = become_hafidh_outcome.1000.a.normal
+			trigger = { NOT = { has_trait = cynical } }
+		}
+		name = {
+			text = become_hafidh_outcome.1000.a.cynical
+			trigger = { has_trait = cynical }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.1000.b
+		start_scheme = {
+			type = become_hafidh
+			target_character = scope:target
+		}
+		stress_impact = {
+			lazy = medium_stress_impact_gain
+			diligent = medium_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				ai_energy <= high_negative_ai_value
+			}
+		}
+	}
+}
+
+# Success! Hafidh trait reaches max level
+become_hafidh_outcome.1001 = {
+	type = character_event
+	title = become_hafidh_outcome.1001.t
+	desc = become_hafidh_outcome.1001.desc
+	theme = education
+
+	trigger = {
+		AND = {
+			has_trait = hafidh
+			has_trait_xp = {
+				trait = hafidh
+				value >= 65
+			}
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		trigger = { root = { is_travelling = no } }
+		character = scope:target
+		animation = personality_rational
+	}
+	lower_right_portrait = {
+		trigger = { root = { is_travelling = yes } }
+		character = scope:target
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	override_background = {
+		trigger = { is_travelling = yes }
+		reference = terrain_travel
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_faith_conversion"
+		scope:target = {
+			save_scope_as = target
+		}
+		scope:owner = {
+			save_scope_as = owner
+		}
+		every_parent = {
+			limit = {
+				is_ai = no
+			}
+			send_interface_toast = {
+				title = child_became_hafidh_title
+				left_icon = scope:owner
+				right_icon = scope:target
+				custom_tooltip = child_became_hafidh_desc
+			}
+		}
+
+		add_trait_xp = {
+			trait = hafidh
+			value = 35
+		}
+
+		scope:owner = {
+			add_piety = massive_piety_value
+		}
+	}
+
+	option = {
+		name = {
+			text = become_hafidh_outcome.1001.a.normal
+			trigger = { NOT = { has_trait = cynical } }
+		}
+		name = {
+			text = become_hafidh_outcome.1001.a.cynical
+			trigger = { has_trait = cynical }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#################################
+# Negative Outcomes
+# 2000-2999
+#################################
+
+# Failure
+become_hafidh_outcome.2000 = {
+	type = character_event
+	title = become_hafidh_outcome.2000.t
+	desc = become_hafidh_outcome.2000.desc
+	theme = education
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+
+	override_background = {
+		trigger = { is_travelling = yes }
+		reference = terrain_travel
+	}
+
+	immediate = {
+		scope:target = {
+			save_scope_as = target
+		}
+		scope:owner = {
+			save_scope_as = owner
+		}
+		every_parent = {
+			limit = {
+				is_ai = no
+			}
+			send_interface_toast = {
+				title = child_memorizing_quran_fail_title
+				left_icon = scope:owner
+				right_icon = scope:target
+				custom_tooltip = child_memorizing_quran_fail_desc
+			}
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.2000.a
+		scope:scheme = {
+			end_scheme = yes
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.2000.b
+		add_stress = massive_stress_gain
+		stress_impact = {
+			lazy = medium_stress_impact_gain
+			diligent = medium_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+		custom_tooltip = scheme_loses_half_progress
+		hidden_effect = {
+			scope:scheme = {
+				add_scheme_progress = -5
+			}
+		}
+	}
+}
+
+#################################
+# Invalidation Outcomes
+# 3000-3999
+#################################
+
+scripted_trigger is_valid_continuation_target = {
+	AND = {
+		faith.religion = religion:islam_religion
+		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+		NOT = { faith = faith:druze }
+		has_trait_xp = {
+			trait = hafidh
+			value >= 30
+		}
+	}
+	root = {
+		can_start_scheme = {
+			type = become_hafidh
+			target_character = prev
+		}
+	}
+}
+
+# Invalidation
+become_hafidh_outcome.3000 = {
+	type = character_event
+	title = become_hafidh_outcome.3000.t
+	desc = become_hafidh_outcome.3000.desc
+	theme = education
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = scope:target
+	lower_left_portrait = scope:potential_continuation_target_1
+	lower_center_portrait = scope:potential_continuation_target_2
+	lower_right_portrait = scope:potential_continuation_target_3
+
+	trigger = {
+		OR = {
+			trigger_if = {
+				limit = {
+					is_ai = no
+				}
+				any_ruler = {
+					is_valid_continuation_target = yes
+				}
+			}
+			any_court_position_holder = {
+				type = court_tutor_court_position
+				is_valid_continuation_target = yes
+			}
+			any_courtier_or_guest = {
+				is_valid_continuation_target = yes
+			}
+			cp:councillor_court_chaplain = {
+				is_valid_continuation_target = yes
+			}
+		}
+	}
+
+	on_trigger_fail = {
+		every_parent = {
+			limit = {
+				is_ai = no
+			}
+			send_interface_toast = {
+				title = child_became_hafidh_invalidated_title
+				left_icon = scope:owner
+				right_icon = scope:target
+				custom_tooltip = child_became_hafidh_invalidated_desc
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_ruler = {
+				limit = {
+					is_valid_continuation_target = yes
+				}
+				add_to_list = potential_continuation_targets
+			}
+		}
+		every_court_position_holder = {
+			limit = {
+				is_valid_continuation_target = yes
+			}
+			add_to_list = potential_continuation_targets
+		}
+		every_courtier_or_guest = {
+			limit = {
+				is_valid_continuation_target = yes
+			}
+			add_to_list = potential_continuation_targets
+		}
+		cp:councillor_court_chaplain = {
+			if = {
+				limit = {
+					is_valid_continuation_target = yes
+				}
+			}
+			add_to_list = potential_continuation_targets
+		}
+
+
+		random_in_list = {
+			list = potential_continuation_targets
+			weight = {
+				base = 1
+				modifier = {
+					add = 1000
+					is_close_family_of = scope:target
+					is_ruler = yes
+				}
+				modifier = {
+					add = 10
+					is_of_major_interest_to_root_trigger = yes
+				}
+				modifier = {
+					add = 5
+					is_of_minor_interest_to_root_trigger = yes
+				}
+			}
+			save_scope_as = potential_continuation_target_1
+		}
+
+		random_in_list = {
+			list = potential_continuation_targets
+			limit = {
+				NOT = { this = scope:potential_continuation_target_1 }
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 1000
+					is_close_family_of = scope:target
+					is_ruler = yes
+				}
+				modifier = {
+					add = 10
+					is_of_major_interest_to_root_trigger = yes
+				}
+				modifier = {
+					add = 5
+					is_of_minor_interest_to_root_trigger = yes
+				}
+			}
+			save_scope_as = potential_continuation_target_2
+		}
+
+		random_in_list = {
+			list = potential_continuation_targets
+			limit = {
+				NOR = {
+					this = scope:potential_continuation_target_1
+					this = scope:potential_continuation_target_2
+				}
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 1000
+					is_close_family_of = scope:target
+					is_ruler = yes
+				}
+				modifier = {
+					add = 10
+					is_of_major_interest_to_root_trigger = yes
+				}
+				modifier = {
+					add = 5
+					is_of_minor_interest_to_root_trigger = yes
+				}
+			}
+			save_scope_as = potential_continuation_target_3
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.3000.a
+
+		if = {
+			limit = {
+				can_start_scheme = {
+					type = become_hafidh
+					target_character = scope:potential_continuation_target_1
+				}
+			}
+
+			start_scheme = {
+				type = become_hafidh
+				target_character = scope:potential_continuation_target_1
+			}
+		}
+
+		custom_tooltip = scheme_retains_progress
+		hidden_effect = {
+			random_scheme = {
+				limit = {
+					scheme_type = become_hafidh
+					scheme_target_character = scope:potential_continuation_target_1
+				}
+				if = {
+					limit = {
+						exists = root.var:hafidh_progress
+					}
+					add_scheme_progress = root.var:hafidh_progress
+				}
+			}
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.3000.b
+
+		trigger = {
+			exists = scope:potential_continuation_target_2
+		}
+
+		if = {
+			limit = {
+				can_start_scheme = {
+					type = become_hafidh
+					target_character = scope:potential_continuation_target_2
+				}
+			}
+
+			start_scheme = {
+				type = become_hafidh
+				target_character = scope:potential_continuation_target_2
+			}
+		}
+
+		custom_tooltip = scheme_retains_progress
+		hidden_effect = {
+			random_scheme = {
+				limit = {
+					scheme_type = become_hafidh
+					scheme_target_character = scope:potential_continuation_target_2
+					exists = root.var:hafidh_progress
+				}
+				if = {
+					limit = {
+						exists = root.var:hafidh_progress
+					}
+					add_scheme_progress = root.var:hafidh_progress
+				}
+			}
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.3000.c
+
+		trigger = {
+			exists = scope:potential_continuation_target_3
+		}
+
+		if = {
+			limit = {
+				can_start_scheme = {
+					type = become_hafidh
+					target_character = scope:potential_continuation_target_3
+				}
+			}
+
+			start_scheme = {
+				type = become_hafidh
+				target_character = scope:potential_continuation_target_3
+			}
+		}
+
+		custom_tooltip = scheme_retains_progress
+		hidden_effect = {
+			random_scheme = {
+				limit = {
+					scheme_type = become_hafidh
+					scheme_target_character = scope:potential_continuation_target_3
+					exists = root.var:hafidh_progress
+				}
+				if = {
+					limit = {
+						exists = root.var:hafidh_progress
+					}
+					add_scheme_progress = root.var:hafidh_progress
+				}
+			}
+		}
+	}
+
+	option = {
+		name = become_hafidh_outcome.3000.d
+	}
+
+	after = {
+		remove_variable = hafidh_progress
+	}
+}

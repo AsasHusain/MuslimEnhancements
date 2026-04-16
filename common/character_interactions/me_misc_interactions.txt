@@ -1,0 +1,213 @@
+﻿ME_give_laqab_interaction = {
+	interface_priority = 45
+	common_interaction = yes
+	category = interaction_category_diplomacy
+
+	icon = honorary_titles
+	desc = ME_give_laqab_interaction_desc
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = {
+			highest_held_title_tier >= tier_county
+			faith.religion = religion:islam_religion
+		}
+		scope:recipient = {
+			OR = {
+				target_is_liege_or_above = scope:actor
+				is_tributary_of_suzerain_or_above = scope:actor
+				is_courtier_of = scope:actor
+				AND = {
+					exists = scope:recipient.liege
+					scope:recipient.liege = scope:actor
+				}
+			}
+		}
+		OR = {
+			current_date >= 950.1.1
+			AND = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+					is_male = yes
+					faith.religion = religion:islam_religion
+				}
+				scope:actor = { any_held_title = { is_head_of_faith = yes } }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = { has_any_nickname = no }
+	}
+	
+	send_options_exclusive = yes
+
+	send_option = {
+		flag = choose_laqab_caliphal_short
+		localization = ME_give_laqab_interaction_option_caliphal_short
+		current_description = ME_give_laqab_interaction_option_caliphal_short_desc
+		is_shown = {
+			AND = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+					is_male = yes
+					faith.religion = religion:islam_religion
+				}
+				scope:actor = { any_held_title = { is_head_of_faith = yes } }
+			}
+		}
+		is_valid = {}
+	}
+	
+	send_option = {
+		flag = choose_laqab_caliphal_long
+		localization = ME_give_laqab_interaction_option_caliphal_long
+		current_description = ME_give_laqab_interaction_option_caliphal_long_desc
+		is_shown = {
+			AND = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+					is_male = yes
+					faith.religion = religion:islam_religion
+				}
+				scope:actor = { any_held_title = { is_head_of_faith = yes } }
+			}
+		}
+		is_valid = {}
+	}
+	
+	send_option = {
+		flag = choose_laqab_ad_din
+		localization = ME_give_laqab_interaction_option_ad_din
+		current_description = ME_give_laqab_interaction_option_ad_din_desc
+		is_shown = { current_date >= 950.1.1 }
+		is_valid = {}
+	}
+
+	send_option = {
+		flag = choose_laqab_al_islam
+		localization = ME_give_laqab_interaction_option_al_islam
+		current_description = ME_give_laqab_interaction_option_al_islam_desc
+		is_shown = { current_date >= 950.1.1 }
+		is_valid = {
+			scope:recipient = {
+				faith.religion = religion:islam_religion
+			}
+		}
+	}
+	
+	send_option = {
+		flag = choose_laqab_ad_dawlah
+		localization = ME_give_laqab_interaction_option_ad_dawlah
+		current_description = ME_give_laqab_interaction_option_ad_dawlah_desc
+		is_shown = { current_date >= 950.1.1 }
+		is_valid = {}
+	}
+	
+	send_option = {
+		flag = choose_laqab_al_mulk
+		localization = ME_give_laqab_interaction_option_al_mulk
+		current_description = ME_give_laqab_interaction_option_al_mulk_desc
+		is_shown = { current_date >= 950.1.1 }
+		is_valid = {}
+	}
+
+	cost = {
+		prestige = {
+			value = {
+				add = 0
+			}
+		}
+	}
+
+	on_send = {
+		scope:actor = {
+			set_variable = {
+				name = nicknamed_target_var
+				value = scope:recipient
+				days = 1 
+			}
+		}
+
+		if = {
+			limit = { scope:choose_laqab_caliphal_short = yes }
+
+			decision:ME_choose_honorific_caliphal_short = {
+				open_view_data = {
+					view = decision_detail
+					player = scope:actor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_laqab_caliphal_long = yes }
+
+			decision:ME_choose_honorific_caliphal_long = {
+				open_view_data = {
+					view = decision_detail
+					player = scope:actor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_laqab_ad_din = yes }
+
+			decision:ME_choose_honorific_islamic_ad_din = {
+				open_view_data = {
+					view = decision_detail
+					player = scope:actor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_laqab_al_islam = yes }
+
+			decision:ME_choose_honorific_islamic_al_islam = {
+				open_view_data = {
+					view = decision_detail
+					player = scope:actor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_laqab_ad_dawlah = yes }
+
+			decision:ME_choose_honorific_islamic_ad_dawlah = {
+				open_view_data = {
+					view = decision_detail
+					player = scope:actor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_laqab_al_mulk = yes }
+
+			decision:ME_choose_honorific_islamic_al_mulk = {
+				open_view_data = {
+					view = decision_detail
+					player = scope:actor
+				}
+			}
+		}
+	}
+
+	use_diplomatic_range = yes
+
+	ai_accept = {
+		base = 100
+	}
+	auto_accept = {
+		scope:recipient = { is_ai = yes }
+	}
+	can_send_despite_rejection = no
+	ai_frequency = 24
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = vassals
+	}
+	ai_potential = {
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
